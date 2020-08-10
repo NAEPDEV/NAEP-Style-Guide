@@ -1,0 +1,240 @@
+/**
+* @stylesheet typography.css Typography
+* @parent ux.basics
+**/
+
+/**
+* @styles 0-typefaces Typefaces
+* User interface text and item content is always rendered in a sans serif typeface. (As discussed in the media section, stimulus text may be in a serif typeface if needed to reproduce the look and feel of a source publication.) Most text in eNAEP is presented in Calibri.
+*
+* ### SBT Typeface <img src="static/img/icon-asterisk.svg"/>
+* While Calibri is very readable at body sizes, it was not designed for titling sizes and offers only two weights: normal and bold. Because of these limitations, SBTs have shifted to using <a href="https://01.org/clear-SANS" target="_blank">Clear&#160;Sans</a>, which was designed for screen display, is suited for both body and titling sizes, and has a range of weights, allowing more options for establishing an informational hierarchy.
+* @iframe ux/demos/typography/typefaces.html 190
+**/
+
+/**
+* @styles 1-type-size Size
+* The base type size for content presented in Calibri (e.g., directions, stimuli, item stems) is 24&#160;pixels, as rendered at eNAEP’s default [zoom.md] level. Smaller sizes may be used for non-essential information or information intended for administrators (e.g., the item accession number in the [system-toolbar.css]).
+*
+* ### SBT Sizing <img src="static/img/icon-asterisk.svg"/>
+* The base type size for content presented in Clear Sans is 22&#160;pixels. (The slight difference from the size for Calibri is due to the typefaces’ differing <a href="https://typedecon.com/blogs/type-glossary/x-height/" target="_blank">x-heights</a>.) The minimum type size for SBTs is 18&#160;pixels; a range of sizes and weights is used to establish the informational hierarchy.
+* @iframe ux/demos/typography/sbt-sizing.html 770
+**/
+
+/**
+* @styles 2-line-height Line Height
+* Line height is 1.11x the type size for content in Calibri. In general, the spacing between elements (paragraphs, lists, standalone quotes, images, etc.) is one line height.
+*
+* Exceptions:
+* * The spacing between a stem paragraph and the subsequent response component (e.g., a multiple-choice option array) is 1.25x the font size.
+* * For composite items, the spacing between item parts is 2x the font size.
+* * For Zones items, the spacing between the zones area and surrounding content is 0.7x the font size.
+*
+* ### SBT Line Height <img src="static/img/icon-asterisk.svg"/>
+* Line height is 1.4x the type size for content in Clear Sans. Spacing between text elements is one line height.
+**/
+
+/**
+* @styles 3-line-length Line Length
+* Current research suggests that line length can affect reading comprehension and speed. While ideal line length depends on a number of contextual factors (e.g., screen size, line height), lines 45 to 75 characters long are generally acceptable for longer blocks of text. Shorter blocks of text should generally have proportionally shorter line lengths. Longer line lengths may be acceptable in some cases, but they should not exceed 95 characters.
+* <img src="static/img/type-layout.svg" style="width: 100%;" />
+**/
+
+/**
+* @styles 4-type-styles Styles
+* ### Lists
+* Lists have a left margin equivalent to 1 line height. Items in unordered lists are preceded by a disc bullet.
+* @iframe ux/demos/typography/list.html 200
+*
+*
+* ### Block Quotes
+* Block quotes have a left margin approximately 2x the font size. Block quotes in social studies have no font styling. Block quotes in other subjects are italicized.
+*
+* ### Attributions
+* Attributions are right-justified.
+*
+* ### Shared Stimulus Introductions
+* If a set of items shares a stimulus, the stimulus is prefaced with a bolded introduction indicating which items belong to the set.
+*
+* The following demo shows a shared stimulus introduction, a non-social studies block quote, and an attribution.
+* @iframe ux/demos/typography/shared-stimulus.html 285
+**/
+
+@font-face {
+  font-family: 'Calibri';
+  src:  local('Calibri Regular'),
+        url("fonts/calibri-regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Calibri';
+  src:  local('Calibri Italic'),
+        url("fonts/calibri-italic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Calibri';
+  src:  local('Calibri Bold'),
+        url("fonts/calibri-bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Calibri';
+  src:  local('Calibri Bold Italic'),
+        url("fonts/calibri-bold-italic.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Thin.woff") format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Light.woff") format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Regular.woff") format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Italic.woff") format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Medium.woff") format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-MediumItalic.woff") format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-Bold.woff") format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ClearSans';
+  src: url("fonts/ClearSans-BoldItalic.woff") format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+html {
+  font-family: 'Calibri', Arial, sans-serif;
+  font-size: 24px;
+  line-height: 1.11;
+  transition: background 0.2s; }
+html.sbt {
+  font-family: 'ClearSans', sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4; }
+
+.item-stem-wrapper {
+  margin-bottom: 0.28em;
+}
+
+.item-stem-wrapper,
+.response-area:first-of-type {
+  margin-top: 2em;
+}
+
+.response-area-iic {
+  border: 0.083em solid transparent;
+  display: inline-block;
+  padding: 1em;
+  text-align: center;
+}
+
+.stem-paragraph,
+.stimulus-paragraph {
+  margin: 0;
+  padding-bottom: 1.03em; }
+html.sbt .stem-paragraph,
+html.sbt .stimulus-paragraph {
+  padding-bottom: 1.2em; }
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.stem-paragraph p,
+.stem-paragraph-inner,
+.stimulus-paragraph p,
+.standalone-quote p,
+.char-portrait figcaption p {
+  border: 0.083em solid transparent;
+  margin: 0;
+  padding: 0 0.1em;
+  transition: border 0.2s;
+}
+
+.list-unordered {
+  margin: 0 0 1.11em 1.11em;
+}
+
+.list-unordered li {
+  border: 0.1em solid transparent;
+  line-height: 1;
+  transition: border 0.2s;
+}
+
+.standalone-quote {
+  font-style: italic;
+  margin: 0 0 0 2.11em;
+}
+
+.shared-stimulus-intro {
+  font-weight: bold;
+}
+
+html.sbt h1 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+html.sbt h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+html.sbt h3 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+html.sbt p.small-text {
+  font-size: 0.91em;
+}
+
+html.sbt p.light-text {
+  font-weight: 300;
+}
+
+html.sbt p.min-text {
+  font-size: 0.82em;
+}

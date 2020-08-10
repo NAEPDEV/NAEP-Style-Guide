@@ -1,0 +1,85 @@
+/**
+* @stylesheet intro-exit-screens.css Intro & Exit Screens
+* @parent ux.sbts
+* Many SBTs begin with an intro screen to orient the test taker and provide the task’s purpose and context. An exit screen is also often provided to reinforce that the task has been completed. Either screen may be omitted if it is not needed for the SBT’s flow.
+*
+* Intro and exit screens typically adhere to one of two formats: character-based or content-based.
+**/
+
+/**
+* @styles 0-splash-char-based Character-based Screens
+* Character-based intro and exit screens are used in SBTs that provide task characters to guide test takers through the scenario. Styling for character-based screens can be found on the [characters-dialogue.css] page.
+@iframe ux/demos/intro-exit-screens/character-screen.html 437
+**/
+
+/**
+* @styles 1-splash-content-based Content-based Screens
+* Content-based intro and exit screens are used in SBTs that provide directions and other information to test takers directly, rather than via task characters. Content is presented in a container with the following characteristics:
+* * Horizontally and vertically centered
+* * Width between 40 and 65 characters to ensure easy readability
+* * White `#FFFFFF` (or other light color) fill
+* * Rounded corners
+* * Drop shadow
+**/
+
+/**
+* @styles 2-splash-background Backgrounds
+* Backgrounds for both character-based and content-based screens may be composed of image(s) or a solid fill. Three kinds of background images are available:
+* * _Tiled_. The background is composed of image tiles that repeat horizontally, vertically, or both to create a pattern.
+* * _Isometrically scaled_. The ratio of the background image’s height and width remains the same as the content area’s size changes.
+* * _Allometrically scaled_. The ratio of the background image’s height and width is allowed to change as the content area’s size changes.
+*
+* Combinations of these background image types can be used to create various effects. For example, in the demo below, the sky is a tiled image, and the buildings are an isometrically scaled image. This approach prevents the buildings from becoming deformed in unusual browser window sizes. (Try opening the full-size demo and resizing the browser window to see how it works.)
+*
+* _Demo is shown at 62.5% actual size. To see a full-size demo, click <a href="demos/intro-exit-screens/content-screen-full.html" target="_blank">here</a>._
+@iframe ux/demos/intro-exit-screens/content-screen.html 480
+**/
+
+.splashscreen {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  padding: 1em 1.25em;
+  width: 100%;
+}
+
+.splashscreen-allometric,
+.splashscreen-isometric,
+.splashscreen-tile {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1; }
+.splashscreen-allometric {
+  background-size: 100% 100%; }
+.splashscreen-isometric {
+  background-repeat: no-repeat;
+  background-size: contain; }
+.splashscreen-isometric.align-bottom {
+  background-position: bottom; }
+.splashscreen-tile {
+  background-repeat: repeat; }
+.splashscreen-tile.repeat-x {
+  background-size: auto 100%; }
+.splashscreen-tile.repeat-y {
+  background-size: 100% auto; }
+
+.splashscreen-card {
+  background: #fff;
+  border: 0.075em solid transparent;
+  border-radius: 0.25em;
+  box-shadow: 0 0.67em 0.8em 0 rgba(0, 0, 0, 0.24), 0 1em 2.8em 0 rgba(0, 0, 0, 0.19);
+  margin: auto;
+  max-width: 65ch;
+  min-width: 40ch;
+  padding: 2em;
+  transition: background 0.2s, border 0.2s;
+  width: 56%;
+}
+
+.splashscreen-card .stimulus-paragraph:last-of-type,
+.splashscreen-card .stem-paragraph:last-of-type {
+  padding: 0; }

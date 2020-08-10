@@ -1,0 +1,492 @@
+/**
+* @stylesheet navigation.css Navigation
+* @parent ux.ui-elements
+**/
+
+/**
+* @styles 0-tabs Tabs
+* Tabs allow test takers to navigate non-linearly through chunks of related content. (For example, items in a block are presented in a tabbed interface.)
+*
+* Tabs are laid out horizontally and typically left-justified, though item tabs are right-justified.
+* ### Tab States
+* Tabs have the following states by default.
+* * _Unanswered_. The default state. Tab has a gray `#F5F5F5` background.
+* * _Answered_. Visible when the associated item has been answered. Tab background is darkened.
+* * _Selected_. Visible when the associated item is on-screen. Tab background changes to white `#FFFFFF`, tab height increases, and the bottom border is removed to connect the tab to the content area.
+* * _Hover_. Visible when the cursor is over the tab. Tab background is lightened.
+* * _Disabled_. Visible when the tab is inactive (e.g., when a modal system tool like Scratchwork is enabled). Tab label color is dimmed to indicate that the tab is inactive.
+*
+* Tabs receive the `default` cursor in the selected and disabled states, and the `pointer` cursor in all other states.
+* @iframe ux/demos/navigation/tab-states.html 135
+*
+*
+* ### Tab Pagination
+* If there are more tabs than will fit on screen, tab pagination buttons appear that allow the test taker to page through the tabs as needed. Tab pagination buttons use the bare button style. (See the [buttons.css] page for details.) In addition, a drop shadow is added so that the buttons appear to be above the tab tray on the z-axis.
+*
+* Behavioral details:
+* * Pressing a tab pagination button will cause the tab tray to shift one screen width in the selected direction by default.
+* * If there aren’t sufficient tabs off-screen to fill a screen width, the tab tray shifts so that the last off-screen tab is adjacent to the selected tab pagination button.
+* * If the test taker navigates to an off-screen tab (e.g., by pressing the __Back__ or __Next__ button), the tab tray shifts so that the selected tab is on-screen.
+* @iframe ux/demos/navigation/tab-pagination.html 135
+*
+*
+* ### Tabs in SBTs <img src="static/img/icon-asterisk.svg"/>
+* The styling of tabs in scenario-based tasks (SBTs) may depart from the defaults described above if needed to match the look and feel of the rest of the task.
+**/
+
+.enaepTabStrip {
+  background: #dadada;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2) inset;
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.enaepTabStrip.non-paginated {
+  background: #e9e9e9;
+  box-shadow: none;
+}
+
+.enaepTab {
+  border-bottom: 0.05em solid #bfbfbf;
+  border-left: 0.05em solid transparent;
+  border-right: 0.05em solid transparent;
+  border-top: 0.05em solid transparent;
+  color: #000;
+  display: inline-flex;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 24px;
+  height: 2.29em;
+  list-style: none;
+  margin: 0 0 0 2em;
+  padding: 0;
+  transition: border 0.2s, color 0.2s;
+}
+
+.enaepTabStrip.non-paginated .enaepTab {
+  display: flex;
+  margin: 0;
+  transition: none;
+}
+
+/* Tab styles */
+.enaepTab li {
+  background: #f5f5f5;
+  border: 0.05em solid #ababab;
+  border-bottom: none;
+  border-left-style: none;
+  cursor: pointer;
+  display: block;
+  line-height: 1.67em;
+  margin-top: 0.5em;
+  min-width: 1.96em;
+  padding: 0 0.41em;
+  text-align: center;
+  transition: background 0.2s;
+  user-select: none; }
+.enaepTab li:hover {
+  background: #fcfcfc; }
+.enaepTab li.answered {
+  background: #c9c9c9; }
+.enaepTab li.answered:hover {
+  background: #c9c9c9; }
+.enaepTab li.selected {
+  background: #FFF !important;
+  border-bottom: 0.08em solid #FFF;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-top-left-radius: 0.21em;
+  border-top-right-radius: 0.21em;
+  line-height: 1.96em;
+  margin: 0.17em 0 -0.05em -0.05em;
+  pointer-events: none; }
+.enaepTab li[disabled] {
+  color: #7F7F7F;
+  pointer-events: none; }
+
+.enaepTabStrip.non-paginated li:first-of-type {
+  margin-left: 0.5em;
+}
+
+.enaepTab li:last-of-type {
+  border-radius: 0 0.21em 0 0;
+}
+
+.enaepTab li:first-of-type,
+.enaepTab li.selected:last-of-type {
+  border-left-style: solid;
+  border-top-left-radius: 0.21em;
+}
+
+/* Styles for right-justified tab set */
+.align-right {
+  justify-content: flex-end;
+}
+
+.align-right li:last-of-type {
+  margin-right: 0;
+  min-width: 3.85em;
+  padding-left: 0.45em;
+  padding-right: 0.45em;
+}
+
+.enaepTabStrip.non-paginated .align-right li:first-of-type {
+  margin-left: 0;
+}
+
+.enaepTabStrip.non-paginated .align-right li:last-of-type {
+  margin-right: 0.25em;
+}
+
+/* Styles for stimulus tabs */
+.enaepTabStrip.non-paginated.stimTabStrip {
+  background: #ddd; }
+#questionsbutton-wrapper .enaepTabStrip.non-paginated.stimTabStrip {
+  background: #e9e9e9; }
+
+.enaepTabStrip.non-paginated .stimTab {
+  margin-top: 0.25em; }
+#questionsbutton-wrapper .enaepTabStrip.non-paginated .stimTab {
+  margin-top: 0.6em; }
+
+.enaepTab.stimTab li {
+  padding: 0 0.5em;
+}
+
+/* Pagination button styles */
+.btn-tab-mover-wrapper {
+  background: #eee;
+  border-bottom: thin solid #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  height: 100%;
+  padding: 0.15em;
+  position: absolute;
+  transition: background 0.2s, border 0.2s;
+}
+
+.enaepTabStrip.non-paginated .btn-tab-mover-wrapper {
+  display: none;
+}
+
+.btn-tab-mover-wrapper:first-of-type {
+  border-right: thin solid #aaa;
+  box-shadow: 0.1em 0 0.08em -0.02em rgba(0, 0, 0, 0.1);
+}
+
+.btn-tab-mover-wrapper:last-of-type {
+  border-left: thin solid #aaa;
+  box-shadow: -0.1em 0 0.08em -0.02em rgba(0, 0, 0, 0.1);
+  right: 0;
+}
+
+.btn-tab-mover {
+  background: none;
+  border: 0.05rem solid transparent;
+  border-radius: 0.15em;
+  color: #3f3f3f;
+  cursor: pointer;
+  display: block;
+  font-family: "icons";
+  font-size: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+  width: 1em;
+}
+
+.btn-tab-mover:hover {
+  background: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0.03em 0.06em rgba(0, 0, 0, .15); }
+html.can-touch .btn-tab-mover:hover {
+  background: none;
+  border-color: transparent;
+  box-shadow: none; }
+
+.btn-tab-mover:active,
+html.can-touch .btn-tab-mover:active {
+  background-color: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0 0.28em rgba(0, 0, 0, .25) inset;
+}
+
+.btn-tab-mover[disabled] {
+  color: #b3b3b3;
+  pointer-events: none;
+}
+
+.btn-tab-mover:after {
+  display: block;
+  font-size: 0.65em;
+}
+
+#btn-tab-mover-left:after {
+  content: '\e90c';
+}
+
+#btn-tab-mover-right:after {
+  content: '\e90d';
+}
+
+/**
+* @styles 1-scrollbars Scrollbars
+* Scrollbars are provided when a continuous unit of content (e.g., an item) extends beyond the available space.
+*
+* To increase salience, especially for test takers less familiar with digital environments, scrollbars are displayed in blue (`#246BB2` for buttons and thumb, `#EBF5FF` for track) in the default theme. Scrollbar colors in other themes were selected to balance salience with alignment to the theme.
+*
+* Vertical scrollbars are 20px wide, and horizontal scrollbars are 20px tall. Scrollbar buttons are 20px square, and the corners of the buttons and scrollbar thumb are rounded.
+* @iframe ux/demos/navigation/scrollbars.html 200
+**/
+
+::-webkit-scrollbar {
+  height: 20px;
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebf5ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #246bb2;
+  border: 1px solid #1A4C80;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  background-color: #246bb2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  border: 1px solid #1A4C80;
+  border-radius: 2px;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+::-webkit-scrollbar-button:start:decrement:disabled,
+::-webkit-scrollbar-button:end:increment:disabled {
+  background-color: #6aa7e4;
+  border-color: #4c7eb2;
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:vertical:start:decrement:disabled {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1ef" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:vertical:end:increment:disabled {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1ef" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement:disabled {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1e1" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment:disabled {
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1e1" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
+}
+
+/**
+* @styles 2-pagination Pagination
+* Pagination is used in lieu of scrolling when content requires the preservation of distinct pages (e.g., to preserve a magazine-style layout in a reading stimulus passage).
+*
+* When navigating to different pages, pages should transition with a smooth slide animation.
+*
+* ### Pagination Buttons
+* When on a screen with a non-white background, pagination buttons are placed in an off-white `#FAFAFA` lozenge to differentiate them from surrounding content. The lozenge is aligned to the left edge of the page and vertically centered.
+*
+* __Previous Page__ and __Next Page__ buttons are provided, along with one __Page Number__ button for each page of content. Selecting a __Page Number__ button will navigate the content to the associated page.
+*
+* __Previous Page__ and __Next Page__ buttons use the primary filled button style. They have the `chevron-up` and `chevron-down` icons, respectively.
+*
+* __Page Number__ buttons use the secondary filled button style, with an added selected state to indicate which page is currently being displayed. When selected, the button background color is light blue `#c4e0f8`, and the border is transparent.
+* @iframe ux/demos/navigation/pagination.html 670
+*
+*
+* ### Locking of Paginated Content
+* In SBTs, it is sometimes desirable to hide one or more pages of stimulus content until the test taker takes a particular action. In such cases, the hidden pages are initially locked (i.e., inaccessible).
+*
+* To indicate to test takers that some content is not yet available, the __Page Number__ button(s) for the locked page(s) are replaced with a `lock` icon. When the test taker takes the action needed to unlock the page(s), the `lock` icon is removed, and the page(s) become accessible.
+* @iframe ux/demos/navigation/pagination-locked.html 730
+**/
+
+
+/* PAGE BUTTON LAYOUT
+===================================================== */
+.page-nav {
+  font-size: 25px;
+  left: 10px;
+  position: fixed;
+  text-align: center;
+  /*transform: translateY(-50%);*/
+  top: 15.66em; /* based on 2015 card height; this should be reset dymanically */
+  user-select: none;
+  width: 2em;
+  z-index: 99;
+}
+
+.page-btn-scrim {
+  border-radius: 1em;
+  height: 100%;
+  position: absolute;
+  transition: background 0.2s, border 0.2s;
+  width: 100%;
+  z-index: -1;
+}
+
+
+/* PAGE BUTTONS
+===================================================== */
+.btn-page-previous,
+.btn-page-num,
+.btn-page-next {
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  text-align: center;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.btn-page-previous,
+.btn-page-next {
+  background: #0068d1;
+  border: 0.08em solid transparent;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "icons";
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  height: 1.58em;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  speak: none;
+  text-transform: none;
+  width: 1.58em; }
+.btn-page-previous {
+  margin-bottom: 0.9em;
+  margin-top: 0.3em; }
+.btn-page-next {
+  margin-bottom: 0.3em;
+  margin-top: 0.9em;
+  padding-top: 0.05em; }
+.btn-page-previous:hover,
+.btn-page-next:hover {
+  background: #137fec;
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+html.can-touch .btn-page-previous:hover,
+html.can-touch .btn-page-next:hover {
+  background: #0068d1;
+  box-shadow: none; }
+.btn-page-previous:active,
+.btn-page-next:active,
+html.can-touch .btn-page-previous:active,
+html.can-touch .btn-page-next:active {
+  background: #0060ac;
+  box-shadow: none; }
+.btn-page-previous[disabled],
+.btn-page-next[disabled],
+html.can-touch .btn-page-previous[disabled],
+html.can-touch .btn-page-next[disabled] {
+  background: #e5e5e5;
+  color: #909090;
+  box-shadow: none;
+  pointer-events: none; }
+
+.btn-page-num {
+  background: transparent;
+  border: 0.08em solid #949494;
+  border-radius: 0.25em;
+  color: #0855b2;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 1.12em;
+  font-style: normal;
+  font-weight: bold;
+  height: 1.35em;
+  line-height: 1;
+  margin: 0.65em auto;
+  padding: 0;
+  text-align: center;
+  width: 1.13em; }
+.btn-page-num:hover {
+  border-color: #616161;
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+html.can-touch .btn-page-num:hover {
+  border-color: #949494;
+  box-shadow: none; }
+.btn-page-num:active,
+html.can-touch .btn-page-num:active {
+  background: #f0f0f0;
+  border-color: #616161;
+  box-shadow: none; }
+.btn-page-num.page-active,
+html.can-touch .btn-page-num.page-active {
+  background: #C4E0F8;
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none; }
+.btn-page-num[disabled] {
+  border-color: transparent;
+  color: #bbb;
+  pointer-events: none; }
+
+.btn-page-num[disabled].locked {
+  color: transparent;
+  border: none;
+  position: relative; }
+
+.btn-page-num[disabled].locked::after {
+  color: #767676;
+  content: '\e947';
+  font-family: "icons";
+  font-size: 34px;
+  font-weight: normal;
+  height: 100%;
+  left: -0.06em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+
+/* PAGE TURN ANIMATION
+===================================================== */
+.page-container {
+  transition-property: margin-top;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  user-select: none;
+}
+
+.page-mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: inherit;
+}

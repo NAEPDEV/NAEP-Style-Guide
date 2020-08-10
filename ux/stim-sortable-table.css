@@ -1,0 +1,64 @@
+/**
+* @stylesheet stim-sortable-table.css Sortable Table
+* @parent ux.stimuli
+* A sortable table stimulus allows test takers to sort data presented in a stimulus table. (See the Stimulus Tables page in the [Media](../media/index.html) section for more information.)
+*
+* Sortable tables are currently used only in SBTs.
+* @iframe ux/demos/stim-sortable-table/stim-sortable-table.html 370
+*
+*
+* When selected, each column header will reorder the table’s rows based on the data in the column, starting with ascending order. With successive selections, the table sort order will toggle between descending and ascending order.
+*
+* Sortable tables have the same styling as static stimulus tables, except for the column header cells, which have the following states.
+* * _Default_. Visible when the header cell isn’t controlling the table’s sort order. The `sort-default` icon is displayed at the header cell’s right side.
+* * _Sort Ascending_. Displayed when the table is sorted such that the values in the associated column are in ascending order. The `sort-ascending` icon is displayed.
+* * _Sort Descending_. Displayed when the table is sorted such that the values in the associated column are in descending order. The `sort-descending` icon is displayed.
+* * _Hover_. Visible when the cursor is over the header cell. The cell background darkens, and the `pointer` cursor is shown.
+* * _Disabled_. Visible when the header cell is inactive (e.g., when a modal system tool like Scratchwork is enabled). The icon opacity reduces to 30%.
+**/
+
+.tablesorter {
+  position: relative;
+  z-index: 4;
+}
+
+th.header {
+  background-clip: padding-box; /*Needed for Firefox*/
+  cursor: pointer;
+  position: relative;
+  user-select: none; }
+th.header:hover {
+  background: #ccefff;
+  background-clip: padding-box; /*Needed for Firefox*/ }
+html.can-touch th.header:hover {
+  background: none;
+  background-clip: padding-box; /*Needed for Firefox*/ }
+th.header[disabled] {
+  pointer-events: none; }
+
+th.header::after {
+  content: '\e967';
+  display: inline-block;
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  speak: none;
+  vertical-align: middle; }
+th.header[disabled]::after {
+  color: #9caab1;
+  color: rgba(0,0,0,.3); }
+
+th.header.headerSortDown::after {
+  content: '\e968';
+}
+
+th.header.headerSortUp::after {
+  content: '\e969';
+}
+
+th.header .table-content {
+  display: inline-block;
+  vertical-align: middle;
+}

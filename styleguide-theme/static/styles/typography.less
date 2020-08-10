@@ -1,0 +1,243 @@
+/**
+* @stylesheet typography.less Typography
+* @parent Styles.baseline-elements 1
+*
+* @description
+* Global style definitions for all typographic elements including headings, paragraphs, lists, and blockquotes.
+**/
+
+/**
+* Font families
+**/
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal; }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic; }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal; }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic; }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal; }
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic; }
+
+  @font-face {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/icomoon.woff?md92d0') format('woff');
+  }
+/**
+* @styles headings Headings
+*
+* @description
+* H tags defining a typographical hierarchy.
+*
+* @iframe demos/headings.html
+**/
+h1,h2,h3,h4,h5,h6{
+	color: @darkSkies;
+	margin: 0;
+	margin-bottom: 0.75rem;
+}
+	h1 { font-size: 2em; font-weight: 600; }
+	h2 { font-size: 1.5em; }
+	h3 { font-size: 1.25em; font-style: italic; }
+	h4 { font-size: 1em; font-style: italic; }
+	h5 { font-size: 1em; }
+	h6 { font-size: .75em; }
+
+
+/**
+* @styles content Content Tags
+*
+* @description
+* Typography for paragraphs, links, lists, etc.
+*
+* @demo demos/content.html
+**/
+p, .p {
+	font-size: @defaultFontSize;
+	line-height: 1.5;
+	margin-top: 0;
+	margin-bottom: @defaultBottomMargin;
+}
+a {
+	text-decoration: none;
+	color: @colorLinks;
+	cursor:pointer;
+	img{
+		border:none;
+	}
+}
+hr {
+	height:1px;
+	margin-bottom:20px;
+	background: @haze;
+	border: none;
+}
+ol,ul{
+	list-style:none;
+}
+ul{
+	list-style: disc;
+	margin:0 0 @defaultBottomMargin 2.5em;
+}
+ol{
+	list-style-type:decimal;
+	margin:0 0 @defaultBottomMargin 3em;
+	ol{
+		list-style:upper-roman;
+		ol{
+			list-style:lower-roman;
+			ol{
+				list-style:upper-alpha;
+				ol{
+					list-style:lower-alpha;
+				}
+			}
+		}
+	}
+}
+ul ul,ol ol,ul ol,ol ul{
+	margin-bottom:0;
+}
+dl{
+	margin:0 0 18px 3px;
+}
+dl dt{
+	font-weight:600;
+	margin:12px 0 0 0;
+}
+dl dd{
+	margin:6px 0 0 1.5em;
+}
+strong, b {
+	font-weight:700;
+}
+em,cite{
+	font-style:italic;
+}
+strong em {
+  font-weight:700;
+  font-style:italic;
+}
+em em,cite cite{
+	font-style:normal;
+}
+abbr{
+	cursor:help;
+}
+acronym{
+	text-transform:uppercase;
+	border-bottom:1px dashed @thunderStorm;
+	cursor:help;
+}
+big{
+	font-size:120%;
+}
+small,sup,sub{
+	font-size:80%;
+}
+sup{
+	vertical-align:baseline;
+	position:relative;
+	bottom:0.3em;
+}
+sub{
+	vertical-align:baseline;
+	position:relative;
+	top:0.3em;
+}
+address{
+	font-style:italic;
+	margin:0 0 @defaultBottomMargin 0;
+}
+li address,dd address{
+	margin:0;
+}
+blockquote{
+  border-left: 0.25em solid #b3b3b3;
+  font-style: normal;
+	margin: -0.75em 2.5em 0 2.5em;
+  padding: 0 1em;
+}
+blockquote em,blockquote cite{
+	font-style:italic;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after{
+	content:'';
+	content:none;
+}
+caption{
+	font-size:.9em;
+	font-style:italic;
+	text-align:right;
+}
+ins,dfn{
+	font-style:italic;
+	text-decoration:none;
+	border-bottom: 1px solid @thunderStorm;
+}
+del,s,strike{
+	text-decoration:line-through;
+}
+object{
+	margin-bottom: @defaultBottomMargin;
+}
+
+/**
+* @styles special Special Type Styles
+*
+* @description
+* Text shadow mixins to be added to type styles as needed. They are usually applied to buttons and headings.
+*
+* @demo demos/special.html
+**/
+.text-shadow(@opacity: .5) {
+	text-shadow: 0 -1px 0 rgba(0,0,0,@opacity);
+}
+.text-shadow-light {
+	text-shadow: 0 1px 0 @clear;
+}
+
+/* For demo use only! */
+div.light {
+	border-radius: 3px;
+	padding: 10px;
+	background: @haze;
+	h3 {
+		.text-shadow-light;
+	}
+}
+div.dark {
+	border-radius: 3px;
+	padding: 10px;
+	background: @cloud;
+	h3 {
+		color: @haze;
+		.text-shadow;
+	}
+}

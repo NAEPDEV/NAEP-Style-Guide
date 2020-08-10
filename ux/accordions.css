@@ -1,0 +1,122 @@
+/**
+* @stylesheet accordions.css Accordion Menus
+* @parent ux.sbts
+* Accordion menus allow test takers to show or hide items in a multi-level menu as needed. Accordions are useful for showing hierarchical relationships among pieces of information.
+*
+* Accordion menus generally work best with two levels of content. The demo below shows three levels, which is the maximum allowed to avoid overwhelming test takers.
+* @iframe ux/demos/accordions/accordions.html 470
+*
+*
+* When a top- or mid-level item is selected, one of two behaviors is allowed:
+* * The item’s submenu is expanded, and associated content is displayed.
+* * The item’s submenu is expanded. (In this case, only bottom-level items display associated content when selected.)
+*
+* Only one bottom-level item’s submenu can be fully expanded at a time. A slide animation plays when a submenu is expanded or collapsed.
+**/
+
+.accordion {
+  color: #2067B3;
+  display: inline-block;
+  font-size: 1.08em;
+  line-height: 1;
+  position: relative;
+  z-index: 4; }
+
+.accordion,
+.accordion ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul {
+  display: none;
+}
+
+.accordion > li {
+  background: #EBECED;
+  border: 0.05em solid #767676;
+  border-bottom: none;
+  transition: background 0.2s; }
+.accordion > li:last-of-type {
+  border-bottom: 0.05em solid #767676; }
+
+.accordion > li > ul  {
+  background: #fff;
+  font-size: 0.85em;
+  transition: background 0.2s;
+}
+
+.accordion span {
+  cursor: pointer;
+  display: block;
+  padding: 0.4em 2em 0.4em 0.4em;
+  position: relative;
+  transition: background 0.2s, color 0.2s; }
+.accordion span:hover,
+.accordion span.active:hover {
+  background: #D7EEF5;
+  font-weight: bold; }
+.accordion span.active {
+  background: #fff;
+  font-weight: bold;
+  pointer-events: none; }
+.accordion span.active.dropdown {
+  pointer-events: auto; }
+.accordion span[disabled],
+.accordion span.active.dropdown[disabled] {
+  color: rgba(32,103,179,0.5);
+  pointer-events: none; }
+
+.accordion > li > ul > li > span {
+  padding-left: 1em;
+}
+
+.accordion > li > ul > li > ul > li > span {
+  padding-left: 2em;
+}
+
+.accordion span.active::after {
+  border-color: transparent transparent transparent #2067B3;
+  border-radius: 0.1em;
+  border-style: solid;
+  border-width: 0.35em;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 0.25em;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: border 0.2s, opacity 0.2s;
+  width: 0;
+}
+
+.accordion > li > span.hover::after,
+.accordion > li > span.active.dropdown::after,
+.accordion > li > ul > li > span.hover::after,
+.accordion > li > ul > li > span.active.dropdown::after {
+  border-color: #58585A transparent transparent transparent;
+  border-radius: 0.1em;
+  border-style: solid;
+  border-width: 0.35em;
+  content: '';
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 0.5em;
+  top: 50%;
+  transform: translateY(-25%);
+  transition: border 0.2s, opacity 0.2s;
+  width: 0;
+}
+
+.accordion > li > ul > li > span.hover::after,
+.accordion > li > ul > li > span.active.dropdown::after {
+  border-top-color: #939598;
+  right: 0.6em;
+}
+
+.accordion span[disabled]::after {
+  opacity: 0.5;
+}

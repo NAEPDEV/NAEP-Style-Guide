@@ -1,0 +1,62 @@
+/**
+* @stylesheet response-type-shape-builder.css Shape Builder
+* @parent ux.response-types
+* The shape builder response type allows test takers to respond to an item by placing line segments and circles on a grid.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-shape-builder/response-type-shape-builder.html 930
+**/
+
+/**
+* @styles 0-sb-source-tray Source Tray
+* Test takers can add line segments and circles to the grid by dragging them from a source tray above the grid. The source tray has the same styling as those used for the [response-type-matching.css] response type.
+**/
+
+.response-area-sb .match-source-tray {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.sb-source {
+  cursor: move;
+  margin: 0.25em; }
+.sb-source[disabled] {
+  pointer-events: none; }
+
+.sb-source .line-actual {
+  fill: transparent; }
+.sb-source:active .line-actual {
+  stroke-width: 8;
+}
+
+.sb-source .point {
+  pointer-events: none;
+}
+
+.sb-source:active .point-actual {
+  transform: scale(1.333);
+}
+
+/**
+* @styles 1-sb-grid Grid
+* The grid used for shape builder responses has the same styling as typical [coordinate-grids.css], with the following exceptions:
+* * The grid border has the same style as grid lines (i.e., medium-weight gray `#949494` lines).
+* * Axes, axis labels, axis names, and axis ticks are not provided.
+* * The origin label is replaced by a zero aligned with the vertical and horizontal axis labels.
+*
+* Line segments and circles have the same styles and behaviors as draggable [points-lines-polygons.css], with two exceptions:
+* * The center point of each circle is used to translate the circle.
+* * The outer point of each circle receives the `ew-move` cursor since it transforms the circle in only one dimension.
+**/
+
+.ft-center-point:active ~ .point .point-actual {
+  transform: scale(1.333);
+}
+
+/**
+* @styles 2-sb-controls Controls
+* __Undo__ and __Reset__ buttons are right-justified beneath the grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the grid.
+* * The __Reset__ button restores the grid to its initial state.
+**/

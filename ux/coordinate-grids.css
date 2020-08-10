@@ -1,0 +1,94 @@
+/**
+* @stylesheet coordinate-grids.css Coordinate Grids
+* @parent ux.ui-elements
+* Coordinate grids are displayed for response types in which students must create or manipulate points, lines, line segments, or mathemetical figures as part of their response.
+**/
+
+/**
+@styles 0-grids-elements Grid Elements
+* Coordinate grids are composed of the following elements.
+* * _Title (optional)_. Centered above grid. Bolded and in all caps.
+* * _Grid border_. Light gray `#CCCCCC` line that bounds the grid.
+* * _Grid lines_. Gray `#949494` lines that form the grid.
+* * _Axes_. Black `#000000` lines with arrowheads.
+* * _Axis labels_. An italicized _x_ or _y_ positioned at the upper bound of the associated axis. Each label has a white `#FFFFFF` halo around it to prevent collisions with the grid lines.
+* * _Axis names (optional)_. Centered next to the associated axis.
+* * _Axis ticks_. Short black `#000000` lines along each axis indicating the increments at which the grid lines appear.
+* * _Axis tick labels_. Appear immediately below (for the _x_-axis) or to the left (for the _y_-axis) of each axis tick. Each label has a white `#FFFFFF` halo around it to prevent collisions with the grid lines.
+**/
+
+.cg-grid-wrapper {
+  display: inline-block;
+}
+
+/*--------------------------------------
+TEXT
+--------------------------------------*/
+.coord-grid text {
+  font-family: Calibri, sans-serif;
+  font-size: 24px;
+  transition: fill 0.2s, stroke 0.2s;
+}
+
+.cg-title {
+  font-weight: bold;
+}
+
+.cg-axis-label {
+  font-style: italic;
+}
+
+.cg-text-shadow {
+  stroke: #fff;
+  stroke-width: 9px;
+}
+
+
+/*--------------------------------------
+LINES
+--------------------------------------*/
+.cg-grid-border {
+  fill: none;
+  stroke: #ccc;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  transition: stroke 0.2s;
+}
+
+.cg-axis line {
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  transition: stroke 0.2s;
+}
+
+.cg-axis polygon {
+  fill: #000;
+  transition: fill 0.2s;
+}
+
+.cg-grid-line {
+  fill: none;
+  stroke: #949494;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+.cg-tick {
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+/**
+* @styles 1-cg-1-quad One Quadrant
+* @iframe ux/demos/coordinate-grids/coordinate-grid-1-quad.html 760
+**/
+
+/**
+* @styles 2-cg-4-quad Four Quadrants
+* @iframe ux/demos/coordinate-grids/coordinate-grid-4-quad.html 560
+**/

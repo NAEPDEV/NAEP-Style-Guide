@@ -1,0 +1,68 @@
+/**
+* @stylesheet directional-pads.css Directional Pads
+* @parent ux.ui-elements
+* Directional pads allow test takers to move another user interface element in two-dimensional space.
+*
+* Directional pads consist of up, down, left, and right buttons with white `#FFFFFF` chevrons pointing in the appropriate directions. Directional pad buttons have the same style as small primary filled buttons (see the [buttons.css] page). They are typically presented in a control group (see the [control-groups.css] page).
+* @iframe ux/demos/directional-pads/directional-pads.html 300
+**/
+
+.dpad {
+  height: 6.583em;
+  margin: 0.667em 0.333em 0.625em;
+  position: relative;
+  width: 6.583em;
+}
+
+.dpad-up,
+.dpad-left,
+.dpad-right,
+.dpad-down {
+  display: flex;
+  height: 1.833em;
+  justify-content: center;
+  margin: 0;
+  padding: 0 !important;
+  position: absolute;
+  width: 1.833em; }
+.dpad-up {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+.dpad-down {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); }
+.dpad-left {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+.dpad-right {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.dpad-up::before,
+.dpad-left::before,
+.dpad-right::before,
+.dpad-down::before {
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid #fff;
+  border-radius: 0.167em;
+  content: '';
+  display: block;
+  height: 0;
+  transition: border-color 0.2s;
+  width: 0; }
+.dpad-up[disabled]::before,
+.dpad-left[disabled]::before,
+.dpad-right[disabled]::before,
+.dpad-down[disabled]::before {
+  border-top-color: #909090; }
+.dpad-up::before {
+  transform: rotate(180deg); }
+.dpad-left::before {
+  transform: rotate(90deg); }
+.dpad-right::before {
+  transform: rotate(-90deg); }

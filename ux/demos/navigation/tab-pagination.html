@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAEP Style Guide - Navigation - Tab States</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    #contentarea {
+      height: calc(100% - 55px);
+      overflow: auto;
+      padding: 1em;
+    }
+
+    a {
+      color: #0068D1;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #f4faff;
+      text-decoration: underline;
+    }
+  </style>
+  <base target="_parent">
+</head>
+
+<body>
+
+  <div class="enaepTabStrip">
+    <div class="btn-tab-mover-wrapper">
+      <button id="btn-tab-mover-left" class="btn-tab-mover" disabled></button>
+    </div>
+    <div class="btn-tab-mover-wrapper">
+      <button id="btn-tab-mover-right" class="btn-tab-mover" disabled></button>
+    </div>
+    <ul class="enaepTab itemTab align-right"></ul>
+  </div>
+
+  <div id="contentarea">
+
+    <div class="childItem content-container">
+      Question 1
+    </div>
+
+    <div class="childItem content-container">
+      Question 2
+    </div>
+
+    <div class="childItem content-container">
+      Question 3
+    </div>
+
+    <div class="childItem content-container">
+      Question 4
+    </div>
+
+    <div class="childItem content-container">
+      Question 5
+    </div>
+
+    <div class="childItem content-container">
+      Question 6
+    </div>
+
+    <div class="childItem content-container">
+      Question 7
+    </div>
+
+    <div class="childItem content-container">
+      Question 8
+    </div>
+
+    <div class="childItem content-container">
+      Question 9
+    </div>
+
+    <div class="childItem content-container">
+      Question 10
+    </div>
+
+    <div class="childItem content-container">
+      Question 11
+    </div>
+
+    <div class="childItem content-container">
+      Question 12
+    </div>
+
+    <div class="childItem content-container">
+      Question 13
+    </div>
+
+    <div class="childItem content-container">
+      Question 14
+    </div>
+
+    <div class="childItem content-container">
+      Question 15
+    </div>
+
+    <div class="childItem content-container">
+      Question 16
+    </div>
+
+    <div class="childItem content-container">
+      Question 17
+    </div>
+
+    <div class="childItem content-container">
+      Question 18
+    </div>
+
+    <div class="childItem content-container">
+      Question 19
+    </div>
+
+    <div class="childItem content-container">
+      Question 20
+    </div>
+
+    <div class="childItem content-container">
+      See the&#8287;<a href="../../review-screen.css.html">Review Screen</a>&#8287;section for information about end-of-block content.
+      <div style="display: none;">
+        <div class="item-stem-wrapper review review-unanswered">
+          <div class="stem-paragraph">You have reached the end of this section.</div>
+          <span class="icon-warning review-img"></span>
+          <div class="stem-paragraph">It looks like you have not answered the following <span id="review-questions-span">questions</span>.</div>
+          <ul class="list-unordered" id="list-review"></ul>
+          <div class="stem-paragraph">You can use the tabs at the top to go back to the questions in this section.</div>
+        </div>
+
+        <div class="item-stem-wrapper review review-answered" style="display: none;">
+          <span class="icon-warning review-img"></span>
+          <div class="stem-paragraph">You have reached the end of this section.</div>
+          <div class="stem-paragraph">You can use the tabs at the top to go back to the questions in this section.</div>
+        </div>
+
+        <div class="response-area review">
+          <button class="btn btn-next-section">Go on to the next section</button>
+          <div class="stem-paragraph">When you are finished, you can go on to the next section at any time.</div>
+          <div class="stem-paragraph">You cannot return to this section after you go on.</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="tabs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+/**
+* @stylesheet dialogs.css Dialogs
+* @parent ux.ui-elements
+* Dialogs are used to convey information to test takers or solicit an action. Depending on the purpose of a  given dialog, it may be modal or non-modal.
+*
+* Dialogs typically have rounded corners and a drop shadow to differentiate them from the main content area.
+*
+* Dialog buttons typically use the primary style but may use the secondary style when an interaction hierarchy is desired. (See the [buttons.css] page for more information about button styles.) Dialog buttons remain enabled when [tts.css] is on.
+*
+* Any multimedia playing when a dialog opens is paused.
+**/
+
+
+/**
+@styles 0-dialogs-modal Modal Dialogs
+* A modal dialog requires the test taker to interact with it before it can be dismissed; while the dialog is on screen, the test taker cannot return to the main content area. As such, modal dialogs are used to convey critical information or to solicit an action from the test taker.
+*
+* To increase initial salience, a modal dialog fades in and animates down to a centered position when it is invoked. In addition to the general dialog styling, modals are presented over a semi-transparent white `rgba(255,255,255,0.8)` backdrop to emphasize that the main content area is inaccessible. The backdrop covers the entire screen other than the [system-toolbar.css] so that test takers can use system tools while the dialog is open.
+*
+* When a dialog contains information not intended for test takers (e.g., an item accession number is provided in the _Item Error_ dialog to support troubleshooting), the information is presented at a smaller font size in the lower left corner.
+*
+* When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` icon is provided at the upper left corner of the dialog.
+*
+* Modal dialogs do not have a __Close__ button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the __OK__ button) to dismiss it.
+* @iframe ux/demos/dialogs/modals.html 780
+**/
+
+.dialog {
+  align-items: center;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px; /* Prevents zooming */
+  left: 0;
+  opacity: 1;
+  overflow: auto;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: background 0.2s, opacity 0.2s;
+  visibility: visible;
+  z-index: 10; }
+.dialog.hidden {
+  opacity: 0;
+  transition: background 0.2s, opacity 0.2s, visibility 0.2s;
+  visibility: hidden; }
+
+.dialog-content {
+  background: #fff;
+  border: 0.05em solid transparent;
+  border-radius: 0.25em;
+  box-shadow: 0 0 3em 0.25em rgba(0, 0, 0, 0.35), 0 0 0.75em rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  margin: auto;
+  max-width: 26em;
+  opacity: 1;
+  padding: 2em;
+  position: relative;
+  transform: translateY(0);
+  transition: background 0.2s, border 0.2s, transform 0.2s, opacity 0.2s; }
+.dialog.dialog-flex-row .dialog-content {
+  flex-direction: row;
+  justify-content: space-between; }
+#modal-max-selection .dialog-content {
+  max-width: 22em; }
+#modal-sbt-submit .dialog-content {
+  max-width: 25em; }
+html.sbt #modal-sbt-submit .dialog-content,
+#modal-ne-validation .dialog-content {
+  max-width: 27em; }
+#modal-next-section .dialog-content {
+  max-width: 28em; }
+#modal-end-assessment .dialog-content {
+  max-width: 25em; }
+#modal-item-error .dialog-content {
+  max-width: 28em; }
+#modal-sq-incomplete .dialog-content {
+  max-width: 19em; }
+
+.dialog.hidden .dialog-content {
+  opacity: 0;
+  transform: translateY(-20%);
+}
+
+.dialog-row {
+  display: flex;
+  justify-content: center;
+}
+
+.dialog .alert {
+  border: none;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+
+.dialog p {
+  width: 100%;
+}
+
+.dialog .stem-paragraph:last-of-type {
+  padding-bottom: 2em; }
+.dialog.non-modal .stem-paragraph:last-of-type {
+  padding-bottom: 0; }
+
+.underline {
+  text-decoration: underline;
+}
+
+.dialog-ne-symbol {
+  align-items: center;
+  border: 0.067em solid #949494;
+  border-radius: 0.2em;
+  display: flex;
+  font-size: 1.25em;
+  height: 2em;
+  justify-content: center;
+  margin: 0.5em 0.5em 1em;
+  width: 2em;
+}
+
+.dialog .btn {
+  align-self: flex-end;
+  flex: 0 0 auto;
+  margin: 0 0.5em 0 0; }
+.dialog .btn:last-of-type {
+  margin-right: 0; }
+
+.dialog-content small {
+  bottom: 3.33em;
+  font-size: 0.6em;
+  left: 3.33em;
+  position: absolute;
+}
+
+/**
+* @styles 1-dialogs-nonmodal Non-modal Dialogs
+* Non-modal dialogs allow test takers to interact with the main content area and the dialog simultaneously. This makes them useful for providing information that must be referenced across multiple screens, especially when it must be compared to information in the main content area. Currently, only SBTs use non-modal dialogs.
+*
+* Non-modal dialogs are typically invoked by selecting a button in the main content area. The button is labeled to indicate the nature of the dialog’s information, and is usually located to the upper left or right of the related content. When a non-modal dialog opens or closes, an animation plays to tie it to the button that invoked it:
+* * A scale is applied so that the dialog appears to grow out of the button (when opened) or shrink into the button (when closed).
+* * Dialog opacity changes between 0 (in closed state) and 1 (in open state).
+* * The dialog translates from the position of the activation button to its most recent position.
+*
+* Non-modal dialogs have a __Close__ button at their upper-right corner. They can also be closed by hitting Escape on the keyboard or by selecting the button that invoked them. __Close__ buttons have the following states.
+* * _Default_. Button consists of a dark gray `#333333` `cross-thin` icon.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to `#909090`.
+*
+* Test takers can reposition non-modal dialogs by dragging any spot on the dialog other than the __Close__ button.
+*
+* When a test taker navigates to the first screen on which a non-modal dialog is offered,
+* * The dialog automatically opens, and the test taker is given the opportunity to close it.
+* * The initial position of the dialog should avoid overlap with essential information in the main content area.
+* @iframe ux/demos/dialogs/non-modals.html 450
+**/
+
+.dialog.non-modal {
+  background: transparent;
+  display: block;
+  padding: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out; }
+.dialog.non-modal.hidden {
+  transition: opacity 0.4s ease-in, visibility 0.4s ease-in; }
+
+.dialog.non-modal .dialog-content {
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.8), 0 0 0.5em 0.15em rgba(0, 0, 0, 0.2);
+  cursor: default;
+  display: inline-flex;
+  margin: 0.25em;
+  pointer-events: auto;
+  position: relative;
+  transform: scale(1);
+  transform-origin: top left;
+  transition: left 0.5s ease, opacity 0.2s ease-out, top 0.5s ease, transform 0.3s ease; }
+.dialog.non-modal.hidden .dialog-content {
+  transform: scale(0.5);
+  transition: left 0.5s ease, opacity 0.4s ease-in, top 0.5s ease, transform 0.3s ease; }
+.dialog.non-modal .dialog-content.ui-draggable-dragging {
+  transition: none; }
+
+.btn-dialog-close {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-family: 'icons';
+  font-size: inherit;
+  line-height: 1;
+  padding: 0.5em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  user-select: none;
+  -webkit-font-smoothing: antialiased; }
+.btn-dialog-close[disabled] {
+  color: #909090;
+  pointer-events: none; }
+
+.btn-dialog-close:before {
+  content: "\e948";
+}

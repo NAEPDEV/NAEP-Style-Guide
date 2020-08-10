@@ -1,0 +1,152 @@
+/**
+* @stylesheet response-type-box-whisker.css Box-and-whisker
+* @parent ux.response-types
+* The box-and-whisker response type allows test takers to respond to an item by placing and manipulating interactive box plots. Placement may be omitted based on the measurement goals of a given item.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-box-whisker/response-type-box-whisker.html 820
+**/
+
+/**
+* @styles 0-bw-source-tray Source Tray
+* When box plot placement is enabled in an item, a source tray is provided above the graph (see below). The source tray has the same styling as those used for the [response-type-matching.css] response type. Box plot(s) in the source tray do not have sizing handles to help test takers understand that they must drag plots to the graph to manipulate them.
+**/
+
+.response-area-bw .match-source-tray {
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+/**
+* @styles 1-bw-graph Graph
+* Box-and-whisker graphs include the following elements.
+* * _Title (optional)_. Centered above graph. Bolded and in all caps.
+* * _Graph border_. Thick gray `#CCCCCC` line that bounds the graph.
+* * _Major vertical grid lines_. Thick gray `#757575` lines that establish the major intervals of the _x_-axis.
+* * _Minor vertical grid lines (optional)_. Thin light gray `#949494` lines that establish the minor intervals of the _x_-axis.
+* * _Horizontal grid lines_. Thin, dashed light gray `#949494` lines that establish where box plots can be placed.
+* * _x-axis_. Thick black `#000000` line at the bottom of the graph.
+* * _Axis name (optional)_. Centered beneath the _x_-axis.
+* * _Axis ticks_. Short gray `#757575` lines along the _x_-axis indicating the increments at which the major vertical grid lines appear.
+* * _Axis tick labels_. Appear immediately below each axis tick.
+**/
+
+.box-whisker text {
+  fill: #000;
+  font-family: Calibri, sans-serif;
+  font-size: 24px;
+  transition: fill 0.2s;
+}
+
+.bw-title {
+  font-weight: bold;
+}
+
+.bw-graph-border {
+  fill: none;
+  stroke: #CCC;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  transition: stroke 0.2s;
+}
+
+.bw-axis {
+  stroke: #000;
+  stroke-width: 3px;
+  transition: stroke 0.2s;
+}
+
+.bw-grid-line-vertical-major {
+  stroke: #757575;
+  stroke-linecap: round;
+  stroke-width: 3px;
+  transition: stroke 0.2s;
+}
+
+.bw-grid-line-vertical-minor,
+.bw-grid-line-horizontal {
+  stroke: #949494;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+.bw-grid-line-horizontal {
+  stroke-dasharray: 12 8;
+}
+
+/**
+* @styles 2-bw-box-plots Box Plots
+* Box plots have the following states.
+* * _Default_. Box has a light blue `#B8E2FF` fill and dark gray `#333333` borders. Whiskers are the same shade of gray.
+* * _Hover_. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to `#72C1F7`, and borders and whiskers become black `#000000`. The `move` cursor is shown.
+* * _Active_. Visible while the box plot is being dragged. Borders and whiskers thicken.
+* * _Disabled_. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray `#949494`, and borders and whiskers become dark gray `#484848`.
+**/
+
+.box-whisker .bw-actual {
+  outline: none; }
+.bw-actual[disabled] {
+  pointer-events: none; }
+
+.bw-whisker {
+  cursor: move;
+  stroke: #333;
+  stroke-linecap: round;
+  stroke-width: 5px;
+  transition: stroke 0.15s; }
+.bw-whisker:hover,
+.bw-whisker.hover {
+  stroke: #000; }
+html.can-touch .bw-whisker:hover,
+.bw-actual.focus-tabbed:focus .bw-whisker {
+  stroke: #333; }
+.bw-whisker:active,
+.bw-whisker.active,
+html.can-touch .bw-whisker:active,
+html.can-touch .bw-whisker.active,
+.box-whisker .bw-actual.focus-tabbed:focus .bw-whisker {
+  stroke: #000;
+  stroke-width: 7px; }
+.bw-actual[disabled] .bw-whisker {
+  stroke: #484848; }
+
+.bw-box {
+  cursor: move;
+  fill: #b8e2ff;
+  stroke: #333;
+  stroke-linejoin: round;
+  stroke-width: 5px;
+  transition: fill 0.15s, stroke 0.15s; }
+.bw-box:hover,
+.bw-box.hover,
+.bw-actual.focus-tabbed:focus .bw-box {
+  fill: #72c1f7;
+  stroke: #000; }
+html.can-touch .bw-box:hover {
+  fill: #b8e2ff;
+  stroke: #333; }
+.bw-box:active,
+.bw-box.active,
+html.can-touch .bw-box:active,
+html.can-touch .bw-box.active,
+.box-whisker .bw-actual.focus-tabbed:focus .bw-box {
+  fill: #72c1f7;
+  stroke: #000;
+  stroke-width: 7px; }
+.bw-actual[disabled] .bw-box {
+  fill: #949494;
+  stroke: #484848; }
+
+  /**
+  * @styles 3-bw-controls Controls
+  * A single-direction sizing handle is vertically centered on each of the following elements of each box plot that has been prepopulated or placed in the graph. (See the [transformable-objects.css] page for more information about sizing handles.)
+  * * Lowest observation line
+  * * Lower quartile line
+  * * Median line
+  * * Upper quartile line
+  * * Highest observation line
+  *
+  * __Undo__ and __Reset__ buttons are right-justified beneath the graph. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+  * * The __Undo__ button reverts the last change to the graph.
+  * * The __Reset__ button restores the graph to its initial state.
+  **/

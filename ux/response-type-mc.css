@@ -1,0 +1,182 @@
+/**
+* @stylesheet response-type-mc.css Multiple-choice
+* @parent ux.response-types
+*
+* The multiple-choice response type allows test takers to respond to an item by selecting from an array of options, which can include images, MathML, or styled (italic, bold, underlined) text. Each option is displayed with the following elements:
+* * An ordinal alphabetic option label (A,B,C, etc.) (Optional; SQ and SBT multiple-choice options do not include the option label.)
+* * A selection indicator (either a radio button or a checkbox; see the [checkboxes-and-radios.css] page for more information)
+* * The option content
+* * An __Eliminate Choice__ button (Optional; SBT multiple-choice options do not include the __Eliminate Choice__ button.)
+**/
+
+/**
+* @styles 0-mc-layout Layout
+* Multiple-choice option arrays can be presented in one or two columns. For both layouts,
+* * Left and right margins separate the option array from stem and stimulus text.
+* * Maximum width is set so that the maximum line length for option text is approximately 50-60 characters.
+* * Minimum width is approximately twice the width of the response option label.
+* * A __Clear Answer__ button is provided beneath the options, aligned to their left edge. It is styled as a small secondary filled button (see the [buttons.css] page for more information).
+*
+* For the single-column layout,
+* * Each option has a bottom margin 0.56x the base font size.
+* * All options are as wide as the widest option.
+*
+* For the two-column layout,
+* * Each option has a right and bottom margin 0.833x the base font size.
+* * Each option is 50% the width of the response area, less the margins.
+**/
+
+.mc {
+  counter-reset: mc;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 0 0.56em 1em; }
+.mc-col-two {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 0.287em 1em; }
+.mc[disabled] {
+  pointer-events: none; }
+
+.mc-option {
+  border: 0.083em solid #ccc;
+  border-radius: 0.2em;
+  cursor: pointer;
+  display: flex;
+  margin: 0 0 0.56em 0;
+  min-height: 2.5em;
+  overflow: hidden;
+  transition: background 0.2s, border-color 0.2s, color 0.2s; }
+.mc-col-two .mc-option {
+  flex: 1 0 calc(50% - 0.833em);
+  margin: 0 0.833em 0.833em 0; }
+.mc-option:hover {
+  border-color: #7fbfff; }
+html.can-touch .mc-option:hover {
+  border-color: #ccc; }
+.mc-option.mc-selected,
+html.can-touch .mc-option.mc-selected {
+  border-color: #198CFF; }
+.mc-option.mc-eliminated {
+  color: #b2b2b2; }
+.mc-option.mc-eliminated:hover {
+  border-color: #ccc; }
+
+.mc-control-wrapper,
+.mc-content-wrapper,
+.mc-ec-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.mc-control-wrapper {
+  background: #d6ebff;
+  padding: 0 0.625em;
+  transition: background 0.2s;
+  user-select: none; }
+.mc-option.mc-eliminated .mc-control-wrapper {
+  background: #F3F9FF; }
+.mc[disabled] .mc-control-wrapper {
+  background: #F3F9FF;
+  color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.3); }
+
+.mc-content-wrapper {
+  padding: 0.417em 0.625em;
+}
+
+.mc-ec-wrapper {
+  margin-left: auto;
+  padding: 0 0.75em;
+}
+
+.mc-alpha .mc-control-wrapper::before,
+.mc-decimal .mc-control-wrapper::before {
+  counter-increment: mc;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  width: 0.75em; }
+.mc-alpha .mc-control-wrapper::before {
+  content: counter(mc, upper-alpha); }
+.mc-decimal .mc-control-wrapper::before {
+  content: counter(mc); }
+
+.mc-control-wrapper .control {
+  margin: 0 .083em 0 .208em;
+  pointer-events: none;
+}
+
+.mc-content {
+  border: 0.083em solid transparent;
+  transition: border 0.2s;
+}
+
+.mc-content img {
+  display: block;
+  max-width: 100%;
+  transition: opacity 0.2s; }
+.mc-eliminated .mc-content img {
+  opacity: 0.2; }
+
+.mc-eliminate-choice {
+  align-items: center;
+  background: #fff;
+  border: 0.042em solid #949494;
+  border-radius: 50%;
+  color: #767676;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  height: 1.083em;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  width: 1.083em;
+  z-index: 4; }
+.mc-eliminate-choice:hover {
+  border-color: #444;
+  color: #444; }
+html.can-touch .mc-eliminate-choice:hover {
+  border-color: #949494;
+  color: #767676; }
+.mc-eliminate-choice[disabled] {
+  border-color: #e0e0e0;
+  color: #d7d7d7; }
+
+.mc-eliminate-choice:after {
+  content: '\ea0b';
+  font-family: "icons";
+  font-size: 0.5em; }
+.mc-eliminated .mc-eliminate-choice:after {
+  content: '\ea0a'; }
+
+.response-area-mc .btn {
+  margin-left: 1rem;
+}
+
+/**
+* @styles 1-mc-option-states Option States
+* Multiple-choice options have the following states. Colors match those of the [response-type-grid.css] response type.
+* * _Default_. Options are surrounded by a light gray `#CCCCCC` border. The option label (if present) and selection indicator are on a light blue `#D6EBFF` background.
+* * _Hover_. Visible when the cursor is over the option in its default state. Border becomes blue `#7FBFFF`, and the `pointer` cursor is shown.
+* * _Selected_. The border color changes to a bright blue `#198CFF`, and the selection state of the radio button/checkbox is toggled.
+* * _Eliminated_. Invoked by the __Eliminate Choice__ button. The option label (if present), selection indicator, and content are dimmed to reduce their salience.
+* * _Disabled_.  Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option label (if present), selection indicator, and __Eliminate Choice__ button are dimmed to indicate that they are inactive.
+**/
+
+/**
+* @styles 2-single-select-mc Single-select Variant
+* In a single-select multiple-choice response, the test taker is only able to select one option. Selecting another option will deselect the previously selected option.
+* @iframe ux/demos/response-type-mc/response-type-mc-ss.html 1100
+**/
+
+/**
+* @styles 3-multiple-select-mc Multiple-select Variant
+* In a multiple-select multiple-choice response, test takers may select as many or as few options as desired.
+* @iframe ux/demos/response-type-mc/response-type-mc-ms.html 475
+**/

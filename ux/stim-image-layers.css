@@ -1,0 +1,123 @@
+/**
+* @stylesheet stim-image-layers.css Image Layers
+* @parent ux.stimuli
+* The image layers stimulus allows test takers to use one or more switches to alter the appearance of an image.
+* @iframe ux/demos/stim-image-layers/image-layers-switch.html 480
+*
+*
+* Each image layer control is composed of a switch and a pair of labels, all of which are contained in a 2px gray `#949494` border with rounded corners. Each control is typically placed below the center of the image element that it manipulates.
+**/
+
+.layer-wrapper {
+  background: #fff;
+  margin: 1.11em 0;
+  max-width: 26.5em;
+  position: relative;
+  transition: background 0.2s;
+  z-index: 4;
+}
+
+.layer-row {
+  display: flex;
+  align-items: center;
+  position: relative; }
+.layer-row:last-of-type {
+  justify-content: center; }
+
+.layer-base-img,
+.layer-img {
+  flex: 0 0 auto;
+  margin: 1em;
+  width: 24.72em;
+}
+
+.layer-img {
+  position: absolute;
+  top: 0; }
+.layer-img.hidden {
+  display: none; }
+
+.layer-switch-wrapper {
+  align-items: center;
+  border: 0.1em solid #949494;
+  border-radius: 0.4em;
+  display: flex;
+  font-size: 0.833334em;
+  margin: 0 auto;
+  min-height: 3em; }
+.layer-switch-wrapper[disabled] {
+  pointer-events: none; }
+
+/**
+* @styles 1-image-layer-labels Switch Labels
+* Switch labels are approximately 83% the base font size. (See the [typography.css] page for more information about typographical specs.)
+*
+* Switch labels have the following states.
+* * _Default_. Displayed when the associated switch is in the opposite position. Label color is gray `#595959`. Label receives the `pointer` cursor.
+* * _Selected_. Displayed when the associated switch is in the label’s position. Label color is black `#000000`. Label receives the `default` cursor.
+*
+* When a label is in the default state, selecting it causes the associated switch to change to the label’s position.
+**/
+
+.layer-switch-label {
+  color: #595959;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 0.75em;
+  transition: color 0.2s;
+  user-select: none; }
+.layer-switch-label.active {
+  color: #000;
+  pointer-events: none; }
+
+/**
+* @styles 0-image-layer-switches Switches
+* Switches are used for image layer stimuli rather than buttons to avoid state ambiguity. Each switch has a 3px border and a circular toggle. When the switch is selected, the toggle moves left or right to indicate the state of the switch and the associated image element.
+*
+* Switches have the following states.
+* * _Enabled_. The default state. Switch color is blue `#0084FF`. Switch receives the `pointer` cursor.
+* * _Disabled_. Visible when the switch is inactive (e.g., when a modal system tool like Scratchwork is enabled). Switch color changes to gray `#949494`. Switch receives the `default` cursor.
+**/
+
+.layer-switch {
+  display: inline-block;
+  height: 1.5em;
+  position: relative;
+  width: 2.8em;
+}
+
+/* Hide default HTML checkbox */
+.layer-switch input[type="checkbox"] {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.layer-switch-slider {
+  border: 0.15em solid #0084FF;
+  border-radius: 0.75em;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  transition: border 0.2s; }
+input[disabled] ~ .layer-switch-slider {
+  border-color: #949494; }
+
+.layer-switch-slider::before {
+  background: #0084FF;
+  border-radius: 50%;
+  bottom: 0.15em;
+  content: "";
+  height: 0.9em;
+  left: 0.15em;
+  position: absolute;
+  transition: background 0.2s, transform 0.2s;
+  width: 0.9em; }
+.layer-switch input[type="checkbox"]:checked + .layer-switch-slider::before {
+  transform: translateX(1.3em); }
+input[disabled] ~ .layer-switch-slider::before {
+  background: #949494; }

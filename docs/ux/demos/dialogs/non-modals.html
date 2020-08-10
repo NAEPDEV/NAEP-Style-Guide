@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="sbt">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Dialogs - Non-modal Dialogs</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      display: block;
+      margin: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn btn-secondary btn-non-modal">Reference</button>
+
+  <div class="dialog non-modal hidden" id="non-modal" role="dialog">
+    <div class="dialog-content">
+      <div class="stem-paragraph">
+        <p>I contain some reference information.</p>
+      </div>
+      <button class="btn-dialog-close close-dialog"></button>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../lib/jquery-ui.min.js"></script>
+  <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="dialogs.js"></script>
+
+</body>
+
+</html>

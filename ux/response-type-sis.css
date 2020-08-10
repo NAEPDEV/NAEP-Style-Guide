@@ -1,0 +1,677 @@
+/**
+* @stylesheet response-type-sis.css Select-in-stimulus
+* @parent ux.response-types
+*
+* The select-in-stimulus (SIS) response type allows test takers to respond to an item by selecting sections of a video, audio clip, or text directly within a stimulus.
+*
+* Shades of green are used throughout SIS user interface elements to help convey that they are parts of a single interaction.
+**/
+
+/**
+* @styles 0-sis-cardinality Cardinality
+* Like other selected-response item types, SIS items can be single-select (one selection allowed) or multiple-select (multiple selections allowed).
+* In the single-select variant, if a test taker attempts to make a second selection, it will override the first.
+*
+* In the multiple-select variant, assessment specialists define a maximum selection limit. Once the maximum number of selections has been made, the max-selection alert (see below) appears, and one selection must be deselected before another can be selected.
+**/
+
+/**
+* @styles 1-sis-text-selections Text Selections
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-text-ms-full.html" target="_blank">here</a>._
+* @iframe ux/demos/response-type-sis/response-type-sis-text-ms.html 700
+*
+* Text selections are indicated in a stimulus by a background of varying shades of green, depending on the selection’s state. When selections are adjacent (i.e., when selections are words, phrases, or sentences), there must be one space character between the selections to visually differentiate them. A hairline margin should also appear between lines of selected text (achievable by adjusting the line height).
+*
+* Text selections in stimuli have the following states.
+* * _Inactive_. Visible when the item to which the selection belongs is NOT on screen and/or when a modal system tool (e.g., Scratchwork) is enabled. The selection has the styling of the surrounding passage.
+* * _Active_. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent `rgba(0,0,0,0.4)` border and a light green `#D1F7D3` background.
+* * _Hover_. Visible when the cursor is over the text selection. The selection has the same border and a darker green `#5ABF5D` background. The `pointer` cursor is shown.
+* * _Selected_. The selection has no border, a dark green `#0E8812` background, and the text color is white `#FFFFFF`.
+*
+* ### In the response area
+* Once a text selection has been chosen, it appears in the response area (see below). Text selections in the response area have the same green `#0E8812` background and white `#FFFFFF` text as in the stimulus to ensure visual continuity. To avoid mixing multiple typographical styles, all text selections in the response area are displayed at a standardized size in the Calibri typeface.
+*
+* When presented in a two-column response area, long text selections are truncated to avoid obscuring selection containers that appear below. A gradient helps convey the truncation, and a dark green `#0A3C0D` __See more__ button is provided at the lower left of the selection container. Pressing the __See more__ button allows the test taker to see the full selection, and changes the button label to “See less.” Pressing the button again returns the selection container to its default truncated state.
+**/
+
+.sis-text-selection,
+.sis-text-selection.active[disabled] {
+  background: none;
+  border: 0.05em dashed transparent;
+  color: #000;
+  pointer-events: none;
+  transition: background 0.3s, border 0.2s;
+}
+
+.sis-text-selection.active {
+  background: #D1F7D3;
+  border-color: rgba(0,0,0,0.4);
+  border-radius: 0.2em;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  position: relative;
+  z-index: 4;
+}
+
+/*.text-selection.active.blink {
+  animation-name: sis-highlight;
+  animation-duration: 1s;
+}*/
+
+.sis-text-selection.active:hover {
+  background: #5abf5d; }
+html.can-touch .sis-text-selection.active:hover {
+  background: #D1F7D3; }
+
+.sis-text-selection.active.selected,
+html.can-touch .sis-text-selection.active.selected {
+  background: #0E8812;
+  border-color: transparent;
+  color: #fff;
+}
+
+/*.text-selection.active.selected.blink {
+  animation: initial;
+}
+
+@keyframes sis-highlight {
+  0% { background-color: transparent);}
+  10% { background-color: #a4eca8;}
+  25% { background-color: #D1F7D3;}
+  40% { background-color: #a4eca8;}
+  100% { background-color: #D1F7D3;}
+}*/
+
+
+/**
+* @styles 2-sis-media-selections Multimedia Selections
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-media-ms-full.html" target="_blank">here</a>._
+* @iframe ux/demos/response-type-sis/response-type-sis-media-ms.html 600
+*
+*
+* Media selections are accessed in a stimulus via the media selection widget, which is composed of four elements:
+* * _The primary widget button_, used to open and close the widget
+* * The brace that connects the primary widget button to the associated segment of the media scrub bar
+* * _The __Play clip__ button_, used to preview the clip
+* * _The __Select__ button_, used to choose the selection
+*
+* ### Brace
+* The brace indicates the segment of the multimedia clip covered by the selection. The brace is green `#359A13` and has rounded corners. When two media selections are adjacent, there must be a 2px margin between them.
+*
+* ### Primary Widget Button
+* The primary widget button is horizontally centered in the associated brace. The button has the following states, which match those of primary filled buttons (see the [buttons.css] page for more information) except for the use of green.
+* * _Inactive_. Present when the item to which the selection belongs is NOT on screen. The selection widget is hidden.
+* * _Active_. Visible when the item to which the selection belongs is on screen. The primary button has a green `#359A13` background and a white `#FFFFFF` number indicating its position in the sequence of media selections.
+* * _Hover_. Visible when the cursor is over the text selection. The button background lightens to `#39AA13`, and the `pointer` cursor is shown.
+* * _Selected_. A turquoise `#00A873` checked badge appears at the bottom of the button.
+* * _Disabled_. Visible when a modal system tool (e.g., Scratchwork) is enabled. The button background becomes gray `#CCCCCC`, and the button label becomes light gray `#EEEEEE`.
+*
+* In addition to pressing the primary widget button, a media selection can also be closed by pressing any area of the screen other than the widget or the parent media player.
+*
+* ### Play Clip & Select Buttons
+* The __Play clip__ and __Select__ buttons have the same states as secondary filled buttons (see the [buttons.css] page for more information), except that their labels are the same green `#0E8812` as the primary widget button.
+*
+* By default, the __Play clip__ button has the `play` icon (see the [icons.css] page) and a “Play clip” label. As the label implies, pressing the button causes playback to begin at the start of the clip and pause at its end. Behavioral details:
+* * While a clip is playing, the associated __Play clip__ button icon changes to `pause`, and its label changes to “Pause.”
+* * Pressing the __Play clip__ button while the associated clip is playing causes playback to pause and the button to return to its default state. Pressing the button again will initiate playback from the beginning of the clip, as usual.
+* * While a given clip is playing, the __Play clip__ buttons for other selections remain in the default state. This allows the test taker to initiate playback of another clip without having to press the button twice or wait for the currently playing clip to finish.
+*
+* By default, the __Select__ button has the `plus-thin` icon and a “Select” label. When the selection has been chosen, the icon rotates 45 degrees so that it looks like an “x”, and the label changes to “Remove.”
+*
+* ### In the response area
+* Once a media selection has been chosen, it appears in the response area (see below). Media selections always appear with a label (e.g., “Clip 2”) since it can be difficult to tell which selection has been made based on a thumbnail. In the response area, only the __Play/Pause__ button (not the __Hero Play__ button), scrub bar, and __Full screen__ button are displayed to reduce complexity. (Test takers can always refer to the main player if they need the other multimedia controls.)
+**/
+.sis-media-selection {
+	border: 0.083em solid #359a13;
+  border-top: none;
+  border-radius: 0 0 0.35em 0.35em;
+	height: 1em;
+	position: absolute;
+  transition: border 0.2s;
+	width: 5em;
+  z-index: 0; }
+.full-screen .sis-media-selection {
+  display: none; }
+.sis-media-selection[disabled] {
+  border-color: #ccc; }
+
+.sis-media-btn-primary {
+	background: #0E8812;
+	border: 0.042em solid #fff;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font: inherit;
+	font-weight: bold;
+	height: 2em;
+	left: 50%;
+	line-height: 1;
+	margin: 0;
+	outline: none;
+	position: absolute;
+	top: 0.458em;
+	transform: translateX(-50%);
+	transition: background 0.2s, border 0.2s, color 0.2s;
+	width: 2em; }
+html.can-touch .sis-media-btn-primary:hover {
+  background: #0E8812; }
+.sis-media-btn-primary:hover,
+.sis-media-btn-primary:active,
+html.can-touch .sis-media-btn-primary:active {
+	background: #39aa13; }
+.sis-media-btn-primary[disabled] {
+  background: #ccc;
+  color: #eee; }
+
+.sis-media-btn-primary::before,
+.sis-media-btn-primary:active::before {
+	align-items: center;
+	background: #00A873;
+	border: 0.167em solid #fff;
+	border-radius: 50%;
+	content: '\e906';
+	display: flex;
+	font-family: 'icons';
+	font-size: 0.5em;
+	height: 1.5em;
+	justify-content: center;
+	left: 50%;
+	opacity: 0;
+  pointer-events: none;
+	position: absolute;
+	top: 100%;
+	transform: translate(-50%, -30%);
+	transition: border 0.2s, opacity 0.2s;
+	width: 1.5em;
+  z-index: 1; }
+.sis-media-selection.selected .sis-media-btn-primary::before {
+	opacity: 1;
+  pointer-events: auto; }
+
+.sis-media-btn-secondary {
+	align-items: center;
+	background: none;
+	border: 0.083em solid #949494;
+	border-radius: 50%;
+	color: #0E8812;
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	line-height: 1;
+	height: 2em;
+	justify-content: center;
+	outline: none;
+  pointer-events: none;
+	position: absolute;
+	top: calc(100% + 1.65em);
+	transition: background 0.2s, border 0.2s, color 0.2s, transform 0.25s cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	width: 2em;
+	z-index: -1; }
+html.can-touch .sis-media-btn-secondary:hover {
+  border-color: #949494;
+  box-shadow: none; }
+.sis-media-btn-secondary:hover {
+	border-color: #616161;
+	box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+.sis-media-btn-secondary:active,
+html.can-touch .sis-media-btn-secondary:active {
+  background: #f0f0f0;
+	border-color: #616161;
+	box-shadow: none }
+.sis-media-btn-play {
+	left: calc(50% - 2.8em);
+	transform: translate(1.792em, -2.167em) scale(0.75); }
+.sis-media-btn-add {
+	right: calc(50% - 2.8em);
+	transform: translate(-1.792em, -2.167em) scale(0.75); }
+.sis-media-active .sis-media-btn-secondary {
+  pointer-events: auto;
+	transform: none;
+	transition: background 0.2s, border 0.2s, color 0.2s, transform 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275), z-index 0.2s;
+	z-index: 0; }
+
+.sis-media-btn-secondary::before {
+	font-family: 'icons';
+	transition: transform 0.2s; }
+.sis-media-btn-add::before {
+	content: '\e905';
+	font-size: 1em }
+.sis-media-btn-play::before {
+	content: "\e913";
+	font-size: 1.25em;
+	margin-left: 0.125em; }
+.sis-media-selection.selected .sis-media-btn-add::before {
+	transform: rotate(45deg); }
+.sis-media-playing::before {
+	content: '\e914';
+	margin: 0; }
+
+.sis-media-btn-secondary span {
+	font-size: 0.75em;
+	font-weight: bold;
+	margin-top: 0.4em;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	transition: opacity 0.2s ease-in; }
+.sis-media-active .sis-media-btn-secondary span {
+	opacity: 1; }
+
+.sis-media-btn-add span::before {
+	content: 'Select'; }
+.sis-media-btn-play span::before {
+	content: 'Play\00A0 clip'; }
+.sis-media-selection.selected .sis-media-btn-add span::before {
+	content: 'Remove'; }
+.sis-media-playing span::before {
+	content: 'Pause'; }
+
+
+/**
+* @styles 3-sis-directions Directions Box
+* Because the select-in-stimulus interaction is likely to be novel to many test takers, directions are provided directly in the item. The directions box has rounded corners, a light green `#D1F7D3` background, and an icon representing the expected test taker action on the left side.
+*
+* In the [environment-default.css] environment, the directions focus on how to make selections: “Tap a [selection] to select it.”
+*
+* In the [environment-ereader.css] environment, a __Go__ button is provided that, when selected, automatically navigates test takers to the location of the first selection in the passage. Directions in the eReader environment focus on navigation given the additional complexity of the Questions Panel: “Tap __Go__ to go to the [stimulus] and choose [selection(s)].”
+**/
+
+.sis-directions {
+  align-items: center;
+  background: #D1F7D3;
+  border-radius: 0.25em;
+  display: flex;
+  margin-bottom: 1.2em;
+  padding: 0.85em;
+  position: relative;
+  transition: background 0.2s;
+  z-index: 4;
+}
+
+.sis-directions p {
+  margin: 0;
+  padding: 0;
+}
+
+.sis-directions button {
+  flex: 0 0 auto;
+  margin: 0 0 0 1em;
+  min-height: 2.3em;
+  padding: 0.4em 1.4em;
+}
+
+.sis-icon {
+  flex: 0 0 auto;
+  margin-right: 1em;
+  padding-top: 0.17em;
+  width: 4em;
+}
+
+
+/**
+* @styles 4-sis-response-area Response Area
+* The response area appears below the directions box. The response area has rounded corners, a light gray `#F6F6F6` background, and a dark gray `#CCCCCC` border.
+*
+* As the test taker makes selections, they appear in the response area, each in its own selection container. When no selections have been made, the response area contains the text, “Your choice[s] will appear here.”
+*
+* ### Selection Containers
+* Each selection container has rounded corners, a gray `#6C6C6C` border, and a drop shadow.
+*
+* A __Close__ button is provided at the upper right that allows the test taker to remove the selection. (Test takers can also remove a selection by tapping it again in the stimulus.) Selection containers always have the same width but can have varying heights based on the size of the content they contain.
+*
+* ### Response Area Columns
+* Selection containers can be presented in the response area in one or two columns. Items with only text selections are typically presented in one column, while items with media selections or a mix of selections are typically presented in two columns. (In scenario-based tasks, consistency of presentation across the task is prioritized, so if one SIS item must be presented in two columns, all other SIS items are as well.)
+*
+* ### Selection Placeholders
+* A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white `#FFFFFF` background, and a dashed gray `#6C6C6C` border. Placeholders disappear as selections are made and reappear as selections are removed.
+*
+* The presence of placeholders affects the order in which selections appear:
+* * When placeholders are present, new selections populate after existing selections.
+* * When placeholders are absent, new selections populate before existing selections (to make it easier to see that the selection has been added).
+**/
+.sis-response-area {
+  align-items: center;
+  background: #f6f6f6;
+  border: 0.04em solid #ccc;
+  border-radius: 0.25em;
+  color: #6c6c6c;
+  display: flex;
+  flex-direction: column;
+  min-height: 5em;
+  padding: 0.25em 0.5em;
+  position: relative;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  z-index: 4; }
+.sis-response-area.sis-col-2 {
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 12em;
+  padding: 0.5em; }
+
+.sis-response-area > p {
+  font-style: italic;
+  margin: 0.5em auto;
+  text-align: center;
+  width: 100%; }
+.sis-response-area.sis-no-placeholders > p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%); }
+
+.sis-selection-placeholder {
+  background: #fff;
+  border: 0.056em dashed #6c6c6c;
+  border-radius: 0.25em;
+  flex: 0 0 auto;
+  height: 2em;
+  margin: 0.25em 0;
+  transition: background 0.2s, border 0.2s;
+  user-select: none;
+  width: 100%; }
+.sis-col-2 .sis-selection-placeholder {
+  height: 8em;
+  margin: 0.5em;
+  width: calc(50% - 1em);
+}
+
+.sis-selection-container {
+  animation: fadein 0.3s forwards;
+  background: #fff;
+  border-radius: 0.25em;
+  box-shadow: 0 0 0 0.05em rgba(0,0,0,.2), 0 0.05em 0.1em 0.05em rgba(0,0,0,.2);
+  margin: 0.25em 0;
+  opacity: 1;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: background 0.2s, border 0.2s, color 0.2s; }
+.sis-selection-container.sis-media {
+  max-width: calc(50% - 1em);
+  overflow: initial; }
+.sis-col-2 .sis-selection-container {
+  margin: 0.5em;
+  width: calc(50% - 1em); }
+.sis-selection-container.fadeout {
+  animation: fadeout 0.3s forwards; }
+.sis-selection-container.sis-text-overflow {
+	max-height: 10.8em; }
+.sis-selection-container.sis-text-overflow.expanded {
+	max-height: initial; }
+
+/* Needed to prevent Chrome z-index bug that causes other elements to appear above the full-screen video */
+:-webkit-full-screen-ancestor:not(iframe) {
+  animation: none;
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeout {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+.sis-selection-header {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding: 0.4em;
+}
+
+.sis-selection-container p {
+  background: none;
+	color: #555;
+	font-size: 0.833em;
+	margin: 0;
+	padding: 0.15em 0.25em 0; }
+.sis-selection-header p {
+	border: 0.1em solid transparent; }
+.sis-selection-header p:first-of-type {
+	padding: 0 0.25em; }
+.sis-selection-container p.sis-selection-label {
+	font-weight: bold; }
+
+.sis-selection-container .btn-close {
+	background: none;
+	border: none;
+	border-radius: 0.2em;
+	box-shadow: none;
+	color: #949494;
+	cursor: pointer;
+	font-family: 'icons';
+	font-size: 1rem;
+	height: initial;
+	line-height: 0;
+	margin: 0;
+	padding: 0.25em;
+	position: absolute;
+	right: 0.25em;
+	top: 0.25em;
+	transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+	width: initial;}
+.sis-selection-container .btn-close:hover {
+	box-shadow: none;
+	color: #444; }
+.sis-selection-container .btn-close:focus {
+	outline: 1px dotted #000;
+	outline-offset: 0; }
+.sis-selection-container .btn-close[disabled],
+.sis-selection-container.sis-text > p .btn-close[disabled] {
+	box-shadow: none;
+	color: #ccc;
+  pointer-events: none; }
+
+.sis-selection-container .btn-close::before {
+	content: '\e948';
+	font-size: 0.85em;
+	line-height: 1;
+}
+
+/*----------------------------------------------
+SELECTION CONTAINERS - TEXT
+----------------------------------------------*/
+.sis-selection-container.sis-text > p {
+  background: #0E8812;
+  color: #fff;
+  padding: 0.75em 1em;
+  text-align: left;
+	transition: background 0.2s, color 0.2s; }
+.sis-selection-container.sis-text.expanded > p {
+  padding-bottom: 2.5em; }
+
+.sis-selection-container.sis-text.sis-text-overflow > p:before {
+	background: linear-gradient(transparent 60%, #0E8812 95%);
+  bottom: 0;
+	content:'';
+	left: 0;
+	position: absolute;
+  right: 0;
+	top: 0;
+	transition: background 0.2s; }
+.sis-selection-container.sis-text.sis-text-overflow.expanded > p:before {
+	background: none; }
+
+.btn-see-more {
+	background: #0a3c0d;
+	border: none;
+	border-radius: 0 0.25em 0 0;
+	bottom: 0;
+	color: #fff;
+	cursor: pointer;
+  font-family: inherit;
+	font-size: 0.709em;
+	font-weight: bold;
+	left: 0;
+	min-width: 5.11em;
+	position: absolute;
+	padding: 0.5em;
+	text-align: left;
+	transition: background 0.2s
+}
+
+.btn-see-more:before {
+	content: 'See more'; }
+.expanded .btn-see-more:before {
+	content: 'See less'; }
+
+.sis-selection-container.sis-text > p .btn-close {
+  background: #fff;
+  box-shadow: 0 0.06em 0.2em 0 rgba(0,0,0,0.2);
+  float: right;
+  margin: -0.5em -0.75em 0.75em 0.75em;
+  position: relative;
+  z-index: 1;
+}
+
+.sis-selection-container.sis-text > p .btn-close:hover {
+  box-shadow: 0 0.14em 0.31em 0 rgba(0, 0, 0, 0.18), 0 0.11em 0.42em 0 rgba(0, 0, 0, 0.15);
+}
+
+/*----------------------------------------------
+SELECTION CONTAINERS - MEDIA
+----------------------------------------------*/
+.sis-selection-container .media-container {
+  display: block;
+}
+
+.sis-selection-container .video-hero-play::before {
+  content: '';
+  display: inline;
+}
+
+.sis-selection-container .media-controls {
+  border-radius: 0 0 0.292em 0.292em;
+  color: #535353;
+  flex-wrap: nowrap;
+}
+
+.sis-selection-container .media-progress-container-outer {
+  align-items: center;
+  display: flex;
+  margin: 0.625em 0.5em;
+}
+
+.sis-selection-container .slider-container {
+  width: 100%;
+}
+
+.sis-selection-container .media-btn {
+  margin: 0;
+}
+
+.sis-selection-container .media-tooltip,
+.sis-selection-container .media-container.full-screen .media-tooltip {
+  bottom: calc(100% + 0.25em); }
+
+.sis-selection-container .media-tooltip-seek,
+.sis-selection-container .media-container.full-screen .media-tooltip-seek {
+  bottom: calc(100% + 1.2em);
+}
+
+.sis-selection-container .media-time-display,
+.sis-selection-container .media-btn-mute,
+.sis-selection-container .media-volume-container,
+.sis-selection-container .video-btn-cc {
+  display: none !important;
+}
+
+/**
+* @styles 5-sis-max-select Max-selection Alert
+* In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.
+*
+* The alert has a light yellow `#F8ECBD` background and a dark yellow `#E6CB90` border. A `warning` icon appears at its left side.
+*
+* If the test taker does not dismiss the alert via the __Close__ button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.
+**/
+
+.sis-alert {
+  background: #f8ecbd;
+  border: 0.1em solid #e6cb90;
+  border-radius: 0.2em;
+  box-shadow: 0 0.04em 0.19em rgba(0,0,0,0.25);
+  color: #4D4D4D;
+  cursor: default;
+  display: flex;
+  font-family: Calibri, sans-serif;
+  justify-content: space-between;
+  left: calc(50% - 11.5em);
+  opacity: 1;
+  padding: 0.5em;
+  position: fixed;
+  top: 30%;
+  width: 23em;
+  z-index: 10; }
+.sis-alert.hidden {
+  opacity: 0;
+  pointer-events: none; }
+.sis-alert.opacity-transition {
+  transition: opacity 1s; }
+.sis-alert.pulse {
+  animation: pulse 0.6s forwards;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1,1);}
+  25% {transform: scale(1.1,1.1);}
+  50% {transform: scale(1,1);}
+  75% {transform: scale(1.1,1.1);}
+  100% {transform: scale(1,1);}
+}
+
+.sis-alert:before {
+  align-self: center;
+  color: #4d4d4d;
+  content: '\e93d';
+  font-family: 'icons';
+  font-size: 2em;
+  margin-right: 0.8rem
+}
+
+.sis-alert p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.sis-alert p:first-of-type {
+  margin-bottom: 0.5em;
+}
+
+.sis-alert-close {
+  background: #333;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: 'icons';
+  font-size: inherit;
+  height: 1em;
+  margin: 0 0 0 0.75em;
+  padding: 0;
+  transition: background .2s;
+  width: 1em;
+}
+
+.sis-alert-close:before {
+  color: #f8ecbd;
+  content: '\e904';
+  display: block;
+  font-size: 0.5em;
+  margin-left: 0.04em;
+}
+
+/**
+* @styles 6-sis-multiple-sources Multiple Sources
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-multi-source-full.html" target="_blank">here</a>._
+* @iframe ux/demos/response-type-sis/response-type-sis-multi-source.html 630
+*
+*
+* In SIS items that contain mutliple stimuli, stimuli are presented in a tabbed interface (see the [navigation.css]) page) on the left side of the screen.
+*
+* A source label is provided at the top of all selection containers to help test takers recall which stimulus each selection came from.
+**/

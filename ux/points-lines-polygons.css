@@ -1,0 +1,269 @@
+/**
+* @stylesheet points-lines-polygons.css Points, Lines, Polygons
+* @parent ux.ui-elements
+* Interactive points, lines, and polygons can be moved and/or placed on [coordinate-grids.css] or a [response-type-number-line.css] in various response types (e.g., [response-type-line-point-graph.css], [response-type-polygon-graph.css]).
+**/
+
+/**
+* @styles 0-plp-draggable Draggable
+* In some response types, points, lines, or polygons are prepopulated, and test takers are only allowed to move them.
+*
+* Draggable points have the following states.
+* * _Default_. The default color for points is blue `#0855B2`, though other colors may be used to differentiate multiple sets of points (e.g., in [response-type-line-point-graph.css]).
+* * _Hover_. Visible when the cursor is over the point. A focus ring appears (see [indicators.css] for more information), and the `move` cursor is shown.
+* * _Active_. Visible when the point is being dragged. The point scales up to 133% the default size.
+* * _Disabled_. Visible when the point is inactive (e.g., when a modal system tool like Scratchwork is enabled). Blue points become gray `#949494`. Points of other colors become different shades of gray to maintain the relative luminance of the original colors.
+*
+* Draggable lines and polygons have the following states.
+* * _Default_. The default color is blue `#0855B2`, though other colors may be used to differentiate multiple sets of objects. Polygons have a light blue `#0084FF` fill at 25% opacity.
+* * _Hover_. Visible when the cursor is over the object. All points attached to the object receive a focus ring, and the `move` cursor is shown.
+* * _Active_. Visible when the object is being dragged. All lines and points that compose the object scale up to 133% their default size.
+* * _Disabled_. Visible when the object is inactive. If the object is blue, all points, lines, and fills that compose the object become gray `#949494`. Objects of other colors become different shades of gray to maintain the relative luminance of the original colors.
+*
+* Note: If a draggable object is presented in an interaction that can contain pre-populated objects (see below), its disabled gray is darker (`#484848`) to ensure that the two kinds of objects are differentiable.
+* @iframe ux/demos/points-lines-polygons/draggable.html 260
+**/
+
+/**
+* @styles 3-plp-prepopulated Pre-populated
+* Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray `#767676`. Pre-populated polygons have a gray `#383838` fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to `#949494` to differentiate them from disabled interactive objects.
+* @iframe ux/demos/points-lines-polygons/prepopulated.html 260
+**/
+
+.point {
+  cursor: move;
+  outline: none;
+  user-select: none; }
+.point[disabled] {
+  pointer-events: none; }
+.point-horizontal {
+  cursor: ew-resize;
+}
+
+.point-actual {
+  fill: #0855B2;
+  transform-origin: center;
+  transition: fill 0.2s, opacity 0.15s ease-out; }
+.line:active ~ .point .point-actual,
+.line.focus-tabbed:focus ~ .point .point-actual,
+.point:active .point-actual,
+.point-placed.focus-tabbed.active:focus .point-actual,
+.point.focus-tabbed:focus .point-actual {
+  transform: scale(1.333); }
+.point[disabled] .point-actual {
+  fill: #949494; }
+
+.point-prepop {
+  fill: #767676;
+  transition: fill 0.2s; }
+.shape-prepop[disabled] .point-prepop {
+  fill: #949494; }
+
+.line {
+  cursor: move;
+  outline: none;
+  user-select: none; }
+.line[disabled] {
+  pointer-events: none; }
+
+.line-target {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 18;
+}
+
+.line-actual {
+  fill: none;
+  stroke: #0855B2;
+  stroke-width: 6;
+  transition: stroke 0.2s; }
+.line:active .line-actual,
+.line.active .line-actual,
+.line.focus-tabbed:focus .line-actual {
+  stroke-width: 8; }
+.line[disabled] .line-actual {
+  stroke: #949494; }
+
+.line-prepop {
+  stroke: #767676;
+  stroke-width: 6;
+  transition: stroke 0.2s; }
+.shape-prepop[disabled] .line-prepop {
+  stroke: #949494; }
+
+.polygon-actual {
+  fill: #0084ff;
+  fill-opacity: 0.25;
+  stroke: #0855B2;
+  stroke-linejoin: round;
+  stroke-width: 6;
+  transition: fill 0.2s, stroke 0.2s; }
+.line:active .polygon-actual,
+.line.focus-tabbed:focus .polygon-actual {
+  stroke-width: 8; }
+.line[disabled] .polygon-actual {
+  fill: #949494;
+  stroke: #949494; }
+
+.polygon-prepop {
+  fill: #383838;
+  fill-opacity: 0.2;
+  stroke: #767676;
+  stroke-linejoin: round;
+  stroke-width: 6;
+  transition: fill 0.2s, fill-opacity 0.2s, stroke 0.2s; }
+.shape-prepop[disabled] .polygon-prepop {
+  fill: #949494;
+  fill-opacity: 0.25;
+  stroke: #949494; }
+
+
+/**
+* @styles 1-plp-placeable Placeable
+* In some response types (e.g., [response-type-number-line.css]), interactive points can be placed but not moved. In such cases, points behave as follows.
+* * Hovering over a location where a point can be placed causes a focus ring (see [indicators.css] for more information) and a ghost point to appear. These indicators convey that a point will be placed when the test taker selects the location. The ghost point is 50% opaque and 133% the size of the default point.
+* * Selecting the location causes the point to be placed. Placed points have the same styling as the default state of draggable points (see above).
+* * Hovering over a point immediately after the point has been placed causes no change in state. To delete the point, the test taker must move the cursor off and then back on the point. This behavior is designed to prevent accidental deletion.
+* * If the cursor has been moved off a placed point, hovering over the point again causes a red `#d50000` cross with a white `#FFFFFF` outline to appear over the point. This indicator conveys that the point will be deleted if the test taker selects it.
+* * Selecting a placed point once it displays the deletion indicator causes the point to be deleted. The point reverts to the default hover state (50% opacity, 133% default size) to convey that selecting it again will cause it to be re-placed.
+* @iframe ux/demos/points-lines-polygons/placeable.html 220
+**/
+
+.point-placeable {
+  cursor: pointer;
+}
+
+.point-placed.point-new-state {
+  cursor: default;
+}
+
+.point-placeable .point-actual {
+  transition: fill 0.2s; }
+.point-placeable:active .point-actual,
+.point-placeable.focus-tabbed:focus .point-actual {
+  transform: scale(1); }
+.point-unplaced .point-actual,
+html.can-touch .point-unplaced:hover .point-actual {
+  opacity: 0; }
+.point-unplaced:hover .point-actual,
+.point-unplaced.focus-tabbed:focus .point-actual {
+  opacity: 0.5;
+  transform: scale(1.333); }
+.point-placed.focus-tabbed:focus .point-actual {
+  transform: scale(1); }
+
+.point-delete {
+  opacity: 0; }
+.point-placed:hover .point-delete,
+.point-placed.focus-tabbed:focus .point-delete {
+  opacity: 1; }
+.point-new-state:hover .point-delete,
+.point-new-state.focus-tabbed:focus .point-delete,
+html.can-touch .point-placed:hover .point-delete {
+  opacity: 0; }
+
+.point-delete-fill {
+  fill: #d50000;
+}
+
+.point-delete-stroke {
+  fill: #fff; }
+
+/**
+* @styles 2-plp-placeable-draggable Draggable & Placeable
+* In some response types (e.g., [response-type-line-point-graph.css]), interactive points can be placed _and_ moved. In such cases, points behave as described for placeable-only points, with the following exceptions.
+* * Hovering over a placed point causes a focus ring to appear, and the `move` cursor is displayed.
+* * Selecting a placed point causes it to scale up to 133% default size. The point can be moved by dragging it.
+*
+* This difference in behavior from placeable-only points is needed to support movement of points. To delete placeable-and-movable points, the test taker must select an __Object Delete__ button provided in the surrounding interaction.
+*
+* ### Delete Mode
+* For draggable-placeable points, the test taker can use the __Object Delete__ button to enter or exit delete mode. (The test taker can also hit the Escape key to exit Delete mode.)
+*
+* The __Object Delete__ button has a red `#D50000` `cross-thin` icon followed by a “Delete” label. The button uses the small secondary button style (see the [buttons.css] page), with an additional set of states shown when in Delete mode:
+* * _Delete mode default_. Button background becomes blue `#0855B2`, and label becomes white `#FFFFFF`. Icon receives a white border.
+* * _Delete mode hover_. Visible when the cursor is over the button. Button background lightens to `#0075E3`. The `pointer` cursor is shown.
+* * _Delete mode active_. Visible when the test taker presses down on the button. Button background darkens to `#0060AC`.
+*
+* When in Delete mode, the cursor becomes the same red cross as is shown in the __Object Delete__ button when it is hovered anywhere in the interaction’s response area.
+*
+* _Note: The points in the demo below are not movable._
+* @iframe ux/demos/points-lines-polygons/placeable-draggable.html 220
+**/
+
+.point-modal {
+  cursor: pointer;
+}
+
+.point-modal.point-placed,
+.point-modal.point-placed.point-new-state {
+  cursor: move;
+  pointer-events: auto;
+}
+
+.point-modal.point-unplaced .point-actual,
+.point-modal.point-new-state .point-actual {
+  transition: fill 0.2s; }
+
+.point-modal.point-placed:hover .point-delete,
+.point-modal.point-placed.focus-tabbed:focus .point-delete {
+  opacity: 0; }
+
+/*----- Delete mode ------*/
+.delete-mode,
+.delete-mode .point-modal {
+  cursor: url(cursor-delete.svg), auto !important;
+}
+
+.delete-mode .point-unplaced {
+  pointer-events: none;
+}
+
+.delete-mode .point-unplaced.focus-tabbed:focus .point-actual {
+  opacity: 0;
+}
+
+.delete-mode .point-unplaced.focus-tabbed:focus > .iic-focus-ring {
+  opacity: 0;
+}
+
+.delete-mode .point-placed .point-actual {
+  transform: scale(1) !important;
+}
+
+.delete-mode .point-modal.focus-tabbed:focus .point-delete {
+  opacity: 1;
+}
+
+.btn.btn-point-delete {
+  display: flex;
+  margin: 0; }
+.delete-mode .btn-point-delete {
+  background: #0855B2;
+  border-color: transparent;
+  color: #fff;}
+.delete-mode .btn-point-delete:hover {
+  background: #0075E3;
+  border-color: transparent; }
+html.can-touch .delete-mode .btn-point-delete:hover {
+  background: #0855B2;
+  border-color: transparent; }
+.delete-mode .btn-point-delete:active,
+html.can-touch .delete-mode .btn-point-delete:active {
+  background: #0060AC;
+  border-color: transparent; }
+
+.btn-point-delete::before {
+  color: #757575;
+  content:'\e948';
+  display: block;
+  font-family: 'icons';
+  line-height: 1;
+  margin-right: 0.5em;
+  text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff, 1px -1px 0 #fff;
+  transition: text-shadow 0.2s; }
+.delete-mode .btn-point-delete::before {
+  color: #D50000; }
+.btn-point-delete[disabled]::before {
+  color: #909090;
+  text-shadow: none; }

@@ -1,0 +1,529 @@
+/**
+* @stylesheet system-toolbar.css System Toolbar
+* @parent ux.features
+* The system toolbar appears at the top of all assessment content and contains all cross-item tools and features. It cannot be obscured by other user interface (UI) elements (e.g., modal dialog backdrops) to ensure that its features are always accessible.
+*
+* The toolbar has a light gray `#EEEEEE` background and a gray `#BFBFBF` bottom border.
+*
+* System toolbar buttons use the bare button style, except for the __Back__ and __Next__ buttons, which use variants of the secondary filled and primary filled styles, respectively. (See the [buttons.css] page.)
+**/
+
+/**
+* @styles 0-system-toolbar-layout Layout
+*
+*
+* The toolbar is divided into the following groups, which are separated by gray `#BFBFBF` vertical dividers.
+* * Help (`question-circle` icon)
+* * Visual presentation features
+*   * Change Theme (`change-theme` icon)
+*   * Zoom Out (`zoom-out` icon)
+*   * Zoom In (`zoom-in` icon)
+*   * Change Language (`lang-esp`/`lang-eng` icon)
+* * Additional tools
+*   * Read Aloud (`read-aloud` icon)
+*   * Scratchwork (`scratchwork` icon)
+*   * Equation Editor (`equation-editor` icon)
+*   * Calculator (`calculator` icon)
+* * Timer (`timer` icon)
+* * Progress bar (only available for linearly navigated blocks [e.g., scenario-based tasks, SQ blocks])
+* * Navigation
+*   * Back (`arrow-left` icon)
+*   * Next (“Next” label and `arrow-right` icon)
+*
+* The progress bar has an off-white `#FCFCFC` background and a gray `#AAAAAA` border. The progress indicator is green `#0BA951`.
+*
+* The item accession number and block title for the content currently on screen are shown in the center of the toolbar, superimposed on the NAEP logo. For scenario-based tasks, the scene ID displays next to the accession number, separated by a hyphen.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>._
+* @iframe ux/demos/system-toolbar/system-toolbar.html 47
+**/
+
+#student-toolbar {
+  background: #eee;
+  border-bottom: thin solid #bfbfbf;
+  display: flex;
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+  height: 3em;
+  line-height: normal;
+  position: fixed;
+  transition: background 0.2s, border 0.2s;
+  width: 100%;
+  z-index: 500;
+}
+
+#student-toolbar-spacer {
+  content: '';
+  flex: 0 0 auto;
+  font-size: 20px;
+  height: 3em;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+.btn-group {
+  border-right: 0.05em solid #bfbfbf;
+  display: flex;
+  padding: 0 0.4em 0 0;
+  transition: border 0.2s;
+}
+
+.btn-group:last-child {
+  border-right: none;
+}
+
+.btn-group-flex {
+  flex: 1 1 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-group-flex::before {
+  content: '';
+  background: url('logo.png') center/auto 100% no-repeat;
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s;
+  z-index: -1;
+}
+
+.btn-group-column {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/**
+@styles 1-system-toolbar-trays Button Trays
+* The scratchwork tools (Pencil, Highlighter, Eraser, Clear Scratchwork) and the remaining block time are presented in collapsible trays. Test takers may expand or collapse these trays by pressing the associated buttons.
+* @iframe ux/demos/system-toolbar/scratchwork-tray.html 59
+*
+* @iframe ux/demos/system-toolbar/timer-tray.html 59
+**/
+
+.btn-tray {
+  border-radius: 0 0.15em 0.15em 0;
+  border: 0.05em solid #b2b2b2;
+  border-left: none;
+  display: flex;
+  margin: 0.2em 0;
+  transition: width .3s, border-width .3s;
+}
+
+#scratchwork-tray {
+  background: #fff;
+  border-color: #2a8dd4;
+  width: 10.1em;
+}
+
+#timer-tray {
+  overflow: hidden;
+  width: 6.15em;
+}
+
+#scratchwork-tray.hidden,
+#timer-tray.hidden,
+.btn-tray.hidden {
+  border-width: 0;
+  margin: 0.2em 0;
+  overflow: hidden;
+  width: 0;
+}
+
+.btn-tray.hidden .tray-btn {
+  opacity: 0;
+}
+
+#student-toolbar p {
+  margin: 0 0 0 0.4em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#student-toolbar .btn-tray p {
+  margin: 0;
+}
+
+.system-btn,
+.tray-btn {
+  background: none;
+  border: 0.05em solid transparent;
+  border-radius: 0.15em;
+  color: #3f3f3f;
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  margin: 0.2em 0 0.2em 0.4em;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0.05em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, color .2s, margin .2s, box-shadow .2s;
+}
+
+.tray-btn {
+  border-radius: 0.25em;
+  margin: 0.2em;
+  padding: 0.15em 0.15em 0.15em 0.2em;
+  transition: background .2s, border-color .2s, color .2s, opacity .2s .3s, box-shadow .2s;
+  width: 2.1em;
+}
+
+.system-btn:hover,
+#timer-btn.active:hover {
+  background: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, .15); }
+html.can-touch .system-btn:hover,
+html.can-touch #timer-btn.active:hover {
+  background: none;
+  border-color: transparent;
+  box-shadow: none; }
+
+.tray-btn:hover {
+  background: #C4E0F8; }
+html.can-touch .tray-btn:hover {
+  background: none; }
+
+#scratchwork-btn.active:hover,
+.system-btn.active:hover {
+  background: #d6ebff;
+}
+
+.system-btn:active,
+.tray-btn:active,
+#timer-btn.active:active,
+html.can-touch .system-btn:active,
+html.can-touch .tray-btn:active,
+html.can-touch #timer-btn.active:active {
+  background-color: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, .25) inset;
+}
+
+#scratchwork-btn.active:active,
+.tray-btn:active,
+.system-btn.active:active {
+  background-color: #C4E0F8;
+  border-color: #2a8dd4;
+}
+
+.system-btn[disabled],
+#back-btn[disabled]:before {
+  color: #b3b3b3;
+  pointer-events: none;
+}
+
+.system-btn.active,
+#scratchwork-btn.active,
+.tray-btn.active,
+html.can-touch .system-btn.active,
+html.can-touch #scratchwork-btn.active,
+html.can-touch .tray-btn.active {
+  background: #C4E0F8;
+  border-color: #2a8dd4;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.tray-btn.active {
+  pointer-events: none;
+}
+
+.btn-tray-master.active,
+html.can-touch .btn-tray-master.active,
+html.can-touch #timer-btn.active:hover {
+  background: none;
+  border-color: #b2b2b2;
+  border-radius: 0.15em 0 0 0.15em;
+  transition: background .2s, border-color .2s; }
+html.can-touch #timer-btn.active:active {
+  background: #fff; }
+
+.system-btn[disabled].active {
+  color: #3f3f3f;
+}
+
+.system-icon-accent-color {
+  transition: opacity .2s; }
+.system-btn[disabled] .system-icon-accent-color {
+  opacity: 0.5; }
+.system-btn.active .system-icon-accent-color {
+  opacity: 1; }
+
+ #change-lang-btn-esp-box {
+  animation: slide-right .3s ease forwards;
+  transform: translateX(-1em);
+}
+
+@keyframes slide-right {
+  0% { transform: translateX(-1em); }
+  100% { transform: translateX(0); }
+}
+
+#change-lang-btn2-eng-box {
+  animation: slide-left .3s ease;
+}
+
+@keyframes slide-left {
+  0% { transform: translateX(1em); }
+  100% { transform: translateX(0); }
+}
+
+.arrow {
+  animation: fade-in .3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  40% { opacity: 0;  }
+  100% { opacity: 1; }
+}
+
+.system-btn:before,
+.system-btn span:before,
+#next-btn:before {
+  font-family: 'icons';
+  font-size: 2.4em;
+  line-height: 1;
+}
+
+.tray-btn:before,
+.tray-btn span:before {
+  font-family: 'icons';
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+#help-btn:before { content: '\e92a'; }
+#theme-btn:before { content: '\e92b'; }
+#zoom-out-btn:before { content: '\e92c'; }
+#zoom-in-btn:before { content: '\e92d'; }
+
+#student-toolbar .path2,
+#student-toolbar .path3 {
+  left: 0.05em; }
+#student-toolbar .tray-btn .path2,
+#student-toolbar .tray-btn .path3 {
+  left: 0.2em; }
+
+#change-lang-btn .path1:before {
+  content: "\e92e"; }
+#change-lang-btn .path2:before {
+  content: "\e92f";
+  color: #8B13B2; }
+#change-lang-btn .path3:before {
+  content: "\e930"; }
+
+#change-lang-btn2 .path1:before {
+  content: "\e931"; }
+#change-lang-btn2 .path2:before {
+  content: "\e932";
+  color: #8B13B2; }
+#change-lang-btn2 .path3:before {
+  content: "\e933"; }
+
+#read-aloud-btn .path1:before {
+  content: "\e934"; }
+#read-aloud-btn .path2:before {
+  content: "\e935";
+  color: #0076D2; }
+
+#scratchwork-btn .path1:before {
+  content: "\e936";
+  color: #900; }
+#scratchwork-btn .path2:before {
+  content: "\e937"; }
+
+#pencil-btn .path1:before {
+  content: "\e91f";
+  color: #EAD2A7; }
+#pencil-btn .path2:before {
+  content: "\e920"; }
+
+#highlighter-btn .path1:before {
+  content: "\e921";
+  color: #FFDF5A; }
+#highlighter-btn .path2:before {
+  content: "\e922";
+  color: #FFED9F; }
+#highlighter-btn .path3:before {
+  content: "\e923"; }
+
+#eraser-btn .path1:before {
+  content: "\e924";
+  color: #EAA0B5; }
+#eraser-btn .path2:before {
+  content: "\e925"; }
+
+#clearSW-btn:before {  content: "\e926"; }
+
+#equation-btn .path1:before {
+  content: "\e938"; }
+#equation-btn .path2:before {
+  content: "\e939";
+  color: #008117; }
+
+#calc-btn:before { content: "\e93a"; }
+#timer-btn:before { content: "\e93b"; }
+
+.system-btn.hidden {
+  display: none;
+}
+
+/*----------------------------------------------------
+NAVIGATION BUTTONS
+----------------------------------------------------*/
+.btn-nav {
+	align-items: center;
+	border: 0.1em solid transparent;
+	cursor: pointer;
+	display: inline-flex;
+	flex: 0 0 auto;
+	font-family: inherit;
+	font-size: inherit;
+	height: 2.35em;
+  line-height: 1;
+	margin: 0.2em 0;
+	opacity: 1;
+	position: relative;
+	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+	visibility: visible; }
+.btn-nav:hover {
+	box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.2) }
+html.can-touch .btn-nav:hover {
+  box-shadow: none; }
+.btn-nav.hidden {
+	opacity: 0;
+	transition: opacity 0.2s, visibility 0.2s;
+	visibility: hidden; }
+.btn-nav[disabled] {
+	background: #ddd;
+	border-color: transparent;
+	box-shadow: none;
+	color: #b3b3b3;
+	pointer-events: none; }
+
+.btn-nav::after {
+	font-family: 'icons';
+  font-size: 1.6em; }
+.btn-nav[disabled]::after {
+	color: #b3b3b3; }
+
+.btn-back {
+	background: #f7f7f7;
+	border-color: #949494;
+	border-radius: 50%;
+	color: #0068D1;
+	padding: 0.25em;
+	width: 2.35em; }
+.btn-back:hover {
+	background: #fff;
+	border-color: #777; }
+html.can-touch .btn-back:hover {
+  background: #f7f7f7;
+  border-color: #949494; }
+.btn-back:active,
+html.can-touch .btn-back:active {
+	background: #fff;
+	border-color: #777;
+	box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25) inset; }
+
+.btn-back::after {
+  content: "\e93e"; }
+
+.btn-next {
+	background: #0068D1;
+	border-radius: 1.175em;
+	color: #fff;
+	padding: 0.25em 0.25em 0.25em 0.65em; }
+.btn-next:hover {
+	background: #137fec; }
+html.can-touch .btn-next:hover {
+  background: #0068D1; }
+.btn-next:active,
+html.can-touch .btn-next:active {
+  background: #137fec;
+	box-shadow: none; }
+
+.btn-next::after {
+	content: "\e93f";
+	margin-left: 0.093em;
+}
+
+.btn-next span {
+	font-size: 1.1em;
+}
+
+#back-btn {
+	border-color: #d0d0d0;
+  margin: 0.2em 0 0.2em 0.4em; }
+#back-btn:hover,
+#back-btn:active {
+	border-color: #b2b2b2; }
+html.can-touch #back-btn:hover {
+  border-color: #d0d0d0; }
+html.can-touch #back-btn:active {
+	border-color: #b2b2b2; }
+#back-btn[disabled],
+html.can-touch #back-btn[disabled] {
+  background: #ddd;
+  border-color: transparent; }
+
+#back-btn::after {
+  color: #2478cc; }
+#back-btn[disabled]::after {
+  color: #b3b3b3; }
+
+#next-btn {
+  background: #2478cc;
+  margin: 0.2em 0 0.2em 0.5em;
+  padding: 0.25em 0.25em 0.25em 0.6em; }
+#next-btn:hover,
+#next-btn:active {
+  background: #2f91f4; }
+html.can-touch #next-btn:hover {
+  background: #2478cc; }
+html.can-touch #next-btn:active {
+  background: #2f91f4; }
+#next-btn[disabled],
+html.can-touch #next-btn[disabled] {
+  background: #ddd; }
+
+#next-btn span {
+  font-size: 1.4em;
+	font-weight: bold;
+}
+
+p.time-left {
+  font-weight: bold;
+  padding: 0 0.75em;
+}
+
+.progress-indicator {
+  background: #fcfcfc;
+  border: 0.1em solid #aaa;
+  border-radius: 0.15em;
+  display: flex;
+  height: 1em;
+  margin: 0.15em 0.55em 0.25em 0.95em;
+  overflow: hidden;
+  transition: background 0.2s, border 0.2s;
+  width: 4em;
+}
+
+.progress-indicator-bar {
+  background: #0ba951;
+  border: 0.1em solid;
+  border-color: #fff;
+  transition: background 0.2s, border 0.2s;
+  width: 40%;
+}

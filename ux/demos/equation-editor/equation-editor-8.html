@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Equation Editor - Grade 8</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    html {
+      font-size: 12px;
+    }
+
+    #student-toolbar,
+    #student-toolbar-spacer,
+    .scroll-indicator {
+      font-size: 10px;
+    }
+
+    .system-btn span:before {
+      font-size: 2.2em;
+    }
+
+    .response-area {
+      margin-bottom: 2em;
+    }
+
+    #ee-wrapper {
+      font-size: inherit;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 1px;
+    }
+
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+      border-radius: 1px;
+      height: 10px;
+      width: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--Demo content-->
+  <div id="student-toolbar">
+    <button id="equation-btn" class="system-btn" title="Math Keyboard. Shows the on-screen math keyboard.">
+      <span class="path1"></span>
+      <span class="path2 system-icon-accent-color"></span>
+    </button>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+
+  <div id="contentarea">
+    <div class="contentarea-inner">
+      <div class="content-container">
+        <div class="col col-single">
+
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is the stem for a single-select multiple-choice item.</p>
+            </div>
+          </div>
+
+          <div class="response-area response-area-mc">
+            <div class="mc mc-single-select mc-alpha">
+
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Midnight</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Cocoa</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Buttons</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Speedy</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is the stem for a math fill-in-the-blank item.</p>
+            </div>
+            <div class="stem-paragraph">
+              <p><input type="text" size="15" data-max-length="150" class="fib math" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" /> units</p>
+            </div>
+          </div>
+
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is the stem for a numeric entry item.</p>
+            </div>
+            <div class="stem-paragraph">
+              <p><input type="text" size="15" data-max-length="150" class="numeric-entry" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" /> units</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+       <button class="scroll-indicator more hidden"><span></span></button>
+
+    </div>
+    <!--contentarea-inner ends-->
+  </div>
+  <!--Content area ends-->
+  <!--End demo content-->
+
+  <div id="ee-wrapper" class="ee-old-variant hidden">
+    <div class="ee-tabarea">
+      <ul class="ee-tabs"></ul>
+      <button id="ee-btn-close" class="ee-btn" tabindex="-1">Close</button>
+    </div>
+    <div class="ee-btnarea" data-title="Home">
+      <div class="ee-btnarea-row">
+        <button class="ee-btn ee-numeric-btn" disabled>1</button>
+        <button class="ee-btn ee-numeric-btn" disabled>2</button>
+        <button class="ee-btn ee-numeric-btn" disabled>3</button>
+        <button class="ee-btn ee-numeric-btn" disabled>4</button>
+        <button class="ee-btn ee-numeric-btn" disabled>5</button>
+        <button class="ee-btn ee-numeric-btn" disabled>6</button>
+        <button class="ee-btn ee-numeric-btn" disabled>7</button>
+        <button class="ee-btn ee-numeric-btn" disabled>8</button>
+        <button class="ee-btn ee-numeric-btn" disabled>9</button>
+        <button class="ee-btn ee-numeric-btn" disabled>0</button>
+        <button class="ee-btn ee-numeric-btn" disabled>.</button>
+        <button class="ee-btn ee-numeric-btn" disabled>,</button>
+        <button class="ee-btn" disabled>(</button>
+        <button class="ee-btn" disabled>)</button>
+        <button class="ee-btn" disabled>:</button>
+        <button class="ee-btn" disabled>%</button>
+        <div class="ee-spacer"></div>
+        <button class="ee-btn icon-ee-backspace" disabled></button>
+      </div>
+      <div class="ee-btnarea-row">
+        <button class="ee-btn" disabled>+</button>
+        <button class="ee-btn ee-numeric-btn" disabled>−</button>
+        <button class="ee-btn" disabled>×</button>
+        <button class="ee-btn" disabled>÷</button>
+        <button class="ee-btn" disabled>±</button>
+        <button class="ee-btn" disabled>=</button>
+        <button class="ee-btn" disabled>≠</button>
+        <button class="ee-btn icon-ee-approx-equal" disabled></button>
+        <button class="ee-btn" disabled>&lt;</button>
+        <button class="ee-btn" disabled>≤</button>
+        <button class="ee-btn" disabled>≥</button>
+        <button class="ee-btn" disabled>&gt;</button>
+        <button class="ee-btn icon-ee-stacked-fraction" disabled></button>
+        <button class="ee-btn icon-ee-square-root" disabled></button>
+        <button class="ee-btn icon-ee-cube-root" disabled></button>
+        <button class="ee-btn icon-ee-exponent" disabled></button>
+        <button class="ee-btn icon-ee-vertical-bars" disabled></button>
+        <button class="ee-btn icon-ee-bar-accent" disabled></button>
+      </div>
+    </div>
+    <div class="ee-btnarea" data-title="More Symbols">
+      <div class="ee-btnarea-row">
+        <button class="ee-btn" disabled>°</button>
+        <button class="ee-btn" disabled><i>π</i></button>
+        <div class="ee-spacer"></div>
+        <button class="ee-btn icon-ee-tilde" disabled></button>
+        <button class="ee-btn icon-ee-congruence" disabled></button>
+        <div class="ee-spacer"></div>
+        <button class="ee-btn icon-ee-parallel" disabled></button>
+        <button class="ee-btn icon-ee-perpendicular" disabled></button>
+        <div class="ee-spacer"></div>
+        <div class="ee-spacer"></div>
+        <button class="ee-btn icon-ee-left-right-accent" disabled></button>
+        <button class="ee-btn icon-ee-right-accent" disabled></button>
+        <button class="ee-btn icon-ee-angle" disabled></button>
+        <button class="ee-btn icon-ee-triangle" disabled></button>
+        <div class="ee-spacer"></div>
+        <div class="ee-spacer"></div>
+        <div class="ee-spacer"></div>
+        <button class="ee-btn icon-ee-backspace" disabled></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../system-toolbar/system-toolbar.js"></script>
+  <script src="../indicators/scroll-indicator.js"></script>
+  <script src="equation-editor.js"></script>
+  <script src="../response-type-mc/response-type-mc.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAEP Style Guide - Review Screen</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>    
+    #student-toolbar {
+      align-items: center;
+      padding-left: 1em;
+    }
+
+    #student-toolbar span {
+      font-size: 24px;
+    }
+
+    #unanswered-items {
+      font-family: Calibri;
+      font-size: 24px;
+      margin-left: 0.5em;
+      padding: 0 0.2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="student-toolbar">
+    <span>Unanswered items:</span>
+    <select id="unanswered-items">
+      <option value="0">zero</option>
+      <option value="1">one</option>
+      <option value="2" selected>two</option>
+    </select>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+
+  <div id="contentarea">
+    <div class="contentarea-inner">
+      <div class="childItem content-container">
+        <div class="col col-single">
+
+          <div class="item-stem-wrapper review review-unanswered">
+            <div class="alert alert-warning alert-no-border">
+              <p><b>You have reached the end of this section.</b>It looks like you have not answered the following <span id="review-questions-span">questions</span>.</p>
+            </div>
+
+            <ul class="list-unordered list-review">
+              <li>Question 1</li>
+              <li>Question 2</li>
+            </ul>
+            <div class="stem-paragraph">
+              <p>You can use the tabs at the top to go back to the questions in this section.</p>
+            </div>
+          </div>
+
+          <div class="item-stem-wrapper review review-answered" style="display: none;">
+            <div class="alert alert-timer alert-no-border">
+              <p><b>You have reached the end of this section.</b>You can use the tabs at the top to go back to the questions in this section.</p>
+            </div>
+          </div>
+
+          <div class="response-area review">
+            <div>
+              <div class="stem-paragraph">
+                <p>When you are finished, you can go on to the next section at any time.</p>
+              </div>
+              <div class="stem-paragraph">
+                <p>You cannot return to this section after you go on.</p>
+              </div>
+            </div>
+            <button class="btn btn-next-section">Go on to the next section</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script>
+    $('#unanswered-items').change(function() {
+      var value = $('#unanswered-items option:selected').val();
+      switch (value) {
+        case "0":
+          $('.review-unanswered').hide();
+          $('.review-answered').show();
+          break;
+        case "1":
+          $('#review-questions-span').html('question');
+          $('.list-review li:last-of-type').hide();
+          $('.review-answered').hide();
+          $('.review-unanswered').show();
+          break;
+        case "2":
+          $('#review-questions-span').html('questions');
+          $('.list-review li:last-of-type').show();
+          $('.review-answered').hide();
+          $('.review-unanswered').show();
+          break;
+        default:
+          return false;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

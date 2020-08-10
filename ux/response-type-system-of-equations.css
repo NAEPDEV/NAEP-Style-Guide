@@ -1,0 +1,102 @@
+/**
+* @stylesheet response-type-system-of-equations.css System of Equations
+* @parent ux.response-types
+* The System of Equations response type allows test takers to respond to an item by manipulating one or more linear functions and the grid sections they create to represent a given context.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-system-of-equations/response-type-system-of-equations.html 700
+**/
+
+/**
+* @styles 0-dl-grid Grid
+* The primary interactions for System of Equations responses occur in a coordinate grid (see the [coordinate-grids.css] page). One to two linear functions appear on the grid as interactive points and lines (see the [points-lines-polygons.css] page), which test takers can manipulate. When there is one function it is the default blue for interactive points and lines. When there are two functions, the first is green `#00B006`, and the second is purple `#50008A` to maintain visibility for color-blind test takers (see the [colors.md] page). When disabled, the first function becomes drak gray `#484848`, and the second becomes light gray `#949494`.
+*
+* The grid sections between the functions are interactive so that test takers may select them as part of the reponse. Grid sections have the following states.
+* * _Default_. The section is transparent.
+* * _Hover_. Visible when the cursor is over the section. The section has a black `#000000` fill at 12% opacity. The `pointer` cursor is shown.
+* * _Selected_. The section has a blue `#0084FF` fill at 41% opacity.
+* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). When disabled, selected sections have a gray `#595959` fill at 41% opacity.
+**/
+
+/**
+* @styles 1-dl-controls Controls
+*
+*
+* System of Equations responses have two sets of controls.
+* * A control group (see the [control-groups.css] page) for each linear function. Each group contains radios (see the [checkboxes-and-radios.css] page) that allow the test taker to toggle the associated function between solid and dashed states. The control groups are vertically stacked to the right  of the coordinate grid.
+* * __Undo__ and __Reset__ buttons, which are right-justified beneath the grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+*   * The __Undo__ button reverts the last change to the grid.
+*   * The __Reset__ button restores the grid to its initial state.
+**/
+
+.response-area-soe .control-group-wrapper {
+  float: right;
+  margin: 1.792em 0 9.5em 1em;
+  text-align: left;
+}
+
+.dl-option-line,
+.dl-option-line-dashed {
+  background: #00B006;
+  border-radius: 0.125em;
+  display: block;
+  height: 0.25em;
+  width: 4em; }
+.dl-option-line-dashed {
+  background: linear-gradient(to right, #00B006 67%, transparent 33%) 0.625em top/0.75em 100% repeat-x; }
+.dl-option-line.dl-secondary {
+  background: #50008A; }
+.dl-option-line-dashed.dl-secondary {
+  background: linear-gradient(to right, #50008A 67%, transparent 33%) 0.625em top/0.75em 100% repeat-x; }
+input[disabled] ~ .dl-option-line {
+  background: #949494; }
+input[disabled] ~ .dl-option-line.dl-secondary {
+  background: #484848; }
+input[disabled] ~ .dl-option-line-dashed {
+  background: linear-gradient(to right, #949494 67%, transparent 33%) 0.625em top/0.75em 100% repeat-x; }
+input[disabled] ~ .dl-option-line-dashed.dl-secondary {
+  background: linear-gradient(to right, #484848 67%, transparent 33%) 0.625em top/0.75em 100% repeat-x; }
+
+.dl-dashed-stroke {
+  stroke-dasharray: 6,12;
+  stroke-linecap: round;
+}
+
+.dl-primary-fill {
+  fill: #00b006;
+}
+
+.dl-primary-stroke {
+  stroke: #00b006;
+}
+
+.dl-secondary-fill {
+  fill: #50008a; }
+.point[disabled] .dl-secondary-fill {
+  fill: #484848; }
+
+.dl-secondary-stroke {
+  stroke: #50008a; }
+.line[disabled] .dl-secondary-stroke {
+  stroke: #484848; }
+
+.dl-section,
+.dl-section.dl-initial-state.focus-tabbed:focus {
+  cursor: pointer;
+  fill: transparent;
+  outline: none; }
+.dl-section:hover,
+.dl-section.focus-tabbed:focus {
+  fill: #000;
+  fill-opacity: 0.12; }
+html.can-touch .dl-section:hover {
+  fill: transparent; }
+.dl-section.active,
+.dl-section.active.dl-initial-state.focus-tabbed:focus,
+html.can-touch .dl-section.active:hover {
+  fill: #0084ff;
+  fill-opacity: 0.41; }
+.dl-section[disabled] {
+  pointer-events: none; }
+.dl-section.active[disabled] {
+  fill: #595959; }

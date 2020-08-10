@@ -1,0 +1,25 @@
+{
+  "siteDefaults": {
+    "static": "styleguide-theme/static",
+    "templates": "styleguide-theme/templates"
+  },
+  "sites": {
+    "id": {
+      "glob": "id/**/*.{css,less,scss,md}",
+      "dest": "id",
+      "parent": "id",
+      "templates": "styleguide-theme/templates/id"
+    },
+    "media": {
+      "glob": "media/**/*.{css,less,scss,md}",
+      "dest": "media",
+      "parent": "media",
+      "templates": "styleguide-theme/templates/media"
+    },
+    "ux": {
+      "glob": "ux/**/*.{css,less,scss,md}",
+      "dest": "ux",
+      "parent": "ux"
+    }
+  }
+}

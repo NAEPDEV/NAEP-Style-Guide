@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Interactive Stimulus - Slider</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      margin: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider-wrapper">
+
+    <img src="VH593281_S1.png" data-label="State 1" class="slider-img no-theme" />
+    <img src="VH593281_S2.png" data-label="State 2" class="slider-img no-theme" />
+    <img src="VH593281_S3.png" data-label="State 3" class="slider-img no-theme" />
+
+    <div class="slider-ui">
+      <input class="slider" type="range" min="0" value="0" step="any" />
+      <div class="slider-dots"></div>
+    </div>
+    <div class="slider-labels"></div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="stim-slider.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - System Toolbar</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    #student-toolbar {
+      font-size: 16px;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="student-toolbar">
+    <div class="btn-group">
+      <button id="help-btn" class="system-btn" title="Help. Shows help and directions."></button>
+    </div>
+    <div class="btn-group">
+      <button id="theme-btn" class="system-btn" title="Change Theme. Changes the colors used on the screen."></button>
+      <button id="zoom-out-btn" class="system-btn" title="Zoom Out. Makes the words and images smaller." disabled></button>
+      <button id="zoom-in-btn" class="system-btn" title="Zoom In. Makes the words and images larger."></button>
+      <button id="change-lang-btn" class="change-lang-class system-btn" title="Change to Spanish.">
+        <span class="path1"></span>
+        <span id="change-lang-btn-esp-box" class="path2 system-icon-accent-color"></span>
+        <span class="path3 arrow"></span>
+      </button>
+      <button id="change-lang-btn2" class="change-lang-class system-btn hidden" title="Cambiar a inglés.">
+        <span class="path1"></span>
+        <span id="change-lang-btn2-eng-box" class="path2 system-icon-accent-color"></span>
+        <span class="path3 arrow"></span>
+      </button>
+    </div>
+    <div class="btn-group">
+      <button id="read-aloud-btn" class="system-btn" title="Read Aloud. Turns on read aloud mode. You can tap any box to hear the text read out loud.">
+        <span class="path1"></span>
+        <span class="path2 system-icon-accent-color"></span>
+			</button>
+      <button id="scratchwork-btn" class="system-btn btn-tray-master" title="Scratchwork. Turns on scratchwork mode. This lets you write on the screen. You must turn scratchwork off to answer questions.">
+        <span class="path1 system-icon-accent-color"></span>
+        <span class="path2"></span>
+			</button>
+      <div id="scratchwork-tray" class="btn-tray hidden">
+        <button id="pencil-btn" class="tray-btn active" title="Pencil. Turns on write mode. This lets you write on the screen." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+        </button>
+        <button id="highlighter-btn" class="tray-btn" title="Highlighter. Turns on highlight mode. This lets you highlight parts of the screen." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+          <span class="path3"></span>
+				</button>
+        <button id="eraser-btn" class="tray-btn" title="Eraser. Turns on erase mode. This lets you erase any of your drawings and highlights." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+				</button>
+        <button id="clearSW-btn" class="tray-btn" title="Clear Scratchwork. Clears all scratchwork on the screen." disabled></button>
+      </div>
+      <button id="equation-btn" class="system-btn" title="Math Keyboard. Shows the on-screen math keyboard.">
+        <span class="path1"></span>
+        <span class="path2 system-icon-accent-color"></span>
+			</button>
+      <button id="calc-btn" class="system-btn" title="Calculator. Shows the calculator."></button>
+    </div>
+    <div class="btn-group btn-group-flex btn-group-column">
+      <p>VH123456</p>
+      <p>Block Title</p>
+    </div>
+    <div class="btn-group">
+      <button id="timer-btn" class="system-btn btn-tray-master" title="Timer. Shows the time remaining."></button>
+      <div id="timer-tray" class="btn-tray btn-group-column hidden">
+        <p>Time&#160;Left:</p>
+        <p class="time-left">30&#160;minutes</p>
+      </div>
+    </div>
+    <div class="btn-group btn-group-column" title="Progress. This is how far you are in the section.">
+      <p>Progress</p>
+      <div class="progress-indicator">
+        <div class="progress-indicator-bar"></div>
+      </div>
+    </div>
+    <div class="btn-group" style="align-items: center;">
+      <button id="back-btn" class="btn-nav btn-back" title="Back. Returns to the previous screen."></button>
+      <button id="next-btn" class="btn-nav btn-next" title="Next. Moves to the next screen.">
+        <span>Next</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="system-toolbar.js"></script>
+
+</body>
+
+</html>

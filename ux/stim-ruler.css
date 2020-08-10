@@ -1,0 +1,108 @@
+/**
+* @stylesheet stim-ruler.css Ruler
+* @parent ux.stimuli
+* The ruler stimulus allows test takers to move and rotate an on-screen ruler to measure a virtual object.
+*
+* @iframe ux/demos/stim-ruler/stim-ruler.html 480
+*
+*
+* A gray `#949494` border indicates the area in which the ruler can be dragged.
+*
+* A __Reset__ button, styled as a small secondary filled button (see the [buttons.css] page for more information), is provided at the upper-right corner of the draggable area. Selecting the button restores the ruler to its initial position and orientation.
+**/
+
+.ruler-wrapper {
+  background: #fff;
+  border: 0.05em solid #767676;
+  height: 20em;
+  margin: 2em 0;
+  max-width: 35em;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: background 0.2s;
+  width: 100%;
+  z-index: 4;
+}
+
+/**
+* @styles 0-ruler-styling Ruler Styling
+* The ruler has a gray `#D3D3D3` background and black `#000000` tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.
+*
+* The cursor is set to `move` when positioned over the ruler to indicate that it can be moved via dragging.
+**/
+
+.ruler-img {
+  margin-top: 10em;
+  width: 25em;
+}
+
+.ruler-draggable-outer {
+  height: 5em;
+  position: absolute;
+  top: 4em;
+  width: 100%;
+}
+
+.ruler-draggable {
+  background: #D3D3D3 url('../stim-ruler/ruler.svg') no-repeat;
+  cursor: move;
+  height: 2.5em;
+  left: calc(50% - 11.625em);
+  position: relative;
+  width: 23.25em; }
+.ruler-draggable[disabled] {
+  pointer-events: none; }
+
+/**
+* @styles 1-ruler-handles Ruler Handles
+* The ruler has a rotation handle on either end and a drag handle below its center. Handles are styled as primary circular filled buttons. (See the [buttons.css] page for more information.)
+*
+* The drag handle has the `move` icon (as specified on the [icons.css] page), and the cursor is set to `move`.
+*
+* The rotation handles have the `rotate-left` and `rotate-right` icons, and the cursor is set to `ns-resize`.
+**/
+
+.ruler-drag-handle,
+.ruler-wrapper .ui-rotatable-handle {
+  cursor: move;
+  margin: 0;
+  position: absolute; }
+
+.ruler-drag-handle {
+  left: 50%;
+  top: calc(100% + 0.5em);
+  transform: translateX(-50%);
+}
+
+.ruler-wrapper .ui-rotatable-handle-left {
+  cursor: n-resize;
+  right: 100%;
+  top: 100%;
+}
+
+.ruler-wrapper .ui-rotatable-handle-right {
+  cursor: n-resize;
+  left: 100%;
+  top: 100%;
+}
+
+.ruler-drag-handle::before,
+.ruler-wrapper .ui-rotatable-handle::before {
+  font-size: 1.334em;
+}
+
+.ruler-wrapper .ui-rotatable-handle-left::before {
+  content: "\e928";
+}
+
+.ruler-wrapper .ui-rotatable-handle-right::before {
+  content: "\e929";
+}
+
+.btn-reset {
+  margin: 0;
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+}

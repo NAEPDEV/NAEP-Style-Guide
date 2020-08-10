@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Look-back Buttons</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    #col-left {
+      background: #fafafa;
+    }
+
+    .scroll {
+      padding: 2em 1em;
+    }
+
+    .scroll p {
+      font-family: Georgia;
+      font-size: 0.83em;
+      line-height: 1.4;
+      margin: 0;
+      text-indent: 1em;
+    }
+
+    ::-webkit-scrollbar {
+      width: 13px;
+      height: 13px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 1px;
+    }
+
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+      border-radius: 1px;
+      height: 13px;
+      width: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="contentarea" class="full-height">
+
+    <div class="content-container">
+
+      <div id="col-left" class="col col-50 lbb-demo">
+        <div class="scroll">
+          <p>It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.</p>
+          <p>However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of
+            their daughters.</p>
+          <p>“My dear Mr. Bennet,” said his lady to him one day, “have you heard that Netherfield Park is let at last?”</p>
+          <p>Mr. Bennet replied that he had not.</p>
+          <p>“But it is,” returned she; “for Mrs. Long has just been here, and she told me all about it.”</p>
+          <p>Mr. Bennet made no answer.</p>
+          <p>“Do you not want to know who has taken it?” cried his wife impatiently.</p>
+          <p>“<em>You</em> want to tell me, and I have no objection to hearing it.”</p>
+          <p>This was invitation enough.</p>
+          <p>“Why, my dear, you must know, Mrs. Long says that Netherfield is taken by a young man of large fortune from the north of England; that he came down on Monday in a chaise and four to see the place, and was so much delighted with it, that he agreed
+            with Mr. Morris immediately; that he is to take possession before Michaelmas, and some of his servants are to be in the house by the end of next week.”</p>
+          <p>“What is his name?”</p>
+          <p>“Bingley.”</p>
+          <p>“Is he married or single?”</p>
+          <p>“Oh! Single, my dear, to be sure! A single man of large fortune; four or five thousand a year. What a fine thing for our girls!”</p>
+          <p>“How so? How can it affect them?”</p>
+          <p>“My dear Mr. Bennet,” replied his wife, “how can you be so <span class="context context-highlight context-lbb-0">tiresome</span>! You must know that I am thinking of his marrying one of them.”</p>
+          <p>“Is that his design in settling here?”</p>
+          <p>“Design! Nonsense, how can you talk so! But it is very likely that he may fall in love with one of them, and therefore you must visit him as soon as he comes.”</p>
+        </div>
+      </div>
+
+      <div id="col-right" class="col col-50 col-divider-left">
+        <div class="item-stem-wrapper">
+          <div class="stem-paragraph">
+            <p>When Mrs. Bennet asks Mr. Bennet how he can be so <span class="no-wrap"><button id="lbb-0" class="btn btn-secondary btn-lbb">tiresome</button>,</span> she is</p>
+          </div>
+        </div>
+        <div class="response-area response-area-mc">
+          <div class="mc mc-single-select mc-alpha">
+
+            <div class="mc-option">
+              <div class="mc-control-wrapper">
+                <label class="control">
+                  <input type="radio" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="mc-content-wrapper">
+                <div class="mc-content">wondering why Mr. Bennet is so sleepy</div>
+              </div>
+              <div class="mc-ec-wrapper">
+                <button class="mc-eliminate-choice"></button>
+              </div>
+            </div>
+            <div class="mc-option">
+              <div class="mc-control-wrapper">
+                <label class="control">
+                  <input type="radio" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="mc-content-wrapper">
+                <div class="mc-content">suggesting Mr. Bennet meet Mr. Bingley</div>
+              </div>
+              <div class="mc-ec-wrapper">
+                <button class="mc-eliminate-choice"></button>
+              </div>
+            </div>
+            <div class="mc-option">
+              <div class="mc-control-wrapper">
+                <label class="control">
+                  <input type="radio" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="mc-content-wrapper">
+                <div class="mc-content">accusing Mr. Bennet of being annoying</div>
+              </div>
+              <div class="mc-ec-wrapper">
+                <button class="mc-eliminate-choice"></button>
+              </div>
+            </div>
+            <div class="mc-option">
+              <div class="mc-control-wrapper">
+                <label class="control">
+                  <input type="radio" />
+                  <span></span>
+                </label>
+              </div>
+              <div class="mc-content-wrapper">
+                <div class="mc-content">telling Mr. Bennet to let her finish speaking</div>
+              </div>
+              <div class="mc-ec-wrapper">
+                <button class="mc-eliminate-choice"></button>
+              </div>
+            </div>
+
+          </div>
+          <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../checkboxes-and-radios/checkboxes-and-radios.js"></script>
+  <script src="../response-type-mc/response-type-mc.js"></script>
+  <script src="look-back-buttons.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

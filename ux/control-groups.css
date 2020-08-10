@@ -1,0 +1,39 @@
+/**
+* @stylesheet control-groups.css Control Groups
+* @parent ux.ui-elements
+* Control groups are used to visually group sets of related user interface elements.
+*
+* A control group is bounded by a gray `#CCCCCC` border with rounded corners. A label indicating the nature of the elements contained in the group appears centered immediately below the top border.
+* @iframe ux/demos/control-groups/control-groups.html 800
+**/
+
+.control-group-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.control-group {
+  border: 0.083em solid #ccc;
+  border-radius: 0.280em;
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: 0.375em 0.667em;
+  text-align: center;
+  transition: border 0.2s;
+}
+
+.control-group p {
+  margin: 0.125em 0;
+}
+
+.control-group > .btn {
+  display: block;
+  margin: 0.667em 0.333em 1em 0.333em; }
+.control-group > .btn:last-of-type {
+  margin-bottom: 0.625em; }
+
+.control-group .control {
+  align-items: center;
+  display: flex;
+  padding: 0.292em 0;
+}

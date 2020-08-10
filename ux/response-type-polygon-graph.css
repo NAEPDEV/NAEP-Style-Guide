@@ -1,0 +1,33 @@
+/**
+* @stylesheet response-type-polygon-graph.css Polygon Graph
+* @parent ux.response-types
+* The Polygon Graph response type allows test takers to respond to an item by manipulating a provided polygon to represent a given context.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-polygon-graph/response-type-polygon-graph.html 700
+**/
+
+/**
+* @styles 0-pg-grid Grid
+* The primary interactions for Polygon Graph responses occur in a coordinate grid (see the [coordinate-grids.css] page), on which test takers can manipulate an interactive polygon. A pre-populated polygon may also be provided as a reference. (See the [points-lines-polygons.css] page for more information about interactive and pre-populated polygons.)
+**/
+
+/**
+* @styles 1-pg-controls Controls
+* __Undo__ and __Reset__ buttons are right-justified beneath the coordinate grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the grid.
+* * The __Reset__ button restores the grid to its initial state.
+**/
+
+.response-area-pg .point[disabled] .point-actual {
+  fill: #484848;
+}
+
+.response-area-pg .line[disabled] .line-actual {
+  stroke: #484848;
+}
+
+.response-area-pg .line[disabled] .polygon-actual {
+  fill: #484848;
+  stroke: #484848;
+}

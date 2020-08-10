@@ -1,0 +1,110 @@
+/**
+* @stylesheet response-type-zones.css Zones
+* @parent ux.response-types
+*
+* The zones response type allows test takers to respond to an item by selecting regions of an image. The response image for a zones item can be of any type, including line art and photographs, provided the selection areas are visible.
+**/
+
+/**
+* @styles 0-zones-presentation Presentation
+* Zones selection areas have the following states.
+* * _Default_. There is no visual indicator for selection areas by default.
+* * _Selected_. A dashed yellow `#FFFF00` and blue `#1F8FFF` outline and a translucent blue `rgba(51, 153, 255, 0.2)` fill are applied.
+* * _Hover_. Visible when the cursor is over the selection area. A translucent blue `rgba(51, 153, 255, 0.2)` fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The `pointer` cursor is shown.
+* * _Focus_. The simple dotted outline used to indicate focus elsewhere in the system (see the [indicators.css] page for more information) is not easily visible on all images, so a white `#FFFFFF` and black `#000000` dotted line is used.
+*
+* A __Clear Answer__ button is provided at the bottom left of the response area. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).
+**/
+
+/*-------------------------------------------------------------------------------
+IMPLEMENTATION DETAILS
+
+Zones responses require the insertion of a .zones-mask SVG which defines 3
+elements for each zone: a .zones-mask-border, an identical
+.zones-mask-border-background, and a slightly larger .zones-mask-border-focus.
+Circles, rectangles, or polygons can be generated from coordinates given in the XML.
+
+At least one mask on the page must contain a #zones-mask-bright-blur
+filter to create the glowing outline.
+
+See the guide demo pagse for examples of hand-generated .zone-mask
+elements.
+-------------------------------------------------------------------------------*/
+
+.response-area-zones {
+  position: relative;
+}
+
+.zones-image {
+  margin-bottom: 1.11em;
+  position: relative;
+  z-index: 4;
+}
+
+.zones-mask {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+}
+
+.zones-mask-border,
+html.can-touch .zones-mask-border:hover {
+  fill: transparent;
+}
+
+.zones-mask-border:hover {
+  fill: rgba(51, 153, 255, 0.2);
+}
+
+a.zones-selected .zones-mask-border {
+  stroke: #1F8FFF;
+  stroke-width: 3;
+}
+
+.zones-single-select a.zones-selected {
+  cursor: default;
+}
+
+.zones-single-select a.zones-selected .zones-mask-border:hover {
+  fill: none;
+}
+
+a.zones-selected .zones-mask-border-background {
+  fill: rgba(51, 153, 255, 0.2);
+  /* filter: url(#zones-mask-bright-blur); */
+  stroke: #ffff00;
+  stroke-width: 5;
+}
+
+.zones-mask a {
+  cursor: pointer;
+}
+
+.zones-mask a:focus {
+  outline: none;
+}
+
+.zones-mask a:focus .zones-mask-border-focus {
+  stroke: #000;
+  stroke-width: 2;
+}
+
+.zones-mask a:focus .zones-mask-border-focus-background {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.zones-mask a[disabled] {
+  pointer-events: none;
+}
+
+/**
+* @styles 1-single-select-zones Single-select Variant
+* @iframe ux/demos/response-type-zones/response-type-zones-ss.html 1200
+**/
+
+/**
+* @styles 2-multiple-select-zones Multiple-select Variant
+* @iframe ux/demos/response-type-zones/response-type-zones-ms.html 740
+**/

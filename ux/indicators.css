@@ -1,0 +1,352 @@
+/**
+* @stylesheet indicators.css Indicators
+* @parent ux.ui-elements
+**/
+
+/**
+* @styles 0-indicators-focus Focus Indicator
+* The focus indicator displays on the user interface (UI) element that currently has focus (i.e., when the test taker has clicked, tapped, or navigated to the element using keyboard controls).
+*
+* The indicator is rendered as a hairline dotted outline for most student-facing UI elements. To ensure visibility, the indicator’s color typically matches that of the element’s content (e.g., a button with white text will also have a white focus indicator).
+* @iframe ux/demos/indicators/focus-indicator.html 125
+*
+*
+* ### Focus for Interactive Points & Sizing Handles
+* Because [points-lines-polygons.css], and single-direction sizing handles (see [transformable-objects.css]) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray `#949494` circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white `#FFFFFF` fill. (This focus ring also serves as a hover state.)
+* @iframe ux/demos/indicators/focus-indicator-iic.html 125
+*
+*
+* Additional examples of focus indicators can be viewed by selecting interactive elements in demos throughout the UX section of the guide.
+**/
+
+::-moz-focus-inner,
+::-moz-focus-outer { /* Prevents double focus outlines in FireFox. Override won’t work for range inputs if not specified. */
+  border: 0;
+}
+
+:focus,
+.video-hero-play.media-btn:focus:before,
+.inline-choice span:focus,
+.step-indicator input:focus + label,
+.control input:focus + span,
+.layer-switch input[type="checkbox"]:focus + .layer-switch-slider {
+  outline: 1px dotted;
+}
+
+.wri-btn.close-dialog-btn:focus,
+.sis-text-selection.active.selected:focus {
+  outline-color: #000;
+}
+
+#ee-btn-close:focus {
+  outline-offset: -9px;
+}
+
+.ee-tabarea li:focus,
+input[type=button]:focus,
+button:focus,
+.wri-btn:focus,
+.btn-see-more:focus,
+.sis-selection-container.sis-text p .btn-close:focus,
+.sis-selection-container .media-btn:focus {
+  outline-offset: -4px;
+}
+
+.wri-dialog .prev-btn:focus,
+.wri-dialog .lookup-btn:focus {
+  outline-color: #000;
+  outline-offset: -4px;
+}
+
+.enaepTab li:focus {
+  outline-offset: -5px;
+}
+
+.cta-wrapper.cta-wrapper-bg .cta-message:focus,
+.cta-wrapper.cta-wrapper-bg .cta-message.tts-active:focus,
+th.header:focus {
+  outline-color: inherit;
+  outline-offset: -3px;
+}
+
+.accordion span {
+  outline-offset: -2px;
+}
+
+.media-btn:focus,
+.footnote-btn:focus,
+.footnote-close:focus,
+.step-indicator input:focus + label {
+  outline-color: #000;
+  outline-offset: 0;
+}
+
+.tray-btn:focus,
+.system-btn:focus,
+.sis-alert-close:focus {
+  outline-offset: 0;
+}
+
+.mc-control,
+.mc-choice-control,
+.inline-choice span:focus,
+.sis-text-selection:focus,
+input[type="text"]:focus,
+.wri-dialog textarea:focus,
+.wri-dialog input[type="text"]:focus,
+.wri-dialog select:focus,
+.control input:focus + span {
+  outline-offset: 1px;
+}
+
+.btn-nav:focus,
+.mc-eliminate-choice:focus,
+.stimulus-paragraph p.tts-active:focus,
+.stem-paragraph-inner.tts-active:focus,
+.stem-paragraph p.tts-active:focus,
+.standalone-image.tts-active:focus,
+table.grid tr.tts-active .grid-content:focus,
+.footnote-paragraph.tts-active:focus,
+.list-unordered li.tts-active:focus,
+.mc-option.tts-active .mc-content:focus,
+.match-option-text.tts-active:focus,
+.alert p.tts-active:focus,
+.cta-message.tts-active:focus,
+.char-portrait figcaption p.tts-active:focus,
+.char-text p.tts-active:focus,
+.char-text h3 span.tts-active:focus,
+.sis-selection-header p.tts-active:focus,
+.wizard h3.tts-active:focus,
+.wizard p.tts-active:focus,
+.response-area-iic.tts-active:focus,
+.stim-table tr.tts-active .table-content:focus,
+.match-background.tts-active:focus {
+  outline-color: #000;
+  outline-offset: 1px;
+}
+
+#wri-editor-actual:focus,
+.wri-combobox select:focus {
+  outline-offset: 0.12em;
+}
+
+.media-container input[type="range"].media-volume:focus {
+  outline-offset: 0.35em;
+}
+
+.media-container input[type="range"].focus-tabbed:focus {
+  outline: 1px dotted;
+  outline-color: #000;
+  outline-offset: 1px;
+}
+
+.slider.focus-tabbed:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.417em; }
+.slider.focus-tabbed:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.417em; }
+.slider.focus-tabbed:focus::-ms-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.417em; }
+
+.wri-combobox input[type="text"]:focus {
+  outline: none;
+}
+
+.btn.btn-circular:focus,
+.btn-page-previous:focus,
+.btn-page-next:focus,
+.btn-page-num:focus,
+.ui-slider-handle:focus {
+  outline: none;
+}
+
+.btn.btn-circular:focus::after,
+.btn-page-previous:focus::after,
+.btn-page-next:focus::after,
+.btn-page-num:focus::after,
+.sis-media-btn-primary:focus::after,
+.sis-media-btn-secondary:focus::after {
+  border: 1px dashed;
+  border-radius: 50%;
+  bottom: 1px;
+  content: '';
+  display: block;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  top: 1px; }
+.btn-page-previous:focus::after,
+.btn-page-next:focus::after {
+  border-color: #000;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  top: -5px; }
+.btn-page-num:focus::after {
+  border: 1px dotted #000;
+  border-radius: 0.321em;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  top: -5px;  }
+.sis-media-btn-primary:focus::after,
+.sis-media-btn-secondary:focus::after {
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  top: 2px; }
+
+
+.iic-focus-ring {
+  fill: transparent;
+  opacity: 0;
+  stroke: #949494;
+  stroke-width: 2; }
+[class^="handle"] .iic-focus-ring {
+  fill: #fff;
+  fill-opacity: 0.5; }
+html.can-touch svg:hover > .iic-focus-ring,
+html.can-touch .line:hover ~ .point .iic-focus-ring,
+html.can-touch .asymptote:hover ~ .asymptote-handle .iic-focus-ring,
+html.can-touch .ft-center-point:hover ~ .point .iic-focus-ring {
+  opacity: 0; }
+svg:hover > .iic-focus-ring,
+svg:active > .iic-focus-ring,
+svg.focus-tabbed:focus > .iic-focus-ring,
+.line:hover ~ .point .iic-focus-ring,
+.line:active ~ .point .iic-focus-ring,
+.line.focus-tabbed:focus ~ .point .iic-focus-ring,
+.asymptote:hover ~ .asymptote-handle .iic-focus-ring,
+.asymptote:active ~ .asymptote-handle .iic-focus-ring,
+.asymptote.focus-tabbed:focus ~ .asymptote-handle .iic-focus-ring,
+.ft-center-point:hover ~ .point .iic-focus-ring,
+.ft-center-point:active ~ .point .iic-focus-ring,
+html.can-touch svg:active > .iic-focus-ring,
+html.can-touch .line:active ~ .point .iic-focus-ring,
+html.can-touch .asymptote:active ~ .asymptote-handle .iic-focus-ring,
+html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
+  opacity: 1; }
+
+
+/**
+* @styles 1-indicators-scroll Scroll Indicator
+* The scroll indicator appears at the lower right of the screen, adjacent to the scrollbar, when assessment content other than reading stimulus passages requires vertical scrolling. The indicator receives the `pointer` icon in all states.
+*
+* The scroll indicator initially appears in the _More_ state, which includes a `chevron-down-thin` icon at the bottom. When pressed, the scroll indicator takes the test taker to the bottom of the content area and then changes to the _Top_ state, which includes a `chevron-up-thin` icon at the top. The state change will also occur if the test taker scrolls to the bottom of the content area manually.
+*
+* Pressing the scroll indicator in the _Top_ state returns the test taker to the top of the content area, and the indicator then disappears. The state change will also occur if the test taker scrolls to the top of the content area manually. Once it has disappeared from a screen, the scroll indicator will not return on that screen during the current session.
+* @iframe ux/demos/indicators/scroll-indicator.html 200
+**/
+
+.scroll-indicator {
+  background: #2b5b8c;
+  border: 0.15em solid #2b5b8c;
+  border-radius: 50%;
+  bottom: 2.3em;
+  color: #fff;
+  cursor: pointer;
+  font-family: Calibri, Arial, sans-serif;
+  font-size: 20px;
+  height: 3.3em;
+  line-height: 1;
+  opacity: 0.85;
+  outline: none;
+  padding: 0.35em 0 0;
+  position: absolute;
+  right: 2.3em;
+  text-align: center;
+  transition: background 0.2s, border 0.2s, visibility 0s, opacity .2s 0s;
+  width: 3.3em;
+  z-index: 4; }
+.scroll-indicator.hidden {
+  opacity: 0;
+  transition: visibility 0s .2s, opacity .2s 0s;
+  visibility: hidden; }
+
+.scroll-indicator.more::after,
+.scroll-indicator.top::before {
+  display: block;
+  font-family: 'icons';
+  font-size: 1.4em;
+}
+
+.scroll-indicator.more::before { content: 'More'; }
+
+.scroll-indicator.more::after {
+  content: '\e90e';
+  line-height: 0.75;
+}
+
+.scroll-indicator.top {
+  background-color: #434343;
+  border-color: #434343;
+  padding: 0;
+}
+
+.scroll-indicator.top::before {
+  content: '\e90f';
+  line-height: 0.5;
+}
+
+.scroll-indicator.top::after { content: 'Top'; }
+
+.scroll-indicator span {
+  border: 1px solid transparent;
+  border-radius: 50%;
+  bottom: 1px;
+  display: block;
+  left: 1px;
+  position: absolute;
+  right: 1px;
+  top: 1px; }
+.scroll-indicator:focus span {
+  border-color: #fff; }
+
+
+
+/**
+* @styles 2-indicators-loading Loading Indicator
+* When the system is processing data or loading content and so cannot be interacted with, the loading indicator displays in the center of the screen on top of a semi-transparent gray background. The indicator is green `#1B891B` with rounded corners, and a rotating `spinner` icon appears at its left side.
+* @iframe ux/demos/indicators/loading-indicator.html 125
+**/
+
+.loading-spinner {
+  align-items: center;
+  background: #9B9B9B;
+  background: rgba(130,130,130,0.8);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.loading-spinner-content {
+  background-color: #1b891b;
+  border-radius: 0.33em;
+  color: #fff;
+  cursor: default;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 0.75em 0.9em;
+  user-select: none;
+}
+
+.loading-spinner-content:before {
+  animation: spin 1s infinite linear;
+  content: '\e912';
+  display: inline-block;
+  font-family: 'icons';
+  font-size: 0.67em;
+  letter-spacing: normal;
+  margin-right: 0.2em;
+  speak: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}

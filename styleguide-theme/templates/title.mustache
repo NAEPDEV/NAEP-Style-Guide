@@ -1,0 +1,20 @@
+<div class="heading">
+<h1>{{makeTitle}}</h1>
+	{{#if plugin}}<span class="module">{{plugin}}</span>{{/if}}
+	{{#if release}}<span class="release">{{release}}</span>{{/if}}
+</div>
+
+<ul class="links">
+	{{#links}}
+		<li><a href="{{href}}">{{title}}</a></li>
+	{{/links}}
+	{{#ifValidSource src}}
+		<li><a href="{{urlSource src type line}}">source</a></li>
+	{{/ifValidSource}}
+	{{#if download}}
+		<li><a href="{{urlDownload .}}">download</a></li>
+	{{/if}}
+	{{#if test}}
+		<li><a href="{{urlTest .}}">tests</a></li>
+	{{/if}}
+</ul>

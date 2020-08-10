@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+{{{generatedWarning}}}
+
+<!--[if lt IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8 lt-ie7" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie lt-ie9 lt-ie8" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie lt-ie9" lang="en">
+<![endif]-->
+<!--[if IE 9]>
+<html class="no-js ie ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{makeParentTitle}} {{#if title}}- {{title}} {{else}} {{#if name}}- {{name}}{{/if}}{{/if}}</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	{{^devBuild}}
+	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
+    <script type="text/javascript" src="../ux/demos/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/versionLinking.js"></script>
+	{{/devBuild}}
+	<!--[if lt IE 9]>
+   <script type="text/javascript" src="static/html5shiv.js"></script>
+    <!--<![endif]-->
+</head>
+
+<body class="docs">
+	<div class="hidden" id="menu-backdrop"></div>
+	<div class="hidden" id="loader">
+			<div class="loading-spinner"></div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("loader").classList.remove("hidden");
+		window.onload = function() {
+			document.getElementById("loader").classList.add("hidden");
+		}
+	</script>
+
+	{{#unless hideHeader}}
+	<header>
+		<nav class="container">
+
+			<ul>
+				<li>
+					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
+						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
+					</button>
+                    <a class="guide-title" a href="../index.html">Style Guide<span class="version">v{{{version}}}</span></a>
+				</li>
+				<li><a class="header-tab selected" href="../id/index.html">Item Dev</a></li>
+				<li><a class="header-tab" href="../media/index.html">Media</a></li>
+				<li><a class="header-tab" href="../ux/index.html">UX</a></li>
+			</ul>
+
+		</nav>
+	</header>
+	{{/unless}}
+
+	{{{content}}}
+
+	<button id="top-button" class="top-button hidden">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 384">
+   		<polygon points="344 280 192 128 40 280 0 240 192 48 384 240 344 280"/>
+		</svg>
+	</button>
+
+	{{^hideFooter}}
+	<!--<footer>
+		<nav class="container">
+			<a href="version-history.html">Version 2.3</a>
+		</nav>
+	</footer>-->
+	{{/hideFooter}}
+
+	<script type="text/javascript">
+		var docObject = {{{docObjectString}}};
+	</script>
+
+	{{#if devBuild}}
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal/steal.js"></script>
+	{{else}}
+		<script>
+		  steal = {
+		    instantiated: {
+		      "bundles/static.css!$css" : null
+		    }
+		  }
+		</script>
+		<script type='text/javascript'
+				data-main="static"
+				data-config="./static/config.js"
+				src="./static/steal.production.js"
+	    		bundles-path="bundles"></script>
+	{{/if}}
+</body>
+
+</html>

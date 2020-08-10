@@ -1,0 +1,191 @@
+/**
+* @stylesheet transformable-objects.css Transformable Objects
+* @parent ux.ui-elements
+* Transformable objects can be resized, rotated, and/or translated by test takers. The transformations available vary depending on the measurement goals of a given item.
+*
+* Transformable objects are currently only used in SBTs in IICs.
+**/
+
+/**
+* @styles 0-objects-translation Translation
+* Test takers can move translatable objects by dragging them. The `move` cursor is shown when hovering over a translatable object.
+* @iframe ux/demos/transformable-objects/translatable-objects.html 290
+**/
+
+.obj-translatable {
+	cursor: move; }
+.obj-translatable[disabled] {
+	pointer-events: none; }
+
+.obj-resizable,
+.obj-rotatable,
+.obj-translatable {
+	position: relative;
+}
+
+/**
+* @styles 1-objects-sizing Resizing
+* Test takers can resize objects by dragging their associated sizing handle(s).
+* ### Single-direction
+* When an object cannot be rotated or translated and can only be resized in one direction, a circular sizing handle is provided. The handle appears centered on the draggable side of the object.
+*
+* Single-direction sizing handles have the following states.
+* * _Default_. Handle has a blue `#004696` border and a white `#FFFFFF` fill.
+* * _Hover_. Visible when the cursor is over the handle. A focus ring appears around the handle. (See the [indicators.css] page for more information about focus rings.)
+* * _Active_. Visible when the test taker is dragging the handle. Handle scales up 133%.
+* * _Disabled_. Visible when the handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Border becomes dark gray `#AAAAAA`, and fill becomes light gray `#E5E5E5`.
+*
+* When the handle provides vertical resizing, the `ns-resize` cursor is shown on hover. When the handle provides horizontal resizing, the `ew-resize` cursor is shown on hover.
+* @iframe ux/demos/transformable-objects/resizable-objects-single.html 280
+*
+*
+* ### Multi-direction
+* When an object can be resized in both directions, or when it is rotatable, square sizing handles are provided. Multi-direction sizing handles have a gray `#333333` border and a white `#FFFFFF` fill.
+*
+* Vertical and horizontal multi-direction sizing handles have the same cursors as their single-direction counterparts. Diagonal sizing handles have the `nesw-resize` or `nwse-resize` cursor as appropriate.
+* @iframe ux/demos/transformable-objects/resizable-objects-multi.html 362
+**/
+
+/* single-direction sizing handles for SVGs */
+.handle-size {
+  cursor: pointer;
+  user-select: none; }
+.handle-size-vertical {
+  cursor: ns-resize; }
+.handle-size-horizontal {
+  cursor: ew-resize; }
+.handle-size:focus {
+  outline: none; }
+.handle-size[disabled] {
+  pointer-events: none; }
+
+.handle-size-actual {
+  fill: #fff;
+  stroke: #004696;
+  stroke-width: 3;
+  transition: fill 0.2s, stroke 0.2s; }
+.handle-size[disabled] .handle-size-actual {
+  fill: #e5e5e5;
+  stroke: #aaa; }
+
+.handle-size-drag {
+  opacity: 0; }
+.handle-size:active .handle-size-drag,
+.handle-size.active .handle-size-drag {
+  opacity: 1; }
+
+
+/* multi-direction sizing handles for DOM elements */
+.handle-size-multi {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	-ms-touch-action: none;
+	touch-action: none; }
+.obj-resizable[disabled] .handle-size-multi {
+	pointer-events: none; }
+
+.handle-size-multi::before {
+	background: #fff;
+	border: 0.042em solid #333;
+	content: '';
+	display: block;
+	height: 0.5em;
+	transition: background 0.2s, border 0.2s;
+	user-select: none;
+	width: 0.5em; }
+.obj-resizable[disabled] .handle-size-multi::before {
+	background: #909090;
+	border-color: #909090; }
+
+.ui-resizable-n,
+.ui-resizable-s {
+	cursor: ns-resize;
+	height: 1em;
+	left: 0;
+	width: 100%; }
+.ui-resizable-n {
+	top: -0.5em; }
+.ui-resizable-s {
+	bottom: -0.5em; }
+
+.ui-resizable-e,
+.ui-resizable-w {
+	cursor: ew-resize;
+	height: 100%;
+	top: 0;
+	width: 1em; }
+.ui-resizable-e {
+	right: -0.5em; }
+.ui-resizable-w {
+	left: -0.5em; }
+
+.ui-resizable-ne,
+.ui-resizable-nw,
+.ui-resizable-se,
+.ui-resizable-sw {
+	height: 1em;
+	width: 1em; }
+.ui-resizable-nw {
+	cursor: nwse-resize;
+	left: -0.5em;
+	top: -0.5em; }
+.ui-resizable-ne {
+	cursor: nesw-resize;
+	right: -0.5em;
+	top: -0.5em; }
+.ui-resizable-se {
+	bottom: -0.5em;
+	cursor: nwse-resize;
+	right: -0.5em; }
+.ui-resizable-sw {
+	bottom: -0.5em;
+	cursor: nesw-resize;
+	left: -0.5em; }
+
+/**
+* @styles 2-objects-rotation Rotation
+* Test takers can rotate an object by dragging its associated rotation handle. The handle is centered above the associated object and is connected to the object by a dashed line. The handle has a gray `#333333` border and a white `#FFFFFF` fill. A rotation cursor is shown on hover.
+* @iframe ux/demos/transformable-objects/rotatable-objects.html 362
+**/
+
+.obj-rotatable .ui-rotatable-handle {
+	background: #fff;
+	border: 0.042em solid #333;
+	border-radius: 50%;
+  cursor: url(cursor-rotate.svg), pointer;
+	height: 0.75em;
+	left: calc(50% - 0.375em);
+	position: absolute;
+	top: -2em;
+	transition: background 0.2s, border 0.2s;
+	width: 0.75em; }
+.obj-rotatable[disabled] .ui-rotatable-handle {
+	background: #e5e5e5;
+	border-color: #909090;
+	pointer-events: none; }
+
+.obj-rotatable .ui-rotatable-handle::before {
+  border-radius: 50%;
+	content: '';
+	height: 1.5em;
+	left: -0.416em;
+	position: absolute;
+	top: -0.416em;
+	width: 1.5em;
+  z-index: -1;
+}
+
+.obj-rotatable .ui-rotatable-handle::after {
+	border-left: 0.083em dashed #333;
+	content: '';
+	height: 1.25em;
+	left: calc(50% - 0.042em);
+	position: absolute;
+	top: 100%;
+	transition: border 0.2s;
+	width: 0;
+	z-index: -1; }
+.obj-rotatable[disabled] .ui-rotatable-handle::after {
+	border-color: #909090; }

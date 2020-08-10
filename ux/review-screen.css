@@ -1,0 +1,66 @@
+/**
+* @stylesheet review-screen.css Review Screen
+* @parent ux.features
+*
+* The review screen shows the number of unanswered items in the current block of discrete items and provides a way to navigate to the next block via the __Go on to the next section__ button. The screen is accessed via the last tab in the block.
+*
+* Review screen content changes based on the number of unanswered items in a block.
+* * When more than one item is unanswered, a `warning` icon is displayed.
+* * When only one item is unanswered, the word “questions” in the second sentence becomes singular (i.e., “question”).
+* * When no items are unanswered,
+*   * The `warning` icon changes to a `timer` icon.
+*   * The second sentence and the list of unanswered items are removed.
+*
+* Use the dropdown menu in the demo below to see how review screen content changes based on the number of unanswered items.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/review-screen/review-screen-full.html" target="_blank">here</a>._
+* @iframe ux/demos/review-screen/review-screen.html 500
+**/
+
+.review .alert {
+  border: none;
+	margin: 0 0 0.5em 0;
+	padding-left: 0;
+}
+
+.response-area.review {
+  align-items: center;
+  background: #eee;
+  border: 0.05em solid #ddd;
+  border-radius: 0.15em;
+  display: flex;
+  font-weight: bold;
+  position: relative;
+  transition: background 0.2s, border 0.2s;
+}
+
+.item-stem-wrapper.review p,
+.response-area.review p {
+  display: inline-block;
+}
+
+.list-unordered.list-review {
+  margin-left: 5.56em;
+}
+
+.review-unanswered .stem-paragraph:nth-of-type(2) {
+	padding-left: 0.56em;
+}
+
+.review-answered .stem-paragraph {
+  padding-left: 5em;
+}
+
+.response-area.review .stem-paragraph {
+  padding: 1em;
+}
+
+.response-area.review .stem-paragraph:first-of-type {
+  padding-bottom: 0;
+}
+
+.response-area.review .btn.btn-next-section {
+  flex: 0 0 auto;
+  margin: 0 1em 0 1.5em;
+  width: 9em;
+}

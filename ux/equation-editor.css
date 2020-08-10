@@ -1,0 +1,354 @@
+/**
+* @stylesheet equation-editor.css Equation Editor
+* @parent ux.features
+* The Equation Editor is an on-screen keyboard that provides access to mathematical symbols not available on the physical keyboard.
+*
+* The Equation Editor appears at the bottom of the content area. It is divided into two sections.
+* * _The tabs area_ contains the __Close__ button and the tabs used to navigate between button areas.
+* * _The button area_ displays the symbol buttons associated with the currently selected tab.
+**/
+
+/**
+* @styles 0-ee-presentation-4-8 Presentation (Grades 4 & 8)
+* The tab area has a thin top border (`#B6BDC3`) and a light blue gradient background. The button area has a dark gray `#373737` background.
+*
+* ### Tab States
+* * _Default_. Tab has an off-white `#F2F2F2` background and a thin gray `#7C7C7C` border. Tab labels are dark gray `#373737`.
+* * _Hover_. The `pointer` cursor is shown.
+* * _Selected_. Visible when the associated button area is on screen. Tab text changes to white `#FFFFFF`, and tab background changes to the same gray `#373737` as the button area. The `default` cursor is shown.
+* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, and the label becomes gray `#CCCCCC`.
+*
+* ### Close Button States
+* * _Default_. Button has a blue gradient background, a white label, and a white `#FFFFFF` `down-arrow` icon surrounded by a dark blue `#255571` circle.
+* * _Hover_. Button background darkens. The `pointer` cursor is shown.
+*
+* ### Symbol Button States
+* * _Default_. Button background is white `#FFFFFF`, and button label is gray `#555555`.
+* * _Hover_. The `pointer` cursor is shown.
+* * _Disabled_. Button opacity reduces to 30%.
+*
+* Symbol buttons are organized into rows.
+**/
+
+/**
+* @styles 1-ee-presentation-12 Presentation (Grade 12)
+* The tab area has a thin top border (`#ABB3BA`) and a light blue `#C8D1DA` background. The button area has a dark blue `#192129` background.
+*
+* ### Tab States
+* * _Default_. Tab has a medium blue `#3C6E9F` background and a thin darker blue `#454C54` border. Tab labels are white `#FFFFFF`.
+* * _Hover_. Visible when the cursor is over an unselected tab. Background darkens to `#315B81`. The `pointer` cursor is shown.
+* * _Selected_. Visible when the associated button area is on screen. Tab background changes to the same dark blue `#192129` as the button area. The `default` cursor is shown.
+* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, the background becomes `#526E89`, and the label becomes gray `#CCCCCC`.
+*
+* ### Close Button States
+* * _Default_. Button has a white `#FFFFFF` `cross` icon and a  blue `#1F4C7A` background.
+* * _Hover_. Button background darkens to `#183B5D`. The `pointer` cursor is shown.
+*
+* ### Symbol Button States
+* * _Default_. Button background is white at 90% opacity `rgba(255,255,255,0.9)`, and button label is gray `#444444`.
+* * _Hover_. Button background opacity increases to 100%, and button label darkens to `#111111`. The `pointer` cursor is shown.
+* * _Disabled_. Button opacity reduces to 30%.
+*
+* Symbol buttons are organized into groups separated by 1-pixel vertical white borders with 50% opacity `rgba(255,255,255,0.5)`. There is no border between the last button group and the Backspace button.
+**/
+
+input[type=text].fib.ee-active,
+input[type=text].fib.ee-active:focus,
+input[type=text].numeric-entry.ee-active,
+input[type=text].numeric-entry.ee-active:focus,
+textarea.extendedtext.ee-active,
+textarea.extendedtext.ee-active:focus {
+  background: #ebfbe5;
+  outline: 0.042em dashed #008117;
+  outline-offset: -3px;
+}
+
+#ee-wrapper {
+  background: #192129;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px; /* Prevents zoom */
+  height: 10.65em;
+  transition: height 0.3s; }
+#ee-wrapper.ee-old-variant {
+  background: #373737;
+  height: 9.4em; }
+
+
+#ee-wrapper.hidden,
+#ee-wrapper.ee-old-variant.hidden {
+  height: 0; }
+
+
+.ee-tabarea {
+  align-items: flex-end;
+  background: #c8d1da;
+  border-top: 0.05em solid #abb3ba;
+  display: flex;
+  flex: 0 0 auto;
+  height: 2.4em;
+  justify-content: space-between;
+  padding: 0 0.2em; }
+#ee-wrapper.ee-old-variant .ee-tabarea {
+  background: linear-gradient(#F2F5F8, #BECAD1);
+  border-color: #B6BDC3;
+  height: 2.625em;
+  padding: 0 0.42em 0 0.2em; }
+
+.ee-tabarea ul {
+  align-items: flex-end;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ee-tabarea li {
+  background: #3c6e9f;
+  border-right: 0.05em solid #454C54;
+  border-top: 0.05em solid #454C54;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  min-width: 7em;
+  padding: 0.35em 0;
+  text-align: center;
+  transition: background 0.2s, border 0.2s, opacity 0.2s; }
+#ee-wrapper.ee-old-variant .ee-tabarea li {
+  background: #f2f2f2;
+  border-color: #7c7c7c;
+  color: #373737;
+  min-width: 9em;
+  padding: 0.42em 0; }
+
+.ee-tabarea li:first-of-type {
+  border-left: 0.05em solid #454C54;
+  border-top-left-radius: 0.2em; }
+#ee-wrapper.ee-old-variant .ee-tabarea li:first-of-type {
+  border-color: #7c7c7c; }
+
+.ee-tabarea li:last-of-type {
+  border-top-right-radius: 0.2em; }
+
+.ee-tabarea li:hover {
+	background: #315b81; }
+html.can-touch .ee-tabarea li:hover {
+  background: #3c6e9f; }
+#ee-wrapper.ee-old-variant .ee-tabarea li:hover,
+html.can-touch #ee-wrapper.ee-old-variant .ee-tabarea li:hover {
+  background: #f2f2f2; }
+
+.ee-tabarea li.selected,
+.ee-tabarea li.selected:hover,
+html.can-touch .ee-tabarea li.selected:hover {
+  background: #192129;
+	border-color: #192129;
+  border-radius: 0.2em 0.2em 0 0;
+  color: #fff;
+  opacity: 1;
+  padding: 0.55em 0 0.5em;
+  pointer-events: none; }
+#ee-wrapper.ee-old-variant .ee-tabarea li.selected,
+#ee-wrapper.ee-old-variant .ee-tabarea li.selected:hover,
+html.can-touch #ee-wrapper.ee-old-variant .ee-tabarea li.selected:hover {
+  background: #373737;
+	border-color: #373737;
+  color: #fff;
+  padding: 0.84em 0 0.4em; }
+
+#ee-btn-close,
+html.can-touch #ee-btn-close:hover {
+  align-self: center;
+  background: #1f4c7a;
+  background-clip: padding-box;
+  border: 0.208em solid transparent;
+  border-radius: 0.417em;
+  color: #fff;
+  font-family: 'icons';
+  line-height: 1;
+  min-width: 0;
+  padding: 0.27em;
+  transition: background 0.2s; }
+#ee-wrapper.ee-old-variant #ee-btn-close,
+html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:hover {
+  background: linear-gradient(#36718D, #295F80);
+  background-clip: border-box;
+  border: none;
+  border-radius: 0.2em;
+  color: #fff;
+  display: flex;
+  font-family: 'Calibri', sans-serif;
+  line-height: 1.25;
+  padding: 0.25em 1em 0.3em 1em; }
+
+#ee-btn-close:hover,
+html.can-touch #ee-btn-close:active {
+  background: #183b5d;
+  background-clip: padding-box; }
+#ee-wrapper.ee-old-variant #ee-btn-close:hover,
+html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:active {
+  background: linear-gradient(#3B5E70, #2B4555);
+  background-clip: border-box; }
+
+#ee-wrapper.ee-old-variant #ee-btn-close:focus {
+  outline-offset: -0.2em; }
+
+#ee-btn-close:before {
+  content: '\e948';
+  display: block; }
+#ee-wrapper.ee-old-variant #ee-btn-close:before {
+	background: #255571;
+	border-radius: 50%;
+	content: '\ea29';
+	display: block;
+	font-family: "naep-ee";
+	font-size: 1.25em;
+	line-height: 1;
+	margin-right: 0.5em; }
+#ee-wrapper.ee-old-variant #ee-btn-close:hover:before {
+	background: #274454; }
+
+.ee-btnarea {
+  display: flex;
+  flex: 1 0 auto;
+  padding: 0.625em; }
+#ee-wrapper.ee-old-variant .ee-btnarea {
+  display: block; }
+
+.ee-btnarea-group {
+	border-left: 0.05em solid rgba(255,255,255,0.5);
+	display: inline-block;
+	margin-left: 1em;
+	padding-left: 1em; }
+.ee-btnarea-group:first-of-type {
+	border: none;
+	margin: 0;
+	padding: 0; }
+.ee-btnarea-group:last-of-type {
+	align-items: flex-start;
+	border: none;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%; }
+
+.ee-btnarea-row {
+  display: flex;
+  margin: 0.5em 0 0 0; }
+.ee-btnarea-row:first-of-type {
+  margin: 0; }
+#ee-wrapper.ee-old-variant .ee-btnarea-row {
+	justify-content: space-between;
+  margin: 0; }
+#ee-wrapper.ee-old-variant .ee-btnarea-row:first-of-type {
+	margin-bottom: 0.625em; }
+
+.ee-btn {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 0.2em;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  flex: 0 0 auto;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  min-width: 2em;
+  padding: 0.5em;
+  transition: background 0.2s, color 0.2s, opacity 0.2s; }
+#ee-wrapper.ee-old-variant .ee-btn {
+  background: #fff;
+  color: #555;
+  min-width: 2.45em;
+  padding: 0.7em; }
+
+.ee-btnarea .ee-btn {
+  margin-right: 0.5em; }
+#ee-wrapper.ee-old-variant .ee-btnarea .ee-btn {
+	margin-right: 0.625em; }
+
+.ee-btnarea-row .ee-btn:last-of-type {
+  margin: 0; }
+#ee-wrapper.ee-old-variant .ee-btnarea-row .ee-btn:last-of-type {
+	margin-right: 2.95em; }
+
+.ee-btnarea-row:first-of-type .ee-btn:last-of-type,
+#ee-wrapper.ee-old-variant .ee-btnarea-row:first-of-type .ee-btn:last-of-type {
+  margin-right: 0; }
+
+.ee-btn:hover,
+html.can-touch .ee-btn:active {
+	background: #fff;
+	color: #111; }
+html.can-touch .ee-btn:hover {
+  background: rgba(255,255,255,0.9);
+  color: #444; }
+#ee-wrapper.ee-old-variant .ee-btn:hover,
+html.can-touch #ee-wrapper.ee-old-variant .ee-btn:active,
+html.can-touch #ee-wrapper.ee-old-variant .ee-btn:hover {
+  background: #fff;
+  color: #555; }
+
+.ee-btn[disabled] {
+  opacity: 0.3;
+  pointer-events: none; }
+
+[class^="icon-ee-"],
+[class*=" icon-ee-"],
+#ee-wrapper.ee-old-variant [class^="icon-ee-"],
+#ee-wrapper.ee-old-variant [class*=" icon-ee-"] {
+  letter-spacing: normal;
+  padding: 0; }
+
+[class^="icon-ee-"]:before,
+[class*=" icon-ee-"]:before {
+  font-size: 2em; }
+#ee-wrapper.ee-old-variant [class^="icon-ee-"]:before,
+#ee-wrapper.ee-old-variant [class*=" icon-ee-"]:before {
+	font-size: 2.42em; }
+
+#ee-wrapper.ee-old-variant .ee-spacer {
+	flex: 0 0 auto;
+	margin-right: 0.625em;
+	min-width: 2.45em;
+}
+
+/**
+* @styles 2-ee-behavior Default Behavior
+* ### Opening and Closing
+* The Equation Editor can be opened and closed by selecting the Equation Editor button in the [system-toolbar.css]. It can also be closed by selecting the __Close__ button at its upper right.
+*
+* When the Equation Editor is toggled on or off, it animates up or down (respectively) to help the test taker notice the change in state.
+*
+* The Equation Editor never overlays content. Rather, it reduces the available height for the content area when it is on screen.
+*
+* ### Interaction with Text Entry Fields
+* The Equation Editor’s symbol buttons are disabled by default. They become enabled when the test taker clicks a text entry field or presses a key while the text entry field has focus. To indicate to keyboard users which text entry field will be populated by symbols selected in the Equation Editor, a light green `#EBFBE5` background and dark green `#008117` dashed border is applied to the currently active field. The field remains active, and the equation editor buttons remain enabled until the test taker clicks elsewhere on the screen or selects another user interface element via the keyboard. (Selecting any part of the equation editor does not deactivate the field or disable the buttons.)
+*
+* If a text entry field has focus when the Equation Editor is opened, the field retains focus and becomes active for equation editor entry, and the content area automatically scrolls to ensure that the text entry field remains visible.
+**/
+
+/**
+* @styles 3-ee-behavior Behavior with Numeric Entry
+* Because cognitive Numeric Entry items (see the [response-type-text-entry.css] page) only allow test takers to enter numeric characters, periods, commas, and minus signs, only the Equation Editor buttons for those symbols enable when a Numeric Entry text field is selected. Also, the More Symbols tab, if present, disables when a Numeric Entry item is selected.
+**/
+
+/**
+@styles 4-ee-grade4 Grade 4 Variant
+* The grade 4 variant’s buttons fit in a single button area, so no tabs are needed.
+* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-4-full.html" target="_blank">here</a>._
+* @iframe ux/demos/equation-editor/equation-editor-4.html 400
+**/
+
+/**
+@styles 5-ee-grade8 Grade 8 Variant
+* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-8-full.html" target="_blank">here</a>._
+* @iframe ux/demos/equation-editor/equation-editor-8.html 400
+**/
+
+/**
+@styles 6-ee-grade12 Grade 12 Variant
+* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-12-full.html" target="_blank">here</a>._
+* @iframe ux/demos/equation-editor/equation-editor-12.html 400
+**/

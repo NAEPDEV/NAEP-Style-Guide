@@ -1,0 +1,45 @@
+/**
+* @stylesheet response-type-graph-transform.css Graph Transformation
+* @parent ux.response-types
+* The Graph Transformation response type allows test takers to respond to an item by translating and/or reflecting a provided function to represent a given context.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-graph-transform/response-type-graph-transform.html 700
+**/
+
+/**
+* @styles 0-gt-grid Grid
+* Two versions of a provided function appear on a coordinate grid (see the [coordinate-grids.css] page):
+* * A manipulable version that responds to the translation and reflection controls (see below). This version is the same blue as interactive points and lines (see the [points-lines-polygons.css] page), but it is not draggable and does not have the associated states (hover, active, etc.).
+* * A static version that remains in the original location as a reference. This version is the same gray as pre-populated points and lines (see the [points-lines-polygons.css] page).
+**/
+
+/**
+* @styles 1-gt-controls Controls
+* Test takers can transform the provided function via controls in [control-groups.css] stacked vertically to the right of the coordinate grid.
+* * The first control group is labeled “Reflect” and contains an __Across _x_-axis__ and an __Across _y_-axis__ button. Both buttons have the same style as small primary filled buttons (see the [buttons.css] page).
+* * The second control group is labeled “Translate” and contains a directional pad (see the [directional-pads.css] page).
+*
+* __Undo__ and __Reset__ buttons are right-justified beneath the coordinate grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the grid.
+* * The __Reset__ button restores the grid to its initial state.
+**/
+
+.response-area-gt .control-group-wrapper {
+  float: right;
+  margin: 1.792em 0 3em 1em;
+  text-align: left;
+}
+
+.shape-transformable[disabled] .point-actual {
+  fill: #484848;
+}
+
+.shape-transformable[disabled] .line-actual {
+  stroke: #484848;
+}
+
+.shape-transformable[disabled] .polygon-actual {
+  fill: #484848;
+  stroke: #484848;
+}

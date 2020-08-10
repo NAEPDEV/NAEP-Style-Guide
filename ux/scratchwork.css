@@ -1,0 +1,25 @@
+.canvas-container {
+  left: 0;
+  pointer-events: none;
+  position: absolute !important;
+  top: 0;
+  z-index: 3;
+}
+
+.scratchwork-canvas {
+  border: 1px solid transparent;
+  display: block !important;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 59em !important;
+  z-index: 3; }
+#stimulus .scratchwork-canvas {
+  height: 34.875em !important;
+  width: 24.5835em !important; }
+.scratchwork-canvas.active {
+  border-color: #00a5e2;
+  pointer-events: auto; }
+
+.eraseCursor {
+  cursor: url("../scratchwork/Cur_Erase_Scratch.cur") 20 20, auto; }

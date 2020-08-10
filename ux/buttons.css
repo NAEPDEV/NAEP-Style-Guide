@@ -1,0 +1,163 @@
+/**
+* @stylesheet buttons.css Buttons
+* @parent ux.ui-elements
+* Buttons are used to control functionality in the user interface (e.g., to initiate navigation).
+*
+* There are two types of buttons.
+* * _Filled button_. A rectangular button with a solid background or border and rounded corners. This is the default button type.
+* * _Bare button_. A button whose content is bare until the cursor is hovered over it. Used in cases where a multi-color button icon is needed and/or where button density precludes the filled button type (e.g., the [system-toolbar.css], the Writing Editor).
+*
+* All buttons receive the `default` cursor in the disabled state and the `pointer` cursor in all other states.
+* @iframe ux/demos/buttons/button-types.html 160
+**/
+
+/**
+* @styles 0-filled-buttons Filled Buttons
+* ### States
+* Filled buttons have the following states.
+* * _Default_. The default state.
+* * _Hover_. Visible when the cursor is over the button. Button color is lightened, and a drop shadow is added.
+* * _Active_. Visible when the test taker presses down on the button. Button color is darkened and the drop shadow is removed.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray `#E5E5E5`, button text becomes dark gray `#909090`, and the drop shadow is removed.
+* @iframe ux/demos/buttons/filled-button-states.html 100
+*
+*
+* ### Shapes
+* Filled buttons can be rectangular (when they contain text, or text and an icon) or circular (when they contain only an icon).
+*
+*
+* ### Sizes
+* Both rectangular and circular buttons come in default and small sizes. The small size is used to support the hierarchy or when space constraints prevent the default size.
+* @iframe ux/demos/buttons/filled-button-variants.html 200
+*
+*
+* ### Hierarchy
+* Filled buttons vary in color depending on the type of action they trigger:
+* * A blue `#0068D1` background is used for buttons that trigger the primary action on the current screen (e.g., the __Go on to next section__ button).
+* * A ghost button with a gray `#949494` border and blue `#0855B2` text is used for secondary actions (e.g., __Clear Answer__ buttons in selected-response items).
+* @iframe ux/demos/buttons/button-colors.html 95
+**/
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between; }
+.btn-wrapper.right-align {
+  flex: 1;
+  justify-content: flex-end; }
+.response-area-iic .btn-wrapper {
+  margin-top: 0.667em; }
+
+.btn-wrapper .btn {
+  margin: 0 0.5em; }
+.btn-wrapper .btn:first-of-type {
+  margin-left: 0; }
+.btn-wrapper .btn:last-of-type {
+  margin-right: 0; }
+
+button:active::before,
+button:active::after { /* Prevent IE from repositioning icons on click */
+  position:relative;
+}
+
+.btn {
+  background: #0068d1;
+  border: 0.083em solid transparent;
+  border-radius: 0.17em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0 0.25em;
+  padding: 0.55em 1.4em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+  user-select: none;
+  vertical-align: middle;
+  z-index: 4; }
+html.sbt .btn {
+  border-width: 0.091em; }
+
+.btn-circular {
+  border-radius: 50%;
+  letter-spacing: normal;
+  padding: 0.25em;
+  position: relative; }
+.btn-circular::before {
+  font-size: 1.5em; }
+
+.btn-clear-answer {
+  border-radius: 0.2em;
+  border-width: 0.093em;
+  display: block;
+  font-size: 0.9em;
+  padding: 0.4em 0.6em;
+}
+
+.btn-small {
+  border-radius: 0.2em;
+  padding: 0.3em 0.5em;
+}
+
+.btn-circular.btn-small {
+  border-radius: 50%;
+  padding: 0.333em; }
+.btn-circular.btn-small::before {
+  font-size: 1em; }
+
+/**
+* @styles 1-bare-buttons Bare Buttons
+* Bare buttons have the following states.
+* * _Default_. The default button state.
+* * _Hover_. Button background color is lightened, and a border and drop shadow appear.
+* * _Active_. The drop shadow becomes inset.
+* * _Toggled_. Used when the tool a button controls has on and off states. Button background and border become blue.
+* * _Disabled_. Button content is dimmed to indicate inactivity.
+* @iframe ux/demos/buttons/bare-button-states.html 160
+**/
+
+.btn:hover {
+  background: #137fec;
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+html.can-touch .btn:hover {
+  background: #0068d1;
+  box-shadow: none; }
+
+.btn:active,
+html.can-touch .btn:active {
+  background: #0060AC;
+  box-shadow: none;
+}
+
+.btn[disabled] {
+  background: #e5e5e5;
+	border-color: transparent;
+  box-shadow: none;
+	color: #909090;
+  pointer-events: none;
+}
+
+.btn-secondary {
+  background: #fff;
+	border-color: #949494;
+	color: #0855B2;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  border-color: #616161; }
+html.can-touch .btn-secondary:hover {
+  background: #fff;
+  border-color: #949494; }
+
+.btn.btn-secondary:active,
+html.can-touch .btn-secondary:active {
+  background: #f0f0f0;
+  border-color: #616161;
+}

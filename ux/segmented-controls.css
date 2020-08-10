@@ -1,0 +1,181 @@
+/**
+* @stylesheet segmented-controls.css Segmented Controls
+* @parent ux.ui-elements
+Segmented controls are used to switch between several mutually exclusive modes or options within an interaction.
+**/
+
+/**
+* @styles 0-sc-presentation Presentation
+* A segmented control has a gray `#949494` border and rounded corners. The control is composed of at least three options to avoid state ambiguity.
+*
+* Segmented control options always contain a text label and may contain an accompanying icon or image. All options in a control have the same width and height.
+*
+* Only one option can be selected at a time. The selected option cannot be deselected; instead, another option must be selected.
+*
+* Segmented control options have the following states, based on the secondary filled button style (see the [buttons.css] page for more information).
+* * _Default_. Option has a blue `#0855B2` label and gray `#949494` borders separating it from adjacent options.
+* * _Hover_. Visible when the cursor is over the option. Option background changes to a light blue `#d6ebff`. The `pointer` cursor is shown.
+* * _Selected_. Option background changes to blue `#0855B2`, and option label changes to white `#FFFFFF`. Borders with adjacent options also change to blue. If an icon is present, it receives a white `#FFFFFF` border to ensure visibility.
+* * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). Option background becomes light gray `#E5E5E5`, and option label becomes dark gray `#909090`. For the selected option, the shades of gray are reversed.
+**/
+
+/**
+* @styles 1-sc-vertical Vertical Variant
+When an option in a vertically aligned segmented control contains just a label, the label is center-justified. When an option contains a label and an icon, the option content is left-justified.
+* @iframe ux/demos/segmented-controls/segmented-control-vertical.html 510
+**/
+.segmented-control {
+  border: none;
+  color: #0855B2;
+  display: inline-block;
+  margin: 0 0 1em;
+  max-width: 9em;
+  padding: 0; }
+.sc-horizontal {
+  display: flex;
+  max-width: initial; }
+
+.segmented-control input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.segmented-control label {
+  align-items: center;
+  border: 0.083em solid #949494;
+  border-bottom: none;
+  cursor: pointer;
+  display: flex;
+  line-height: 1;
+  min-height: 2em;
+  padding: 0.292em 0.583em;
+  position: relative;
+  text-align: left;
+  transition: background 0.2s, border 0.2s; }
+.segmented-control label:first-of-type {
+  border-radius: 0.333em 0.333em 0 0; }
+.segmented-control label:last-of-type {
+  border-bottom: 0.083em solid #949494;
+  border-radius: 0 0 0.333em 0.333em;
+  min-height: 2.083em; }
+.segmented-control label:hover {
+  background: #d6ebff; }
+html.can-touch .segmented-control label:hover {
+  background: none; }
+html.can-touch .segmented-control label:active {
+  background: #d6ebff; }
+.segmented-control input[type="radio"]:checked + label {
+  background: #0855B2;
+  border-color: transparent;
+  color: #fff;
+  pointer-events: none; }
+.segmented-control input[type="radio"]:checked + label + input + label {
+  border-top-color: #0855B2; }
+.segmented-control input[type="radio"][disabled] + label {
+  background: #e5e5e5;
+  border-color: transparent;
+  color: #909090;
+  pointer-events: none; }
+.segmented-control input[type="radio"]:checked[disabled] + label {
+  background: #909090;
+  border-color: transparent;
+  color: #e5e5e5; }
+.segmented-control input[type="radio"]:checked[disabled] + label + input + label {
+  border-top-color: #909090; }
+
+/* This pseudo-element covers the top border of the option beneath the selected option */
+.segmented-control input[type="radio"] + label::after {
+  border-left: 0.083em solid transparent;
+  border-right: 0.083em solid transparent;
+  content: '';
+  display: block;
+  height: 0.083em;
+  left: -0.083em;
+  position: absolute;
+  right: -0.083em;
+  top: 100%;
+  transition: background 0.2s, border 0.2s;
+  z-index: 1; }
+.segmented-control input[type="radio"]:checked:not(:last-of-type) + label::after {
+  background: #0855B2; }
+.segmented-control input[type="radio"]:checked:not(:last-of-type)[disabled] + label::after {
+  background: #909090; }
+
+.segmented-control input[type="radio"]:focus + label::before {
+  border: 1px dotted;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  top: 2px;
+  left: 2px;
+  right: 2px; }
+.segmented-control input[type="radio"]:first-of-type:focus + label::before {
+  border-radius: 0.25em 0.25em 0 0; }
+.segmented-control input[type="radio"]:last-of-type:focus + label::before {
+  border-radius: 0 0 0.25em 0.25em; }
+
+.segmented-control label span:only-child {
+  text-align: center;
+  width: 100%;
+}
+
+
+/**
+* @styles 2-sc-horizontal Horizontal Variant
+* Option content in horizontally aligned segmented controls is always center-justified.
+* @iframe ux/demos/segmented-controls/segmented-control-horizontal.html 190
+**/
+
+.sc-horizontal label {
+  justify-content: center;
+  border-bottom: 0.083em solid #949494;
+  border-right: none;
+  width: 100%; }
+.sc-horizontal label:first-of-type {
+  border-radius: 0.333em 0 0 0.333em; }
+.sc-horizontal label:last-of-type {
+  border-radius: 0 0.333em 0.333em 0;
+  border-right: 0.083em solid #949494;
+  min-height: 2em; }
+.sc-horizontal input[type="radio"]:checked + label + input + label {
+  border-left-color: #0855B2;
+  border-top-color: #949494; }
+.sc-horizontal input[type="radio"]:checked[disabled] + label + input + label {
+  border-left-color: #949494;
+  border-top-color: transparent; }
+
+.sc-horizontal input[type="radio"] + label::after {
+  border: none;
+  border-bottom: 0.083em solid transparent;
+  border-top: 0.083em solid transparent;
+  bottom: -0.083em;
+  height: 100%;
+  left: 100%;
+  right: -0.083em;
+  top: -0.083em;
+  width: 0.083em; }
+
+.sc-horizontal input[type="radio"]:first-of-type:focus + label::before {
+  border-radius: 0.25em 0 0 0.25em; }
+.sc-horizontal input[type="radio"]:last-of-type:focus + label::before {
+  border-radius: 0 0.25em 0.25em 0; }
+
+
+/*------------------------------------------
+ICONS
+------------------------------------------*/
+.sc-icon {
+  flex: 0 0 auto;
+  height: 1.167em;
+  margin: 0 0.5em 0 -0.083em;
+  width: 1.167em; }
+.sc-horizontal .sc-icon {
+  margin-right: 0.25em;
+}
+
+.sc-icon-stroke {
+  fill: #fff;
+  transition: fill 0.2s; }
+input[type="radio"][disabled] + label .sc-icon-stroke {
+  fill: #e5e5e5; }

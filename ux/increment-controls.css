@@ -1,0 +1,50 @@
+/**
+* @stylesheet increment-controls.css Increment Controls
+* @parent ux.ui-elements
+* Increment controls allow test takers to increment or decrement a value, which typically affects some facet of a related user interface element (e.g., increment controls are used to change the number of units in the [response-type-fraction-model.css] response type.)
+*
+* The components of an increment control are presented in a row, with the decrement button on the left, a label in the middle, and the increment button on the right.
+*
+* The label has gray `#757575` top and bottom borders.
+*
+* The buttons have the same presentation and states as primary filled buttons (see the [buttons.css] page for more information), except that only the outer corners are rounded. The decrement button typically has the `minus-thin` icon, and the increment button typicaly has the `plus-thin` icon (see the [icons.css] page for more information), though other icons may be used in special cases. When the test taker reaches the minimum or maximum value allowed for a given control, the appropriate button becomes disabled.
+* @iframe ux/demos/increment-controls/increment-controls.html 100
+**/
+.increment-control {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.ic-control-label {
+  align-items: center;
+  border-bottom: 0.083em solid #757575;
+  border-top: 0.083em solid #757575;
+  display: flex;
+  justify-content: center;
+  min-width: 4.55em;
+  padding: 0 0.5em;
+  transition: border 0.2s;
+}
+
+.increment-control .btn {
+	letter-spacing: normal;
+  margin: 0;
+  padding: 0.333em; }
+.increment-control .btn:first-of-type {
+  border-radius: 0.2em 0 0 0.2em; }
+.increment-control .btn:last-of-type {
+  border-radius: 0 0.2em 0.2em 0; }
+
+.ic-btn-minus::before,
+.ic-btn-plus::before {
+	display: block;
+  font-family: 'icons';
+}
+
+.ic-btn-minus::before {
+  content: '\e949';
+}
+
+.ic-btn-plus::before {
+  content: '\e905';
+}

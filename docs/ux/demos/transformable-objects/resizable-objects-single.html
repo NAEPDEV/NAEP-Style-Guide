@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Resizable Objects - Single Direction</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      padding: 0.75em;
+    }
+
+    svg {
+      height: 10em;
+      width: 4em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 96 240">
+    <g class="bg-bar-graph-bars">
+      <rect class="bg-bar" width="94" height="120" x="1" y="119" />
+      <svg class="handle-size handle-size-vertical" width="54" height="54" x="21" y="92" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="handle-size-actual" cx="27" cy="27" r="9" />
+        <circle class="handle-size-actual handle-size-drag" cx="27" cy="27" r="12" />
+      </svg>
+    </g>
+  </svg>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../lib/jquery-ui.min.js"></script>
+  <script src="../lib/jquery.ui.rotatable.min.js"></script>
+  <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../transformable-objects/transformable-objects.js"></script>
+  <script src="../response-type-bar-graph/response-type-bar-graph.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

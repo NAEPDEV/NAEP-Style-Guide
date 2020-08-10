@@ -1,0 +1,243 @@
+/**
+* @stylesheet wizards.css Wizards
+* @parent ux.instruction
+* Wizards can be used to present information to test takers in a linear series of steps.
+*
+* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/wizards/wizard-full.html" target="_blank">here</a>._
+* @iframe ux/demos/wizards/wizard.html 480
+**/
+
+/**
+* @styles 0-wizard-presentation Presentation
+* A wizard appears over a white `#FFFFFF` backdrop that takes up the full height and width of the content area. The wizard itself is white `#FFFFFF` and has a drop shadow.
+*
+* The default width of a wizard is 75 characters, and the default height is 29x the base font size (see the [typography.css] page for more information). Wizard size can be increased dynamically when needed to accommodate larger content.
+*
+* Wizard content can be presented in one or two columns.
+**/
+.wizard-backdrop {
+	background: #fff;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	font-family: 'Calibri', sans-serif;
+	font-size: 22px;
+	left: 0;
+	line-height: 1.25;
+	opacity: 1;
+	overflow: auto;
+	padding: 1em;
+	position: fixed;
+	right: 0;
+	top: 60px;
+	transition: background 0.2s, opacity 0.5s;
+	visibility: visible;
+	z-index: 600; }
+.wizard-backdrop.wizard-hidden {
+	opacity: 0;
+	pointer-events: none;
+	transition: background 0.2s, opacity 0.5s, visibility 0.5s;
+	visibility: hidden; }
+
+.wizard {
+	background: #fff;
+	border-radius: 0.15em;
+	box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.4), 0 0.1em 0.5em 0 rgba(0, 0, 0, 0.4);
+	color: #333;
+	height: 29em;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	transform: none;
+	transition: background 0.2s, border 0.2s, box-shadow 0.2s, transform 0.4s ease, height 0.3s, width 0.3s;
+	width: 75ch; }
+.wizard-backdrop.wizard-hidden .wizard {
+	transform: scale(0.7); }
+.wizard.large {
+	height: 37em;
+	width: 100ch; }
+
+.wizard-content {
+	counter-reset: wizard;
+	height: calc(100% - 3.65em);
+	overflow: auto;
+	padding: 2em 2em 0;
+	position: absolute;
+	transform: translateX(100%);
+	transition: transform 0.4s;
+	width: 100%; }
+.wizard-content.wizard-active {
+	transform: none; }
+.wizard-content.wizard-viewed {
+	transform: translateX(-100%); }
+
+.wizard-content-inner {
+	font-size: 0.9167rem; }
+.wizard-content.wizard-multi-column .wizard-content-inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; }
+
+.wizard-col {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 0.5em;
+	min-width: 15em;
+	width: 43%; }
+
+.wizard-col-span {
+	align-items: center;
+	display: flex;
+	width: 100%;
+}
+
+/**
+* @styles 2-wizard-Typography Typography
+* Typical text in wizards is ~92% eNAEP's default font size. (See the [typography.css] page for more information.)
+*
+* Each card has a key title or direction that is blue `#2A69A7` and 1.67x the base wizard font size to ensure it is high in the visual hierarchy.
+*
+* When a card has multiple sub-steps, each step is preceded with a blue `#2A69A7` number 1.5x the base wizard font size.
+**/
+.wizard h3 {
+	border: 0.083rem solid transparent;
+	color: #2a69a7;
+	font-size: 1.667em;
+	font-weight: 400;
+	margin: 0 0 0.25em 0;
+	transition: border 0.2s;
+	width: 100%; }
+
+.wizard p {
+	border: 0.083rem solid transparent;
+	display: inline-block;
+	margin: 0;
+	max-width: 60ch;
+ 	transition: border 0.2s; }
+.wizard p.wizard-margin-bottom {
+	margin-bottom: 0.25em; }
+
+.wizard p.wizard-counter {
+	display: inline-flex;
+}
+
+.wizard-counter::before {
+	color: #2a69a7;
+	content: counter(wizard);
+	counter-increment: wizard;
+	font-size: 1.636em;
+	margin-right: 0.5em;
+}
+
+.wizard .alert {
+	margin: 0 0 1.5em;
+	padding: 0; }
+.wizard .alert.alert-no-margin {
+	margin: 0; }
+
+.wizard-content .tts-active {
+	visibility: hidden; }
+.wizard-content.wizard-active .tts-active {
+	visibility: visible; }
+
+
+/*----------------------------------------------------
+WIZARD IMAGES
+----------------------------------------------------*/
+.wizard-img {
+	display: block;
+	height: 15em;
+	margin: 2em auto 0;
+	max-width: 100%;
+	width: 15em;
+}
+
+.wizard-img-inline {
+	display: block;
+	margin: 2em 0.5em;
+  max-width: calc(100% - 1em);
+	width: 25em; }
+.wizard-col .wizard-img-inline {
+	width: 15em; }
+
+.wizard .icon-raise-hand {
+	align-items: center;
+	background: #cce5ff;
+	border-radius: 50%;
+	color: #555;
+	display: flex;
+	height: 15em;
+	justify-content: center;
+	margin: 2em auto 0;
+	transition: background 0.2s, color 0.2s;
+  width: 15em;
+}
+
+.wizard .icon-raise-hand::before {
+	font-size: 8em;
+	margin-left: 0.057em;
+}
+
+
+/**
+* @styles 1-wizard-nav Navigation
+* Wizards have their own navigational system composed of:
+* * A series of screens, or _cards_
+* * Navigation buttons (__Back__ and __Next__)
+* * A series of dots indicating the test taker’s current position in the wizard
+*
+* ### Cards
+* A card is provided for each major step in a wizard. When the test taker selects one of the wizard navigation buttons (see below), one of two card transitions can occur.
+* * If the transition is between two cards of the same size, the current card slides out of view, and the new card slides in.
+* * If the transition is between two cards of different sizes, the current card fades out, the wizard resizes, and then the new card fades in.
+*
+* ### Navigation Buttons
+* The wizard __Next__ and __Back__ buttons appear, respectively, at the bottom right and bottom left corners of the wizard. The buttons are styled similarly to the [system-toolbar.css] navigational buttons, except that the wizard __Next__ button label is smaller and the button background is a more saturated blue `#0068D1`.
+*
+* On the first card in the wizard, the __Back__ button is hidden. On the last card in the wizard, the __Next__ button’s label changes to indicate what will happen when the test taker closes the wizard (e.g., “Start the task”).
+*
+* ### Navigation Dots
+* The navigation dot array is horizontally centered at the bottom of the wizard. One navigation dot appears for each card in the wizard. Dots have the following states.
+* * _Default_. Dot is gray `#949494`.
+* * _Active_. Visible when the card associated with the dot is on screen. Dot darkens.
+**/
+.wizard-nav-wrapper {
+	bottom: 0;
+	display: flex;
+	font-size: 20px;
+	justify-content: space-between;
+	padding: 1.5em 1.8em 1em;
+	position: absolute;
+	width: 100%;
+}
+
+.wizard-nav-array {
+	align-items: center;
+	bottom: 1.85em;
+	display: flex;
+	font-size: 20px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+}
+
+.wizard-nav-dot {
+	background: #949494;
+	border-radius: 50%;
+	height: 0.35em;
+	margin: 0.35em;
+	transition: background 0.2s;
+	width: 0.35em; }
+.wizard-nav-dot.wizard-active {
+	background: #484848; }
+
+
+/**
+* @styles 3-wizard-tools Tool Interactions
+* Wizards generally interact as expected with the eNAEP system tools, with the following exceptions:
+* * _Zoom_: Unlike other content, which zooms isometrically, wizard content reflows within the wizard as it increases in size. When content exceeds the height of the wizard, a vertical scrollbar appears at the right side of the wizard.
+* * _Scratchwork_. Since the scratchwork tool relies on isometric zoom to function, scratchwork is disabled on wizards.
+* * _System Navigation Buttons_. The __Back__ and __Next__ buttons in the [system-toolbar.css] are disabled while a wizard is on screen since the wizard has its own navigational system.
+**/

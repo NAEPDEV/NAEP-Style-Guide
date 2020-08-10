@@ -1,0 +1,135 @@
+/**
+* @stylesheet response-type-inline-choice.css Inline-choice
+* @parent ux.response-types
+*
+* The inline-choice response type allows test takers to respond to an item by selecting options from a dropdown list. Menu options can include images, MathML, or styled (italic, bold, underlined) text.
+*
+* Layout details:
+* * Each dropdown menu is as wide as its widest value.
+* * The baseline of the selected option is the same as that of the surrounding line of text.
+*
+* A __Clear Answer__ button is provided at the bottom left of the response area. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).
+**/
+
+/**
+* @styles 0-ic-buttons Dropdown Buttons
+* Inline-choice dropdown menu buttons have the following states.
+* * _Default_. Button has a thin gray `#595959` border, rounded corners, and a gray `#595959` caret at its right side. The button contains no text.
+* * _Selected_. Visible when an option has been selected from the dropdown menu. The button is populated with the content of the selected option.
+* * _Hover_. Visible when the cursor is over the button. Border color and caret color are darkened, and a drop shadow is added. The `pointer` icon is shown.
+* * _Disabled_. Border color and caret are dimmed to indicate that the dropdown is inactive, but selected content, if present, remains at default color.
+**/
+
+.inline-choice {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 0 0.14em 0.14em 0.14em;
+  position: relative;
+  vertical-align: middle; }
+.inline-choice[disabled] {
+  pointer-events: none; }
+
+.inline-choice > span {
+  background: #fff;
+  border: 0.05em solid #595959;
+  border-radius: 0.15em;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1.5em;
+  min-width: 5.2em;
+  outline: none;
+  padding: 0.14em 1.25em 0.1em 0.3em;
+  position: relative;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s; }
+.inline-choice > span:hover {
+  border-color: #222;
+  box-shadow: 0 0.06em 0.06em rgba(0, 0, 0, .25); }
+.inline-choice.active > span {
+  border-color: #222;
+  transition: none; }
+.inline-choice > span[disabled] {
+  border-color: #aaa;
+  z-index: 4; }
+
+.inline-choice > span:after {
+  border-color: #595959 transparent;
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0.25em;
+  content: "";
+  height: 0;
+  margin-top: -0.12em;
+  position: absolute;
+  right: 0.37em;
+  top: 50%;
+  transition: border 0.2s;
+  width: 0; }
+.inline-choice > span:hover::after,
+.inline-choice.active > span:after {
+  border-color: #000 transparent; }
+.inline-choice > span[disabled]::after {
+  border-color: #aaa transparent; }
+
+/**
+* @styles 1-ic-menus Dropdown Menus
+* An inline-choice dropdown menu opens when the test taker selects the associated button. The menu closes when the test taker selects the button again, selects a menu option, or taps or clicks elsewhere on the screen. The menu animates down when opened but disappears immediately when closed.
+*
+* When the menu would be cut off by the bottom of the browser window, it opens above the associated button rather than below.
+*
+* When the associated button becomes disabled, the menu automatically closes.
+*
+* Only one dropdown menu may be open at a time.
+**/
+
+/**
+* @styles 2-ic-options Dropdown Options
+* Inline-choice dropdown options have the following states.
+* * _Unselected_. This is the default state.
+* * _Selected_. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue `#D6EBFF`.
+* * _Hover_. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white `#FFFFFF`, and background changes to medium blue `#0068D1`. The `pointer` cursor is shown. Hover state overrides selected state.
+*
+* _Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the [tts.css] page for a description of TTS behavior._
+* @iframe ux/demos/response-type-inline-choice/response-type-inline-choice.html 400
+**/
+
+.inline-choice ul {
+  background: #fff;
+  border: 0.05em solid #476CA9;
+  border-bottom: none;
+  border-top: none;
+  border-radius: 0 0 0.15em 0.15em;
+  left: 0.08em;
+  list-style: none;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  /*right: 0.08em;*/
+  top: 100%;
+  transition: max-height 0.2s;
+  z-index: 2; }
+.inline-choice.active ul {
+  border: 0.05em solid #476CA9;
+  box-shadow: 0 0.02em 0.2em rgba(0, 0, 0, .35);
+  max-height: 400px;
+  opacity: 1; }
+.inline-choice.drop-up ul {
+  border-radius: 0.15em 0.15em 0 0;
+  bottom: 100%;
+  top: initial; }
+
+.inline-choice li {
+  cursor: pointer;
+  display: block;
+  min-height: 1.58em;
+  padding: 0.25em 1.25em 0.25em 0.25em;
+  text-decoration: none; }
+.inline-choice li:hover,
+.inline-choice li:focus,
+.inline-choice li.selected:hover,
+.inline-choice li.selected:focus {
+  background: #0068D1;
+  color: #fff; }
+.inline-choice li.selected {
+  background: #D6EBFF; }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Draggable Points and Lines</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0.75em;
+    }
+
+    #svg1 {
+      display: block;
+      height: 2.25em;
+      width: 8.25em;
+    }
+
+    #svg2 {
+      display: block;
+      height: 6.75em;
+      width: 8.25em;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      padding-top: 0.5rem
+    }
+  </style>
+</head>
+
+<body>
+
+  <figure>
+    <svg id="svg1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 198 54">
+      <g class="line" tabindex="0">
+        <line class="line-target" x1="27" y1="27" x2="171" y2="27" />
+        <line class="line-actual" x1="27" y1="27" x2="171" y2="27" />
+      </g>
+      <svg class="point" width="54" height="54" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="point-actual" cx="27" cy="27" r="9" />
+      </svg>
+      <svg class="point" width="54" height="54" x="144" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="point-actual" cx="27" cy="27" r="9" />
+      </svg>
+    </svg>
+    <figcaption>Line Segment</figcaption>
+  </figure>
+
+  <figure>
+    <svg id="svg2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 198 162">
+      <g class="line polygon" tabindex="0">
+        <polygon class="polygon-actual" points="27 27 171 27 99 135" />
+      </g>
+      <svg class="point" width="54" height="54" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="point-actual" cx="27" cy="27" r="9" />
+      </svg>
+      <svg class="point" width="54" height="54" x="144" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="point-actual" cx="27" cy="27" r="9" />
+      </svg>
+      <svg class="point" width="54" height="54" x="72" y="108" tabindex="0">
+        <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+        <circle class="point-actual" cx="27" cy="27" r="9" />
+      </svg>
+    </svg>
+    <figcaption>Polygon</figcaption>
+  </figure>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../points-lines-polygons/points-lines-polygons.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

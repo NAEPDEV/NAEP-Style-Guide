@@ -1,0 +1,104 @@
+/**
+* @stylesheet calls-to-action.css Calls to Action
+* @parent ux.sbts
+* To reinforce what test takers are expected to do, a call to action—to select either the __Next__ button or the __Submit__ button—is present on every SBT screen.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/calls-to-action/next-full.html" target="_blank">here</a>._
+* @iframe ux/demos/calls-to-action/next.html 400
+**/
+
+/**
+* @styles 0-cta-language Language
+* When test takers must select the __Submit__ button to continue, the following message appears on screen in most cases: “Tap __Submit__ when you are finished.”
+*
+* When test takers must select the __Next__ button to continue, one of two messages appears in most cases.
+* * If there is a response component on screen: “Tap the __Next__ arrow when you are finished.”
+* * If there is _no_ response component on screen: “Tap the __Next__ arrow to continue.”
+*
+* Some contexts may warrant variations in language (e.g., “Tap __Submit__ to finish the experiment”). However, the core instruction—either “Tap the __Next__ arrow...” or “Tap __Submit__...”—must always be present.
+**/
+
+/**
+* @styles 1-cta-style Style & Layout
+* The message for __Next__ buttons appears in one of two locations, depending on the screen’s content.
+* * If there is at least one response component on screen, the message is positioned below the last component, or proximally if there isn’t sufficient space below. Ideally, there is a margin 2x the base font size between the response component and the call to action. (Shown in the demo below.) However, a smaller margin may be used if necessitated by layout constraints.
+* * If there is _no_ response component on screen, the message  appears at the lower-right corner of the content pane in which it resides. (The [intro-exit-screens.css] demo shows an example.)
+*
+* The message for __Submit__ buttons appears to the left of its associated button. Both message and button are positioned below the last response component on the screen. Ideally, there is a margin 2x the base font size between the response component and the call to action. However, a smaller margin may be used if necessitated by layout constraints.
+*
+* Calls to action are the same font size as item text, but are at a lower font weight to maintain the importance of item text in the visual hierarchy.
+*
+* When placed on a solid fill, calls to action have no background. When placed on an image, calls to action may have one of two styling options applied to ensure readability:
+* * _Default_. Black `#000000` text on a 90% opaque white&#160;`rgba(255,255,255,0.9)` background.
+* * _Inverted_. White `#FFFFFF` text on a 65% opaque black&#160;`rgba(0,0,0,0.65)` background.
+*
+* The example below shows an inverted call to action. Additional examples can be seen on the [intro-exit-screens.css] page.
+* @iframe ux/demos/calls-to-action/image-background.html 437
+**/
+
+/**
+* @styles 2-cta-behavior Behavior
+* ### Submit Buttons
+* The __Submit__ button finalizes the test taker’s responses to one or more items. Test takers are not allowed to change their answers after submitting them. The __Submit__ button only becomes active when the completion requirements for the current screen, as specified by assessment specialists, are met (e.g., all parts of the current item have been answered).
+*
+* When the first __Submit__ button in an SBT is selected, a modal dialog appears to inform test takers that they cannot go back after submitting. (See the [dialogs.css] page for more information about dialog styling.) Dialog content is below. Note that the dialog uses the singular “answer” when there is one response component on screen and the plural “answers” when there is more than one response component.
+* > Before you submit, please make sure your answer is final.
+* >
+* > You cannot go back after you submit your answer.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/calls-to-action/submit-full.html" target="_blank">here</a>._
+* @iframe ux/demos/calls-to-action/submit.html 400
+*
+*
+* ### Messages
+* The text of calls to action is interactive:
+* * Selecting “Tap the __Next__ arrow when you are finished” will emulate tapping the __Next__ button in the [system-toolbar.css], unless TTS is enabled, in which case the text of the CTA will be read aloud.
+* * Selecting “Tap __Submit__ when you are finished” will emulate tapping the associated __Submit__ button, unless TTS is enabled, in which case the text of the CTA will be read aloud.
+*
+* ### Interaction with Navigation Controls
+* The navigation buttons in the [system-toolbar.css] interact with calls to action in the following ways.
+* * The __Next__ button is disabled when the Submit button is on screen.
+* * When a response component is on screen, but there is no __Submit__ button, the __Next__ button is disabled until the completion requirements have been met.
+* * The __Back__ button is disabled on any screen immediately following a screen with a __Submit__ button.
+* * Both __Back__ and __Next__ buttons are disabled when the submit dialog is on screen.
+**/
+
+.cta-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2em;
+  padding: 0;
+  width: 100%; }
+.cta-wrapper.cta-bottom-right {
+  bottom: 1em;
+  display: inline-flex;
+  margin: 0;
+  position: absolute;
+  right: 1.25em;
+  width: auto; }
+
+.cta-message {
+  background: none;
+  border: 0.083em solid transparent;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 300;
+  margin: 0 0.2em;
+  opacity: 1;
+  padding: 0.2em;
+  text-align: right;
+  transition: background 0.2s, border 0.2s;
+  user-select: none; }
+.cta-message:last-child {
+  margin: 0; }
+.cta-message[disabled] {
+  pointer-events: none; }
+.cta-wrapper-bg .cta-message {
+  background: #fff;
+  background: rgba(255,255,255,0.9); }
+.cta-wrapper-bg.inverted .cta-message {
+  background: rgba(0,0,0,0.65);
+  color: #fff; }

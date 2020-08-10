@@ -1,0 +1,82 @@
+/**
+* @stylesheet response-type-line-point-graph.css Line & Point Graph
+* @parent ux.response-types
+* The Line & Point Graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-line-point-graph/response-type-line-point-graph.html 700
+**/
+
+/**
+* @styles 0-lpg-grid Grid
+* The primary interactions for Line & Point Graph responses occur in a coordinate grid (see the [coordinate-grids.css] page). Test takers may add various kinds of objects—points, lines, or line segments—depending on the measurement goals of the item. All objects have the same states and behaviors as interactive points and lines (see the [points-lines-polygons.css] page), though they have different colors and point shapes to maximize visibility for color-blind test takers:
+* * The first object type is green `#008A05` and has triangular points.
+* * The second object type (if present) is blue `#0855B2` and has circular points.
+* * The third object type (if present) is purple `#50008A` and has diamond points.
+* * The fourth object type (if present) is orange `#C35500` and has square points.
+*
+* A label for each object type is also provided on the grid to further differentiate types. Label colors match those of their associated objects. Labels have a white `#FFFFFF` halo to ensure legibility.
+*
+* When there is more than one object type, the default disabled state is modified to maximize the differentiation between types: the first one to two types are a lighter gray `#949494`, while the last one to two types are a darker gray `#484848`.
+**/
+
+/**
+* @styles 1-lpg-controls Controls
+*
+*
+* Line & Point Graph responses have three sets of controls.
+*
+* A segmented control (see the [segmented-controls.css] page) is placed to the left of the coordinate grid. Test takers use it to select an object type. Each object is indicated by an icon matching its point shape and an optional text label.
+*
+* An __Object Delete__ button (see the [points-lines-polygons.css] page) is right-justified beneath the segmented control.
+*
+* __Undo__ and __Reset__ buttons are right-justified beneath the coordinate grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the grid.
+* * The __Reset__ button restores the grid to its initial state.
+**/
+
+.response-area-lpg .control-group-wrapper {
+  margin: 1.792em 1.083em 0 0;
+}
+
+.response-area-lpg .btn-point-delete {
+  margin: 0 0 0 auto;
+}
+
+.lp-object-labels {
+  pointer-events: none;
+}
+
+.lp-point {
+  fill: #008a05; }
+.lp-point[disabled],
+input[type="radio"][disabled] + label .lp-point {
+  fill: #949494; }
+
+.lp-line {
+  fill: #0855b2; }
+.lp-line-icon {
+  fill: #0A78BA; }
+.lp-line[disabled],
+input[type="radio"][disabled] + label .lp-line-icon {
+  fill: #949494; }
+
+.lp-multi-point {
+  fill: #50008A; }
+.lp-multi-point[disabled],
+.lp-multi-point .point[disabled] .point-actual,
+input[type="radio"][disabled] + label .lp-multi-point {
+    fill: #484848; }
+
+.lp-segment .line-actual {
+  stroke: #c35500; }
+.lp-segment .line[disabled] .line-actual {
+  stroke: #484848; }
+
+.lp-segment,
+.lp-segment .point-actual {
+  fill: #c35500; }
+.lp-segment[disabled],
+.lp-segment .point[disabled] .point-actual,
+input[type="radio"][disabled] + label .lp-segment {
+  fill: #484848; }

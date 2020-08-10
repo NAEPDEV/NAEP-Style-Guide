@@ -1,0 +1,47 @@
+#main-content {
+    .toc { //or sitemap or quicklinks
+        list-style: none;
+        display: flex;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -.5em;
+
+        div {
+            //flex: 1;
+            //margin: 0 auto;
+            width: 100%;
+
+            @media screen and (min-width: @phonePortraitUp) {
+                width: unset;
+            }
+
+            li {
+                list-style: none;
+                padding: 0;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            > li.heading.search-container {
+
+
+                span {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                > ul {
+                    display: block;
+                    line-height: 1.75;
+
+                    > li.search-container {
+                    }
+                }
+            }
+        }
+    }
+}

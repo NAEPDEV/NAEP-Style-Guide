@@ -1,0 +1,82 @@
+/**
+* @stylesheet checkboxes-and-radios.css Checkboxes & Radios
+* @parent ux.ui-elements
+* Checkboxes and radios are used to indicate selections (e.g., in the [response-type-mc.css] response type).
+* @iframe ux/demos/checkboxes-and-radios/checkboxes-and-radios.html 430
+**/
+
+/**
+* @styles 0-controls-shared Shared Presentation
+* Both checkboxes and radios are typically black `#000000` and receive the `pointer` cursor in the default state and the `default` cursor in the disabled state.
+**/
+
+/**
+* @styles 1-controls-checkboxes Checkboxes
+* Checkboxes allow test takers to toggle individual options on and off; multiple checkboxes in a set can be checked at the same time. Checkboxes have the following states.
+* * _Unchecked_. Checkbox displays as the `checkbox-unselected` icon.
+* * _Checked_. Checkbox displays as the `checkbox-selected` icon. Check is white `#FFFFFF`.
+* * _Disabled_. Checkbox becomes 30% opaque.
+*
+**/
+
+/**
+* @styles 2-controls-radios Radios
+* Radios allow test takers to select one option from a set; only one radio in a set can be checked at a time. Radios have the following states.
+* * _Unchecked_. Radio displays as the `radio-unselected` icon.
+* * _Checked_. Radio displays as the `radio-selected` icon.
+* * _Disabled_. Radio becomes 30% opaque.
+**/
+
+
+.control {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.control input {
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.control input + span {
+  border-radius: 50%;
+  cursor: pointer;
+  display: block;
+  font-family: 'icons';
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+  transition: background 0.2s;
+  z-index: 4; }
+.control input[type="checkbox"] + span {
+  border-radius: 0.25em; }
+.control input[type="checkbox"]:checked + span {
+  background: #fff; }
+.control input[disabled] + span {
+  color: #b2b2b2;
+  color: rgba(0,0,0,.3);
+  pointer-events: none; }
+html.sbt .control input + span {
+  font-size: 1.091rem; }
+
+.control input[type="checkbox"] + span::before {
+  content: '\e902'; }
+.control input[type="checkbox"]:checked + span::before {
+  content: '\e903'; }
+
+.control input[type="radio"] + span::before {
+  content: '\e900'; }
+.control input[type="radio"]:checked + span::before {
+  content: '\e901'; }
+
+.control input + span + span {
+  cursor: pointer;
+  margin-left: 0.667em; }
+.control input[disabled] + span + span {
+  pointer-events: none; }

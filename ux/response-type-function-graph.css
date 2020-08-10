@@ -1,0 +1,91 @@
+/**
+* @stylesheet response-type-function-graph.css Function Graph
+* @parent ux.response-types
+* The Function Graph response type allows test takers to respond to an item by first selecting a function type and then manipulating the graph of the function so that it represents a given context.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-function-graph/response-type-function-graph.html 700
+**/
+
+/**
+* @styles 0-bfl-grid Grid
+* The primary interactions for Function Graph responses occur in a coordinate grid (see the [coordinate-grids.css] page). Function graphs appear on the grid as interactive points and lines (see the [points-lines-polygons.css] page), which test takers can manipulate.
+*
+* For exponential functions, an interactive asymptote is provided. The asymptote is a dashed green `#00B006` line with a drag handle. The handle has a white `#FFFFFF` background, a border, and up and down chevrons. The border and chevrons are the same green as the asymptote line. The `ns-resize` cursor is shown over the asymptote to indicate it can be dragged. When the test taker begins to drag the asymptote, the handle immediately jumps to the cursor position, which allows the test taker to move it out of the way of any nearby points.
+**/
+
+/**
+* @styles 1-bfl-controls Controls
+*
+*
+* Function Graph responses have two sets of controls.
+* * A segmented control (see the [segmented-controls.css] page), which test takers use to select a function type. The control is placed to the left of the coordinate grid.
+* * __Undo__ and __Reset__ buttons, which are right-justified beneath the grid. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+*   * The __Undo__ button reverts the last change to the grid.
+*   * The __Reset__ button restores the grid to its initial state.
+**/
+.response-area-bfl .control-group-wrapper {
+  margin: 1.792em 1.083em 0 0;
+}
+
+.asymptote-handle {
+  cursor: ns-resize;
+  outline: none;
+  user-select: none; }
+.asymptote-handle[disabled] {
+  pointer-events: none; }
+
+.asymptote-handle-actual {
+  fill: #fff;
+  stroke: #00b006;
+  stroke-width: 3px;
+  transition: fill 0.2s, stroke 0.2s; }
+.asymptote-handle:active .asymptote-handle-actual,
+.asymptote-handle.active .asymptote-handle-actual,
+.asymptote.focus-tabbed:focus + .asymptote-handle .asymptote-handle-actual {
+  transform: scale(1.2);
+  transform-origin: center; }
+.asymptote-handle[disabled] .asymptote-handle-actual {
+  stroke: #949494;  }
+
+.asymptote-chevron {
+  fill: #00b006;
+  transition: fill 0.2s; }
+.asymptote-handle:active .asymptote-chevron,
+.asymptote-handle.active .asymptote-chevron,
+.asymptote.focus-tabbed:focus + .asymptote-handle .asymptote-chevron {
+  transform: scale(1.2);
+  transform-origin: center; }
+.asymptote-handle[disabled] .asymptote-chevron {
+  fill: #949494; }
+
+.asymptote {
+  cursor: ns-resize;
+  outline: none;
+  user-select: none; }
+.asymptote[disabled] {
+  pointer-events: none; }
+
+.asymptote-target {
+  stroke: transparent;
+  stroke-width: 18;
+}
+
+.asymptote-actual {
+  stroke: #00b006;
+  stroke-dasharray: 10,16;
+  stroke-linecap: round;
+  stroke-width: 6;
+  transition: stroke 0.2s; }
+.asymptote:active .asymptote-actual,
+.asymptote.active .asymptote-actual,
+.asymptote.focus-tabbed:focus .asymptote-actual {
+  stroke-width: 8; }
+.asymptote[disabled] .asymptote-actual {
+  stroke: #949494; }
+
+.response-area-bfl .point[disabled] .point-actual {
+  fill: #484848; }
+
+.response-area-bfl .line[disabled] .line-actual {
+  stroke: #484848; }

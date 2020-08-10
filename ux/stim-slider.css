@@ -1,0 +1,256 @@
+/**
+* @stylesheet stim-slider.css Slider
+* @parent ux.stimuli
+* The slider stimulus allows test takers to view a series of related images (e.g., an interactive timeline map) by using a slider to switch between images.
+* @iframe ux/demos/stim-slider/stim-slider.html 630
+**/
+
+.slider-wrapper {
+  background: #fff;
+  margin-bottom: 2.22em;
+  max-width: 30em;
+  position: relative;
+  transition: background 0.2s;
+  width: 100%;
+  z-index: 4;
+}
+
+.slider-img {
+  margin: 0 15%;
+  width: 70%; }
+.slider-img.hidden {
+  display: none; }
+
+.slider-ui {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+* @styles 0-slider-track Slider Track
+* The slider track is light gray `#F2F2F2` with a dark gray `#BFBFBF` border and rounded ends.
+*
+* When the test taker taps or clicks the slider track, the slider thumb snaps to the snappable tick mark closest to the position of the click/tap.
+**/
+
+.slider {
+  -moz-appearance: none;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: none;
+  display: block;
+  font-size: inherit;
+  height: 0.583em;
+  margin: 0.5em auto 0;
+  outline: 0;
+  width: calc(90% + 2.167em);
+  z-index: 1; }
+.slider[disabled] {
+  pointer-events: none; }
+
+.slider::-ms-track {
+  border-color: transparent;
+  color: transparent;
+  width: calc(90% + 2.167em);
+}
+
+.slider::-webkit-slider-runnable-track {
+  background: #F2F2F2;
+  border: 0.0417em solid #949494;
+  border-radius: 1em;
+  height: 0.583em;
+  transition: background 0.2s, border 0.2s;  }
+.slider::-moz-range-track {
+  background: #F2F2F2;
+  border: 0.0417em solid #949494;
+  border-radius: 1em;
+  height: 0.583em;
+  transition: background 0.2s, border 0.2s; }
+.slider::-ms-track {
+  background: #F2F2F2;
+  border: 0.0417em solid #949494;
+  border-radius: 1em;
+  height: 0.583em;
+  transition: background 0.2s, border 0.2s; }
+
+
+/**
+* @styles 1-slider-thumb Slider Thumb
+* The slider thumb has the following states.
+* * _Enabled_. The default state. The thumb is a blue `#0084FF` circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.
+* * _Hover_. Visible when the cursor is over the thumb. A gray `#575757` outline with 70% opacity appears around the thumb. The `ew-resize` cursor is displayed.
+* * _Active_. Visible when the test taker presses down on the thumb. The thumb scales to 120% its default size.
+* * _Disabled_. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray `#949494`.
+*
+* While being dragged, the thumb tracks the cursor position to avoid the appearance that it is non-functional in cases where snappable tick marks are spaced far apart. As the thumb is dragged across a snappable tick mark, the slider image changes to the corresponding state. If the thumb is not released on top of a snappable tick mark, it snaps to the closest mark.
+**/
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #0084FF;
+  background-clip: content-box;
+  border: none;
+  border-radius: 50%;
+  cursor: ew-resize;
+  height: 2.083em;
+  padding: 0.5em;
+  position: relative;
+  top: -0.792em;
+  transition: background 0.2s;
+  width: 2.083em;
+  z-index: 4; }
+.slider::-moz-range-thumb {
+  -moz-appearance: none;
+  background: #0084FF;
+  background-clip: content-box;
+  border: none;
+  border-radius: 50%;
+  cursor: ew-resize;
+  height: 1.083em;
+  padding: 0.5em;
+  position: relative;
+  top: -0.792em;
+  transition: background 0.2s;
+  width: 2.083em;
+  z-index: 4; }
+.slider::-ms-thumb {
+  background: #0084FF;
+  background-clip: content-box;
+  border: none;
+  border-radius: 50%;
+  cursor: ew-resize;
+  height: 2.083em;
+  padding: 0.5em;
+  position: relative;
+  top: -0.792em;
+  transition: background 0.2s;
+  width: 2.083em;
+  z-index: 4; }
+
+html.can-touch .slider::-webkit-slider-thumb:hover {
+  box-shadow: none; }
+html.can-touch .slider::-moz-range-thumb:hover {
+  box-shadow: none; }
+html.can-touch .slider::-ms-thumb:hover {
+  box-shadow: none; }
+
+.slider::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 0 0.042em #949494; }
+.slider::-moz-range-thumb:hover {
+  box-shadow: 0 0 0 0.083em #949494; }
+.slider::-ms-thumb:hover {
+  box-shadow: 0 0 0 0.042em #949494; }
+
+.slider:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.417em; }
+.slider:active::-moz-range-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.667em; }
+.slider:active::-ms-thumb {
+  box-shadow: 0 0 0 0.042em #949494;
+  padding: 0.417em; }
+
+.slider[disabled]::-webkit-slider-thumb {
+  background-color: #949494; }
+.slider[disabled]::-moz-range-thumb {
+  background-color: #949494; }
+.slider[disabled]::-ms-thumb {
+  background-color: #949494; }
+
+/**
+* @styles 2-slider-ticks Slider Tick Marks
+* ### Static Tick Marks
+* Static tick marks are used to indicate a significant point on the track that does not have an image associated with it. (For example, in an interactive timeline map, there may be a date that is of interest even though the map does not change at that date.)
+*
+* Static tick marks are gray `#BFBFBF`, are 2px wide, and extend below the bottom of the slider track.
+*
+* ### Snappable Tick Marks
+* Snappable tick marks cause the slider image to change when the thumb snaps to or passes over them. In addition to a line extending below the slider track, snappable tick marks have a dot inside the slider track.
+*
+* Snappable tick marks have the following states.
+* * _Default_. The dot and line are both gray (`#949494` and `#BFBFBF`, respectively).
+* * _Active_. Visible when the slider thumb is being dragged. The dot darkens.
+* * _Selected_. Visible when the slider thumb would snap to the tick mark if released. The dot enlarges and becomes blue `#0084FF`, and the line darkens.
+* * _Disabled_. Visible when the tick mark is inactive (e.g., when a modal system tool like Scratchwork is enabled). The dot disappears, but the line remains visible.
+**/
+
+.slider-dots {
+  display: flex;
+  height: 0.583em;
+  margin: 0 5%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 90%;
+  z-index: 1;
+}
+
+.slider-dot,
+.slider-label-tick {
+  flex: 1 100%;
+  position: relative;
+}
+
+.slider-dot::before,
+.slider[disabled] ~ .slider-dots .slider-dot::before,
+.slider[disabled] ~ .slider-dots .slider-dot.enabled.closest::before {
+  background: transparent;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 0.25em;
+  position: absolute;
+  right: -0.125em;
+  top: 0.167em;
+  transition: background 0.2s, transform 0.2s;
+  width: 0.25em; }
+.slider-dot.enabled::before {
+  background: #949494; }
+.slider:active ~ .slider-dots .slider-dot::before {
+  background: #555; }
+.slider-dots .slider-dot.enabled.closest::before {
+  background: #0084FF;
+  transform: scale(1.5); }
+
+.slider-dot:first-of-type,
+.slider-label-tick:last-of-type {
+  flex: 0;
+  width: 0;
+}
+
+.slider-labels {
+  display: flex;
+  height: 0.583em;
+  margin: 0 5% 1.11em 5%;
+  width: 90%;
+  z-index: 0;
+}
+
+.slider-label-tick:before {
+  border-left: 0.1em solid transparent;
+  content: '';
+  display: block;
+  height: 100%;
+  left: -0.0417em;
+  position: absolute; }
+.slider-label-tick.enabled:before {
+  border-color: #949494; }
+.slider-label-tick.active:before {
+  border-color: #333; }
+
+/**
+* @styles 3-slider-labels Slider Tick Labels
+* Every tick mark has a label, regardless of whether it is static or snappable. The label is centered below the mark.
+*
+* When a snappable tick mark is in the selected state, the associated label darkens and becomes bold.
+**/
+.slider-label-tick span {
+  color: #333;
+  min-width: 3em;
+  position: absolute;
+  text-align: center;
+  top: 110%;
+  transform: translateX(-50%); }
+.slider-label-tick.active span {
+  color: #000;
+  font-weight: bold; }

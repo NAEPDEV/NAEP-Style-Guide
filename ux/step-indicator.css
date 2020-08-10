@@ -1,0 +1,76 @@
+/**
+* @stylesheet step-indicator.css Step Indicator
+* @parent ux.ui-elements
+* A step indicator is used to convey the test taker’s position in a multi-step process broken out across multiple screens.
+*
+* On the first screen in the sequence, the indicator shows the total number of steps in the process, but only the label of the current screen is displayed. As the test taker moves through the process, the labels of screens prior to the current one remain visible.
+*
+* Steps in the indicator have the following states.
+* * _Unvisited_. Shown for steps whose screens are after the current screen in the sequence. The bottom border is gray `#AAAAAA`, and the label does not appear.
+* * _Current_. Shown for the step of the current screen. The bottom border is blue `#2978C6`, and the label is black `#000000`.
+* * _Visited_. Shown for steps whose screens are before the current screen in the sequence. The bottom border is light blue `#8CB3DB`, and the label is gray `#909090`.
+*
+* When non-linear navigation (i.e., moving through steps in any order) is allowed, selecting a step will navigate the test taker to the associated screen. In this case, the steps receive the `pointer` cursor. The demo below allows non-linear navigation.
+* @iframe ux/demos/step-indicator/step-indicator.html 250
+**/
+
+.step-indicator {
+  display: flex;
+  margin: 0 auto 2em auto;
+  max-width: 33.6em;
+  pointer-events: none; }
+.step-indicator.active {
+  pointer-events: auto; }
+
+.step-indicator input {
+  opacity: 0;
+  position: absolute;
+}
+
+.step-indicator label {
+  align-items: center;
+  border-bottom: 0.111em solid #aaa;
+  color: transparent;
+  cursor: pointer;
+  display: flex;
+  flex: 1 0 auto;
+  font-size: 0.75em;
+  font-weight: bold;
+  justify-content: center;
+  margin-right: 0.2em;
+  padding: 0.5em 0.5em 0.75em 0.5em;
+  position: relative;
+  transition: border 0.2s;
+  user-select: none;
+  z-index: 4; }
+.step-indicator label:last-of-type {
+  margin-right: 0; }
+.step-indicator input:checked + label {
+  border-bottom-color: #2978c6;
+  color: #222; }
+.step-indicator input.step-indicator-complete + label {
+  border-bottom-color: #8cb3db;
+  color: #909090; }
+.step-indicator input[disabled] + label {
+  pointer-events: none;
+  opacity: 0.5; }
+
+.step-indicator label::before {
+  background: #fff;
+  border: 0.111em solid #aaa;
+  border-radius: 50%;
+  bottom: -0.4445em;
+  box-sizing: border-box;
+  content: '';
+  display: block;
+  height: 0.778em;
+  left: calc(50% - 0.389em);
+  position: absolute;
+  transition: background 0.2s, border 0.2s;
+  width: 0.778em; }
+.step-indicator input:checked + label::before {
+  background: #2978c6;
+  border-color: #2978c6; }
+.step-indicator input.step-indicator-complete + label::before {
+  background: #8cb3db;
+  border-color: #8cb3db; }

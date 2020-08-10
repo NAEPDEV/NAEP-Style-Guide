@@ -1,0 +1,186 @@
+/**
+* @stylesheet environment-ereader.css eReader
+* @parent ux.environments
+* Blocks of discrete items in the reading assessment are presented in the eReader environment, which has two key features that differentiate it from the [environment-default.css] environment:
+* * The stimulus takes up the full width and height of the content area below the [system-toolbar.css].
+* * Items are presented in an item panel, accessed via the __Show Questions__ button.
+**/
+
+#mask {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: background 0.2s, opacity 0.3s 0s, visibility 0s 0s;
+   z-index: 1000; }
+#mask.hidden {
+  opacity: 0;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  visibility: hidden; }
+
+#questionsbutton-wrapper {
+  background: #e9e9e9;
+  border-bottom: 0.05em solid #888;
+  display: block;
+  flex: 0 0 auto;
+  font-size: 24px; /* Prevent zoom */
+  height: 2.88em;
+  position: relative;
+  transition: background 0.2s, border 0.2s;
+  width: 100%;
+}
+
+/**
+* @styles 0-ereader-show-questions-button Show Questions Button
+* The __Show Questions__ button appears immediately below the [system-toolbar.css] and is aligned to the right edge of the content area with a margin 3.85x the base font size (see the [typography.css] page for more information). The button is housed in the same area as the stimulus tabs (see below), which has a light gray `#E9E9E9` background to visually connect it to the toolbar above.
+*
+* The __Show Questions__ button has the following states.
+* * _Default_. Button has a drop shadow, rounded corners, a blue `#0076D2` background, and white `#FFFFFF` content. The `chevron-circle-down` icon appears on the left, and the label “Show Questions” appears on the right, left justified.
+* * _Panel Open_. Visible when the item panel is open. Icon rotates 180º, and button label changes to “Hide Questions.”
+* * _Hover_. Visible when the cursor is over the button. Background changes to a lighter blue `#008EFA`, and the drop shadow increases. The `pointer` cursor is shown.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Background color changes to light gray `#DDDDDD`, and content changes to dark gray `#888888`.
+**/
+
+#QuestionsButton {
+  background: #0076D2;
+  border: 0.1em solid transparent;
+  border-radius: 0.17em;
+  box-shadow: 0 0.08em 0.22em 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  height: 2.15em;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  right: 3.85em;
+  text-align: right;
+  top: 0.35em;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
+  user-select: none;
+  width: 6.15em;
+  z-index: 5000; }
+#QuestionsButton:hover {
+  background: #008efa;
+  box-shadow: 0 0.11em 0.42em 0 rgba(0, 0, 0, 0.3); }
+html.can-touch #QuestionsButton:hover {
+  background: #0076D2;
+  box-shadow: 0 0.08em 0.22em 0 rgba(0, 0, 0, 0.3); }
+#QuestionsButton[disabled] {
+  background: #ddd;
+  color: #888;
+  pointer-events: none; }
+
+#QuestionsButton::before {
+  content: '\e908';
+  display: inline-block;
+  font-family: 'icons';
+  font-size: 1.2em;
+  margin-right: 0.25em;
+  transition: transform .5s ease;
+  vertical-align: middle; }
+#QuestionsButton.panel-down::before {
+  transform: rotate(180deg);
+  transform-origin: 50% 50%; }
+
+#QuestionsButton-label {
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 0.9;
+  margin-right: 0.6em;
+  text-align: left;
+  vertical-align: middle;
+}
+
+/**
+* @styles 1-ereader-item-panel Item Panel
+* When invoked, the panel animates out from the __Show Questions__ button. A 20% opaque black `#000000` backdrop appears over the content area while the item panel is open. The item panel can be closed by selecting the backdrop or the __Show Questions__ button.
+*
+* The item panel has a drop shadow to better differentiate it from the stimulus content underneath, and it has a tail at its top to connect it to the __Show Questions__ button. Right and bottom margins (1.67x the base font size) separate the item panel from the edges of the content area to help the test taker recognize that the stimulus remains beneath the item panel.
+*
+* The width of the item panel can expand and contract item-by-item to provide more item layout options:
+* * _Small (Default)_. Approximately 30x the base font size; most items are presented in the small-width layout.
+* * _Medium_. Approximately 44x the base font size.
+* * _Large_. Approximately 56x the base font size.
+*
+* A row of item tabs (whose behavior and styling are defined on the [navigation.css] page) is positioned at the top of the item panel.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-full.html" target="_blank">here</a>._
+* @iframe ux/demos/environment-ereader/ereader.html 640
+**/
+
+#QuestionsPanel {
+  background: #fff;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2), 0 0 1.125em 0 rgba(0, 0, 0, 0.19);
+  opacity: 1;
+  overflow: visible;
+  position: absolute;
+  right: 1.67em;
+  top: 2.92em;
+  transform-origin: 82% top;
+  transition: background 0.2s, box-shadow 0.2s, opacity .3s ease, transform .2s ease, width .3s;
+  visibility: visible;
+  width: 30.625em;
+  z-index: 5000; }
+#QuestionsPanel.large {
+  transform-origin: 92% top;
+  width: 50.04em; }
+#QuestionsPanel.medium {
+  transform-origin: 90% top;
+  width: 44.375em; }
+#QuestionsPanel.hidden {
+  opacity: 0;
+  transform: scale(0.5,0.5);
+  transition: opacity .3s ease, transform .3s ease, visibility 0s .3s;
+  visibility: hidden; }
+
+#QuestionsPanel::before, #QuestionsPanel::after {
+  content: '';
+  border-color: transparent;
+  border-style: solid;
+  border-width: 0 0.46em 0.42em;
+  position: absolute;
+  height: 0;
+  width: 0;
+  right: 5em;
+}
+
+#QuestionsPanel::before {
+  top: -0.42em;
+}
+
+#QuestionsPanel::after {
+  border-bottom-color: #e9e9e9;
+  top: -0.375em;
+}
+
+#itemBorderWrapper {
+  border-bottom: 0.05em solid transparent;
+  border-left: 0.05em solid transparent;
+  border-right: 0.05em solid transparent;
+  display: flex;
+  height: 30.625em;
+  padding: 0.08em 0.03em 0.03em 0;
+  transition: border 0.2s;
+  width: 100%;
+}
+
+#enaepEreaderContainer {
+  overflow: auto;
+  width: 100%;
+}
+
+/**
+* @styles 2-ereader-stimulus-tabs Stimulus Tabs
+* When a reading block contains more than one stimulus, stimulus tabs are provided immediately below the [system-toolbar.css], aligned to the left side of the content area. Stimulus tab styling and behavior match those of item tabs, as described on the [navigation.css] page.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-stimtab-full.html" target="_blank">here</a>._
+* @iframe ux/demos/environment-ereader/ereader-stimtab.html 640
+**/

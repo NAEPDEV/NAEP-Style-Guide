@@ -1,0 +1,40 @@
+/**
+* @stylesheet look-back-buttons.css Look-back Buttons
+* @parent ux.features
+*
+* Items sometimes refer to a defined piece (i.e., a word, phrase, sentence, paragraph, or section) of a stimulus passage. When the measurement goal of the item is to assess test takers’ ability to use the referenced piece of text as the basis for interpretation or evaluation (as opposed to their ability to _locate_ it), a look-back button is provided in the text of the item. When pressed, a look-back button:
+* * Auto-navigates the passage to the referenced piece of text.
+* * Highlights the referenced piece of text. The default highlight color is a semi-transparent light blue `rgba(125,189,255,0.5)`, but other colors may be used to avoid contrast compliance issues.
+* * Causes the highlighting on the piece of text to flash twice to bring attention to it.
+* * In the [environment-ereader.css] environment, the look-back button will close the item panel before triggering the events above.
+*
+* Look-back button highlighting remains visible until the test taker navigates to another item. If test takers return to the item with the look-back button, they must press it again to see the highlighting.
+*
+* Look-back buttons are presented as secondary filled buttons (see the [buttons.css] page for more information) with custom sizing so they do not disrupt the line spacing of the surrounding text.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/look-back-buttons/look-back-buttons-full.html" target="_blank">here</a>._
+* @iframe ux/demos/look-back-buttons/look-back-buttons.html 450
+**/
+
+.btn.btn-lbb {
+  line-height: 1.05;
+  margin: 0 0.13em;
+  padding: 0 0.3em;
+  vertical-align: initial;
+}
+
+.context.context-highlight.context-active {
+  animation: highlight 1s forwards;
+}
+
+@keyframes highlight {
+  0% { background: none; background: rgba(125,189,255,0); }
+  5% { background: #7DBDFF; background: rgba(125,189,255,1); }
+  20% { background: #BCDCFD; background: rgba(125,189,255,0.5); }
+  35% { background: #7DBDFF; background: rgba(125,189,255,1); }
+  100% { background: #BCDCFD; background: rgba(125,189,255,0.5); }
+}
+
+.context-nohighlight .context.context-highlight.context-active {
+  animation: none;
+}

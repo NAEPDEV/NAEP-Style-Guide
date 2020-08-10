@@ -1,0 +1,181 @@
+<ul class="api cascading primary-grouping">
+    {{#getActiveAndParents}}
+    {{#each parents}}
+    <li class="search-container active parent sidebar-content">
+        <a class="sidebar-title" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
+            {{makeTitle}}
+        </a>
+        <div class="collapse-all" id="expandCollapseAll" tabindex="0"><span id="expand-link">Expand All</span><span id="collapse-link" >Collapse All</span></div>
+        {{#if ../active.hideChildrenInMenu}}
+        {{> active-menu.mustache}}
+        {{/if}}
+    </li>
+    {{/each}}
+    {{#active}}
+    {{^if hideChildrenInMenu}}
+
+    <li class="search-container active sidebar-content">
+        <a class="sidebar-title" href="{{urlTo name}}" data-search="{{#if title}}{{title}}{{else}}{{{name}}}{{/if}}">
+            {{makeTitle}}
+        </a>
+        <div class="collapse-all" id="expandCollapseAll" tabindex="0"><span id="expand-link">Expand All</span><span id="collapse-link">Collapse All</span></div>
+        {{> active-menu.mustache}}
+    </li> 
+    {{/if}}
+    {{/active}}
+    {{/getActiveAndParents}}
+</ul>
+<script>
+    $(document).ready(function () {
+        var activePageItem = $(".sidebar-content > ul  >  .search-container > ul > .search-container.active"); // current page's menu item
+        var scrollingMenu = $(".sidebar-content > ul"); // scrollable part of sidebar
+        if (activePageItem[0]) {
+            $(activePageItem).closest(".heading").addClass("active");  // set parent heading to active (expands it)
+            $(activePageItem).delay(500).queue(function (next) {
+                if ($(activePageItem).offset().top + $(activePageItem).height() > $(window).height()) {
+                   // var _offset = -$(scrollingMenu).offset().top
+                    animateScrollToTarget(activePageItem, { parent: scrollingMenu, speed: 1500 });  // if active menu item is out of view scroll into view
+                }
+                next();
+            })
+        }
+
+        $(".sidebar-content .heading.search-container:not(.active) a").attr("tabindex", "-1"); // set tabindex to -1 for collapsed links
+        $(".sidebar-content .heading.search-container.active a").removeAttr("tabindex"); // remove tabindex-1 for expanded links
+
+         // align sidebar dynamically
+        if ($(window).width() > 1199) {
+            var mainBounding = document.querySelector('#main-content').getBoundingClientRect();
+            var sideBounding = document.querySelector('#sidebar').getBoundingClientRect();
+            var left = mainBounding.left - sideBounding.width + "px";
+            $("#sidebar").css("left", left)
+        } else {
+            $("#sidebar").removeAttr("style")
+        }
+
+
+        //clone list for TOC
+        if ($("#main-content > .title >  .heading > h1").text() === "Table of Contents") {
+            $("#main-content > .contents").addClass("hidden");
+          var toc = $(scrollingMenu).clone().addClass("toc").appendTo($("#main-content .description"));
+            $(toc).find($("*")).removeAttr("tabindex")
+            $(".toc > li").slice(0, 3).wrapAll("<div>")
+            $(".toc > li").slice(0, 2).wrapAll("<div>")
+            $(".toc > li").slice(0, 2).wrapAll("<div>")
+            $(".toc > li").slice(0, 2).wrapAll("<div>")
+
+        }
+
+    });
+
+     // on window resize re-align sidebar
+	$(window).on('resize', function (e) {			
+		if ($(window).width() > 1199) {
+            var mainBounding = document.querySelector('#main-content').getBoundingClientRect();
+            var sideBounding = document.querySelector('#sidebar').getBoundingClientRect();
+            var left = mainBounding.left - sideBounding.width + "px";
+            $("#sidebar").css("left", left)
+		} else {
+            $("#sidebar").removeAttr("style")
+		}
+    });
+
+    $(".sidebar-content .heading.search-container span").click(function () { // click to expand/collapse single
+        expandCollapse(this);
+    });
+
+    $(".sidebar-content .heading.search-container span").keypress(function (e) { // keyboard to expand/collapse single
+        if (e.keyCode == 0 || e.keyCode == 13 || e.keyCode == 32) 
+         expandCollapse(this);
+    });
+
+    $("#expandCollapseAll").click(function () { // click to expand/collapse All
+        expandCollapseAll();
+    });
+
+    $("#expandCollapseAll").keypress(function (e) {// keyboard to expand/collapse All
+        if (e.keyCode == 0 || e.keyCode == 13 || e.keyCode == 32) 
+          expandCollapseAll();
+    });
+
+    
+    function expandCollapse(cItem) {
+        if ($(cItem).closest(".heading").hasClass("active")) {
+            $(cItem).closest(".heading").removeClass("active");
+        } else {
+            $("#expandCollapseAll").hasClass("collapse-all") && $(".sidebar-content .heading.search-container").removeClass("active"); 
+            $(cItem).closest(".heading").addClass("active");
+        }
+        $(".sidebar-content .heading.search-container:not(.active) a").attr("tabindex", "-1"); // set tabindex to -1 for collapsed links
+        $(".sidebar-content .heading.search-container.active a").removeAttr("tabindex"); // remove tabindex-1 for expanded links
+        
+        // if all are collapsed, make sure collapseAll is changed to expandAll
+        if ($(".sidebar-content .heading.search-container.active").length === 0) { 
+            $("#expandCollapseAll").addClass("collapse-all").removeClass("expand-all");
+        }
+
+
+    }
+    function expandCollapseAll() {
+        $("#expandCollapseAll").toggleClass("collapse-all").toggleClass("expand-all")
+        if ($("#expandCollapseAll").hasClass("expand-all")) {
+            $(".sidebar-content .heading.search-container").addClass("active");
+        } else if ($("#expandCollapseAll").hasClass("collapse-all")) {
+            $(".sidebar-content .heading.search-container").removeClass("active");
+        }
+        $(".sidebar-content .heading.search-container:not(.active) a").attr("tabindex", "-1"); // set tabindex to -1 for collapsed links
+        $(".sidebar-content .heading.search-container.active a").removeAttr("tabindex"); // remove tabindex-1 for expanded links
+    }
+
+    function animateScrollToTarget(_target, _params) {
+        /*
+         * Function scrolls the scrolling div to a specific target
+            *Usage:
+            * animateScrollToTarget("#id or .class"); // default: no delay, 1s speed, scrollable is direct parent
+            * Optional parameters can be added:
+            * delay // override delay. Example: animateScrollToTarget("#id", { delay: 2000 }); // 2 second delay
+            * offset // add or subtract an additional offset (to compensate for child padding). Example: animateScrollToTarget("#id", { offset: 20 }); // 20 pixel offset
+            * speed // override speed. Example: animateScrollToTarget("#id", { speed: 3000 }); // 3 second animation speed
+            * parent // override scrolling parent. Example: animateScrollToTarget("#id", { parent: "#panel0002" }); // This passes ID #panel0002 as the scrolling parent 
+            * callback // add a callback function . Example: animateScrollToTarget("#id", { callback: onComplete() }); //  callback should be passed as a variable. Example: var onComplete = function () { doSomething };
+            * location // default is bottom, you can pass top. Example: animateScroll("#id", { location: "top" }); // scroll to top instead of bottom
+        */
+
+        var _delay = _params && _params.delay ? _params.delay : 0;
+        var _offset = _params && _params.offset ? _params.offset : 0;
+        var _speed = _params && _params.speed ? _params.speed : 1000;
+        var _parent = _params && _params.parent ? _params.parent : undefined;
+        var _callback = _params && _params.callback ? _params.callback : undefined;
+        var _location = _params && _params.location ? _params.location : "top";
+        
+        $(_target).stop(true, true).delay(_delay).queue(function (next) {
+            var parentDiv = _parent !== undefined ? $(_parent) : $($(_target).parent());
+            var scrollPos;
+            // calculate height of target if 0
+            if ($(_target).height() === 0) {
+                var totalHeight = 0;
+                $(_target).children().each(function () {
+                    totalHeight = totalHeight + $(this).outerHeight(true);
+                });
+                $(_target).height(totalHeight);
+            }
+
+            if (_location === "top") {
+                scrollPos = $(parentDiv).scrollTop() - $(parentDiv).offset().top + $(_target).offset().top;
+            } else {
+                var _targetHeight = $(_target).outerHeight() !== 0 ? $(_target).outerHeight() : $(_target).children().outerHeight();
+                scrollPos = $(parentDiv).scrollTop() + $(_target).offset().top - ($(parentDiv).outerHeight() - _targetHeight) - $(parentDiv).offset().top + _offset;
+            }
+            $(parentDiv).stop(true, true).animate({
+                scrollTop: scrollPos
+            }, {
+                    easing: 'swing',
+                    duration: _speed,
+                    complete: _callback
+                });
+            $(this).clearQueue().dequeue();
+            next();
+        });
+    }
+
+</script>

@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Innovations Symposium Demo</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    .content-container {
+      width: 59em;
+    }
+
+    .match-mockup-source-label {
+      display: inline-block;
+      font-weight: bold;
+      margin: 0 0 0.25em 0;
+      text-align: center;
+    }
+
+    .match-mockup-source-label,
+    .match-source-tray {
+      width: 29.01em;
+    }
+
+    .match-background {
+      display: inline-flex;
+      margin: 1em 0;
+    }
+
+    .match-mockup-table {
+      display: flex;
+      flex-direction: column;
+      margin: 1.5em 1.95em;
+      width: 10.5em;
+    }
+
+    .match-mockup-table-header {
+      background: #cceeff;
+      border: 0.083em solid #a8a8a8;
+      border-bottom: none;
+      font-weight: bold;
+      padding: 0.4em;
+      text-align: center;
+    }
+
+    .match-mockup-table-cell {
+      border: 0.083em solid #545454;
+      border-bottom: none;
+      box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.4);
+      height: 3.55em;
+      padding: 0;
+    }
+
+    .match-mockup-table-cell:last-of-type {
+      border-bottom: 0.083em solid #545454;
+    }
+
+    .match-mockup-table-cell.tall {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .response-area-zones svg {
+      height: 22.58em;
+      width: 20.88em;
+    }
+
+    .childStim p {
+      font-size: 0.85em;
+      line-height: 1.372;
+    }
+
+    .childStim .stimulus-paragraph:first-of-type {
+      margin-top: 2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="student-toolbar">
+    <div class="btn-group">
+      <button id="help-btn" class="system-btn" title="Help. Shows help and directions."></button>
+    </div>
+    <div class="btn-group">
+      <button id="theme-btn" class="system-btn" title="Change Theme. Changes the colors used on the screen."></button>
+      <button id="zoom-out-btn" class="system-btn" title="Zoom Out. Makes the words and images smaller." disabled></button>
+      <button id="zoom-in-btn" class="system-btn" title="Zoom In. Makes the words and images larger."></button>
+    </div>
+    <div class="btn-group">
+      <button id="read-aloud-btn" class="system-btn" title="Read Aloud. Turns on read aloud mode. You can tap any box to hear the text read out loud.">
+        <span class="path1"></span>
+        <span class="path2 system-icon-accent-color"></span>
+			</button>
+      <button id="scratchwork-btn" class="system-btn btn-tray-master" title="Scratchwork. Turns on scratchwork mode. This lets you write on the screen. You must turn scratchwork off to answer questions.">
+        <span class="path1 system-icon-accent-color"></span>
+        <span class="path2"></span>
+			</button>
+      <div id="scratchwork-tray" class="btn-tray hidden">
+        <button id="pencil-btn" class="tray-btn active" title="Pencil. Turns on write mode. This lets you write on the screen." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+        </button>
+        <button id="highlighter-btn" class="tray-btn" title="Highlighter. Turns on highlight mode. This lets you highlight parts of the screen." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+          <span class="path3"></span>
+				</button>
+        <button id="eraser-btn" class="tray-btn" title="Eraser. Turns on erase mode. This lets you erase any of your drawings and highlights." disabled>
+          <span class="path1"></span>
+          <span class="path2"></span>
+				</button>
+        <button id="clearSW-btn" class="tray-btn" title="Clear Scratchwork. Clears all scratchwork on the screen."></button>
+      </div>
+      <button id="equation-btn" class="system-btn" title="Math Keyboard. Shows the on-screen math keyboard." disabled>
+        <span class="path1"></span>
+        <span class="path2 system-icon-accent-color"></span>
+			</button>
+    </div>
+    <div class="btn-group btn-group-flex btn-group-column">
+      <p>VH123456</p>
+    </div>
+    <div class="btn-group">
+      <button id="timer-btn" class="system-btn btn-tray-master" title="Timer. Shows the time remaining."></button>
+      <div id="timer-tray" class="btn-tray btn-group-column hidden">
+        <p>Time&#160;Left:</p>
+        <p class="time-left">30&#160;minutes</p>
+      </div>
+    </div>
+    <div class="btn-group" style="align-items: center;">
+      <button id="back-btn" class="btn-nav btn-back" title="Back. Returns to the previous screen." disabled></button>
+      <button id="next-btn" class="btn-nav btn-next" title="Next. Moves to the next screen.">
+        <span>Next</span>
+      </button>
+    </div>
+  </div>
+  <!--Student toolbar ends-->
+  <div id="student-toolbar-spacer"></div>
+
+
+  <div class="enaepTabStrip">
+    <div class="btn-tab-mover-wrapper">
+      <button id="btn-tab-mover-left" class="btn-tab-mover" disabled></button>
+    </div>
+    <div class="btn-tab-mover-wrapper">
+      <button id="btn-tab-mover-right" class="btn-tab-mover" disabled></button>
+    </div>
+    <ul class="enaepTab itemTab align-right"></ul>
+  </div>
+  <!--Tab strip ends-->
+
+
+  <div id="contentarea">
+    <div class="contentarea-inner">
+
+      <div class="childItem content-container">
+
+        <div class="col col-60 col-divider-right">
+          <div class="ruler-wrapper">
+            <img class="ruler-img no-theme" src="../stim-ruler/pen.svg" />
+            <div class="ruler-draggable-outer">
+              <div class="ruler-draggable">
+                <button class="btn btn-circular icon-move ruler-drag-handle"></button>
+              </div>
+            </div>
+            <button class="btn btn-reset btn-secondary btn-small">Reset</button>
+          </div>
+        </div>
+
+        <div class="col col-40">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>What is the length of the pen?</p>
+            </div>
+          </div>
+          <div class="response-area response-area-mc">
+            <div class="mc mc-single-select mc-alpha">
+
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">72 millimeters</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">78 millimeters</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">82 millimeters</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">88 millimeters</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">94 millimeters</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-50 col-divider-right">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>Use the slider to view the nuclear reaction that occurs when a high-energy particle collides with a large nucleus.</p>
+            </div>
+          </div>
+          <div class="slider-wrapper">
+
+            <img src="../stim-slider/VH593281_S1.png" data-label="State 1" class="slider-img no-theme" />
+            <img src="../stim-slider/VH593281_S2.png" data-label="State 2" class="slider-img no-theme" />
+            <img src="../stim-slider/VH593281_S3.png" data-label="State 3" class="slider-img no-theme" />
+
+            <div class="slider-ui">
+              <input class="slider" type="range" min="0" value="0" step="any" />
+              <div class="slider-dots"></div>
+            </div>
+            <div class="slider-labels"></div>
+
+          </div>
+        </div>
+
+        <div class="col col-50">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>What type of nuclear reaction occurs, and why?</p>
+            </div>
+          </div>
+          <div class="response-area response-area-mc">
+            <div class="mc mc-single-select mc-alpha">
+
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Fusion, because more high-energy particles are produced.</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Fusion, because a high-energy particle combines with a large nucleus.</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Fission, because two smaller nuclei are produced.</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Fission, because mass is neither created nor destroyed during the process.</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-50 col-divider-right">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,</p>
+            </div>
+            <div class="stem-paragraph">
+              <p>Use the buttons to open and close the switch in each circuit.</p>
+            </div>
+          </div>
+          <div class="layer-wrapper">
+            <div class="layer-row">
+              <img src="../stim-image-layers/base.png" class="layer-base-img no-theme" id="layer-base" />
+              <img src="../stim-image-layers/buzzer.png" class="layer-img no-theme hidden" id="layer-0" />
+              <img src="../stim-image-layers/bulb.png" class="layer-img no-theme hidden" id="layer-1" />
+            </div>
+            <div class="layer-row">
+              <div class="layer-switch-wrapper">
+                <div class="layer-switch-label active">Open</div>
+                <label class="layer-switch">
+        					<input type="checkbox" id="layer-btn-0">
+        					<div class="layer-switch-slider"></div>
+        				</label>
+                <div class="layer-switch-label">Closed</div>
+              </div>
+              <div class="layer-switch-wrapper">
+                <div class="layer-switch-label active">Open</div>
+                <label class="layer-switch">
+        					<input type="checkbox" id="layer-btn-1">
+        					<div class="layer-switch-slider"></div>
+        				</label>
+                <div class="layer-switch-label">Closed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col col-50">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et.</p>
+            </div>
+            <div class="stem-paragraph">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+            <div class="stem-paragraph">
+              <p>Explain your answer.</p>
+            </div>
+          </div>
+          <div class="response-area response-area-text-entry">
+            <textarea rows="5" data-max-length="3000" class="extendedtext" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is a numeric entry item.</p>
+            </div>
+          </div>
+          <div class="response-area response-area-text-entry">
+            <div class="stem-paragraph">
+              <p><input type="text" size="15" data-max-length="150" class="numeric-entry" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" /> units</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>The map shows part of the Hawaiian island of Oahu.</p>
+            </div>
+            <div class="stem-paragraph">
+              <p>Select the portion of the map that shows a caldera.</p>
+            </div>
+          </div>
+          <div class="response-area response-area-zones zones-single-select">
+            <img class="zones-image no-theme" src="../response-type-zones/map.png" style="width:20.88em;" />
+            <svg class="zones-mask" xmlns="http://www.w3.org/2000/svg" version="1.1" viewbox="0 0 501 542">
+              <defs>
+                <filter id="zones-mask-bright-blur" x="-10%" y="-10%" width="120%" height="120%">
+                  <feGaussianBlur result="blurOut" in="SourceGraphic" stdDeviation="2" />
+                </filter>
+              </defs>
+              <a xlink:href="#0">
+                <path class="zones-mask-border-background"  d="M395.88,34.44C387.15,41.89,376.88,46,366.7,51c-16.61,8.18-30.7,25.88-44.18,38.32-5.8,5.37-5.85,11.69-7.12,19.18L311.11,134c-.45,2.65-.89,5.41-.15,8,1.38,4.83,5.58,6.28,9.12,9.11,3.79,3,6.51,7,8.88,11.21,8.36,14.8,11.37,30,14.07,46.55a5.8,5.8,0,0,0,.85,2.56c2.21,3,15.68,3.38,19.32,3.79,7.49.88,15.86,1.24,22.33-3.32s7.85-12.24,11-18.81a122.19,122.19,0,0,1,14.15-21.82c10.69-13.6,23.19-25.66,34.25-38.94C472.73,99,491.11,57.46,494.51,14.24a4.9,4.9,0,0,0-.61-3.48,4.67,4.67,0,0,0-2.31-1.33c-9.58-3.12-19.92-2.66-30-2.16-13.93.69-36.19-.08-41.79,2.06S404.91,26.76,395.88,34.44Z" fill="none"/>
+                <path class="zones-mask-border" stroke-dasharray="5,3" d="M395.88,34.44C387.15,41.89,376.88,46,366.7,51c-16.61,8.18-30.7,25.88-44.18,38.32-5.8,5.37-5.85,11.69-7.12,19.18L311.11,134c-.45,2.65-.89,5.41-.15,8,1.38,4.83,5.58,6.28,9.12,9.11,3.79,3,6.51,7,8.88,11.21,8.36,14.8,11.37,30,14.07,46.55a5.8,5.8,0,0,0,.85,2.56c2.21,3,15.68,3.38,19.32,3.79,7.49.88,15.86,1.24,22.33-3.32s7.85-12.24,11-18.81a122.19,122.19,0,0,1,14.15-21.82c10.69-13.6,23.19-25.66,34.25-38.94C472.73,99,491.11,57.46,494.51,14.24a4.9,4.9,0,0,0-.61-3.48,4.67,4.67,0,0,0-2.31-1.33c-9.58-3.12-19.92-2.66-30-2.16-13.93.69-36.19-.08-41.79,2.06S404.91,26.76,395.88,34.44Z" fill="none"/>
+                <path class="zones-mask-border-focus-background" d="M371.14,221.14a72.17,72.17,0,0,1-8.6-.59c-.55-.07-1.47-.13-2.54-.21l-.2,0c-11.54-.87-17.52-2-20.3-5.73l-.08-.12a11,11,0,0,1-1.75-4.86c-2.66-16.15-5.51-30.66-13.45-44.67-1.75-3.1-4.19-7-7.52-9.63-.74-.58-1.58-1.14-2.4-1.68-3-2-7-4.65-8.58-10.19-1.08-3.81-.44-7.61,0-10.37L310,107.65c.17-1,.33-2.1.46-3.15,1-6.56,2-13.26,8.29-19.11,3.43-3.15,6.89-6.66,10.54-10.38l.65-.66c10.54-10.73,21.43-21.82,34.27-28.13,1.9-.93,3.82-1.85,5.67-2.73,8.13-3.87,15.82-7.52,22.43-13.16,3.75-3.2,7.67-8,11.47-12.59,5.39-6.57,9.63-11.73,14-13.44,4.66-1.78,15.43-1.91,27.89-2.06h.28c5.33-.07,10.85-.13,15.3-.35,3.49-.17,7.41-.37,11.35-.37,8.21,0,14.75.88,20.58,2.79a9.81,9.81,0,0,1,4.9,3.13c2.11,2.65,1.86,5.87,1.75,7.24-3.36,42.86-21.4,85.87-50.78,121.11-5,6-10.27,11.74-15.37,17.29-6.35,6.92-12.92,14.08-18.78,21.53a115.32,115.32,0,0,0-13.54,20.83c-.57,1.18-1.08,2.43-1.62,3.75l-.5,1.22c-2.19,5.47-4.67,11.68-10.68,15.9-4.63,3.26-10.36,4.85-17.51,4.85Z" fill="none"/>
+                <path class="zones-mask-border-focus" stroke-dasharray="2,2" d="M371.14,221.14a72.17,72.17,0,0,1-8.6-.59c-.55-.07-1.47-.13-2.54-.21l-.2,0c-11.54-.87-17.52-2-20.3-5.73l-.08-.12a11,11,0,0,1-1.75-4.86c-2.66-16.15-5.51-30.66-13.45-44.67-1.75-3.1-4.19-7-7.52-9.63-.74-.58-1.58-1.14-2.4-1.68-3-2-7-4.65-8.58-10.19-1.08-3.81-.44-7.61,0-10.37L310,107.65c.17-1,.33-2.1.46-3.15,1-6.56,2-13.26,8.29-19.11,3.43-3.15,6.89-6.66,10.54-10.38l.65-.66c10.54-10.73,21.43-21.82,34.27-28.13,1.9-.93,3.82-1.85,5.67-2.73,8.13-3.87,15.82-7.52,22.43-13.16,3.75-3.2,7.67-8,11.47-12.59,5.39-6.57,9.63-11.73,14-13.44,4.66-1.78,15.43-1.91,27.89-2.06h.28c5.33-.07,10.85-.13,15.3-.35,3.49-.17,7.41-.37,11.35-.37,8.21,0,14.75.88,20.58,2.79a9.81,9.81,0,0,1,4.9,3.13c2.11,2.65,1.86,5.87,1.75,7.24-3.36,42.86-21.4,85.87-50.78,121.11-5,6-10.27,11.74-15.37,17.29-6.35,6.92-12.92,14.08-18.78,21.53a115.32,115.32,0,0,0-13.54,20.83c-.57,1.18-1.08,2.43-1.62,3.75l-.5,1.22c-2.19,5.47-4.67,11.68-10.68,15.9-4.63,3.26-10.36,4.85-17.51,4.85Z" fill="none"/>
+              </a>
+              <a xlink:href="#0">
+                <path class="zones-mask-border-background"  d="M50.5,154.34c-9.24-25.9,4.6-54.38,29.38-65,16.34-7,34.64-7.4,52.41-7.55,16.5-.14,33.87.07,48.19,8.27,9.89,5.66,17.67,14.8,28.2,19.13,11.89,4.89,25.41,2.9,38,5.37a55.26,55.26,0,0,1,34.63,22.7c2.6,3.79,4.76,8,8.13,11.07,4.1,3.78,9.57,5.64,14.39,8.44,13.3,7.73,21.13,22.57,24.46,37.6s2.81,30.59,3.31,46c.89,27.73,5.14,55.26,10.78,82.41,1.93,9.34,3.71,20.15-2.36,27.51-4.73,5.74-12.74,7.37-19,11.44-7.49,4.89-12.08,13.07-18.2,19.6s-15.72,11.62-23.83,7.83c-7.77-3.63-10.19-13.41-10.86-22-1.06-13.36-.29-27.53-6.72-39.28-3.57-6.53-9.11-11.73-14.54-16.81l-19.25-18c-4.12-3.86-8.34-7.77-13.5-10-7.36-3.23-15.75-2.74-23.67-4.16C168.89,275,151.26,255,150.13,233.09c-.51-9.87,1.86-20.36-2.39-29.28-2-4.25-5.38-7.7-8.83-10.89a147.27,147.27,0,0,0-47.51-29.54c-8.34-3.14-17.87-6.6-26.76-6.28C61.08,157.22,51.83,159.11,50.5,154.34Z" fill="none"/>
+                <path class="zones-mask-border" stroke-dasharray="5,3" d="M50.5,154.34c-9.24-25.9,4.6-54.38,29.38-65,16.34-7,34.64-7.4,52.41-7.55,16.5-.14,33.87.07,48.19,8.27,9.89,5.66,17.67,14.8,28.2,19.13,11.89,4.89,25.41,2.9,38,5.37a55.26,55.26,0,0,1,34.63,22.7c2.6,3.79,4.76,8,8.13,11.07,4.1,3.78,9.57,5.64,14.39,8.44,13.3,7.73,21.13,22.57,24.46,37.6s2.81,30.59,3.31,46c.89,27.73,5.14,55.26,10.78,82.41,1.93,9.34,3.71,20.15-2.36,27.51-4.73,5.74-12.74,7.37-19,11.44-7.49,4.89-12.08,13.07-18.2,19.6s-15.72,11.62-23.83,7.83c-7.77-3.63-10.19-13.41-10.86-22-1.06-13.36-.29-27.53-6.72-39.28-3.57-6.53-9.11-11.73-14.54-16.81l-19.25-18c-4.12-3.86-8.34-7.77-13.5-10-7.36-3.23-15.75-2.74-23.67-4.16C168.89,275,151.26,255,150.13,233.09c-.51-9.87,1.86-20.36-2.39-29.28-2-4.25-5.38-7.7-8.83-10.89a147.27,147.27,0,0,0-47.51-29.54c-8.34-3.14-17.87-6.6-26.76-6.28C61.08,157.22,51.83,159.11,50.5,154.34Z" fill="none"/>
+                <path class="zones-mask-border-focus-background" d="M284.93,395.86a19.47,19.47,0,0,1-8.16-1.81c-8.19-3.83-12.89-12.73-14-26.44-.24-3-.39-6.06-.49-8.39-.51-10-1-20.44-5.57-28.72-3.2-5.83-8.43-10.73-13.49-15.46L224,297c-3.74-3.5-7.6-7.12-12-9-4.14-1.84-8.86-2.27-13.85-2.73-2.8-.27-5.68-.54-8.58-1.06a56,56,0,0,1-44.83-50.84c-.17-3.27,0-6.62.06-9.57.24-6.5.46-12.64-1.93-17.66-1.65-3.47-4.64-6.48-7.62-9.23a141,141,0,0,0-45.76-28.46c-8.31-3.14-16.39-6-23.72-6h-1c-.25,0-.71,0-1.2.09l-.84.08c-1.46.14-3.29.31-5.13.31-8.34,0-11.25-3.78-12.22-7a55.8,55.8,0,0,1,2.17-42.17A58.72,58.72,0,0,1,77.74,84.38c18-7.7,38.23-7.85,54.5-8h4.85c14.69,0,31.57.7,46.09,9a102.05,102.05,0,0,1,12.5,8.91l.1.08c4.95,3.91,9.62,7.6,14.93,9.77,6.4,2.63,13.58,3,21.19,3.45a116.19,116.19,0,0,1,15.82,1.61,60.17,60.17,0,0,1,38.06,25c.73,1.07,1.43,2.15,2.1,3.21a35.22,35.22,0,0,0,5.25,7c2.2,2,5.13,3.48,8.23,5,1.71.84,3.47,1.72,5.21,2.73,17.91,10.43,24.61,30.23,27,41.1,2.71,12.23,3,24.75,3.2,36.85v.53c.06,3.15.12,6.4.22,9.59.79,24.32,4.18,50.21,10.67,81.49,2.23,10.76,4,23-3.48,32.05-3.78,4.58-9,7-13.53,9.09a52.27,52.27,0,0,0-6.72,3.49c-4.12,2.7-7.43,6.88-10.92,11.3l-.26.33c-1.87,2.36-3.79,4.8-6,7.1-6.37,6.77-14.53,10.82-21.82,10.82Z" fill="none"/>
+                <path class="zones-mask-border-focus" stroke-dasharray="2,2" d="M284.93,395.86a19.47,19.47,0,0,1-8.16-1.81c-8.19-3.83-12.89-12.73-14-26.44-.24-3-.39-6.06-.49-8.39-.51-10-1-20.44-5.57-28.72-3.2-5.83-8.43-10.73-13.49-15.46L224,297c-3.74-3.5-7.6-7.12-12-9-4.14-1.84-8.86-2.27-13.85-2.73-2.8-.27-5.68-.54-8.58-1.06a56,56,0,0,1-44.83-50.84c-.17-3.27,0-6.62.06-9.57.24-6.5.46-12.64-1.93-17.66-1.65-3.47-4.64-6.48-7.62-9.23a141,141,0,0,0-45.76-28.46c-8.31-3.14-16.39-6-23.72-6h-1c-.25,0-.71,0-1.2.09l-.84.08c-1.46.14-3.29.31-5.13.31-8.34,0-11.25-3.78-12.22-7a55.8,55.8,0,0,1,2.17-42.17A58.72,58.72,0,0,1,77.74,84.38c18-7.7,38.23-7.85,54.5-8h4.85c14.69,0,31.57.7,46.09,9a102.05,102.05,0,0,1,12.5,8.91l.1.08c4.95,3.91,9.62,7.6,14.93,9.77,6.4,2.63,13.58,3,21.19,3.45a116.19,116.19,0,0,1,15.82,1.61,60.17,60.17,0,0,1,38.06,25c.73,1.07,1.43,2.15,2.1,3.21a35.22,35.22,0,0,0,5.25,7c2.2,2,5.13,3.48,8.23,5,1.71.84,3.47,1.72,5.21,2.73,17.91,10.43,24.61,30.23,27,41.1,2.71,12.23,3,24.75,3.2,36.85v.53c.06,3.15.12,6.4.22,9.59.79,24.32,4.18,50.21,10.67,81.49,2.23,10.76,4,23-3.48,32.05-3.78,4.58-9,7-13.53,9.09a52.27,52.27,0,0,0-6.72,3.49c-4.12,2.7-7.43,6.88-10.92,11.3l-.26.33c-1.87,2.36-3.79,4.8-6,7.1-6.37,6.77-14.53,10.82-21.82,10.82Z" fill="none"/>
+              </a>
+              <a xlink:href="#0">
+                <path class="zones-mask-border-background" d="M27.86,204.44c1-2.56,15.35-13.53,26.89-14.92,7.89-1,15.87-.41,23.8-.52s16.16-.76,24.21.09c16.83,1.79,30.27,12.34,34.91,28.86,1.89,6.76,1.83,14.33,2.39,21.32.79,10,2.38,20.49,1.93,30.49-.3,6.37-2.28,13-7,17.26-3.58,3.26-8.38,4.86-13.14,5.8-13.34,2.61-27.22.76-40.39-1.93-11.5-2.33-24.07-3.25-33.87-10.38-9.28-6.76-14.24-18.07-16.42-29.34C28.67,238.4,28.35,225,27.69,212,27.51,209.41,26.84,207,27.86,204.44Z" fill="none"/>
+                <path class="zones-mask-border" stroke-dasharray="5,3" d="M27.86,204.44c1-2.56,15.35-13.53,26.89-14.92,7.89-1,15.87-.41,23.8-.52s16.16-.76,24.21.09c16.83,1.79,30.27,12.34,34.91,28.86,1.89,6.76,1.83,14.33,2.39,21.32.79,10,2.38,20.49,1.93,30.49-.3,6.37-2.28,13-7,17.26-3.58,3.26-8.38,4.86-13.14,5.8-13.34,2.61-27.22.76-40.39-1.93-11.5-2.33-24.07-3.25-33.87-10.38-9.28-6.76-14.24-18.07-16.42-29.34C28.67,238.4,28.35,225,27.69,212,27.51,209.41,26.84,207,27.86,204.44Z" fill="none"/>
+                <path class="zones-mask-border-focus-background" d="M108.09,299.48c-10.24,0-20.2-1.76-27.74-3.29-2.16-.44-4.43-.84-6.63-1.23-10-1.77-20.43-3.6-29.35-10.08-11.74-8.55-16.58-22.49-18.57-32.68-2.22-11.4-2.77-23.09-3.3-34.4q-.13-2.75-.27-5.48c0-.5-.08-1-.13-1.5l0-.15a16.59,16.59,0,0,1,.73-8.24c2.13-5.34,19-16.82,31.27-18.3a106.78,106.78,0,0,1,11.42-.62h1.3c1.49,0,3,0,4.53,0s3.09,0,4.64,0H78.5c2,0,4.13-.1,6.18-.16,2.55-.08,5.72-.19,8.76-.19H94a92.7,92.7,0,0,1,9.27.47,47,47,0,0,1,24.89,10.09,44.36,44.36,0,0,1,14.68,22.71c1.59,5.65,1.92,11.53,2.24,17.22.1,1.77.2,3.44.33,5.11.18,2.27.41,4.75.75,8.06.75,7.58,1.53,15.4,1.17,23.11-.42,8.8-3.53,16.26-8.76,21-3.84,3.49-8.84,5.74-15.74,7.1a77.25,77.25,0,0,1-14.4,1.36Z" fill="none"/>
+                <path class="zones-mask-border-focus" stroke-dasharray="2,2" d="M108.09,299.48c-10.24,0-20.2-1.76-27.74-3.29-2.16-.44-4.43-.84-6.63-1.23-10-1.77-20.43-3.6-29.35-10.08-11.74-8.55-16.58-22.49-18.57-32.68-2.22-11.4-2.77-23.09-3.3-34.4q-.13-2.75-.27-5.48c0-.5-.08-1-.13-1.5l0-.15a16.59,16.59,0,0,1,.73-8.24c2.13-5.34,19-16.82,31.27-18.3a106.78,106.78,0,0,1,11.42-.62h1.3c1.49,0,3,0,4.53,0s3.09,0,4.64,0H78.5c2,0,4.13-.1,6.18-.16,2.55-.08,5.72-.19,8.76-.19H94a92.7,92.7,0,0,1,9.27.47,47,47,0,0,1,24.89,10.09,44.36,44.36,0,0,1,14.68,22.71c1.59,5.65,1.92,11.53,2.24,17.22.1,1.77.2,3.44.33,5.11.18,2.27.41,4.75.75,8.06.75,7.58,1.53,15.4,1.17,23.11-.42,8.8-3.53,16.26-8.76,21-3.84,3.49-8.84,5.74-15.74,7.1a77.25,77.25,0,0,1-14.4,1.36Z" fill="none"/>
+              </a>
+              <a xlink:href="#0">
+                <path class="zones-mask-border-background" d="M298.63,430.51c1.43-4,2-5.28,4-7.12a29.75,29.75,0,0,0,6-8.25c3.23-6.21,5.23-13,9.3-18.84,7.87-11.11,21.91-15.65,35-19.52l38.33-11.34c7.37-2.18,15.5-4.35,22.52-1.2,4.68,2.08,8.11,6.22,10.85,10.53,5.42,8.51,8.84,18.11,13.36,27.13,4.35,8.69,9.93,17.76,8.41,27.35-.88,5.59-4.12,10.52-7.7,14.9a88.76,88.76,0,0,1-46.73,29.72c-26,6.53-53.34,1-79.12-6.2-4.13-1.15-8.41-2.42-11.59-5.31C292.83,454.75,295.3,440,298.63,430.51Z" fill="none"/>
+                <path class="zones-mask-border" stroke-dasharray="5,3" d="M298.63,430.51c1.43-4,2-5.28,4-7.12a29.75,29.75,0,0,0,6-8.25c3.23-6.21,5.23-13,9.3-18.84,7.87-11.11,21.91-15.65,35-19.52l38.33-11.34c7.37-2.18,15.5-4.35,22.52-1.2,4.68,2.08,8.11,6.22,10.85,10.53,5.42,8.51,8.84,18.11,13.36,27.13,4.35,8.69,9.93,17.76,8.41,27.35-.88,5.59-4.12,10.52-7.7,14.9a88.76,88.76,0,0,1-46.73,29.72c-26,6.53-53.34,1-79.12-6.2-4.13-1.15-8.41-2.42-11.59-5.31C292.83,454.75,295.3,440,298.63,430.51Z" fill="none"/>
+                <path class="zones-mask-border-focus-background" d="M367.27,482.23c-19.73,0-39.34-4.69-55.92-9.29-5.21-1.45-9.84-2.94-13.78-6.52-12.18-11.1-6.17-31.65-4-37.69,1.52-4.37,2.49-6.57,5.43-9.29a24.09,24.09,0,0,0,4.82-6.77c1.11-2.13,2.11-4.47,3.08-6.73a68.23,68.23,0,0,1,6.58-12.71c8.59-12.13,22.8-17.13,37.83-21.58L389.6,360.3c5.13-1.51,10.59-3,16.11-3h.36a24.46,24.46,0,0,1,9.78,2c6.53,2.9,10.69,8.57,13.25,12.58a137.85,137.85,0,0,1,9.2,18.08l.92,2c1.13,2.5,2.3,5.08,3.52,7.52.46.91.92,1.82,1.39,2.74l.21.41c4.19,8.05,9,17.2,7.34,27.46-1.15,7.3-5.34,13.18-8.85,17.48a93.41,93.41,0,0,1-49.59,31.54,106.63,106.63,0,0,1-25.38,3.07Z" fill="none"/>
+                <path class="zones-mask-border-focus" stroke-dasharray="2,2" d="M367.27,482.23c-19.73,0-39.34-4.69-55.92-9.29-5.21-1.45-9.84-2.94-13.78-6.52-12.18-11.1-6.17-31.65-4-37.69,1.52-4.37,2.49-6.57,5.43-9.29a24.09,24.09,0,0,0,4.82-6.77c1.11-2.13,2.11-4.47,3.08-6.73a68.23,68.23,0,0,1,6.58-12.71c8.59-12.13,22.8-17.13,37.83-21.58L389.6,360.3c5.13-1.51,10.59-3,16.11-3h.36a24.46,24.46,0,0,1,9.78,2c6.53,2.9,10.69,8.57,13.25,12.58a137.85,137.85,0,0,1,9.2,18.08l.92,2c1.13,2.5,2.3,5.08,3.52,7.52.46.91.92,1.82,1.39,2.74l.21.41c4.19,8.05,9,17.2,7.34,27.46-1.15,7.3-5.34,13.18-8.85,17.48a93.41,93.41,0,0,1-49.59,31.54,106.63,106.63,0,0,1-25.38,3.07Z" fill="none"/>
+              </a>
+            </svg>
+            <button class="btn btn-secondary btn-clear-answer" tabindex="0">Clear Answer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+          <div class="response-area response-area-match">
+            <p class="match-mockup-source-label">Draggable Objects</p>
+            <div class="match-source-tray">
+              <div data-max-uses="1" data-match-group="1" class="match-option match-option-text">
+                <p>Object 1</p>
+              </div>
+              <div data-max-uses="1" data-match-group="1" class="match-option match-option-text">
+                <p>Object 2</p>
+              </div>
+              <div data-max-uses="1" data-match-group="1" class="match-option match-option-text">
+                <p>Object 3</p>
+              </div>
+              <div data-max-uses="1" data-match-group="1" class="match-option match-option-text">
+                <p>Object 4</p>
+              </div>
+            </div>
+
+            <div class="match-background">
+
+              <div class="match-mockup-table">
+                <div class="match-mockup-table-header">Single-use Targets</div>
+                <div class="match-mockup-table-cell">
+                  <div data-min-selections="1" data-max-selections="1" data-match-group="1" class="match-drop-target"></div>
+                </div>
+                <div class="match-mockup-table-cell">
+                  <div data-min-selections="1" data-max-selections="1" data-match-group="1" class="match-drop-target"></div>
+                </div>
+                <div class="match-mockup-table-cell">
+                  <div data-min-selections="1" data-max-selections="1" data-match-group="1" class="match-drop-target"></div>
+                </div>
+              </div>
+
+              <div class="match-mockup-table">
+                <div class="match-mockup-table-header">Multiple-use Target</div>
+                <div class="match-mockup-table-cell tall">
+                  <div data-min-selections="1" data-max-selections="3" data-match-group="1" class="match-drop-target"></div>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn btn-secondary btn-clear-answer" tabindex="0">Clear Answer</button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>I am the stem for a multiple-select grid item. </p>
+            </div>
+          </div>
+
+          <div class="response-area response-area-grid">
+            <table class="grid grid-multiple-select">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>
+                    <div class="grid-content">Text</div>
+                  </th>
+                  <th>
+                    <div class="grid-content">Text</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <div class="grid-content">Lorem ipsum dolor sit amet.</div>
+                  </th>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="grid-content">Consectetur adipiscing elit.</div>
+                  </th>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="grid-content">Aenean commodo ligula eget dolor.</div>
+                  </th>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="grid-content">Cum sociis natoque penatibus et magnis dis parturient montes.</div>
+                  </th>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>Fusce semper dui vel ipsum lobortis pellentesque. Nulla lobortis eu lacus ac facilisis sed ac varius mi.</p>
+            </div>
+          </div>
+          <div class="response-area response-area-ic">
+            <div class="stem-paragraph">
+              <div class="stem-paragraph-inner">Ut auctor orci ac nibh luctus ultrices a ut ligula
+                <div class="inline-choice">
+                  <span tabindex="0"></span>
+                  <ul>
+                    <li tabindex="-1" class="selected"></li>
+                    <li tabindex="-1">One fish</li>
+                    <li tabindex="-1"><u>Two</u> fish</li>
+                    <li tabindex="-1"><b>Red</b> fish</li>
+                    <li tabindex="-1"><i>Blue</i> fish</li>
+                  </ul>
+                </div>.
+              </div>
+            </div>
+            <div class="stem-paragraph">
+              <div class="stem-paragraph-inner">Donec sollicitudin quam est, eget tempor ligula tempus et
+                <div class="inline-choice">
+                  <span tabindex="0"></span>
+                  <ul>
+                    <li tabindex="-1" class="selected"></li>
+                    <li tabindex="-1">One fish</li>
+                    <li tabindex="-1"><u>Two</u> fish</li>
+                    <li tabindex="-1"><b>Red</b> fish</li>
+                    <li tabindex="-1"><i>Blue</i> fish</li>
+                  </ul>
+                </div> tristique aliquam luctus.</div>
+            </div>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+
+        <div class="col col-single">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph standalone-quote" style="font-style: normal;">
+              <p>“A house divided against itself cannot stand. I believe this government cannot endure permanently<button class="footnote-btn" id="footnote-permanently"></button> half slave and half free. I do not expect the Union to be dissolved—I do not
+                expect the house to fall—but I do expect it will cease to be divided.”</p>
+            </div>
+            <div class="stem-paragraph">
+              <p>This statement was made by</p>
+            </div>
+            <div id="footnote-permanently-content" class="footnote-content">
+              <div class="footnote-paragraph">last forever</div>
+              <button class="footnote-close btn icon-cross"></button>
+            </div>
+          </div>
+          <div class="response-area response-area-mc">
+            <div class="mc mc-single-select mc-alpha">
+
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">George Washington</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Thomas Jefferson</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Abraham Lincoln</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+              <div class="mc-option">
+                <div class="mc-control-wrapper">
+                  <label class="control">
+                    <input type="radio" />
+                    <span></span>
+                  </label>
+                </div>
+                <div class="mc-content-wrapper">
+                  <div class="mc-content">Theodore Roosevelt</div>
+                </div>
+                <div class="mc-ec-wrapper">
+                  <button class="mc-eliminate-choice"></button>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>I am the stem for a selectable table item.</p>
+            </div>
+          </div>
+
+          <div data-min-selections="2" class="response-area response-area-selectable-table">
+            <table class="stim-table">
+              <thead>
+                <tr>
+                  <th colspan="4">
+                    <div class="table-content">Number of Juniors and Seniors<br/>Living on Campus and off Campus</div>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="table-content"></div>
+                  </th>
+                  <th>
+                    <div class="table-content">Class</div>
+                  </th>
+                  <th>
+                    <div class="table-content">Live on Campus</div>
+                  </th>
+                  <th>
+                    <div class="table-content">Live off Campus</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="table1-body">
+                <tr>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="table-content">Freshmen</div>
+                  </td>
+                  <td>
+                    <div class="table-content">738</div>
+                  </td>
+                  <td>
+                    <div class="table-content">128</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="table-content">Sophomores</div>
+                  </td>
+                  <td>
+                    <div class="table-content">664</div>
+                  </td>
+                  <td>
+                    <div class="table-content">252</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="table-content">Juniors</div>
+                  </td>
+                  <td>
+                    <div class="table-content">543</div>
+                  </td>
+                  <td>
+                    <div class="table-content">302</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="control">
+                      <input type="checkbox" />
+                      <span></span>
+                    </label>
+                  </td>
+                  <td>
+                    <div class="table-content">Seniors</div>
+                  </td>
+                  <td>
+                    <div class="table-content">485</div>
+                  </td>
+                  <td>
+                    <div class="table-content">284</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="btn btn-secondary btn-clear-answer">Clear Answer</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-50 col-divider-right">
+
+          <div class="childStim-wrapper">
+            <div class="childStim stim-passage" title="Document">
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 1, Sentence 1" tabindex="0">It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</span>
+                </p>
+              </div>
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 2, Sentence 1" tabindex="0">There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France.</span>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 2, Sentence 2" tabindex="0">In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever.</span>
+                </p>
+              </div>
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 3, Sentence 1" tabindex="0">It was the year of Our Lord one thousand seven hundred and seventy-five. Spiritual revelations were conceded to England at that favoured period, as at this.</span>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 3, Sentence 2" tabindex="0">Mrs. Southcott had recently attained her five-and-twentieth blessed birthday, of whom a prophetic private in the Life Guards had heralded the sublime appearance by announcing that arrangements were made for the swallowing up of London and Westminster.</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col col-50">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is a multiple-select text-based select-in-stimulus item. Choose <u>two</u> sentences from the passage.</p>
+            </div>
+          </div>
+
+          <div class="sis-directions">
+            <svg class="sis-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 96 48">
+              <path fill="#148812" d="M22 2h68v20h-68v-20z"></path>
+              <path fill="#a7a9ac" d="M6 22h84v20h-84v-20z"></path>
+              <path fill="#fff" d="M20 0v20h-16v24h88v-44zM88 40h-80v-16h80zM24 20v-16h64v16z"></path>
+              <path fill="#000" d="M78.784 38.484l-7.937 6.567c-3.888 3.15-11.671-2.214-18.43-6.261-2.529-1.513-4.598-2.908-6.304-3.983-2.769-1.744-3.228-2.596-3.014-4.782 0.233-2.382 2.275-3.622 4.421-3.23l3.144 1.353-5.976-9.347c-0.716-1.265-1.6-2.342-2.639-3.245l-0.015-0.013s-1.724-1.724-3.080-2.945-1.286-4.041 0.358-5.621c2.703-2.614 6 0.674 7.688 2.198 1.506 1.366 2.339 1.959 3.833 4.5 0.778 1.316 1.313 2.069 1.313 2.069 0.276-0.725 0.717-1.334 1.28-1.802l0.007-0.006c1.408-1.139 3.386-1.093 4.849-0.031 0.252-0.841 0.732-1.549 1.368-2.076l0.007-0.006c1.408-1.139 3.383-1.090 4.849-0.031 0.25-0.84 0.73-1.547 1.368-2.070l0.007-0.006c1.776-1.438 4.454-0.979 5.854 0.979l5.891 11.009c4.063 9.041 1.598 16.073 1.438 16.422-0.074 0.138-0.167 0.255-0.278 0.354l-0.001 0.001z"></path>
+              <path fill="#fff" d="M68.074 44.555c-3.732 0.398-10.051-4.090-15.038-7.081 0 0-5.012-3.337-6.5-4.348-1.73-1.187-2.143-1.519-1.981-3.224 0.083-0.827 0.367-1.148 0.909-1.586 0.31-0.257 0.699-0.429 1.126-0.477l0.010-0.001c0.069-0.008 0.15-0.012 0.231-0.012 0.153 0 0.303 0.016 0.447 0.045l-0.014-0.002 5.93 2.428c0.024 0.009 0.051 0.015 0.079 0.015 0.011 0 0.021-0.001 0.032-0.002l-0.001 0c0.102-0.011 0.187-0.072 0.232-0.158l0.001-0.002c0.030-0.055 0.047-0.12 0.047-0.19 0-0.090-0.029-0.173-0.079-0.24l0.001 0.001-7.867-12.075c-0.714-1.2-1.58-2.223-2.589-3.084l-0.017-0.014s-1.776-1.316-3.132-2.78c-1.078-1.157-1.010-3.074 0.174-4.035 0.371-0.303 0.834-0.506 1.342-0.561l0.011-0.001c0.958-0.104 1.552 0.153 2.519 0.888l2.625 2.131c1.454 1.347 2.281 2.143 3.052 3.695l3.656 5.869c0.076 0.107 0.221 0.276 0.34 0.263 0.103-0.015 0.196-0.047 0.28-0.094l-0.004 0.002c0.083-0.074 0.143-0.171 0.17-0.281l0.001-0.004c0.001-0.014 0.002-0.030 0.002-0.047 0-0.096-0.028-0.186-0.077-0.261l0.001 0.002c-0.444-0.625-0.817-1.442-0.71-2.226s0.466-1.466 1.041-1.929c0.368-0.297 0.827-0.496 1.33-0.55l0.011-0.001c0.974-0.107 1.956 0.346 2.553 1.179l1.286 1.914c0.084 0.111 0.216 0.183 0.364 0.184h0c0.090-0.017 0.17-0.046 0.243-0.085l-0.005 0.002c0.089-0.076 0.156-0.188 0.156-0.239 0.006-0.062 0.086-0.15-0.037-0.413-0.306-0.704-0.817-1.393-0.71-2.174s0.471-1.469 1.041-1.929c0.366-0.298 0.823-0.497 1.324-0.55l0.011-0.001c0.979-0.11 1.963 0.346 2.563 1.187l1.191 2.011c0.239 0.239 0.358 0.181 0.478 0.166 0.062-0.006 0.269-0.129 0.318-0.168 0.147-0.125 0.024-0.542-0.098-0.713-0.447-0.618-0.698-1.335-0.582-2.122s0.466-1.457 1.041-1.914c0.366-0.305 0.826-0.509 1.33-0.565l0.011-0.001c0.979-0.107 1.966 0.349 2.55 1.182l5.896 11.006c3 7.036 1.937 13.232 1.366 14.542l-0.062 0.159-7.894 6.526c-0.514 0.401-1.148 0.646-1.895 0.729z"></path>
+              <path fill="#000" d="M67.594 45.346c-3.328 0-7.902-2.848-12.336-5.608-0.897-0.557-1.776-1.105-2.616-1.609-0.030-0.019-5.044-3.359-6.539-4.369-1.875-1.284-2.511-1.834-2.312-3.93 0.107-1.052 0.5-1.553 1.193-2.111 0.419-0.345 0.943-0.576 1.517-0.64l0.013-0.001c0.094-0.010 0.202-0.016 0.312-0.016 0.206 0 0.407 0.020 0.601 0.058l-0.020-0.003 4.75 1.931-7.158-10.986c-0.674-1.135-1.492-2.103-2.445-2.917l-0.016-0.013c-0.039-0.026-1.809-1.347-3.199-2.845-0.601-0.652-0.969-1.527-0.969-2.487 0-0.092 0.003-0.184 0.010-0.275l-0.001 0.012c0.066-0.954 0.508-1.83 1.214-2.401 0.48-0.395 1.081-0.659 1.74-0.73l0.015-0.001c1.229-0.145 2.033 0.259 3.062 1.039l2.643 2.145c1.543 1.423 2.431 2.292 3.256 3.949l2.206 3.537 0.009-0.076c0.129-0.979 0.598-1.842 1.321-2.422 0.479-0.384 1.074-0.641 1.725-0.713l0.015-0.001c1.172-0.125 2.383 0.384 3.151 1.354 0-0.003 0-0.006 0-0.010 0-0.113 0.008-0.224 0.022-0.333l-0.001 0.013c0.129-0.976 0.595-1.838 1.319-2.422 0.477-0.387 1.073-0.645 1.725-0.715l0.015-0.001c1.222-0.125 2.386 0.386 3.154 1.362 0.004-0.129 0.016-0.251 0.035-0.371l-0.002 0.016c0.131-0.974 0.601-1.831 1.321-2.402 0.475-0.389 1.070-0.65 1.722-0.719l0.014-0.001c0.103-0.011 0.223-0.017 0.344-0.017 1.202 0 2.264 0.596 2.908 1.509l0.008 0.011 5.947 11.084c3.268 7.67 1.901 14.041 1.39 15.211-0.051 0.111-0.188 0.366-0.278 0.443l-7.892 6.526c-0.619 0.484-1.358 0.781-2.209 0.889-0.035 0.011-0.078 0.020-0.121 0.025l-0.004 0c-0.168 0.019-0.363 0.030-0.56 0.030h-0zM68.075 44.555v0zM46.974 28.577c0 0.015-0.161 0.007-0.29 0.023-0.281 0.030-0.532 0.141-0.735 0.308l0.002-0.002c-0.461 0.371-0.583 0.523-0.637 1.073-0.119 1.269 0 1.384 1.653 2.516 1.486 1.007 6.494 4.341 6.494 4.341 0.816 0.489 1.701 1.039 2.608 1.601 4.209 2.621 8.984 5.563 11.831 5.364 0.036-0.011 0.079-0.019 0.122-0.024l0.003-0c0.601-0.068 1.109-0.26 1.507-0.571l7.723-6.388c0.383-0.87 1.678-6.793-1.366-13.937l-5.869-10.944c-0.371-0.522-1.1-0.875-1.791-0.783-0.361 0.039-0.682 0.183-0.94 0.4l0.003-0.002c-0.419 0.332-0.688 0.834-0.766 1.423-0.081 0.531 0.069 1.057 0.443 1.574 0.313 0.434 0.517 1.289-0.033 1.75-0.012 0.009-0.392 0.313-0.741 0.343-0.25 0.046-0.646 0.057-1.085-0.386l-1.312-2.163c-0.372-0.5-0.961-0.821-1.625-0.821-0.066 0-0.131 0.003-0.195 0.009l0.008-0.001c-0.361 0.037-0.684 0.177-0.945 0.389l0.003-0.003c-0.412 0.332-0.688 0.842-0.759 1.431-0.051 0.359 0.152 0.756 0.386 1.216 0.092 0.188 0.188 0.371 0.266 0.556 0.188 0.405 0.137 0.706 0.081 0.894 0.021 0.25-0.308 0.559-0.407 0.644-0.185 0.129-0.407 0.221-0.646 0.259l-0.009 0.001c-0.416 0.045-0.861-0.184-1.085-0.527l-1.277-1.903c-0.427-0.589-1.106-0.924-1.836-0.844-0.364 0.038-0.69 0.179-0.954 0.393l0.003-0.003c-0.409 0.328-0.679 0.837-0.756 1.427-0.087 0.634 0.323 1.329 0.574 1.688 0.137 0.195 0.218 0.437 0.218 0.699 0 0.061-0.004 0.121-0.013 0.179l0.001-0.007c-0.021 0.197-0.188 0.55-0.451 0.761s-0.679 0.25-0.688 0.25c-0.392 0.031-0.75-0.171-1.034-0.589l-3.677-5.9c-0.744-1.489-1.474-2.197-2.924-3.538l-2.586-2.098c-0.849-0.644-1.25-0.793-1.955-0.722-0.367 0.040-0.695 0.183-0.96 0.4l0.003-0.003c-0.38 0.313-0.61 0.778-0.649 1.319-0.004 0.047-0.006 0.102-0.006 0.158 0 0.557 0.213 1.064 0.562 1.444l-0.001-0.002c1.294 1.393 3.011 2.674 3.029 2.687 1.106 0.937 2.040 2.034 2.775 3.263l0.033 0.059 7.848 12.044c0.127 0.184 0.202 0.412 0.202 0.658 0 0.199-0.049 0.386-0.137 0.549l0.003-0.006c-0.16 0.302-0.453 0.515-0.799 0.562l-0.005 0.001c-0.028 0.002-0.060 0.003-0.092 0.003-0.134 0-0.264-0.019-0.387-0.054l0.010 0.002zM52.866 30.14c0 0.004 0.006 0.008 0.006 0.011zM53.366 19.77c0.003 0.005 0.006 0.008 0.009 0.012l-0-0c-0.002-0.003-0.004-0.007-0.006-0.010l-0-0zM59.513 17.449c-0.007 0.039-0.011 0.085-0.012 0.132v0.001c0.002-0.049 0.006-0.095 0.013-0.14l-0.001 0.007zM60.132 17.278l0.009 0.014z"></path>
+            </svg>
+            <p>Tap a sentence to select it.</p>
+          </div>
+
+          <div data-min-selections="2" data-max-selections="2" data-selection-unit-singular="sentence" data-selection-unit-plural="sentences" data-placeholders="true" data-columns="1" class="response-area sis-response-area sis-multiple-select sis-no-placeholders">
+            <p>Your choices will appear here.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="childItem content-container">
+        <div class="col col-single">
+          <div class="item-stem-wrapper review review-unanswered">
+            <div class="alert alert-warning alert-no-border">
+              <p><b>You have reached the end of this section.</b>It looks like you have not answered the following <span id="review-questions-span">questions</span>.</p>
+            </div>
+
+            <ul class="list-unordered list-review">
+            </ul>
+            <div class="stem-paragraph">
+              <p>You can use the tabs at the top to go back to the questions in this section.</p>
+            </div>
+          </div>
+
+          <div class="item-stem-wrapper review review-answered" style="display: none;">
+            <div class="alert alert-timer alert-no-border">
+              <p><b>You have reached the end of this section.</b>You can use the tabs at the top to go back to the questions in this section.</p>
+            </div>
+          </div>
+
+          <div class="response-area review">
+            <div>
+              <div class="stem-paragraph">
+                <p>When you are finished, you can go on to the next section at any time.</p>
+              </div>
+              <div class="stem-paragraph">
+                <p>You cannot return to this section after you go on.</p>
+              </div>
+            </div>
+            <button class="btn btn-next-section">Go on to the next section</button>
+          </div>
+        </div>
+      </div>
+
+      <button class="scroll-indicator more hidden"><span></span></button>
+
+
+    </div>
+    <!--contentarea-inner ends-->
+  </div>
+  <!--Content area ends-->
+
+  <div id="ee-wrapper" class="hidden">
+    <div class="ee-tabarea">
+      <ul class="ee-tabs"></ul>
+      <button id="ee-btn-close" class="ee-btn" tabindex="-1"></button>
+    </div>
+    <div class="ee-btnarea" data-title="Home">
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn ee-numeric-btn" disabled>7</button>
+          <button class="ee-btn ee-numeric-btn" disabled>8</button>
+          <button class="ee-btn ee-numeric-btn" disabled>9</button>
+          <button class="ee-btn ee-numeric-btn" disabled>0</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn ee-numeric-btn" disabled>4</button>
+          <button class="ee-btn ee-numeric-btn" disabled>5</button>
+          <button class="ee-btn ee-numeric-btn" disabled>6</button>
+          <button class="ee-btn ee-numeric-btn" disabled>.</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn ee-numeric-btn" disabled>1</button>
+          <button class="ee-btn ee-numeric-btn" disabled>2</button>
+          <button class="ee-btn ee-numeric-btn" disabled>3</button>
+          <button class="ee-btn ee-numeric-btn" disabled>,</button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>+</button>
+          <button class="ee-btn ee-numeric-btn" disabled>−</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>×</button>
+          <button class="ee-btn" disabled>÷</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>±</button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>=</button>
+          <button class="ee-btn" disabled>&#60;</button>
+          <button class="ee-btn" disabled>&#62;</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>≠</button>
+          <button class="ee-btn" disabled>≤</button>
+          <button class="ee-btn" disabled>≥</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-approx-equal" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>(</button>
+          <button class="ee-btn" disabled>)</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>°</button>
+          <button class="ee-btn" disabled>:</button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled>%</button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-stacked-fraction" disabled></button>
+          <button class="ee-btn icon-ee-square-root" disabled></button>
+          <button class="ee-btn icon-ee-exponent" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-vertical-bars" disabled></button>
+          <button class="ee-btn icon-ee-n-root" disabled></button>
+          <button class="ee-btn icon-ee-sequence" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-bar-accent" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled><i>π</i></button>
+          <button class="ee-btn icon-ee-number-e" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn" disabled><i>i</i></button>
+          <button class="ee-btn icon-ee-infinity" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-backspace ee-numeric-btn" disabled></button>
+        </div>
+      </div>
+    </div>
+    <div class="ee-btnarea" data-title="More Symbols">
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-tilde" disabled></button>
+          <button class="ee-btn icon-ee-congruence" disabled></button>
+          <button class="ee-btn icon-ee-parallel" disabled></button>
+          <button class="ee-btn icon-ee-perpendicular" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-left-right-accent" disabled></button>
+          <button class="ee-btn icon-ee-right-accent" disabled></button>
+          <button class="ee-btn icon-ee-bar-accent" disabled></button>
+          <button class="ee-btn icon-ee-curve-accent" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-angle" disabled></button>
+          <button class="ee-btn icon-ee-triangle" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-log" disabled></button>
+          <button class="ee-btn icon-ee-number-e" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-log-n" disabled></button>
+          <button class="ee-btn icon-ee-e-n-power" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-ln" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-sine" disabled></button>
+          <button class="ee-btn icon-ee-cosine" disabled></button>
+          <button class="ee-btn icon-ee-tangent" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-secant" disabled></button>
+          <button class="ee-btn icon-ee-cosecant" disabled></button>
+          <button class="ee-btn icon-ee-cotangent" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-arcsine" disabled></button>
+          <button class="ee-btn icon-ee-arccosine" disabled></button>
+          <button class="ee-btn icon-ee-arctangent" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-alpha" disabled></button>
+          <button class="ee-btn icon-ee-mu" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-beta" disabled></button>
+          <button class="ee-btn icon-ee-sigma" disabled></button>
+        </div>
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-theta" disabled></button>
+          <button class="ee-btn icon-ee-delta" disabled></button>
+        </div>
+      </div>
+      <div class="ee-btnarea-group">
+        <div class="ee-btnarea-row">
+          <button class="ee-btn icon-ee-backspace" disabled></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Equation editor ends-->
+
+  <div class="dialog hidden" id="modal-validation" role="dialog">
+    <div class="dialog-content">
+      <div class="stem-paragraph">
+        <p>You can only enter a number between <span></span> and <span></span>.</p>
+      </div>
+      <button class="btn close-dialog">OK</button>
+    </div>
+  </div>
+
+  <div class="dialog dialog-flex-row hidden" id="modal-next-section" role="dialog">
+    <div class="dialog-content">
+      <div class="alert alert-warning alert-no-border">
+        <p>You have 30 minutes left to complete or review your work in this section. You will not be able to return once you go on to the next section.</p>
+      </div>
+      <div class="stem-paragraph">
+        <p>Are you sure you want to go on to the next section?</p>
+      </div>
+      <button class="btn close-dialog">Keep working<br/>on this section</button>
+      <button class="btn close-dialog disabled">Go on to the<br/>next section</button>
+    </div>
+  </div>
+
+  <div class="sis-alert" role="alert" style="display: none;">
+    <div>
+      <p>You can only choose <u>two</u> sentences.</p>
+      <p>You must clear one sentence before you can choose another.</p>
+    </div>
+    <button class="sis-alert-close" role="button"></button>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../lib/jquery-ui.min.js"></script>
+  <script src="../lib/jquery.ui.rotatable.min.js"></script>
+  <script src="../lib/jquery.ui.touch-punch.min.js"></script>
+  <script src="../lib/fabric.min.js"></script>
+  <script src="../response-type-matching/response-type-matching.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../indicators/scroll-indicator.js"></script>
+  <script src="../system-toolbar/system-toolbar.js"></script>
+  <script src="../navigation/tabs.js"></script>
+  <script src="../dialogs/dialogs.js"></script>
+  <script src="../checkboxes-and-radios/checkboxes-and-radios.js"></script>
+  <script src="../response-type-mc/response-type-mc.js"></script>
+  <script src="../response-type-text-entry/response-type-text-entry.js"></script>
+  <script src="../response-type-zones/response-type-zones.js"></script>
+  <script src="../response-type-grid/response-type-grid.js"></script>
+  <script src="../response-type-inline-choice/response-type-inline-choice.js"></script>
+  <script src="../response-type-sis/response-type-sis.js"></script>
+  <script src="../response-type-selectable-table/response-type-selectable-table.js"></script>
+  <script src="../short-text-popups/short-text-popups.js"></script>
+  <script src="../stim-ruler/stim-ruler.js"></script>
+  <script src="../stim-slider/stim-slider.js"></script>
+  <script src="../stim-image-layers/stim-image-layers.js"></script>
+  <script src="../equation-editor/equation-editor.js"></script>
+  <script src="../tts/tts.js"></script>
+</body>
+
+</html>

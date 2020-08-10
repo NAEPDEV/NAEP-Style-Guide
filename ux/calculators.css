@@ -1,0 +1,55 @@
+/**
+* @stylesheet calculators.css Calculators
+* @parent ux.features
+* NAEP provides two on-screen calculators, which are available in calculator-enabled blocks in math and science.
+* * The TI-108 is provided at grade 4 for math and at all grades for science.
+* * The TI-30XS is provided at grades 8 and 12 for math.
+*
+* Both calculators are sized such that their buttons are 46px tall to ensure they adhere to the minimum size specification for [touch-targets.md].
+*
+* Both calculators are accessed by selecting the __Calculator__ button in the [system-toolbar.css]. When toggled on, a calculator will appear at the upper-left corner of the content area, regardless of its position when it was toggled off.
+*
+* Both calculators can be dragged within the visible content area when the test taker clicks and holds or taps and holds the calculator body. (To avoid potentially conflicting actions, calculators cannot be dragged by their buttons.)
+*
+* Calculators appear on top of all other content. They are not allowed to overlap the [equation-editor.css], though a calculator and the Equation Editor can be on-screen simultaneously. Calculators are automatically toggled off when the test taker activates the scratchwork tool.
+**/
+
+div.calculatorDiv.calc-ti-30xs svg,
+div.calculatorDiv.calc-ti-108 svg {
+  position: relative;
+}
+
+/**
+* @styles ti-108 TI-108
+* Styling and behavior adhere to the TI defaults with the following exceptions, which ensure color-contrast compliance. (See the [colors.md] page for more information about color contrast.)
+* * The background color of the red buttons has been slightly tweaked to `#DB1528`.
+* * An off-white `#F2F2F2` border has been added to red buttons.
+* @iframe ux/demos/calculator/ti-108.html 520
+**/
+
+div.calculatorDiv.calc-ti-108 {
+  margin: 0 auto;
+  width: 315px;
+  z-index: 9;
+}
+
+.TI108 .ti_redKey {
+  background-color: #DB1528;
+  stroke: #F2F2F2;
+}
+
+  /**
+  * @styles ti-30xs TI-30XS
+  * Styling and behavior adhere to the TI defaults with the following exceptions, which ensure color-contrast compliance. (See the [colors.md] page for more information about color contrast.)
+  * * The border color of the non-white buttons has been slightly tweaked to `#B7BDC1`.
+  * @iframe ux/demos/calculator/ti-30xs.html 790
+  **/
+
+div.calculatorDiv.calc-ti-30xs {
+  margin: 0 auto;
+  width: 387px;
+  z-index: 9;
+}
+
+.TI30XS .ti_generalKey, #calculatorDiv .TI30XS .ti_fourFunctionKey, #calculatorDiv .TI30XS .ti_arrowKey {
+  stroke: #B7BDC1; }

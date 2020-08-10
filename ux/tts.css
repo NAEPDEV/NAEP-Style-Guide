@@ -1,0 +1,114 @@
+/**
+* @stylesheet tts.css Text-to-speech
+* @parent ux.features
+* When the test taker activates text-to-speech (TTS) mode via the __Read Aloud__ button on the [system-toolbar.css], speakable units (i.e., chunks of content that can be read) become active. When the test taker selects a TTS speakable unit, the unit’s text is read by the system’s TTS engine.
+*
+* In TTS mode, most user interface elements are disabled, with the exception of navigational elements (e.g., the __Back__ and __Next__ buttons in the system toolbar). When a test taker navigates to another item or screen in TTS mode, TTS turns off.
+*
+* Use the <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;"/>__Text-to-speech__ button at the top of the page to see how TTS affects demo content throughout the guide.
+* @iframe ux/demos/response-type-mc/response-type-mc-ss.html 485
+**/
+
+/**
+* @styles 0-tts-speakable-units Speakable Units
+* TTS speakable units have the following states.
+* * _Default_. Present when TTS mode is off. There is no visual indicator of speakable units.
+* * _Active_. Present when TTS mode is on. Speakable units are surrounded by a dark blue `#032855` border. (Note that there is no hover state.)
+**/
+
+/**
+* @styles 0-tts-special-interactions Special Interactions
+* ### Inline-choice dropdowns
+*
+* A sentence or paragraph containing an [response-type-inline-choice.css] dropdown behaves in the following way when selected in TTS mode:
+* * If the test taker has made a selection, it is read along with the rest of the sentence or paragraph.
+* * If the test taker has _not_ made a selection,
+*   * The sentence or paragraph is read up to the dropdown.
+*   * Pause 1s.
+*   * The dropdown opens automatically.
+*   * Each option in the dropdown is read in sequence, with a 0.5s pause between options.
+*   * The dropdown closes automatically.
+*   * The rest of the sentence or paragraph is read.
+*
+* ### Number line, grid-based, and graph-based response types
+* To better align with the TTS behavior of static grids and graphs, which are contained a single speakable unit, number line, grid-based, and graph-based response areas are also contained in a single speakable unit, including:
+* * [response-type-bar-graph.css]
+* * [response-type-box-whisker.css]
+* * [response-type-figure-transform.css]
+* * [response-type-fraction-model.css]
+* * [response-type-function-graph.css]
+* * [response-type-graph-transform.css]
+* * [response-type-line-point-graph.css]
+* * [response-type-number-line.css]
+* * [response-type-polygon-graph.css]
+* * [response-type-shape-builder.css]
+* * [response-type-system-of-equations.css]
+**/
+
+.response-area-iic .mc-option.tts-active .mc-content {
+  border-color: transparent !important;
+  z-index: -1;
+}
+
+.stimulus-paragraph p.tts-active,
+.stem-paragraph-inner.tts-active,
+.stem-paragraph p.tts-active,
+.standalone-image.tts-active,
+.footnote-paragraph.tts-active,
+.list-unordered li.tts-active,
+.mc-option.tts-active .mc-content,
+table.grid tr.tts-active .grid-content,
+.match-option-text.tts-active,
+.alert p.tts-active,
+.cta-message.tts-active,
+.char-portrait figcaption p.tts-active,
+.char-text p.tts-active,
+.char-text h3 span.tts-active,
+.sis-selection-header p.tts-active,
+.wizard h3.tts-active,
+.wizard p.tts-active,
+.response-area-iic.tts-active,
+.stim-table tr.tts-active .table-content,
+.match-background.tts-active {
+  border-color: #032855 !important;
+  cursor: pointer !important;
+  pointer-events: auto;
+  position: relative;
+  user-select: none;
+  z-index: 4; }
+
+.mc-option.tts-active:hover {
+  border-color: #ccc; }
+.mc-option.mc-selected.tts-active:hover {
+  border-color: #198CFF; }
+
+table.grid tbody tr.tts-active:hover th,
+table.grid tbody tr.tts-active:hover td {
+  border-color: #ccc;
+  border-style: solid;
+  outline-color: transparent;
+}
+
+table.grid tbody tr.tts-active.grid-row-selected th,
+table.grid tbody tr.tts-active.grid-row-selected td {
+  border-color: #198CFF;
+  border-style: double;
+}
+
+.stim-table tbody tr.tts-active:hover {
+  background: none; }
+.stim-table tbody tr.tts-active:nth-of-type(even):hover {
+  background: #f2f2f2; }
+.stim-table tbody tr.selected.tts-active:hover,
+.stim-table tbody tr.selected.tts-active:nth-of-type(even):hover {
+  background: #9BBCE7; }
+
+tr.tts-active th.header:hover {
+  background: none;
+}
+
+
+.standalone-image {
+  border: 0.1em solid transparent;
+  transition: border 0.2s;
+}

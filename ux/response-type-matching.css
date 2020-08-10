@@ -1,0 +1,191 @@
+/**
+* @stylesheet response-type-matching.css Matching
+* @parent ux.response-types
+* The matching response type allows test takers to categorize, sequence, or otherwise sort options by dragging them to drop targets.
+**/
+
+/**
+* @styles 0-matching-draggables Draggable Objects
+* Some draggable objects are contain text, while others contain images. The behavior of text and image objects is identical, and both are sized for easy use with touch.
+* ### Text
+* Text objects are blue `#246BB2` with bold white `#FFFFFF` text to distinguish them from non-interactive text elements. Text objects’ dimensions vary according to the size of their content, but they have a maximum width of approximately 45 characters to keep them from becoming unwieldy.
+* ### Images
+* Image object styling (e.g., inclusion of a label, use of borders) varies depending on the needs of the item. However, image objects are most frequently placed in tiles with a gray `#808080` border and rounded corners to help indicate that they are interactive.
+* <img src="demos/response-type-matching/source-tiles-1.png"/>
+* <img src="demos/response-type-matching/source-tiles-2.png"/>
+* ### States
+* Draggable objects have the following states.
+* * _Unplaced_. All objects have a drop shadow.
+* * _Active_. While a draggable object is being dragged, the size of its drop shadow is increased to emphasize that it is hovering above the plane of the response area. A brightness filter is applied to lighten the object slightly.
+* * _Placed_. The drop shadow and filter are removed to convey that the object has been successfully placed in a drop target.
+* * _Disabled_. When a modal system tool (e.g., Scratchwork) is enabled, draggable objects become semi-transparent and lose their drop shadows to indicate that they are inactive.
+* ### Drag behavior
+* If more than 50% of an object is within the bounds of a drop target when the object is released, the object will be placed in the target. If an object is not successfully placed in a drop target, it will animate back to its original position in the source tray.
+* ### Object reuse
+* Item authors specify whether draggable objects can be used once, a specified number of times, or as many times as the test taker wishes. When an object is dragged, a copy is left in the source tray until the specified number of uses is reached.
+**/
+
+.response-area-match {
+  background: #fff;
+  position: relative;
+  transition: background 0.2s;
+  z-index: 4;
+}
+
+.match-background {
+  border: 0.1em solid transparent;
+}
+
+.match-option {
+  cursor: -webkit-grab;
+  cursor: grab;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0.25em;
+  max-width: 20em;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s, opacity 0.2s;
+  user-select: none; }
+.match-option.hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.ui-draggable-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.match-option.match-option-text {
+  background: #246BB2;
+  border: 0.1em solid transparent;
+  color: #fff;
+  box-shadow: 0 0.11em 0.28em rgba(0, 0, 0, 0.2), 0 0.11em 0.55em rgba(0, 0, 0, 0.15); }
+.match-option.match-option-text.ui-draggable-dragging {
+  box-shadow: 0 0.14em 0.19em rgba(0, 0, 0, 0.18), 0 0.11em 0.31em rgba(0, 0, 0, 0.15);
+  filter: brightness(1.3);
+  z-index: 10; }
+.match-option.match-option-text[disabled],
+.match-option.match-option-text.inactive {
+  background: rgba(36, 107, 178,0.6);
+  box-shadow: none;
+  cursor: default; }
+.match-option.match-option-text.tts-active[disabled] {
+  cursor: pointer; }
+
+.match-option.match-option-text p {
+  margin: 0;
+  padding: 0.65em 1.4em; }
+.match-option-text[disabled] p,
+.match-option.match-option-text.inactive p {
+  pointer-events: none;
+}
+
+.match-option.match-option-img img {
+  filter: drop-shadow(0 0.11em 0.28em rgba(0, 0, 0, 0.16)) drop-shadow(0 0.11em 0.56em rgba(0, 0, 0, 0.12));
+  transition: filter 0.2s; }
+.match-option.match-option-img.ui-draggable-dragging img {
+  filter: brightness(1.3) drop-shadow(0 0.28em 0.39em rgba(0, 0, 0, 0.18)) drop-shadow(0 0.22em 0.61em rgba(0, 0, 0, 0.15));
+  z-index: 10; }
+.match-option[disabled] img,
+.match-option.inactive img {
+  box-shadow: none;
+  filter: none;
+  opacity: 0.6;
+  pointer-events: none; }
+
+.match-drop-target .match-option,
+.match-drop-target .match-option img {
+  box-shadow: none;
+  filter: none;
+}
+
+/**
+* @styles 1-matching-source-trays Source Trays
+* Draggable objects are initially placed in a source tray, which typically appears above or to the left of the drop targets. Source trays have rounded corners, a light gray `#ECECEC` background, and a darker gray `#BBBBBB` border to visually differentiate them from surrounding content.
+*
+* Objects are placed in rows. A new row begins when there is not enough room on the current row to contain the next object. Objects are vertically aligned to the top of their row. Source trays have padding—equivalent to 0.5x the default line height—between their edges and the edges of contained objects.
+* ### Source tray with text objects
+* @iframe ux/demos/response-type-matching/matching-text-objects.html 260
+*
+*
+* ### Source tray with image objects
+* @iframe ux/demos/response-type-matching/matching-image-objects.html 250
+*
+*
+* ### SBT Exception <img src="static/img/icon-asterisk.svg"/>
+* Because SBT screens are often complex and have space constraints, the source tray may be omitted when needed. Instead, draggable objects should leave behind silhouettes to indicate their original positions.
+* <img src="demos/response-type-matching/silhouettes.png"/>
+**/
+
+.match-source-tray {
+  align-items: flex-start;
+  background: #ececec;
+  border: 0.05em solid #bbb;
+  border-radius: 0.2em;
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  min-height: 4.25em;
+  padding: 0.5em;
+  transition: background 0.2s, border 0.2s;
+}
+
+/**
+* @styles 2-matching-drop-targets Drop Targets
+* Drop targets are areas where draggable objects may be placed. A visual indicator of some kind (e.g., a box, a table cell) is provided to indicate the locations of drop targets. The nature of the indicator will depend on the context of the item.
+*
+* Drop targets can be configured to allow a single object or multiple objects. Targets are sized to convey to test takers the maximum number of objects allowed.
+* ### Single-use
+* Objects are centered when placed in single-use drop targets, which are typically sized so that the item’s largest object just fits.
+*
+* When the test taker attempts to drag an object to a single-use drop target that is already populated by a source, the existing source will be replaced by the new one and will return to its original position in the source tray.
+*
+* ### Multiple-use
+* Objects are positioned in left-justified rows when placed in multiple-use drop targets, automatically wrapping to the next row as needed. A small amount of padding is added to the target so that objects don’t crowd its edges. Once a target has been filled, it becomes inactive; if the test taker attempts to drag an additional object to it, it bounces back to its previous position. To change the response, the test taker must drag one of the placed objects back to the source tray.
+*
+* When the test taker attempts to drag an object to a multiple-use drop target that is already populated by one or more sources,
+* * If the drop target contains less than the maximum number of sources, the new source will be placed after the existing source(s).
+* * If the drop target contains the maximum number of sources, the new source will not be placed; it will instead return to its previous position.
+*
+* ### States
+* Drop targets have the following states.
+* * _Drag_. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue `rgba(41, 107, 204, 0.2)` when the test taker begins to drag an object.
+* * _Hover_. To indicate that a draggable object will be placed successfully, a blue `#296BCC` border is added to an active drop target when an object is dragged over it.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>._
+* @iframe ux/demos/response-type-matching/matching-no-groups.html 475
+**/
+
+.match-drop-target {
+  align-content: flex-start;
+  align-items: flex-start;
+  border: 0.15em solid transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.match-drop-target.draghover {
+  border-color: #296bcc;
+}
+
+.match-drop-target.dragactive {
+  background-color: rgba(41, 107, 204, 0.2);
+}
+
+.match-drop-target[data-max-selections="1"] {
+  align-items: center;
+  justify-content: center;
+}
+
+/**
+* @styles 3-matching-groups Groups
+* Draggable objects and drop targets can be assigned to groups when it is desirable to limit the ways that test takers can respond to a matching item. Features:
+* * A separate source tray is provided for each group of draggable objects.
+* * Objects can only be dragged to targets in the same group.
+* * When the test taker starts to drag an object, only targets in the same group will light up.
+*
+* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-groups-full.html" target="_blank">here</a>._
+* @iframe ux/demos/response-type-matching/matching-groups.html 570
+**/

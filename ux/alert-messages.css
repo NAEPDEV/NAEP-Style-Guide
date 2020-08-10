@@ -1,0 +1,55 @@
+/**
+* @stylesheet alert-messages.css Alert Messages
+* @parent ux.ui-elements
+* Alert messages provide a way to visually emphasize critical information. They have three elements:
+* * _An icon._ The icon is presented to the left of the alert text on a square background with rounded corners. The background color aligns with the nature of the alert (e.g., informational alerts are blue). (See the [colors.md] page for more information about NAEP’s color palette.)
+* * _The alert text._ If the alert contains more than one sentence, the first sentence contains the most essential information and is bolded.
+* * _A border._ The border may be omitted in contexts where it is not needed to differentiate the alert from surrounding content.
+* @iframe ux/demos/alert-messages/alert-messages.html 350
+**/
+
+.alert {
+  align-items: center;
+  border: 0.05em solid #bbb;
+  border-radius: 0.2em;
+  display: inline-flex;
+  margin: 0 0 1.5em 0.25em;
+  padding: 0.5em 1.5em 0.5em 0.5em; }
+.alert.alert-no-border {
+  border-color: transparent; }
+
+.alert:before {
+  align-items: center;
+  align-self: stretch;
+  background: #2978c6;
+  border-radius: 0.1em;
+  color: #fff;
+  content: '\e907';
+  display: flex;
+  font-family: 'icons';
+  font-size: 2em;
+  margin-right: 0.5em;
+  padding: 0.25em 0.3em; }
+.alert.alert-raise-hand:before {
+  content: '\e946'; }
+.alert.alert-warning:before {
+  background: #EDC87E;
+  color: #444;
+  content: '\e93d'; }
+.alert.alert-timer:before {
+  background: #adcceb;
+  color: #444;
+  content: '\e93b'; }
+
+.alert p {
+  border: 0.1em solid transparent;
+  display: inline-block;
+  margin: 0;
+  padding: 0 0.1em;
+  transition: border 0.2s;
+}
+
+.alert b {
+  display: block;
+  margin-bottom: 0.75em;
+}

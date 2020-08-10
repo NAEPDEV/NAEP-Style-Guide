@@ -1,0 +1,124 @@
+/**
+* @stylesheet response-type-text-entry.css Text Entry
+* @parent ux.response-types
+* The text entry response types (fill-in-the-blank, extended text, and numeric entry) allow test takers to respond to an item by entering text into a field.
+*
+* User-entered text in all text entry fields is the same size, color, and typeface as the surrounding text. Test takers are not allowed to resize text entry fields. Auto-complete, auto-capitalize, auto-correct, and spell check are disabled for all text entry fields.
+**/
+
+.extendedtext,
+.fib,
+.numeric-entry {
+  background: #fff;
+  border: 0.05em solid #767676;
+  box-shadow: inset 0 0 0.19em #aaa;
+  color: inherit;
+  font: inherit;
+  position: relative;
+  resize: none;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  z-index: 4;
+}
+
+/**
+* @styles 0-text-entry-states Field States
+* Text entry fields have the following states.
+* * _Default_. Text extry fields have a gray `#767676` border and an inset shadow to help the test taker identify them as active controls. No placeholder text (e.g., “Type your answer here.”) is provided.
+* * _Focus_. Since the dotted outline typically used to indicate focus (as described on the [indicators.css] page) can be difficult to discern next to the text field border, the border is changed to dark blue `#0068D1`, a light blue `rgba(0, 104, 209, .4)` glow is added, and the inset drop shadow is removed.
+* * _Disabled_. The drop shadow is removed, the border becomes dark gray `#D0D0D0`, and the background becomes light gray `#E5E5E5`.
+**/
+
+input[type=text]:hover,
+textarea:hover {
+  border-color: #383838;
+}
+
+textarea.extendedtext:focus,
+input[type=text].fib:focus,
+input[type=text].numeric-entry:focus {
+  border-color: #0068D1;
+	box-shadow: 0 0 0.02em 0.07em rgba(0, 104, 209, .4);
+	outline: none;
+}
+
+table.grid input[type=text] {
+  margin-bottom: 0.35em;
+}
+
+.extendedtext[disabled],
+.fib[disabled],
+.numeric-entry[disabled] {
+  background: #e5e5e5;
+  background: rgba(0,0,0,0.1);
+  border-color: #d0d0d0;
+	border-color: rgba(0,0,0,0.09);
+  box-shadow: none;
+  pointer-events: none;
+}
+
+/**
+* @styles 1-text-entry-max-character Max Character Limit
+* The test taker can enter up to 150 characters in a Fill-in-the-blank field and 3,000 characters in an Extended Text field. If the test taker attempts to enter or paste more than the maximum number of characters, entry/pasting is prevented, and the __Max-character Limit__ modal dialog is displayed. (See the [dialogs.css] page for information about dialog styles and behavior.) Content of the dialog:
+* > You have reached the maximum amount you can type.
+* >
+* > To type something else, you must remove some of what you already typed.
+**/
+
+/**
+* @styles 2-text-entry-fib Fill-in-the-blank
+* Fill-in-the-blank entry fields (text inputs) are a single line tall and are shown in-line with item text. They have left and right margins to distinguish them from surrounding content. Individual field widths are set based on the length of the expected response or the available space.
+*
+* If the test taker enters more characters than will fit in the field, the response scrolls beyond the field’s left edge, as is typical on the web.
+*
+* In the math assessment, fill-in-the-blank field height is approximately 3x the line height to accommodate stacked fractions.
+* @iframe ux/demos/response-type-text-entry/fib.html 420
+**/
+
+.fib,
+.numeric-entry {
+  margin: 0.13em;
+  padding: 0.06em 0.13em;
+}
+
+.fib.math {
+  height: 3.25em;
+  vertical-align: baseline;
+}
+
+/**
+* @styles 3-text-entry-et Extended Text
+* Extended Text entry fields (text areas) are multiple lines tall and stand alone (i.e., not in-line with text). They are left-justified with item text and take up the full width of the column, or the width of 50 zeros, whichever is smaller. Individual field heights are set based on the length of the expected response or the available space.
+*
+* If the test taker enters more characters than will fit in the field, a vertical scrollbar appears, and the response scrolls above the field’s top edge, as is typical on the web. (See the [navigation.css] page for information about scrollbar styling.)
+* @iframe ux/demos/response-type-text-entry/extended-text.html 420
+**/
+
+.extendedtext {
+  display: block;
+  margin: 0;
+  max-width: 50ch;
+  padding: 0.14em;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+/**
+* @styles 3-text-entry-numeric Numeric Entry
+* When a Numeric Entry field is provided, the system runs one or more types of validation on the response entered by the test taker, as specified by the item author. If the response does not validate, a modal dialog is displayed providing information about the nature of the validation error. (See the [dialogs.css] page for information about modal dialog styles and behavior.)
+* * _Basic numeric validation (in cognitive subjects)_. The system checks whether the response is a number, a comma, a period, or a minus sign. (This is the only validation type available in cognitive subjects.) Error message:
+* > You can only enter numbers or the following symbols.
+* >
+* > , . -
+* * _Basic numeric validation (in SQ)_. The system checks whether the response is a number. (Run by default on SQ Numeric Entry fields when no other validation type is defined.) Error message:
+* > You can only enter numbers.
+* * _Number of digits_. The system checks whether the response contains the specified number of digits. Error message:
+* > You can only enter `num-of-digits` numbers.
+* * _Minimum value_. The system checks whether the response is greater than or equal to the specified value. Error message:
+* > You can only enter a number that is `min-value` or more.
+* * _Maximum value_. The system checks whether the response is less than or equal to the specified value. Error message:
+* > You can only enter a number that is `max-value` or less.
+* * _Range_. The system checks whether the response is within the specified range. Error message:
+* > You can only enter a number between `min-value` and `max-value`.
+*
+* Aside from the added validation functionality, Numeric Entry fields have the same behavior as Fill-in-the-blank fields. Numeric Entry fields also have the same appearance as Fill-in-the-blank, except that Numeric Entry fields are _always_ one line height tall, even in the math assessment.
+**/

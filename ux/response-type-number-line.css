@@ -1,0 +1,302 @@
+/**
+* @stylesheet response-type-number-line.css Number Line
+* @parent ux.response-types
+* The number line response type allows test takers to respond to an item by adding point(s), line segment(s), ray(s), or line(s) to a provided number line.
+**/
+
+/**
+* @styles 0-nl-presentation Presentation
+* ### Number Line
+* The number line is composed of the following elements.
+* * A thick black (`#000000`) horizontal line with arrowheads
+* * Black (`#000000`) major tick marks, 1.833x the base font size tall
+* * Gray (`#4D4D4D`) minor tick marks, 1.25x the base font size tall (optional)
+* * Tick mark labels (provided for major ticks marks only)
+* @iframe ux/demos/response-type-number-line/number-line-bare.html 160
+*
+*
+* ### Points & Lines
+* Points, line segments, rays, and lines have the same behavior and styling as interactive points and lines elsewhere in system (see the [points-lines-polygons.css] page), with the following exceptions:
+* * Number Line objects are a lighter blue (`#0084FF`) to provide more differentiation from the number line, which is thicker than lines found in [coordinate-grids.css].
+* * When the cursor is over line segments, rays, and lines, a gray `#575757` border around the entire object is shown rather than focus rings around the attached points. This difference accommodates lines, which do not have points in the Number Line response type.
+**/
+
+/**
+* @styles 1-nl-default Default Variant
+* In the default variant, test takers drag objects to the number line. Objects are provided above the number line in a source tray, as seen in the [response-type-matching.css] response type.
+*
+* ### Dragging Behavior
+* * An invisible bounding box extends approximately 2x the base font size (see the [typography.css] page) above and below the number line. Once a test taker drags an object into this bounding box, the object snaps to the closest tick mark(s) on the number line.
+* * While an object is being dragged within the bounding box, the object continues to snap to tick marks, and helper label(s) appear above the object’s point(s) indicating the values of the snapped tick marks.
+* * If a test taker drags an object outside the bounding box, the object returns to the source tray.
+*
+* ### Controls
+* * A “No solution” option is left-justified beneath the number line. The option has the same styling as [response-type-mc.css] options. When the test taker selects the option, any objects on the number line return to the source tray.
+* * __Undo__ and __Reset__ buttons  are right-justified beneath the number line. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+*   * The __Undo__ button reverts the last change to the number line.
+*   * The __Reset__ button restores the number line to its initial state.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-number-line/number-line-default.html 580
+**/
+
+/*------ LAYOUT ------*/
+.response-area-number-line .mc {
+  margin: 0;
+}
+
+.response-area-iic.response-area-number-line .btn-wrapper {
+  margin-top: 0;
+}
+
+.response-area-number-line .match-source-tray {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 1.5em;
+  max-height: 12em;
+  max-width: 26em;
+  padding: 0.25em;
+}
+
+.number-line {
+  display: block;
+  margin: 0 auto;
+}
+
+.nl-control-wrapper {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75em;
+}
+
+
+/*------ NUMBER LINE ------*/
+.number-line text {
+  font-family: Calibri, sans-serif;
+  font-size: 24px;
+  transition: fill 0.2s;
+}
+
+.nl-main line {
+  pointer-events: none;
+  stroke: #000;
+  stroke-width: 4px;
+  transition: stroke 0.2s;
+}
+
+.nl-main polygon {
+  fill: #000;
+  transition: fill 0.2s;
+}
+
+.nl-ticks-major {
+  pointer-events: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+.nl-ticks-minor {
+  pointer-events: none;
+  stroke: #4d4d4d;
+  stroke-linecap: round;
+  stroke-width: 2px;
+  transition: stroke 0.2s;
+}
+
+
+/*------ POINTS & SEGMENTS ------*/
+.nl-segment,
+.nl-point {
+  cursor: move;
+  margin: 0.25em;
+  outline: none;
+  user-select: none; }
+.nl-point {
+  margin: 0.083em; }
+.nl-segment[disabled],
+.nl-point[disabled] {
+  pointer-events: none; }
+
+.nl-point {
+  cursor: pointer;
+}
+
+.nl-segment line {
+  stroke: #0084ff;
+  stroke-width: 9px;
+  transition: stroke 0.2s; }
+.nl-segment:active line {
+  stroke-width: 13px; }
+.nl-segment[disabled] line {
+  stroke: #949494; }
+
+.nl-segment polygon,
+.nl-segment circle,
+.nl-point circle:not(.iic-focus-ring) {
+  fill: #0084ff;
+  transform-origin: center;
+  transition: fill 0.2s, stroke 0.2s; }
+.nl-segment:active polygon,
+.nl-segment:active circle,
+.nl-point:active circle:not(.iic-focus-ring) {
+  transform: scale(1.333); }
+.nl-segment[disabled] polygon,
+.nl-segment[disabled] circle,
+.nl-point[disabled] circle:not(.iic-focus-ring) {
+  fill: #949494; }
+
+.nl-open-point circle {
+  fill: #fff;
+  stroke: #0084ff;
+  stroke-width: 4px; }
+.nl-segment[disabled] .nl-open-point circle {
+  fill: #e5e5e5;
+  stroke: #949494; }
+
+.nl-hover-box {
+  fill: none;
+  opacity: 0;
+  stroke-width: 2px;
+  stroke: #575757; }
+.nl-segment:hover .nl-hover-box,
+.nl-segment.focus-tabbed:focus .nl-hover-box {
+  opacity: 0.5; }
+html.can-touch .nl-segment:hover .nl-hover-box {
+  opacity: 0; }
+html.can-touch .nl-segment:active .nl-hover-box {
+  opacity: 0.5; }
+
+/**
+* @styles 1-nl-points-only Points-only Variant
+* In the points-only variant, test takers may only place points on the number line. Points behave identically to placeable points elsewhere in system (see the [points-lines-polygons.css] page) with the following exceptions.
+* * The `pointer` cursor is shown (since the points are interactive but cannot be moved).
+* * When an item is single-select (i.e., when only one point may be placed at a time), selecting a location on the number line auto-deletes an existing point.
+*
+* ### Controls
+* __Undo__ and __Reset__ buttons  are right-justified beneath the number line. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the number line.
+* * The __Reset__ button restores the number line to its initial state.
+*
+* _Demo shows a multiple-select item._
+* @iframe ux/demos/response-type-number-line/number-line-points-only.html 270
+**/
+
+/**
+* @styles 2-nl-custom-intervals Custom Intervals Variant
+* In the custom intervals variant, test takers may adjust the number of intervals provided on a number line and then place a point or line segment.
+*
+* ### Behavior
+* * If test takers are allowed to place segments, a black `#000000` pre-populated point is provided.
+*   * Hovering over the number line shows a translucent blue `#0084FF` point and a translucent line segment connecting it to the pre-populated point.
+*   * Selecting a location on the number line causes the blue point and line segment to become fully opaque.
+* * If test takers are only allowed to place points, no pre-populated point is provided. The number line behaves identically to the points-only variant.
+*
+* ### Controls
+* * Controls for the number of intervals are centered above the number line. Depending on the measurement goals of an item, one of three variants may be provided:
+*   *  __Remove intervals__ and __Add intervals__ buttons are provided. Both are styled as small circular primary buttons (see the [buttons.css] page). The __Remove intervals__ button has the `minus-thin` icon, while the __Add intervals__ button has the `plus-thin` icon.
+*   * __Remove intervals__ and __Add intervals__ buttons are provided with a readout of the current number of intervals between them. The readout has a light gray `#E5E5E5` background.
+*   * __Remove intervals__ and __Add intervals__ buttons are provided with a text entry field between them. Test takers can enter the desired number of intervals in the field, which has the same states as [response-type-text-entry.css] responses.
+* * __Undo__ and __Reset__ buttons  are right-justified beneath the number line. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+*   * The __Undo__ button reverts the last change to the number line.
+*   * The __Reset__ button restores the number line to its initial state.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-number-line/number-line-custom-intervals.html 400
+**/
+.nl-interval-control {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 1em;
+  width: 10em;
+}
+
+.nl-interval-control .fib {
+  margin: 0 0.75em;
+  padding: 0.25em;
+  text-align: center;
+}
+
+.nl-btn-minus::before,
+.nl-btn-plus::before {
+  display: block;
+  font-family: 'icons'; }
+.nl-btn-minus::before {
+  content: '\e949'; }
+.nl-btn-plus::before {
+  content: '\e905'; }
+
+/**
+* @styles 3-nl-zoomable-intervals Zoomable Intervals Variant
+* In the zoomable intervals variant, test takers first select a section of a number line to zoom, and then place a point within the zoomed section.
+*
+* ### Zoomable Sections
+* Zoomable sections begin 10% the width of an interval to the left of each tick mark and end 10% the width of an interval to the right of the subsequent tick mark. Zoomable sections have the following states.
+* * _Default_. Section is transparent.
+* * _Hover_. Visible when the cursor is over the section. Section background becomes a translucent blue `rgba(0,133,255,0.3)`. The `pointer` cursor is shown.
+* * _Selected_. A blue `#3366CC` border appears around the section. A wedge with a light gray `#E0E0E0` fill and gray `#757575` border connects the section to the zoomed-in view. The zoomed-in view has a light blue `#4496e0` border.
+* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unselected sections remain transparent. For selected sections, the section border becomes dark gray `#484848`, and the zoomed-in view border becomes gray `#949494.`
+*
+* Hovering or selecting a point in the zoomed-in view causes a smaller version of the point to appear in the same state in the corresponding zoomable section on the main number line.
+*
+* When an item is single-select (i.e., when only one point may be placed at a time), selecting a location in the zoomed-in number line auto-deletes an existing point.
+*
+* ### Controls
+* __Undo__ and __Reset__ buttons  are right-justified beneath the number line. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
+* * The __Undo__ button reverts the last change to the number line.
+* * The __Reset__ button restores the number line to its initial state.
+*
+* _Demo only reflects states and theming. Other functionality not present._
+* @iframe ux/demos/response-type-number-line/number-line-zoom.html 450
+**/
+
+.nl-zoom-span {
+  outline: none; }
+.nl-zoom-span[disabled] {
+  pointer-events: none; }
+
+.nl-zoom-preview {
+  cursor: pointer;
+  fill: transparent;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  transition: fill 0.2s, stroke 0.2s;
+  user-select: none; }
+.nl-zoom-preview:hover {
+  fill: rgba(0,133,255,0.3); }
+.nl-zoom-span.active .nl-zoom-preview {
+  stroke: #3366CC; }
+html.can-touch .nl-zoom-preview:hover,
+html.can-touch .nl-zoom-span.active .nl-zoom-preview:hover {
+  fill: transparent; }
+.nl-zoom-span.active[disabled] .nl-zoom-preview {
+  pointer-events: none; }
+.nl-zoom-span.active[disabled] .nl-zoom-preview {
+  stroke: #484848; }
+
+.nl-zoom-connector {
+  fill: #e0e0e0;
+  stroke: #757575;
+  stroke-linejoin: round;
+  transition: fill 0.2s, stroke 0.2s;
+}
+
+.nl-zoom-span *:not(.nl-zoom-preview),
+.nl-zoom-view {
+  display: none; }
+.nl-zoom-span.active *:not(.nl-zoom-preview),
+.nl-zoom-view.active {
+  display: initial; }
+
+.nl-zoom-border {
+  fill: none;
+  stroke: #4496e0;
+  stroke-linejoin: round;
+  stroke-width: 4px;
+  transition: stroke 0.2s; }
+.nl-zoom-span.active[disabled] ~ .nl-zoom-view .nl-zoom-border {
+  stroke: #949494; }

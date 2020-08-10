@@ -1,0 +1,110 @@
+/**
+* @stylesheet response-type-grid.css Grid
+* @parent ux.response-types
+*
+* The grid and SQ choice response types allow test takers to respond to an item by selecting from an array of options presented in a tabular format.
+* * The first column contains the option label (either text or image).
+* * Subsequent columns contain the category names and the options, selectable via radio button or checkbox (see the [checkboxes-and-radios.css] page for more information).
+*
+* Layout details:
+* * Left and right margins differentiate the table from stem and stimulus text.
+* * The table can take up the full width of the content area in which it resides.
+* * Option label column width varies to accommodate content.
+* * Option columns are all the same width. By default, they are 6.25x the base font size by default, but they may be set to 8.33x or 11.67x if needed to accommodate longer words.
+* * Option labels are left-justified. Category names are centered.
+*
+* Option rows are zebra striped. In odd rows, option label cells are light blue `#D6EBFF`, and option cells are a darker blue `#F5FAFF`. In even rows, both option label cells and option cells are white `#FFFFFF`.
+*
+* A __Clear Answer__ button is provided beneath the option table, and is aligned to the left side of the table. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).
+**/
+
+/**
+* @styles 0-grid-option-states Option States
+* Grid option cells have the following states. Colors match those of the [response-type-mc.css] response type.
+* * _Default_. Options are surrounded by a light gray `#CCCCCC` border.
+* * _Hover_. Visible when the cursor is over the option row. The border for the entire row becomes blue `#7FBFFF`. The `pointer` cursor is shown over the entirety of each option cell because test takers can click or tap anywhere in a cell to select its option.
+* * _Selected_. The border for the entire row becomes bright blue `#198CFF` to indicate that (at least) one selection per row is required, and the selection state of the radio button/checkbox is toggled.
+* * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option cell background and selection indicator are dimmed.
+**/
+
+table.grid {
+  border-collapse: collapse;
+  margin: 0 1em 1.11em 1em;
+  table-layout: auto; }
+table.grid[disabled] {
+  pointer-events: none; }
+
+table.grid tbody tr:nth-child(odd) {
+  background: #f5faff;
+  transition: background 0.2s; }
+
+table.grid td,
+table.grid th {
+  border: 0.0835em solid #ccc;
+  outline: 0.0835em solid transparent;
+  outline-offset: -0.042em;
+  padding: 0.4em 0.6em;
+  text-align: center;
+  transition: background 0.2s, border 0.2s, color 0.2s, outline 0.2s; }
+table.grid tbody tr:hover th,
+table.grid tbody tr:hover td {
+  outline-color: #7fbfff;
+  border-color: #7fbfff; }
+html.can-touch table.grid tbody tr:hover th,
+html.can-touch table.grid tbody tr:hover td {
+  border-color: #ccc;
+  outline-color: transparent; }
+table.grid tbody tr.grid-row-selected th,
+table.grid tbody tr.grid-row-selected td,
+html.can-touch table.grid tbody tr.grid-row-selected th,
+html.can-touch table.grid tbody tr.grid-row-selected td {
+  outline-color: #198CFF;
+  border-color: #198CFF; }
+
+table.grid thead th {
+  font-weight: bold;
+  vertical-align: bottom; }
+table.grid tbody th {
+  font-weight: normal;
+  text-align: left; }
+
+table.grid td {
+  background: #fff;
+  background-clip: padding-box; /*Needed for Firefox bug in which td backgrounds are painted over td borders*/
+  cursor: pointer;
+  line-height: 1;
+  position: relative;
+  width: 6.25em;
+  z-index: 4; }
+table.grid tbody tr:nth-child(odd) td {
+  background-color: #d6ebff; }
+table.grid[disabled] tbody td {
+  color: #b2b2b2;
+  color: rgba(0, 0, 0, 0.3); }
+table.grid[disabled] tbody tr:nth-child(odd) td {
+  background: #F3F9FF;
+  background: rgba(214, 235, 255, 0.3); }
+
+table.grid .grid-content {
+  border: 0.1em solid transparent;
+  display: inline-block;
+  transition: border 0.2s;
+}
+
+table.grid .control {
+  pointer-events: none;
+}
+
+.response-area-grid .btn {
+  margin-left: 1rem;
+}
+
+/**
+* @styles 1-single-select-grid Single-select Variant
+* @iframe ux/demos/response-type-grid/response-type-grid-ss.html 500
+**/
+
+/**
+* @styles 2-multiple-select-grid Multiple-select Variant
+* @iframe ux/demos/response-type-grid/response-type-grid-ms.html 500
+**/

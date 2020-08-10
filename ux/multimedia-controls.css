@@ -1,0 +1,604 @@
+/**
+* @stylesheet multimedia-controls.css Multimedia Controls
+* @parent ux.ui-elements
+* Multimedia controls allow test takers to play back audio and video clips.
+**/
+
+/**
+* @styles 0-multimedia-layout Layout
+*
+*
+* Controls are presented in two rows.
+* * The scrub bar, which is used to scrub through the media clip, is provided on its own in the top row to maximize scrubbing precision.
+* * The bottom row contains the following controls from left to right:
+*   * Play/Pause (`play`/`pause` icon)
+*   * Time indicators (current / total)
+*   * Mute (`volume-down`/`volume-up`/`volume-mute` icon)
+*   * Volume slider
+*   * Closed captions (video only) (`cc-on`/`cc-off` icon)
+*   * Full screen (video only) (`fullscreen`/`fullscreen-exit` icon)
+*
+* Play/Pause and the time indicators are left-justified. The remaining controls in the second row are right-justified.
+*
+* In addition, a __Hero Play__ button is provided for video clips. It is centered over the video to indicate that the test taker can click or tap anywhere on the video to play it.
+**/
+
+/**
+* @styles 1-multimedia-Styling Styling
+* Multimedia controls are presented on a light gray `#EAEAEA` background to differentiate them from the surrounding content area.
+* ### Hero Play button
+* The __Hero Play__ button has three states.
+* * _Default_. Displayed when video clip is paused. A white `#FFFFFF` `play-circle` icon is presented over a 65% opaque black `#000000` background.
+* * _Hover_. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The `pointer` cursor is shown over the entire video content area, indicating that the video will play/pause when selected.
+* * _Playing/Disabled_. The __Hero Play__ button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.
+* ### Scrub bar
+* The scrub bar consists of two elements: the track and the thumb. The track has a height 0.2x the base font size (see the [typography.css] page). The circular thumb has a diameter 3.35x the height of the track. The scrub bar has three states.
+*
+*
+* * _Default_.
+*   * The unplayed section of the scrub track is medium gray `#858585`.
+*   * The played section of the scrub track is blue `#246BB2`.
+*   * The thumb is the same blue as the played section of the scrub track.
+* * _Hover/active_. Displayed when the cursor is over the scrub bar or while the test taker is scrubbing through the media clip.
+*   * The `pointer` cursor is shown.
+*   * The track and thumb are scaled up 150%. (Scaling remains during scrubbing, even if the cursor isn’t directly over the scrub bar.)
+*   * A dark gray `#535353` bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.
+*   * A tooltip (see below) appears above the scrub bar showing the time in the media clip associated with the current cursor position during both hover and drag.
+* * _Disabled_. Displayed when the scrub bar is inactive (e.g., when a modal system tool like Scratchwork is enabled).
+*   * The unplayed section of the track changes to a light gray `#A6A6A6`.
+*   * The thumb and the played section of the track change to a medium gray `#AAAAAA`.
+* ### Volume slider
+* The volume slider is styled similarly to the scrub bar with the following exceptions:
+* * Only the thumb, not the track, scales up in hover/active state.
+* * A tooltip does not display in hover/active state.
+* * No dark gray bar appears to indicate the cursor position in hover state.
+* ### Other Buttons
+* Multimedia control buttons are 2x the base font size (see the [typography.css] page) to ensure easy selection via touch. They have three states.
+* * _Default_. A dark gray `#535353` icon with no background or border.
+* * _Hover_. Displayed when the cursor is over the button. Icon color darkens to `#1E1E1E`, and a tooltip appears above the button. The `pointer` cursor is shown.
+* * _Disabled_. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to `#A6A6A6`.
+* ### Tooltips
+* Tooltips are displayed as white `#FFFFFF` text on an 85% opaque black `#000000` background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.
+*
+* The tooltip for the scrub bar has a bottom tail to better connect it to the cursor position.
+* ### Subtitles
+* Subtitles are displayed as white `#FFFFFF` text on an 80% opaque black `#000000` background with rounded corners.
+**/
+
+/**
+* @styles 2-multimedia-behavior Behavior
+* ### Playback
+* When the video reaches the end of its run time, it automatically pauses and resets to 0 seconds.
+* ### Scrub bar behavior
+* Clicking the scrub bar track or dragging the scrub bar thumb causes the video time to change to the position of the cursor. The scrub bar has an invisible touch target that is taller than the visible track (1.24x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].
+* ### Button behavior
+* Several buttons have toggle states.
+* * The __Play/Pause__ button changes to a `pause` icon, and its tooltip changes to “Pause” while the media clip is playing.
+* * The __Mute__ button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)
+* * The __Closed caption__ button icon changes to the `cc-off` icon when closed captions are turned off.
+* * The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit`, and its tooltip changes to “Exit full screen” when in full-screen mode.
+* ### Volume slider & Mute button interactions
+* As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].
+*
+* The volume slider affects the __Mute__ button in the following ways:
+* * If the volume is set to >50%, the __Mute__ button is set to the full-volume state: the icon changes to `volume-up`, and the tooltip changes to “Unmute.”
+* * If the volume is set from 1% to 50%, the __Mute__ button is set to the half-volume state: the icon changes to `volume-down`, and the tooltip changes to “Unmute.”
+* * If the volume is set to 0%, the __Mute__ button is set to the muted state: the icon changes to `volume-mute`, and the tooltip changes to “Mute.”
+*
+* When the test taker mutes the audio via the __Mute__ button, it remembers the previous volume level and restores it when the test taker selects __Mute__ again.
+* * When restoring the previous volume level, the __Mute__ button state changes accordingly, as described above.
+* * If the volume had been set to 0% via the volume slider, selecting the __Mute__ button causes the volume to be set to 100%.
+* ### Full-screen mode
+* On entering full-screen mode, the __Hero Play__ button receives focus so that the test taker can play or pause the video by hitting Enter or Space on the keyboard.
+*
+* In full-screen mode, the control panel floats above the bottom of video content, taking up the full width of the screen, minus some padding. The corners of the control panel are rounded.
+*
+* The controls remain on screen while the video is paused. Once the video begins playing, the controls fade out, and the cursor disappears after 3 seconds. The controls and cursor reappear when the video is paused or when the test taker moves the mouse, clicks the mouse, presses a key on the keyboard, or touches the device screen. When the test taker causes the controls to reappear during playback, the countdown to fadeout resets to 3 seconds.
+*
+* When the controls are on screen, subtitles appear above them. When the controls are off screen, subtitles appear 2 line heights above the bottom of the screen. When the controls fade in or out, the subtitles animate between their two positions.
+*
+* The test taker can exit full-screen mode by selecting the __Full screen__ button or by hitting Escape on the keyboard.
+*
+* ### SBT-specific Behavior <img src="static/img/icon-asterisk.svg"/>
+* Because SBTs guide test takers through a linear sequence of activities, additional constraints are imposed on multimedia playback.
+* * When the video is played for the first time, it automatically enters full-screen mode unless there is other information on screen that the test taker must attend to while the video is playing. (Asking test takers to attend to a video and another form of information simultaneously is not considered a best practice and should be avoided.)
+* * Multimedia clips must be viewed/listened to in their entirety before the test taker is allowed to progress to the next screen.
+* * Test takers are allowed to use the scrub bar, but only through the section of the clip that has already been viewed/heard.
+**/
+
+/**
+* @styles 3-multimedia-default Video Variant
+* @iframe ux/demos/multimedia-controls/video.html 600
+**/
+
+/**
+* @styles 4-multimedia-default Audio Variant
+* @iframe ux/demos/multimedia-controls/audio.html 200
+**/
+
+/**
+* @styles 5-multimedia-sis Select-in-stimulus Variant
+* To keep the scrub bar adjacent to selections, the scrub bar is placed below the other multimedia controls when used in a [response-type-sis.css] (SIS) item. Extra padding is also provided below the scrub bar to prevent the SIS selection widget from colliding with the scrub bar.
+* @iframe ux/demos/multimedia-controls/sis.html 605
+**/
+
+/*----------------------------------------------------------------------------
+MEDIA LAYOUT
+----------------------------------------------------------------------------*/
+.media-container {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  z-index: 4; }
+.media-container.full-screen {
+  background: #000;
+  display: block;
+  height: 100%;
+  width: 100%; }
+.media-container[disabled] {
+  pointer-events: none; }
+
+.media-wrapper {
+  position: relative; }
+.media-container.full-screen .media-wrapper {
+  height: 100%;
+  width: 100%; }
+
+.media {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.media-controls {
+  background: #eaeaea;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 1;
+  position: relative;
+  transition: background 0.2s; }
+.media-controls.hidden {
+  display: none; }
+.media-container.full-screen .media-controls {
+  border-radius: 0.25em;
+  bottom: 0.5em;
+  left: 0.5em;
+  padding: 0.25em;
+  position: absolute;
+  width: calc(100% - 1em); }
+.media-container.full-screen.fadeout .media-controls {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease-out }
+
+.media-left-controls,
+.media-right-controls {
+  align-items: center;
+  color: #535353;
+  display: flex;
+  padding-bottom: 0.125em;
+  position: relative; }
+.media-controls.media-sis-variant .media-left-controls,
+.media-controls.media-sis-variant .media-right-controls {
+  padding-top: 0.125em;
+}
+
+
+/*----------------------------------------------------------------------------
+HERO PLAY BUTTON STYLES
+----------------------------------------------------------------------------*/
+.video-hero-play.media-btn {
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  outline: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.2s ease-out;
+  width: 100%;
+}
+
+.video-hero-play[disabled],
+.video-hero-play.paused {
+  opacity: 0;
+}
+
+.video-hero-play::before,
+html.can-touch .video-hero-play:hover::before {
+  background: #000;
+  background: rgba(0,0,0,0.65);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  content: '\e915';
+  display: block;
+  font-family: 'icons';
+  font-size: 3em;
+  height: 1em;
+  line-height: 0.96;
+  margin: 0 auto;
+  opacity: 1;
+  pointer-events: none;
+  transform: none;
+  transition: background .2s ease-out, transform .2s ease-out, opacity .2s ease-out;
+  width: 1em;
+}
+
+.video-hero-play:hover::before {
+  background: #000;
+  background: rgba(0,0,0,0.85);
+  transform: scale(1.2);
+}
+
+/*----------------------------------------------------------------------------
+SLIDER CONTAINER STYLES
+----------------------------------------------------------------------------*/
+.slider-container {
+  background: #858585;
+  height: 0.208em;
+  position: relative;
+  transition: background 0.2s ease-out;
+  z-index: 1; /* Prevents overlap by selection widget */ }
+.media-container[disabled] .slider-container {
+  background: #ccc; }
+
+.media-progress-container-outer {
+  margin: 0.625em 0.5em 0.416em;
+  position: relative;
+  width: 100%; }
+.media-controls.media-sis-variant .media-progress-container-outer {
+  margin: 0.416em 0.5em 1em; }
+
+.media-progress-container {
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+  width: 100%; }
+.media-progress-container:hover,
+.media-progress-container.hover,
+html.can-touch .media-progress-container:active {
+  transform: scaleY(1.4); }
+html.can-touch .media-progress-container:hover {
+  transform: none; }
+
+.media-volume-container {
+  margin: 0 0.75em 0 0.25em;
+  width: 3.5em;
+}
+
+
+/*----------------------------------------------------------------------------
+HOVER BAR STYLES
+----------------------------------------------------------------------------*/
+.media-hover {
+  background: #535353;
+  height: 0.208em;
+  left: 0;
+  opacity: 1;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
+  transition: opacity .2s ease-out;
+  width: 100%; }
+.media-hover.hidden {
+  opacity: 0; }
+
+
+/*----------------------------------------------------------------------------
+PROGRESS ELEMENT STYLES
+----------------------------------------------------------------------------*/
+.media-container progress[value] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  height: 0.208em;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+
+.media-container progress[value]::-webkit-progress-bar {
+  background-color: transparent; }
+
+.media-container progress[value]::-moz-progress-bar {
+  background-color: #246BB2;
+  transition: background 0.2s ease-out, transform 0.2s ease-out; }
+.media-container progress[value]::-webkit-progress-value {
+  background-color: #246BB2;
+  transition: background 0.2s ease-out, transform 0.2s ease-out; }
+
+.media-container[disabled] progress[value]::-webkit-progress-value {
+  background-color: #aaa; }
+.media-container[disabled] progress[value]::-moz-progress-bar {
+  background-color: #aaa; }
+
+
+/*----------------------------------------------------------------------------
+RANGE INPUT STYLES
+----------------------------------------------------------------------------*/
+/* Reset the default browser styles */
+.media-container input[type=range] {
+  -moz-appearance: none;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  cursor: pointer;
+  font-size: inherit;
+  height: 0.708em;
+  left: -0.0417em;
+  margin: 0;
+  outline: 0;
+  position: absolute;
+  top: -0.25em;
+  width: calc(100% + 0.208em); /* Specific width is required for Firefox. */
+  z-index: 1;
+}
+
+.media-container input[type=range]::-ms-track {
+  border-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Style the thumb for each browser */
+.media-container input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: #246bb2;
+  border: none;
+  border-radius: 50%;
+  height: 0.708em;
+  margin-top: 0; /* Need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+  width: 0.708em; }
+.media-container input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  background: #246bb2;
+  border: none;
+  border-radius: 50%;
+  height: 0.708em;
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+  width: 0.708em; }
+.media-container input[type=range]::-ms-thumb {
+  background: #246bb2;
+  border: none;
+  border-radius: 50%;
+  height: 0.708em;
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+  width: 0.708em; }
+
+.media-container input[type=range][disabled]::-webkit-slider-thumb {
+  background: #aaa;
+}
+.media-container input[type=range][disabled]::-moz-range-thumb {
+  background: #aaa;
+}
+.media-container input[type=range][disabled]::-ms-thumb {
+  background: #aaa;
+}
+
+/* Style the track in each browser */
+.media-container input[type=range]::-webkit-slider-runnable-track {
+  background: transparent;
+  height: 0.708em;
+  transition: transform 0.2s ease-out;
+  width: 100%; }
+.media-container input[type=range]::-moz-range-track {
+  background: transparent;
+  height: 0.708em;
+  transition: transform 0.2s ease-out;
+  width: 100%; }
+.media-container input[type=range]::-ms-track {
+  background: transparent;
+  height: 0.708em;
+  transition: transform 0.2s ease-out;
+  width: 100%; }
+
+.media-container input[type=range].hover::-webkit-slider-thumb,
+.media-container input[type=range]:hover::-webkit-slider-thumb {
+  transform: scale(1.4); }
+.media-container input[type=range].hover::-moz-range-thumb,
+.media-container input[type=range]:hover::-moz-range-thumb {
+  transform: scale(1.4); }
+.media-container input[type=range].hover::-ms-thumb,
+.media-container input[type=range]:hover::-ms-thumb {
+  transform: scale(1.4); }
+html.can-touch .media-container input[type=range].hover::-webkit-slider-thumb,
+html.can-touch .media-container input[type=range]:hover::-webkit-slider-thumb {
+  transform: none; }
+html.can-touch .media-container input[type=range].hover::-moz-range-thumb,
+html.can-touch .media-container input[type=range]:hover::-moz-range-thumb {
+  transform: none; }
+html.can-touch .media-container input[type=range].hover::-ms-thumb,
+html.can-touch .media-container input[type=range]:hover::-ms-thumb {
+  transform: none; }
+
+.media-progress-container.hover input[type=range]::-webkit-slider-thumb,
+.media-progress-container:hover input[type=range]::-webkit-slider-thumb {
+  transform: scaleX(1.4); }
+.media-progress-container.hover input[type=range]::-moz-range-thumb,
+.media-progress-container:hover input[type=range]::-moz-range-thumb {
+  transform: scaleX(1.4); }
+.media-progress-container.hover input[type=range]::-ms-thumb,
+.media-progress-container:hover input[type=range]::-ms-thumb {
+  transform: scaleX(1.4); }
+html.can-touch .media-progress-container.hover input[type=range]::-webkit-slider-thumb,
+html.can-touch .media-progress-container:hover input[type=range]::-webkit-slider-thumb {
+  transform: none; }
+html.can-touch .media-progress-container.hover input[type=range]::-moz-range-thumb,
+html.can-touch .media-progress-container:hover input[type=range]::-moz-range-thumb {
+  transform: none; }
+html.can-touch .media-progress-container.hover input[type=range]::-ms-thumb,
+html.can-touch .media-progress-container:hover input[type=range]::-ms-thumb {
+  transform: none; }
+
+/* Styles specific to volume slider */
+.media-container input[type=range].media-volume {
+  height: 1.292em;
+  top: -0.542em;
+}
+
+.media-container input[type=range].media-volume::-webkit-slider-runnable-track {
+  height: 1.333em; }
+.media-container input[type=range].media-volume::-moz-range-track {
+  height: 1.333em; }
+.media-container input[type=range].media-volume::-ms-track {
+  height: 1.333em; }
+
+.media-container input[type=range].media-volume::-webkit-slider-thumb {
+  margin-top: 0.292em; }
+.media-container input[type=range].media-volume::-moz-range-thumb {
+  margin-top: 0.292em; }
+.media-container input[type=range].media-volume::-ms-thumb {
+  margin-top: 0.292em; }
+
+
+/*----------------------------------------------------------------------------
+MEDIA BUTTON STYLES
+----------------------------------------------------------------------------*/
+.media-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 2em;
+  margin: 0 0.0625em;
+  padding: 0;
+  position: relative;
+  transition: color 0.2s ease-out; }
+html.can-touch .media-btn:hover {
+  color: inherit; }
+.media-btn:hover,
+html.can-touch .media-btn:active {
+  color: #1e1e1e; }
+.media-btn[disabled] {
+  color: #a6a6a6; }
+
+.media-time-display {
+  margin-left: 0.25em;
+}
+
+/* Hides browser default video controls in fullscreen but shows them in normal screen
+even if 'controls' attribute is set to false */
+video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+
+/*----------------------------------------------------------------------------
+TOOLTIP STYLES
+----------------------------------------------------------------------------*/
+.media-tooltip {
+  background: #000;
+  background: rgba(0,0,0,0.8);
+  border-radius: 0.208em;
+  bottom: calc(100% + 1.5em);
+  color: #fff;
+  left: 0;
+  opacity: 0;
+  padding: 0.208em 0.5em;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity .2s ease-out; }
+.media-controls.media-sis-variant .media-tooltip {
+  bottom: calc(100% + 0.25em); }
+.media-container.full-screen .media-tooltip {
+  bottom: calc(100% + 1.75em); }
+.media-container.full-screen .media-controls.media-sis-variant .media-tooltip {
+  bottom: calc(100% + 0.5em); }
+
+.media-tooltip-seek {
+  bottom: calc(100% + 1.25em);
+  left: 0;
+  margin-left: 0.208em;
+  opacity: 1;
+  transform: translateX(-50%);
+  transition: opacity .2s ease-out; }
+.media-controls.media-sis-variant .media-tooltip-seek {
+  bottom: calc(100% + 3.25em); }
+.media-container.full-screen .media-tooltip-seek {
+  bottom: calc(100% + 1.5em); }
+.media-container.full-screen .media-controls.media-sis-variant .media-tooltip-seek {
+  bottom: calc(100% + 3.5em); }
+.media-tooltip-seek.hidden {
+  opacity: 0; }
+
+.media-tooltip-seek:after {
+  border-left: 0.5em solid transparent;
+  border-right: 0.5em solid transparent;
+  border-top: 0.5em solid #000;
+  border-top: 0.5em solid rgba(0,0,0,0.8);
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+.media-btn-playpause-tooltip {
+  left: 0.25em; }
+
+.media-btn-mute-tooltip {
+  left: 1em;
+  transform: translateX(-50%);
+}
+
+.video-btn-cc-tooltip {
+  left: initial;
+  right: 0.25em; }
+
+.video-btn-fs-tooltip {
+  left: initial;
+  right: 0.25em; }
+
+.media-btn-playpause:hover ~ .media-btn-playpause-tooltip,
+.media-btn-mute:hover ~ .media-btn-mute-tooltip,
+.video-btn-cc:hover ~ .video-btn-cc-tooltip,
+.video-btn-fs:hover ~ .video-btn-fs-tooltip {
+  opacity: 1; }
+html.can-touch .media-btn-playpause:hover ~ .media-btn-playpause-tooltip,
+html.can-touch .media-btn-mute:hover ~ .media-btn-mute-tooltip,
+html.can-touch .video-btn-cc:hover ~ .video-btn-cc-tooltip,
+html.can-touch .video-btn-fs:hover ~ .video-btn-fs-tooltip {
+  opacity: 0; }
+
+
+/*----------------------------------------------------------------------------
+CLOSED CAPTION STYLES
+----------------------------------------------------------------------------*/
+::cue {
+  font: normal normal 1rem/1.45 Calibri;
+}
+
+.video-custom-track-wrapper {
+  bottom: 0.5em;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100%; }
+.video-custom-track-wrapper.hidden {
+  display: none; }
+.media-container.full-screen .video-custom-track-wrapper {
+  bottom: 5em;
+  transition: bottom 0.2s; }
+.media-container.full-screen.fadeout .video-custom-track-wrapper {
+  bottom: 2em;
+  transition: bottom 0.2s 0.2s; }
+
+.video-custom-track {
+  background: #000;
+  background: rgba(0,0,0,0.8);
+  border-radius: 0.15em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: #fff;
+  font-size: 0.92em;
+  line-height: normal;
+  padding: 0; }
+.video-custom-track.hidden {
+  display: none; }

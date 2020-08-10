@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Text Entry Response Type - Extended Text</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      margin: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="response-area response-area-text-entry">
+
+    <div class="item-stem-wrapper">
+      <div class="stem-paragraph">
+        <p>I am the stem for an Extended Text item.</p>
+      </div>
+    </div>
+    <div class="response-area response-area-text-entry">
+      <textarea rows="5" data-max-length="3000" class="extendedtext" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false"></textarea>
+    </div>
+
+  </div>
+
+  <div class="dialog hidden" id="modal-validation" role="dialog">
+    <div class="dialog-content">
+      <div class="stem-paragraph">
+        <p>You can only enter a number between <span></span> and <span></span>.</p>
+      </div>
+      <button class="btn close-dialog">OK</button>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../dialogs/dialogs.js"></script>
+  <script src="response-type-text-entry.js"></script>
+
+</body>
+
+</html>

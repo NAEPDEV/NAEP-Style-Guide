@@ -1,0 +1,246 @@
+/**
+* @stylesheet characters-dialogue.css Characters & Dialogue
+* @parent ux.sbts
+* Many SBTs convey information to test takers via in-task character dialogue.
+*
+* Styling variations for characters and dialogue are allowed to suit the needs of a given context (as described below), but a character and his/her dialogue must always be proximal to ensure their association is clear.
+*
+* Task characters can be presented in one of two styles: full-body or as a portrait.
+**/
+
+.char-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+/**
+* @styles 0-char-full-body Full-body Characters
+* A full-body shot of the character (AKA a hero shot) is typically shown when a character is first introduced and during transitional scenes that emphasize the overall task flow (as opposed to scenes in which students must complete an activity).
+*
+* Full-body characters’ dialogue is always presented in a speech bubble. Details:
+* * The speech bubble background must be contrast-compliant with respect to the dialogue text.
+* * The speech bubble must have a tail that connects it to the speaking character.
+* * The task character’s name should appear bolded and with a bottom border at the top of the speech bubble unless the character announces herself (e.g., “Hi, I’m Diana&#8230;”)
+* @iframe ux/demos/characters-dialogue/full-body.html 600
+**/
+
+.char-wrapper.char-fullbody .char-portrait {
+  margin: 0;
+}
+
+.char-wrapper.char-fullbody .char-portrait img {
+  background: none;
+}
+
+.char-wrapper.char-fullbody .char-portrait figcaption {
+  display: none;
+}
+
+.char-wrapper.char-text-bubble.char-fullbody .char-text {
+  padding: 1.5em 2.7em 1.5em 2em
+}
+
+.char-wrapper.char-text-bubble.char-fullbody .char-text::before {
+  height: 2em;
+  left: -1.05em;
+  top: 1.9em;
+  width: 2em;
+}
+
+html.sbt .char-text h3,
+.char-text h3 {
+  border-bottom: 0.05em solid #767676;
+  font-weight: bold;
+  font-size: inherit;
+  margin: 0 0 0.5em 0;
+}
+
+.char-text h3 span {
+  border: 0.087em solid transparent;
+  display: inline-block;
+  transition: border 0.2s;
+}
+
+/**
+* @styles 1-char-portraits Character Portraits
+* Smaller character portraits are used on most screens so that test takers can focus on the activity at hand. Portraits are always accompanied by a name tag. The frames for portraits may be rectangular or round.
+*
+* Portraits and their accompanying dialogue can be presented in three styles.
+* * _Distinct_. Typically used when a task contains more complex backgrounds. Dialogue is presented in a speech bubble like those for full-body characters, except the tail and padding are smaller. Character name tags have white backgrounds.
+* * _Intermediate_. Typically used when a task contains simple or solid fill backgrounds. Dialogue and name tags are bare. The character portrait is surrounded by a border whose color changes to match the states of the __Voiceover__ button (see below).
+* * _Subtle_. Only used on white backgrounds. Dialogue and name tags are bare. The character portrait has no border, but its background changes color to match the states of the __Voiceover__ button (see below).
+* @iframe ux/demos/characters-dialogue/portrait.html 1570
+**/
+
+.char-portrait {
+  margin: 0 1.2em 0 0; }
+.char-text-bare .char-portrait {
+  margin: 0 2em 0 0; }
+
+.char-portrait img {
+  background: #fff;
+  display: block;
+  margin: 0 auto;
+  transition: background 0.2s, border 0.2s;
+  width: 8ch; }
+
+/* Circular variant - should only be used with square images */
+.char-wrapper.char-portrait-circular .char-portrait img {
+  border-radius: 50%;
+}
+
+/* Interactive portrait styles: border, fill, or none */
+.char-wrapper.char-text-bare .char-portrait img {
+  border: 0.15em solid #949494;
+  cursor: pointer; }
+.char-wrapper.char-text-bare .char-portrait img.hover,
+.char-wrapper.char-text-bare .char-portrait img:hover {
+  border-color: #616161; }
+.char-wrapper.char-text-bare.char-vo-play .char-portrait img {
+  border-color: #0068D1; }
+.char-wrapper.char-text-bare.char-vo-play .char-portrait img.hover,
+.char-wrapper.char-text-bare.char-vo-play .char-portrait img:hover {
+  border-color: #3896f5; }
+html.can-touch .char-wrapper.char-text-bare .char-portrait img.hover,
+html.can-touch .char-wrapper.char-text-bare .char-portrait img:hover {
+  border-color: #949494; }
+html.can-touch .char-wrapper.char-text-bare.char-vo-play .char-portrait img.hover,
+html.can-touch .char-wrapper.char-text-bare.char-vo-play .char-portrait img:hover {
+  border-color: #0068D1; }
+.char-wrapper.char-text-bare .char-portrait[disabled] img {
+  pointer-events: none; }
+
+.char-wrapper.char-text-bare.char-portrait-bg .char-portrait img {
+  background: #E5E5E5;
+  border: none; }
+.char-wrapper.char-text-bare.char-portrait-bg.char-vo-play .char-portrait img {
+  background: #C6EAF7; }
+
+.char-wrapper.char-text-bubble .char-portrait img {
+  border: none;
+}
+
+/* Name label styles */
+.char-portrait figcaption {
+  font-weight: 900;
+  line-height: 1;
+  padding: 0.1em 0.3em 0.2em;
+  text-align: center; }
+.char-wrapper.char-text-bubble .char-portrait figcaption {
+  background: #fff;
+  border-top: 0.05em solid #949494; }
+.char-wrapper.char-text-bubble.char-portrait-circular .char-portrait figcaption {
+  border: 0.05em solid #949494;
+  border-radius: 0.7em;
+  padding: 0.05em 0.5em 0.15em;
+  position: relative;
+  top: -0.2em; }
+
+
+/*-------------------------------
+CHARACTER TEXT STYLES
+-------------------------------*/
+.char-text {
+  max-width: 60ch;
+  position: relative; }
+.char-wrapper.char-text-bubble .char-text {
+  background: #fff;
+  border: 0.05em solid transparent;
+  border-radius: 0.6em;
+  box-shadow: 0 0 0.05em 0.01em rgba(0,0,0,0.15), 0 0 0.25em 0.07em rgba(0,0,0,0.1);
+  max-width: calc(60ch + 3.7em);
+  padding: 0.75em 2.7em 0.75em 1em;
+  transition: background 0.2s, border 0.2s; }
+
+.char-wrapper.char-text-bubble .char-text::before {
+  background: #fff;
+  border-left: 0.05em solid transparent;
+  border-top: 0.05em solid transparent;
+  box-shadow: -0.05em -0.05em 0.05em 0 rgba(0,0,0,0.15);
+  content: '';
+  display: block;
+  height: 1em;
+  left: -0.55em;
+  position: absolute;
+  top: 1em;
+  transform: rotate(-45deg);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  width: 1em;
+}
+
+.char-text p {
+  border: 0.087em solid transparent;
+  margin: 0 0 1em;
+  transition: border 0.2s; }
+.char-text p:last-of-type {
+  margin: 0; }
+
+/**
+* @styles 2-char-buttons Voiceover Playback
+* Voiceover for character dialogue is provided unless there is a compelling reason not to (e.g., a science SBT that asks test takers to evaluate sounds with different pitches could be more difficult were voiceover present).
+* ### Playback behavior
+* When test takers navigate to a scene with voiceover for the first time, the voiceover plays automatically. Details:
+* * Once playback has finished, pressing the __Voiceover__ button will replay the voiceover from the beginning.
+* * Test takers are allowed to move on to the next screen even if voiceover playback hasn’t finished.
+* * If a test taker returns to a previously visited screen, voiceover does not automatically play again. Rather, the test taker must press the __Voiceover__ button, which replays the voiceover from the beginning.
+*
+* When text-to-speech is enabled, voiceover playback is paused.
+* ### Voiceover buttons
+* When voiceover is provided for character dialogue, a __Voiceover__ button is presented either at the upper right of the speech bubble (in the distinct style) or at the upper right of the character portrait (in the intermediate and subtle styles).  __Voiceover__ buttons have the following states.
+* * _Paused_. Visible when the voiceover is paused. The button is gray `#767676` and displays the `volume-up` icon. (See the [icons.css] page.)
+* * _Playing_. Visible when the voiceover is playing. The button is blue `0068D1` and displays the `pause` icon.
+* ### Interactive portraits
+* In the intermediate and subtle styles, the character’s portrait changes state along with its __Voiceover__ button.
+* * _Paused_. If the portrait has a border, it becomes gray `#949494`. If the portrait has a background, it becomes light gray `#E5E5E5`.
+* * _Playing_. If the portrait has a border, it becomes blue `#0068D1`. If the portrait has a background, it becomes light blue `#C6EAF7`.
+**/
+
+.char-wrapper .btn.btn-secondary {
+  color: #767676;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+  width: 2em; }
+.char-wrapper .btn.btn-secondary.hover {
+  border-color: #616161;
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+html.can-touch .char-wrapper .btn.btn-secondary.hover {
+  border-color: #949494;
+  box-shadow: none; }
+.char-wrapper .btn.btn-secondary.active {
+  background: #f0f0f0;
+  box-shadow: none; }
+.char-wrapper.char-vo-play .btn.btn-secondary {
+  border-color: #0068d1;
+  color: #0068d1; }
+.char-wrapper.char-vo-play .btn.btn-secondary:hover,
+.char-wrapper.char-vo-play .btn.btn-secondary.hover {
+  border-color: #3896f5; }
+html.can-touch .char-wrapper.char-vo-play .btn.btn-secondary:hover,
+html.can-touch .char-wrapper.char-vo-play .btn.btn-secondary.hover {
+  border-color: #0068d1; }
+.char-wrapper.char-vo-play .btn.btn-secondary:active,
+.char-wrapper.char-vo-play .btn.btn-secondary.active {
+  background: #dbedff;
+  border-color: #0068d1; }
+.char-wrapper .btn.btn-secondary[disabled] {
+  color: #909090; }
+
+.char-wrapper .btn::before {
+  content: "\e917";
+  font-family: 'icons' !important;
+  font-size: 1.5em; }
+.char-wrapper.char-vo-play .btn::before {
+  content: "\e914"; }
+
+/* Positioning based on speech bubble parameter */
+.char-wrapper.char-text-bare .btn {
+  left: calc(8ch - 1em);
+  top: -0.181em; }
+.char-wrapper.char-text-bubble .btn {
+  right: 0.5em;
+  top: 0.5em; }

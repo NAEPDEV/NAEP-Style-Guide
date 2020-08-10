@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAEP Style Guide - Color Themes - Theme Tag Behavior</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      align-items: flex-end;
+      flex-direction: row;
+      height: initial;
+      margin: 0.75em;
+    }
+
+    figure {
+      margin: 0;
+      width: 20%;
+      padding: 0.5em;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .standalone-image {
+      margin-bottom: 0.25em;
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 0.8em;
+    }
+  </style>
+</head>
+
+<body>
+  <figure>
+    <div class="standalone-image"><img src="bicycle.svg" /></div>
+    <figcaption>B&#38;W line art</figcaption>
+  </figure>
+  <figure>
+    <div class="standalone-image"><img src="pie-chart.svg" /></div>
+    <figcaption>Color line art</figcaption>
+  </figure>
+  <figure>
+    <div class="standalone-image"><img src="wagon.jpg" /></div>
+    <figcaption>B&#38;W photo</figcaption>
+  </figure>
+  <figure>
+    <div class="standalone-image"><img src="maccaw.jpg" /></div>
+    <figcaption>Color photo</figcaption>
+  </figure>
+  <figure>
+    <div class="standalone-image"><img class="no-theme" src="otter.png" /></div>
+    <figcaption>No background</figcaption>
+  </figure>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+
+</body>
+
+</html>

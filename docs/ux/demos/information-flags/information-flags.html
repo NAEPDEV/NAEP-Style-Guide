@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Information Flags</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      display: block;
+      position: relative;
+    }
+
+    .btn {
+      display: block;
+      margin: 0;
+      position: absolute;
+    }
+
+    #top-center {
+      left: 50%;
+      top: 0.5em;
+      transform: translateX(-50%);
+    }
+    #middle-left {
+      left: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #middle-right {
+      right: 0.5em;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #bottom-center {
+      bottom: 0.5em;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <button id="top-center" class="btn btn-small btn-circular icon-info">
+    <div class="info-flag info-flag-bottom-center">I’m providing useful information about this button!</div>
+  </button>
+  <button id="middle-left" class="btn btn-small btn-circular icon-info">
+    <div class="info-flag info-flag-middle-right">I’m providing useful information about this button!</div>
+  </button>
+  <button id="middle-right" class="btn btn-small btn-circular icon-info">
+    <div class="info-flag info-flag-middle-left">I’m providing useful information about this button!</div>
+  </button>
+  <button id="bottom-center" class="btn btn-small btn-circular icon-info">
+    <div class="info-flag info-flag-top-center">I’m providing useful information about this button!</div>
+  </button>
+
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

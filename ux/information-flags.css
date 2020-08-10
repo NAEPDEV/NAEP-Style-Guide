@@ -1,0 +1,109 @@
+/**
+* @stylesheet information-flags.css Information Flags
+* @parent ux.instruction
+* Information flags are used to cue test takers to functionality that may not be immediately obvious.
+*
+* Information flags have a white `#FFFFFF` background, a gray `#BBBBBB` border, rounded corners, and a drop shadow to differentiate them from surrounding content. Each flag has a tail connecting it to the UI element for which it provides a cue. The flag’s text is bold, gray `#727272`, and 83% the base font size (see the [typography.css] page for more information).
+*
+* A flag can appear in eight positions relative to the element about which it provides information. The position is chosen based on the surrounding context (e.g., to avoid overlap with other elements, to avoid positioning the flag off-screen.)
+* @iframe ux/demos/information-flags/information-flags.html 500
+* @iframe ux/demos/information-flags/information-flags-corners.html 300
+**/
+.info-flag {
+  background: #fff;
+  border: 0.06em solid #bbb;
+  border-radius: 0.2em;
+  box-shadow: 0 0 0.25em rgba(0,0,0,.2);
+  color: #727272;
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.25;
+  padding: 0.5em 1em;
+  pointer-events: none;
+  position: absolute;
+  text-align: left;
+  transition: background 0.2s, border 0.2s, color 0.2s;
+  width: 12em;
+  z-index: 6;
+}
+
+.info-flag-top-left {
+  right: calc(100% + 0.75em);
+  top: 0; }
+.info-flag-top-center {
+	left: 50%;
+	bottom: calc(100% + 0.75em);
+  transform: translateX(-50%); }
+.info-flag-top-right {
+  left: calc(100% + 0.75em);
+  top: 0; }
+.info-flag-middle-left {
+  right: calc(100% + 0.75em);
+	top: 50%;
+	transform: translateY(-50%); }
+.info-flag-middle-right {
+	left: calc(100% + 0.75em);
+  top: 50%;
+	transform: translateY(-50%); }
+.info-flag-bottom-left {
+  bottom: 0;
+  right: calc(100% + 0.75em); }
+.info-flag-bottom-center {
+	left: 50%;
+	top: calc(100% + 0.75em);
+  transform: translateX(-50%); }
+.info-flag-bottom-right {
+  bottom: 0;
+  left: calc(100% + 0.75em); }
+
+
+.info-flag::before {
+  background: #fff;
+  border-bottom: 0.06em solid #bbb;
+  border-right: 0.06em solid #bbb;
+  box-shadow: 0.1em 0.1em 0.25em rgba(0,0,0,0.15);
+  content: '';
+  display: block;
+  height: 0.8em;
+  position: absolute;
+  transition: background 0.2s, border 0.2s;
+  width: 0.8em;
+}
+
+.info-flag-top-left::before {
+  right: -0.5em;
+	top: 0.6em;
+  transform: rotate(-45deg); }
+.info-flag-top-center::before {
+	bottom: -0.5em;
+  left: 50%;
+  transform: rotate(45deg) translateX(-50%);
+  transform-origin: left; }
+.info-flag-top-right::before {
+  left: -0.5em;
+	top: 0.6em;
+  transform: rotate(135deg); }
+.info-flag-middle-left::before {
+	right: -0.5em;
+	top: 50%;
+  transform: rotate(-45deg) translateY(-50%);
+  transform-origin: top; }
+.info-flag-middle-right::before {
+	left: -0.5em;
+	top: 50%;
+  transform: rotate(135deg) translateY(-50%);
+  transform-origin: top; }
+.info-flag-bottom-left::before {
+  right: -0.5em;
+  bottom: 0.6em;
+  transform: rotate(-45deg); }
+.info-flag-bottom-center::before {
+	left: 50%;
+	top: -0.5em;
+  transform: rotate(-135deg) translateX(-50%);
+  transform-origin: left; }
+.info-flag-bottom-right::before {
+  left: -0.5em;
+  bottom: 0.6em;
+  transform: rotate(135deg); }

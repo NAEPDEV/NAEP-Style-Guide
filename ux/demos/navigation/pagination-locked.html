@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Navigation - Pagination Lock</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    #student-toolbar {
+      align-items: center;
+      padding-left: 1em;
+    }
+
+    #btn-enable-page {
+      background: #0076D2;
+      border: none;
+      border-radius: 0.2em;
+      color: #fff;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 24px;
+      margin-left: 0.6em;
+      padding: 0.2em 0.4em; }
+    #btn-enable-page:hover {
+      background-color: #008efa; }
+    #btn-enable-page[disabled] {
+      background-color: #ddd;
+      color: #888;
+      pointer-events: none; }
+
+    .reading-wrapper {
+      font-size: 20px;
+      height: 655px;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .card {
+      height: 655px;
+      width: 715px;
+      position: relative;
+      margin: 0 auto;
+      padding: 2em 0 2em 0;
+      overflow: hidden;
+      font-family: Georgia, serif;
+      line-height: 1.4;
+    }
+
+    .col-left,
+    .col-right {
+      padding: 0;
+      float: left;
+      width: 50%;
+    }
+
+    .col-left {
+      padding-left: 5%;
+      padding-right: 3%;
+    }
+
+    .col-right {
+      padding-right: 5%;
+    }
+
+    p,
+    h2 {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      line-height: 1;
+      margin-bottom: 0.15em;
+    }
+
+    p~h2 {
+      margin-top: 1.15em;
+      margin-bottom: 0.12em;
+    }
+
+    p {
+      text-indent: 1.5em;
+    }
+
+    p.no-indent {
+      text-indent: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--Demo content-->
+  <div id="student-toolbar">
+    <button id="btn-enable-page">Enable Page</button>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+  <!--End demo content-->
+
+  <div class="reading-wrapper">
+
+    <div class="card">
+      <div class="col-left">
+        <h2>Can We Keep Her?</h2>
+        <p>Bringing a white shark to the aquarium wasn’t easy. For fifty years aquariums have tried to keep white sharks alive, but the sharks would not eat in captivity.</p>
+        <p>The baby shark had been caught accidentally by a halibut fisherman off the coast of Southern California. Mr. O’Sullivan and his team knew that white sharks were sometimes caught this way. The aquarium had a special floating pen waiting in coastal
+          waters nearby. While the shark lived in the pen, she was fed the same things she would have eaten in the wild—smaller sharks and other fish. The floating pen helped her get used</p>
+      </div>
+      <div class="col-right">
+        <p class="no-indent">to living in a small space.</p>
+        <p>After living in the pen for 26&#160;days, the shark was put into a special 3,000-gallon tank and driven north to the aquarium. She was given a quick health check and slipped into the million-gallon Outer Bay Exhibit tank. The next morning, the
+          shark ate salmon for breakfast. The aquarium staff cheered!</p>
+        <p>The baby shark was fed using a long pole with a loop at the end to hold pieces of fish. “You slap the food in front of her, get her excited, and she attacks it,” explained Mr. O’Sullivan. “When you watch her feed, it is very, very exciting.” At
+          one point, she bit the feeding stick and snapped off a piece of it.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="col-left">
+        <h2>A Healthy Appetite</h2>
+        <p>The aquarium staff worried that the white shark might attack her tankmates, such as tuna, sea turtles, stingrays, and soupfin sharks. “We try to make sure everybody in the tank is happy and has a full tummy,” said Mr. O’Sullivan. “A few of the
+          little barracuda nip at her tail. It is sort of like a dog chasing a car. It is probably not a smart thing to do!”</p>
+        <p>The aquarium staff didn’t know how long they could keep the baby white shark. They planned to set her free if she stopped eating. Even if they could keep her a long time, they planned to set her free when she got bigger.</p>
+      </div>
+      <div class="col-right">
+        <p>In just six and a half months, the shark grew two feet in length and more than doubled in weight. Scientists were surprised at how quickly she grew.</p>
+        <p>As the white shark got bigger, she began hunting her tankmates. She bit and killed two soupfin sharks. The aquarium released her into the ocean on March 31, 2005.</p>
+        <h2>A Message Home</h2>
+        <p>Before letting her go, scientists attached a special “pop-up” satellite tag to the white shark. A month later the tag automatically popped off the shark, floated to the surface, and sent data to an orbiting satellite.</p>
+        <p>The tag told scientists that</p>
+      </div>
+    </div>
+    <div class="card locked">
+      <div class="col-left">
+        <p class="no-indent">the shark was alive and had swum 200 miles south since her release. This is as close as any shark gets to sending a postcard: “The water is fine. Wish you were here!”</p>
+        <p>During her stay, the baby shark gave people a more balanced view of white sharks. People fear many animals, such as lions and grizzly bears. But over time, people have accepted the idea that these animals have a right to exist. We set up national
+          parks to protect them.</p>
+        <p>Many scientists think that white sharks are very rare and should also be protected. It is now against the law to fish for white sharks off the shores of places like the United States,</p>
+      </div>
+      <div class="col-right">
+        <p class="no-indent">Australia, and South Africa.</p>
+        <p>“Having a live, swimming white shark lets people say, ‘Wow, this animal is really neat,’” says Mr. O’Sullivan. He hopes that people will begin to understand this magnificent creature. Then they will help protect it.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="pagination-locked.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Step Indicator</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    #student-toolbar {
+      justify-content: flex-end;
+    }
+
+    #contentarea {
+      display: block;
+      margin: 1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="student-toolbar">
+    <div class="btn-group" style="align-items: center;">
+      <button id="back-btn" class="btn-nav btn-back" title="Back. Returns to the previous screen." disabled></button>
+      <button id="next-btn" class="btn-nav btn-next" title="Next. Moves to the next screen.">
+        <span>Next</span>
+      </button>
+    </div>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+
+  <div id="contentarea">
+    <div class="step-indicator active">
+      <input type="radio" name="step-indicator" id="si-1" value="1" checked />
+      <label for="si-1">Step 1</label>
+      <input type="radio" name="step-indicator" id="si-2" value="2" />
+      <label for="si-2">Step 2</label>
+      <input type="radio" name="step-indicator" id="si-3" value="3" />
+      <label for="si-3">Step 3</label>
+      <input type="radio" name="step-indicator" id="si-4" value="4" />
+      <label for="si-4">Step 4</label>
+      <input type="radio" name="step-indicator" id="si-5" value="5" />
+      <label for="si-5">Step 5</label>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="step-indicator.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

@@ -1,0 +1,575 @@
+/**
+* @stylesheet icons.css Icons
+* @parent ux.basics
+* eNAEP has a default set of icons that cover most use cases. They are designed to maximize readability through the use of simple shapes and only one or (at most) two colors. The icons are available as an [icon font](demos/shared/fonts/icomoon.woff) or an <a href="demos/shared/icomoon.svg" download="icomoon.svg">SVG symbol library</a>. Unicode character codes for the icon font are shown beneath their respective icons. Multi-color icons are created by layering multiple glyphs from the font.
+*
+* To align with eNAEP’s base font size (as described on the [typography.css] page), most NAEP icons are designed for display at multiples of 12x12 pixels. The section headings below indicate the minimum size at which each group of icons can be displayed without becoming blurry. An icon can be displayed at a larger size as long as it is a multiple of the minimum size.
+*
+* ### Custom SBT icons <img src="static/img/icon-asterisk.svg"/>
+* SBTs sometimes include use cases not covered by the default icon set. Custom icons should match the approach of the default set to ensure a consistent look and feel. (<a href="http://thenounproject.com/" target="_blank">The Noun Project</a> and <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> are good sources for icon ideas.) If a new icon is likely to be used in multiple SBTs, notify the NAEP UX Design Team so that it can be added to the default set.
+**/
+
+/**
+* @styles 0-icons-48 48x48 Icons
+* @iframe ux/demos/icons/icons-48.html 670
+**/
+
+/**
+* @styles 1-icons-32 32x32 Icons
+* @iframe ux/demos/icons/icons-32.html 440
+**/
+
+/**
+* @styles 2-icons-24 24x24 Icons
+* @iframe ux/demos/icons/icons-24.html 1220
+**/
+
+/**
+* @styles 3-icons-12 12x12 Icons
+* @iframe ux/demos/icons/icons-12.html 1100
+**/
+
+@font-face {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/icomoon.woff?md92d0') format('woff');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  speak: none;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.path2,
+.path3,
+.path4,
+.path5,
+.path6 {
+  position: absolute;
+  left: 0;
+}
+
+.icon-radio-unselected:before {
+  content: "\e900";
+}
+.icon-radio-selected:before {
+  content: "\e901";
+}
+.icon-checkbox-unselected:before {
+  content: "\e902";
+}
+.icon-checkbox-selected:before {
+  content: "\e903";
+}
+.icon-cross:before {
+  content: "\e904";
+}
+.icon-plus-thin:before {
+  content: "\e905";
+}
+.icon-check-thin:before {
+  content: "\e906";
+}
+.icon-asterisk:before {
+  content: "\e907";
+}
+.icon-chevron-circle-down:before {
+  content: "\e908";
+}
+.icon-chevron-circle-up:before {
+  content: "\e909";
+}
+.icon-chevron-down:before {
+  content: "\e90a";
+}
+.icon-chevron-up:before {
+  content: "\e90b";
+}
+.icon-chevron-left:before {
+  content: "\e90c";
+}
+.icon-chevron-right:before {
+  content: "\e90d";
+}
+.icon-chevron-down-thin:before {
+  content: "\e90e";
+}
+.icon-chevron-up-thin:before {
+  content: "\e90f";
+}
+.icon-chevron-left-thin:before {
+  content: "\e910";
+}
+.icon-chevron-right-thin:before {
+  content: "\e911";
+}
+.icon-spinner:before {
+  content: "\e912";
+}
+.icon-raise-hand:before {
+  content: "\e946";
+}
+.icon-play:before {
+  content: "\e913";
+}
+.icon-pause:before {
+  content: "\e914";
+}
+.icon-play-circle:before {
+  content: "\e915";
+}
+.icon-volume-down:before {
+  content: "\e916";
+}
+.icon-volume-up:before {
+  content: "\e917";
+}
+.icon-volume-mute:before {
+  content: "\e918";
+}
+.icon-cc-on:before {
+  content: "\e919";
+}
+.icon-cc-off:before {
+  content: "\e91a";
+}
+.icon-fullscreen:before {
+  content: "\e91b";
+}
+.icon-fullscreen-exit:before {
+  content: "\e91c";
+}
+.icon-eye:before {
+  content: "\e91d";
+}
+.icon-eye-blocked:before {
+  content: "\e91e";
+}
+.icon-cut .path1:before {
+  content: "\e94a";
+}
+.icon-cut .path2:before {
+  content: "\e94b";
+  color: rgb(69, 117, 166);
+}
+.icon-copy .path1:before {
+  content: "\e94c";
+  color: #fff;
+}
+.icon-copy .path2:before {
+  content: "\e94d";
+}
+.icon-copy .path3:before {
+  content: "\e94e";
+  color: rgb(69, 117, 166);
+}
+.icon-paste .path1:before {
+  content: "\e94f";
+  color: rgb(237, 200, 126);
+}
+.icon-paste .path2:before {
+  content: "\e950";
+  color: #fff;
+}
+.icon-paste .path3:before {
+  content: "\e951";
+}
+.icon-select-all .path1:before {
+  content: "\e952";
+  color: #fff;
+}
+.icon-select-all .path2:before {
+  content: "\e953";
+}
+.icon-undo:before {
+  content: "\e954";
+}
+.icon-redo:before {
+  content: "\e955";
+}
+.icon-bold:before {
+  content: "\e956";
+}
+.icon-italic:before {
+  content: "\e957";
+}
+.icon-underline:before {
+  content: "\e958";
+}
+.icon-decrease-indent .path1:before {
+  content: "\e959";
+  color: rgb(69, 117, 166);
+}
+.icon-decrease-indent .path2:before {
+  content: "\e95a";
+}
+.icon-increase-indent .path1:before {
+  content: "\e95b";
+  color: rgb(69, 117, 166);
+}
+.icon-increase-indent .path2:before {
+  content: "\e95c";
+}
+.icon-font-size-small:before {
+  content: "\e95d";
+}
+.icon-font-size-med:before {
+  content: "\e95e";
+}
+.icon-font-size-large:before {
+  content: "\e95f";
+}
+.icon-spell-check .path1:before {
+  content: "\e960";
+}
+.icon-spell-check .path2:before {
+  content: "\e961";
+  color: rgb(69, 117, 166);
+}
+.icon-thesaurus .path1:before {
+  content: "\e962";
+  color: rgb(137, 89, 171);
+}
+.icon-thesaurus .path2:before {
+  content: "\e963";
+  color: #fff;
+}
+.icon-thesaurus .path3:before {
+  content: "\e964";
+}
+.icon-cog:before {
+  content: "\e965";
+}
+.icon-magnifying-glass:before {
+  content: "\e966";
+}
+.icon-sort-default:before {
+  content: "\e967";
+}
+.icon-sort-ascending:before {
+  content: "\e968";
+}
+.icon-sort-descending:before {
+  content: "\e969";
+}
+.icon-pencil .path1:before {
+  content: "\e91f";
+  color: #EAD2A7;
+}
+.icon-pencil .path2:before {
+  content: "\e920";
+}
+.icon-highlighter .path1:before {
+  content: "\e921";
+  color: #FFDF5A;
+}
+.icon-highlighter .path2:before {
+  content: "\e922";
+  color: #FFED9F;
+}
+.icon-highlighter .path3:before {
+  content: "\e923";
+}
+.icon-eraser .path1:before {
+  content: "\e924";
+  color: #EAA0B5;
+}
+.icon-eraser .path2:before {
+  content: "\e925";
+}
+.icon-clear-page:before {
+  content: "\e926";
+}
+.icon-move:before {
+  content: "\e927";
+}
+.icon-rotate-left:before {
+  content: "\e928";
+}
+.icon-rotate-right:before {
+  content: "\e929";
+}
+.icon-select-in-passage .path1:before {
+  content: "\e940";
+  color: rgb(20, 136, 18);
+}
+.icon-select-in-passage .path2:before {
+  content: "\e941";
+  color: rgb(167, 169, 172);
+}
+.icon-select-in-passage .path3:before {
+  content: "\e942";
+  color: rgb(255, 255, 255);
+}
+.icon-select-in-passage .path4:before {
+  content: "\e943";
+  color: rgb(0, 0, 0);
+}
+.icon-select-in-passage .path5:before {
+  content: "\e944";
+  color: rgb(255, 255, 255);
+}
+.icon-select-in-passage .path6:before {
+  content: "\e945";
+  color: rgb(0, 0, 0);
+}
+.icon-question-circle:before {
+  content: "\e92a";
+}
+.icon-change-theme:before {
+  content: "\e92b";
+}
+.icon-zoom-out:before {
+  content: "\e92c";
+}
+.icon-zoom-in:before {
+  content: "\e92d";
+}
+.icon-lang-esp .path1:before {
+  content: "\e92e";
+}
+.icon-lang-esp .path2:before {
+  content: "\e92f";
+  color: #8B13B2;
+}
+.icon-lang-esp .path3:before {
+  content: "\e930";
+}
+.icon-lang-eng .path1:before {
+  content: "\e931";
+}
+.icon-lang-eng .path2:before {
+  content: "\e932";
+  color: #8B13B2;
+}
+.icon-lang-eng .path3:before {
+  content: "\e933";
+}
+.icon-read-aloud .path1:before {
+  content: "\e934";
+}
+.icon-read-aloud .path2:before {
+  content: "\e935";
+  color: #0076D2;
+}
+.icon-scratchwork .path1:before {
+  content: "\e936";
+  color: #900;
+}
+.icon-scratchwork .path2:before {
+  content: "\e937";
+}
+.icon-equation-editor .path1:before {
+  content: "\e938";
+}
+.icon-equation-editor .path2:before {
+  content: "\e939";
+  color: #008117;
+}
+.icon-calculator:before {
+  content: "\e93a";
+}
+.icon-timer:before {
+  content: "\e93b";
+}
+.icon-warning .path1:before {
+  content: "\e93c";
+  color: rgb(237, 200, 126);
+}
+.icon-warning .path2:before {
+  content: "\e93d";
+}
+.icon-arrow-left:before {
+  content: "\e93e";
+}
+.icon-arrow-right:before {
+  content: "\e93f";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-check:before {
+  content: "\ea0c";
+}
+.icon-lock:before {
+  content: "\e947";
+}
+.icon-cross-thin:before {
+  content: "\e948";
+}
+.icon-minus-thin:before {
+  content: "\e949";
+}
+.icon-prohibited:before {
+  content: "\e96a";
+}
+.icon-info:before {
+  content: "\e96b";
+}
+.icon-filter:before {
+  content: "\e96c";
+}
+
+
+/* EQUATION EDITOR ICONS */
+@font-face {
+  font-family: 'naep-ee';
+  src: url('fonts/naep-ee.woff?rqunfg') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-ee-"], [class*=" icon-ee-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'naep-ee' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ee-close:before {
+  content: "\ea29";
+}
+.icon-ee-bar-accent:before {
+  content: "\ea00";
+}
+.icon-ee-curve-accent:before {
+  content: "\ea01";
+}
+.icon-ee-left-right-accent:before {
+  content: "\ea02";
+}
+.icon-ee-right-accent:before {
+  content: "\ea03";
+}
+.icon-ee-vertical-bars:before {
+  content: "\ea04";
+}
+.icon-ee-square-root:before {
+  content: "\ea05";
+}
+.icon-ee-cube-root:before {
+  content: "\ea06";
+}
+.icon-ee-n-root:before {
+  content: "\ea07";
+}
+.icon-ee-angle:before {
+  content: "\ea08";
+}
+.icon-ee-triangle:before {
+  content: "\ea09";
+}
+.icon-ee-stacked-fraction:before {
+  content: "\ea0a";
+}
+.icon-ee-mixed-number:before {
+  content: "\ea0b";
+}
+.icon-ee-exponent:before {
+  content: "\ea0c";
+}
+.icon-ee-sequence:before {
+  content: "\ea0d";
+}
+.icon-ee-number-e:before {
+  content: "\ea0e";
+}
+.icon-ee-e-n-power:before {
+  content: "\ea0f";
+}
+.icon-ee-sine:before {
+  content: "\ea10";
+}
+.icon-ee-arcsine:before {
+  content: "\ea11";
+}
+.icon-ee-cosine:before {
+  content: "\ea12";
+}
+.icon-ee-arccosine:before {
+  content: "\ea13";
+}
+.icon-ee-tangent:before {
+  content: "\ea14";
+}
+.icon-ee-arctangent:before {
+  content: "\ea15";
+}
+.icon-ee-secant:before {
+  content: "\ea16";
+}
+.icon-ee-cosecant:before {
+  content: "\ea17";
+}
+.icon-ee-cotangent:before {
+  content: "\ea18";
+}
+.icon-ee-ln:before {
+  content: "\ea19";
+}
+.icon-ee-log:before {
+  content: "\ea1a";
+}
+.icon-ee-log-n:before {
+  content: "\ea1b";
+}
+.icon-ee-parallel:before {
+  content: "\ea1c";
+}
+.icon-ee-perpendicular:before {
+  content: "\ea1d";
+}
+.icon-ee-congruence:before {
+  content: "\ea1e";
+}
+.icon-ee-approx-equal:before {
+  content: "\ea1f";
+}
+.icon-ee-infinity:before {
+  content: "\ea20";
+}
+.icon-ee-alpha:before {
+  content: "\ea21";
+}
+.icon-ee-beta:before {
+  content: "\ea22";
+}
+.icon-ee-delta:before {
+  content: "\ea23";
+}
+.icon-ee-theta:before {
+  content: "\ea24";
+}
+.icon-ee-mu:before {
+  content: "\ea25";
+}
+.icon-ee-sigma:before {
+  content: "\ea26";
+}
+.icon-ee-tilde:before {
+  content: "\ea27";
+}
+.icon-ee-backspace:before {
+  content: "\ea28";
+}

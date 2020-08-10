@@ -1,0 +1,16 @@
+WEBVTT
+
+1
+00:00:01.000 --> 00:00:05.000
+This is the content of the
+countdown_en.vtt file.
+
+2
+00:00:05.000 --> 00:00:10.000
+The countdown_en.vtt file is
+rendered using a custom element.
+
+3
+00:00:10.000 --> 00:00:16.000
+We are using a custom element
+because it provides more styling control.
