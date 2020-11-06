@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Fraction Model Response Type - Circular Variant</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      display: block;
+      padding: 0.75em;
+      text-align: center;
+    }
+
+    .response-area:first-of-type {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="response-area response-area-iic response-area-fm">
+
+    <h3 class="fm-title">Title</h3>
+
+    <div data-units="4" data-max-units="16" data-min-units="1" class="fm-model fm-circle">
+      <div class="fm-wedge-container"></div>
+    </div>
+
+    <div class="fm-controls">
+      <div class="increment-control fm-increment-section">
+        <button class="btn ic-btn-minus"></button>
+        <div class="ic-control-label">Sections</div>
+        <button class="btn ic-btn-plus"></button>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-secondary btn-small">Undo</button>
+        <button class="btn btn-secondary btn-small fm-btn-reset">Reset</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../response-type-fraction-model/response-type-fraction-model.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

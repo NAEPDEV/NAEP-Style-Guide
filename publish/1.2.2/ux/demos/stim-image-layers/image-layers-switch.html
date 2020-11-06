@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Interactive Stimulus - Image Layers - Switch</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      margin: 0.75em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="layer-wrapper">
+    <div class="layer-row">
+      <img src="base.png" class="layer-base-img no-theme" id="layer-base" />
+      <img src="buzzer.png" class="layer-img no-theme hidden" id="layer-0" />
+      <img src="bulb.png" class="layer-img no-theme hidden" id="layer-1" />
+    </div>
+    <div class="layer-row">
+      <div class="layer-switch-wrapper">
+        <div class="layer-switch-label active">Open</div>
+        <label class="layer-switch">
+					<input type="checkbox" id="layer-btn-0">
+					<div class="layer-switch-slider"></div>
+				</label>
+        <div class="layer-switch-label">Closed</div>
+      </div>
+      <div class="layer-switch-wrapper">
+        <div class="layer-switch-label active">Open</div>
+        <label class="layer-switch">
+					<input type="checkbox" id="layer-btn-1">
+					<div class="layer-switch-slider"></div>
+				</label>
+        <div class="layer-switch-label">Closed</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="stim-image-layers.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

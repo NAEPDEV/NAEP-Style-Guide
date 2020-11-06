@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Multimedia Controls - Video Variant</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    .media-container {
+      margin: 0.75em;
+      width: 25em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <figure class="media-container">
+    <div class="media-wrapper">
+      <video class="media" controls preload="metadata">
+			<!-- Add poster -->
+			<source src="countdown.ogg" type="video/ogg">
+      <source src="countdown.mp4" type="video/mp4">
+			<track src="countdown_en.vtt" kind="subtitles" srclang="en" label="English">
+		</video>
+      <button class="video-hero-play media-btn" aria-label="Play/Pause"></button>
+      <div class="video-custom-track-wrapper hidden">
+        <span class="video-custom-track hidden"></span>
+      </div>
+    </div>
+    <div class="media-controls hidden">
+
+      <div class="media-progress-container-outer">
+        <div class="slider-container media-progress-container">
+          <div class="media-hover hidden"></div>
+          <progress class="media-progress" value="0"></progress>
+          <input type="range" class="media-seek" min="0" value="0" />
+        </div>
+        <div class="media-tooltip media-tooltip-seek hidden">0:00</div>
+      </div>
+
+      <div class="media-left-controls">
+        <button type="button" class="media-btn icon-play media-btn-playpause" aria-label="Play/Pause"></button>
+        <span class="media-tooltip media-btn-playpause-tooltip">Play</span>
+        <span class="media-time-display">
+  				<span class="media-time-current">0:00</span>
+          <span>/</span>
+          <span class="media-time-duration">0:00</span>
+        </span>
+      </div>
+
+      <div class="media-right-controls">
+        <button type="button" class="media-btn icon-volume-up media-btn-mute"></button>
+        <div class="slider-container media-volume-container">
+          <progress class="media-volume-progress" value="1" max="1"></progress>
+          <input type="range" class="media-volume" min="0" max="1" step="0.05" value="1" />
+        </div>
+        <button type="button" class="media-btn icon-cc-off video-btn-cc" style="display: none;"></button>
+        <button type="button" class="media-btn icon-fullscreen video-btn-fs"></button>
+        <span class="media-tooltip media-btn-mute-tooltip">Mute</span>
+        <span class="media-tooltip video-btn-cc-tooltip">Closed&#160;captions</span>
+        <span class="media-tooltip video-btn-fs-tooltip">Full&#160;screen</span>
+      </div>
+
+    </div>
+
+  </figure>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="multimedia-controls.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

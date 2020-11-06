@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Select-in-passage Response Type - Multiple-select</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    .btn-group {
+      align-items: flex-start;
+      padding: 0 0.75em;
+    }
+
+    #student-toolbar p {
+      margin: 0;
+    }
+
+    .content-container {
+      padding-top: 1em;
+    }
+
+    .childStim.stim-passage {
+      padding: 1.5em 1.75em;
+    }
+
+    .stim-passage p {
+      font-size: 0.85em;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="student-toolbar">
+    <div class="btn-group btn-group-column">
+      <p><b>Cardinality</b></p>
+      <div>
+        <input name="cardinality" id="cardinality-ss" value="cardinality-ss" type="radio" />
+        <label for="cardinality-ss">Single-select</label>
+        <input name="cardinality" id="cardinality-ms" value="cardinality-ms" type="radio" checked />
+        <label for="cardinality-ms">Multiple-select</label>
+      </div>
+    </div>
+    <div class="btn-group btn-group-column">
+      <p><b>Response area columns</b></p>
+      <div>
+        <input name="columns" id="columns-1" value="columns-1" type="radio" checked />
+        <label for="columns-1">One</label>
+        <input name="columns" id="columns-2" value="columns-2" type="radio" />
+        <label for="columns-2">Two</label>
+      </div>
+    </div>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+  <!--Student toolbar ends-->
+
+  <div id="contentarea">
+    <div class="contentarea-inner">
+      <div class="childItem content-container selected">
+        <div class="col col-50 col-divider-right">
+
+          <div class="childStim-wrapper">
+            <div class="childStim stim-passage" title="Document">
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 1, Sentence 1" tabindex="0">It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only.</span>
+                </p>
+              </div>
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 2, Sentence 1" tabindex="0">There were a king with a large jaw and a queen with a plain face, on the throne of England; there were a king with a large jaw and a queen with a fair face, on the throne of France.</span>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 2, Sentence 2" tabindex="0">In both countries it was clearer than crystal to the lords of the State preserves of loaves and fishes, that things in general were settled for ever.</span>
+                </p>
+              </div>
+              <div class="stimulus-paragraph">
+                <p>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 3, Sentence 1" tabindex="0">It was the year of Our Lord one thousand seven hundred and seventy-five. Spiritual revelations were conceded to England at that favoured period, as at this.</span>
+                  <span class="sis-text-selection sis-selection item1-sis-selection active" title="Paragraph 3, Sentence 2" tabindex="0">Mrs. Southcott had recently attained her five-and-twentieth blessed birthday, of whom a prophetic private in the Life Guards had heralded the sublime appearance by announcing that arrangements were made for the swallowing up of London and Westminster.</span>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col col-50">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is a text-based select-in-stimulus item. Choose <span class="cardinality-toggle"><u>two</u> sentences</span> from the passage.</p>
+            </div>
+          </div>
+
+          <div class="sis-directions">
+            <svg class="sis-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 96 48">
+          <path fill="#148812" d="M22 2h68v20h-68v-20z"></path>
+          <path fill="#a7a9ac" d="M6 22h84v20h-84v-20z"></path>
+          <path fill="#fff" d="M20 0v20h-16v24h88v-44zM88 40h-80v-16h80zM24 20v-16h64v16z"></path>
+          <path fill="#000" d="M78.784 38.484l-7.937 6.567c-3.888 3.15-11.671-2.214-18.43-6.261-2.529-1.513-4.598-2.908-6.304-3.983-2.769-1.744-3.228-2.596-3.014-4.782 0.233-2.382 2.275-3.622 4.421-3.23l3.144 1.353-5.976-9.347c-0.716-1.265-1.6-2.342-2.639-3.245l-0.015-0.013s-1.724-1.724-3.080-2.945-1.286-4.041 0.358-5.621c2.703-2.614 6 0.674 7.688 2.198 1.506 1.366 2.339 1.959 3.833 4.5 0.778 1.316 1.313 2.069 1.313 2.069 0.276-0.725 0.717-1.334 1.28-1.802l0.007-0.006c1.408-1.139 3.386-1.093 4.849-0.031 0.252-0.841 0.732-1.549 1.368-2.076l0.007-0.006c1.408-1.139 3.383-1.090 4.849-0.031 0.25-0.84 0.73-1.547 1.368-2.070l0.007-0.006c1.776-1.438 4.454-0.979 5.854 0.979l5.891 11.009c4.063 9.041 1.598 16.073 1.438 16.422-0.074 0.138-0.167 0.255-0.278 0.354l-0.001 0.001z"></path>
+          <path fill="#fff" d="M68.074 44.555c-3.732 0.398-10.051-4.090-15.038-7.081 0 0-5.012-3.337-6.5-4.348-1.73-1.187-2.143-1.519-1.981-3.224 0.083-0.827 0.367-1.148 0.909-1.586 0.31-0.257 0.699-0.429 1.126-0.477l0.010-0.001c0.069-0.008 0.15-0.012 0.231-0.012 0.153 0 0.303 0.016 0.447 0.045l-0.014-0.002 5.93 2.428c0.024 0.009 0.051 0.015 0.079 0.015 0.011 0 0.021-0.001 0.032-0.002l-0.001 0c0.102-0.011 0.187-0.072 0.232-0.158l0.001-0.002c0.030-0.055 0.047-0.12 0.047-0.19 0-0.090-0.029-0.173-0.079-0.24l0.001 0.001-7.867-12.075c-0.714-1.2-1.58-2.223-2.589-3.084l-0.017-0.014s-1.776-1.316-3.132-2.78c-1.078-1.157-1.010-3.074 0.174-4.035 0.371-0.303 0.834-0.506 1.342-0.561l0.011-0.001c0.958-0.104 1.552 0.153 2.519 0.888l2.625 2.131c1.454 1.347 2.281 2.143 3.052 3.695l3.656 5.869c0.076 0.107 0.221 0.276 0.34 0.263 0.103-0.015 0.196-0.047 0.28-0.094l-0.004 0.002c0.083-0.074 0.143-0.171 0.17-0.281l0.001-0.004c0.001-0.014 0.002-0.030 0.002-0.047 0-0.096-0.028-0.186-0.077-0.261l0.001 0.002c-0.444-0.625-0.817-1.442-0.71-2.226s0.466-1.466 1.041-1.929c0.368-0.297 0.827-0.496 1.33-0.55l0.011-0.001c0.974-0.107 1.956 0.346 2.553 1.179l1.286 1.914c0.084 0.111 0.216 0.183 0.364 0.184h0c0.090-0.017 0.17-0.046 0.243-0.085l-0.005 0.002c0.089-0.076 0.156-0.188 0.156-0.239 0.006-0.062 0.086-0.15-0.037-0.413-0.306-0.704-0.817-1.393-0.71-2.174s0.471-1.469 1.041-1.929c0.366-0.298 0.823-0.497 1.324-0.55l0.011-0.001c0.979-0.11 1.963 0.346 2.563 1.187l1.191 2.011c0.239 0.239 0.358 0.181 0.478 0.166 0.062-0.006 0.269-0.129 0.318-0.168 0.147-0.125 0.024-0.542-0.098-0.713-0.447-0.618-0.698-1.335-0.582-2.122s0.466-1.457 1.041-1.914c0.366-0.305 0.826-0.509 1.33-0.565l0.011-0.001c0.979-0.107 1.966 0.349 2.55 1.182l5.896 11.006c3 7.036 1.937 13.232 1.366 14.542l-0.062 0.159-7.894 6.526c-0.514 0.401-1.148 0.646-1.895 0.729z"></path>
+          <path fill="#000" d="M67.594 45.346c-3.328 0-7.902-2.848-12.336-5.608-0.897-0.557-1.776-1.105-2.616-1.609-0.030-0.019-5.044-3.359-6.539-4.369-1.875-1.284-2.511-1.834-2.312-3.93 0.107-1.052 0.5-1.553 1.193-2.111 0.419-0.345 0.943-0.576 1.517-0.64l0.013-0.001c0.094-0.010 0.202-0.016 0.312-0.016 0.206 0 0.407 0.020 0.601 0.058l-0.020-0.003 4.75 1.931-7.158-10.986c-0.674-1.135-1.492-2.103-2.445-2.917l-0.016-0.013c-0.039-0.026-1.809-1.347-3.199-2.845-0.601-0.652-0.969-1.527-0.969-2.487 0-0.092 0.003-0.184 0.010-0.275l-0.001 0.012c0.066-0.954 0.508-1.83 1.214-2.401 0.48-0.395 1.081-0.659 1.74-0.73l0.015-0.001c1.229-0.145 2.033 0.259 3.062 1.039l2.643 2.145c1.543 1.423 2.431 2.292 3.256 3.949l2.206 3.537 0.009-0.076c0.129-0.979 0.598-1.842 1.321-2.422 0.479-0.384 1.074-0.641 1.725-0.713l0.015-0.001c1.172-0.125 2.383 0.384 3.151 1.354 0-0.003 0-0.006 0-0.010 0-0.113 0.008-0.224 0.022-0.333l-0.001 0.013c0.129-0.976 0.595-1.838 1.319-2.422 0.477-0.387 1.073-0.645 1.725-0.715l0.015-0.001c1.222-0.125 2.386 0.386 3.154 1.362 0.004-0.129 0.016-0.251 0.035-0.371l-0.002 0.016c0.131-0.974 0.601-1.831 1.321-2.402 0.475-0.389 1.070-0.65 1.722-0.719l0.014-0.001c0.103-0.011 0.223-0.017 0.344-0.017 1.202 0 2.264 0.596 2.908 1.509l0.008 0.011 5.947 11.084c3.268 7.67 1.901 14.041 1.39 15.211-0.051 0.111-0.188 0.366-0.278 0.443l-7.892 6.526c-0.619 0.484-1.358 0.781-2.209 0.889-0.035 0.011-0.078 0.020-0.121 0.025l-0.004 0c-0.168 0.019-0.363 0.030-0.56 0.030h-0zM68.075 44.555v0zM46.974 28.577c0 0.015-0.161 0.007-0.29 0.023-0.281 0.030-0.532 0.141-0.735 0.308l0.002-0.002c-0.461 0.371-0.583 0.523-0.637 1.073-0.119 1.269 0 1.384 1.653 2.516 1.486 1.007 6.494 4.341 6.494 4.341 0.816 0.489 1.701 1.039 2.608 1.601 4.209 2.621 8.984 5.563 11.831 5.364 0.036-0.011 0.079-0.019 0.122-0.024l0.003-0c0.601-0.068 1.109-0.26 1.507-0.571l7.723-6.388c0.383-0.87 1.678-6.793-1.366-13.937l-5.869-10.944c-0.371-0.522-1.1-0.875-1.791-0.783-0.361 0.039-0.682 0.183-0.94 0.4l0.003-0.002c-0.419 0.332-0.688 0.834-0.766 1.423-0.081 0.531 0.069 1.057 0.443 1.574 0.313 0.434 0.517 1.289-0.033 1.75-0.012 0.009-0.392 0.313-0.741 0.343-0.25 0.046-0.646 0.057-1.085-0.386l-1.312-2.163c-0.372-0.5-0.961-0.821-1.625-0.821-0.066 0-0.131 0.003-0.195 0.009l0.008-0.001c-0.361 0.037-0.684 0.177-0.945 0.389l0.003-0.003c-0.412 0.332-0.688 0.842-0.759 1.431-0.051 0.359 0.152 0.756 0.386 1.216 0.092 0.188 0.188 0.371 0.266 0.556 0.188 0.405 0.137 0.706 0.081 0.894 0.021 0.25-0.308 0.559-0.407 0.644-0.185 0.129-0.407 0.221-0.646 0.259l-0.009 0.001c-0.416 0.045-0.861-0.184-1.085-0.527l-1.277-1.903c-0.427-0.589-1.106-0.924-1.836-0.844-0.364 0.038-0.69 0.179-0.954 0.393l0.003-0.003c-0.409 0.328-0.679 0.837-0.756 1.427-0.087 0.634 0.323 1.329 0.574 1.688 0.137 0.195 0.218 0.437 0.218 0.699 0 0.061-0.004 0.121-0.013 0.179l0.001-0.007c-0.021 0.197-0.188 0.55-0.451 0.761s-0.679 0.25-0.688 0.25c-0.392 0.031-0.75-0.171-1.034-0.589l-3.677-5.9c-0.744-1.489-1.474-2.197-2.924-3.538l-2.586-2.098c-0.849-0.644-1.25-0.793-1.955-0.722-0.367 0.040-0.695 0.183-0.96 0.4l0.003-0.003c-0.38 0.313-0.61 0.778-0.649 1.319-0.004 0.047-0.006 0.102-0.006 0.158 0 0.557 0.213 1.064 0.562 1.444l-0.001-0.002c1.294 1.393 3.011 2.674 3.029 2.687 1.106 0.937 2.040 2.034 2.775 3.263l0.033 0.059 7.848 12.044c0.127 0.184 0.202 0.412 0.202 0.658 0 0.199-0.049 0.386-0.137 0.549l0.003-0.006c-0.16 0.302-0.453 0.515-0.799 0.562l-0.005 0.001c-0.028 0.002-0.060 0.003-0.092 0.003-0.134 0-0.264-0.019-0.387-0.054l0.010 0.002zM52.866 30.14c0 0.004 0.006 0.008 0.006 0.011zM53.366 19.77c0.003 0.005 0.006 0.008 0.009 0.012l-0-0c-0.002-0.003-0.004-0.007-0.006-0.010l-0-0zM59.513 17.449c-0.007 0.039-0.011 0.085-0.012 0.132v0.001c0.002-0.049 0.006-0.095 0.013-0.14l-0.001 0.007zM60.132 17.278l0.009 0.014z"></path>
+        </svg>
+            <p>Tap a sentence to select it.</p>
+          </div>
+
+          <div data-min-selections="2" data-max-selections="2" data-selection-unit-singular="sentence" data-selection-unit-plural="sentences" data-placeholders="true" data-columns="1" class="sis-response-area sis-multiple-select sis-no-placeholders">
+            <p>Your choices will appear here.</p>
+          </div>
+        </div>
+
+      </div>
+      <button class="scroll-indicator more hidden"><span></span></button>
+    </div>
+  </div>
+
+
+  <div class="sis-alert hidden" role="alert">
+    <div>
+      <p>You can only choose <u></u> <span class="sis-selection-unit-plural"></span>.</p>
+      <p>You must clear one <span class="sis-selection-unit-singular"></span> before you can choose another.</p>
+    </div>
+    <button class="sis-alert-close" role="button" disabled></button>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../indicators/scroll-indicator.js"></script>
+  <script src="response-type-sis.js"></script>
+  <script>
+    $('input[type=radio]').click(function() {
+      var value = $(this).attr('id'),
+        responseArea = $('.sis-response-area'),
+        selections = $('.sis-selection'),
+        selectionContainers = $('.sis-selection-container'),
+        seeMoreBtns = $('.btn-see-more'),
+        span = $('.cardinality-toggle'),
+        ssClass = 'sis-single-select',
+        msClass = 'sis-multiple-select',
+        col2Class = 'sis-col-2',
+        selectedClass = 'selected';
+
+      function resetResponseArea() {
+        selections.removeClass(selectedClass);
+        responseArea.html('');
+      }
+
+      switch (value) {
+        case "cardinality-ss":
+          resetResponseArea();
+          responseArea.removeClass(msClass).addClass(ssClass);
+          responseArea.prepend('<p>Your choice will appear here.</p>');
+          responseArea.data('minSelections', 1);
+          setPlaceholders(responseArea);
+          span.html('a sentence');
+          break;
+        case "cardinality-ms":
+          resetResponseArea();
+          responseArea.removeClass(ssClass).addClass(msClass);
+          responseArea.prepend('<p>Your choices will appear here.</p>');
+          responseArea.data('minSelections', 2);
+          setPlaceholders(responseArea);
+          span.html('<u>two</u> sentences');
+          break;
+        case "columns-1":
+          responseArea.data('columns', 1);
+          responseArea.removeClass(col2Class);
+          selectionContainers.removeClass('sis-text-overflow expanded');
+          seeMoreBtns.remove();
+          break;
+        case "columns-2":
+          responseArea.data('columns', 2);
+          responseArea.addClass(col2Class);
+          selectionContainers.each(function() {
+            var target = $(this);
+
+            if (target.outerHeight() >= 260) {
+              target.addClass('sis-text-overflow');
+              target.append('<button class="btn-see-more"></button>');
+            }
+          });
+          break;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

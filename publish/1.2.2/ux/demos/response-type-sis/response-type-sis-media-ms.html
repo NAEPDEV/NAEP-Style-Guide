@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Select-in-multimedia Response Type - Single-select</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    html {
+      font-size: 16px;
+    }
+
+    #student-toolbar,
+    #student-toolbar-spacer {
+      font-size: 13.333px;
+    }
+
+    .btn-group {
+      align-items: flex-start;
+      padding: 0 0.75em;
+    }
+
+    #student-toolbar p {
+      margin: 0;
+    }
+
+    #contentarea.full-height .content-container {
+      max-width: 59em;
+      padding-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="student-toolbar">
+    <div class="btn-group btn-group-column">
+      <p><b>Cardinality</b></p>
+      <div>
+        <input name="cardinality" id="cardinality-ss" value="cardinality-ss" type="radio" />
+        <label for="cardinality-ss">Single-select</label>
+        <input name="cardinality" id="cardinality-ms" value="cardinality-ms" type="radio" checked />
+        <label for="cardinality-ms">Multiple-select</label>
+      </div>
+    </div>
+    <div class="btn-group btn-group-column">
+      <p><b>Response area columns</b></p>
+      <div>
+        <input name="columns" id="columns-1" value="columns-1" type="radio" />
+        <label for="columns-1">One</label>
+        <input name="columns" id="columns-2" value="columns-2" type="radio" checked />
+        <label for="columns-2">Two</label>
+      </div>
+    </div>
+  </div>
+  <div id="student-toolbar-spacer"></div>
+  <!--Student toolbar ends-->
+
+  <div id="contentarea" class="full-height">
+    <div class="contentarea-inner">
+
+      <div class="childItem content-container selected">
+        <div class="col col-50">
+          <figure class="media-container">
+
+            <div class="media-wrapper">
+              <video data-source="../multimedia-controls/countdown" class="media" controls preload="metadata">
+                <!-- Add poster -->
+                <source src="../multimedia-controls/countdown.ogg" type="video/ogg" />
+                <track src="../multimedia-controls/countdown_en.vtt" kind="subtitles" srclang="en" label="English" />
+              </video>
+              <button class="video-hero-play media-btn" aria-label="Play/Pause"></button>
+              <div class="video-custom-track-wrapper hidden">
+                <span class="video-custom-track hidden"></span>
+              </div>
+            </div>
+            <div class="media-controls media-sis-variant">
+
+              <div class="media-left-controls">
+                <button type="button" class="media-btn icon-play media-btn-playpause" aria-label="Play/Pause"></button>
+                <span class="media-tooltip media-btn-playpause-tooltip">Play</span>
+                <span class="media-time-display">
+                  <span class="media-time-current">0:00</span>
+                <span>/</span>
+                <span class="media-time-duration">0:00</span>
+                </span>
+              </div>
+
+              <div class="media-right-controls">
+                <button type="button" class="media-btn icon-volume-up media-btn-mute"></button>
+                <div class="slider-container media-volume-container">
+                  <progress class="media-volume-progress" value="1" max="1"></progress>
+                  <input type="range" class="media-volume" min="0" max="1" step="0.05" value="1" />
+                </div>
+                <button type="button" class="media-btn icon-cc-off video-btn-cc" style="display: none;"></button>
+                <button type="button" class="media-btn icon-fullscreen video-btn-fs"></button>
+                <span class="media-tooltip media-btn-mute-tooltip">Mute</span>
+                <span class="media-tooltip video-btn-cc-tooltip">Closed&#160;captions</span>
+                <span class="media-tooltip video-btn-fs-tooltip">Full&#160;screen</span>
+              </div>
+
+              <div class="media-progress-container-outer">
+                <div class="slider-container media-progress-container">
+                  <div class="media-hover hidden"></div>
+                  <progress class="media-progress" value="0"></progress>
+                  <input type="range" class="media-seek" min="0" value="0" />
+                </div>
+                <div class="media-tooltip media-tooltip-seek hidden">0:00</div>
+
+                <div data-start-time="0" data-end-time="2900" class="sis-selection sis-media-selection active" title="Clip 1">
+                  <button class="sis-media-btn-primary">
+                  <span>1</span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-play" tabindex="-1">
+                  <span></span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-add" tabindex="-1">
+                  <span></span>
+                </button>
+                </div>
+
+                <div data-start-time="2900" data-end-time="9200" class="sis-selection sis-media-selection active" title="Clip 2">
+                  <button class="sis-media-btn-primary">
+                  <span>2</span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-play" tabindex="-1">
+                  <span></span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-add" tabindex="-1">
+                  <span></span>
+                </button>
+                </div>
+
+                <div data-start-time="9200" data-end-time="16050" class="sis-selection sis-media-selection active" title="Clip 3">
+                  <button class="sis-media-btn-primary">
+                  <span>3</span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-play" tabindex="-1">
+                  <span></span>
+                </button>
+                  <button class="sis-media-btn-secondary sis-media-btn-add" tabindex="-1">
+                  <span></span>
+                </button>
+                </div>
+
+              </div>
+
+            </div>
+
+          </figure>
+
+        </div>
+
+        <div class="col col-50 col-divider-left">
+          <div class="item-stem-wrapper">
+            <div class="stem-paragraph">
+              <p>This is a media-based select-in-stimulus item. Choose <span class="cardinality-toggle"><u>two</u> clips</span> from the film in which a sound can be heard.</p>
+            </div>
+          </div>
+          <div data-min-selections="2" data-max-selections="2" data-selection-unit-singular="clip" data-selection-unit-plural="clips" data-placeholders="false" data-columns="2" class="sis-response-area sis-multiple-select sis-no-placeholders">
+            <p>Your choices will appear here.</p>
+          </div>
+        </div>
+      </div>
+
+       <button class="scroll-indicator more hidden"><span></span></button>
+
+
+    </div>
+  </div>
+
+  <div class="sis-alert hidden" role="alert">
+    <div>
+      <p>You can only choose <u></u> <span class="sis-selection-unit-plural"></span>.</p>
+      <p>You must clear one <span class="sis-selection-unit-singular"></span> before you can choose another.</p>
+    </div>
+    <button class="sis-alert-close" role="button" disabled></button>
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script src="../indicators/scroll-indicator.js"></script>
+  <script src="../multimedia-controls/multimedia-controls.js"></script>
+  <script src="response-type-sis.js"></script>
+  <script>
+    $('input[type=radio]').click(function() {
+      var value = $(this).attr('id'),
+      responseArea = $('.sis-response-area'),
+      selections = $('.sis-selection'),
+      span = $('.cardinality-toggle'),
+      ssClass = 'sis-single-select',
+      msClass = 'sis-multiple-select',
+      col2Class = 'sis-col-2',
+      selectedClass = 'selected';
+
+      switch (value) {
+        case "cardinality-ss":
+          selections.removeClass(selectedClass);
+          responseArea.removeClass(msClass).addClass(ssClass).html('');
+          responseArea.prepend('<p>Your choice will appear here.</p>');
+          span.html('a clip');
+          break;
+        case "cardinality-ms":
+          selections.removeClass(selectedClass);
+          responseArea.removeClass(ssClass).addClass(msClass).html('');
+          responseArea.prepend('<p>Your choices will appear here.</p>');
+          span.html('<u>two</u> clips');
+          break;
+        case "columns-1":
+          responseArea.removeClass(col2Class);
+          break;
+        case "columns-2":
+          responseArea.addClass(col2Class);
+          break;
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAEP Style Guide - Indicators - Focus Indicator</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      padding-top: 0.5rem
+    }
+
+    .focus {
+      outline: 1px dotted;
+      pointer-events: none !important;
+    }
+
+    .btn.focus {
+      outline-offset: -4px;
+    }
+
+    .footnote-btn.focus {
+      outline-color: #000;
+      outline-offset: 0;
+    }
+
+    .btn.focus[disabled],
+    .footnote-btn.focus[disabled] {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <figure>
+    <button type="btn" class="btn focus" tabindex="-1">Default</button>
+    <figcaption>Inset focus indicator</figcaption>
+  </figure>
+  <figure>
+    <button class="footnote-btn focus" tabindex="-1"></button>
+    <figcaption>Outset focus indicator</figcaption>
+  </figure>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+
+</body>
+
+</html>

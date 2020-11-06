@@ -1,0 +1,911 @@
+/**
+* @stylesheet writing-editor.css Writing Editor
+* @parent ux.environments
+* The writing assessment is presented in the writing editor environment. This environment contains two panels: one for the writing task and one for the editor toolbar and writing area.
+*
+* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/writing-editor/writing-editor-full.html" target="_blank">here</a>._
+* @iframe ux/demos/writing-editor/writing-editor.html 475
+**/
+
+/**
+* @styles 0-wri-panel-divider Panel Divider
+* The writing editor environment panels are separated by a gray `#EEEEEE` divider with a dark gray `#BBBBBB` border and a drop shadow.
+*
+* Two __Panel Size__ buttons are located at the top of the divider. They can be used to switch between three views:
+* * _Full-screen task_: The writing task takes up the full width of the screen, and the divider sits on the screen’s right edge. This is the initial view when the test taker enters a writing block.
+* * _Split-screen_: The writing task is positioned on the left and takes up approximately 42% of the screen. The writing editor is positioned on the right and takes up approximately 57% of the screen. (The remaining 1% of the screen is taken up by the divider.)
+* * _Full-screen editor_: The writing editor takes up the full width of the screen, and the divider sits on the screen’s left edge.
+*
+* The __Panel Size__ buttons have the following states.
+* * _Enabled_. The default state. The button’s background is blue `#246BB2`, and its icon is white `#FFFFFF`. The left button has the `chevron-left` icon. The right has the `chevron-right` icon.
+* * _Hover_. Visible when the cursor is over the button. The background color is lightened to `#008EFA`. The `pointer` cursor is shown.
+* * _Disabled_. Visible when the button is inactive. The button’s opacity is reduced to 30%.
+**/
+#buttonbox {
+  background: #eee;
+  border: 0.05em solid #bbb;
+  border-radius: 0 0 0.25em 0.25em;
+  border-top: none;
+  box-shadow: 0 0 0.17em rgba(0,0,0,.3);
+  display: flex;
+  flex: 0 0 auto;
+  font-size: 24px;
+  height: 2.46em;
+  margin-left: -2.375em;
+  transition: background 0.2s, border 0.2s;
+  z-index: 5;
+}
+
+#divider {
+  background: #EEE;
+  border-left: 0.05em solid #bbb;
+  border-right: 0.05em solid #bbb;
+  box-shadow: 0 0.125em 0.17em rgba(0,0,0,.3);
+  flex: 0 0 auto;
+  font-size: 24px;
+  margin: 2.42em 0 0 -2.9em;
+  transition: background 0.2s, border 0.2s;
+  width: 0.5em;
+  z-index: 5;
+}
+
+#toggleLeft,
+#toggleRight {
+  align-items: center;
+  background: #246bb2;
+  border: 0.1em solid transparent;
+  border-radius: 0.2em;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: inherit;
+  justify-content: center;
+  margin: 0.37em;
+  padding: 0;
+  position: relative;
+  transition: background .2s, border-color .2s;
+  width: 1.92em; }
+#toggleLeft[disabled],
+#toggleRight[disabled] {
+  opacity: 0.3;
+  pointer-events: none; }
+#toggleRight:hover,
+#toggleLeft:hover,
+#toggleRight:active,
+#toggleLeft:active {
+  background: #008efa; }
+html.can-touch #toggleRight:hover,
+html.can-touch #toggleLeft:hover {
+  background: #246bb2; }
+
+#toggleLeft {
+  margin-right: 0.21em;
+}
+
+#toggleLeft::before,
+#toggleRight::before {
+  font-size: 0.9em;
+}
+
+
+/**
+* @styles 1-wri-task-panel Task Panel
+* The task panel contains the writing task that the test taker must complete. The panel has a top margin such that task content begins approximately 1.3x the base font size below the bottom of the __Panel Size__ buttons to avoid overlap.
+*
+* At higher zoom levels, the task panel’s width and height remain constant while the panel content increases in size, causing scrollbars and the scroll indicator to appear, as specified on the [navigation.css] and [indicators.css] pages, respectively.
+**/
+#taskpane {
+  flex: 0 0 auto;
+  position: relative;
+  transition: width .4s ease-in-out, margin-left .4s ease-in-out;
+  width: calc(100% - 11px); }
+#taskpane.taskpane-left {
+  width: 42.3%; }
+#taskpane.taskpane-left2 {
+  margin-left: calc(-42.3% - 1px); }
+
+#stimpad {
+  height: 59px;
+  position: relative;
+  width: 100%;
+}
+
+#stimwrapper {
+  height: calc(100% - 59px);
+  overflow-x: auto;
+  width: 100%;
+}
+
+#stimulus {
+  margin: 0 auto;
+  min-height: 32.36em;
+  padding: 1.31em 1.44em;
+  position: relative;
+  width: 24.58em;
+}
+
+
+/**
+* @styles 2-wri-editor-toolbar Editor Toolbar
+* The editor toolbar appears above the writing area. It provides access to all writing editor tools and dialogs.
+* ### Presentation
+* The editor toolbar has a background gradient (`#F9F9F9` to `#F5F5F5`) and a bottom gray `#D5D5D5` border. Like the writing area and dialogs, it is set in Arial. The toolbar is arranged into three groups, each including a set of related controls.
+*
+* * Edit
+*   * Cut (`cut` icon)
+*   * Copy (`copy` icon)
+*   * Paste (`paste` icon)
+*   * Select all (`select-all` icon)
+*   * Undo (`undo` icon)
+*   * Redo (`redo` icon)
+* * Format
+*   * Bold (`bold` icon)
+*   * Italic (`italic` icon)
+*   * Underline (`underline` icon)
+*   * Decrease indent (`decrease-indent` icon)
+*   * Increase indent (`increase-indent` icon)
+*   * Small font size (`font-size-small` icon)
+*   * Medium font size (`font-size-med` icon)
+*   * Large font size (`font-size-large` icon)
+* * Tools
+*   * Spell check (`spell-check` icon)
+*   * Spell check options (`cog` icon)
+*   * Thesaurus (`thesaurus` icon)
+*
+* Controls are presented both within dropdown menus and as buttons, except for the Spell Check Options dialog, which is only presented in the Tools menu. Dropdown menus and associated buttons are grouped together to convey that they provide redundant functionality. Control groups are separated by a vertical gray `#909090` divider.
+* ### Dropdown Menus
+* Dropdown menus are composed of a menu label, which opens the menu when selected, and the menu body.
+*
+* Menu labels have the following states.
+* * _Enabled_. The default state. Menu label has a gray border and text (`#909090` and `#666666`, respectively), rounded corners, and a downward pointing caret on its right side.
+* * _Hover_. Visible when the cursor is over the menu label. The label’s background changes to a light blue `#CDE6F7`, its border and caret change to a dark blue `#2A8DD4`, and its text darkens to `#494949`. A subtle drop shadow appears, and the `pointer` cursor is shown.
+* * _Active_. Visible when the test taker presses down on the menu label. The background darkens to `#9DCEF1`, and the drop shadow is removed.
+* * _Toggled on_: Visible when the associated menu body is open. Background becomes white `#FFFFFF`, text becomes black `#000000`, and the caret points upward. The bottom border is removed so the menu label appears connected to the menu body.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Text, border, and caret lighten.
+*
+* Menu bodies have a white `#FFFFFF` background, a blue `#2A8DD4` border, rounded corners, and a drop shadow when visible. Each option in a menu body has the following states.
+* * _Enabled_. The default state. Option icon and label are left-justified, while the keyboard shortcut, if present, is right-justified. The label is black `#000000`, and the keyboard shortcut is dark gray `#777777`.
+* * _Hover_. Background changes to light blue `#CDE6F7`. The `pointer` cursor is shown.
+* * _Disabled_. Icon, label, and keyboard shortcut lighten.
+*
+* Menu bodies typically hang right when open; however, if a menu body would extend past the right edge of the content area, it hangs left. Only one dropdown menu may be open at a time. A dropdown menu and the context menu cannot be open at the same time.
+* ### Buttons
+* Writing editor toolbar buttons use the bare style described on the [buttons.css] page.
+*
+* The functionality of the font formatting buttons (__Bold__, __Italic__, __Underline__) is closely related, so the buttons are visually grouped. When two or more adjacent buttons are toggled on, rounding of the continguous corners is removed so that the buttons appear connected.
+**/
+/*---------------------------------------------------------------------------
+WRITING PANE STYLES
+---------------------------------------------------------------------------*/
+#wri-editor-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+#wri-editor-toolbar {
+  background: -moz-linear-gradient(top, #f9f9f9 0%, #f5f5f5 100%);
+  background: -webkit-linear-gradient(top, #f9f9f9 0%, #f5f5f5 100%);
+  background: -o-linear-gradient(top, #f9f9f9 0%, #f5f5f5 100%);
+  background: -ms-linear-gradient(top, #f9f9f9 0%, #f5f5f5 100%);
+  border-bottom: 0.05em solid #d5d5d5;
+  font-size: 24px;
+  min-width: 36em;
+  padding: 0.33em 0 0.33em 3.67em;
+  transition: background 0.2s, border 0.2s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.wri-editor-control-container {
+  border-right: 0.05em solid #909090;
+  display: inline-block;
+  min-width: 4.8em; }
+.wri-editor-control-container:nth-child(3) {
+  border-right: none; }
+
+/**
+* @styles 6-wri-context-menu Context Menu
+* The context menu appears when test takers right-click the writing area. When any other area of the screen is clicked or right-clicked, the context menu closes. It also closes when the test taker presses Escape.
+*
+* The context menu has a white `#FFFFFF` background, a gray `#949494` border, and a drop shadow to differentiate it from the writing area.
+*
+* The context menu has the following options when a correctly spelled word is right-clicked:
+* * Cut
+* * Copy
+* * Paste
+* * Bold
+* * Italic
+* * Underline
+* * Small font size
+* * Medium font size
+* * Large font size
+* * Synonyms
+*
+* The “Synonyms” option has a right-facing caret to indicate that it provides access to a submenu. The submenu contains up to five synonyms (depending on the available synonyms in the thesaurus) and a link to the thesaurus dialog. When it appears, the submenu fades in and animates right slightly.
+*
+* When an incorrectly spelled word is right-clicked, up to five spelling suggestions (depending on the available suggestions in the spell checker) are shown in the context menu, followed by an “Ignore all” option.
+*
+* Context menu options have the following states.
+* * _Enabled_. The default state. Option icon (if present) and label are left-justified. The label is black `#000000`.
+* * _Hover_. Background changes to light blue `#CDE6F7`. The `pointer` cursor is shown.
+* * _Disabled_. Icon and label lighten.
+*
+* Both the context menu and its submenus will not overflow the content area. For example, if a test taker right-clicks the lower-right corner of the writing area, the context menu will appear above the cursor and far enough left such that it is entirely visible.
+**/
+
+/*---------------------------------------------------------------------------
+WRITING EDITOR MENU STYLES
+---------------------------------------------------------------------------*/
+.wri-dropdown-wrapper,
+.wri-context-menu {
+  cursor: default;
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 0.71em;
+  line-height: 1;
+  margin: 0.12em 0 0.65em;
+  position: relative;
+}
+
+.wri-context-menu {
+  font-size: 17px;
+}
+
+.wri-dropdown-wrapper > .wri-btn {
+  justify-content: space-between;
+  letter-spacing: 0.03em;
+  max-width: 6.78em;
+  padding: 0.6em 0.6em 0.6em 0.85em; }
+.wri-dropdown-wrapper.active > .wri-btn,
+html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
+  background: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #2A8DD4;
+  box-shadow: 0 -0.06em 0.18em rgba(0,0,0,.3);
+  color: #000;
+  transition: background .2s, border .2s, color .2s, box-shadow .2s;
+  z-index: 3;
+}
+
+.wri-dropdown-wrapper > .wri-btn::after {
+  border-color: #909090 transparent;
+  border-style: solid;
+  border-width: 0.35em 0.35em 0 0.35em;
+  content: '';
+  display: block;
+  pointer-events: none; }
+.wri-dropdown-wrapper.active > .wri-btn::after,
+.wri-dropdown-wrapper > .wri-btn:hover::after,
+.wri-dropdown-wrapper > .wri-btn:active::after {
+  border-color: #2A8DD4 transparent;
+  transition: border-color .2s; }
+.wri-dropdown-wrapper.active > .wri-btn::after {
+  border-width: 0 0.35em 0.35em 0.35em; }
+
+.wri-dropdown-wrapper > .wri-btn::before {
+  background: transparent;
+  content: '';
+  height: 0.12em;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  width: 100%; }
+.wri-dropdown-wrapper.active > .wri-btn::before {
+  background: #fff;
+  transition: background .2s; }
+
+.wri-menu {
+  background: #fff;
+  border: 0.06em solid #2A8DD4;
+  border-radius: 0 0.25em 0.25em 0.25em;
+  box-shadow: 0 0 0.18em rgba(0,0,0,.3);
+  left: 0;
+  margin: 0;
+  min-width: 12.53em;
+  opacity: 0;
+  padding: 0.117em 0.117em 0.058em;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: 2; }
+.wri-dropdown-wrapper.active .wri-menu,
+.wri-menu.active {
+  opacity: 1;
+  transition: opacity .3s;
+  visibility: visible; }
+.wri-menu.wri-dropdown-left {
+  border-radius: 0.25em 0 0.25em 0.25em; }
+
+.wri-context-menu,
+.wri-context-submenu {
+  border-color: #949494;
+  border-radius: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.wri-context-submenu {
+  left: calc(100% + 0.06em);
+  min-width: 10em;
+  top: 0;
+  transform: translateX(-1em);
+  transition: opacity 0s 0.3s, transform 0s 0.3s, visibility 0s 0.3s;
+  z-index: 1; }
+.wri-context-sub-trigger.active .wri-context-submenu {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.2s 0.2s, transform 0.2s 0.2s, visibility 0s 0s;
+  visibility: visible; }
+
+.wri-menu hr {
+  border: none;
+  border-top: 0.06em solid #c0c0c0;
+  margin: 0.118em 0 0.118em 2.18em;
+}
+
+.wri-menu button,
+.wri-context-sub-trigger {
+  align-items: center;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  margin-bottom: 0.059em;
+  padding: 0.24em 0.35em 0.29em 0.24em;
+  position: relative;
+  width: 100%; }
+.wri-menu button:focus,
+.wri-context-sub-trigger:focus,
+.wri-context-sub-trigger.active {
+  background-color: #cde6f7;
+  outline: none; }
+.wri-menu button[disabled] {
+  opacity: 0.65;
+  pointer-events: none; }
+
+.wri-dropdown button:first-of-type {
+  border-top-right-radius: 0.12em; }
+.wri-dropdown.wri-dropdown-left button:first-of-type {
+  border-top-left-radius: 0.12em;
+  border-top-right-radius: 0; }
+.wri-dropdown button:last-of-type {
+  border-bottom-left-radius: 0.12em;
+  border-bottom-right-radius: 0.12em; }
+
+.wri-menu [class^="icon-"] {
+  color: #666;
+  font-size: 1.41em;
+  height: 1em;
+  margin-right: 0.42em;
+  width: 1em;
+}
+
+.hotkey-label {
+  color: #777;
+  flex: 1 0 auto;
+  min-width: 3.53em;
+  text-align: right;
+}
+
+.wri-context-sub-trigger::after {
+  display: block;
+  content: '';
+  border: 0.35em solid;
+  border-color: transparent transparent transparent #444;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.375em);
+}
+
+
+/*---------------------------------------------------------------------------
+LABEL BUTTON STYLES
+---------------------------------------------------------------------------*/
+.wri-btn {
+  align-items: center;
+  background: none;
+  border: 0.06em solid #909090;
+  border-radius: 0.25em;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  justify-content: center;
+  max-width: 6.1em;
+  padding: 0.5em 0.5em 0.4em 0.5em;
+  position: relative;
+  transition: opacity .2s;
+  width: 100%; }
+.wri-btn:hover {
+  background: #cde6f7;
+  border-color: #2A8DD4;
+  box-shadow: 0 0.05em 0.1em rgba(0,0,0,0.2);
+  color: #494949;
+  transition: background-color .2s, border-color .2s, box-shadow .2s, color .2s, opacity .2s; }
+html.can-touch .wri-btn:hover {
+  background: none;
+  border-color: #909090;
+  box-shadow: none;
+  color: #666; }
+.wri-btn:active,
+html.can-touch .wri-btn:active {
+  background: #9dcef1;
+  border-color: #2A8DD4;
+  box-shadow: none;
+  color: #494949; }
+.wri-btn.margin-top {
+  margin-top: 0.65em; }
+.wri-btn[disabled] {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.wri-btn.blue-btn {
+  background: #246bb2;
+  border-color: transparent;
+  color: #fff; }
+.wri-btn.blue-btn:hover,
+.wri-btn.blue-btn:active,
+html.can-touch .wri-btn.blue-btn:active {
+  background: #008efa;
+  border-color: transparent;
+  color: #fff; }
+html.can-touch .wri-btn.blue-btn:hover {
+  background: #246bb2;
+  border-color: transparent;
+  box-shadow: none;
+  color: #fff; }
+
+#change-btn {
+  border-left-width: 0;
+  border-radius: 0 0.25em 0.25em 0;
+  min-width: 5.5em;
+}
+
+.wri-btn.close-dialog-btn {
+  background: #f9f9f9;
+  color: #909090;
+  flex: 0;
+  padding: 0.25em; }
+.wri-btn.close-dialog-btn:hover {
+  border-color: #404040;
+  color: #5c5c5c;
+  transition: border .2s, color .2s, background .2s; }
+.wri-btn.close-dialog-btn:active {
+  background: #f0f0f0;
+  border-color: #404040;
+  color: #5c5c5c; }
+
+.wri-btn.prev-btn,
+.wri-btn.lookup-btn {
+  color: #909090;
+  max-width: 1.625rem;
+  padding: 0; }
+.wri-btn.prev-btn:hover,
+.wri-btn.lookup-btn:hover,
+.wri-btn.prev-btn:active,
+.wri-btn.lookup-btn:active {
+  color: #2A8DD4; }
+.wri-btn.prev-btn {
+  font-size: 1.06em; }
+.wri-btn.lookup-btn {
+  font-size: 1.41em; }
+
+
+/*---------------------------------------------------------------------------
+ICON BUTTON STYLES
+---------------------------------------------------------------------------*/
+.wri-button-wrapper {
+  border-right: 0.05em solid #909090;
+  float: left;
+  margin: 0 0.21em 0 0; }
+.wri-button-wrapper:last-child {
+  border-right: none;
+  margin-right: 0; }
+
+.wri-button-wrapper > button {
+  background: none;
+  border: 0.05em solid transparent;
+  border-radius: 0.17em;
+  color: #666;
+  cursor: pointer;
+  float: left;
+  font-size: inherit;
+  padding: 0.25em;
+  speak: normal;
+  transition: color 0.2s, opacity 0.2s; }
+.wri-button-wrapper > button:last-child {
+  margin-right: 0.25em; }
+.wri-button-wrapper > button:hover {
+  background: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0.04em 0.08em rgba(0,0,0,.15); }
+html.can-touch .wri-button-wrapper > button:hover {
+  background: none;
+  border-color: transparent;
+  box-shadow: none; }
+.wri-button-wrapper > button:active,
+html.can-touch .wri-button-wrapper > button:active {
+  background: #fff;
+  border-color: #b2b2b2;
+  box-shadow: 0 0 0.29em rgba(0,0,0,.25) inset; }
+.wri-button-wrapper > button.ql-active,
+html.can-touch .wri-button-wrapper > button.ql-active {
+  background: #C4E0F8;
+  border-color: #2A8DD4; }
+.wri-button-wrapper > button.ql-active:hover,
+.wri-button-wrapper > button.ql-active:active {
+  background: #d6ebff; }
+html.can-touch .wri-button-wrapper > button.ql-active:hover {
+  background: #C4E0F8; }
+.wri-button-wrapper > button[disabled] {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.button-sticky.ql-active + .button-sticky.ql-active {
+  border-bottom-left-radius: 0;
+  border-left-color: transparent;
+  border-top-left-radius: 0; }
+.button-sticky.ql-active.remove-border-radius {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0; }
+
+.button-sticky-fontsize.ql-active {
+  pointer-events: none;
+}
+
+.wri-button-wrapper > button .path2,
+.wri-button-wrapper > button .path3,
+.wri-button-wrapper > button .path4,
+.wri-button-wrapper > button .path5,
+.wri-button-wrapper > button .path6 {
+  left: 0.25em;
+}
+
+
+/**
+* @styles 3-wri-area Writing Area
+* The writing area is where test takers compose their responses. It has a white `#FFFFFF` fill, a gray `#C9C9C9` border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5"x11" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.
+*
+* The writing area is surrounded by a background with a gray gradient (`#E0E0E0` to `#CCCCCC`) to differentiate it from the editor toolbar.
+*
+* As the test taker scrolls down in longer responses, a drop shadow fades in below the editor toolbar to better differentiate the white writing area from the light gray toolbar.
+*
+* At higher zoom levels, the writing area’s size increases, causing scrollbars to appear around it, as specified on the [navigation.css] page. (The scroll indicator does not appear since the writing area contains the test taker’s response.)
+**/
+#wri-editor-top-shadow {
+  background: -moz-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
+  background: -webkit-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
+  flex: 0 0 auto;
+  height: 0.2em;
+  opacity: 0;
+  transition: background 0.2s;
+  z-index: 1;
+}
+
+#wri-editor-contents-wrapper {
+  background: -moz-linear-gradient(top, #e0e0e0 0%, #ccc 100%);
+  background: -webkit-linear-gradient(top, #e0e0e0 0%, #ccc 100%);
+  background: -o-linear-gradient(top, #e0e0e0 0%, #ccc 100%);
+  background: -ms-linear-gradient(top, #e0e0e0 0%, #ccc 100%);
+  flex: 1 1 auto;
+  margin-top: -0.2em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: background 0.2s;
+}
+
+#wri-editor-contents {
+  display: flex;
+  justify-content: center;
+  min-width: calc(32.54167em + 14px);
+}
+
+#wri-editor-actual {
+  background: #fff;
+  border: 1px solid #c9c9c9;
+  box-shadow: 0 0 0.41em rgba(0,0,0,.15);
+  cursor: text;
+  flex: 0 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 0.71rem;
+  height: 100%;
+  min-height: 58.82em;
+  line-height: 1.46;
+  margin: 7px;
+  overflow-y: hidden;
+  padding: 4.1em;
+  resize: none;
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  width: 45.88em; }
+#wri-editor-actual[disabled] {
+  pointer-events: none; }
+
+.ql-editor:focus,
+.ql-clipboard:focus {
+  outline: none;
+}
+/**
+* @styles 4-wri-dialogs Dialogs
+* The writing editor includes three dialogs:
+* * _Spell check_: Provides suggestions for misspelled words and allows test takers to correct or ignore misspellings.
+* * _Spell check options_: Allows test takers to set preferences for spell check behavior.
+* * _Thesaurus_: Provides synonyms for words the test taker selects and allows the test taker to replace a selected word with a chosen synonym.
+* ### Presentation
+* Writing editor dialogs are presented differently than system [dialogs.css] to convey their particular functionality and to better associate them with the rest of the writing editor user interface (UI).
+*
+* Writing editor dialogs have a light gray `#F9F9F9` background, a dark gray `#909090` border, rounded corners, and a drop shadow to differentiate them from surrounding content. Button and background text is dark gray `#555555` to better emphasize the dialog’s input fields, which are black `#000000`. Like the editor toolbar and the writing area, writing editor dialogs are set in the Arial typeface.
+*
+* All writing editor dialogs have a top blue `#246BB2` bar that contains the dialog’s title. A __Close__ button appears at the left side of the title bar. The __Close__ button has the following states.
+* * _Enabled_. The default state. The button’s background is light gray `#F9F9F9`, and its `cross` icon is dark gray `#909090`.
+* * _Hover_. Visible when the cursor is over the button. The icon and border colors are darkened. The `pointer` cursor is shown.
+*
+* Buttons in writing editor dialogs typically have dark gray borders and labels (`#909090` and `#666666`, respectively). However, the button that triggers the dialog’s primary action (__Change__ for spell check, __Replace__ for thesaurus) has a blue `#246BB2` background and white `#FFFFFF` label for emphasis.
+*
+* ### Behavior
+*  Writing editor dialogs can be moved around the content area by dragging the title bar. The `move` cursor is shown when hovering over the title bar to help convey this functionality. Dialogs cannot be moved on top of the [system-toolbar.css]. When a writing editor dialog is first opened, it appears at the center of the content area. Once the test taker moves a dialog, its position is retained if it is closed and re-opened.
+*
+* Writing editor dialogs are non-modal (i.e., the test taker can interact with other UI elements while a dialog is on screen). Only one dialog at a time may be open. When the test taker switches to full-screen task view, any open dialogs automatically close.
+**/
+.wri-dialog-backdrop {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  left: 0;
+  opacity: 1;
+  overflow: auto;
+  padding: 0.25em;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 2.5em;
+  transition: opacity 0.2s;
+  visibility: visible;
+  z-index: 6; }
+.wri-dialog-backdrop.hidden {
+  opacity: 0;
+  transition: opacity 0.1s, visibility 0.1s;
+  visibility: hidden; }
+
+.wri-dialog {
+  background: #f9f9f9;
+  border-radius: 0.35em;
+  box-shadow: 0 0 0.3em rgba(0,0,0,.5);
+  color: #555;
+  flex: 0 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 0.71em;
+  line-height: normal;
+  pointer-events: auto;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+  user-select: none;
+}
+
+.wri-dialog-top-bar {
+  align-items: center;
+  background: #246bb2;
+  border-radius: 0.3em 0.3em 0 0;
+  color: #fff;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  padding: 0.53em;
+  transition: background 0.2s;
+}
+
+.wri-dialog-content-wrapper {
+  border: 0.06em solid #909090;
+  border-radius: 0 0 0.3em 0.3em;
+  border-top: none;
+  padding: 1em;
+  transition: border 0.2s;
+}
+
+.wri-dialog h2 {
+  cursor: move;
+  font-size: 1.18em;
+  font-weight: bold;
+  margin: 0 0 0 0.47em;
+}
+
+.wri-dialog p {
+  cursor: default;
+  margin: 0 0 0.35em 0;
+}
+
+.wri-dialog-column {
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: top; }
+.wri-dialog-column.margins {
+  margin: 0 0.7em 0.75em 0; }
+
+.wri-dialog-col-span {
+  display: flex;
+  justify-content: space-between; }
+.wri-dialog-col-span:first-of-type {
+  margin-bottom: 0.75em;
+}
+
+.wri-dialog-col-span > div {
+  display: flex;
+}
+
+.wri-dialog-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1.25em;
+}
+
+.wri-dialog-btn-wrapper .wri-btn:first-of-type {
+  margin-right: 0.6em;
+}
+
+.wri-dialog input[type=text] {
+  background: #fff;
+  border: 0.06em solid #909090;
+  box-shadow: none;
+  font: inherit;
+  margin: 0;
+  padding: 0.47em;
+  transition: background 0.2s, boder 0.2s, opacity 0.2s;
+  width: 11.8em; }
+.wri-dialog input[type=text]:hover,
+.wri-dialog input[type=text]:focus {
+  border-color: #606060; }
+#spell-check-dialog input[type=text] {
+  width: 14.12em; }
+.wri-dialog input[type=text][disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wri-dialog select {
+  border: 0.06em solid #909090;
+  font: inherit;
+  transition: background 0.2s, border 0.2s;
+  width: 11.8em; }
+#spell-check-dialog select {
+  margin-top: 0.7em;
+  width: 14.12em; }
+.wri-dialog select[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wri-dialog select option {
+  padding: 0.24em 0.41em;
+  position: relative; }
+.wri-dialog select option:hover {
+  background-color: #cde6f7; }
+.wri-dialog select option:active {
+  background-color: #2A8DD4; }
+
+#synonyms option:checked::before,
+#synonyms option:hover::before {
+  color: #777;
+  content: '\e966';
+  cursor: pointer;
+  display: block;
+  float: right;
+  font-family: 'icons';
+  font-size: 1.18em; }
+#synonyms option:checked::before {
+  color: #fff; }
+
+.wri-dialog .control {
+  align-items: center;
+  display: flex;
+  margin: 1em 0.5em;
+  padding: 0;
+}
+
+
+/*------------------------------------------------------------------------------
+COMBOBOX STYLES
+------------------------------------------------------------------------------*/
+.wri-combobox {
+  background: #fff;
+  border: 0.06em solid #909090;
+  border-radius: 0.25em;
+  flex: 1 0 auto;
+  height: 2.3em;
+  margin: 0 0.41em;
+  position: relative;
+  transition: opacity .2s; }
+.wri-combobox:hover,
+.wri-combobox:active {
+  border-color: #606060; }
+.wri-combobox[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.wri-combobox::after {
+  border-color: #909090 transparent;
+  border-style: solid;
+  border-width: 0.35em 0.35em 0 0.35em;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  right: 0.6em;
+  top: 50%;
+  transform: translateY(-50%); }
+.wri-combobox:hover::after,
+.wri-combobox:active::after {
+  border-color: #424242 transparent;
+}
+
+select::-ms-expand { /*Prevenst IE from showing default select element*/
+  display: none;
+}
+
+.wri-combobox select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  height: 2.18em;
+  left: 0;
+  padding: 0 1.88em 0 0.41em;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.wri-combobox input[type=text] {
+  border: none;
+  left: 0;
+  line-height: 2.06em;
+  margin: 0 0.41em;
+  padding: 0;
+  position: absolute;
+  top: 0.06em;
+  width: 80%;
+}
+
+.wri-dialog .checkbox {
+  margin: 1em 0.5em;
+  padding: 0;
+}
+
+
+/**
+* @styles 5-wri-info-flags Information Flags
+* [information-flags.css] are used in the writing editor environment in two cases:
+* * When the test taker first enters a writing block, an information flag appears to the left of the visible  __Panel Size__ button to indicate how to view the writing editor. Once the button is pressed, the flag disappears. The&#160;flag reads:
+* > Tap this button to open the writing panel.
+* * When the test taker first opens a dialog, an information flag appears to the dialog’s left to indicate that the dialog can be dragged by its title bar. Once the test taker interacts with the dialog, the flag disappears. It does not reappear while the test taker is in the same block. The flag reads:
+* > You can move this window by dragging the blue bar.
+**/
+
+#start-writing-flag {
+  margin-top: 0.45em;
+  max-width: 9em;
+  right: 3.55em;
+}
+
+/**
+* @styles 7-wri-max-character Max Character Limit
+* The test taker can enter up to 10,000 characters in the writing area. If the test taker attempts to enter or paste more than the maximum number of characters, entry/pasting is prevented, and the __Max-character Limit__ modal dialog is displayed. (See the [dialogs.css] page for information about dialog styles and behavior.) Content of the dialog:
+* > You have reached the maximum amount you can type.
+* >
+* > To type something else, you must remove some of what you already typed.
+**/

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAEP Style Guide - Response Type Line Point Graph</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      display: block;
+      padding: 0.75em;
+      text-align: center;
+    }
+
+    .response-area:first-of-type {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="response-area response-area-iic response-area-lpg">
+
+    <div class="control-group-wrapper">
+      <div class="segmented-control">
+        <input type="radio" name="sc-2" id="sc-point" value="Point" />
+        <label for="sc-point">
+          <svg class="sc-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+            <polygon class="lp-point" points="3.29 23 14 3.96 24.71 23 3.29 23" />
+            <path class="sc-icon-stroke" d="M14,6l9,16H5L14,6m0-4.08L12.26,5l-9,16L1.58,24H26.42l-1.68-3-9-16L14,1.92Z" />
+          </svg>
+          <span>Point</span>
+        </label>
+        <input type="radio" name="sc-2" id="sc-line" value="Line" />
+        <label for="sc-line">
+          <svg class="sc-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+            <path class="lp-line-icon" d="M14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z" />
+            <path class="sc-icon-stroke" d="M14,5a9,9,0,0,1,9,9h0a9,9,0,0,1-9,9h0a9,9,0,0,1-9-9H5a9,9,0,0,1,9-9h0m0-2A11,11,0,1,0,25,14,11,11,0,0,0,14,3Z" />
+          </svg>
+          <span>Line</span>
+        </label>
+        <input type="radio" name="sc-2" id="sc-multi-point" value="Multi-point" />
+        <label for="sc-multi-point">
+          <svg class="sc-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+            <polygon class="lp-multi-point" points="5.78 14 14 2.26 22.22 14 14 25.74 5.78 14" />
+            <path class="sc-icon-stroke" d="M14,4l7,10L14,24,7,14,14,4M14,.51,12.36,2.85l-7,10L4.56,14l.8,1.15,7,10L14,27.49l1.64-2.34,7-10,.8-1.15-.8-1.15-7-10L14,.51Z" />
+          </svg>
+          <span>Multi-point</span>
+        </label>
+        <input type="radio" name="sc-2" id="sc-line-segment" value="Line segment" />
+        <label for="sc-line-segment">
+          <svg class="sc-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+            <rect class="lp-segment" x="5" y="5" width="18" height="18" />
+            <path class="sc-icon-stroke" d="M22,6V22H6V6H22m2-2H4V24H24V4Z" />
+          </svg>
+          <span>Multi-segment</span>
+        </label>
+      </div>
+      <button class="btn btn-secondary btn-small btn-point-delete">Delete</button>
+    </div>
+
+    <svg class="coord-grid" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 497 539" width="497" height="539">
+      <g class="cg-vertical-grid-lines">
+        <line class="cg-grid-line" x1="90" y1="45" x2="90" y2="495" />
+        <line class="cg-grid-line" x1="135" y1="45" x2="135" y2="495" />
+        <line class="cg-grid-line" x1="180" y1="45" x2="180" y2="495" />
+        <line class="cg-grid-line" x1="225" y1="45" x2="225" y2="495" />
+        <line class="cg-grid-line" x1="315" y1="45" x2="315" y2="495" />
+        <line class="cg-grid-line" x1="360" y1="45" x2="360" y2="495" />
+        <line class="cg-grid-line" x1="405" y1="45" x2="405" y2="495" />
+        <line class="cg-grid-line" x1="450" y1="45" x2="450" y2="495" />
+      </g>
+      <g class="cg-horizontal-grid-lines">
+        <line class="cg-grid-line" x1="45" y1="450" x2="495" y2="450" />
+        <line class="cg-grid-line" x1="45" y1="405" x2="495" y2="405" />
+        <line class="cg-grid-line" x1="45" y1="360" x2="495" y2="360" />
+        <line class="cg-grid-line" x1="45" y1="315" x2="495" y2="315" />
+        <line class="cg-grid-line" x1="45" y1="225" x2="495" y2="225" />
+        <line class="cg-grid-line" x1="45" y1="180" x2="495" y2="180" />
+        <line class="cg-grid-line" x1="45" y1="135" x2="495" y2="135" />
+        <line class="cg-grid-line" x1="45" y1="90" x2="495" y2="90" />
+      </g>
+      <g class="cg-y-axis">
+        <text class="cg-text-shadow" transform="translate(230.05 457.23)">–4</text>
+        <text transform="translate(230.05 457.23)">–4</text>
+        <text class="cg-text-shadow" transform="translate(230.05 412.23)">–3</text>
+        <text transform="translate(230.05 412.23)">–3</text>
+        <text class="cg-text-shadow" transform="translate(230.05 366.9)">–2</text>
+        <text transform="translate(230.05 366.9)">–2</text>
+        <text class="cg-text-shadow" transform="translate(230.05 321.65)">–1</text>
+        <text transform="translate(230.05 321.65)">–1</text>
+        <text class="cg-text-shadow" transform="translate(242.92 232.32)">1</text>
+        <text transform="translate(242.92 232.32)">1</text>
+        <text class="cg-text-shadow" transform="translate(242.02 187.49)">2</text>
+        <text transform="translate(242.02 187.49)">2</text>
+        <text class="cg-text-shadow" transform="translate(242.02 142.48)">3</text>
+        <text transform="translate(242.02 142.48)">3</text>
+        <text class="cg-text-shadow" transform="translate(242.02 97.05)">4</text>
+        <text transform="translate(242.02 97.05)">4</text>
+        <line class="cg-tick" x1="260.5" y1="450" x2="280.5" y2="450" />
+        <line class="cg-tick" x1="260.5" y1="405" x2="280.5" y2="405" />
+        <line class="cg-tick" x1="260.5" y1="360" x2="280.5" y2="360" />
+        <line class="cg-tick" x1="260.5" y1="315" x2="280.5" y2="315" />
+        <line class="cg-tick" x1="260.5" y1="225" x2="280.5" y2="225" />
+        <line class="cg-tick" x1="260.5" y1="180" x2="280.5" y2="180" />
+        <line class="cg-tick" x1="260.5" y1="135" x2="280.5" y2="135" />
+        <line class="cg-tick" x1="260.5" y1="90" x2="280.5" y2="90" />
+        <text class="cg-axis-label cg-text-shadow" transform="translate(288.62 79.34)">y</text>
+        <text class="cg-axis-label" transform="translate(288.62 79.34)">y</text>
+        <text transform="translate(19.6 327.64) rotate(-90)">
+          <tspan class="cg-axis-label">y</tspan>-axis name
+        </text>
+        <g class="cg-axis">
+          <line x1="270.5" y1="61.89" x2="270.5" y2="478.11" />
+          <polygon points="270.5 46 261.35 68.39 270.5 63.07 279.64 68.39 270.5 46" />
+          <polygon points="270.5 494 261.35 471.61 270.5 476.93 279.64 471.61 270.5 494" />
+        </g>
+      </g>
+      <g class="cg-x-axis">
+        <line class="cg-tick" x1="450" y1="280.5" x2="450" y2="260.5" />
+        <line class="cg-tick" x1="405" y1="280.5" x2="405" y2="260.5" />
+        <line class="cg-tick" x1="360" y1="280.5" x2="360" y2="260.5" />
+        <line class="cg-tick" x1="315" y1="280.5" x2="315" y2="260.5" />
+        <line class="cg-tick" x1="225" y1="280.5" x2="225" y2="260.5" />
+        <line class="cg-tick" x1="180" y1="280.5" x2="180" y2="260.5" />
+        <line class="cg-tick" x1="135" y1="280.5" x2="135" y2="260.5" />
+        <line class="cg-tick" x1="90" y1="280.5" x2="90" y2="260.5" />
+        <text class="cg-text-shadow" transform="translate(445.27 301.52)">4</text>
+        <text transform="translate(445.27 301.52)">4</text>
+        <text class="cg-text-shadow" transform="translate(400.3 301.52)">3</text>
+        <text transform="translate(400.3 301.52)">3</text>
+        <text class="cg-text-shadow" transform="translate(356.29 301.52)">2</text>
+        <text transform="translate(356.29 301.52)">2</text>
+        <text class="cg-text-shadow" transform="translate(309.5 301.52)">1</text>
+        <text transform="translate(309.5 301.52)">1</text>
+        <text class="cg-text-shadow" transform="translate(207.4 301.31)">–1</text>
+        <text transform="translate(207.4 301.31)">–1</text>
+        <text class="cg-text-shadow" transform="translate(162.86 301.52)">–2</text>
+        <text transform="translate(162.86 301.52)">–2</text>
+        <text class="cg-text-shadow" transform="translate(117.99 301.52)">–3</text>
+        <text transform="translate(117.99 301.52)">–3</text>
+        <text class="cg-text-shadow" transform="translate(72.09 301.52)">–4</text>
+        <text transform="translate(72.09 301.52)">–4</text>
+        <text class="cg-axis-label cg-text-shadow" transform="translate(463.03 251.28)">x</text>
+        <text class="cg-axis-label" transform="translate(463.03 251.28)">x</text>
+        <text transform="translate(212.53 531.6)">
+          <tspan class="cg-axis-label">x</tspan>-axis name
+        </text>
+        <g class="cg-axis">
+          <line x1="61.89" y1="270.5" x2="478.11" y2="270.5" />
+          <polygon points="46 270.5 68.39 279.65 63.07 270.5 68.39 261.36 46 270.5"/>
+          <polygon points="494 270.5 471.61 279.65 476.93 270.5 471.61 261.36 494 270.5"/>
+        </g>
+      </g>
+      <g>
+        <text class="cg-axis-label cg-text-shadow" transform="translate(248.15 295.84)">O</text>
+        <text class="cg-axis-label" transform="translate(248.15 295.84)">O</text>
+        <text class="cg-title" transform="translate(243.99 19.58)">TITLE</text>
+      </g>
+      <g>
+        <g class="line" tabindex="0">
+          <line class="line-target" x1="494" y1="46" x2="46" y2="494" />
+          <line class="line-actual" x1="494" y1="46" x2="46" y2="494" />
+        </g>
+        <svg class="point" width="54" height="54" x="378" y="108" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <circle class="point-actual" cx="27" cy="27" r="9" />
+        </svg>
+        <svg class="point" width="54" height="54" x="63" y="423" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <circle class="point-actual" cx="27" cy="27" r="9" />
+        </svg>
+      </g>
+      <g class="lp-segment">
+        <g class="line" tabindex="0">
+          <line class="line-target" x1="450" y1="225" x2="270" y2="360" />
+          <line class="line-actual" x1="450" y1="225" x2="270" y2="360" />
+          <line class="line-target" x1="405" y1="360" x2="315" y2="450" />
+          <line class="line-actual" x1="405" y1="360" x2="315" y2="450" />
+          <line class="line-target" x1="270" y1="360" x2="315" y2="450" />
+          <line class="line-actual" x1="270" y1="360" x2="315" y2="450" />
+        </g>
+        <svg class="point" width="54" height="54" x="423" y="198" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <rect class="point-actual" x="19" y="19" width="16" height="16" />
+        </svg>
+        <svg class="point" width="54" height="54" x="243" y="333" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <rect class="point-actual" x="19" y="19" width="16" height="16" />
+        </svg>
+        <svg class="point" width="54" height="54" x="378" y="333" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <rect class="point-actual" x="19" y="19" width="16" height="16" />
+        </svg>
+        <svg class="point" width="54" height="54" x="288" y="423" tabindex="0">
+          <circle class="iic-focus-ring" cx="27" cy="27" r="25" />
+          <rect class="point-actual" x="19" y="19" width="16" height="16" />
+        </svg>
+      </g>
+      <g class="lp-object-labels">
+        <text class="cg-text-shadow" transform="translate(293 211.06)">Multi-segment</text>
+        <text class="lp-segment" transform="translate(293 211.06)">Multi-segment</text>
+        <text class="cg-text-shadow" transform="translate(352.99 120.06)">Line</text>
+        <text class="lp-line" transform="translate(352.99 120.06)">Line</text>
+      </g>
+      <rect class="cg-grid-border" x="44.5" y="44.5" width="451" height="451" />
+    </svg>
+
+    <div class="btn-wrapper right-align">
+      <button class="btn btn-secondary btn-small">Undo</button>
+      <button class="btn btn-secondary btn-small">Reset</button>
+    </div>
+
+  </div>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <!--Additional scripts go here-->
+
+</body>
+
+</html>

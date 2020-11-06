@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NAEP Style Guide - Buttons - Bare Button States</title>
+
+  <link rel="stylesheet" href="../shared/master.min.css" />
+  <style>
+    body {
+      color: #444;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 0.5em;
+    }
+
+    .figure-bg {
+      background: #eee;
+    }
+
+    figure {
+      margin: 1rem;
+      text-align: center;
+      width: calc(20% - 2rem);
+    }
+
+    figcaption {
+      font-size: 0.8em;
+      padding-top: 0.5em;
+    }
+
+    .system-btn {
+      margin: 0 auto;
+      pointer-events: none;
+    }
+
+    [class*=" icon-"]:before {
+      display: inline-block;
+      font-size: 48px;
+    }
+
+    .system-btn {
+      pointer-events: none !important;
+    }
+
+    .system-btn.hover {
+      background-color: #fff;
+      border-color: #b2b2b2;
+      box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, .15);
+    }
+
+    .system-btn.mockup-active {
+      background-color: #fff;
+      border-color: #b2b2b2;
+      box-shadow: 0 0 0.5em rgba(0, 0, 0, .25) inset;
+    }
+
+    .system-btn.toggled {
+      background: #C4E0F8;
+      border-color: #2a8dd4;
+    }
+
+    .system-btn[disabled],
+    .system-btn.disabled {
+      background: none !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+      color: #b3b3b3 !important;
+      cursor: default;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body class="figure-bg">
+
+  <figure>
+    <button class="mockup-btn system-btn icon-question-circle" tabindex="-1"></button>
+    <figcaption>Default</figcaption>
+  </figure>
+
+  <figure>
+    <button class="mockup-btn system-btn icon-question-circle hover" tabindex="-1"></button>
+    <figcaption>Hover</figcaption>
+  </figure>
+
+  <figure>
+    <button class="mockup-btn system-btn icon-question-circle mockup-active" tabindex="-1"></button>
+    <figcaption>Active</figcaption>
+  </figure>
+
+  <figure>
+    <button class="mockup-btn system-btn icon-question-circle active" tabindex="-1"></button>
+    <figcaption>Toggled</figcaption>
+  </figure>
+
+  <figure>
+    <button class="mockup-btn system-btn icon-question-circle disabled" tabindex="-1"></button>
+    <figcaption>Disabled</figcaption>
+  </figure>
+
+  <script src="../lib/jquery.min.js"></script>
+  <script src="../shared/platform-utilities.js"></script>
+  <script>
+    bindEvent(window, 'message', function(e) {
+      var arr = e.data.split(','),
+        key = arr[0],
+        value = arr[1];
+
+      if (key == 'tts') {
+        if (value == 'on') {
+          $('.system-btn').attr('disabled', true);
+        } else if (value == 'off') {
+          $('.system-btn').removeAttr('disabled');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
