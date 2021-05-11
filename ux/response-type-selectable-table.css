@@ -1,6 +1,6 @@
 /**
 * @stylesheet response-type-selectable-table.css Selectable Table
-* @parent ux.response-types
+* @parent-hidden ux.response-types
 * The selectable table response type allows test takers to select sets of related data presented in a stimulus table (as opposed to the [response-type-grid.css] response type, which allows test takers to choose among options presented in a table).
 *
 * Selectable tables are currently used only in SBTs.
@@ -23,29 +23,40 @@
 }
 
 .response-area-selectable-table tbody tr {
-	cursor: pointer; }
+  cursor: pointer;
+}
 .response-area-selectable-table tbody tr:hover,
 .response-area-selectable-table tbody tr:nth-of-type(even):hover {
-	background: #CDDDF3; }
+  background: #cdddf3;
+}
 html.can-touch .response-area-selectable-table tbody tr:hover {
-	background: none; }
-html.can-touch .response-area-selectable-table tbody tr:nth-of-type(even):hover {
-  background: #f2f2f2; }
+  background: none;
+}
+html.can-touch
+  .response-area-selectable-table
+  tbody
+  tr:nth-of-type(even):hover {
+  background: #f2f2f2;
+}
 .response-area-selectable-table tbody tr.selected,
 .response-area-selectable-table tbody tr.selected:nth-of-type(even),
 .response-area-selectable-table tbody tr.selected:nth-of-type(even):hover,
 html.can-touch .response-area-selectable-table tbody tr.selected:hover,
-html.can-touch .response-area-selectable-table tbody tr.selected:nth-of-type(even):hover {
-	background: #9BBCE7; }
+html.can-touch
+  .response-area-selectable-table
+  tbody
+  tr.selected:nth-of-type(even):hover {
+  background: #9bbce7;
+}
 .response-area-selectable-table[disabled] tbody tr {
-  pointer-events: none; }
-
+  pointer-events: none;
+}
 
 /*--------------------------------
 CHECKBOX STYLES
 --------------------------------*/
 .response-area-selectable-table tbody td:first-of-type {
-	line-height: 1;
+  line-height: 1;
 }
 
 .stim-table .control {
@@ -54,13 +65,12 @@ CHECKBOX STYLES
 }
 
 .stim-table tr.selected .control input[disabled] + span {
-  color: #7085A0;
+  color: #7085a0;
 }
-
 
 /*--------------------------------
 CLEAR ANSWER BUTTON STYLES
 --------------------------------*/
 .response-area-selectable-table .btn {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
