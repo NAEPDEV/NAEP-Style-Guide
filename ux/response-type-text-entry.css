@@ -28,20 +28,20 @@
 * * _Disabled_. The drop shadow is removed, the border becomes dark gray `#D0D0D0`, and the background becomes light gray `#E5E5E5`.
 **/
 
-input[type=text]:hover,
+input[type="text"]:hover,
 textarea:hover {
   border-color: #383838;
 }
 
 textarea.extendedtext:focus,
-input[type=text].fib:focus,
-input[type=text].numeric-entry:focus {
-  border-color: #0068D1;
-	box-shadow: 0 0 0.02em 0.07em rgba(0, 104, 209, .4);
-	outline: none;
+input[type="text"].fib:focus,
+input[type="text"].numeric-entry:focus {
+  border-color: #0068d1;
+  box-shadow: 0 0 0.02em 0.07em rgba(0, 104, 209, 0.4);
+  outline: none;
 }
 
-table.grid input[type=text] {
+table.grid input[type="text"] {
   margin-bottom: 0.35em;
 }
 
@@ -49,9 +49,9 @@ table.grid input[type=text] {
 .fib[disabled],
 .numeric-entry[disabled] {
   background: #e5e5e5;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   border-color: #d0d0d0;
-	border-color: rgba(0,0,0,0.09);
+  border-color: rgba(0, 0, 0, 0.09);
   box-shadow: none;
   pointer-events: none;
 }
@@ -103,8 +103,8 @@ table.grid input[type=text] {
 }
 
 /**
-* @styles 3-text-entry-numeric Numeric Entry
-* When a Numeric Entry field is provided, the system runs one or more types of validation on the response entered by the test taker, as specified by the item author. If the response does not validate, a modal dialog is displayed providing information about the nature of the validation error. (See the [dialogs.css] page for information about modal dialog styles and behavior.)
+* @styles 3-text-entry-numeric Numeric Entry 
+* When a Numeric Entry<img src="static/img/icon-asterisk.svg" width='25px' height='25px'/> field is provided, the system runs one or more types of validation on the response entered by the test taker, as specified by the item author. If the response does not validate, a modal dialog is displayed providing information about the nature of the validation error. (See the [dialogs.css] page for information about modal dialog styles and behavior.)
 * * _Basic numeric validation (in cognitive subjects)_. The system checks whether the response is a number, a comma, a period, or a minus sign. (This is the only validation type available in cognitive subjects.) Error message:
 * > You can only enter numbers or the following symbols.
 * >
