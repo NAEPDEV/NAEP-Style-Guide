@@ -33,4 +33,4 @@ The style guide provides three key features to supplement the textual descriptio
 
 ## Scenario-based Task Styles <img src="static/img/icon-asterisk.svg" width='25px' height='25px'/>
 
-SBTs engage students with a particular context and ask them to complete a series of activities in service of a larger purpose or task. To achieve those design goals, SBTs often have custom interactions and styling. UI elements and conventions found only in SBTs are covered in the SBT-specific pages. In addition, headings with a blue asterisk icon elsewhere in this section describe modifications or exceptions to default conventions that may be used to suit the needs of a given SBT.
+SBTs engage students with a particular context and ask them to complete a series of activities in service of a larger purpose or task. To achieve those design goals, SBTs often have custom interactions and styling. UI elements and conventions found only in SBTs are covered in the SBT-specific pages. In addition, headings with a blue asterisk icon elsewhere in the style guide describe styles and conventions that are specific to SBTs.
