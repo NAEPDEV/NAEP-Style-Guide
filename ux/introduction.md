@@ -2,9 +2,10 @@
 @parent ux.overview
 
 The NAEP Style Guide provides guidance and specifications for the presentation of <a href="https://nces.ed.gov/nationsreportcard/experience/">NAEP</a>’s student-facing user interface (UI) elements.
+
 This guide is a living document. It will evolve as NAEP continues to gather information from external research, experts in the field, and its own studies and administrations.
 
-The change log for the UX section can be found on the [version-history.md] page.
+The change log for the style guide can be found on the [version-history.md] page.
 
 ## Scope
 
