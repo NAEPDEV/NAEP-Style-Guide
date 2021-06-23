@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: ux/response-type-sis.css
+	source: ux\response-type-sis.css
 	@stylesheet response-type-sis.css
 ######################################################################## -->
 
@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Select-in-stimulus </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.2">
+    <meta name="version" content="1.2.3">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,11 +62,10 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.2</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
 				</li>
-				<li><a class="header-tab" href="../id/index.html">Item Dev</a></li>
-				<li><a class="header-tab" href="../media/index.html">Media</a></li>
-				<li><a class="header-tab selected" href="../ux/index.html">UX</a></li>
+				
+				
 			</ul>
 
 			<div class="pull-right">
@@ -446,8 +445,8 @@
     
     
     <li class="search-container">
-        <a class="page" href="color-themes.md.html" data-search="Color Themes">
-            Color Themes
+        <a class="page" href="color-themes.md.html" data-search="Change Themes">
+            Change Themes
         </a>
     </li>
     
@@ -768,18 +767,6 @@
     <li class="search-container">
         <a class="stylesheet" href="response-type-polygon-graph.css.html" data-search="Polygon Graph">
             Polygon Graph
-        </a>
-    </li>
-    
-
-    
-    
-    
-    
-    
-    <li class="search-container">
-        <a class="stylesheet" href="response-type-selectable-table.css.html" data-search="Selectable Table">
-            Selectable Table
         </a>
     </li>
     
@@ -1303,55 +1290,6 @@ Text selections are indicated in a stimulus by a background of varying shades of
 				
 			
 				<section class="comment">
-					<h2>Multimedia Selections</h2>
-				</section>
-
-				
-				<section class="description">
-					<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-media-ms-full.html" target="_blank">here</a>.</em></p>
-
-				</section>
-				
-
-				
-					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-sis/response-type-sis-media-ms.html' data-iframe-height='600'></div>
-<p>Media selections are accessed in a stimulus via the media selection widget, which is composed of four elements:</p>
-<ul>
-<li><em>The primary widget button</em>, used to open and close the widget</li>
-<li>The brace that connects the primary widget button to the associated segment of the media scrub bar</li>
-<li><em>The <strong>Play clip</strong> button</em>, used to preview the clip</li>
-<li><em>The <strong>Select</strong> button</em>, used to choose the selection</li>
-</ul>
-<h3>Brace</h3>
-<p>The brace indicates the segment of the multimedia clip covered by the selection. The brace is green <code>#359A13</code> and has rounded corners. When two media selections are adjacent, there must be a 2px margin between them.</p>
-<h3>Primary Widget Button</h3>
-<p>The primary widget button is horizontally centered in the associated brace. The button has the following states, which match those of primary filled buttons (see the <a href="buttons.css.html">Buttons</a> page for more information) except for the use of green.</p>
-<ul>
-<li><em>Inactive</em>. Present when the item to which the selection belongs is NOT on screen. The selection widget is hidden.</li>
-<li><em>Active</em>. Visible when the item to which the selection belongs is on screen. The primary button has a green <code>#359A13</code> background and a white <code>#FFFFFF</code> number indicating its position in the sequence of media selections.</li>
-<li><em>Hover</em>. Visible when the cursor is over the text selection. The button background lightens to <code>#39AA13</code>, and the <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. A turquoise <code>#00A873</code> checked badge appears at the bottom of the button.</li>
-<li><em>Disabled</em>. Visible when a modal system tool (e.g., Scratchwork) is enabled. The button background becomes gray <code>#CCCCCC</code>, and the button label becomes light gray <code>#EEEEEE</code>.</li>
-</ul>
-<p>In addition to pressing the primary widget button, a media selection can also be closed by pressing any area of the screen other than the widget or the parent media player.</p>
-<h3>Play Clip &amp; Select Buttons</h3>
-<p>The <strong>Play clip</strong> and <strong>Select</strong> buttons have the same states as secondary filled buttons (see the <a href="buttons.css.html">Buttons</a> page for more information), except that their labels are the same green <code>#0E8812</code> as the primary widget button.</p>
-<p>By default, the <strong>Play clip</strong> button has the <code>play</code> icon (see the <a href="icons.css.html">Icons</a> page) and a “Play clip” label. As the label implies, pressing the button causes playback to begin at the start of the clip and pause at its end. Behavioral details:</p>
-<ul>
-<li>While a clip is playing, the associated <strong>Play clip</strong> button icon changes to <code>pause</code>, and its label changes to “Pause.”</li>
-<li>Pressing the <strong>Play clip</strong> button while the associated clip is playing causes playback to pause and the button to return to its default state. Pressing the button again will initiate playback from the beginning of the clip, as usual.</li>
-<li>While a given clip is playing, the <strong>Play clip</strong> buttons for other selections remain in the default state. This allows the test taker to initiate playback of another clip without having to press the button twice or wait for the currently playing clip to finish.</li>
-</ul>
-<p>By default, the <strong>Select</strong> button has the <code>plus-thin</code> icon and a “Select” label. When the selection has been chosen, the icon rotates 45 degrees so that it looks like an “x”, and the label changes to “Remove.”</p>
-<h3>In the response area</h3>
-<p>Once a media selection has been chosen, it appears in the response area (see below). Media selections always appear with a label (e.g., “Clip 2”) since it can be difficult to tell which selection has been made based on a thumbnail. In the response area, only the <strong>Play/Pause</strong> button (not the <strong>Hero Play</strong> button), scrub bar, and <strong>Full screen</strong> button are displayed to reduce complexity. (Test takers can always refer to the main player if they need the other multimedia controls.)</p>
-
-					</section>
-					
-				
-			
-				<section class="comment">
 					<h2>Directions Box</h2>
 				</section>
 
@@ -1470,7 +1408,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The select-in-stimulus (SIS) response type allows test takers to respond to an item by selecting sections of a video, audio clip, or text directly within a stimulus.","name":"response-type-sis.css","title":"Select-in-stimulus","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux/response-type-sis.css","static":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/static","templates":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/templates","version":"1.2.2","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide"},"dest":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/docs/ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The select-in-stimulus (SIS) response type allows test takers to respond to an item by selecting sections of a video, audio clip, or text directly within a stimulus.","name":"response-type-sis.css","title":"Select-in-stimulus","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-sis.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

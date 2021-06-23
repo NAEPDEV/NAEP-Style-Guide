@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: ux/introduction.md
+	source: ux\introduction.md
 	@page introduction.md
 ######################################################################## -->
 
@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Introduction </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.2">
+    <meta name="version" content="1.2.3">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,11 +62,10 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.2</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
 				</li>
-				<li><a class="header-tab" href="../id/index.html">Item Dev</a></li>
-				<li><a class="header-tab" href="../media/index.html">Media</a></li>
-				<li><a class="header-tab selected" href="../ux/index.html">UX</a></li>
+				
+				
 			</ul>
 
 			<div class="pull-right">
@@ -448,8 +447,8 @@
     
     
     <li class="search-container">
-        <a class="page" href="color-themes.md.html" data-search="Color Themes">
-            Color Themes
+        <a class="page" href="color-themes.md.html" data-search="Change Themes">
+            Change Themes
         </a>
     </li>
     
@@ -770,18 +769,6 @@
     <li class="search-container">
         <a class="stylesheet" href="response-type-polygon-graph.css.html" data-search="Polygon Graph">
             Polygon Graph
-        </a>
-    </li>
-    
-
-    
-    
-    
-    
-    
-    <li class="search-container">
-        <a class="stylesheet" href="response-type-selectable-table.css.html" data-search="Selectable Table">
-            Selectable Table
         </a>
     </li>
     
@@ -1229,13 +1216,7 @@
 
 		
 		<section class="description">
-			<h2>Scope</h2>
-<p>The UX section of the style guide covers the visual styles and core behaviors of student-facing user interface (UI) elements in the eNAEP delivery platform. It includes information about UI elements in:</p>
-<ul>
-<li>Discrete items</li>
-<li>Scenario-based tasks (SBTs)</li>
-<li>Interactive item components (IICs)</li>
-</ul>
+			<p>The NAEP Style Guide provides guidance and specifications for the presentation of <a href="https://nces.ed.gov/nationsreportcard/experience/">NAEP</a>’s student-facing user interface (UI) elements.</p>
 
 		</section>
 		
@@ -1249,22 +1230,31 @@
 
 		
 		<section class="comment">
-			<p>This section does <em>not</em> cover styles or conventions for item content, which are addressed in the item development and media sections. Examples of item content styles not covered in this section include:</p>
+			<p>This guide is a living document. It will evolve as NAEP continues to gather information from external research, experts in the field, and its own studies and administrations.</p>
+<p>The change log for the style guide can be found on the <a href="version-history.md.html">Version History</a> page.</p>
+<h2>Scope</h2>
+<p>The style guide covers the visual styles and core behaviors of student-facing user interface (UI) elements in the eNAEP delivery platform. It includes information about UI elements in:</p>
+<ul>
+<li>Discrete items</li>
+<li>Scenario-based tasks (SBTs)</li>
+<li>Interactive item components (IICs)</li>
+</ul>
+<p>The style guide does not cover styles or conventions for all item content. Item content styles not covered in this resource include:</p>
 <ul>
 <li>The appearance of reading passages or other stimuli</li>
 <li>Colors, layout, and other visual details of tables, charts, and other images embedded in item content</li>
 <li>Use of text styling (i.e., bolding, italics, underline), lists, line and paragraph breaks, etc.</li>
 </ul>
-<h3>SBT Styles <img src="static/img/icon-asterisk.svg"/></h3>
-<p>SBTs engage students with a particular context and ask them to complete a series of activities in service of a larger purpose or task. To achieve those design goals, SBTs often have custom interactions and styling. UI elements and conventions found only in SBTs are covered in the SBT-specific pages. In addition, headings with a blue asterisk icon elsewhere in this section describe modifications or exceptions to default conventions that may be used to suit the needs of a given SBT.</p>
+<p>This style guide is informing the development of the Benchmark design system. Benchmark will expand on the conventions of the style guide as it will continue to promote a consistent look and feel across all NAEP item content.</p>
 <h2>Features</h2>
-<p>The UX section includes three key features that supplement the textual descriptions of UI styles and behaviors:</p>
+<p>The style guide provides three key features to supplement the textual descriptions of UI styles and behaviors.</p>
 <ul>
-<li>Embedded static and interactive demos of all UI elements</li>
-<li>The <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /><strong>Change Theme</strong> button (at the upper right), which controls the color theme applied to the demos on the current page. (See the <a href="color-themes.md.html">Color Themes</a> page for more information.)</li>
-<li>The <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;"/><strong>Text-to-speech</strong> button (also at the upper right), which allows the user to see TTS-speakable content and how TTS mode otherwise interacts with UI elements. (See the <a href="tts.css.html">Text-to-speech</a> page for more information.)</li>
+<li>Each UI element has either a static or interactive demo showing how the element functions.</li>
+<li>The <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /><a href="color-themes.md.html">Change Themes</a> button (at the upper right) is activated on the style guide. Use the button to see how different color theming affects sample content throughout the style guide. Please note that not every page of the style guide has sample content that will react to color theming.</li>
+<li>The <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;"/><a href="tts.css.html">Text-to-speech</a> button (also at the upper right) is activated on the style guide. Use the button to see how TTS-speakable content is flagged for text-to-speech functionality. Please note that the style guide does not have an activated text-to-speech audio feature.</li>
 </ul>
-<p>The change log for the UX section can be found on the <a href="version-history.md.html">Version History</a> page.</p>
+<h2>Scenario-based Task Styles <img src="static/img/icon-asterisk.svg" width='25px' height='25px'/></h2>
+<p>SBTs engage students with a particular context and ask them to complete a series of activities in service of a larger purpose or task. To achieve those design goals, SBTs often have custom interactions and styling. UI elements and conventions found only in SBTs are covered in the SBT-specific pages. In addition, headings with a blue asterisk icon elsewhere in the style guide describe styles and conventions that are specific to SBTs.</p>
 
 		</section>
 		
@@ -1297,7 +1287,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"introduction.md","src":"ux/introduction.md","description":"## Scope\nThe UX section of the style guide covers the visual styles and core behaviors of student-facing user interface (UI) elements in the eNAEP delivery platform. It includes information about UI elements in:\n* Discrete items\n* Scenario-based tasks (SBTs)\n* Interactive item components (IICs)","title":"Introduction","parent":"ux.overview","static":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/static","templates":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/templates","version":"1.2.2","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide"},"dest":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/docs/ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"introduction.md","src":"ux\\introduction.md","description":"The NAEP Style Guide provides guidance and specifications for the presentation of <a href=\"https://nces.ed.gov/nationsreportcard/experience/\">NAEP</a>’s student-facing user interface (UI) elements.","title":"Introduction","parent":"ux.overview","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	
