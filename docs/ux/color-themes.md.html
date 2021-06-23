@@ -3,7 +3,7 @@
 	THIS IS A GENERATED FILE -- ANY CHANGES MADE WILL BE OVERWRITTEN
 
 	INSTEAD CHANGE:
-	source: ux/color-themes.md
+	source: ux\color-themes.md
 	@page color-themes.md
 ######################################################################## -->
 
@@ -26,10 +26,10 @@
 	<meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NAEP Style Guide - Color Themes </title>
+  <title>NAEP Style Guide - Change Themes </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.2">
+    <meta name="version" content="1.2.3">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,11 +62,10 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.2</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
 				</li>
-				<li><a class="header-tab" href="../id/index.html">Item Dev</a></li>
-				<li><a class="header-tab" href="../media/index.html">Media</a></li>
-				<li><a class="header-tab selected" href="../ux/index.html">UX</a></li>
+				
+				
 			</ul>
 
 			<div class="pull-right">
@@ -448,8 +447,8 @@
     
     
     <li class="search-container active ">
-        <a class="page" href="color-themes.md.html" data-search="Color Themes">
-            Color Themes
+        <a class="page" href="color-themes.md.html" data-search="Change Themes">
+            Change Themes
         </a>
     </li>
     
@@ -770,18 +769,6 @@
     <li class="search-container">
         <a class="stylesheet" href="response-type-polygon-graph.css.html" data-search="Polygon Graph">
             Polygon Graph
-        </a>
-    </li>
-    
-
-    
-    
-    
-    
-    
-    <li class="search-container">
-        <a class="stylesheet" href="response-type-selectable-table.css.html" data-search="Selectable Table">
-            Selectable Table
         </a>
     </li>
     
@@ -1206,7 +1193,7 @@
 		
 		<section class="title">
 			<div class="heading">
-<h1>Color Themes</h1>
+<h1>Change Themes</h1>
 	
 	
 </div>
@@ -1230,11 +1217,6 @@
 		
 		<section class="description">
 			<p>Test takers with atypical vision may prefer or need color schemes that would be less than ideal for typically sighted people. To support such test takers and to adhere to the <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank">WCAG 2.1 minimum contrast criterion</a>, eNAEP can present content in three color themes.</p>
-<ul>
-<li><strong>Default</strong>. Initially shown to all test takers. This theme features black text on a white background.</li>
-<li><strong>Beige</strong>. Similar to the default theme, but applies a beige background to slightly reduce contrast and brightness. The backgrounds of user interface (UI) components may be shifted to shades of beige to align with the theme, but foreground colors generally remain the same as in the default theme.</li>
-<li><strong>Dark</strong>. Inverts the colors of the default theme to reduce brightness while retaining high contrast. UI components are darkened/lightened to align with the theme.</li>
-</ul>
 
 		</section>
 		
@@ -1248,7 +1230,12 @@
 
 		
 		<section class="comment">
-			<p>Changing themes is a universal design feature, so all test takers can change the theme as they wish.</p>
+			<ul>
+<li><strong>Default</strong>. Initially shown to all test takers. This theme features black text on a white background.</li>
+<li><strong>Beige</strong>. Similar to the default theme, but applies a beige background to slightly reduce contrast and brightness. The backgrounds of user interface (UI) components may be shifted to shades of beige to align with the theme, but foreground colors generally remain the same as in the default theme.</li>
+<li><strong>Dark</strong>. Inverts the colors of the default theme to reduce brightness while retaining high contrast. UI components are darkened/lightened to align with the theme.</li>
+</ul>
+<p>Changing themes is a universal design feature, so all test takers can change the theme as they wish.</p>
 <p>Use the <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /><strong>Change Theme</strong> button at the top of the page to see how theming affects demo content throughout the UX section of the style guide.</p>
 <h2>Image Theming</h2>
 <p>Images are authored to be compliant with the <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 non-text contrast criterion</a> whenever content requirements allow, so theming images is not required to achieve an accessible contrast ratio. However, it is still desirable to theme images when possible so that they have a brightness similar to the rest of the screen.</p>
@@ -1265,15 +1252,15 @@
 <p>By default, eNAEP themes images based on file type. Images with the <code>.PNG</code> extension theme, while images with the <code>.JPG</code> extension do not. The characteristics of the two file types are beyond the scope of this guide, but the most salient difference is that <code>.PNG</code> files can have transparent backgrounds, while <code>.JPG</code> files cannot. This means that images without backgrounds theme by default in eNAEP.</p>
 <p>The demo below shows eNAEP’s default image theming behavior.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-default.html' data-iframe-height='230'></div>
-<p>Note that, because it has a transparent background, the image of the otter themes even though theming causes a loss of visual information.</p>
+Note that, because it has a transparent background, the image of the otter themes even though theming causes a loss of visual information.
 <p>To avoid such situations, images can be tagged with <code>theme</code> and <code>no-theme</code> to override the default theming behavior. The demos below show what the five images would look like with each tag. (Note that these demos show what theming behavior is <em>possible</em>, not necessarily what is <em>desirable</em>.)</p>
 <p>Tagged with <code>theme</code>:</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-theme.html' data-iframe-height='230'></div>
-<p>Tagged with <code>no-theme</code>:</p>
+Tagged with `no-theme`:
 <div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-no-theme.html' data-iframe-height='230'></div>
-<p>Finally, the following demo shows the desired theming behavior for all images: the line art bicycle and the pie chart theme, while the photographs do not.</p>
+Finally, the following demo shows the desired theming behavior for all images: the line art bicycle and the pie chart theme, while the photographs do not.
 <div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-desired.html' data-iframe-height='230'></div>
-<h2>Exceptions</h2>
+## Exceptions
 <p>The following elements do not theme.</p>
 <ul>
 <li>Video content</li>
@@ -1314,7 +1301,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"color-themes.md","src":"ux/color-themes.md","description":"Test takers with atypical vision may prefer or need color schemes that would be less than ideal for typically sighted people. To support such test takers and to adhere to the <a href=\"https://www.w3.org/TR/WCAG21/#contrast-minimum\" target=\"_blank\">WCAG 2.1 minimum contrast criterion</a>, eNAEP can present content in three color themes.\n* __Default__. Initially shown to all test takers. This theme features black text on a white background.\n* __Beige__. Similar to the default theme, but applies a beige background to slightly reduce contrast and brightness. The backgrounds of user interface (UI) components may be shifted to shades of beige to align with the theme, but foreground colors generally remain the same as in the default theme.\n* __Dark__. Inverts the colors of the default theme to reduce brightness while retaining high contrast. UI components are darkened/lightened to align with the theme.","title":"Color Themes","parent":"ux.features","static":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/static","templates":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/styleguide-theme/templates","version":"1.2.2","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide"},"dest":"/home/wendallc/Repos/git/ETS/NAEP-Style-Guide/docs/ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"color-themes.md","src":"ux\\color-themes.md","description":"Test takers with atypical vision may prefer or need color schemes that would be less than ideal for typically sighted people. To support such test takers and to adhere to the <a href=\"https://www.w3.org/TR/WCAG21/#contrast-minimum\" target=\"_blank\">WCAG 2.1 minimum contrast criterion</a>, eNAEP can present content in three color themes.","title":"Change Themes","parent":"ux.features","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	
