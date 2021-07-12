@@ -2,18 +2,32 @@
 @parent ux.overview
 
 Each section of the style guide is independently versioned and adheres to semantic versioning in the format _major.minor.patch_.
-* _Major release:_ Includes changes to specifications that are incompatible with existing specifications.
-* _Minor release:_ Adds new specifications that are backwards-compatible.
-* _Patch release:_ Includes bug fixes and/or minor specification clarifications.
+
+- _Major release:_ Includes changes to specifications that are incompatible with existing specifications.
+- _Minor release:_ Adds new specifications that are backwards-compatible.
+- _Patch release:_ Includes bug fixes and/or minor specification clarifications.
+  <section class="release-note">
+    <div class="release-header">
+      <span>1.2.3</span>
+      <h3>July 9, 2021</h3>
+    </div>
+    <ul>
+      <li class="New"><span>Replaced Overview landing page with a redirect to the Introduction section ([introduction.md]).</span></li>
+      <li class="New"><span>Added new copy for Introduction section conflating information with previous Overview landing page ([introduction.md]).</span></li>
+      <li class="improved"><span>Removed Media and Item Development tabs. </span></li>
+      <li class="improved"><span>Removed Multi-media Variant from the Response Types: Select-in-stimulus section ([response-type-sis.css]).</span></li>
+      <li class="improved"><span>Added blue asterisk icon to Numeric Entry indicating SBT-specific style in the Response Types: Text Entry section ([response-type-text-entry.css]).</span></li>
+    </ul>
+  </section>
   <section class="release-note">
     <div class="release-header">
       <span>1.2.2</span>
       <h3>June 20, 2019</h3>
     </div>
     <ul>
-      <li class="New"><span>Added a table of contents page for viewing all UX pages</span></li>
-      <li class="improved"><span>Overhaul of style guide left-navigation</span></li>
-      <li class="improved"><span>Improved the visibility of page location by clearly displaying the selected primary and sub navigation related each page within the browser’s viewport</span></li>
+      <li class="New"><span>Added a table of contents page for viewing all UX pages.</span></li>
+      <li class="improved"><span>Overhaul of style guide left-navigation.</span></li>
+      <li class="improved"><span>Improved the visibility of page location by clearly displaying the selected primary and sub navigation related each page within the browser’s viewport.</span></li>
     </ul>
   </section>
   <section class="release-note">
