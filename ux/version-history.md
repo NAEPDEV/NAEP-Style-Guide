@@ -27,7 +27,7 @@ Each section of the style guide is independently versioned and adheres to semant
     <ul>
       <li class="New"><span>Added a table of contents page for viewing all UX pages.</span></li>
       <li class="improved"><span>Overhaul of style guide left-navigation.</span></li>
-      <li class="improved"><span>Improved the visibility of page location by clearly displaying the selected primary and sub navigation related each page within the browser’s viewport.</span></li>
+      <li class="improved"><span>Improved the visibility of page location by clearly displaying the selected primary and sub navigation related to each page within the browser’s viewport.</span></li>
     </ul>
   </section>
   <section class="release-note">
