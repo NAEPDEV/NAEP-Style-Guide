@@ -84,26 +84,32 @@
   padding: 0 0.41em;
   text-align: center;
   transition: background 0.2s;
-  user-select: none; }
+  user-select: none;
+}
 .enaepTab li:hover {
-  background: #fcfcfc; }
+  background: #fcfcfc;
+}
 .enaepTab li.answered {
-  background: #c9c9c9; }
+  background: #c9c9c9;
+}
 .enaepTab li.answered:hover {
-  background: #c9c9c9; }
+  background: #c9c9c9;
+}
 .enaepTab li.selected {
-  background: #FFF !important;
-  border-bottom: 0.08em solid #FFF;
+  background: #fff !important;
+  border-bottom: 0.08em solid #fff;
   border-left-style: solid;
   border-right-style: solid;
   border-top-left-radius: 0.21em;
   border-top-right-radius: 0.21em;
   line-height: 1.96em;
   margin: 0.17em 0 -0.05em -0.05em;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .enaepTab li[disabled] {
-  color: #7F7F7F;
-  pointer-events: none; }
+  color: #7f7f7f;
+  pointer-events: none;
+}
 
 .enaepTabStrip.non-paginated li:first-of-type {
   margin-left: 0.5em;
@@ -141,14 +147,18 @@
 
 /* Styles for stimulus tabs */
 .enaepTabStrip.non-paginated.stimTabStrip {
-  background: #ddd; }
+  background: #ddd;
+}
 #questionsbutton-wrapper .enaepTabStrip.non-paginated.stimTabStrip {
-  background: #e9e9e9; }
+  background: #e9e9e9;
+}
 
 .enaepTabStrip.non-paginated .stimTab {
-  margin-top: 0.25em; }
+  margin-top: 0.25em;
+}
 #questionsbutton-wrapper .enaepTabStrip.non-paginated .stimTab {
-  margin-top: 0.6em; }
+  margin-top: 0.6em;
+}
 
 .enaepTab.stimTab li {
   padding: 0 0.5em;
@@ -201,17 +211,19 @@
 .btn-tab-mover:hover {
   background: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0.03em 0.06em rgba(0, 0, 0, .15); }
+  box-shadow: 0 0.03em 0.06em rgba(0, 0, 0, 0.15);
+}
 html.can-touch .btn-tab-mover:hover {
   background: none;
   border-color: transparent;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .btn-tab-mover:active,
 html.can-touch .btn-tab-mover:active {
   background-color: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0 0.28em rgba(0, 0, 0, .25) inset;
+  box-shadow: 0 0 0.28em rgba(0, 0, 0, 0.25) inset;
 }
 
 .btn-tab-mover[disabled] {
@@ -225,11 +237,11 @@ html.can-touch .btn-tab-mover:active {
 }
 
 #btn-tab-mover-left:after {
-  content: '\e90c';
+  content: "\e90c";
 }
 
 #btn-tab-mover-right:after {
-  content: '\e90d';
+  content: "\e90d";
 }
 
 /**
@@ -253,7 +265,7 @@ html.can-touch .btn-tab-mover:active {
 
 ::-webkit-scrollbar-thumb {
   background-color: #246bb2;
-  border: 1px solid #1A4C80;
+  border: 1px solid #1a4c80;
   border-radius: 2px;
 }
 
@@ -263,7 +275,7 @@ html.can-touch .btn-tab-mover:active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 75% 75%;
-  border: 1px solid #1A4C80;
+  border: 1px solid #1a4c80;
   border-radius: 2px;
   display: block;
   height: 20px;
@@ -277,35 +289,35 @@ html.can-touch .btn-tab-mover:active {
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1ef" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1ef" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1ef" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1ef" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1e1" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1e1" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#fff" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="#e1e1e1" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1e1" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
 }
 
 /**
@@ -332,7 +344,6 @@ html.can-touch .btn-tab-mover:active {
 * @iframe ux/demos/navigation/pagination-locked.html 730
 **/
 
-
 /* PAGE BUTTON LAYOUT
 ===================================================== */
 .page-nav {
@@ -355,7 +366,6 @@ html.can-touch .btn-tab-mover:active {
   width: 100%;
   z-index: -1;
 }
-
 
 /* PAGE BUTTONS
 ===================================================== */
@@ -388,28 +398,34 @@ html.can-touch .btn-tab-mover:active {
   padding: 0;
   speak: none;
   text-transform: none;
-  width: 1.58em; }
+  width: 1.58em;
+}
 .btn-page-previous {
   margin-bottom: 0.9em;
-  margin-top: 0.3em; }
+  margin-top: 0.3em;
+}
 .btn-page-next {
   margin-bottom: 0.3em;
   margin-top: 0.9em;
-  padding-top: 0.05em; }
+  padding-top: 0.05em;
+}
 .btn-page-previous:hover,
 .btn-page-next:hover {
   background: #137fec;
-  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25);
+}
 html.can-touch .btn-page-previous:hover,
 html.can-touch .btn-page-next:hover {
   background: #0068d1;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .btn-page-previous:active,
 .btn-page-next:active,
 html.can-touch .btn-page-previous:active,
 html.can-touch .btn-page-next:active {
   background: #0060ac;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .btn-page-previous[disabled],
 .btn-page-next[disabled],
 html.can-touch .btn-page-previous[disabled],
@@ -417,7 +433,8 @@ html.can-touch .btn-page-next[disabled] {
   background: #e5e5e5;
   color: #909090;
   box-shadow: none;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .btn-page-num {
   background: transparent;
@@ -433,37 +450,44 @@ html.can-touch .btn-page-next[disabled] {
   margin: 0.65em auto;
   padding: 0;
   text-align: center;
-  width: 1.13em; }
+  width: 1.13em;
+}
 .btn-page-num:hover {
   border-color: #616161;
-  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25);
+}
 html.can-touch .btn-page-num:hover {
   border-color: #949494;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .btn-page-num:active,
 html.can-touch .btn-page-num:active {
   background: #f0f0f0;
   border-color: #616161;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .btn-page-num.page-active,
 html.can-touch .btn-page-num.page-active {
-  background: #C4E0F8;
+  background: #c4e0f8;
   border-color: transparent;
   cursor: default;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .btn-page-num[disabled] {
   border-color: transparent;
   color: #bbb;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .btn-page-num[disabled].locked {
   color: transparent;
   border: none;
-  position: relative; }
+  position: relative;
+}
 
 .btn-page-num[disabled].locked::after {
   color: #767676;
-  content: '\e947';
+  content: "\e947";
   font-family: "icons";
   font-size: 34px;
   font-weight: normal;
@@ -473,7 +497,6 @@ html.can-touch .btn-page-num.page-active {
   top: 0;
   width: 100%;
 }
-
 
 /* PAGE TURN ANIMATION
 ===================================================== */
