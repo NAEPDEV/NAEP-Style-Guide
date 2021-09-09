@@ -52,10 +52,10 @@
 * Symbol buttons are organized into groups separated by 1-pixel vertical white borders with 50% opacity `rgba(255,255,255,0.5)`. There is no border between the last button group and the Backspace button.
 **/
 
-input[type=text].fib.ee-active,
-input[type=text].fib.ee-active:focus,
-input[type=text].numeric-entry.ee-active,
-input[type=text].numeric-entry.ee-active:focus,
+input[type="text"].fib.ee-active,
+input[type="text"].fib.ee-active:focus,
+input[type="text"].numeric-entry.ee-active,
+input[type="text"].numeric-entry.ee-active:focus,
 textarea.extendedtext.ee-active,
 textarea.extendedtext.ee-active:focus {
   background: #ebfbe5;
@@ -69,16 +69,17 @@ textarea.extendedtext.ee-active:focus {
   flex-direction: column;
   font-size: 24px; /* Prevents zoom */
   height: 10.65em;
-  transition: height 0.3s; }
+  transition: height 0.3s;
+}
 #ee-wrapper.ee-old-variant {
   background: #373737;
-  height: 9.4em; }
-
+  height: 9.4em;
+}
 
 #ee-wrapper.hidden,
 #ee-wrapper.ee-old-variant.hidden {
-  height: 0; }
-
+  height: 0;
+}
 
 .ee-tabarea {
   align-items: flex-end;
@@ -88,12 +89,14 @@ textarea.extendedtext.ee-active:focus {
   flex: 0 0 auto;
   height: 2.4em;
   justify-content: space-between;
-  padding: 0 0.2em; }
+  padding: 0 0.2em;
+}
 #ee-wrapper.ee-old-variant .ee-tabarea {
-  background: linear-gradient(#F2F5F8, #BECAD1);
-  border-color: #B6BDC3;
+  background: linear-gradient(#f2f5f8, #becad1);
+  border-color: #b6bdc3;
   height: 2.625em;
-  padding: 0 0.42em 0 0.2em; }
+  padding: 0 0.42em 0 0.2em;
+}
 
 .ee-tabarea ul {
   align-items: flex-end;
@@ -105,56 +108,66 @@ textarea.extendedtext.ee-active:focus {
 
 .ee-tabarea li {
   background: #3c6e9f;
-  border-right: 0.05em solid #454C54;
-  border-top: 0.05em solid #454C54;
+  border-right: 0.05em solid #454c54;
+  border-top: 0.05em solid #454c54;
   color: #fff;
   cursor: pointer;
   display: block;
   min-width: 7em;
   padding: 0.35em 0;
   text-align: center;
-  transition: background 0.2s, border 0.2s, opacity 0.2s; }
+  transition: background 0.2s, border 0.2s, opacity 0.2s;
+}
 #ee-wrapper.ee-old-variant .ee-tabarea li {
   background: #f2f2f2;
   border-color: #7c7c7c;
   color: #373737;
   min-width: 9em;
-  padding: 0.42em 0; }
+  padding: 0.42em 0;
+}
 
 .ee-tabarea li:first-of-type {
-  border-left: 0.05em solid #454C54;
-  border-top-left-radius: 0.2em; }
+  border-left: 0.05em solid #454c54;
+  border-top-left-radius: 0.2em;
+}
 #ee-wrapper.ee-old-variant .ee-tabarea li:first-of-type {
-  border-color: #7c7c7c; }
+  border-color: #7c7c7c;
+}
 
 .ee-tabarea li:last-of-type {
-  border-top-right-radius: 0.2em; }
+  border-top-right-radius: 0.2em;
+}
 
 .ee-tabarea li:hover {
-	background: #315b81; }
+  background: #315b81;
+}
 html.can-touch .ee-tabarea li:hover {
-  background: #3c6e9f; }
+  background: #3c6e9f;
+}
 #ee-wrapper.ee-old-variant .ee-tabarea li:hover,
 html.can-touch #ee-wrapper.ee-old-variant .ee-tabarea li:hover {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+}
 
 .ee-tabarea li.selected,
 .ee-tabarea li.selected:hover,
 html.can-touch .ee-tabarea li.selected:hover {
   background: #192129;
-	border-color: #192129;
+  border-color: #192129;
   border-radius: 0.2em 0.2em 0 0;
   color: #fff;
   opacity: 1;
   padding: 0.55em 0 0.5em;
-  pointer-events: none; }
+  pointer-events: none;
+}
 #ee-wrapper.ee-old-variant .ee-tabarea li.selected,
 #ee-wrapper.ee-old-variant .ee-tabarea li.selected:hover,
 html.can-touch #ee-wrapper.ee-old-variant .ee-tabarea li.selected:hover {
   background: #373737;
-	border-color: #373737;
+  border-color: #373737;
   color: #fff;
-  padding: 0.84em 0 0.4em; }
+  padding: 0.84em 0 0.4em;
+}
 
 #ee-btn-close,
 html.can-touch #ee-btn-close:hover {
@@ -164,86 +177,103 @@ html.can-touch #ee-btn-close:hover {
   border: 0.208em solid transparent;
   border-radius: 0.417em;
   color: #fff;
-  font-family: 'icons';
+  font-family: "icons";
   line-height: 1;
   min-width: 0;
   padding: 0.27em;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 #ee-wrapper.ee-old-variant #ee-btn-close,
 html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:hover {
-  background: linear-gradient(#36718D, #295F80);
+  background: linear-gradient(#36718d, #295f80);
   background-clip: border-box;
   border: none;
   border-radius: 0.2em;
   color: #fff;
   display: flex;
-  font-family: 'Calibri', sans-serif;
+  font-family: "Calibri", sans-serif;
   line-height: 1.25;
-  padding: 0.25em 1em 0.3em 1em; }
+  padding: 0.25em 1em 0.3em 1em;
+}
 
 #ee-btn-close:hover,
 html.can-touch #ee-btn-close:active {
   background: #183b5d;
-  background-clip: padding-box; }
+  background-clip: padding-box;
+}
 #ee-wrapper.ee-old-variant #ee-btn-close:hover,
 html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:active {
-  background: linear-gradient(#3B5E70, #2B4555);
-  background-clip: border-box; }
+  background: linear-gradient(#3b5e70, #2b4555);
+  background-clip: border-box;
+}
 
 #ee-wrapper.ee-old-variant #ee-btn-close:focus {
-  outline-offset: -0.2em; }
+  outline-offset: -0.2em;
+}
 
 #ee-btn-close:before {
-  content: '\e948';
-  display: block; }
+  content: "\e948";
+  display: block;
+}
 #ee-wrapper.ee-old-variant #ee-btn-close:before {
-	background: #255571;
-	border-radius: 50%;
-	content: '\ea29';
-	display: block;
-	font-family: "naep-ee";
-	font-size: 1.25em;
-	line-height: 1;
-	margin-right: 0.5em; }
+  background: #255571;
+  border-radius: 50%;
+  content: "\ea29";
+  display: block;
+  font-family: "naep-ee";
+  font-size: 1.25em;
+  line-height: 1;
+  margin-right: 0.5em;
+}
 #ee-wrapper.ee-old-variant #ee-btn-close:hover:before {
-	background: #274454; }
+  background: #274454;
+}
 
 .ee-btnarea {
   display: flex;
   flex: 1 0 auto;
-  padding: 0.625em; }
+  padding: 0.625em;
+}
 #ee-wrapper.ee-old-variant .ee-btnarea {
-  display: block; }
+  display: block;
+}
 
 .ee-btnarea-group {
-	border-left: 0.05em solid rgba(255,255,255,0.5);
-	display: inline-block;
-	margin-left: 1em;
-	padding-left: 1em; }
+  border-left: 0.05em solid rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  margin-left: 1em;
+  padding-left: 1em;
+}
 .ee-btnarea-group:first-of-type {
-	border: none;
-	margin: 0;
-	padding: 0; }
+  border: none;
+  margin: 0;
+  padding: 0;
+}
 .ee-btnarea-group:last-of-type {
-	align-items: flex-start;
-	border: none;
-	display: flex;
-	justify-content: flex-end;
-	width: 100%; }
+  align-items: flex-start;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 
 .ee-btnarea-row {
   display: flex;
-  margin: 0.5em 0 0 0; }
+  margin: 0.5em 0 0 0;
+}
 .ee-btnarea-row:first-of-type {
-  margin: 0; }
+  margin: 0;
+}
 #ee-wrapper.ee-old-variant .ee-btnarea-row {
-	justify-content: space-between;
-  margin: 0; }
+  justify-content: space-between;
+  margin: 0;
+}
 #ee-wrapper.ee-old-variant .ee-btnarea-row:first-of-type {
-	margin-bottom: 0.625em; }
+  margin-bottom: 0.625em;
+}
 
 .ee-btn {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   border: none;
   border-radius: 0.2em;
   color: #444;
@@ -256,62 +286,76 @@ html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:active {
   line-height: 1;
   min-width: 2em;
   padding: 0.5em;
-  transition: background 0.2s, color 0.2s, opacity 0.2s; }
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
 #ee-wrapper.ee-old-variant .ee-btn {
   background: #fff;
   color: #555;
   min-width: 2.45em;
-  padding: 0.7em; }
+  padding: 0.7em;
+}
 
 .ee-btnarea .ee-btn {
-  margin-right: 0.5em; }
+  margin-right: 0.5em;
+}
 #ee-wrapper.ee-old-variant .ee-btnarea .ee-btn {
-	margin-right: 0.625em; }
+  margin-right: 0.625em;
+}
 
 .ee-btnarea-row .ee-btn:last-of-type {
-  margin: 0; }
+  margin: 0;
+}
 #ee-wrapper.ee-old-variant .ee-btnarea-row .ee-btn:last-of-type {
-	margin-right: 2.95em; }
+  margin-right: 2.95em;
+}
 
 .ee-btnarea-row:first-of-type .ee-btn:last-of-type,
 #ee-wrapper.ee-old-variant .ee-btnarea-row:first-of-type .ee-btn:last-of-type {
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 .ee-btn:hover,
 html.can-touch .ee-btn:active {
-	background: #fff;
-	color: #111; }
+  background: #fff;
+  color: #111;
+}
 html.can-touch .ee-btn:hover {
-  background: rgba(255,255,255,0.9);
-  color: #444; }
+  background: rgba(255, 255, 255, 0.9);
+  color: #444;
+}
 #ee-wrapper.ee-old-variant .ee-btn:hover,
 html.can-touch #ee-wrapper.ee-old-variant .ee-btn:active,
 html.can-touch #ee-wrapper.ee-old-variant .ee-btn:hover {
   background: #fff;
-  color: #555; }
+  color: #555;
+}
 
 .ee-btn[disabled] {
   opacity: 0.3;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 [class^="icon-ee-"],
 [class*=" icon-ee-"],
 #ee-wrapper.ee-old-variant [class^="icon-ee-"],
 #ee-wrapper.ee-old-variant [class*=" icon-ee-"] {
   letter-spacing: normal;
-  padding: 0; }
+  padding: 0;
+}
 
 [class^="icon-ee-"]:before,
 [class*=" icon-ee-"]:before {
-  font-size: 2em; }
+  font-size: 2em;
+}
 #ee-wrapper.ee-old-variant [class^="icon-ee-"]:before,
 #ee-wrapper.ee-old-variant [class*=" icon-ee-"]:before {
-	font-size: 2.42em; }
+  font-size: 2.42em;
+}
 
 #ee-wrapper.ee-old-variant .ee-spacer {
-	flex: 0 0 auto;
-	margin-right: 0.625em;
-	min-width: 2.45em;
+  flex: 0 0 auto;
+  margin-right: 0.625em;
+  min-width: 2.45em;
 }
 
 /**
@@ -331,24 +375,26 @@ html.can-touch #ee-wrapper.ee-old-variant .ee-btn:hover {
 
 /**
 * @styles 3-ee-behavior Behavior with Numeric Entry
-* Because cognitive Numeric Entry items (see the [response-type-text-entry.css] page) only allow test takers to enter numeric characters, periods, commas, and minus signs, only the Equation Editor buttons for those symbols enable when a Numeric Entry text field is selected. Also, the More Symbols tab, if present, disables when a Numeric Entry item is selected.
+* Numeric Entry<img src="static/img/icon-asterisk.svg" width='25px' height='25px'/> is a text entry response type specific to SBTs. Because cognitive Numeric Entry items (see the [response-type-text-entry.css] page) only allow test takers to enter numeric characters, periods, commas, and minus signs, only the Equation Editor buttons for those symbols enable when a Numeric Entry text field is selected. Also, the More Symbols tab, if present, disables when a Numeric Entry item is selected.
 **/
 
 /**
 @styles 4-ee-grade4 Grade 4 Variant
-* The grade 4 variant’s buttons fit in a single button area, so no tabs are needed.
+* Select the __Math Keyboard__ button in the upper-left corner of the demo to launch the math keyboard.
 * _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-4-full.html" target="_blank">here</a>._
 * @iframe ux/demos/equation-editor/equation-editor-4.html 400
 **/
 
 /**
 @styles 5-ee-grade8 Grade 8 Variant
+* Select the __Math Keyboard__ button in the upper-left corner of the demo to launch the math keyboard.
 * _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-8-full.html" target="_blank">here</a>._
 * @iframe ux/demos/equation-editor/equation-editor-8.html 400
 **/
 
 /**
 @styles 6-ee-grade12 Grade 12 Variant
+* Select the __Math Keyboard__ button in the upper-left corner of the demo to launch the math keyboard.
 * _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/equation-editor/equation-editor-12-full.html" target="_blank">here</a>._
 * @iframe ux/demos/equation-editor/equation-editor-12.html 400
 **/
