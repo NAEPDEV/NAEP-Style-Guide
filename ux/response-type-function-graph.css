@@ -3,7 +3,7 @@
 * @parent ux.response-types
 * The Function Graph response type allows test takers to respond to an item by first selecting a function type and then manipulating the graph of the function so that it represents a given context.
 *
-* _Demo only reflects states and theming. Other functionality not present._
+* _The demo provides a visual representation of what students will see and experience on assessment day. Other functionality is not present._
 * @iframe ux/demos/response-type-function-graph/response-type-function-graph.html 700
 **/
 
@@ -31,40 +31,50 @@
 .asymptote-handle {
   cursor: ns-resize;
   outline: none;
-  user-select: none; }
+  user-select: none;
+}
 .asymptote-handle[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .asymptote-handle-actual {
   fill: #fff;
   stroke: #00b006;
   stroke-width: 3px;
-  transition: fill 0.2s, stroke 0.2s; }
+  transition: fill 0.2s, stroke 0.2s;
+}
 .asymptote-handle:active .asymptote-handle-actual,
 .asymptote-handle.active .asymptote-handle-actual,
 .asymptote.focus-tabbed:focus + .asymptote-handle .asymptote-handle-actual {
   transform: scale(1.2);
-  transform-origin: center; }
+  transform-origin: center;
+}
 .asymptote-handle[disabled] .asymptote-handle-actual {
-  stroke: #949494;  }
+  stroke: #949494;
+}
 
 .asymptote-chevron {
   fill: #00b006;
-  transition: fill 0.2s; }
+  transition: fill 0.2s;
+}
 .asymptote-handle:active .asymptote-chevron,
 .asymptote-handle.active .asymptote-chevron,
 .asymptote.focus-tabbed:focus + .asymptote-handle .asymptote-chevron {
   transform: scale(1.2);
-  transform-origin: center; }
+  transform-origin: center;
+}
 .asymptote-handle[disabled] .asymptote-chevron {
-  fill: #949494; }
+  fill: #949494;
+}
 
 .asymptote {
   cursor: ns-resize;
   outline: none;
-  user-select: none; }
+  user-select: none;
+}
 .asymptote[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .asymptote-target {
   stroke: transparent;
@@ -73,19 +83,24 @@
 
 .asymptote-actual {
   stroke: #00b006;
-  stroke-dasharray: 10,16;
+  stroke-dasharray: 10, 16;
   stroke-linecap: round;
   stroke-width: 6;
-  transition: stroke 0.2s; }
+  transition: stroke 0.2s;
+}
 .asymptote:active .asymptote-actual,
 .asymptote.active .asymptote-actual,
 .asymptote.focus-tabbed:focus .asymptote-actual {
-  stroke-width: 8; }
+  stroke-width: 8;
+}
 .asymptote[disabled] .asymptote-actual {
-  stroke: #949494; }
+  stroke: #949494;
+}
 
 .response-area-bfl .point[disabled] .point-actual {
-  fill: #484848; }
+  fill: #484848;
+}
 
 .response-area-bfl .line[disabled] .line-actual {
-  stroke: #484848; }
+  stroke: #484848;
+}

@@ -34,7 +34,7 @@
 *
 * The item accession number and block title for the content currently on screen are shown in the center of the toolbar, superimposed on the NAEP logo. For scenario-based tasks, the scene ID displays next to the accession number, separated by a hyphen.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>._
+* _The system toolbar shown below is a visual representation presented at 67% its actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>._
 * @iframe ux/demos/system-toolbar/system-toolbar.html 47
 **/
 
@@ -53,7 +53,7 @@
 }
 
 #student-toolbar-spacer {
-  content: '';
+  content: "";
   flex: 0 0 auto;
   font-size: 20px;
   height: 3em;
@@ -80,8 +80,8 @@
 }
 
 .btn-group-flex::before {
-  content: '';
-  background: url('logo.png') center/auto 100% no-repeat;
+  content: "";
+  background: url("logo.png") center/auto 100% no-repeat;
   bottom: 0;
   display: block;
   left: 0;
@@ -112,7 +112,7 @@
   border-left: none;
   display: flex;
   margin: 0.2em 0;
-  transition: width .3s, border-width .3s;
+  transition: width 0.3s, border-width 0.3s;
 }
 
 #scratchwork-tray {
@@ -165,14 +165,16 @@
   position: relative;
   text-align: center;
   text-decoration: none;
-  transition: background .2s, border-color .2s, color .2s, margin .2s, box-shadow .2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, margin 0.2s,
+    box-shadow 0.2s;
 }
 
 .tray-btn {
   border-radius: 0.25em;
   margin: 0.2em;
   padding: 0.15em 0.15em 0.15em 0.2em;
-  transition: background .2s, border-color .2s, color .2s, opacity .2s .3s, box-shadow .2s;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, opacity 0.2s 0.3s,
+    box-shadow 0.2s;
   width: 2.1em;
 }
 
@@ -180,17 +182,21 @@
 #timer-btn.active:hover {
   background: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, .15); }
+  box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.15);
+}
 html.can-touch .system-btn:hover,
 html.can-touch #timer-btn.active:hover {
   background: none;
   border-color: transparent;
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .tray-btn:hover {
-  background: #C4E0F8; }
+  background: #c4e0f8;
+}
 html.can-touch .tray-btn:hover {
-  background: none; }
+  background: none;
+}
 
 #scratchwork-btn.active:hover,
 .system-btn.active:hover {
@@ -205,13 +211,13 @@ html.can-touch .tray-btn:active,
 html.can-touch #timer-btn.active:active {
   background-color: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, .25) inset;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
 }
 
 #scratchwork-btn.active:active,
 .tray-btn:active,
 .system-btn.active:active {
-  background-color: #C4E0F8;
+  background-color: #c4e0f8;
   border-color: #2a8dd4;
 }
 
@@ -227,7 +233,7 @@ html.can-touch #timer-btn.active:active {
 html.can-touch .system-btn.active,
 html.can-touch #scratchwork-btn.active,
 html.can-touch .tray-btn.active {
-  background: #C4E0F8;
+  background: #c4e0f8;
   border-color: #2a8dd4;
   cursor: pointer;
   pointer-events: auto;
@@ -243,137 +249,191 @@ html.can-touch #timer-btn.active:hover {
   background: none;
   border-color: #b2b2b2;
   border-radius: 0.15em 0 0 0.15em;
-  transition: background .2s, border-color .2s; }
+  transition: background 0.2s, border-color 0.2s;
+}
 html.can-touch #timer-btn.active:active {
-  background: #fff; }
+  background: #fff;
+}
 
 .system-btn[disabled].active {
   color: #3f3f3f;
 }
 
 .system-icon-accent-color {
-  transition: opacity .2s; }
+  transition: opacity 0.2s;
+}
 .system-btn[disabled] .system-icon-accent-color {
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 .system-btn.active .system-icon-accent-color {
-  opacity: 1; }
+  opacity: 1;
+}
 
- #change-lang-btn-esp-box {
-  animation: slide-right .3s ease forwards;
+#change-lang-btn-esp-box {
+  animation: slide-right 0.3s ease forwards;
   transform: translateX(-1em);
 }
 
 @keyframes slide-right {
-  0% { transform: translateX(-1em); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(-1em);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 #change-lang-btn2-eng-box {
-  animation: slide-left .3s ease;
+  animation: slide-left 0.3s ease;
 }
 
 @keyframes slide-left {
-  0% { transform: translateX(1em); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(1em);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .arrow {
-  animation: fade-in .3s ease forwards;
+  animation: fade-in 0.3s ease forwards;
   opacity: 0;
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  40% { opacity: 0;  }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .system-btn:before,
 .system-btn span:before,
 #next-btn:before {
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 2.4em;
   line-height: 1;
 }
 
 .tray-btn:before,
 .tray-btn span:before {
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 1.6em;
   line-height: 1;
 }
 
-#help-btn:before { content: '\e92a'; }
-#theme-btn:before { content: '\e92b'; }
-#zoom-out-btn:before { content: '\e92c'; }
-#zoom-in-btn:before { content: '\e92d'; }
+#help-btn:before {
+  content: "\e92a";
+}
+#theme-btn:before {
+  content: "\e92b";
+}
+#zoom-out-btn:before {
+  content: "\e92c";
+}
+#zoom-in-btn:before {
+  content: "\e92d";
+}
 
 #student-toolbar .path2,
 #student-toolbar .path3 {
-  left: 0.05em; }
+  left: 0.05em;
+}
 #student-toolbar .tray-btn .path2,
 #student-toolbar .tray-btn .path3 {
-  left: 0.2em; }
+  left: 0.2em;
+}
 
 #change-lang-btn .path1:before {
-  content: "\e92e"; }
+  content: "\e92e";
+}
 #change-lang-btn .path2:before {
   content: "\e92f";
-  color: #8B13B2; }
+  color: #8b13b2;
+}
 #change-lang-btn .path3:before {
-  content: "\e930"; }
+  content: "\e930";
+}
 
 #change-lang-btn2 .path1:before {
-  content: "\e931"; }
+  content: "\e931";
+}
 #change-lang-btn2 .path2:before {
   content: "\e932";
-  color: #8B13B2; }
+  color: #8b13b2;
+}
 #change-lang-btn2 .path3:before {
-  content: "\e933"; }
+  content: "\e933";
+}
 
 #read-aloud-btn .path1:before {
-  content: "\e934"; }
+  content: "\e934";
+}
 #read-aloud-btn .path2:before {
   content: "\e935";
-  color: #0076D2; }
+  color: #0076d2;
+}
 
 #scratchwork-btn .path1:before {
   content: "\e936";
-  color: #900; }
+  color: #900;
+}
 #scratchwork-btn .path2:before {
-  content: "\e937"; }
+  content: "\e937";
+}
 
 #pencil-btn .path1:before {
   content: "\e91f";
-  color: #EAD2A7; }
+  color: #ead2a7;
+}
 #pencil-btn .path2:before {
-  content: "\e920"; }
+  content: "\e920";
+}
 
 #highlighter-btn .path1:before {
   content: "\e921";
-  color: #FFDF5A; }
+  color: #ffdf5a;
+}
 #highlighter-btn .path2:before {
   content: "\e922";
-  color: #FFED9F; }
+  color: #ffed9f;
+}
 #highlighter-btn .path3:before {
-  content: "\e923"; }
+  content: "\e923";
+}
 
 #eraser-btn .path1:before {
   content: "\e924";
-  color: #EAA0B5; }
+  color: #eaa0b5;
+}
 #eraser-btn .path2:before {
-  content: "\e925"; }
+  content: "\e925";
+}
 
-#clearSW-btn:before {  content: "\e926"; }
+#clearSW-btn:before {
+  content: "\e926";
+}
 
 #equation-btn .path1:before {
-  content: "\e938"; }
+  content: "\e938";
+}
 #equation-btn .path2:before {
   content: "\e939";
-  color: #008117; }
+  color: #008117;
+}
 
-#calc-btn:before { content: "\e93a"; }
-#timer-btn:before { content: "\e93b"; }
+#calc-btn:before {
+  content: "\e93a";
+}
+#timer-btn:before {
+  content: "\e93b";
+}
 
 .system-btn.hidden {
   display: none;
@@ -383,124 +443,152 @@ html.can-touch #timer-btn.active:active {
 NAVIGATION BUTTONS
 ----------------------------------------------------*/
 .btn-nav {
-	align-items: center;
-	border: 0.1em solid transparent;
-	cursor: pointer;
-	display: inline-flex;
-	flex: 0 0 auto;
-	font-family: inherit;
-	font-size: inherit;
-	height: 2.35em;
+  align-items: center;
+  border: 0.1em solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-family: inherit;
+  font-size: inherit;
+  height: 2.35em;
   line-height: 1;
-	margin: 0.2em 0;
-	opacity: 1;
-	position: relative;
-	transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
-	visibility: visible; }
+  margin: 0.2em 0;
+  opacity: 1;
+  position: relative;
+  transition: background 0.2s, border-color 0.2s, box-shadow 0.2s, opacity 0.2s;
+  visibility: visible;
+}
 .btn-nav:hover {
-	box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.2) }
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.2);
+}
 html.can-touch .btn-nav:hover {
-  box-shadow: none; }
+  box-shadow: none;
+}
 .btn-nav.hidden {
-	opacity: 0;
-	transition: opacity 0.2s, visibility 0.2s;
-	visibility: hidden; }
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  visibility: hidden;
+}
 .btn-nav[disabled] {
-	background: #ddd;
-	border-color: transparent;
-	box-shadow: none;
-	color: #b3b3b3;
-	pointer-events: none; }
+  background: #ddd;
+  border-color: transparent;
+  box-shadow: none;
+  color: #b3b3b3;
+  pointer-events: none;
+}
 
 .btn-nav::after {
-	font-family: 'icons';
-  font-size: 1.6em; }
+  font-family: "icons";
+  font-size: 1.6em;
+}
 .btn-nav[disabled]::after {
-	color: #b3b3b3; }
+  color: #b3b3b3;
+}
 
 .btn-back {
-	background: #f7f7f7;
-	border-color: #949494;
-	border-radius: 50%;
-	color: #0068D1;
-	padding: 0.25em;
-	width: 2.35em; }
+  background: #f7f7f7;
+  border-color: #949494;
+  border-radius: 50%;
+  color: #0068d1;
+  padding: 0.25em;
+  width: 2.35em;
+}
 .btn-back:hover {
-	background: #fff;
-	border-color: #777; }
+  background: #fff;
+  border-color: #777;
+}
 html.can-touch .btn-back:hover {
   background: #f7f7f7;
-  border-color: #949494; }
+  border-color: #949494;
+}
 .btn-back:active,
 html.can-touch .btn-back:active {
-	background: #fff;
-	border-color: #777;
-	box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25) inset; }
+  background: #fff;
+  border-color: #777;
+  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25) inset;
+}
 
 .btn-back::after {
-  content: "\e93e"; }
+  content: "\e93e";
+}
 
 .btn-next {
-	background: #0068D1;
-	border-radius: 1.175em;
-	color: #fff;
-	padding: 0.25em 0.25em 0.25em 0.65em; }
+  background: #0068d1;
+  border-radius: 1.175em;
+  color: #fff;
+  padding: 0.25em 0.25em 0.25em 0.65em;
+}
 .btn-next:hover {
-	background: #137fec; }
+  background: #137fec;
+}
 html.can-touch .btn-next:hover {
-  background: #0068D1; }
+  background: #0068d1;
+}
 .btn-next:active,
 html.can-touch .btn-next:active {
   background: #137fec;
-	box-shadow: none; }
+  box-shadow: none;
+}
 
 .btn-next::after {
-	content: "\e93f";
-	margin-left: 0.093em;
+  content: "\e93f";
+  margin-left: 0.093em;
 }
 
 .btn-next span {
-	font-size: 1.1em;
+  font-size: 1.1em;
 }
 
 #back-btn {
-	border-color: #d0d0d0;
-  margin: 0.2em 0 0.2em 0.4em; }
+  border-color: #d0d0d0;
+  margin: 0.2em 0 0.2em 0.4em;
+}
 #back-btn:hover,
 #back-btn:active {
-	border-color: #b2b2b2; }
+  border-color: #b2b2b2;
+}
 html.can-touch #back-btn:hover {
-  border-color: #d0d0d0; }
+  border-color: #d0d0d0;
+}
 html.can-touch #back-btn:active {
-	border-color: #b2b2b2; }
+  border-color: #b2b2b2;
+}
 #back-btn[disabled],
 html.can-touch #back-btn[disabled] {
   background: #ddd;
-  border-color: transparent; }
+  border-color: transparent;
+}
 
 #back-btn::after {
-  color: #2478cc; }
+  color: #2478cc;
+}
 #back-btn[disabled]::after {
-  color: #b3b3b3; }
+  color: #b3b3b3;
+}
 
 #next-btn {
   background: #2478cc;
   margin: 0.2em 0 0.2em 0.5em;
-  padding: 0.25em 0.25em 0.25em 0.6em; }
+  padding: 0.25em 0.25em 0.25em 0.6em;
+}
 #next-btn:hover,
 #next-btn:active {
-  background: #2f91f4; }
+  background: #2f91f4;
+}
 html.can-touch #next-btn:hover {
-  background: #2478cc; }
+  background: #2478cc;
+}
 html.can-touch #next-btn:active {
-  background: #2f91f4; }
+  background: #2f91f4;
+}
 #next-btn[disabled],
 html.can-touch #next-btn[disabled] {
-  background: #ddd; }
+  background: #ddd;
+}
 
 #next-btn span {
   font-size: 1.4em;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 p.time-left {

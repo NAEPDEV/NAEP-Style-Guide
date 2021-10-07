@@ -4,6 +4,8 @@
 * The box-and-whisker response type allows test takers to respond to an item by placing and manipulating interactive box plots. Placement may be omitted based on the measurement goals of a given item.
 *
 * _Demo only reflects states and theming. Other functionality not present._
+*
+* _The sizing handles provided in the Style Guide may differ from those presented to students on assessment day._
 * @iframe ux/demos/response-type-box-whisker/response-type-box-whisker.html 820
 **/
 
@@ -44,7 +46,7 @@
 
 .bw-graph-border {
   fill: none;
-  stroke: #CCC;
+  stroke: #ccc;
   stroke-linecap: round;
   stroke-width: 3px;
   transition: stroke 0.2s;
@@ -84,31 +86,38 @@
 **/
 
 .box-whisker .bw-actual {
-  outline: none; }
+  outline: none;
+}
 .bw-actual[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .bw-whisker {
   cursor: move;
   stroke: #333;
   stroke-linecap: round;
   stroke-width: 5px;
-  transition: stroke 0.15s; }
+  transition: stroke 0.15s;
+}
 .bw-whisker:hover,
 .bw-whisker.hover {
-  stroke: #000; }
+  stroke: #000;
+}
 html.can-touch .bw-whisker:hover,
 .bw-actual.focus-tabbed:focus .bw-whisker {
-  stroke: #333; }
+  stroke: #333;
+}
 .bw-whisker:active,
 .bw-whisker.active,
 html.can-touch .bw-whisker:active,
 html.can-touch .bw-whisker.active,
 .box-whisker .bw-actual.focus-tabbed:focus .bw-whisker {
   stroke: #000;
-  stroke-width: 7px; }
+  stroke-width: 7px;
+}
 .bw-actual[disabled] .bw-whisker {
-  stroke: #484848; }
+  stroke: #484848;
+}
 
 .bw-box {
   cursor: move;
@@ -116,15 +125,18 @@ html.can-touch .bw-whisker.active,
   stroke: #333;
   stroke-linejoin: round;
   stroke-width: 5px;
-  transition: fill 0.15s, stroke 0.15s; }
+  transition: fill 0.15s, stroke 0.15s;
+}
 .bw-box:hover,
 .bw-box.hover,
 .bw-actual.focus-tabbed:focus .bw-box {
   fill: #72c1f7;
-  stroke: #000; }
+  stroke: #000;
+}
 html.can-touch .bw-box:hover {
   fill: #b8e2ff;
-  stroke: #333; }
+  stroke: #333;
+}
 .bw-box:active,
 .bw-box.active,
 html.can-touch .bw-box:active,
@@ -132,12 +144,14 @@ html.can-touch .bw-box.active,
 .box-whisker .bw-actual.focus-tabbed:focus .bw-box {
   fill: #72c1f7;
   stroke: #000;
-  stroke-width: 7px; }
+  stroke-width: 7px;
+}
 .bw-actual[disabled] .bw-box {
   fill: #949494;
-  stroke: #484848; }
+  stroke: #484848;
+}
 
-  /**
+/**
   * @styles 3-bw-controls Controls
   * A single-direction sizing handle is vertically centered on each of the following elements of each box plot that has been prepopulated or placed in the graph. (See the [transformable-objects.css] page for more information about sizing handles.)
   * * Lowest observation line

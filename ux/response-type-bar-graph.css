@@ -77,18 +77,22 @@
 * * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray `#949494`.
 *
 * _Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
+*
+* _The sizing handles provided in the Style Guide may differ from those presented to students on assessment day._
 * @iframe ux/demos/response-type-bar-graph/bar-graph.html 650
 **/
 .bg-bar-graph-bars .bg-bar,
 .bg-bar-graph-bars .bg-bar.bg-bar-prepop[disabled] {
-  fill: #3B96FF;
-  transition: fill 0.15s; }
+  fill: #3b96ff;
+  transition: fill 0.15s;
+}
 .bg-bar-graph-bars .bg-bar.active {
-  fill: #0059C4; }
+  fill: #0059c4;
+}
 .bg-bar-graph-bars .bg-bar[disabled],
 .bg-bar-graph-bars .bg-bar.bg-initial[disabled] {
-  fill: #949494; }
-
+  fill: #949494;
+}
 
 /**
 * @styles 3-bg-histograms Histogram Bars
@@ -103,25 +107,32 @@
 * * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray `#949494`.
 *
 * _Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
+*
+* _The sizing handles provided in the Style Guide may differ from those presented to students on assessment day._
 * @iframe ux/demos/response-type-bar-graph/histogram.html 650
 **/
 .bg-histogram-bars .bg-bar,
 .bg-histogram-bars .bg-bar.bg-bar-prepop[disabled] {
-  fill: #B8E2FF;
+  fill: #b8e2ff;
   stroke: #404040;
   stroke-width: 3;
-  transition: fill 0.15s, stroke 0.15s; }
+  transition: fill 0.15s, stroke 0.15s;
+}
 .bg-histogram-bars .bg-bar.active {
-  fill: #73C6FF; }
+  fill: #73c6ff;
+}
 .bg-histogram-bars .bg-bar[disabled],
 .bg-histogram-bars .bg-bar.bg-initial[disabled] {
-  fill: #949494; }
+  fill: #949494;
+}
 
 .bg-histogram-bars .bg-bar.bg-initial,
 .bg-bar-graph-bars .bg-bar.bg-initial {
-  stroke: #127DFF;
+  stroke: #127dff;
   stroke-linejoin: round;
-  stroke-width: 6; }
+  stroke-width: 6;
+}
 .bg-histogram-bars .bg-bar.bg-initial[disabled],
 .bg-bar-graph-bars .bg-bar.bg-initial[disabled] {
-  stroke: #949494; }
+  stroke: #949494;
+}
