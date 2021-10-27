@@ -23,7 +23,12 @@
 * * The speech bubble background must be contrast-compliant with respect to the dialogue text.
 * * The speech bubble must have a tail that connects it to the speaking character.
 * * The task character’s name should appear bolded and with a bottom border at the top of the speech bubble unless the character announces herself (e.g., “Hi, I’m Diana&#8230;”)
+*
+* The following demo presents a full-body character.
 * @iframe ux/demos/characters-dialogue/full-body.html 600
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .char-wrapper.char-fullbody .char-portrait {
@@ -39,7 +44,7 @@
 }
 
 .char-wrapper.char-text-bubble.char-fullbody .char-text {
-  padding: 1.5em 2.7em 1.5em 2em
+  padding: 1.5em 2.7em 1.5em 2em;
 }
 
 .char-wrapper.char-text-bubble.char-fullbody .char-text::before {
@@ -71,20 +76,28 @@ html.sbt .char-text h3,
 * * _Distinct_. Typically used when a task contains more complex backgrounds. Dialogue is presented in a speech bubble like those for full-body characters, except the tail and padding are smaller. Character name tags have white backgrounds.
 * * _Intermediate_. Typically used when a task contains simple or solid fill backgrounds. Dialogue and name tags are bare. The character portrait is surrounded by a border whose color changes to match the states of the __Voiceover__ button (see below).
 * * _Subtle_. Only used on white backgrounds. Dialogue and name tags are bare. The character portrait has no border, but its background changes color to match the states of the __Voiceover__ button (see below).
+*
+* The following demo presents two character portraits each in their distinct style, intermediate style, and subtle style. 
 * @iframe ux/demos/characters-dialogue/portrait.html 1570
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .char-portrait {
-  margin: 0 1.2em 0 0; }
+  margin: 0 1.2em 0 0;
+}
 .char-text-bare .char-portrait {
-  margin: 0 2em 0 0; }
+  margin: 0 2em 0 0;
+}
 
 .char-portrait img {
   background: #fff;
   display: block;
   margin: 0 auto;
   transition: background 0.2s, border 0.2s;
-  width: 8ch; }
+  width: 8ch;
+}
 
 /* Circular variant - should only be used with square images */
 .char-wrapper.char-portrait-circular .char-portrait img {
@@ -94,29 +107,44 @@ html.sbt .char-text h3,
 /* Interactive portrait styles: border, fill, or none */
 .char-wrapper.char-text-bare .char-portrait img {
   border: 0.15em solid #949494;
-  cursor: pointer; }
+  cursor: pointer;
+}
 .char-wrapper.char-text-bare .char-portrait img.hover,
 .char-wrapper.char-text-bare .char-portrait img:hover {
-  border-color: #616161; }
+  border-color: #616161;
+}
 .char-wrapper.char-text-bare.char-vo-play .char-portrait img {
-  border-color: #0068D1; }
+  border-color: #0068d1;
+}
 .char-wrapper.char-text-bare.char-vo-play .char-portrait img.hover,
 .char-wrapper.char-text-bare.char-vo-play .char-portrait img:hover {
-  border-color: #3896f5; }
+  border-color: #3896f5;
+}
 html.can-touch .char-wrapper.char-text-bare .char-portrait img.hover,
 html.can-touch .char-wrapper.char-text-bare .char-portrait img:hover {
-  border-color: #949494; }
-html.can-touch .char-wrapper.char-text-bare.char-vo-play .char-portrait img.hover,
-html.can-touch .char-wrapper.char-text-bare.char-vo-play .char-portrait img:hover {
-  border-color: #0068D1; }
+  border-color: #949494;
+}
+html.can-touch
+  .char-wrapper.char-text-bare.char-vo-play
+  .char-portrait
+  img.hover,
+html.can-touch
+  .char-wrapper.char-text-bare.char-vo-play
+  .char-portrait
+  img:hover {
+  border-color: #0068d1;
+}
 .char-wrapper.char-text-bare .char-portrait[disabled] img {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .char-wrapper.char-text-bare.char-portrait-bg .char-portrait img {
-  background: #E5E5E5;
-  border: none; }
+  background: #e5e5e5;
+  border: none;
+}
 .char-wrapper.char-text-bare.char-portrait-bg.char-vo-play .char-portrait img {
-  background: #C6EAF7; }
+  background: #c6eaf7;
+}
 
 .char-wrapper.char-text-bubble .char-portrait img {
   border: none;
@@ -127,39 +155,46 @@ html.can-touch .char-wrapper.char-text-bare.char-vo-play .char-portrait img:hove
   font-weight: 900;
   line-height: 1;
   padding: 0.1em 0.3em 0.2em;
-  text-align: center; }
+  text-align: center;
+}
 .char-wrapper.char-text-bubble .char-portrait figcaption {
   background: #fff;
-  border-top: 0.05em solid #949494; }
-.char-wrapper.char-text-bubble.char-portrait-circular .char-portrait figcaption {
+  border-top: 0.05em solid #949494;
+}
+.char-wrapper.char-text-bubble.char-portrait-circular
+  .char-portrait
+  figcaption {
   border: 0.05em solid #949494;
   border-radius: 0.7em;
   padding: 0.05em 0.5em 0.15em;
   position: relative;
-  top: -0.2em; }
-
+  top: -0.2em;
+}
 
 /*-------------------------------
 CHARACTER TEXT STYLES
 -------------------------------*/
 .char-text {
   max-width: 60ch;
-  position: relative; }
+  position: relative;
+}
 .char-wrapper.char-text-bubble .char-text {
   background: #fff;
   border: 0.05em solid transparent;
   border-radius: 0.6em;
-  box-shadow: 0 0 0.05em 0.01em rgba(0,0,0,0.15), 0 0 0.25em 0.07em rgba(0,0,0,0.1);
+  box-shadow: 0 0 0.05em 0.01em rgba(0, 0, 0, 0.15),
+    0 0 0.25em 0.07em rgba(0, 0, 0, 0.1);
   max-width: calc(60ch + 3.7em);
   padding: 0.75em 2.7em 0.75em 1em;
-  transition: background 0.2s, border 0.2s; }
+  transition: background 0.2s, border 0.2s;
+}
 
 .char-wrapper.char-text-bubble .char-text::before {
   background: #fff;
   border-left: 0.05em solid transparent;
   border-top: 0.05em solid transparent;
-  box-shadow: -0.05em -0.05em 0.05em 0 rgba(0,0,0,0.15);
-  content: '';
+  box-shadow: -0.05em -0.05em 0.05em 0 rgba(0, 0, 0, 0.15);
+  content: "";
   display: block;
   height: 1em;
   left: -0.55em;
@@ -173,9 +208,11 @@ CHARACTER TEXT STYLES
 .char-text p {
   border: 0.087em solid transparent;
   margin: 0 0 1em;
-  transition: border 0.2s; }
+  transition: border 0.2s;
+}
 .char-text p:last-of-type {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
 * @styles 2-char-buttons Voiceover Playback
@@ -204,43 +241,56 @@ CHARACTER TEXT STYLES
   padding: 0;
   position: absolute;
   -webkit-font-smoothing: antialiased;
-  width: 2em; }
+  width: 2em;
+}
 .char-wrapper .btn.btn-secondary.hover {
   border-color: #616161;
-  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25); }
+  box-shadow: 0 0.07em 0.1em rgba(0, 0, 0, 0.25);
+}
 html.can-touch .char-wrapper .btn.btn-secondary.hover {
   border-color: #949494;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .char-wrapper .btn.btn-secondary.active {
   background: #f0f0f0;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .char-wrapper.char-vo-play .btn.btn-secondary {
   border-color: #0068d1;
-  color: #0068d1; }
+  color: #0068d1;
+}
 .char-wrapper.char-vo-play .btn.btn-secondary:hover,
 .char-wrapper.char-vo-play .btn.btn-secondary.hover {
-  border-color: #3896f5; }
+  border-color: #3896f5;
+}
 html.can-touch .char-wrapper.char-vo-play .btn.btn-secondary:hover,
 html.can-touch .char-wrapper.char-vo-play .btn.btn-secondary.hover {
-  border-color: #0068d1; }
+  border-color: #0068d1;
+}
 .char-wrapper.char-vo-play .btn.btn-secondary:active,
 .char-wrapper.char-vo-play .btn.btn-secondary.active {
   background: #dbedff;
-  border-color: #0068d1; }
+  border-color: #0068d1;
+}
 .char-wrapper .btn.btn-secondary[disabled] {
-  color: #909090; }
+  color: #909090;
+}
 
 .char-wrapper .btn::before {
   content: "\e917";
-  font-family: 'icons' !important;
-  font-size: 1.5em; }
+  font-family: "icons" !important;
+  font-size: 1.5em;
+}
 .char-wrapper.char-vo-play .btn::before {
-  content: "\e914"; }
+  content: "\e914";
+}
 
 /* Positioning based on speech bubble parameter */
 .char-wrapper.char-text-bare .btn {
   left: calc(8ch - 1em);
-  top: -0.181em; }
+  top: -0.181em;
+}
 .char-wrapper.char-text-bubble .btn {
   right: 0.5em;
-  top: 0.5em; }
+  top: 0.5em;
+}

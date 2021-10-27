@@ -7,6 +7,8 @@
 *
 * ### Custom SBT icons <img src="static/img/icon-asterisk.svg"/>
 * SBTs sometimes include use cases not covered by the default icon set. Custom icons should match the approach of the default set to ensure a consistent look and feel. (<a href="http://thenounproject.com/" target="_blank">The Noun Project</a> and <a href="http://fontawesome.io/" target="_blank">Font Awesome</a> are good sources for icon ideas.) If a new icon is likely to be used in multiple SBTs, notify the NAEP UX Design Team so that it can be added to the default set.
+*
+* The following groups of examples display NAEP icons according to their pixel designations. 
 **/
 
 /**
@@ -27,18 +29,22 @@
 /**
 * @styles 3-icons-12 12x12 Icons
 * @iframe ux/demos/icons/icons-12.html 1100
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 @font-face {
-  font-family: 'icons';
+  font-family: "icons";
   font-style: normal;
   font-weight: normal;
-  src: url('fonts/icomoon.woff?md92d0') format('woff');
+  src: url("fonts/icomoon.woff?md92d0") format("woff");
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
+  font-family: "icons" !important;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -266,25 +272,25 @@
 }
 .icon-pencil .path1:before {
   content: "\e91f";
-  color: #EAD2A7;
+  color: #ead2a7;
 }
 .icon-pencil .path2:before {
   content: "\e920";
 }
 .icon-highlighter .path1:before {
   content: "\e921";
-  color: #FFDF5A;
+  color: #ffdf5a;
 }
 .icon-highlighter .path2:before {
   content: "\e922";
-  color: #FFED9F;
+  color: #ffed9f;
 }
 .icon-highlighter .path3:before {
   content: "\e923";
 }
 .icon-eraser .path1:before {
   content: "\e924";
-  color: #EAA0B5;
+  color: #eaa0b5;
 }
 .icon-eraser .path2:before {
   content: "\e925";
@@ -342,7 +348,7 @@
 }
 .icon-lang-esp .path2:before {
   content: "\e92f";
-  color: #8B13B2;
+  color: #8b13b2;
 }
 .icon-lang-esp .path3:before {
   content: "\e930";
@@ -352,7 +358,7 @@
 }
 .icon-lang-eng .path2:before {
   content: "\e932";
-  color: #8B13B2;
+  color: #8b13b2;
 }
 .icon-lang-eng .path3:before {
   content: "\e933";
@@ -362,7 +368,7 @@
 }
 .icon-read-aloud .path2:before {
   content: "\e935";
-  color: #0076D2;
+  color: #0076d2;
 }
 .icon-scratchwork .path1:before {
   content: "\e936";
@@ -425,18 +431,18 @@
   content: "\e96c";
 }
 
-
 /* EQUATION EDITOR ICONS */
 @font-face {
-  font-family: 'naep-ee';
-  src: url('fonts/naep-ee.woff?rqunfg') format('woff');
+  font-family: "naep-ee";
+  src: url("fonts/naep-ee.woff?rqunfg") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-ee-"], [class*=" icon-ee-"] {
+[class^="icon-ee-"],
+[class*=" icon-ee-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'naep-ee' !important;
+  font-family: "naep-ee" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

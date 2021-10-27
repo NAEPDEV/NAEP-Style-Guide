@@ -17,8 +17,11 @@
 
 /**
 * @styles 1-sis-text-selections Text Selections
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-text-ms-full.html" target="_blank">here</a>._
+* The following demo presents a select-in-stimulus response type.
 * @iframe ux/demos/response-type-sis/response-type-sis-text-ms.html 700
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-text-ms-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 * Text selections are indicated in a stimulus by a background of varying shades of green, depending on the selection’s state. When selections are adjacent (i.e., when selections are words, phrases, or sentences), there must be one space character between the selections to visually differentiate them. A hairline margin should also appear between lines of selected text (achievable by adjusting the line height).
 *
@@ -706,8 +709,11 @@ SELECTION CONTAINERS - MEDIA
 
 /**
 * @styles 6-sis-multiple-sources Multiple Sources
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-multi-source-full.html" target="_blank">here</a>._
+* The following demo presents a select-in-stimulus response type with multiple sources.
 * @iframe ux/demos/response-type-sis/response-type-sis-multi-source.html 630
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-multi-source-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * In SIS items that contain mutliple stimuli, stimuli are presented in a tabbed interface (see the [navigation.css]) page) on the left side of the screen.

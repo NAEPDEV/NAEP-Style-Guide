@@ -8,7 +8,12 @@
 * The label has gray `#757575` top and bottom borders.
 *
 * The buttons have the same presentation and states as primary filled buttons (see the [buttons.css] page for more information), except that only the outer corners are rounded. The decrement button typically has the `minus-thin` icon, and the increment button typicaly has the `plus-thin` icon (see the [icons.css] page for more information), though other icons may be used in special cases. When the test taker reaches the minimum or maximum value allowed for a given control, the appropriate button becomes disabled.
+*
+* The following demo presents the components for the decrement button, label, and increment button assembled in a row. 
 * @iframe ux/demos/increment-controls/increment-controls.html 100
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 .increment-control {
   display: flex;
@@ -27,24 +32,27 @@
 }
 
 .increment-control .btn {
-	letter-spacing: normal;
+  letter-spacing: normal;
   margin: 0;
-  padding: 0.333em; }
+  padding: 0.333em;
+}
 .increment-control .btn:first-of-type {
-  border-radius: 0.2em 0 0 0.2em; }
+  border-radius: 0.2em 0 0 0.2em;
+}
 .increment-control .btn:last-of-type {
-  border-radius: 0 0.2em 0.2em 0; }
+  border-radius: 0 0.2em 0.2em 0;
+}
 
 .ic-btn-minus::before,
 .ic-btn-plus::before {
-	display: block;
-  font-family: 'icons';
+  display: block;
+  font-family: "icons";
 }
 
 .ic-btn-minus::before {
-  content: '\e949';
+  content: "\e949";
 }
 
 .ic-btn-plus::before {
-  content: '\e905';
+  content: "\e905";
 }

@@ -17,7 +17,12 @@
 * * _Disabled_. Visible when the tab is inactive (e.g., when a modal system tool like Scratchwork is enabled). Tab label color is dimmed to indicate that the tab is inactive.
 *
 * Tabs receive the `default` cursor in the selected and disabled states, and the `pointer` cursor in all other states.
+*
+* The following demo presents the default tab state.
 * @iframe ux/demos/navigation/tab-states.html 135
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * ### Tab Pagination
@@ -27,7 +32,12 @@
 * * Pressing a tab pagination button will cause the tab tray to shift one screen width in the selected direction by default.
 * * If there aren’t sufficient tabs off-screen to fill a screen width, the tab tray shifts so that the last off-screen tab is adjacent to the selected tab pagination button.
 * * If the test taker navigates to an off-screen tab (e.g., by pressing the __Back__ or __Next__ button), the tab tray shifts so that the selected tab is on-screen.
+*
+* The following demo presents tabs with the tab pagination buttons.
 * @iframe ux/demos/navigation/tab-pagination.html 135
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * ### Tabs in SBTs <img src="static/img/icon-asterisk.svg"/>
@@ -251,7 +261,12 @@ html.can-touch .btn-tab-mover:active {
 * To increase salience, especially for test takers less familiar with digital environments, scrollbars are displayed in blue (`#246BB2` for buttons and thumb, `#EBF5FF` for track) in the default theme. Scrollbar colors in other themes were selected to balance salience with alignment to the theme.
 *
 * Vertical scrollbars are 20px wide, and horizontal scrollbars are 20px tall. Scrollbar buttons are 20px square, and the corners of the buttons and scrollbar thumb are rounded.
+*
+* The following demo presents a content container with a vertical scrollbar.
 * @iframe ux/demos/navigation/scrollbars.html 200
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 ::-webkit-scrollbar {
@@ -334,14 +349,24 @@ html.can-touch .btn-tab-mover:active {
 * __Previous Page__ and __Next Page__ buttons use the primary filled button style. They have the `chevron-up` and `chevron-down` icons, respectively.
 *
 * __Page Number__ buttons use the secondary filled button style, with an added selected state to indicate which page is currently being displayed. When selected, the button background color is light blue `#c4e0f8`, and the border is transparent.
+*
+* The following demo presents a content container with associated pagination buttons. 
 * @iframe ux/demos/navigation/pagination.html 670
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * ### Locking of Paginated Content
 * In SBTs, it is sometimes desirable to hide one or more pages of stimulus content until the test taker takes a particular action. In such cases, the hidden pages are initially locked (i.e., inaccessible).
 *
 * To indicate to test takers that some content is not yet available, the __Page Number__ button(s) for the locked page(s) are replaced with a `lock` icon. When the test taker takes the action needed to unlock the page(s), the `lock` icon is removed, and the page(s) become accessible.
+*
+* The following demo presents a content container with associated pagination buttons featuring a lock icon.
 * @iframe ux/demos/navigation/pagination-locked.html 730
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /* PAGE BUTTON LAYOUT

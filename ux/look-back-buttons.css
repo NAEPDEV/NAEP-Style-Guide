@@ -12,8 +12,11 @@
 *
 * Look-back buttons are presented as secondary filled buttons (see the [buttons.css] page for more information) with custom sizing so they do not disrupt the line spacing of the surrounding text.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/look-back-buttons/look-back-buttons-full.html" target="_blank">here</a>._
+* The following demo presents a look-back button for the word "tiresome."
 * @iframe ux/demos/look-back-buttons/look-back-buttons.html 450
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/look-back-buttons/look-back-buttons-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .btn.btn-lbb {
@@ -28,11 +31,26 @@
 }
 
 @keyframes highlight {
-  0% { background: none; background: rgba(125,189,255,0); }
-  5% { background: #7DBDFF; background: rgba(125,189,255,1); }
-  20% { background: #BCDCFD; background: rgba(125,189,255,0.5); }
-  35% { background: #7DBDFF; background: rgba(125,189,255,1); }
-  100% { background: #BCDCFD; background: rgba(125,189,255,0.5); }
+  0% {
+    background: none;
+    background: rgba(125, 189, 255, 0);
+  }
+  5% {
+    background: #7dbdff;
+    background: rgba(125, 189, 255, 1);
+  }
+  20% {
+    background: #bcdcfd;
+    background: rgba(125, 189, 255, 0.5);
+  }
+  35% {
+    background: #7dbdff;
+    background: rgba(125, 189, 255, 1);
+  }
+  100% {
+    background: #bcdcfd;
+    background: rgba(125, 189, 255, 0.5);
+  }
 }
 
 .context-nohighlight .context.context-highlight.context-active {

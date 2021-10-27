@@ -9,6 +9,8 @@
 /**
 * @styles 0-splash-char-based Character-based Screens
 * Character-based intro and exit screens are used in SBTs that provide task characters to guide test takers through the scenario. Styling for character-based screens can be found on the [characters-dialogue.css] page.
+*
+*_The following demo presents a character-based screen._
 @iframe ux/demos/intro-exit-screens/character-screen.html 437
 **/
 
@@ -20,6 +22,9 @@
 * * White `#FFFFFF` (or other light color) fill
 * * Rounded corners
 * * Drop shadow
+*
+*_The following demo presents a content-based screen._
+@iframe ux/demos/intro-exit-screens/content-screen.html 480
 **/
 
 /**
@@ -52,26 +57,34 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: -1; }
+  z-index: -1;
+}
 .splashscreen-allometric {
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+}
 .splashscreen-isometric {
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: contain;
+}
 .splashscreen-isometric.align-bottom {
-  background-position: bottom; }
+  background-position: bottom;
+}
 .splashscreen-tile {
-  background-repeat: repeat; }
+  background-repeat: repeat;
+}
 .splashscreen-tile.repeat-x {
-  background-size: auto 100%; }
+  background-size: auto 100%;
+}
 .splashscreen-tile.repeat-y {
-  background-size: 100% auto; }
+  background-size: 100% auto;
+}
 
 .splashscreen-card {
   background: #fff;
   border: 0.075em solid transparent;
   border-radius: 0.25em;
-  box-shadow: 0 0.67em 0.8em 0 rgba(0, 0, 0, 0.24), 0 1em 2.8em 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 0.67em 0.8em 0 rgba(0, 0, 0, 0.24),
+    0 1em 2.8em 0 rgba(0, 0, 0, 0.19);
   margin: auto;
   max-width: 65ch;
   min-width: 40ch;
@@ -82,4 +95,5 @@
 
 .splashscreen-card .stimulus-paragraph:last-of-type,
 .splashscreen-card .stem-paragraph:last-of-type {
-  padding: 0; }
+  padding: 0;
+}

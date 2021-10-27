@@ -31,13 +31,16 @@
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0 0 0.56em 1em; }
+  margin: 0 0 0.56em 1em;
+}
 .mc-col-two {
   display: flex;
   flex-direction: row;
-  margin: 0 0 0.287em 1em; }
+  margin: 0 0 0.287em 1em;
+}
 .mc[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .mc-option {
   border: 0.083em solid #ccc;
@@ -47,21 +50,28 @@
   margin: 0 0 0.56em 0;
   min-height: 2.5em;
   overflow: hidden;
-  transition: background 0.2s, border-color 0.2s, color 0.2s; }
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
 .mc-col-two .mc-option {
   flex: 1 0 calc(50% - 0.833em);
-  margin: 0 0.833em 0.833em 0; }
+  margin: 0 0.833em 0.833em 0;
+}
 .mc-option:hover {
-  border-color: #7fbfff; }
+  border-color: #7fbfff;
+}
 html.can-touch .mc-option:hover {
-  border-color: #ccc; }
+  border-color: #ccc;
+}
 .mc-option.mc-selected,
 html.can-touch .mc-option.mc-selected {
-  border-color: #198CFF; }
+  border-color: #198cff;
+}
 .mc-option.mc-eliminated {
-  color: #b2b2b2; }
+  color: #b2b2b2;
+}
 .mc-option.mc-eliminated:hover {
-  border-color: #ccc; }
+  border-color: #ccc;
+}
 
 .mc-control-wrapper,
 .mc-content-wrapper,
@@ -74,13 +84,16 @@ html.can-touch .mc-option.mc-selected {
   background: #d6ebff;
   padding: 0 0.625em;
   transition: background 0.2s;
-  user-select: none; }
+  user-select: none;
+}
 .mc-option.mc-eliminated .mc-control-wrapper {
-  background: #F3F9FF; }
+  background: #f3f9ff;
+}
 .mc[disabled] .mc-control-wrapper {
-  background: #F3F9FF;
+  background: #f3f9ff;
   color: #b2b2b2;
-  color: rgba(0, 0, 0, 0.3); }
+  color: rgba(0, 0, 0, 0.3);
+}
 
 .mc-content-wrapper {
   padding: 0.417em 0.625em;
@@ -97,14 +110,17 @@ html.can-touch .mc-option.mc-selected {
   display: inline-block;
   font-weight: bold;
   text-align: center;
-  width: 0.75em; }
+  width: 0.75em;
+}
 .mc-alpha .mc-control-wrapper::before {
-  content: counter(mc, upper-alpha); }
+  content: counter(mc, upper-alpha);
+}
 .mc-decimal .mc-control-wrapper::before {
-  content: counter(mc); }
+  content: counter(mc);
+}
 
 .mc-control-wrapper .control {
-  margin: 0 .083em 0 .208em;
+  margin: 0 0.083em 0 0.208em;
   pointer-events: none;
 }
 
@@ -116,9 +132,11 @@ html.can-touch .mc-option.mc-selected {
 .mc-content img {
   display: block;
   max-width: 100%;
-  transition: opacity 0.2s; }
+  transition: opacity 0.2s;
+}
 .mc-eliminated .mc-content img {
-  opacity: 0.2; }
+  opacity: 0.2;
+}
 
 .mc-eliminate-choice {
   align-items: center;
@@ -137,23 +155,29 @@ html.can-touch .mc-option.mc-selected {
   position: relative;
   transition: background 0.2s, border 0.2s, color 0.2s;
   width: 1.083em;
-  z-index: 4; }
+  z-index: 4;
+}
 .mc-eliminate-choice:hover {
   border-color: #444;
-  color: #444; }
+  color: #444;
+}
 html.can-touch .mc-eliminate-choice:hover {
   border-color: #949494;
-  color: #767676; }
+  color: #767676;
+}
 .mc-eliminate-choice[disabled] {
   border-color: #e0e0e0;
-  color: #d7d7d7; }
+  color: #d7d7d7;
+}
 
 .mc-eliminate-choice:after {
-  content: '\ea0b';
+  content: "\ea0b";
   font-family: "icons";
-  font-size: 0.5em; }
+  font-size: 0.5em;
+}
 .mc-eliminated .mc-eliminate-choice:after {
-  content: '\ea0a'; }
+  content: "\ea0a";
+}
 
 .response-area-mc .btn {
   margin-left: 1rem;
@@ -173,10 +197,16 @@ html.can-touch .mc-eliminate-choice:hover {
 * @styles 2-single-select-mc Single-select Variant
 * In a single-select multiple-choice response, the test taker is only able to select one option. Selecting another option will deselect the previously selected option.
 * @iframe ux/demos/response-type-mc/response-type-mc-ss.html 1100
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
 * @styles 3-multiple-select-mc Multiple-select Variant
 * In a multiple-select multiple-choice response, test takers may select as many or as few options as desired.
 * @iframe ux/demos/response-type-mc/response-type-mc-ms.html 475
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/

@@ -4,7 +4,12 @@
 * Directional pads allow test takers to move another user interface element in two-dimensional space.
 *
 * Directional pads consist of up, down, left, and right buttons with white `#FFFFFF` chevrons pointing in the appropriate directions. Directional pad buttons have the same style as small primary filled buttons (see the [buttons.css] page). They are typically presented in a control group (see the [control-groups.css] page).
+*
+* The following demo presents a directional pad with interactive default, hover, active, and disabled states.
 * @iframe ux/demos/directional-pads/directional-pads.html 300
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .dpad {

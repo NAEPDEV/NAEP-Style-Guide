@@ -4,7 +4,12 @@
 * Control groups are used to visually group sets of related user interface elements.
 *
 * A control group is bounded by a gray `#CCCCCC` border with rounded corners. A label indicating the nature of the elements contained in the group appears centered immediately below the top border.
+*
+* The following demo presents four interactive examples of control groups. 
 * @iframe ux/demos/control-groups/control-groups.html 800
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .control-group-wrapper {
@@ -14,7 +19,7 @@
 
 .control-group {
   border: 0.083em solid #ccc;
-  border-radius: 0.280em;
+  border-radius: 0.28em;
   display: inline-block;
   margin-bottom: 1em;
   padding: 0.375em 0.667em;
@@ -28,9 +33,11 @@
 
 .control-group > .btn {
   display: block;
-  margin: 0.667em 0.333em 1em 0.333em; }
+  margin: 0.667em 0.333em 1em 0.333em;
+}
 .control-group > .btn:last-of-type {
-  margin-bottom: 0.625em; }
+  margin-bottom: 0.625em;
+}
 
 .control-group .control {
   align-items: center;

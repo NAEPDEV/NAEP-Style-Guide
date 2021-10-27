@@ -2,7 +2,12 @@
 * @stylesheet checkboxes-and-radios.css Checkboxes & Radios
 * @parent ux.ui-elements
 * Checkboxes and radios are used to indicate selections (e.g., in the [response-type-mc.css] response type).
+*
+* The following demo presents interactive examples of a checkbox group and a radio group.
 * @iframe ux/demos/checkboxes-and-radios/checkboxes-and-radios.html 430
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -27,7 +32,6 @@
 * * _Disabled_. Radio becomes 30% opaque.
 **/
 
-
 .control {
   display: inline-block;
   vertical-align: middle;
@@ -44,7 +48,7 @@
   border-radius: 50%;
   cursor: pointer;
   display: block;
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 1rem;
   font-style: normal;
   font-variant: normal;
@@ -53,30 +57,41 @@
   speak: none;
   text-transform: none;
   transition: background 0.2s;
-  z-index: 4; }
+  z-index: 4;
+}
 .control input[type="checkbox"] + span {
-  border-radius: 0.25em; }
+  border-radius: 0.25em;
+}
 .control input[type="checkbox"]:checked + span {
-  background: #fff; }
+  background: #fff;
+}
 .control input[disabled] + span {
   color: #b2b2b2;
-  color: rgba(0,0,0,.3);
-  pointer-events: none; }
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
 html.sbt .control input + span {
-  font-size: 1.091rem; }
+  font-size: 1.091rem;
+}
 
 .control input[type="checkbox"] + span::before {
-  content: '\e902'; }
+  content: "\e902";
+}
 .control input[type="checkbox"]:checked + span::before {
-  content: '\e903'; }
+  content: "\e903";
+}
 
 .control input[type="radio"] + span::before {
-  content: '\e900'; }
+  content: "\e900";
+}
 .control input[type="radio"]:checked + span::before {
-  content: '\e901'; }
+  content: "\e901";
+}
 
 .control input + span + span {
   cursor: pointer;
-  margin-left: 0.667em; }
+  margin-left: 0.667em;
+}
 .control input[disabled] + span + span {
-  pointer-events: none; }
+  pointer-events: none;
+}

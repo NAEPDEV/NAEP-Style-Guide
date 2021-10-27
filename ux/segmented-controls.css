@@ -22,18 +22,25 @@ Segmented controls are used to switch between several mutually exclusive modes o
 /**
 * @styles 1-sc-vertical Vertical Variant
 When an option in a vertically aligned segmented control contains just a label, the label is center-justified. When an option contains a label and an icon, the option content is left-justified.
+*
+* The following demo presents the vertical variant both center-justified with just a label and left-justified with an icon and a label.
 * @iframe ux/demos/segmented-controls/segmented-control-vertical.html 510
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 .segmented-control {
   border: none;
-  color: #0855B2;
+  color: #0855b2;
   display: inline-block;
   margin: 0 0 1em;
   max-width: 9em;
-  padding: 0; }
+  padding: 0;
+}
 .sc-horizontal {
   display: flex;
-  max-width: initial; }
+  max-width: initial;
+}
 
 .segmented-control input[type="radio"] {
   opacity: 0;
@@ -51,43 +58,58 @@ When an option in a vertically aligned segmented control contains just a label, 
   padding: 0.292em 0.583em;
   position: relative;
   text-align: left;
-  transition: background 0.2s, border 0.2s; }
+  transition: background 0.2s, border 0.2s;
+}
 .segmented-control label:first-of-type {
-  border-radius: 0.333em 0.333em 0 0; }
+  border-radius: 0.333em 0.333em 0 0;
+}
 .segmented-control label:last-of-type {
   border-bottom: 0.083em solid #949494;
   border-radius: 0 0 0.333em 0.333em;
-  min-height: 2.083em; }
+  min-height: 2.083em;
+}
 .segmented-control label:hover {
-  background: #d6ebff; }
+  background: #d6ebff;
+}
 html.can-touch .segmented-control label:hover {
-  background: none; }
+  background: none;
+}
 html.can-touch .segmented-control label:active {
-  background: #d6ebff; }
+  background: #d6ebff;
+}
 .segmented-control input[type="radio"]:checked + label {
-  background: #0855B2;
+  background: #0855b2;
   border-color: transparent;
   color: #fff;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .segmented-control input[type="radio"]:checked + label + input + label {
-  border-top-color: #0855B2; }
+  border-top-color: #0855b2;
+}
 .segmented-control input[type="radio"][disabled] + label {
   background: #e5e5e5;
   border-color: transparent;
   color: #909090;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .segmented-control input[type="radio"]:checked[disabled] + label {
   background: #909090;
   border-color: transparent;
-  color: #e5e5e5; }
-.segmented-control input[type="radio"]:checked[disabled] + label + input + label {
-  border-top-color: #909090; }
+  color: #e5e5e5;
+}
+.segmented-control
+  input[type="radio"]:checked[disabled]
+  + label
+  + input
+  + label {
+  border-top-color: #909090;
+}
 
 /* This pseudo-element covers the top border of the option beneath the selected option */
 .segmented-control input[type="radio"] + label::after {
   border-left: 0.083em solid transparent;
   border-right: 0.083em solid transparent;
-  content: '';
+  content: "";
   display: block;
   height: 0.083em;
   left: -0.083em;
@@ -95,55 +117,74 @@ html.can-touch .segmented-control label:active {
   right: -0.083em;
   top: 100%;
   transition: background 0.2s, border 0.2s;
-  z-index: 1; }
-.segmented-control input[type="radio"]:checked:not(:last-of-type) + label::after {
-  background: #0855B2; }
-.segmented-control input[type="radio"]:checked:not(:last-of-type)[disabled] + label::after {
-  background: #909090; }
+  z-index: 1;
+}
+.segmented-control
+  input[type="radio"]:checked:not(:last-of-type)
+  + label::after {
+  background: #0855b2;
+}
+.segmented-control
+  input[type="radio"]:checked:not(:last-of-type)[disabled]
+  + label::after {
+  background: #909090;
+}
 
 .segmented-control input[type="radio"]:focus + label::before {
   border: 1px dotted;
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   bottom: 2px;
   top: 2px;
   left: 2px;
-  right: 2px; }
+  right: 2px;
+}
 .segmented-control input[type="radio"]:first-of-type:focus + label::before {
-  border-radius: 0.25em 0.25em 0 0; }
+  border-radius: 0.25em 0.25em 0 0;
+}
 .segmented-control input[type="radio"]:last-of-type:focus + label::before {
-  border-radius: 0 0 0.25em 0.25em; }
+  border-radius: 0 0 0.25em 0.25em;
+}
 
 .segmented-control label span:only-child {
   text-align: center;
   width: 100%;
 }
 
-
 /**
 * @styles 2-sc-horizontal Horizontal Variant
 * Option content in horizontally aligned segmented controls is always center-justified.
+*
+* The following demo presents the horizontal variant center-justified for both the label-only and icon-and-label use cases
 * @iframe ux/demos/segmented-controls/segmented-control-horizontal.html 190
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .sc-horizontal label {
   justify-content: center;
   border-bottom: 0.083em solid #949494;
   border-right: none;
-  width: 100%; }
+  width: 100%;
+}
 .sc-horizontal label:first-of-type {
-  border-radius: 0.333em 0 0 0.333em; }
+  border-radius: 0.333em 0 0 0.333em;
+}
 .sc-horizontal label:last-of-type {
   border-radius: 0 0.333em 0.333em 0;
   border-right: 0.083em solid #949494;
-  min-height: 2em; }
+  min-height: 2em;
+}
 .sc-horizontal input[type="radio"]:checked + label + input + label {
-  border-left-color: #0855B2;
-  border-top-color: #949494; }
+  border-left-color: #0855b2;
+  border-top-color: #949494;
+}
 .sc-horizontal input[type="radio"]:checked[disabled] + label + input + label {
   border-left-color: #949494;
-  border-top-color: transparent; }
+  border-top-color: transparent;
+}
 
 .sc-horizontal input[type="radio"] + label::after {
   border: none;
@@ -154,13 +195,15 @@ html.can-touch .segmented-control label:active {
   left: 100%;
   right: -0.083em;
   top: -0.083em;
-  width: 0.083em; }
+  width: 0.083em;
+}
 
 .sc-horizontal input[type="radio"]:first-of-type:focus + label::before {
-  border-radius: 0.25em 0 0 0.25em; }
+  border-radius: 0.25em 0 0 0.25em;
+}
 .sc-horizontal input[type="radio"]:last-of-type:focus + label::before {
-  border-radius: 0 0.25em 0.25em 0; }
-
+  border-radius: 0 0.25em 0.25em 0;
+}
 
 /*------------------------------------------
 ICONS
@@ -169,13 +212,16 @@ ICONS
   flex: 0 0 auto;
   height: 1.167em;
   margin: 0 0.5em 0 -0.083em;
-  width: 1.167em; }
+  width: 1.167em;
+}
 .sc-horizontal .sc-icon {
   margin-right: 0.25em;
 }
 
 .sc-icon-stroke {
   fill: #fff;
-  transition: fill 0.2s; }
+  transition: fill 0.2s;
+}
 input[type="radio"][disabled] + label .sc-icon-stroke {
-  fill: #e5e5e5; }
+  fill: #e5e5e5;
+}

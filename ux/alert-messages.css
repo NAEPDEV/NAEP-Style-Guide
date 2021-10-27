@@ -5,7 +5,12 @@
 * * _An icon._ The icon is presented to the left of the alert text on a square background with rounded corners. The background color aligns with the nature of the alert (e.g., informational alerts are blue). (See the [colors.md] page for more information about NAEP’s color palette.)
 * * _The alert text._ If the alert contains more than one sentence, the first sentence contains the most essential information and is bolded.
 * * _A border._ The border may be omitted in contexts where it is not needed to differentiate the alert from surrounding content.
+*
+* The following example presents alert messages with and without a border, respectively.
 * @iframe ux/demos/alert-messages/alert-messages.html 350
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .alert {
@@ -14,9 +19,11 @@
   border-radius: 0.2em;
   display: inline-flex;
   margin: 0 0 1.5em 0.25em;
-  padding: 0.5em 1.5em 0.5em 0.5em; }
+  padding: 0.5em 1.5em 0.5em 0.5em;
+}
 .alert.alert-no-border {
-  border-color: transparent; }
+  border-color: transparent;
+}
 
 .alert:before {
   align-items: center;
@@ -24,22 +31,26 @@
   background: #2978c6;
   border-radius: 0.1em;
   color: #fff;
-  content: '\e907';
+  content: "\e907";
   display: flex;
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 2em;
   margin-right: 0.5em;
-  padding: 0.25em 0.3em; }
+  padding: 0.25em 0.3em;
+}
 .alert.alert-raise-hand:before {
-  content: '\e946'; }
+  content: "\e946";
+}
 .alert.alert-warning:before {
-  background: #EDC87E;
+  background: #edc87e;
   color: #444;
-  content: '\e93d'; }
+  content: "\e93d";
+}
 .alert.alert-timer:before {
   background: #adcceb;
   color: #444;
-  content: '\e93b'; }
+  content: "\e93b";
+}
 
 .alert p {
   border: 0.1em solid transparent;

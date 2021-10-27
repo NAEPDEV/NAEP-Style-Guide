@@ -10,17 +10,24 @@
 * * _Current_. Shown for the step of the current screen. The bottom border is blue `#2978C6`, and the label is black `#000000`.
 * * _Visited_. Shown for steps whose screens are before the current screen in the sequence. The bottom border is light blue `#8CB3DB`, and the label is gray `#909090`.
 *
-* When non-linear navigation (i.e., moving through steps in any order) is allowed, selecting a step will navigate the test taker to the associated screen. In this case, the steps receive the `pointer` cursor. The demo below allows non-linear navigation.
+* When non-linear navigation (i.e., moving through steps in any order) is allowed, selecting a step will navigate the test taker to the associated screen. In this case, the steps receive the `pointer` cursor.
+*
+* The following demo presents ordered steps that allow for non-linear navigation.
 * @iframe ux/demos/step-indicator/step-indicator.html 250
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .step-indicator {
   display: flex;
   margin: 0 auto 2em auto;
   max-width: 33.6em;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .step-indicator.active {
-  pointer-events: auto; }
+  pointer-events: auto;
+}
 
 .step-indicator input {
   opacity: 0;
@@ -42,18 +49,23 @@
   position: relative;
   transition: border 0.2s;
   user-select: none;
-  z-index: 4; }
+  z-index: 4;
+}
 .step-indicator label:last-of-type {
-  margin-right: 0; }
+  margin-right: 0;
+}
 .step-indicator input:checked + label {
   border-bottom-color: #2978c6;
-  color: #222; }
+  color: #222;
+}
 .step-indicator input.step-indicator-complete + label {
   border-bottom-color: #8cb3db;
-  color: #909090; }
+  color: #909090;
+}
 .step-indicator input[disabled] + label {
   pointer-events: none;
-  opacity: 0.5; }
+  opacity: 0.5;
+}
 
 .step-indicator label::before {
   background: #fff;
@@ -61,16 +73,19 @@
   border-radius: 50%;
   bottom: -0.4445em;
   box-sizing: border-box;
-  content: '';
+  content: "";
   display: block;
   height: 0.778em;
   left: calc(50% - 0.389em);
   position: absolute;
   transition: background 0.2s, border 0.2s;
-  width: 0.778em; }
+  width: 0.778em;
+}
 .step-indicator input:checked + label::before {
   background: #2978c6;
-  border-color: #2978c6; }
+  border-color: #2978c6;
+}
 .step-indicator input.step-indicator-complete + label::before {
   background: #8cb3db;
-  border-color: #8cb3db; }
+  border-color: #8cb3db;
+}

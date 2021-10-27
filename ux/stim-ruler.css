@@ -3,7 +3,11 @@
 * @parent ux.stimuli
 * The ruler stimulus allows test takers to move and rotate an on-screen ruler to measure a virtual object.
 *
+* The following demo presents the on screen ruler with its associated rotate-left, move, and rotate-right icons.
 * @iframe ux/demos/stim-ruler/stim-ruler.html 480
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * A gray `#949494` border indicates the area in which the ruler can be dragged.
@@ -45,14 +49,16 @@
 }
 
 .ruler-draggable {
-  background: #D3D3D3 url('../stim-ruler/ruler.svg') no-repeat;
+  background: #d3d3d3 url("../stim-ruler/ruler.svg") no-repeat;
   cursor: move;
   height: 2.5em;
   left: calc(50% - 11.625em);
   position: relative;
-  width: 23.25em; }
+  width: 23.25em;
+}
 .ruler-draggable[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 /**
 * @styles 1-ruler-handles Ruler Handles
@@ -67,7 +73,8 @@
 .ruler-wrapper .ui-rotatable-handle {
   cursor: move;
   margin: 0;
-  position: absolute; }
+  position: absolute;
+}
 
 .ruler-drag-handle {
   left: 50%;

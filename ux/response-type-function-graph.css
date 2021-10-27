@@ -1,10 +1,13 @@
 /**
 * @stylesheet response-type-function-graph.css Function Graph
 * @parent ux.response-types
-* The Function Graph response type allows test takers to respond to an item by first selecting a function type and then manipulating the graph of the function so that it represents a given context.
+* The function graph response type allows test takers to respond to an item by first selecting a function type and then manipulating the graph of the function so that it represents a given context.
 *
-* _The demo provides a visual representation of what students will see and experience on assessment day. Other functionality is not present._
+* The following demo presents the function graph response type. The demo has limited functionality for the purpose of showing its themes and styling.
 * @iframe ux/demos/response-type-function-graph/response-type-function-graph.html 700
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**

@@ -25,18 +25,23 @@
 * * _Hover_. Visible when the cursor is over the option row. The border for the entire row becomes blue `#7FBFFF`. The `pointer` cursor is shown over the entirety of each option cell because test takers can click or tap anywhere in a cell to select its option.
 * * _Selected_. The border for the entire row becomes bright blue `#198CFF` to indicate that (at least) one selection per row is required, and the selection state of the radio button/checkbox is toggled.
 * * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option cell background and selection indicator are dimmed.
+*
+* The following demos present a single-select grid item variant and a multiple-select grid item variant.
 **/
 
 table.grid {
   border-collapse: collapse;
   margin: 0 1em 1.11em 1em;
-  table-layout: auto; }
+  table-layout: auto;
+}
 table.grid[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 table.grid tbody tr:nth-child(odd) {
   background: #f5faff;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 
 table.grid td,
 table.grid th {
@@ -45,28 +50,34 @@ table.grid th {
   outline-offset: -0.042em;
   padding: 0.4em 0.6em;
   text-align: center;
-  transition: background 0.2s, border 0.2s, color 0.2s, outline 0.2s; }
+  transition: background 0.2s, border 0.2s, color 0.2s, outline 0.2s;
+}
 table.grid tbody tr:hover th,
 table.grid tbody tr:hover td {
   outline-color: #7fbfff;
-  border-color: #7fbfff; }
+  border-color: #7fbfff;
+}
 html.can-touch table.grid tbody tr:hover th,
 html.can-touch table.grid tbody tr:hover td {
   border-color: #ccc;
-  outline-color: transparent; }
+  outline-color: transparent;
+}
 table.grid tbody tr.grid-row-selected th,
 table.grid tbody tr.grid-row-selected td,
 html.can-touch table.grid tbody tr.grid-row-selected th,
 html.can-touch table.grid tbody tr.grid-row-selected td {
-  outline-color: #198CFF;
-  border-color: #198CFF; }
+  outline-color: #198cff;
+  border-color: #198cff;
+}
 
 table.grid thead th {
   font-weight: bold;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+}
 table.grid tbody th {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+}
 
 table.grid td {
   background: #fff;
@@ -75,15 +86,19 @@ table.grid td {
   line-height: 1;
   position: relative;
   width: 6.25em;
-  z-index: 4; }
+  z-index: 4;
+}
 table.grid tbody tr:nth-child(odd) td {
-  background-color: #d6ebff; }
+  background-color: #d6ebff;
+}
 table.grid[disabled] tbody td {
   color: #b2b2b2;
-  color: rgba(0, 0, 0, 0.3); }
+  color: rgba(0, 0, 0, 0.3);
+}
 table.grid[disabled] tbody tr:nth-child(odd) td {
-  background: #F3F9FF;
-  background: rgba(214, 235, 255, 0.3); }
+  background: #f3f9ff;
+  background: rgba(214, 235, 255, 0.3);
+}
 
 table.grid .grid-content {
   border: 0.1em solid transparent;
@@ -102,9 +117,15 @@ table.grid .control {
 /**
 * @styles 1-single-select-grid Single-select Variant
 * @iframe ux/demos/response-type-grid/response-type-grid-ss.html 500
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
 * @styles 2-multiple-select-grid Multiple-select Variant
 * @iframe ux/demos/response-type-grid/response-type-grid-ms.html 500
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/

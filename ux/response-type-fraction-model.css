@@ -3,8 +3,11 @@
 * @parent ux.response-types
 *The fraction model response type allows students to respond to an item by identifying the number of selected and unselected parts needed to represent a fraction.
 *
-* _Undo functionality is not present in the demo._
+* The following demo presents the fraction model response type as a rectangular set of wedges. The __Undo__ button does not function as it will during an assessment.
 * @iframe ux/demos/response-type-fraction-model/fm-grid.html 640
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -13,8 +16,11 @@
 *
 * Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray `#1A1A1A`. The circular variant is shown below.
 *
-* _Undo functionality is not present in the demo._
+* The following demo presents the fraction model response type as a circular set of wedges. The __Undo__ button does not function as it will during an assessment.
 * @iframe ux/demos/response-type-fraction-model/fm-circular.html 580
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * Each unit in the model has the following states.
@@ -28,29 +34,29 @@
 **/
 
 .fm-title {
-	font-size: 1em;
-	font-weight: bold;
-	margin: 0 auto 0.5em;
-	text-align: center;
-	text-transform: uppercase;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 auto 0.5em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .fm-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
-	grid-auto-columns: 1fr;
-	grid-auto-rows: 1fr;
-	height: 12em;
-	margin: 0 auto 1.5em;
-	position: relative;
-	width: 12em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  height: 12em;
+  margin: 0 auto 1.5em;
+  position: relative;
+  width: 12em;
 }
 
 .fm-grid::after {
   border: 0.083em solid #1a1a1a;
   bottom: -0.042em;
-  content: '';
+  content: "";
   display: block;
   left: -0.042em;
   pointer-events: none;
@@ -60,121 +66,141 @@
 }
 
 .fm-circle {
-	border-radius: 50%;
-	box-shadow: 0 0 0 2px #1a1a1a;
-	height: 12em;
-	margin: 0 auto 1.5em;
-	overflow: hidden;
-	position: relative;
-	width: 12em;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #1a1a1a;
+  height: 12em;
+  margin: 0 auto 1.5em;
+  overflow: hidden;
+  position: relative;
+  width: 12em;
 }
 
 .fm-wedge-container {
-	height: 100%;
-	left: calc(50% + 1px);
-	top: 0px;
-	overflow: hidden;
-	pointer-events: none;
-	position: absolute;
-	width: calc(50% + 3px);
+  height: 100%;
+  left: calc(50% + 1px);
+  top: 0px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: calc(50% + 3px);
 }
 
 .fm-model input {
-	opacity: 0;
-	position: absolute;
-	z-index: -1;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .fm-grid label {
-	border: 0.042em solid #757575;
-	cursor: pointer;
+  border: 0.042em solid #757575;
+  cursor: pointer;
 }
 
 .fm-circle label {
-	background: #fff;
-	border: 0.083em solid #757575;
-	box-shadow: none !important;
-	cursor: pointer;
-	height: calc(50% + 0.125em);
-	left: -0.083em;
-	outline: none !important;
-	pointer-events: auto;
-	position: absolute;
-	top: -0.083em;
-	transform-origin: calc(100% - 0.042em) calc(100% - 0.042em);
-	width: calc(50% + 0.125em);
- 	z-index: 0 !important; }
+  background: #fff;
+  border: 0.083em solid #757575;
+  box-shadow: none !important;
+  cursor: pointer;
+  height: calc(50% + 0.125em);
+  left: -0.083em;
+  outline: none !important;
+  pointer-events: auto;
+  position: absolute;
+  top: -0.083em;
+  transform-origin: calc(100% - 0.042em) calc(100% - 0.042em);
+  width: calc(50% + 0.125em);
+  z-index: 0 !important;
+}
 .fm-wedge-container label {
-	left: -100%;
-	width: 100%; }
+  left: -100%;
+  width: 100%;
+}
 .fm-circle .fm-wedge-1 {
-	height: calc(100% + 0.167em);
-	width: calc(100% + 0.167em); }
+  height: calc(100% + 0.167em);
+  width: calc(100% + 0.167em);
+}
 .fm-circle .fm-wedge-2 {
-	height: calc(100% + 0.167em);
-	transform: none !important; }
+  height: calc(100% + 0.167em);
+  transform: none !important;
+}
 .fm-circle .fm-wedge-2:nth-of-type(2) {
-	transform: translateX(calc(100% - 0.083em)) !important; }
+  transform: translateX(calc(100% - 0.083em)) !important;
+}
 
 .fm-circle .fm-wedge-3::before {
-	background: #fff;
-	content: '';
-	display: block;
-	height: 100%;
-	position: absolute;
-	transform: rotate(-30deg);
-	transform-origin: calc(100% + .042em) calc(100% + .042em);
-	width: 100%; }
+  background: #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transform: rotate(-30deg);
+  transform-origin: calc(100% + 0.042em) calc(100% + 0.042em);
+  width: 100%;
+}
 .fm-circle .fm-wedge-3:hover::before,
 .fm-model input.focus-tabbed:focus + .fm-wedge-3::before {
-	background: #C4DCF2; }
+  background: #c4dcf2;
+}
 .fm-model label.fm-initial-state:hover::before,
 .fm-model input.focus-tabbed:focus + .fm-wedge-3.fm-initial-state::before,
 html.can-touch .fm-model .fm-wedge-3:hover::before {
-	background: #fff; }
+  background: #fff;
+}
 .fm-model input:checked + .fm-wedge-3::before,
-.fm-model input.focus-tabbed:checked:focus + .fm-wedge-3.fm-initial-state::before,
+.fm-model
+  input.focus-tabbed:checked:focus
+  + .fm-wedge-3.fm-initial-state::before,
 .fm-model input:checked + .fm-wedge-3.fm-initial-state:hover::before,
 html.can-touch .fm-model input:checked + .fm-wedge-3::before {
-	background: #0A97FF; }
+  background: #0a97ff;
+}
 .fm-model input:checked + .fm-wedge-3:hover::before,
-.fm-model input.focus-tabbed:checked:focus + .fm-wedge-3::before  {
-	background: #A4C9EB; }
+.fm-model input.focus-tabbed:checked:focus + .fm-wedge-3::before {
+  background: #a4c9eb;
+}
 .fm-model input[disabled]:checked + .fm-wedge-3::before {
-	background: #949494; }
+  background: #949494;
+}
 
 .fm-model label:hover,
 .fm-model input.focus-tabbed:focus + label {
-	background: #C4DCF2; }
+  background: #c4dcf2;
+}
 .fm-model label.fm-initial-state:hover,
 .fm-model input.focus-tabbed:focus + label.fm-initial-state,
 html.can-touch .fm-model label:hover {
-	background: #fff; }
+  background: #fff;
+}
 .fm-model input:focus + label {
-	outline: 1px dotted;
-	outline-offset: -5px; }
+  outline: 1px dotted;
+  outline-offset: -5px;
+}
 .fm-model input:checked + label,
 .fm-model input.focus-tabbed:checked:focus + label.fm-initial-state,
 .fm-model input:checked + label.fm-initial-state:hover,
 html.can-touch .fm-model input:checked + label {
-	background: #0A97FF;
-	border-color: #002040;
-	box-shadow: 0 0 0 0.042em #002040;
-	color: #fff;
-	z-index: 1; }
+  background: #0a97ff;
+  border-color: #002040;
+  box-shadow: 0 0 0 0.042em #002040;
+  color: #fff;
+  z-index: 1;
+}
 .fm-model input:checked + label:hover,
 .fm-model input.focus-tabbed:checked:focus + label {
-	background: #A4C9EB;
-	border-color: #596C80;
-	box-shadow: 0 0 0 0.042em #596C80;
- 	color: inherit;
- 	z-index: 2; }
+  background: #a4c9eb;
+  border-color: #596c80;
+  box-shadow: 0 0 0 0.042em #596c80;
+  color: inherit;
+  z-index: 2;
+}
 .fm-model input[disabled] + label {
-	border-color: #484848;
- 	box-shadow: none;
- 	pointer-events: none; }
+  border-color: #484848;
+  box-shadow: none;
+  pointer-events: none;
+}
 .fm-model input[disabled]:checked + label {
-	background: #949494; }
+  background: #949494;
+}
 
 /**
 * @styles 1-fm-controls Controls
@@ -187,7 +213,7 @@ html.can-touch .fm-model input:checked + label {
 * * The __Reset__ button restores the fraction model to its initial state.
 **/
 .fm-controls {
-	display: inline-block;
+  display: inline-block;
 }
 
 .response-area-iic.response-area-fm .btn-wrapper {

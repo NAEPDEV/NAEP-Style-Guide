@@ -15,11 +15,13 @@
   right: 0;
   top: 0;
   transition: background 0.2s, opacity 0.3s 0s, visibility 0s 0s;
-   z-index: 1000; }
+  z-index: 1000;
+}
 #mask.hidden {
   opacity: 0;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 #questionsbutton-wrapper {
   background: #e9e9e9;
@@ -45,7 +47,7 @@
 **/
 
 #QuestionsButton {
-  background: #0076D2;
+  background: #0076d2;
   border: 0.1em solid transparent;
   border-radius: 0.17em;
   box-shadow: 0 0.08em 0.22em 0 rgba(0, 0, 0, 0.3);
@@ -66,29 +68,35 @@
   transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s;
   user-select: none;
   width: 6.15em;
-  z-index: 5000; }
+  z-index: 5000;
+}
 #QuestionsButton:hover {
   background: #008efa;
-  box-shadow: 0 0.11em 0.42em 0 rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0.11em 0.42em 0 rgba(0, 0, 0, 0.3);
+}
 html.can-touch #QuestionsButton:hover {
-  background: #0076D2;
-  box-shadow: 0 0.08em 0.22em 0 rgba(0, 0, 0, 0.3); }
+  background: #0076d2;
+  box-shadow: 0 0.08em 0.22em 0 rgba(0, 0, 0, 0.3);
+}
 #QuestionsButton[disabled] {
   background: #ddd;
   color: #888;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 #QuestionsButton::before {
-  content: '\e908';
+  content: "\e908";
   display: inline-block;
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 1.2em;
   margin-right: 0.25em;
-  transition: transform .5s ease;
-  vertical-align: middle; }
+  transition: transform 0.5s ease;
+  vertical-align: middle;
+}
 #QuestionsButton.panel-down::before {
   transform: rotate(180deg);
-  transform-origin: 50% 50%; }
+  transform-origin: 50% 50%;
+}
 
 #QuestionsButton-label {
   display: inline-block;
@@ -112,8 +120,11 @@ html.can-touch #QuestionsButton:hover {
 *
 * A row of item tabs (whose behavior and styling are defined on the [navigation.css] page) is positioned at the top of the item panel.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-full.html" target="_blank">here</a>._
+* The following demo presents a reading passage with an item panel that activates when the Show Questions button is selected.
 * @iframe ux/demos/environment-ereader/ereader.html 640
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 #QuestionsPanel {
@@ -125,24 +136,30 @@ html.can-touch #QuestionsButton:hover {
   right: 1.67em;
   top: 2.92em;
   transform-origin: 82% top;
-  transition: background 0.2s, box-shadow 0.2s, opacity .3s ease, transform .2s ease, width .3s;
+  transition: background 0.2s, box-shadow 0.2s, opacity 0.3s ease,
+    transform 0.2s ease, width 0.3s;
   visibility: visible;
   width: 30.625em;
-  z-index: 5000; }
+  z-index: 5000;
+}
 #QuestionsPanel.large {
   transform-origin: 92% top;
-  width: 50.04em; }
+  width: 50.04em;
+}
 #QuestionsPanel.medium {
   transform-origin: 90% top;
-  width: 44.375em; }
+  width: 44.375em;
+}
 #QuestionsPanel.hidden {
   opacity: 0;
-  transform: scale(0.5,0.5);
-  transition: opacity .3s ease, transform .3s ease, visibility 0s .3s;
-  visibility: hidden; }
+  transform: scale(0.5, 0.5);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+  visibility: hidden;
+}
 
-#QuestionsPanel::before, #QuestionsPanel::after {
-  content: '';
+#QuestionsPanel::before,
+#QuestionsPanel::after {
+  content: "";
   border-color: transparent;
   border-style: solid;
   border-width: 0 0.46em 0.42em;
@@ -181,6 +198,9 @@ html.can-touch #QuestionsButton:hover {
 * @styles 2-ereader-stimulus-tabs Stimulus Tabs
 * When a reading block contains more than one stimulus, stimulus tabs are provided immediately below the [system-toolbar.css], aligned to the left side of the content area. Stimulus tab styling and behavior match those of item tabs, as described on the [navigation.css] page.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-stimtab-full.html" target="_blank">here</a>._
+* The following demo presents a reading passage with associated stimulus tabs.
 * @iframe ux/demos/environment-ereader/ereader-stimtab.html 640
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/environment-ereader/ereader-stimtab-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/

@@ -104,6 +104,8 @@
 * * When the video is played for the first time, it automatically enters full-screen mode unless there is other information on screen that the test taker must attend to while the video is playing. (Asking test takers to attend to a video and another form of information simultaneously is not considered a best practice and should be avoided.)
 * * Multimedia clips must be viewed/listened to in their entirety before the test taker is allowed to progress to the next screen.
 * * Test takers are allowed to use the scrub bar, but only through the section of the clip that has already been viewed/heard.
+*
+* The following demos present the style and functional behavior of the multi-media controls for the video variant, audio variant, and select-in-stimulus variant.
 **/
 
 /**
@@ -120,6 +122,9 @@
 * @styles 5-multimedia-sis Select-in-stimulus Variant
 * To keep the scrub bar adjacent to selections, the scrub bar is placed below the other multimedia controls when used in a [response-type-sis.css] (SIS) item. Extra padding is also provided below the scrub bar to prevent the SIS selection widget from colliding with the scrub bar.
 * @iframe ux/demos/multimedia-controls/sis.html 605
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /*----------------------------------------------------------------------------
@@ -130,20 +135,25 @@ MEDIA LAYOUT
   margin: 0;
   position: relative;
   text-align: center;
-  z-index: 4; }
+  z-index: 4;
+}
 .media-container.full-screen {
   background: #000;
   display: block;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 .media-container[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .media-wrapper {
-  position: relative; }
+  position: relative;
+}
 .media-container.full-screen .media-wrapper {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 .media {
   display: block;
@@ -159,20 +169,24 @@ MEDIA LAYOUT
   justify-content: space-between;
   opacity: 1;
   position: relative;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 .media-controls.hidden {
-  display: none; }
+  display: none;
+}
 .media-container.full-screen .media-controls {
   border-radius: 0.25em;
   bottom: 0.5em;
   left: 0.5em;
   padding: 0.25em;
   position: absolute;
-  width: calc(100% - 1em); }
+  width: calc(100% - 1em);
+}
 .media-container.full-screen.fadeout .media-controls {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease-out }
+  transition: opacity 0.25s ease-out;
+}
 
 .media-left-controls,
 .media-right-controls {
@@ -180,12 +194,12 @@ MEDIA LAYOUT
   color: #535353;
   display: flex;
   padding-bottom: 0.125em;
-  position: relative; }
+  position: relative;
+}
 .media-controls.media-sis-variant .media-left-controls,
 .media-controls.media-sis-variant .media-right-controls {
   padding-top: 0.125em;
 }
-
 
 /*----------------------------------------------------------------------------
 HERO PLAY BUTTON STYLES
@@ -210,13 +224,13 @@ HERO PLAY BUTTON STYLES
 .video-hero-play::before,
 html.can-touch .video-hero-play:hover::before {
   background: #000;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   border: none;
   border-radius: 50%;
   color: #fff;
-  content: '\e915';
+  content: "\e915";
   display: block;
-  font-family: 'icons';
+  font-family: "icons";
   font-size: 3em;
   height: 1em;
   line-height: 0.96;
@@ -224,13 +238,14 @@ html.can-touch .video-hero-play:hover::before {
   opacity: 1;
   pointer-events: none;
   transform: none;
-  transition: background .2s ease-out, transform .2s ease-out, opacity .2s ease-out;
+  transition: background 0.2s ease-out, transform 0.2s ease-out,
+    opacity 0.2s ease-out;
   width: 1em;
 }
 
 .video-hero-play:hover::before {
   background: #000;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   transform: scale(1.2);
 }
 
@@ -242,32 +257,38 @@ SLIDER CONTAINER STYLES
   height: 0.208em;
   position: relative;
   transition: background 0.2s ease-out;
-  z-index: 1; /* Prevents overlap by selection widget */ }
+  z-index: 1; /* Prevents overlap by selection widget */
+}
 .media-container[disabled] .slider-container {
-  background: #ccc; }
+  background: #ccc;
+}
 
 .media-progress-container-outer {
   margin: 0.625em 0.5em 0.416em;
   position: relative;
-  width: 100%; }
+  width: 100%;
+}
 .media-controls.media-sis-variant .media-progress-container-outer {
-  margin: 0.416em 0.5em 1em; }
+  margin: 0.416em 0.5em 1em;
+}
 
 .media-progress-container {
   transition: background 0.2s ease-out, transform 0.2s ease-out;
-  width: 100%; }
+  width: 100%;
+}
 .media-progress-container:hover,
 .media-progress-container.hover,
 html.can-touch .media-progress-container:active {
-  transform: scaleY(1.4); }
+  transform: scaleY(1.4);
+}
 html.can-touch .media-progress-container:hover {
-  transform: none; }
+  transform: none;
+}
 
 .media-volume-container {
   margin: 0 0.75em 0 0.25em;
   width: 3.5em;
 }
-
 
 /*----------------------------------------------------------------------------
 HOVER BAR STYLES
@@ -281,11 +302,12 @@ HOVER BAR STYLES
   position: absolute;
   top: 0;
   transform-origin: 0 0;
-  transition: opacity .2s ease-out;
-  width: 100%; }
+  transition: opacity 0.2s ease-out;
+  width: 100%;
+}
 .media-hover.hidden {
-  opacity: 0; }
-
+  opacity: 0;
+}
 
 /*----------------------------------------------------------------------------
 PROGRESS ELEMENT STYLES
@@ -302,26 +324,30 @@ PROGRESS ELEMENT STYLES
 }
 
 .media-container progress[value]::-webkit-progress-bar {
-  background-color: transparent; }
+  background-color: transparent;
+}
 
 .media-container progress[value]::-moz-progress-bar {
-  background-color: #246BB2;
-  transition: background 0.2s ease-out, transform 0.2s ease-out; }
+  background-color: #246bb2;
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+}
 .media-container progress[value]::-webkit-progress-value {
-  background-color: #246BB2;
-  transition: background 0.2s ease-out, transform 0.2s ease-out; }
+  background-color: #246bb2;
+  transition: background 0.2s ease-out, transform 0.2s ease-out;
+}
 
 .media-container[disabled] progress[value]::-webkit-progress-value {
-  background-color: #aaa; }
+  background-color: #aaa;
+}
 .media-container[disabled] progress[value]::-moz-progress-bar {
-  background-color: #aaa; }
-
+  background-color: #aaa;
+}
 
 /*----------------------------------------------------------------------------
 RANGE INPUT STYLES
 ----------------------------------------------------------------------------*/
 /* Reset the default browser styles */
-.media-container input[type=range] {
+.media-container input[type="range"] {
   -moz-appearance: none;
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   background: transparent;
@@ -337,7 +363,7 @@ RANGE INPUT STYLES
   z-index: 1;
 }
 
-.media-container input[type=range]::-ms-track {
+.media-container input[type="range"]::-ms-track {
   border-color: transparent;
   color: transparent;
   cursor: pointer;
@@ -345,7 +371,7 @@ RANGE INPUT STYLES
 }
 
 /* Style the thumb for each browser */
-.media-container input[type=range]::-webkit-slider-thumb {
+.media-container input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: #246bb2;
   border: none;
@@ -353,108 +379,142 @@ RANGE INPUT STYLES
   height: 0.708em;
   margin-top: 0; /* Need to specify a margin in Chrome, but in Firefox and IE it is automatic */
   transition: background 0.2s ease-out, transform 0.2s ease-out;
-  width: 0.708em; }
-.media-container input[type=range]::-moz-range-thumb {
+  width: 0.708em;
+}
+.media-container input[type="range"]::-moz-range-thumb {
   -moz-appearance: none;
   background: #246bb2;
   border: none;
   border-radius: 50%;
   height: 0.708em;
   transition: background 0.2s ease-out, transform 0.2s ease-out;
-  width: 0.708em; }
-.media-container input[type=range]::-ms-thumb {
+  width: 0.708em;
+}
+.media-container input[type="range"]::-ms-thumb {
   background: #246bb2;
   border: none;
   border-radius: 50%;
   height: 0.708em;
   transition: background 0.2s ease-out, transform 0.2s ease-out;
-  width: 0.708em; }
+  width: 0.708em;
+}
 
-.media-container input[type=range][disabled]::-webkit-slider-thumb {
+.media-container input[type="range"][disabled]::-webkit-slider-thumb {
   background: #aaa;
 }
-.media-container input[type=range][disabled]::-moz-range-thumb {
+.media-container input[type="range"][disabled]::-moz-range-thumb {
   background: #aaa;
 }
-.media-container input[type=range][disabled]::-ms-thumb {
+.media-container input[type="range"][disabled]::-ms-thumb {
   background: #aaa;
 }
 
 /* Style the track in each browser */
-.media-container input[type=range]::-webkit-slider-runnable-track {
+.media-container input[type="range"]::-webkit-slider-runnable-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
-  width: 100%; }
-.media-container input[type=range]::-moz-range-track {
+  width: 100%;
+}
+.media-container input[type="range"]::-moz-range-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
-  width: 100%; }
-.media-container input[type=range]::-ms-track {
+  width: 100%;
+}
+.media-container input[type="range"]::-ms-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
-  width: 100%; }
+  width: 100%;
+}
 
-.media-container input[type=range].hover::-webkit-slider-thumb,
-.media-container input[type=range]:hover::-webkit-slider-thumb {
-  transform: scale(1.4); }
-.media-container input[type=range].hover::-moz-range-thumb,
-.media-container input[type=range]:hover::-moz-range-thumb {
-  transform: scale(1.4); }
-.media-container input[type=range].hover::-ms-thumb,
-.media-container input[type=range]:hover::-ms-thumb {
-  transform: scale(1.4); }
-html.can-touch .media-container input[type=range].hover::-webkit-slider-thumb,
-html.can-touch .media-container input[type=range]:hover::-webkit-slider-thumb {
-  transform: none; }
-html.can-touch .media-container input[type=range].hover::-moz-range-thumb,
-html.can-touch .media-container input[type=range]:hover::-moz-range-thumb {
-  transform: none; }
-html.can-touch .media-container input[type=range].hover::-ms-thumb,
-html.can-touch .media-container input[type=range]:hover::-ms-thumb {
-  transform: none; }
+.media-container input[type="range"].hover::-webkit-slider-thumb,
+.media-container input[type="range"]:hover::-webkit-slider-thumb {
+  transform: scale(1.4);
+}
+.media-container input[type="range"].hover::-moz-range-thumb,
+.media-container input[type="range"]:hover::-moz-range-thumb {
+  transform: scale(1.4);
+}
+.media-container input[type="range"].hover::-ms-thumb,
+.media-container input[type="range"]:hover::-ms-thumb {
+  transform: scale(1.4);
+}
+html.can-touch .media-container input[type="range"].hover::-webkit-slider-thumb,
+html.can-touch
+  .media-container
+  input[type="range"]:hover::-webkit-slider-thumb {
+  transform: none;
+}
+html.can-touch .media-container input[type="range"].hover::-moz-range-thumb,
+html.can-touch .media-container input[type="range"]:hover::-moz-range-thumb {
+  transform: none;
+}
+html.can-touch .media-container input[type="range"].hover::-ms-thumb,
+html.can-touch .media-container input[type="range"]:hover::-ms-thumb {
+  transform: none;
+}
 
-.media-progress-container.hover input[type=range]::-webkit-slider-thumb,
-.media-progress-container:hover input[type=range]::-webkit-slider-thumb {
-  transform: scaleX(1.4); }
-.media-progress-container.hover input[type=range]::-moz-range-thumb,
-.media-progress-container:hover input[type=range]::-moz-range-thumb {
-  transform: scaleX(1.4); }
-.media-progress-container.hover input[type=range]::-ms-thumb,
-.media-progress-container:hover input[type=range]::-ms-thumb {
-  transform: scaleX(1.4); }
-html.can-touch .media-progress-container.hover input[type=range]::-webkit-slider-thumb,
-html.can-touch .media-progress-container:hover input[type=range]::-webkit-slider-thumb {
-  transform: none; }
-html.can-touch .media-progress-container.hover input[type=range]::-moz-range-thumb,
-html.can-touch .media-progress-container:hover input[type=range]::-moz-range-thumb {
-  transform: none; }
-html.can-touch .media-progress-container.hover input[type=range]::-ms-thumb,
-html.can-touch .media-progress-container:hover input[type=range]::-ms-thumb {
-  transform: none; }
+.media-progress-container.hover input[type="range"]::-webkit-slider-thumb,
+.media-progress-container:hover input[type="range"]::-webkit-slider-thumb {
+  transform: scaleX(1.4);
+}
+.media-progress-container.hover input[type="range"]::-moz-range-thumb,
+.media-progress-container:hover input[type="range"]::-moz-range-thumb {
+  transform: scaleX(1.4);
+}
+.media-progress-container.hover input[type="range"]::-ms-thumb,
+.media-progress-container:hover input[type="range"]::-ms-thumb {
+  transform: scaleX(1.4);
+}
+html.can-touch
+  .media-progress-container.hover
+  input[type="range"]::-webkit-slider-thumb,
+html.can-touch
+  .media-progress-container:hover
+  input[type="range"]::-webkit-slider-thumb {
+  transform: none;
+}
+html.can-touch
+  .media-progress-container.hover
+  input[type="range"]::-moz-range-thumb,
+html.can-touch
+  .media-progress-container:hover
+  input[type="range"]::-moz-range-thumb {
+  transform: none;
+}
+html.can-touch .media-progress-container.hover input[type="range"]::-ms-thumb,
+html.can-touch .media-progress-container:hover input[type="range"]::-ms-thumb {
+  transform: none;
+}
 
 /* Styles specific to volume slider */
-.media-container input[type=range].media-volume {
+.media-container input[type="range"].media-volume {
   height: 1.292em;
   top: -0.542em;
 }
 
-.media-container input[type=range].media-volume::-webkit-slider-runnable-track {
-  height: 1.333em; }
-.media-container input[type=range].media-volume::-moz-range-track {
-  height: 1.333em; }
-.media-container input[type=range].media-volume::-ms-track {
-  height: 1.333em; }
+.media-container
+  input[type="range"].media-volume::-webkit-slider-runnable-track {
+  height: 1.333em;
+}
+.media-container input[type="range"].media-volume::-moz-range-track {
+  height: 1.333em;
+}
+.media-container input[type="range"].media-volume::-ms-track {
+  height: 1.333em;
+}
 
-.media-container input[type=range].media-volume::-webkit-slider-thumb {
-  margin-top: 0.292em; }
-.media-container input[type=range].media-volume::-moz-range-thumb {
-  margin-top: 0.292em; }
-.media-container input[type=range].media-volume::-ms-thumb {
-  margin-top: 0.292em; }
-
+.media-container input[type="range"].media-volume::-webkit-slider-thumb {
+  margin-top: 0.292em;
+}
+.media-container input[type="range"].media-volume::-moz-range-thumb {
+  margin-top: 0.292em;
+}
+.media-container input[type="range"].media-volume::-ms-thumb {
+  margin-top: 0.292em;
+}
 
 /*----------------------------------------------------------------------------
 MEDIA BUTTON STYLES
@@ -469,14 +529,18 @@ MEDIA BUTTON STYLES
   margin: 0 0.0625em;
   padding: 0;
   position: relative;
-  transition: color 0.2s ease-out; }
+  transition: color 0.2s ease-out;
+}
 html.can-touch .media-btn:hover {
-  color: inherit; }
+  color: inherit;
+}
 .media-btn:hover,
 html.can-touch .media-btn:active {
-  color: #1e1e1e; }
+  color: #1e1e1e;
+}
 .media-btn[disabled] {
-  color: #a6a6a6; }
+  color: #a6a6a6;
+}
 
 .media-time-display {
   margin-left: 0.25em;
@@ -488,13 +552,12 @@ video::-webkit-media-controls-enclosure {
   display: none !important;
 }
 
-
 /*----------------------------------------------------------------------------
 TOOLTIP STYLES
 ----------------------------------------------------------------------------*/
 .media-tooltip {
   background: #000;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 0.208em;
   bottom: calc(100% + 1.5em);
   color: #fff;
@@ -503,13 +566,17 @@ TOOLTIP STYLES
   padding: 0.208em 0.5em;
   pointer-events: none;
   position: absolute;
-  transition: opacity .2s ease-out; }
+  transition: opacity 0.2s ease-out;
+}
 .media-controls.media-sis-variant .media-tooltip {
-  bottom: calc(100% + 0.25em); }
+  bottom: calc(100% + 0.25em);
+}
 .media-container.full-screen .media-tooltip {
-  bottom: calc(100% + 1.75em); }
+  bottom: calc(100% + 1.75em);
+}
 .media-container.full-screen .media-controls.media-sis-variant .media-tooltip {
-  bottom: calc(100% + 0.5em); }
+  bottom: calc(100% + 0.5em);
+}
 
 .media-tooltip-seek {
   bottom: calc(100% + 1.25em);
@@ -517,22 +584,29 @@ TOOLTIP STYLES
   margin-left: 0.208em;
   opacity: 1;
   transform: translateX(-50%);
-  transition: opacity .2s ease-out; }
+  transition: opacity 0.2s ease-out;
+}
 .media-controls.media-sis-variant .media-tooltip-seek {
-  bottom: calc(100% + 3.25em); }
+  bottom: calc(100% + 3.25em);
+}
 .media-container.full-screen .media-tooltip-seek {
-  bottom: calc(100% + 1.5em); }
-.media-container.full-screen .media-controls.media-sis-variant .media-tooltip-seek {
-  bottom: calc(100% + 3.5em); }
+  bottom: calc(100% + 1.5em);
+}
+.media-container.full-screen
+  .media-controls.media-sis-variant
+  .media-tooltip-seek {
+  bottom: calc(100% + 3.5em);
+}
 .media-tooltip-seek.hidden {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .media-tooltip-seek:after {
   border-left: 0.5em solid transparent;
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid #000;
-  border-top: 0.5em solid rgba(0,0,0,0.8);
-  content: '';
+  border-top: 0.5em solid rgba(0, 0, 0, 0.8);
+  content: "";
   left: 50%;
   position: absolute;
   top: 100%;
@@ -540,7 +614,8 @@ TOOLTIP STYLES
 }
 
 .media-btn-playpause-tooltip {
-  left: 0.25em; }
+  left: 0.25em;
+}
 
 .media-btn-mute-tooltip {
   left: 1em;
@@ -549,23 +624,26 @@ TOOLTIP STYLES
 
 .video-btn-cc-tooltip {
   left: initial;
-  right: 0.25em; }
+  right: 0.25em;
+}
 
 .video-btn-fs-tooltip {
   left: initial;
-  right: 0.25em; }
+  right: 0.25em;
+}
 
 .media-btn-playpause:hover ~ .media-btn-playpause-tooltip,
 .media-btn-mute:hover ~ .media-btn-mute-tooltip,
 .video-btn-cc:hover ~ .video-btn-cc-tooltip,
 .video-btn-fs:hover ~ .video-btn-fs-tooltip {
-  opacity: 1; }
+  opacity: 1;
+}
 html.can-touch .media-btn-playpause:hover ~ .media-btn-playpause-tooltip,
 html.can-touch .media-btn-mute:hover ~ .media-btn-mute-tooltip,
 html.can-touch .video-btn-cc:hover ~ .video-btn-cc-tooltip,
 html.can-touch .video-btn-fs:hover ~ .video-btn-fs-tooltip {
-  opacity: 0; }
-
+  opacity: 0;
+}
 
 /*----------------------------------------------------------------------------
 CLOSED CAPTION STYLES
@@ -580,25 +658,31 @@ CLOSED CAPTION STYLES
   pointer-events: none;
   position: absolute;
   transform: translateX(-50%);
-  width: 100%; }
+  width: 100%;
+}
 .video-custom-track-wrapper.hidden {
-  display: none; }
+  display: none;
+}
 .media-container.full-screen .video-custom-track-wrapper {
   bottom: 5em;
-  transition: bottom 0.2s; }
+  transition: bottom 0.2s;
+}
 .media-container.full-screen.fadeout .video-custom-track-wrapper {
   bottom: 2em;
-  transition: bottom 0.2s 0.2s; }
+  transition: bottom 0.2s 0.2s;
+}
 
 .video-custom-track {
   background: #000;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 0.15em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
   color: #fff;
   font-size: 0.92em;
   line-height: normal;
-  padding: 0; }
+  padding: 0;
+}
 .video-custom-track.hidden {
-  display: none; }
+  display: none;
+}

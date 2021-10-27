@@ -2,7 +2,12 @@
 * @stylesheet stim-image-layers.css Image Layers
 * @parent ux.stimuli
 * The image layers stimulus allows test takers to use one or more switches to alter the appearance of an image.
+*
+* The following demo presents two cases of image layers being altered by switches.
 * @iframe ux/demos/stim-image-layers/image-layers-switch.html 480
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * Each image layer control is composed of a switch and a pair of labels, all of which are contained in a 2px gray `#949494` border with rounded corners. Each control is typically placed below the center of the image element that it manipulates.
@@ -20,9 +25,11 @@
 .layer-row {
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+}
 .layer-row:last-of-type {
-  justify-content: center; }
+  justify-content: center;
+}
 
 .layer-base-img,
 .layer-img {
@@ -33,9 +40,11 @@
 
 .layer-img {
   position: absolute;
-  top: 0; }
+  top: 0;
+}
 .layer-img.hidden {
-  display: none; }
+  display: none;
+}
 
 .layer-switch-wrapper {
   align-items: center;
@@ -44,9 +53,11 @@
   display: flex;
   font-size: 0.833334em;
   margin: 0 auto;
-  min-height: 3em; }
+  min-height: 3em;
+}
 .layer-switch-wrapper[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 /**
 * @styles 1-image-layer-labels Switch Labels
@@ -65,10 +76,12 @@
   font-weight: bold;
   padding: 0 0.75em;
   transition: color 0.2s;
-  user-select: none; }
+  user-select: none;
+}
 .layer-switch-label.active {
   color: #000;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 /**
 * @styles 0-image-layer-switches Switches
@@ -95,7 +108,7 @@
 }
 
 .layer-switch-slider {
-  border: 0.15em solid #0084FF;
+  border: 0.15em solid #0084ff;
   border-radius: 0.75em;
   bottom: 0;
   cursor: pointer;
@@ -103,12 +116,14 @@
   right: 0;
   position: absolute;
   top: 0;
-  transition: border 0.2s; }
+  transition: border 0.2s;
+}
 input[disabled] ~ .layer-switch-slider {
-  border-color: #949494; }
+  border-color: #949494;
+}
 
 .layer-switch-slider::before {
-  background: #0084FF;
+  background: #0084ff;
   border-radius: 50%;
   bottom: 0.15em;
   content: "";
@@ -116,8 +131,11 @@ input[disabled] ~ .layer-switch-slider {
   left: 0.15em;
   position: absolute;
   transition: background 0.2s, transform 0.2s;
-  width: 0.9em; }
+  width: 0.9em;
+}
 .layer-switch input[type="checkbox"]:checked + .layer-switch-slider::before {
-  transform: translateX(1.3em); }
+  transform: translateX(1.3em);
+}
 input[disabled] ~ .layer-switch-slider::before {
-  background: #949494; }
+  background: #949494;
+}

@@ -58,7 +58,7 @@ html.can-touch .zones-mask-border:hover {
 }
 
 a.zones-selected .zones-mask-border {
-  stroke: #1F8FFF;
+  stroke: #1f8fff;
   stroke-width: 3;
 }
 
@@ -101,10 +101,20 @@ a.zones-selected .zones-mask-border-background {
 
 /**
 * @styles 1-single-select-zones Single-select Variant
+*
+* The following demo presents Clear Answer buttons associated with a single-select zones item and a single-select zones item with tiles, respectively. 
 * @iframe ux/demos/response-type-zones/response-type-zones-ss.html 1200
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
 * @styles 2-multiple-select-zones Multiple-select Variant
+*
+* The following demo presents a Clear Answer button associated with a multiple-select zones item.
 * @iframe ux/demos/response-type-zones/response-type-zones-ms.html 740
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/

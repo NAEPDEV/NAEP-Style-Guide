@@ -5,7 +5,7 @@
 *
 * In TTS mode, most user interface elements are disabled, with the exception of navigational elements (e.g., the __Back__ and __Next__ buttons in the system toolbar). When a test taker navigates to another item or screen in TTS mode, TTS turns off.
 *
-* Use the <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;"/>__Text-to-speech__ button at the top of the page to see how TTS affects demo content throughout the guide.
+* Use the <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;"/>__Text-to-speech__ button at the top of the page to see how TTS affects demo and example content throughout the guide.
 * @iframe ux/demos/response-type-mc/response-type-mc-ss.html 485
 **/
 
@@ -75,12 +75,15 @@ table.grid tr.tts-active .grid-content,
   pointer-events: auto;
   position: relative;
   user-select: none;
-  z-index: 4; }
+  z-index: 4;
+}
 
 .mc-option.tts-active:hover {
-  border-color: #ccc; }
+  border-color: #ccc;
+}
 .mc-option.mc-selected.tts-active:hover {
-  border-color: #198CFF; }
+  border-color: #198cff;
+}
 
 table.grid tbody tr.tts-active:hover th,
 table.grid tbody tr.tts-active:hover td {
@@ -91,22 +94,24 @@ table.grid tbody tr.tts-active:hover td {
 
 table.grid tbody tr.tts-active.grid-row-selected th,
 table.grid tbody tr.tts-active.grid-row-selected td {
-  border-color: #198CFF;
+  border-color: #198cff;
   border-style: double;
 }
 
 .stim-table tbody tr.tts-active:hover {
-  background: none; }
+  background: none;
+}
 .stim-table tbody tr.tts-active:nth-of-type(even):hover {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+}
 .stim-table tbody tr.selected.tts-active:hover,
 .stim-table tbody tr.selected.tts-active:nth-of-type(even):hover {
-  background: #9BBCE7; }
+  background: #9bbce7;
+}
 
 tr.tts-active th.header:hover {
   background: none;
 }
-
 
 .standalone-image {
   border: 0.1em solid transparent;

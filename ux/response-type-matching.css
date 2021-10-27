@@ -43,8 +43,10 @@
   line-height: 1.2;
   margin: 0.25em;
   max-width: 20em;
-  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s, opacity 0.2s;
-  user-select: none; }
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s, color 0.2s,
+    opacity 0.2s;
+  user-select: none;
+}
 .match-option.hidden {
   pointer-events: none;
   visibility: hidden;
@@ -56,42 +58,54 @@
 }
 
 .match-option.match-option-text {
-  background: #246BB2;
+  background: #246bb2;
   border: 0.1em solid transparent;
   color: #fff;
-  box-shadow: 0 0.11em 0.28em rgba(0, 0, 0, 0.2), 0 0.11em 0.55em rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 0.11em 0.28em rgba(0, 0, 0, 0.2),
+    0 0.11em 0.55em rgba(0, 0, 0, 0.15);
+}
 .match-option.match-option-text.ui-draggable-dragging {
-  box-shadow: 0 0.14em 0.19em rgba(0, 0, 0, 0.18), 0 0.11em 0.31em rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.14em 0.19em rgba(0, 0, 0, 0.18),
+    0 0.11em 0.31em rgba(0, 0, 0, 0.15);
   filter: brightness(1.3);
-  z-index: 10; }
+  z-index: 10;
+}
 .match-option.match-option-text[disabled],
 .match-option.match-option-text.inactive {
-  background: rgba(36, 107, 178,0.6);
+  background: rgba(36, 107, 178, 0.6);
   box-shadow: none;
-  cursor: default; }
+  cursor: default;
+}
 .match-option.match-option-text.tts-active[disabled] {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 .match-option.match-option-text p {
   margin: 0;
-  padding: 0.65em 1.4em; }
+  padding: 0.65em 1.4em;
+}
 .match-option-text[disabled] p,
 .match-option.match-option-text.inactive p {
   pointer-events: none;
 }
 
 .match-option.match-option-img img {
-  filter: drop-shadow(0 0.11em 0.28em rgba(0, 0, 0, 0.16)) drop-shadow(0 0.11em 0.56em rgba(0, 0, 0, 0.12));
-  transition: filter 0.2s; }
+  filter: drop-shadow(0 0.11em 0.28em rgba(0, 0, 0, 0.16))
+    drop-shadow(0 0.11em 0.56em rgba(0, 0, 0, 0.12));
+  transition: filter 0.2s;
+}
 .match-option.match-option-img.ui-draggable-dragging img {
-  filter: brightness(1.3) drop-shadow(0 0.28em 0.39em rgba(0, 0, 0, 0.18)) drop-shadow(0 0.22em 0.61em rgba(0, 0, 0, 0.15));
-  z-index: 10; }
+  filter: brightness(1.3) drop-shadow(0 0.28em 0.39em rgba(0, 0, 0, 0.18))
+    drop-shadow(0 0.22em 0.61em rgba(0, 0, 0, 0.15));
+  z-index: 10;
+}
 .match-option[disabled] img,
 .match-option.inactive img {
   box-shadow: none;
   filter: none;
   opacity: 0.6;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .match-drop-target .match-option,
 .match-drop-target .match-option img {
@@ -152,8 +166,11 @@
 * * _Drag_. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue `rgba(41, 107, 204, 0.2)` when the test taker begins to drag an object.
 * * _Hover_. To indicate that a draggable object will be placed successfully, a blue `#296BCC` border is added to an active drop target when an object is dragged over it.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>._
+* The following demo presents the interactive states for draggable objects and their drop targets.
 * @iframe ux/demos/response-type-matching/matching-no-groups.html 475
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .match-drop-target {
@@ -186,6 +203,9 @@
 * * Objects can only be dragged to targets in the same group.
 * * When the test taker starts to drag an object, only targets in the same group will light up.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-groups-full.html" target="_blank">here</a>._
+* The following demo presents draggable objects and drop targets assigned to two groups.
 * @iframe ux/demos/response-type-matching/matching-groups.html 570
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-groups-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/

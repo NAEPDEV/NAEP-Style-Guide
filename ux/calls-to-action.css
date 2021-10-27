@@ -5,6 +5,7 @@
 *
 * _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/calls-to-action/next-full.html" target="_blank">here</a>._
 * @iframe ux/demos/calls-to-action/next.html 400
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -34,6 +35,8 @@
 *
 * The example below shows an inverted call to action. Additional examples can be seen on the [intro-exit-screens.css] page.
 * @iframe ux/demos/calls-to-action/image-background.html 437
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+*
 **/
 
 /**
@@ -46,9 +49,11 @@
 * >
 * > You cannot go back after you submit your answer.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/calls-to-action/submit-full.html" target="_blank">here</a>._
+* The following demo presents the behavior of the __Submit__ button.
 * @iframe ux/demos/calls-to-action/submit.html 400
 *
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% of its actual size. To see a full-size demo, click <a href="demos/calls-to-action/submit-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 * ### Messages
 * The text of calls to action is interactive:
@@ -69,14 +74,16 @@
   justify-content: flex-end;
   margin-top: 2em;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+}
 .cta-wrapper.cta-bottom-right {
   bottom: 1em;
   display: inline-flex;
   margin: 0;
   position: absolute;
   right: 1.25em;
-  width: auto; }
+  width: auto;
+}
 
 .cta-message {
   background: none;
@@ -91,14 +98,19 @@
   padding: 0.2em;
   text-align: right;
   transition: background 0.2s, border 0.2s;
-  user-select: none; }
+  user-select: none;
+}
 .cta-message:last-child {
-  margin: 0; }
+  margin: 0;
+}
 .cta-message[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 .cta-wrapper-bg .cta-message {
   background: #fff;
-  background: rgba(255,255,255,0.9); }
+  background: rgba(255, 255, 255, 0.9);
+}
 .cta-wrapper-bg.inverted .cta-message {
-  background: rgba(0,0,0,0.65);
-  color: #fff; }
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+}

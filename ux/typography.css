@@ -9,7 +9,12 @@
 *
 * ### SBT Typeface <img src="static/img/icon-asterisk.svg"/>
 * While Calibri is very readable at body sizes, it was not designed for titling sizes and offers only two weights: normal and bold. Because of these limitations, SBTs have shifted to using <a href="https://01.org/clear-SANS" target="_blank">Clear&#160;Sans</a>, which was designed for screen display, is suited for both body and titling sizes, and has a range of weights, allowing more options for establishing an informational hierarchy.
+*
+* The following example presents the designated font weights for both the Calibri and Clear Sans use cases.
 * @iframe ux/demos/typography/typefaces.html 190
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -61,94 +66,94 @@
 **/
 
 @font-face {
-  font-family: 'Calibri';
-  src:  local('Calibri Regular'),
-        url("fonts/calibri-regular.woff") format('woff');
+  font-family: "Calibri";
+  src: local("Calibri Regular"),
+    url("fonts/calibri-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Calibri';
-  src:  local('Calibri Italic'),
-        url("fonts/calibri-italic.woff") format('woff');
+  font-family: "Calibri";
+  src: local("Calibri Italic"), url("fonts/calibri-italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: 'Calibri';
-  src:  local('Calibri Bold'),
-        url("fonts/calibri-bold.woff") format('woff');
+  font-family: "Calibri";
+  src: local("Calibri Bold"), url("fonts/calibri-bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Calibri';
-  src:  local('Calibri Bold Italic'),
-        url("fonts/calibri-bold-italic.woff") format('woff');
+  font-family: "Calibri";
+  src: local("Calibri Bold Italic"),
+    url("fonts/calibri-bold-italic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Thin.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Thin.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Light.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Regular.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Italic.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Italic.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Medium.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Medium.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-MediumItalic.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-MediumItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-Bold.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: 'ClearSans';
-  src: url("fonts/ClearSans-BoldItalic.woff") format('woff');
+  font-family: "ClearSans";
+  src: url("fonts/ClearSans-BoldItalic.woff") format("woff");
   font-weight: 700;
   font-style: italic;
 }
 
 html {
-  font-family: 'Calibri', Arial, sans-serif;
+  font-family: "Calibri", Arial, sans-serif;
   font-size: 24px;
   line-height: 1.11;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 html.sbt {
-  font-family: 'ClearSans', sans-serif;
+  font-family: "ClearSans", sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4; }
+  line-height: 1.4;
+}
 
 .item-stem-wrapper {
   margin-bottom: 0.28em;
@@ -169,10 +174,12 @@ html.sbt {
 .stem-paragraph,
 .stimulus-paragraph {
   margin: 0;
-  padding-bottom: 1.03em; }
+  padding-bottom: 1.03em;
+}
 html.sbt .stem-paragraph,
 html.sbt .stimulus-paragraph {
-  padding-bottom: 1.2em; }
+  padding-bottom: 1.2em;
+}
 
 .no-wrap {
   white-space: nowrap;

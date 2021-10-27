@@ -3,8 +3,13 @@
 * @parent ux.sbts
 * Accordion menus allow test takers to show or hide items in a multi-level menu as needed. Accordions are useful for showing hierarchical relationships among pieces of information.
 *
-* Accordion menus generally work best with two levels of content. The demo below shows three levels, which is the maximum allowed to avoid overwhelming test takers.
+* Accordion menus generally work best with two levels of content. 
+*
+* The following demo presents three levels of an accordion menu, which is the maximum amount of levels allowed to avoid overwhelming test takers. 
 * @iframe ux/demos/accordions/accordions.html 470
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * When a top- or mid-level item is selected, one of two behaviors is allowed:
@@ -15,12 +20,13 @@
 **/
 
 .accordion {
-  color: #2067B3;
+  color: #2067b3;
   display: inline-block;
   font-size: 1.08em;
   line-height: 1;
   position: relative;
-  z-index: 4; }
+  z-index: 4;
+}
 
 .accordion,
 .accordion ul {
@@ -34,14 +40,16 @@
 }
 
 .accordion > li {
-  background: #EBECED;
+  background: #ebeced;
   border: 0.05em solid #767676;
   border-bottom: none;
-  transition: background 0.2s; }
+  transition: background 0.2s;
+}
 .accordion > li:last-of-type {
-  border-bottom: 0.05em solid #767676; }
+  border-bottom: 0.05em solid #767676;
+}
 
-.accordion > li > ul  {
+.accordion > li > ul {
   background: #fff;
   font-size: 0.85em;
   transition: background 0.2s;
@@ -52,21 +60,26 @@
   display: block;
   padding: 0.4em 2em 0.4em 0.4em;
   position: relative;
-  transition: background 0.2s, color 0.2s; }
+  transition: background 0.2s, color 0.2s;
+}
 .accordion span:hover,
 .accordion span.active:hover {
-  background: #D7EEF5;
-  font-weight: bold; }
+  background: #d7eef5;
+  font-weight: bold;
+}
 .accordion span.active {
   background: #fff;
   font-weight: bold;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .accordion span.active.dropdown {
-  pointer-events: auto; }
+  pointer-events: auto;
+}
 .accordion span[disabled],
 .accordion span.active.dropdown[disabled] {
-  color: rgba(32,103,179,0.5);
-  pointer-events: none; }
+  color: rgba(32, 103, 179, 0.5);
+  pointer-events: none;
+}
 
 .accordion > li > ul > li > span {
   padding-left: 1em;
@@ -77,11 +90,11 @@
 }
 
 .accordion span.active::after {
-  border-color: transparent transparent transparent #2067B3;
+  border-color: transparent transparent transparent #2067b3;
   border-radius: 0.1em;
   border-style: solid;
   border-width: 0.35em;
-  content: '';
+  content: "";
   display: block;
   height: 0;
   position: absolute;
@@ -96,11 +109,11 @@
 .accordion > li > span.active.dropdown::after,
 .accordion > li > ul > li > span.hover::after,
 .accordion > li > ul > li > span.active.dropdown::after {
-  border-color: #58585A transparent transparent transparent;
+  border-color: #58585a transparent transparent transparent;
   border-radius: 0.1em;
   border-style: solid;
   border-width: 0.35em;
-  content: '';
+  content: "";
   display: block;
   height: 0;
   position: absolute;

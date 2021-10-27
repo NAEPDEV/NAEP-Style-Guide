@@ -6,14 +6,19 @@
 * Information flags have a white `#FFFFFF` background, a gray `#BBBBBB` border, rounded corners, and a drop shadow to differentiate them from surrounding content. Each flag has a tail connecting it to the UI element for which it provides a cue. The flag’s text is bold, gray `#727272`, and 83% the base font size (see the [typography.css] page for more information).
 *
 * A flag can appear in eight positions relative to the element about which it provides information. The position is chosen based on the surrounding context (e.g., to avoid overlap with other elements, to avoid positioning the flag off-screen.)
+*
+* The following two examples present the eight possible positions for information flags.
 * @iframe ux/demos/information-flags/information-flags.html 500
 * @iframe ux/demos/information-flags/information-flags-corners.html 300
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 .info-flag {
   background: #fff;
   border: 0.06em solid #bbb;
   border-radius: 0.2em;
-  box-shadow: 0 0 0.25em rgba(0,0,0,.2);
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.2);
   color: #727272;
   font-family: Calibri, sans-serif;
   font-size: 20px;
@@ -30,40 +35,47 @@
 
 .info-flag-top-left {
   right: calc(100% + 0.75em);
-  top: 0; }
+  top: 0;
+}
 .info-flag-top-center {
-	left: 50%;
-	bottom: calc(100% + 0.75em);
-  transform: translateX(-50%); }
+  left: 50%;
+  bottom: calc(100% + 0.75em);
+  transform: translateX(-50%);
+}
 .info-flag-top-right {
   left: calc(100% + 0.75em);
-  top: 0; }
+  top: 0;
+}
 .info-flag-middle-left {
   right: calc(100% + 0.75em);
-	top: 50%;
-	transform: translateY(-50%); }
-.info-flag-middle-right {
-	left: calc(100% + 0.75em);
   top: 50%;
-	transform: translateY(-50%); }
+  transform: translateY(-50%);
+}
+.info-flag-middle-right {
+  left: calc(100% + 0.75em);
+  top: 50%;
+  transform: translateY(-50%);
+}
 .info-flag-bottom-left {
   bottom: 0;
-  right: calc(100% + 0.75em); }
+  right: calc(100% + 0.75em);
+}
 .info-flag-bottom-center {
-	left: 50%;
-	top: calc(100% + 0.75em);
-  transform: translateX(-50%); }
+  left: 50%;
+  top: calc(100% + 0.75em);
+  transform: translateX(-50%);
+}
 .info-flag-bottom-right {
   bottom: 0;
-  left: calc(100% + 0.75em); }
-
+  left: calc(100% + 0.75em);
+}
 
 .info-flag::before {
   background: #fff;
   border-bottom: 0.06em solid #bbb;
   border-right: 0.06em solid #bbb;
-  box-shadow: 0.1em 0.1em 0.25em rgba(0,0,0,0.15);
-  content: '';
+  box-shadow: 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.15);
+  content: "";
   display: block;
   height: 0.8em;
   position: absolute;
@@ -73,37 +85,45 @@
 
 .info-flag-top-left::before {
   right: -0.5em;
-	top: 0.6em;
-  transform: rotate(-45deg); }
+  top: 0.6em;
+  transform: rotate(-45deg);
+}
 .info-flag-top-center::before {
-	bottom: -0.5em;
+  bottom: -0.5em;
   left: 50%;
   transform: rotate(45deg) translateX(-50%);
-  transform-origin: left; }
+  transform-origin: left;
+}
 .info-flag-top-right::before {
   left: -0.5em;
-	top: 0.6em;
-  transform: rotate(135deg); }
+  top: 0.6em;
+  transform: rotate(135deg);
+}
 .info-flag-middle-left::before {
-	right: -0.5em;
-	top: 50%;
+  right: -0.5em;
+  top: 50%;
   transform: rotate(-45deg) translateY(-50%);
-  transform-origin: top; }
+  transform-origin: top;
+}
 .info-flag-middle-right::before {
-	left: -0.5em;
-	top: 50%;
+  left: -0.5em;
+  top: 50%;
   transform: rotate(135deg) translateY(-50%);
-  transform-origin: top; }
+  transform-origin: top;
+}
 .info-flag-bottom-left::before {
   right: -0.5em;
   bottom: 0.6em;
-  transform: rotate(-45deg); }
+  transform: rotate(-45deg);
+}
 .info-flag-bottom-center::before {
-	left: 50%;
-	top: -0.5em;
+  left: 50%;
+  top: -0.5em;
   transform: rotate(-135deg) translateX(-50%);
-  transform-origin: left; }
+  transform-origin: left;
+}
 .info-flag-bottom-right::before {
   left: -0.5em;
   bottom: 0.6em;
-  transform: rotate(135deg); }
+  transform: rotate(135deg);
+}

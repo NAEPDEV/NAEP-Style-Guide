@@ -21,7 +21,12 @@
 * When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` icon is provided at the upper left corner of the dialog.
 *
 * _Select the __View Dialog__ button below each description to launch the associated modal dialog. Modal dialogs do not have a __Close__ button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the __OK__ button) to dismiss it._
+*
+* The following demo presents dialogs that can each be viewed by selecting the "View Dialog" button.
 * @iframe ux/demos/dialogs/modals.html 780
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .dialog {
@@ -170,7 +175,12 @@ html.sbt #modal-sbt-submit .dialog-content,
 * When a test taker navigates to the first screen on which a non-modal dialog is offered,
 * * The dialog automatically opens, and the test taker is given the opportunity to close it.
 * * The initial position of the dialog should avoid overlap with essential information in the main content area.
+*
+* The following demo presents a non-modal dialog that can be dragged throughout its container.
 * @iframe ux/demos/dialogs/non-modals.html 450
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .dialog.non-modal {

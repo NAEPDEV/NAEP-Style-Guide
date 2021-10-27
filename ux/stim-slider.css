@@ -2,7 +2,12 @@
 * @stylesheet stim-slider.css Slider
 * @parent ux.stimuli
 * The slider stimulus allows test takers to view a series of related images (e.g., an interactive timeline map) by using a slider to switch between images.
+*
+* The following demo presents a slider that displays three distinct images as the user moves the thumb to different tick marks. 
 * @iframe ux/demos/stim-slider/stim-slider.html 630
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .slider-wrapper {
@@ -17,9 +22,11 @@
 
 .slider-img {
   margin: 0 15%;
-  width: 70%; }
+  width: 70%;
+}
 .slider-img.hidden {
-  display: none; }
+  display: none;
+}
 
 .slider-ui {
   position: relative;
@@ -43,9 +50,11 @@
   margin: 0.5em auto 0;
   outline: 0;
   width: calc(90% + 2.167em);
-  z-index: 1; }
+  z-index: 1;
+}
 .slider[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .slider::-ms-track {
   border-color: transparent;
@@ -54,24 +63,26 @@
 }
 
 .slider::-webkit-slider-runnable-track {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border: 0.0417em solid #949494;
   border-radius: 1em;
   height: 0.583em;
-  transition: background 0.2s, border 0.2s;  }
+  transition: background 0.2s, border 0.2s;
+}
 .slider::-moz-range-track {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border: 0.0417em solid #949494;
   border-radius: 1em;
   height: 0.583em;
-  transition: background 0.2s, border 0.2s; }
+  transition: background 0.2s, border 0.2s;
+}
 .slider::-ms-track {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border: 0.0417em solid #949494;
   border-radius: 1em;
   height: 0.583em;
-  transition: background 0.2s, border 0.2s; }
-
+  transition: background 0.2s, border 0.2s;
+}
 
 /**
 * @styles 1-slider-thumb Slider Thumb
@@ -86,7 +97,7 @@
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #0084FF;
+  background: #0084ff;
   background-clip: content-box;
   border: none;
   border-radius: 50%;
@@ -97,10 +108,11 @@
   top: -0.792em;
   transition: background 0.2s;
   width: 2.083em;
-  z-index: 4; }
+  z-index: 4;
+}
 .slider::-moz-range-thumb {
   -moz-appearance: none;
-  background: #0084FF;
+  background: #0084ff;
   background-clip: content-box;
   border: none;
   border-radius: 50%;
@@ -111,9 +123,10 @@
   top: -0.792em;
   transition: background 0.2s;
   width: 2.083em;
-  z-index: 4; }
+  z-index: 4;
+}
 .slider::-ms-thumb {
-  background: #0084FF;
+  background: #0084ff;
   background-clip: content-box;
   border: none;
   border-radius: 50%;
@@ -124,38 +137,51 @@
   top: -0.792em;
   transition: background 0.2s;
   width: 2.083em;
-  z-index: 4; }
+  z-index: 4;
+}
 
 html.can-touch .slider::-webkit-slider-thumb:hover {
-  box-shadow: none; }
+  box-shadow: none;
+}
 html.can-touch .slider::-moz-range-thumb:hover {
-  box-shadow: none; }
+  box-shadow: none;
+}
 html.can-touch .slider::-ms-thumb:hover {
-  box-shadow: none; }
+  box-shadow: none;
+}
 
 .slider::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 0 0.042em #949494; }
+  box-shadow: 0 0 0 0.042em #949494;
+}
 .slider::-moz-range-thumb:hover {
-  box-shadow: 0 0 0 0.083em #949494; }
+  box-shadow: 0 0 0 0.083em #949494;
+}
 .slider::-ms-thumb:hover {
-  box-shadow: 0 0 0 0.042em #949494; }
+  box-shadow: 0 0 0 0.042em #949494;
+}
 
 .slider:active::-webkit-slider-thumb {
   box-shadow: 0 0 0 0.042em #949494;
-  padding: 0.417em; }
+  padding: 0.417em;
+}
 .slider:active::-moz-range-thumb {
   box-shadow: 0 0 0 0.042em #949494;
-  padding: 0.667em; }
+  padding: 0.667em;
+}
 .slider:active::-ms-thumb {
   box-shadow: 0 0 0 0.042em #949494;
-  padding: 0.417em; }
+  padding: 0.417em;
+}
 
 .slider[disabled]::-webkit-slider-thumb {
-  background-color: #949494; }
+  background-color: #949494;
+}
 .slider[disabled]::-moz-range-thumb {
-  background-color: #949494; }
+  background-color: #949494;
+}
 .slider[disabled]::-ms-thumb {
-  background-color: #949494; }
+  background-color: #949494;
+}
 
 /**
 * @styles 2-slider-ticks Slider Tick Marks
@@ -196,21 +222,25 @@ html.can-touch .slider::-ms-thumb:hover {
 .slider[disabled] ~ .slider-dots .slider-dot.enabled.closest::before {
   background: transparent;
   border-radius: 50%;
-  content: '';
+  content: "";
   display: block;
   height: 0.25em;
   position: absolute;
   right: -0.125em;
   top: 0.167em;
   transition: background 0.2s, transform 0.2s;
-  width: 0.25em; }
+  width: 0.25em;
+}
 .slider-dot.enabled::before {
-  background: #949494; }
+  background: #949494;
+}
 .slider:active ~ .slider-dots .slider-dot::before {
-  background: #555; }
+  background: #555;
+}
 .slider-dots .slider-dot.enabled.closest::before {
-  background: #0084FF;
-  transform: scale(1.5); }
+  background: #0084ff;
+  transform: scale(1.5);
+}
 
 .slider-dot:first-of-type,
 .slider-label-tick:last-of-type {
@@ -228,15 +258,18 @@ html.can-touch .slider::-ms-thumb:hover {
 
 .slider-label-tick:before {
   border-left: 0.1em solid transparent;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   left: -0.0417em;
-  position: absolute; }
+  position: absolute;
+}
 .slider-label-tick.enabled:before {
-  border-color: #949494; }
+  border-color: #949494;
+}
 .slider-label-tick.active:before {
-  border-color: #333; }
+  border-color: #333;
+}
 
 /**
 * @styles 3-slider-labels Slider Tick Labels
@@ -250,7 +283,9 @@ html.can-touch .slider::-ms-thumb:hover {
   position: absolute;
   text-align: center;
   top: 110%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+}
 .slider-label-tick.active span {
   color: #000;
-  font-weight: bold; }
+  font-weight: bold;
+}

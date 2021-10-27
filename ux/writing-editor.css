@@ -3,8 +3,11 @@
 * @parent ux.environments
 * The writing assessment is presented in the writing editor environment. This environment contains two panels: one for the writing task and one for the editor toolbar and writing area.
 *
-* _Demo is shown at 50% actual size. To see a full-size demo, click <a href="demos/writing-editor/writing-editor-full.html" target="_blank">here</a>._
+* The following demo presents the writing editor, which can be opened by selecting the arrow below the __Next__ button.
 * @iframe ux/demos/writing-editor/writing-editor.html 475
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 50% its actual size. To see a full-size demo, click <a href="demos/writing-editor/writing-editor-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -26,7 +29,7 @@
   border: 0.05em solid #bbb;
   border-radius: 0 0 0.25em 0.25em;
   border-top: none;
-  box-shadow: 0 0 0.17em rgba(0,0,0,.3);
+  box-shadow: 0 0 0.17em rgba(0, 0, 0, 0.3);
   display: flex;
   flex: 0 0 auto;
   font-size: 24px;
@@ -37,10 +40,10 @@
 }
 
 #divider {
-  background: #EEE;
+  background: #eee;
   border-left: 0.05em solid #bbb;
   border-right: 0.05em solid #bbb;
-  box-shadow: 0 0.125em 0.17em rgba(0,0,0,.3);
+  box-shadow: 0 0.125em 0.17em rgba(0, 0, 0, 0.3);
   flex: 0 0 auto;
   font-size: 24px;
   margin: 2.42em 0 0 -2.9em;
@@ -63,20 +66,24 @@
   margin: 0.37em;
   padding: 0;
   position: relative;
-  transition: background .2s, border-color .2s;
-  width: 1.92em; }
+  transition: background 0.2s, border-color 0.2s;
+  width: 1.92em;
+}
 #toggleLeft[disabled],
 #toggleRight[disabled] {
   opacity: 0.3;
-  pointer-events: none; }
+  pointer-events: none;
+}
 #toggleRight:hover,
 #toggleLeft:hover,
 #toggleRight:active,
 #toggleLeft:active {
-  background: #008efa; }
+  background: #008efa;
+}
 html.can-touch #toggleRight:hover,
 html.can-touch #toggleLeft:hover {
-  background: #246bb2; }
+  background: #246bb2;
+}
 
 #toggleLeft {
   margin-right: 0.21em;
@@ -87,7 +94,6 @@ html.can-touch #toggleLeft:hover {
   font-size: 0.9em;
 }
 
-
 /**
 * @styles 1-wri-task-panel Task Panel
 * The task panel contains the writing task that the test taker must complete. The panel has a top margin such that task content begins approximately 1.3x the base font size below the bottom of the __Panel Size__ buttons to avoid overlap.
@@ -97,12 +103,15 @@ html.can-touch #toggleLeft:hover {
 #taskpane {
   flex: 0 0 auto;
   position: relative;
-  transition: width .4s ease-in-out, margin-left .4s ease-in-out;
-  width: calc(100% - 11px); }
+  transition: width 0.4s ease-in-out, margin-left 0.4s ease-in-out;
+  width: calc(100% - 11px);
+}
 #taskpane.taskpane-left {
-  width: 42.3%; }
+  width: 42.3%;
+}
 #taskpane.taskpane-left2 {
-  margin-left: calc(-42.3% - 1px); }
+  margin-left: calc(-42.3% - 1px);
+}
 
 #stimpad {
   height: 59px;
@@ -123,7 +132,6 @@ html.can-touch #toggleLeft:hover {
   position: relative;
   width: 24.58em;
 }
-
 
 /**
 * @styles 2-wri-editor-toolbar Editor Toolbar
@@ -202,9 +210,11 @@ WRITING PANE STYLES
 .wri-editor-control-container {
   border-right: 0.05em solid #909090;
   display: inline-block;
-  min-width: 4.8em; }
+  min-width: 4.8em;
+}
 .wri-editor-control-container:last-child {
-  border-right: none; }
+  border-right: none;
+}
 
 /**
 * @styles 6-wri-context-menu Context Menu
@@ -258,16 +268,17 @@ WRITING EDITOR MENU STYLES
   justify-content: space-between;
   letter-spacing: 0.03em;
   max-width: 6.78em;
-  padding: 0.6em 0.6em 0.6em 0.85em; }
+  padding: 0.6em 0.6em 0.6em 0.85em;
+}
 .wri-dropdown-wrapper.active > .wri-btn,
 html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   background: #fff;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  border-color: #2A8DD4;
-  box-shadow: 0 -0.06em 0.18em rgba(0,0,0,.3);
+  border-color: #2a8dd4;
+  box-shadow: 0 -0.06em 0.18em rgba(0, 0, 0, 0.3);
   color: #000;
-  transition: background .2s, border .2s, color .2s, box-shadow .2s;
+  transition: background 0.2s, border 0.2s, color 0.2s, box-shadow 0.2s;
   z-index: 3;
 }
 
@@ -275,35 +286,40 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   border-color: #909090 transparent;
   border-style: solid;
   border-width: 0.35em 0.35em 0 0.35em;
-  content: '';
+  content: "";
   display: block;
-  pointer-events: none; }
+  pointer-events: none;
+}
 .wri-dropdown-wrapper.active > .wri-btn::after,
 .wri-dropdown-wrapper > .wri-btn:hover::after,
 .wri-dropdown-wrapper > .wri-btn:active::after {
-  border-color: #2A8DD4 transparent;
-  transition: border-color .2s; }
+  border-color: #2a8dd4 transparent;
+  transition: border-color 0.2s;
+}
 .wri-dropdown-wrapper.active > .wri-btn::after {
-  border-width: 0 0.35em 0.35em 0.35em; }
+  border-width: 0 0.35em 0.35em 0.35em;
+}
 
 .wri-dropdown-wrapper > .wri-btn::before {
   background: transparent;
-  content: '';
+  content: "";
   height: 0.12em;
   left: 0;
   pointer-events: none;
   position: absolute;
   top: 100%;
-  width: 100%; }
+  width: 100%;
+}
 .wri-dropdown-wrapper.active > .wri-btn::before {
   background: #fff;
-  transition: background .2s; }
+  transition: background 0.2s;
+}
 
 .wri-menu {
   background: #fff;
-  border: 0.06em solid #2A8DD4;
+  border: 0.06em solid #2a8dd4;
   border-radius: 0 0.25em 0.25em 0.25em;
-  box-shadow: 0 0 0.18em rgba(0,0,0,.3);
+  box-shadow: 0 0 0.18em rgba(0, 0, 0, 0.3);
   left: 0;
   margin: 0;
   min-width: 12.53em;
@@ -313,14 +329,17 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   top: 100%;
   visibility: hidden;
   white-space: nowrap;
-  z-index: 2; }
+  z-index: 2;
+}
 .wri-dropdown-wrapper.active .wri-menu,
 .wri-menu.active {
   opacity: 1;
-  transition: opacity .3s;
-  visibility: visible; }
+  transition: opacity 0.3s;
+  visibility: visible;
+}
 .wri-menu.wri-dropdown-left {
-  border-radius: 0.25em 0 0.25em 0.25em; }
+  border-radius: 0.25em 0 0.25em 0.25em;
+}
 
 .wri-context-menu,
 .wri-context-submenu {
@@ -336,12 +355,14 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   top: 0;
   transform: translateX(-1em);
   transition: opacity 0s 0.3s, transform 0s 0.3s, visibility 0s 0.3s;
-  z-index: 1; }
+  z-index: 1;
+}
 .wri-context-sub-trigger.active .wri-context-submenu {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 0.2s 0.2s, transform 0.2s 0.2s, visibility 0s 0s;
-  visibility: visible; }
+  visibility: visible;
+}
 
 .wri-menu hr {
   border: none;
@@ -361,24 +382,30 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   margin-bottom: 0.059em;
   padding: 0.24em 0.35em 0.29em 0.24em;
   position: relative;
-  width: 100%; }
+  width: 100%;
+}
 .wri-menu button:focus,
 .wri-context-sub-trigger:focus,
 .wri-context-sub-trigger.active {
   background-color: #cde6f7;
-  outline: none; }
+  outline: none;
+}
 .wri-menu button[disabled] {
   opacity: 0.65;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .wri-dropdown button:first-of-type {
-  border-top-right-radius: 0.12em; }
+  border-top-right-radius: 0.12em;
+}
 .wri-dropdown.wri-dropdown-left button:first-of-type {
   border-top-left-radius: 0.12em;
-  border-top-right-radius: 0; }
+  border-top-right-radius: 0;
+}
 .wri-dropdown button:last-of-type {
   border-bottom-left-radius: 0.12em;
-  border-bottom-right-radius: 0.12em; }
+  border-bottom-right-radius: 0.12em;
+}
 
 .wri-menu [class^="icon-"] {
   color: #666;
@@ -397,14 +424,13 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
 
 .wri-context-sub-trigger::after {
   display: block;
-  content: '';
+  content: "";
   border: 0.35em solid;
   border-color: transparent transparent transparent #444;
   position: absolute;
   right: 0;
   top: calc(50% - 0.375em);
 }
-
 
 /*---------------------------------------------------------------------------
 LABEL BUTTON STYLES
@@ -422,46 +448,56 @@ LABEL BUTTON STYLES
   max-width: 6.1em;
   padding: 0.5em 0.5em 0.4em 0.5em;
   position: relative;
-  transition: opacity .2s;
-  width: 100%; }
+  transition: opacity 0.2s;
+  width: 100%;
+}
 .wri-btn:hover {
   background: #cde6f7;
-  border-color: #2A8DD4;
-  box-shadow: 0 0.05em 0.1em rgba(0,0,0,0.2);
+  border-color: #2a8dd4;
+  box-shadow: 0 0.05em 0.1em rgba(0, 0, 0, 0.2);
   color: #494949;
-  transition: background-color .2s, border-color .2s, box-shadow .2s, color .2s, opacity .2s; }
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s,
+    color 0.2s, opacity 0.2s;
+}
 html.can-touch .wri-btn:hover {
   background: none;
   border-color: #909090;
   box-shadow: none;
-  color: #666; }
+  color: #666;
+}
 .wri-btn:active,
 html.can-touch .wri-btn:active {
   background: #9dcef1;
-  border-color: #2A8DD4;
+  border-color: #2a8dd4;
   box-shadow: none;
-  color: #494949; }
+  color: #494949;
+}
 .wri-btn.margin-top {
-  margin-top: 0.65em; }
+  margin-top: 0.65em;
+}
 .wri-btn[disabled] {
   opacity: 0.5;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .wri-btn.blue-btn {
   background: #246bb2;
   border-color: transparent;
-  color: #fff; }
+  color: #fff;
+}
 .wri-btn.blue-btn:hover,
 .wri-btn.blue-btn:active,
 html.can-touch .wri-btn.blue-btn:active {
   background: #008efa;
   border-color: transparent;
-  color: #fff; }
+  color: #fff;
+}
 html.can-touch .wri-btn.blue-btn:hover {
   background: #246bb2;
   border-color: transparent;
   box-shadow: none;
-  color: #fff; }
+  color: #fff;
+}
 
 #change-btn {
   border-left-width: 0;
@@ -473,31 +509,37 @@ html.can-touch .wri-btn.blue-btn:hover {
   background: #f9f9f9;
   color: #909090;
   flex: 0;
-  padding: 0.25em; }
+  padding: 0.25em;
+}
 .wri-btn.close-dialog-btn:hover {
   border-color: #404040;
   color: #5c5c5c;
-  transition: border .2s, color .2s, background .2s; }
+  transition: border 0.2s, color 0.2s, background 0.2s;
+}
 .wri-btn.close-dialog-btn:active {
   background: #f0f0f0;
   border-color: #404040;
-  color: #5c5c5c; }
+  color: #5c5c5c;
+}
 
 .wri-btn.prev-btn,
 .wri-btn.lookup-btn {
   color: #909090;
   max-width: 1.625rem;
-  padding: 0; }
+  padding: 0;
+}
 .wri-btn.prev-btn:hover,
 .wri-btn.lookup-btn:hover,
 .wri-btn.prev-btn:active,
 .wri-btn.lookup-btn:active {
-  color: #2A8DD4; }
+  color: #2a8dd4;
+}
 .wri-btn.prev-btn {
-  font-size: 1.06em; }
+  font-size: 1.06em;
+}
 .wri-btn.lookup-btn {
-  font-size: 1.41em; }
-
+  font-size: 1.41em;
+}
 
 /*---------------------------------------------------------------------------
 ICON BUTTON STYLES
@@ -505,10 +547,12 @@ ICON BUTTON STYLES
 .wri-button-wrapper {
   border-right: 0.05em solid #909090;
   float: left;
-  margin: 0 0.21em 0 0; }
+  margin: 0 0.21em 0 0;
+}
 .wri-button-wrapper:last-child {
   border-right: none;
-  margin-right: 0; }
+  margin-right: 0;
+}
 
 .wri-button-wrapper > button {
   background: none;
@@ -520,42 +564,53 @@ ICON BUTTON STYLES
   font-size: inherit;
   padding: 0.25em;
   speak: normal;
-  transition: color 0.2s, opacity 0.2s; }
+  transition: color 0.2s, opacity 0.2s;
+}
 .wri-button-wrapper > button:last-child {
-  margin-right: 0.25em; }
+  margin-right: 0.25em;
+}
 .wri-button-wrapper > button:hover {
   background: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0.04em 0.08em rgba(0,0,0,.15); }
+  box-shadow: 0 0.04em 0.08em rgba(0, 0, 0, 0.15);
+}
 html.can-touch .wri-button-wrapper > button:hover {
   background: none;
   border-color: transparent;
-  box-shadow: none; }
+  box-shadow: none;
+}
 .wri-button-wrapper > button:active,
 html.can-touch .wri-button-wrapper > button:active {
   background: #fff;
   border-color: #b2b2b2;
-  box-shadow: 0 0 0.29em rgba(0,0,0,.25) inset; }
+  box-shadow: 0 0 0.29em rgba(0, 0, 0, 0.25) inset;
+}
 .wri-button-wrapper > button.active,
 html.can-touch .wri-button-wrapper > button.active {
-  background: #C4E0F8;
-  border-color: #2A8DD4; }
+  background: #c4e0f8;
+  border-color: #2a8dd4;
+}
 .wri-button-wrapper > button.active:hover,
 .wri-button-wrapper > button.active:active {
-  background: #d6ebff; }
+  background: #d6ebff;
+}
 html.can-touch .wri-button-wrapper > button.active:hover {
-  background: #C4E0F8; }
+  background: #c4e0f8;
+}
 .wri-button-wrapper > button[disabled] {
   opacity: 0.5;
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .button-sticky.active + .button-sticky.active {
   border-bottom-left-radius: 0;
   border-left-color: transparent;
-  border-top-left-radius: 0; }
+  border-top-left-radius: 0;
+}
 .button-sticky.active.remove-border-radius {
   border-bottom-right-radius: 0;
-  border-top-right-radius: 0; }
+  border-top-right-radius: 0;
+}
 
 .button-sticky-fontsize.active {
   pointer-events: none;
@@ -569,7 +624,6 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   left: 0.25em;
 }
 
-
 /**
 * @styles 3-wri-area Writing Area
 * The writing area is where test takers compose their responses. It has a white `#FFFFFF` fill, a gray `#C9C9C9` border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5"x11" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.
@@ -581,10 +635,22 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 * At higher zoom levels, the writing area’s size increases, causing scrollbars to appear around it, as specified on the [navigation.css] page. (The scroll indicator does not appear since the writing area contains the test taker’s response.)
 **/
 #wri-editor-top-shadow {
-  background: -moz-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
-  background: -o-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
-  background: -ms-linear-gradient(top, rgba(0,0,0,.15) 0%, transparent 100%);
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 100%
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 100%
+  );
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
+  background: -ms-linear-gradient(
+    top,
+    rgba(0, 0, 0, 0.15) 0%,
+    transparent 100%
+  );
   flex: 0 0 auto;
   height: 0.2em;
   opacity: 0;
@@ -613,7 +679,7 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 #wri-editor-actual {
   background: #fff;
   border: 1px solid #c9c9c9;
-  box-shadow: 0 0 0.41em rgba(0,0,0,.15);
+  box-shadow: 0 0 0.41em rgba(0, 0, 0, 0.15);
   cursor: text;
   flex: 0 0 auto;
   font-family: Arial, sans-serif;
@@ -626,10 +692,11 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   padding: 4.1em;
   resize: none;
   transition: background 0.2s, border 0.2s, box-shadow 0.2s;
-  width: 45.88em; }
+  width: 45.88em;
+}
 #wri-editor-actual[disabled] {
-  pointer-events: none; }
-
+  pointer-events: none;
+}
 
 /**
 * @styles 4-wri-dialogs Dialogs
@@ -669,16 +736,18 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   top: 2.5em;
   transition: opacity 0.2s;
   visibility: visible;
-  z-index: 6; }
+  z-index: 6;
+}
 .wri-dialog-backdrop.hidden {
   opacity: 0;
   transition: opacity 0.1s, visibility 0.1s;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 .wri-dialog {
   background: #f9f9f9;
   border-radius: 0.35em;
-  box-shadow: 0 0 0.3em rgba(0,0,0,.5);
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
   color: #555;
   flex: 0 0 auto;
   font-family: Arial, sans-serif;
@@ -726,13 +795,16 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 .wri-dialog-column {
   display: inline-flex;
   flex-direction: column;
-  vertical-align: top; }
+  vertical-align: top;
+}
 .wri-dialog-column.margins {
-  margin: 0 0.7em 0.75em 0; }
+  margin: 0 0.7em 0.75em 0;
+}
 
 .wri-dialog-col-span {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 .wri-dialog-col-span:first-of-type {
   margin-bottom: 0.75em;
 }
@@ -751,7 +823,7 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   margin-right: 0.6em;
 }
 
-.wri-dialog input[type=text] {
+.wri-dialog input[type="text"] {
   background: #fff;
   border: 0.06em solid #909090;
   box-shadow: none;
@@ -759,13 +831,16 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   margin: 0;
   padding: 0.47em;
   transition: background 0.2s, boder 0.2s, opacity 0.2s;
-  width: 11.8em; }
-.wri-dialog input[type=text]:hover,
-.wri-dialog input[type=text]:focus {
-  border-color: #606060; }
-#spell-check-dialog input[type=text] {
-  width: 14.12em; }
-.wri-dialog input[type=text][disabled] {
+  width: 11.8em;
+}
+.wri-dialog input[type="text"]:hover,
+.wri-dialog input[type="text"]:focus {
+  border-color: #606060;
+}
+#spell-check-dialog input[type="text"] {
+  width: 14.12em;
+}
+.wri-dialog input[type="text"][disabled] {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -774,10 +849,12 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   border: 0.06em solid #909090;
   font: inherit;
   transition: background 0.2s, border 0.2s;
-  width: 11.8em; }
+  width: 11.8em;
+}
 #spell-check-dialog select {
   margin-top: 0.7em;
-  width: 14.12em; }
+  width: 14.12em;
+}
 .wri-dialog select[disabled] {
   opacity: 0.5;
   pointer-events: none;
@@ -785,23 +862,28 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 
 .wri-dialog select option {
   padding: 0.24em 0.41em;
-  position: relative; }
+  position: relative;
+}
 .wri-dialog select option:hover {
-  background-color: #cde6f7; }
+  background-color: #cde6f7;
+}
 .wri-dialog select option:active {
-  background-color: #2A8DD4; }
+  background-color: #2a8dd4;
+}
 
 #synonyms option:checked::before,
 #synonyms option:hover::before {
   color: #777;
-  content: '\e966';
+  content: "\e966";
   cursor: pointer;
   display: block;
   float: right;
-  font-family: 'icons';
-  font-size: 1.18em; }
+  font-family: "icons";
+  font-size: 1.18em;
+}
 #synonyms option:checked::before {
-  color: #fff; }
+  color: #fff;
+}
 
 .wri-dialog .control {
   align-items: center;
@@ -809,7 +891,6 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   margin: 1em 0.5em;
   padding: 0;
 }
-
 
 /*------------------------------------------------------------------------------
 COMBOBOX STYLES
@@ -822,10 +903,12 @@ COMBOBOX STYLES
   height: 2.3em;
   margin: 0 0.41em;
   position: relative;
-  transition: opacity .2s; }
+  transition: opacity 0.2s;
+}
 .wri-combobox:hover,
 .wri-combobox:active {
-  border-color: #606060; }
+  border-color: #606060;
+}
 .wri-combobox[disabled] {
   opacity: 0.5;
   pointer-events: none;
@@ -835,18 +918,20 @@ COMBOBOX STYLES
   border-color: #909090 transparent;
   border-style: solid;
   border-width: 0.35em 0.35em 0 0.35em;
-  content: '';
+  content: "";
   pointer-events: none;
   position: absolute;
   right: 0.6em;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+}
 .wri-combobox:hover::after,
 .wri-combobox:active::after {
   border-color: #424242 transparent;
 }
 
-select::-ms-expand { /*Prevenst IE from showing default select element*/
+select::-ms-expand {
+  /*Prevenst IE from showing default select element*/
   display: none;
 }
 
@@ -867,7 +952,7 @@ select::-ms-expand { /*Prevenst IE from showing default select element*/
   width: 100%;
 }
 
-.wri-combobox input[type=text] {
+.wri-combobox input[type="text"] {
   border: none;
   left: 0;
   line-height: 2.06em;
@@ -882,7 +967,6 @@ select::-ms-expand { /*Prevenst IE from showing default select element*/
   margin: 1em 0.5em;
   padding: 0;
 }
-
 
 /**
 * @styles 5-wri-info-flags Information Flags
