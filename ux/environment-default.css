@@ -12,8 +12,11 @@
 * @styles 0-env-default-single Single-column
 * Single-column items show the stimulus, stem, and response area stacked on top of one another. For readability, the column is centered, and its width is approximately 66% of the content area. Images may take up to the full width of the column.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-default/single-column-full.html" target="_blank">here</a>._
+* The following demo presents the default single-column layout.
 * @iframe ux/demos/environment-default/single-column.html 400
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% of its actual size. To see a full-size demo, click <a href="demos/environment-default/single-column-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -24,11 +27,17 @@
 * * In cases where the stimulus is emphasized (e.g., in discrete items), the border faces right.
 * * In cases where the task is emphasized (e.g., in most SBTs), the border faces left.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/environment-default/two-column-full.html" target="_blank">here</a>._
+* The following demo presents the default two-column layout.
 * @iframe ux/demos/environment-default/two-column.html 400
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% of its actual size. To see a full-size demo, click <a href="demos/environment-default/two-column-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
 body {
   display: flex;
@@ -52,25 +61,31 @@ body {
 .contentarea-inner {
   flex: 1;
   overflow: auto;
-  padding: 1em 0; }
+  padding: 1em 0;
+}
 #contentarea.full-height .contentarea-inner {
-  padding: 0; }
+  padding: 0;
+}
 
 .content-container {
   display: flex;
   margin: 0 auto;
   max-width: 59em;
-  width: 100%; }
+  width: 100%;
+}
 #contentarea.full-height .content-container {
   height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .col {
   flex: 0 0 auto;
   padding: 0 1.39em;
-  position: relative; }
+  position: relative;
+}
 #contentarea.full-height .col {
-  overflow: auto; }
+  overflow: auto;
+}
 
 .col-single {
   margin: 0 auto;
@@ -86,8 +101,18 @@ body {
   box-shadow: -1em 0 1.5em -1.1em rgba(0, 0, 0, 0.22);
 }
 
-.col-30 { width: 30%; }
-.col-40 { width: 40%; }
-.col-50 { width: 50%; }
-.col-60 { width: 60%; }
-.col-70 { width: 70%; }
+.col-30 {
+  width: 30%;
+}
+.col-40 {
+  width: 40%;
+}
+.col-50 {
+  width: 50%;
+}
+.col-60 {
+  width: 60%;
+}
+.col-70 {
+  width: 70%;
+}
