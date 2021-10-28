@@ -22,8 +22,8 @@ div.calculatorDiv.calc-ti-108 svg {
 /**
 * @styles ti-108 TI-108
 * Styling and behavior adhere to the TI defaults with the following exceptions, which ensure color-contrast compliance. (See the [colors.md] page for more information about color contrast.)
-* * The background color of the red buttons has been slightly tweaked to `#DB1528`.
-* * An off-white `#F2F2F2` border has been added to red buttons.
+* * The background color of the red buttons has been slightly tweaked to <span class="no-wrap">`#DB1528` <span class="callout-swatch" style="background-color:#DB1528"></span></span>.
+* * An off-white <span class="no-wrap">`#F2F2F2` <span class="callout-swatch" style="background-color:#F2F2F2"></span></span> border has been added to red buttons.
 *
 * The following example presents the TI-108 interface.
 * @iframe ux/demos/calculator/ti-108.html 520
@@ -46,7 +46,7 @@ div.calculatorDiv.calc-ti-108 {
 /**
   * @styles ti-30xs TI-30XS
   * Styling and behavior adhere to the TI defaults with the following exceptions, which ensure color-contrast compliance. (See the [colors.md] page for more information about color contrast.)
-  * * The border color of the non-white buttons has been slightly tweaked to `#B7BDC1`.
+  * * The border color of the non-white buttons has been slightly tweaked to <span class="no-wrap">`#B7BDC1` <span class="callout-swatch" style="background-color:#B7BDC1"></span></span>.
   *
   * The following example presents the TI-30XS interface.
   * @iframe ux/demos/calculator/ti-30xs.html 790

@@ -27,14 +27,14 @@
 *
 * Text selections in stimuli have the following states.
 * * _Inactive_. Visible when the item to which the selection belongs is NOT on screen and/or when a modal system tool (e.g., Scratchwork) is enabled. The selection has the styling of the surrounding passage.
-* * _Active_. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent `rgba(0,0,0,0.4)` border and a light green `#D1F7D3` background.
-* * _Hover_. Visible when the cursor is over the text selection. The selection has the same border and a darker green `#5ABF5D` background. The `pointer` cursor is shown.
-* * _Selected_. The selection has no border, a dark green `#0E8812` background, and the text color is white `#FFFFFF`.
+* * _Active_. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent `rgba(0,0,0,0.4)` border and a light green <span class="no-wrap">`#D1F7D3` <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.
+* * _Hover_. Visible when the cursor is over the text selection. The selection has the same border and a darker green <span class="no-wrap">`#5ABF5D` <span class="callout-swatch" style="background-color:#5ABF5D"></span></span> background. The `pointer` cursor is shown.
+* * _Selected_. The selection has no border, a dark green <span class="no-wrap">`#0E8812` <span class="callout-swatch" style="background-color:#0E8812"></span></span> background, and the text color is white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.
 *
 * ### In the response area
-* Once a text selection has been chosen, it appears in the response area (see below). Text selections in the response area have the same green `#0E8812` background and white `#FFFFFF` text as in the stimulus to ensure visual continuity. To avoid mixing multiple typographical styles, all text selections in the response area are displayed at a standardized size in the Calibri typeface.
+* Once a text selection has been chosen, it appears in the response area (see below). Text selections in the response area have the same green <span class="no-wrap">`#0E8812` <span class="callout-swatch" style="background-color:#0E8812"></span></span> background and white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text as in the stimulus to ensure visual continuity. To avoid mixing multiple typographical styles, all text selections in the response area are displayed at a standardized size in the Calibri typeface.
 *
-* When presented in a two-column response area, long text selections are truncated to avoid obscuring selection containers that appear below. A gradient helps convey the truncation, and a dark green `#0A3C0D` __See more__ button is provided at the lower left of the selection container. Pressing the __See more__ button allows the test taker to see the full selection, and changes the button label to “See less.” Pressing the button again returns the selection container to its default truncated state.
+* When presented in a two-column response area, long text selections are truncated to avoid obscuring selection containers that appear below. A gradient helps convey the truncation, and a dark green <span class="no-wrap">`#0A3C0D` <span class="callout-swatch" style="background-color:#0A3C0D"></span></span> __See more__ button is provided at the lower left of the selection container. Pressing the __See more__ button allows the test taker to see the full selection, and changes the button label to “See less.” Pressing the button again returns the selection container to its default truncated state.
 **/
 
 .sis-text-selection,
@@ -265,7 +265,7 @@ html.can-touch .sis-media-btn-secondary:active {
 
 /**
 * @styles 3-sis-directions Directions Box
-* Because the select-in-stimulus interaction is likely to be novel to many test takers, directions are provided directly in the item. The directions box has rounded corners, a light green `#D1F7D3` background, and an icon representing the expected test taker action on the left side.
+* Because the select-in-stimulus interaction is likely to be novel to many test takers, directions are provided directly in the item. The directions box has rounded corners, a light green <span class="no-wrap">`#D1F7D3` <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background, and an icon representing the expected test taker action on the left side.
 *
 * In the [environment-default.css] environment, the directions focus on how to make selections: “Tap a [selection] to select it.”
 *
@@ -305,12 +305,12 @@ html.can-touch .sis-media-btn-secondary:active {
 
 /**
 * @styles 4-sis-response-area Response Area
-* The response area appears below the directions box. The response area has rounded corners, a light gray `#F6F6F6` background, and a dark gray `#CCCCCC` border.
+* The response area appears below the directions box. The response area has rounded corners, a light gray <span class="no-wrap">`#F6F6F6` <span class="callout-swatch" style="background-color:#F6F6F6"></span></span> background, and a dark gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border.
 *
 * As the test taker makes selections, they appear in the response area, each in its own selection container. When no selections have been made, the response area contains the text, “Your choice[s] will appear here.”
 *
 * ### Selection Containers
-* Each selection container has rounded corners, a gray `#6C6C6C` border, and a drop shadow.
+* Each selection container has rounded corners, a gray <span class="no-wrap">`#6C6C6C` <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border, and a drop shadow.
 *
 * A __Close__ button is provided at the upper right that allows the test taker to remove the selection. (Test takers can also remove a selection by tapping it again in the stimulus.) Selection containers always have the same width but can have varying heights based on the size of the content they contain.
 *
@@ -318,7 +318,7 @@ html.can-touch .sis-media-btn-secondary:active {
 * Selection containers can be presented in the response area in one or two columns. Items with only text selections are typically presented in one column, while items with media selections or a mix of selections are typically presented in two columns. (In scenario-based tasks, consistency of presentation across the task is prioritized, so if one SIS item must be presented in two columns, all other SIS items are as well.)
 *
 * ### Selection Placeholders
-* A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white `#FFFFFF` background, and a dashed gray `#6C6C6C` border. Placeholders disappear as selections are made and reappear as selections are removed.
+* A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, and a dashed gray <span class="no-wrap">`#6C6C6C` <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border. Placeholders disappear as selections are made and reappear as selections are removed.
 *
 * The presence of placeholders affects the order in which selections appear:
 * * When placeholders are present, new selections populate after existing selections.
@@ -614,7 +614,7 @@ SELECTION CONTAINERS - MEDIA
 * @styles 5-sis-max-select Max-selection Alert
 * In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.
 *
-* The alert has a light yellow `#F8ECBD` background and a dark yellow `#E6CB90` border. A `warning` icon appears at its left side.
+* The alert has a light yellow <span class="no-wrap">`#F8ECBD` <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap">`#E6CB90` <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A `warning` <span class="icon-warning"></span> icon appears at its left side.
 *
 * If the test taker does not dismiss the alert via the __Close__ button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.
 **/

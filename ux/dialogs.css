@@ -18,7 +18,7 @@
 *
 * When a dialog contains information not intended for test takers (e.g., an item accession number is provided in the _Item Error_ dialog to support troubleshooting), the information is presented at a smaller font size in the lower left corner.
 *
-* When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` icon is provided at the upper left corner of the dialog.
+* When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` <span class="icon-warning"></span> icon is provided at the upper left corner of the dialog.
 *
 * _Select the __View Dialog__ button below each description to launch the associated modal dialog. Modal dialogs do not have a __Close__ button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the __OK__ button) to dismiss it._
 *
@@ -167,8 +167,8 @@ html.sbt #modal-sbt-submit .dialog-content,
 * * The dialog translates from the position of the activation button to its most recent position.
 *
 * Non-modal dialogs have a __Close__ button at their upper-right corner. They can also be closed by hitting Escape on the keyboard or by selecting the button that invoked them. __Close__ buttons have the following states.
-* * _Default_. Button consists of a dark gray `#333333` `cross-thin` icon.
-* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to `#909090`.
+* * _Default_. Button consists of a dark gray <span class="no-wrap">`#333333` <span class="callout-swatch" style="background-color:#333333"></span></span> `cross-thin` <span class="icon-cross-thin"></span> icon.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span>.
 *
 * Test takers can reposition non-modal dialogs by dragging any spot on the dialog other than the __Close__ button.
 *

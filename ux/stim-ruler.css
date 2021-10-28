@@ -10,7 +10,7 @@
 * <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
-* A gray `#949494` border indicates the area in which the ruler can be dragged.
+* A gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> border indicates the area in which the ruler can be dragged.
 *
 * A __Reset__ button, styled as a small secondary filled button (see the [buttons.css] page for more information), is provided at the upper-right corner of the draggable area. Selecting the button restores the ruler to its initial position and orientation.
 **/
@@ -31,7 +31,7 @@
 
 /**
 * @styles 0-ruler-styling Ruler Styling
-* The ruler has a gray `#D3D3D3` background and black `#000000` tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.
+* The ruler has a gray <span class="no-wrap">`#D3D3D3` <span class="callout-swatch" style="background-color:#D3D3D3"></span></span> background and black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.
 *
 * The cursor is set to `move` when positioned over the ruler to indicate that it can be moved via dragging.
 **/
@@ -64,9 +64,9 @@
 * @styles 1-ruler-handles Ruler Handles
 * The ruler has a rotation handle on either end and a drag handle below its center. Handles are styled as primary circular filled buttons. (See the [buttons.css] page for more information.)
 *
-* The drag handle has the `move` icon (as specified on the [icons.css] page), and the cursor is set to `move`.
+* The drag handle has the `move` <span class="icon-move"></span> icon (as specified on the [icons.css] page), and the cursor is set to `move`.
 *
-* The rotation handles have the `rotate-left` and `rotate-right` icons, and the cursor is set to `ns-resize`.
+* The rotation handles have the `rotate-left` and `rotate-right` <span class="icon-rotate-right"></span> icons, and the cursor is set to `ns-resize`.
 **/
 
 .ruler-drag-handle,

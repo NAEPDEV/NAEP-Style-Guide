@@ -14,7 +14,7 @@
 * @styles 0-fm-model Model
 * A title may appear centered above the fraction model. If present, the title is bolded and in all caps.
 *
-* Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray `#1A1A1A`. The circular variant is shown below.
+* Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray <span class="no-wrap">`#1A1A1A` <span class="callout-swatch" style="background-color:#1A1A1A"></span></span>. The circular variant is shown below.
 *
 * The following demo presents the fraction model response type as a circular set of wedges. The __Undo__ button does not function as it will during an assessment.
 * @iframe ux/demos/response-type-fraction-model/fm-circular.html 580
@@ -24,11 +24,11 @@
 *
 *
 * Each unit in the model has the following states.
-* * _Default_. The unit has a gray `#757575` border.
-* * _Hover_. Visible when the cursor is over the unit in the default state. Unit background becomes light blue `#C4DCF2`. The `pointer` cursor is shown.
-* * _Selected_. Unit background becomes blue `#0A97FF`, and unit border becomes dark blue `#002040`. Selected unit border color overrides default border color.
-* * _Hover selected_. Visible when the cursor is over a selected unit. Unit background becomes light blue `#A4C9EB`, and border color becomes medium blue `#596C80`. The `pointer` cursor is shown.
-* * _Disabled_. Visible when the unit is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unit border becomes dark gray `#484848`. If unit is selected, background becomes medium gray `#949494`.
+* * _Default_. The unit has a gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> border.
+* * _Hover_. Visible when the cursor is over the unit in the default state. Unit background becomes light blue <span class="no-wrap">`#C4DCF2` <span class="callout-swatch" style="background-color:#C4DCF2"></span></span>. The `pointer` cursor is shown.
+* * _Selected_. Unit background becomes blue <span class="no-wrap">`#0A97FF` <span class="callout-swatch" style="background-color:#0A97FF"></span></span>, and unit border becomes dark blue <span class="no-wrap">`#002040` <span class="callout-swatch" style="background-color:#002040"></span></span>. Selected unit border color overrides default border color.
+* * _Hover selected_. Visible when the cursor is over a selected unit. Unit background becomes light blue <span class="no-wrap">`#A4C9EB` <span class="callout-swatch" style="background-color:#A4C9EB"></span></span>, and border color becomes medium blue <span class="no-wrap">`#596C80` <span class="callout-swatch" style="background-color:#596C80"></span></span>. The `pointer` cursor is shown.
+* * _Disabled_. Visible when the unit is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unit border becomes dark gray <span class="no-wrap">`#484848` <span class="callout-swatch" style="background-color:#484848"></span></span>. If unit is selected, background becomes medium gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 *
 * Note: To avoid state confusion, unit hover states do not appear immediately after a test taker has selected or deselected a unit. The test taker must move the cursor off of the unit and then back on for the hover state to appear.
 **/

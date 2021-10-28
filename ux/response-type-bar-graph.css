@@ -10,12 +10,12 @@
 * @styles 0-bg-graph Graph
 * Bar graphs and histograms are presented on the same graph, which includes the following elements.
 * * _Title (optional)_. Centered above graph. Bolded and in all caps.
-* * _Graph border_. Thick gray `#757575` line that bounds the graph.
-* * _Major grid lines_. Medium-weight gray `#757575` lines that establish the major intervals of the _y_-axis.
-* * _Minor grid lines (optional)_. Thin gray `#757575` lines that establish the minor intervals of the  _y_-axis.
-* * _x-axis_. Thick black `#000000` line at the bottom of the graph.
+* * _Graph border_. Thick gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> line that bounds the graph.
+* * _Major grid lines_. Medium-weight gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the major intervals of the _y_-axis.
+* * _Minor grid lines (optional)_. Thin gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the minor intervals of the  _y_-axis.
+* * _x-axis_. Thick black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> line at the bottom of the graph.
 * * _Axis names (optional)_. Centered next to the associated axis.
-* * _Axis ticks_. Short lines along each axis indicating the increments at which the grid lines appear. _x_-axis ticks are black `#000000`, while _y_-axis ticks are gray `#757575`. For the _y_-axis, only major grid lines receive ticks.
+* * _Axis ticks_. Short lines along each axis indicating the increments at which the grid lines appear. _x_-axis ticks are black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>, while _y_-axis ticks are gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span>. For the _y_-axis, only major grid lines receive ticks.
 * * _Axis tick labels_. Appear immediately below (for the _x_-axis) or to the left (for the _y_-axis) of each axis tick.
 **/
 
@@ -70,11 +70,11 @@
 /**
 * @styles 2-bg-bar-graphs Bar Graph Bars
 * Bar graph bars are non-contiguous and have the following states.
-* * _Initial_. Visible when the bar has a height of 0. Bar has a thick blue `#127DFF` border. Bar fill is not visible.
-* * _Default_. Bar has a light blue `#3B96FF` fill.
-* * _Active_. Visible while the bar’s sizing handle is being dragged. Bar fill becomes medium blue `#0059C4`.
+* * _Initial_. Visible when the bar has a height of 0. Bar has a thick blue <span class="no-wrap">`#127DFF` <span class="callout-swatch" style="background-color:#127DFF"></span></span> border. Bar fill is not visible.
+* * _Default_. Bar has a light blue <span class="no-wrap">`#3B96FF` <span class="callout-swatch" style="background-color:#3B96FF"></span></span> fill.
+* * _Active_. Visible while the bar’s sizing handle is being dragged. Bar fill becomes medium blue <span class="no-wrap">`#0059C4` <span class="callout-swatch" style="background-color:#0059C4"></span></span>.
 * * _Pre-populated_. Visible when the bar’s height is pre-set and cannot be changed by the test taker. Styling is the same as the default state, and  no sizing handle is provided.
-* * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray `#949494`.
+* * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 *
 * _Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
 *
@@ -99,12 +99,12 @@
 * Histogram bars are contiguous and therefore require more assertive styling than bar graph bars to maintain WCAG contrast conformance. (See the [colors.md] page for more information about color contrast.)
 *
 * Histogram bars have the following states.
-* * _Initial_. Visible when the bar has a height of 0. Bar has a thick blue `#127DFF` border. Bar fill is not visible.
-* * _Default_. Bar has a light blue `#B8E2FF` fill and a gray `#404040` border.
-* * _Hover_. Visible when the cursor is over the bar’s sizing handle. Bar border becomes black `#000000`.
-* * _Active_. Visible while the bar’s sizing handle is being dragged. Bar border becomes black `#000000`, and fill becomes medium blue `#73C6FF`.
+* * _Initial_. Visible when the bar has a height of 0. Bar has a thick blue <span class="no-wrap">`#127DFF` <span class="callout-swatch" style="background-color:#127DFF"></span></span> border. Bar fill is not visible.
+* * _Default_. Bar has a light blue <span class="no-wrap">`#B8E2FF` <span class="callout-swatch" style="background-color:#B8E2FF"></span></span> fill and a gray <span class="no-wrap">`#404040` <span class="callout-swatch" style="background-color:#404040"></span></span> border.
+* * _Hover_. Visible when the cursor is over the bar’s sizing handle. Bar border becomes black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>.
+* * _Active_. Visible while the bar’s sizing handle is being dragged. Bar border becomes black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>, and fill becomes medium blue <span class="no-wrap">`#73C6FF` <span class="callout-swatch" style="background-color:#73C6FF"></span></span>.
 * * _Pre-populated_. Visible when the bar’s height is pre-set and cannot be changed by the test taker. Styling is the same as the default state, and  no sizing handle is provided.
-* * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray `#949494`.
+* * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 *
 * _Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
 *

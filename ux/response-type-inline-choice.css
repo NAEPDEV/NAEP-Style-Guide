@@ -14,9 +14,9 @@
 /**
 * @styles 0-ic-buttons Dropdown Buttons
 * Inline-choice dropdown menu buttons have the following states.
-* * _Default_. Button has a thin gray `#595959` border, rounded corners, and a gray `#595959` caret at its right side. The button contains no text.
+* * _Default_. Button has a thin gray <span class="no-wrap">`#595959` <span class="callout-swatch" style="background-color:#595959"></span></span> border, rounded corners, and a gray <span class="no-wrap">`#595959` <span class="callout-swatch" style="background-color:#595959"></span></span> caret at its right side. The button contains no text.
 * * _Selected_. Visible when an option has been selected from the dropdown menu. The button is populated with the content of the selected option.
-* * _Hover_. Visible when the cursor is over the button. Border color and caret color are darkened, and a drop shadow is added. The `pointer` icon is shown.
+* * _Hover_. Visible when the cursor is over the button. Border color and caret color are darkened, and a drop shadow is added. The `pointer` <span class="icon-pointer"></span> icon is shown.
 * * _Disabled_. Border color and caret are dimmed to indicate that the dropdown is inactive, but selected content, if present, remains at default color.
 **/
 
@@ -25,9 +25,11 @@
   flex-direction: column;
   margin: 0 0.14em 0.14em 0.14em;
   position: relative;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 .inline-choice[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .inline-choice > span {
   background: #fff;
@@ -40,16 +42,20 @@
   outline: none;
   padding: 0.14em 1.25em 0.1em 0.3em;
   position: relative;
-  transition: background 0.2s, border 0.2s, box-shadow 0.2s; }
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+}
 .inline-choice > span:hover {
   border-color: #222;
-  box-shadow: 0 0.06em 0.06em rgba(0, 0, 0, .25); }
+  box-shadow: 0 0.06em 0.06em rgba(0, 0, 0, 0.25);
+}
 .inline-choice.active > span {
   border-color: #222;
-  transition: none; }
+  transition: none;
+}
 .inline-choice > span[disabled] {
   border-color: #aaa;
-  z-index: 4; }
+  z-index: 4;
+}
 
 .inline-choice > span:after {
   border-color: #595959 transparent;
@@ -62,12 +68,15 @@
   right: 0.37em;
   top: 50%;
   transition: border 0.2s;
-  width: 0; }
+  width: 0;
+}
 .inline-choice > span:hover::after,
 .inline-choice.active > span:after {
-  border-color: #000 transparent; }
+  border-color: #000 transparent;
+}
 .inline-choice > span[disabled]::after {
-  border-color: #aaa transparent; }
+  border-color: #aaa transparent;
+}
 
 /**
 * @styles 1-ic-menus Dropdown Menus
@@ -84,8 +93,8 @@
 * @styles 2-ic-options Dropdown Options
 * Inline-choice dropdown options have the following states.
 * * _Unselected_. This is the default state.
-* * _Selected_. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue `#D6EBFF`.
-* * _Hover_. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white `#FFFFFF`, and background changes to medium blue `#0068D1`. The `pointer` cursor is shown. Hover state overrides selected state.
+* * _Selected_. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue <span class="no-wrap">`#D6EBFF` <span class="callout-swatch" style="background-color:#D6EBFF"></span></span>.
+* * _Hover_. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and background changes to medium blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>. The `pointer` cursor is shown. Hover state overrides selected state.
 *
 * _Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the [tts.css] page for a description of TTS behavior._
 * @iframe ux/demos/response-type-inline-choice/response-type-inline-choice.html 400
@@ -93,7 +102,7 @@
 
 .inline-choice ul {
   background: #fff;
-  border: 0.05em solid #476CA9;
+  border: 0.05em solid #476ca9;
   border-bottom: none;
   border-top: none;
   border-radius: 0 0 0.15em 0.15em;
@@ -108,28 +117,34 @@
   /*right: 0.08em;*/
   top: 100%;
   transition: max-height 0.2s;
-  z-index: 2; }
+  z-index: 2;
+}
 .inline-choice.active ul {
-  border: 0.05em solid #476CA9;
-  box-shadow: 0 0.02em 0.2em rgba(0, 0, 0, .35);
+  border: 0.05em solid #476ca9;
+  box-shadow: 0 0.02em 0.2em rgba(0, 0, 0, 0.35);
   max-height: 400px;
-  opacity: 1; }
+  opacity: 1;
+}
 .inline-choice.drop-up ul {
   border-radius: 0.15em 0.15em 0 0;
   bottom: 100%;
-  top: initial; }
+  top: initial;
+}
 
 .inline-choice li {
   cursor: pointer;
   display: block;
   min-height: 1.58em;
   padding: 0.25em 1.25em 0.25em 0.25em;
-  text-decoration: none; }
+  text-decoration: none;
+}
 .inline-choice li:hover,
 .inline-choice li:focus,
 .inline-choice li.selected:hover,
 .inline-choice li.selected:focus {
-  background: #0068D1;
-  color: #fff; }
+  background: #0068d1;
+  color: #fff;
+}
 .inline-choice li.selected {
-  background: #D6EBFF; }
+  background: #d6ebff;
+}

@@ -14,9 +14,9 @@
 * When selected, each column header will reorder the table’s rows based on the data in the column, starting with ascending order. With successive selections, the table sort order will toggle between descending and ascending order.
 *
 * Sortable tables have the same styling as static stimulus tables, except for the column header cells, which have the following states.
-* * _Default_. Visible when the header cell isn’t controlling the table’s sort order. The `sort-default` icon is displayed at the header cell’s right side.
-* * _Sort Ascending_. Displayed when the table is sorted such that the values in the associated column are in ascending order. The `sort-ascending` icon is displayed.
-* * _Sort Descending_. Displayed when the table is sorted such that the values in the associated column are in descending order. The `sort-descending` icon is displayed.
+* * _Default_. Visible when the header cell isn’t controlling the table’s sort order. The `sort-default` <span class="icon-sort-default"></span> icon is displayed at the header cell’s right side.
+* * _Sort Ascending_. Displayed when the table is sorted such that the values in the associated column are in ascending order. The `sort-ascending` <span class="icon-sort-ascending"></span> icon is displayed.
+* * _Sort Descending_. Displayed when the table is sorted such that the values in the associated column are in descending order. The `sort-descending` <span class="icon-sort-descending"></span> icon is displayed.
 * * _Hover_. Visible when the cursor is over the header cell. The cell background darkens, and the `pointer` cursor is shown.
 * * _Disabled_. Visible when the header cell is inactive (e.g., when a modal system tool like Scratchwork is enabled). The icon opacity reduces to 30%.
 **/

@@ -10,9 +10,9 @@
 * Tabs are laid out horizontally and typically left-justified, though item tabs are right-justified.
 * ### Tab States
 * Tabs have the following states by default.
-* * _Unanswered_. The default state. Tab has a gray `#F5F5F5` background.
+* * _Unanswered_. The default state. Tab has a gray <span class="no-wrap">`#F5F5F5` <span class="callout-swatch" style="background-color:#F5F5F5"></span></span> background.
 * * _Answered_. Visible when the associated item has been answered. Tab background is darkened.
-* * _Selected_. Visible when the associated item is on-screen. Tab background changes to white `#FFFFFF`, tab height increases, and the bottom border is removed to connect the tab to the content area.
+* * _Selected_. Visible when the associated item is on-screen. Tab background changes to white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, tab height increases, and the bottom border is removed to connect the tab to the content area.
 * * _Hover_. Visible when the cursor is over the tab. Tab background is lightened.
 * * _Disabled_. Visible when the tab is inactive (e.g., when a modal system tool like Scratchwork is enabled). Tab label color is dimmed to indicate that the tab is inactive.
 *
@@ -258,7 +258,7 @@ html.can-touch .btn-tab-mover:active {
 * @styles 1-scrollbars Scrollbars
 * Scrollbars are provided when a continuous unit of content (e.g., an item) extends beyond the available space.
 *
-* To increase salience, especially for test takers less familiar with digital environments, scrollbars are displayed in blue (`#246BB2` for buttons and thumb, `#EBF5FF` for track) in the default theme. Scrollbar colors in other themes were selected to balance salience with alignment to the theme.
+* To increase salience, especially for test takers less familiar with digital environments, scrollbars are displayed in blue (<span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span> for buttons and thumb, <span class="no-wrap">`#EBF5FF` <span class="callout-swatch" style="background-color:#EBF5FF"></span></span> for track) in the default theme. Scrollbar colors in other themes were selected to balance salience with alignment to the theme.
 *
 * Vertical scrollbars are 20px wide, and horizontal scrollbars are 20px tall. Scrollbar buttons are 20px square, and the corners of the buttons and scrollbar thumb are rounded.
 *
@@ -342,13 +342,13 @@ html.can-touch .btn-tab-mover:active {
 * When navigating to different pages, pages should transition with a smooth slide animation.
 *
 * ### Pagination Buttons
-* When on a screen with a non-white background, pagination buttons are placed in an off-white `#FAFAFA` lozenge to differentiate them from surrounding content. The lozenge is aligned to the left edge of the page and vertically centered.
+* When on a screen with a non-white background, pagination buttons are placed in an off-white <span class="no-wrap">`#FAFAFA` <span class="callout-swatch" style="background-color:#FAFAFA"></span></span> lozenge to differentiate them from surrounding content. The lozenge is aligned to the left edge of the page and vertically centered.
 *
 * __Previous Page__ and __Next Page__ buttons are provided, along with one __Page Number__ button for each page of content. Selecting a __Page Number__ button will navigate the content to the associated page.
 *
-* __Previous Page__ and __Next Page__ buttons use the primary filled button style. They have the `chevron-up` and `chevron-down` icons, respectively.
+* __Previous Page__ and __Next Page__ buttons use the primary filled button style. They have the `chevron-up` and `chevron-down` <span class="icon-chevron-down"></span> icons, respectively.
 *
-* __Page Number__ buttons use the secondary filled button style, with an added selected state to indicate which page is currently being displayed. When selected, the button background color is light blue `#c4e0f8`, and the border is transparent.
+* __Page Number__ buttons use the secondary filled button style, with an added selected state to indicate which page is currently being displayed. When selected, the button background color is light blue <span class="no-wrap">`#c4e0f8` <span class="callout-swatch" style="background-color:#c4e0f8"></span></span>, and the border is transparent.
 *
 * The following demo presents a content container with associated pagination buttons. 
 * @iframe ux/demos/navigation/pagination.html 670
@@ -360,7 +360,7 @@ html.can-touch .btn-tab-mover:active {
 * ### Locking of Paginated Content
 * In SBTs, it is sometimes desirable to hide one or more pages of stimulus content until the test taker takes a particular action. In such cases, the hidden pages are initially locked (i.e., inaccessible).
 *
-* To indicate to test takers that some content is not yet available, the __Page Number__ button(s) for the locked page(s) are replaced with a `lock` icon. When the test taker takes the action needed to unlock the page(s), the `lock` icon is removed, and the page(s) become accessible.
+* To indicate to test takers that some content is not yet available, the __Page Number__ button(s) for the locked page(s) are replaced with a `lock` <span class="icon-lock"></span> icon. When the test taker takes the action needed to unlock the page(s), the `lock` <span class="icon-lock"></span> icon is removed, and the page(s) become accessible.
 *
 * The following demo presents a content container with associated pagination buttons featuring a lock icon.
 * @iframe ux/demos/navigation/pagination-locked.html 730

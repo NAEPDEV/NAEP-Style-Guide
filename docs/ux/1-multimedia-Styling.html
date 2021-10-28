@@ -1217,11 +1217,11 @@
 
 		
 		<section class="description">
-			<p>Multimedia controls are presented on a light gray <code>#EAEAEA</code> background to differentiate them from the surrounding content area.</p>
+			<p>Multimedia controls are presented on a light gray <span class="no-wrap"><code>#EAEAEA</code> <span class="callout-swatch" style="background-color:#EAEAEA"></span></span> background to differentiate them from the surrounding content area.</p>
 <h3>Hero Play button</h3>
 <p>The <strong>Hero Play</strong> button has three states.</p>
 <ul>
-<li><em>Default</em>. Displayed when video clip is paused. A white <code>#FFFFFF</code> <code>play-circle</code> icon is presented over a 65% opaque black <code>#000000</code> background.</li>
+<li><em>Default</em>. Displayed when video clip is paused. A white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> <code>play-circle</code> <span class="icon-play-circle"></span> icon is presented over a 65% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background.</li>
 <li><em>Hover</em>. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The <code>pointer</code> cursor is shown over the entire video content area, indicating that the video will play/pause when selected.</li>
 <li><em>Playing/Disabled</em>. The <strong>Hero Play</strong> button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.</li>
 </ul>
@@ -1243,21 +1243,21 @@
 			<ul>
 <li><em>Default</em>.
 <ul>
-<li>The unplayed section of the scrub track is medium gray <code>#858585</code>.</li>
-<li>The played section of the scrub track is blue <code>#246BB2</code>.</li>
+<li>The unplayed section of the scrub track is medium gray <span class="no-wrap"><code>#858585</code> <span class="callout-swatch" style="background-color:#858585"></span></span>.</li>
+<li>The played section of the scrub track is blue <span class="no-wrap"><code>#246BB2</code> <span class="callout-swatch" style="background-color:#246BB2"></span></span>.</li>
 <li>The thumb is the same blue as the played section of the scrub track.</li>
 </ul></li>
 <li><em>Hover/active</em>. Displayed when the cursor is over the scrub bar or while the test taker is scrubbing through the media clip.
 <ul>
 <li>The <code>pointer</code> cursor is shown.</li>
 <li>The track and thumb are scaled up 150%. (Scaling remains during scrubbing, even if the cursor isn’t directly over the scrub bar.)</li>
-<li>A dark gray <code>#535353</code> bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.</li>
+<li>A dark gray <span class="no-wrap"><code>#535353</code> <span class="callout-swatch" style="background-color:#535353"></span></span> bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.</li>
 <li>A tooltip (see below) appears above the scrub bar showing the time in the media clip associated with the current cursor position during both hover and drag.</li>
 </ul></li>
 <li><em>Disabled</em>. Displayed when the scrub bar is inactive (e.g., when a modal system tool like Scratchwork is enabled).
 <ul>
-<li>The unplayed section of the track changes to a light gray <code>#A6A6A6</code>.</li>
-<li>The thumb and the played section of the track change to a medium gray <code>#AAAAAA</code>.</li>
+<li>The unplayed section of the track changes to a light gray <span class="no-wrap"><code>#A6A6A6</code> <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.</li>
+<li>The thumb and the played section of the track change to a medium gray <span class="no-wrap"><code>#AAAAAA</code> <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>.</li>
 </ul></li>
 </ul>
 <h3>Volume slider</h3>
@@ -1270,15 +1270,15 @@
 <h3>Other Buttons</h3>
 <p>Multimedia control buttons are 2x the base font size (see the <a href="typography.css.html">Typography</a> page) to ensure easy selection via touch. They have three states.</p>
 <ul>
-<li><em>Default</em>. A dark gray <code>#535353</code> icon with no background or border.</li>
-<li><em>Hover</em>. Displayed when the cursor is over the button. Icon color darkens to <code>#1E1E1E</code>, and a tooltip appears above the button. The <code>pointer</code> cursor is shown.</li>
-<li><em>Disabled</em>. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to <code>#A6A6A6</code>.</li>
+<li><em>Default</em>. A dark gray <span class="no-wrap"><code>#535353</code> <span class="callout-swatch" style="background-color:#535353"></span></span> icon with no background or border.</li>
+<li><em>Hover</em>. Displayed when the cursor is over the button. Icon color darkens to <span class="no-wrap"><code>#1E1E1E</code> <span class="callout-swatch" style="background-color:#1E1E1E"></span></span>, and a tooltip appears above the button. The <code>pointer</code> cursor is shown.</li>
+<li><em>Disabled</em>. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to <span class="no-wrap"><code>#A6A6A6</code> <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.</li>
 </ul>
 <h3>Tooltips</h3>
-<p>Tooltips are displayed as white <code>#FFFFFF</code> text on an 85% opaque black <code>#000000</code> background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.</p>
+<p>Tooltips are displayed as white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 85% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.</p>
 <p>The tooltip for the scrub bar has a bottom tail to better connect it to the cursor position.</p>
 <h3>Subtitles</h3>
-<p>Subtitles are displayed as white <code>#FFFFFF</code> text on an 80% opaque black <code>#000000</code> background with rounded corners.</p>
+<p>Subtitles are displayed as white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 80% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners.</p>
 
 		</section>
 		
@@ -1311,7 +1311,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Multimedia controls are presented on a light gray `#EAEAEA` background to differentiate them from the surrounding content area.\n### Hero Play button\nThe __Hero Play__ button has three states.\n* _Default_. Displayed when video clip is paused. A white `#FFFFFF` `play-circle` icon is presented over a 65% opaque black `#000000` background.\n* _Hover_. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The `pointer` cursor is shown over the entire video content area, indicating that the video will play/pause when selected.\n* _Playing/Disabled_. The __Hero Play__ button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.\n### Scrub bar\nThe scrub bar consists of two elements: the track and the thumb. The track has a height 0.2x the base font size (see the [typography.css] page). The circular thumb has a diameter 3.35x the height of the track. The scrub bar has three states.","name":"1-multimedia-Styling","title":"Styling","type":"styles","parent":"multimedia-controls.css","hideInParentMenu":true,"src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Multimedia controls are presented on a light gray <span class=\"no-wrap\">`#EAEAEA` <span class=\"callout-swatch\" style=\"background-color:#EAEAEA\"></span></span> background to differentiate them from the surrounding content area.\n### Hero Play button\nThe __Hero Play__ button has three states.\n* _Default_. Displayed when video clip is paused. A white <span class=\"no-wrap\">`#FFFFFF` <span class=\"callout-swatch\" style=\"background-color:#FFFFFF\"></span></span> `play-circle` <span class=\"icon-play-circle\"></span> icon is presented over a 65% opaque black <span class=\"no-wrap\">`#000000` <span class=\"callout-swatch\" style=\"background-color:#000000\"></span></span> background.\n* _Hover_. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The `pointer` cursor is shown over the entire video content area, indicating that the video will play/pause when selected.\n* _Playing/Disabled_. The __Hero Play__ button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.\n### Scrub bar\nThe scrub bar consists of two elements: the track and the thumb. The track has a height 0.2x the base font size (see the [typography.css] page). The circular thumb has a diameter 3.35x the height of the track. The scrub bar has three states.","name":"1-multimedia-Styling","title":"Styling","type":"styles","parent":"multimedia-controls.css","hideInParentMenu":true,"src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

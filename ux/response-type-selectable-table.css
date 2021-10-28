@@ -11,8 +11,8 @@
 *
 * Selectable rows have the following states.
 * * _Enabled_. This is the default state.
-* * _Hover_. Visible when the cursor is over the row. The row background changes to light blue `#CDDDF3`. The `pointer` cursor is shown.
-* * _Selected_. The row background changes to a medium blue `#9BBCE7`, and the checkbox becomes checked.
+* * _Hover_. Visible when the cursor is over the row. The row background changes to light blue <span class="no-wrap">`#CDDDF3` <span class="callout-swatch" style="background-color:#CDDDF3"></span></span>. The `pointer` cursor is shown.
+* * _Selected_. The row background changes to a medium blue <span class="no-wrap">`#9BBCE7` <span class="callout-swatch" style="background-color:#9BBCE7"></span></span>, and the checkbox becomes checked.
 * * _Disabled_. Visible when the row is inactive (e.g., when a modal system tool like Scratchwork is enabled). The checkbox becomes disabled.
 *
 * A __Clear Answer__ button is provided beneath the table, aligned to its left edge. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).

@@ -13,7 +13,7 @@
 * @styles 0-tts-speakable-units Speakable Units
 * TTS speakable units have the following states.
 * * _Default_. Present when TTS mode is off. There is no visual indicator of speakable units.
-* * _Active_. Present when TTS mode is on. Speakable units are surrounded by a dark blue `#032855` border. (Note that there is no hover state.)
+* * _Active_. Present when TTS mode is on. Speakable units are surrounded by a dark blue <span class="no-wrap">`#032855` <span class="callout-swatch" style="background-color:#032855"></span></span> border. (Note that there is no hover state.)
 **/
 
 /**

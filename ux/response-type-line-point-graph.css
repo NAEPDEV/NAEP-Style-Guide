@@ -10,14 +10,14 @@
 /**
 * @styles 0-lpg-grid Grid
 * The primary interactions for Line & Point Graph responses occur in a coordinate grid (see the [coordinate-grids.css] page). Test takers may add various kinds of objects—points, lines, or line segments—depending on the measurement goals of the item. All objects have the same states and behaviors as interactive points and lines (see the [points-lines-polygons.css] page), though they have different colors and point shapes to maximize visibility for color-blind test takers:
-* * The first object type is green `#008A05` and has triangular points.
-* * The second object type (if present) is blue `#0855B2` and has circular points.
-* * The third object type (if present) is purple `#50008A` and has diamond points.
-* * The fourth object type (if present) is orange `#C35500` and has square points.
+* * The first object type is green <span class="no-wrap">`#008A05` <span class="callout-swatch" style="background-color:#008A05"></span></span> and has triangular points.
+* * The second object type (if present) is blue <span class="no-wrap">`#0855B2` <span class="callout-swatch" style="background-color:#0855B2"></span></span> and has circular points.
+* * The third object type (if present) is purple <span class="no-wrap">`#50008A` <span class="callout-swatch" style="background-color:#50008A"></span></span> and has diamond points.
+* * The fourth object type (if present) is orange <span class="no-wrap">`#C35500` <span class="callout-swatch" style="background-color:#C35500"></span></span> and has square points.
 *
-* A label for each object type is also provided on the grid to further differentiate types. Label colors match those of their associated objects. Labels have a white `#FFFFFF` halo to ensure legibility.
+* A label for each object type is also provided on the grid to further differentiate types. Label colors match those of their associated objects. Labels have a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> halo to ensure legibility.
 *
-* When there is more than one object type, the default disabled state is modified to maximize the differentiation between types: the first one to two types are a lighter gray `#949494`, while the last one to two types are a darker gray `#484848`.
+* When there is more than one object type, the default disabled state is modified to maximize the differentiation between types: the first one to two types are a lighter gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>, while the last one to two types are a darker gray <span class="no-wrap">`#484848` <span class="callout-swatch" style="background-color:#484848"></span></span>.
 **/
 
 /**
@@ -48,35 +48,46 @@
 }
 
 .lp-point {
-  fill: #008a05; }
+  fill: #008a05;
+}
 .lp-point[disabled],
 input[type="radio"][disabled] + label .lp-point {
-  fill: #949494; }
+  fill: #949494;
+}
 
 .lp-line {
-  fill: #0855b2; }
+  fill: #0855b2;
+}
 .lp-line-icon {
-  fill: #0A78BA; }
+  fill: #0a78ba;
+}
 .lp-line[disabled],
 input[type="radio"][disabled] + label .lp-line-icon {
-  fill: #949494; }
+  fill: #949494;
+}
 
 .lp-multi-point {
-  fill: #50008A; }
+  fill: #50008a;
+}
 .lp-multi-point[disabled],
 .lp-multi-point .point[disabled] .point-actual,
 input[type="radio"][disabled] + label .lp-multi-point {
-    fill: #484848; }
+  fill: #484848;
+}
 
 .lp-segment .line-actual {
-  stroke: #c35500; }
+  stroke: #c35500;
+}
 .lp-segment .line[disabled] .line-actual {
-  stroke: #484848; }
+  stroke: #484848;
+}
 
 .lp-segment,
 .lp-segment .point-actual {
-  fill: #c35500; }
+  fill: #c35500;
+}
 .lp-segment[disabled],
 .lp-segment .point[disabled] .point-actual,
 input[type="radio"][disabled] + label .lp-segment {
-  fill: #484848; }
+  fill: #484848;
+}

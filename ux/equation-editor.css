@@ -10,20 +10,20 @@
 
 /**
 * @styles 0-ee-presentation-4-8 Presentation (Grades 4 & 8)
-* The tab area has a thin top border (`#B6BDC3`) and a light blue gradient background. The button area has a dark gray `#373737` background.
+* The tab area has a thin top border (<span class="no-wrap">`#B6BDC3` <span class="callout-swatch" style="background-color:#B6BDC3"></span></span>) and a light blue gradient background. The button area has a dark gray <span class="no-wrap">`#373737` <span class="callout-swatch" style="background-color:#373737"></span></span> background.
 *
 * ### Tab States
-* * _Default_. Tab has an off-white `#F2F2F2` background and a thin gray `#7C7C7C` border. Tab labels are dark gray `#373737`.
+* * _Default_. Tab has an off-white <span class="no-wrap">`#F2F2F2` <span class="callout-swatch" style="background-color:#F2F2F2"></span></span> background and a thin gray <span class="no-wrap">`#7C7C7C` <span class="callout-swatch" style="background-color:#7C7C7C"></span></span> border. Tab labels are dark gray <span class="no-wrap">`#373737` <span class="callout-swatch" style="background-color:#373737"></span></span>.
 * * _Hover_. The `pointer` cursor is shown.
-* * _Selected_. Visible when the associated button area is on screen. Tab text changes to white `#FFFFFF`, and tab background changes to the same gray `#373737` as the button area. The `default` cursor is shown.
-* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, and the label becomes gray `#CCCCCC`.
+* * _Selected_. Visible when the associated button area is on screen. Tab text changes to white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and tab background changes to the same gray <span class="no-wrap">`#373737` <span class="callout-swatch" style="background-color:#373737"></span></span> as the button area. The `default` cursor is shown.
+* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, and the label becomes gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span>.
 *
 * ### Close Button States
-* * _Default_. Button has a blue gradient background, a white label, and a white `#FFFFFF` `down-arrow` icon surrounded by a dark blue `#255571` circle.
+* * _Default_. Button has a blue gradient background, a white label, and a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> `down-arrow` <span class="icon-down-arrow"></span> icon surrounded by a dark blue <span class="no-wrap">`#255571` <span class="callout-swatch" style="background-color:#255571"></span></span> circle.
 * * _Hover_. Button background darkens. The `pointer` cursor is shown.
 *
 * ### Symbol Button States
-* * _Default_. Button background is white `#FFFFFF`, and button label is gray `#555555`.
+* * _Default_. Button background is white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and button label is gray <span class="no-wrap">`#555555` <span class="callout-swatch" style="background-color:#555555"></span></span>.
 * * _Hover_. The `pointer` cursor is shown.
 * * _Disabled_. Button opacity reduces to 30%.
 *
@@ -32,21 +32,21 @@
 
 /**
 * @styles 1-ee-presentation-12 Presentation (Grade 12)
-* The tab area has a thin top border (`#ABB3BA`) and a light blue `#C8D1DA` background. The button area has a dark blue `#192129` background.
+* The tab area has a thin top border (<span class="no-wrap">`#ABB3BA` <span class="callout-swatch" style="background-color:#ABB3BA"></span></span>) and a light blue <span class="no-wrap">`#C8D1DA` <span class="callout-swatch" style="background-color:#C8D1DA"></span></span> background. The button area has a dark blue <span class="no-wrap">`#192129` <span class="callout-swatch" style="background-color:#192129"></span></span> background.
 *
 * ### Tab States
-* * _Default_. Tab has a medium blue `#3C6E9F` background and a thin darker blue `#454C54` border. Tab labels are white `#FFFFFF`.
-* * _Hover_. Visible when the cursor is over an unselected tab. Background darkens to `#315B81`. The `pointer` cursor is shown.
-* * _Selected_. Visible when the associated button area is on screen. Tab background changes to the same dark blue `#192129` as the button area. The `default` cursor is shown.
-* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, the background becomes `#526E89`, and the label becomes gray `#CCCCCC`.
+* * _Default_. Tab has a medium blue <span class="no-wrap">`#3C6E9F` <span class="callout-swatch" style="background-color:#3C6E9F"></span></span> background and a thin darker blue <span class="no-wrap">`#454C54` <span class="callout-swatch" style="background-color:#454C54"></span></span> border. Tab labels are white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.
+* * _Hover_. Visible when the cursor is over an unselected tab. Background darkens to <span class="no-wrap">`#315B81` <span class="callout-swatch" style="background-color:#315B81"></span></span>. The `pointer` cursor is shown.
+* * _Selected_. Visible when the associated button area is on screen. Tab background changes to the same dark blue <span class="no-wrap">`#192129` <span class="callout-swatch" style="background-color:#192129"></span></span> as the button area. The `default` cursor is shown.
+* * _Disabled_. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, the background becomes <span class="no-wrap">`#526E89` <span class="callout-swatch" style="background-color:#526E89"></span></span>, and the label becomes gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span>.
 *
 * ### Close Button States
-* * _Default_. Button has a white `#FFFFFF` `cross` icon and a  blue `#1F4C7A` background.
-* * _Hover_. Button background darkens to `#183B5D`. The `pointer` cursor is shown.
+* * _Default_. Button has a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> `cross` <span class="icon-cross"></span> icon and a  blue <span class="no-wrap">`#1F4C7A` <span class="callout-swatch" style="background-color:#1F4C7A"></span></span> background.
+* * _Hover_. Button background darkens to <span class="no-wrap">`#183B5D` <span class="callout-swatch" style="background-color:#183B5D"></span></span>. The `pointer` cursor is shown.
 *
 * ### Symbol Button States
-* * _Default_. Button background is white at 90% opacity `rgba(255,255,255,0.9)`, and button label is gray `#444444`.
-* * _Hover_. Button background opacity increases to 100%, and button label darkens to `#111111`. The `pointer` cursor is shown.
+* * _Default_. Button background is white at 90% opacity `rgba(255,255,255,0.9)`, and button label is gray <span class="no-wrap">`#444444` <span class="callout-swatch" style="background-color:#444444"></span></span>.
+* * _Hover_. Button background opacity increases to 100%, and button label darkens to <span class="no-wrap">`#111111` <span class="callout-swatch" style="background-color:#111111"></span></span>. The `pointer` cursor is shown.
 * * _Disabled_. Button opacity reduces to 30%.
 *
 * Symbol buttons are organized into groups separated by 1-pixel vertical white borders with 50% opacity `rgba(255,255,255,0.5)`. There is no border between the last button group and the Backspace button.
@@ -368,7 +368,7 @@ html.can-touch #ee-wrapper.ee-old-variant .ee-btn:hover {
 * The Equation Editor never overlays content. Rather, it reduces the available height for the content area when it is on screen.
 *
 * ### Interaction with Text Entry Fields
-* The Equation Editor’s symbol buttons are disabled by default. They become enabled when the test taker clicks a text entry field or presses a key while the text entry field has focus. To indicate to keyboard users which text entry field will be populated by symbols selected in the Equation Editor, a light green `#EBFBE5` background and dark green `#008117` dashed border is applied to the currently active field. The field remains active, and the equation editor buttons remain enabled until the test taker clicks elsewhere on the screen or selects another user interface element via the keyboard. (Selecting any part of the equation editor does not deactivate the field or disable the buttons.)
+* The Equation Editor’s symbol buttons are disabled by default. They become enabled when the test taker clicks a text entry field or presses a key while the text entry field has focus. To indicate to keyboard users which text entry field will be populated by symbols selected in the Equation Editor, a light green <span class="no-wrap">`#EBFBE5` <span class="callout-swatch" style="background-color:#EBFBE5"></span></span> background and dark green <span class="no-wrap">`#008117` <span class="callout-swatch" style="background-color:#008117"></span></span> dashed border is applied to the currently active field. The field remains active, and the equation editor buttons remain enabled until the test taker clicks elsewhere on the screen or selects another user interface element via the keyboard. (Selecting any part of the equation editor does not deactivate the field or disable the buttons.)
 *
 * If a text entry field has focus when the Equation Editor is opened, the field retains focus and becomes active for equation editor entry, and the content area automatically scrolls to ensure that the text entry field remains visible.
 **/

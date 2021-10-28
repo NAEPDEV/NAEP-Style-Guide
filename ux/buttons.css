@@ -23,7 +23,7 @@
 * * _Default_. The default state.
 * * _Hover_. Visible when the cursor is over the button. Button color is lightened, and a drop shadow is added.
 * * _Active_. Visible when the test taker presses down on the button. Button color is darkened and the drop shadow is removed.
-* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray `#E5E5E5`, button text becomes dark gray `#909090`, and the drop shadow is removed.
+* * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>, button text becomes dark gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span>, and the drop shadow is removed.
 * @iframe ux/demos/buttons/filled-button-states.html 100
 *
 *
@@ -38,8 +38,8 @@
 *
 * ### Hierarchy
 * Filled buttons vary in color depending on the type of action they trigger:
-* * A blue `#0068D1` background is used for buttons that trigger the primary action on the current screen (e.g., the __Go on to next section__ button).
-* * A ghost button with a gray `#949494` border and blue `#0855B2` text is used for secondary actions (e.g., __Clear Answer__ buttons in selected-response items).
+* * A blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span> background is used for buttons that trigger the primary action on the current screen (e.g., the __Go on to next section__ button).
+* * A ghost button with a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> border and blue <span class="no-wrap">`#0855B2` <span class="callout-swatch" style="background-color:#0855B2"></span></span> text is used for secondary actions (e.g., __Clear Answer__ buttons in selected-response items).
 * @iframe ux/demos/buttons/button-colors.html 95
 **/
 

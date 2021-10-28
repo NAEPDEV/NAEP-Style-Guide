@@ -17,7 +17,7 @@
 *
 *
 * ### Focus for Interactive Points & Sizing Handles
-* Because [points-lines-polygons.css], and single-direction sizing handles (see [transformable-objects.css]) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray `#949494` circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white `#FFFFFF` fill. (This focus ring also serves as a hover state.)
+* Because [points-lines-polygons.css], and single-direction sizing handles (see [transformable-objects.css]) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill. (This focus ring also serves as a hover state.)
 * @iframe ux/demos/indicators/focus-indicator-iic.html 125
 *
 *
@@ -247,9 +247,9 @@ html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
 
 /**
 * @styles 1-indicators-scroll Scroll Indicator
-* The scroll indicator appears at the lower right of the screen, adjacent to the scrollbar, when assessment content other than reading stimulus passages requires vertical scrolling. The indicator receives the `pointer` icon in all states.
+* The scroll indicator appears at the lower right of the screen, adjacent to the scrollbar, when assessment content other than reading stimulus passages requires vertical scrolling. The indicator receives the `pointer` <span class="icon-pointer"></span> icon in all states.
 *
-* The scroll indicator initially appears in the _More_ state, which includes a `chevron-down-thin` icon at the bottom. When pressed, the scroll indicator takes the test taker to the bottom of the content area and then changes to the _Top_ state, which includes a `chevron-up-thin` icon at the top. The state change will also occur if the test taker scrolls to the bottom of the content area manually.
+* The scroll indicator initially appears in the _More_ state, which includes a `chevron-down-thin` <span class="icon-chevron-down-thin"></span> icon at the bottom. When pressed, the scroll indicator takes the test taker to the bottom of the content area and then changes to the _Top_ state, which includes a `chevron-up-thin` <span class="icon-chevron-up-thin"></span> icon at the top. The state change will also occur if the test taker scrolls to the bottom of the content area manually.
 *
 * Pressing the scroll indicator in the _Top_ state returns the test taker to the top of the content area, and the indicator then disappears. The state change will also occur if the test taker scrolls to the top of the content area manually. Once it has disappeared from a screen, the scroll indicator will not return on that screen during the current session.
 *
@@ -334,7 +334,7 @@ html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
 
 /**
 * @styles 2-indicators-loading Loading Indicator
-* When the system is processing data or loading content and so cannot be interacted with, the loading indicator displays in the center of the screen on top of a semi-transparent gray background. The indicator is green `#1B891B` with rounded corners, and a rotating `spinner` icon appears at its left side.
+* When the system is processing data or loading content and so cannot be interacted with, the loading indicator displays in the center of the screen on top of a semi-transparent gray background. The indicator is green <span class="no-wrap">`#1B891B` <span class="callout-swatch" style="background-color:#1B891B"></span></span> with rounded corners, and a rotating `spinner` <span class="icon-spinner"></span> icon appears at its left side.
 *
 * The following demo presents the behavior of the loading indicator.  
 * @iframe ux/demos/indicators/loading-indicator.html 125

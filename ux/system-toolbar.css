@@ -3,7 +3,7 @@
 * @parent ux.features
 * The system toolbar appears at the top of all assessment content and contains all cross-item tools and features. It cannot be obscured by other user interface (UI) elements (e.g., modal dialog backdrops) to ensure that its features are always accessible.
 *
-* The toolbar has a light gray `#EEEEEE` background and a gray `#BFBFBF` bottom border.
+* The toolbar has a light gray <span class="no-wrap">`#EEEEEE` <span class="callout-swatch" style="background-color:#EEEEEE"></span></span> background and a gray <span class="no-wrap">`#BFBFBF` <span class="callout-swatch" style="background-color:#BFBFBF"></span></span> bottom border.
 *
 * System toolbar buttons use the bare button style, except for the __Back__ and __Next__ buttons, which use variants of the secondary filled and primary filled styles, respectively. (See the [buttons.css] page.)
 **/
@@ -12,25 +12,25 @@
 * @styles 0-system-toolbar-layout Layout
 *
 *
-* The toolbar is divided into the following groups, which are separated by gray `#BFBFBF` vertical dividers.
-* * Help (`question-circle` icon)
+* The toolbar is divided into the following groups, which are separated by gray <span class="no-wrap">`#BFBFBF` <span class="callout-swatch" style="background-color:#BFBFBF"></span></span> vertical dividers.
+* * Help (`question-circle` <span class="icon-question-circle"></span> icon)
 * * Visual presentation features
-*   * Change Theme (`change-theme` icon)
-*   * Zoom Out (`zoom-out` icon)
-*   * Zoom In (`zoom-in` icon)
-*   * Change Language (`lang-esp`/`lang-eng` icon)
+*   * Change Theme (`change-theme` <span class="icon-change-theme"></span> icon)
+*   * Zoom Out (`zoom-out` <span class="icon-zoom-out"></span> icon)
+*   * Zoom In (`zoom-in` <span class="icon-zoom-in"></span> icon)
+*   * Change Language (`lang-esp`/`lang-eng` <span class="icon-lang-eng"></span> icon)
 * * Additional tools
-*   * Read Aloud (`read-aloud` icon)
-*   * Scratchwork (`scratchwork` icon)
-*   * Equation Editor (`equation-editor` icon)
-*   * Calculator (`calculator` icon)
-* * Timer (`timer` icon)
+*   * Read Aloud (`read-aloud` <span class="icon-read-aloud"></span> icon)
+*   * Scratchwork (`scratchwork` <span class="icon-scratchwork"></span> icon)
+*   * Equation Editor (`equation-editor` <span class="icon-equation-editor"></span> icon)
+*   * Calculator (`calculator` <span class="icon-calculator"></span> icon)
+* * Timer (`timer` <span class="icon-timer"></span> icon)
 * * Progress bar (only available for linearly navigated blocks [e.g., scenario-based tasks, SQ blocks])
 * * Navigation
-*   * Back (`arrow-left` icon)
-*   * Next (“Next” label and `arrow-right` icon)
+*   * Back (`arrow-left` <span class="icon-arrow-left"></span> icon)
+*   * Next (“Next” label and `arrow-right` <span class="icon-arrow-right"></span> icon)
 *
-* The progress bar has an off-white `#FCFCFC` background and a gray `#AAAAAA` border. The progress indicator is green `#0BA951`.
+* The progress bar has an off-white <span class="no-wrap">`#FCFCFC` <span class="callout-swatch" style="background-color:#FCFCFC"></span></span> background and a gray <span class="no-wrap">`#AAAAAA` <span class="callout-swatch" style="background-color:#AAAAAA"></span></span> border. The progress indicator is green <span class="no-wrap">`#0BA951` <span class="callout-swatch" style="background-color:#0BA951"></span></span>.
 *
 * The item accession number and block title for the content currently on screen are shown in the center of the toolbar, superimposed on the NAEP logo. For scenario-based tasks, the scene ID displays next to the accession number, separated by a hyphen.
 *

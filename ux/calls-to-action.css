@@ -30,8 +30,8 @@
 * Calls to action are the same font size as item text, but are at a lower font weight to maintain the importance of item text in the visual hierarchy.
 *
 * When placed on a solid fill, calls to action have no background. When placed on an image, calls to action may have one of two styling options applied to ensure readability:
-* * _Default_. Black `#000000` text on a 90% opaque white&#160;`rgba(255,255,255,0.9)` background.
-* * _Inverted_. White `#FFFFFF` text on a 65% opaque black&#160;`rgba(0,0,0,0.65)` background.
+* * _Default_. Black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> text on a 90% opaque white&#160;`rgba(255,255,255,0.9)` background.
+* * _Inverted_. White <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on a 65% opaque black&#160;`rgba(0,0,0,0.65)` background.
 *
 * The example below shows an inverted call to action. Additional examples can be seen on the [intro-exit-screens.css] page.
 * @iframe ux/demos/calls-to-action/image-background.html 437

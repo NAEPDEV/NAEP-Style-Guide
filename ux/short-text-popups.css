@@ -4,7 +4,7 @@
 *
 * When the test taker presses a short-text pop-up button, supplemental information about content immediately preceding the button is provided.
 *
-* Buttons are circular, contain an `asterisk` icon, and are light gray so as not to overwhelm surrounding text. Short-text pop-up buttons may appear within an item or a stimulus.
+* Buttons are circular, contain an `asterisk` <span class="icon-asterisk"></span> icon, and are light gray so as not to overwhelm surrounding text. Short-text pop-up buttons may appear within an item or a stimulus.
 *
 * Pop-ups typically appear above the button but may appear below to avoid extending off-screen. Pop&#8209;up text is presented in a sans-serif typeface, regardless of the typeface used by the surrounding content.
 *

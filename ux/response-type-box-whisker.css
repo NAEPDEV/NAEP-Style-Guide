@@ -23,13 +23,13 @@
 * @styles 1-bw-graph Graph
 * Box-and-whisker graphs include the following elements.
 * * _Title (optional)_. Centered above graph. Bolded and in all caps.
-* * _Graph border_. Thick gray `#CCCCCC` line that bounds the graph.
-* * _Major vertical grid lines_. Thick gray `#757575` lines that establish the major intervals of the _x_-axis.
-* * _Minor vertical grid lines (optional)_. Thin light gray `#949494` lines that establish the minor intervals of the _x_-axis.
-* * _Horizontal grid lines_. Thin, dashed light gray `#949494` lines that establish where box plots can be placed.
-* * _x-axis_. Thick black `#000000` line at the bottom of the graph.
+* * _Graph border_. Thick gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> line that bounds the graph.
+* * _Major vertical grid lines_. Thick gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the major intervals of the _x_-axis.
+* * _Minor vertical grid lines (optional)_. Thin light gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> lines that establish the minor intervals of the _x_-axis.
+* * _Horizontal grid lines_. Thin, dashed light gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> lines that establish where box plots can be placed.
+* * _x-axis_. Thick black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> line at the bottom of the graph.
 * * _Axis name (optional)_. Centered beneath the _x_-axis.
-* * _Axis ticks_. Short gray `#757575` lines along the _x_-axis indicating the increments at which the major vertical grid lines appear.
+* * _Axis ticks_. Short gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines along the _x_-axis indicating the increments at which the major vertical grid lines appear.
 * * _Axis tick labels_. Appear immediately below each axis tick.
 **/
 
@@ -79,10 +79,10 @@
 /**
 * @styles 2-bw-box-plots Box Plots
 * Box plots have the following states.
-* * _Default_. Box has a light blue `#B8E2FF` fill and dark gray `#333333` borders. Whiskers are the same shade of gray.
-* * _Hover_. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to `#72C1F7`, and borders and whiskers become black `#000000`. The `move` cursor is shown.
+* * _Default_. Box has a light blue <span class="no-wrap">`#B8E2FF` <span class="callout-swatch" style="background-color:#B8E2FF"></span></span> fill and dark gray <span class="no-wrap">`#333333` <span class="callout-swatch" style="background-color:#333333"></span></span> borders. Whiskers are the same shade of gray.
+* * _Hover_. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <span class="no-wrap">`#72C1F7` <span class="callout-swatch" style="background-color:#72C1F7"></span></span>, and borders and whiskers become black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>. The `move` cursor is shown.
 * * _Active_. Visible while the box plot is being dragged. Borders and whiskers thicken.
-* * _Disabled_. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray `#949494`, and borders and whiskers become dark gray `#484848`.
+* * _Disabled_. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>, and borders and whiskers become dark gray <span class="no-wrap">`#484848` <span class="callout-swatch" style="background-color:#484848"></span></span>.
 **/
 
 .box-whisker .bw-actual {

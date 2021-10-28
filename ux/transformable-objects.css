@@ -37,10 +37,10 @@
 * When an object cannot be rotated or translated and can only be resized in one direction, a circular sizing handle is provided. The handle appears centered on the draggable side of the object.
 *
 * Single-direction sizing handles have the following states.
-* * _Default_. Handle has a blue `#004696` border and a white `#FFFFFF` fill.
+* * _Default_. Handle has a blue <span class="no-wrap">`#004696` <span class="callout-swatch" style="background-color:#004696"></span></span> border and a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill.
 * * _Hover_. Visible when the cursor is over the handle. A focus ring appears around the handle. (See the [indicators.css] page for more information about focus rings.)
 * * _Active_. Visible when the test taker is dragging the handle. Handle scales up 133%.
-* * _Disabled_. Visible when the handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Border becomes dark gray `#AAAAAA`, and fill becomes light gray `#E5E5E5`.
+* * _Disabled_. Visible when the handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Border becomes dark gray <span class="no-wrap">`#AAAAAA` <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>, and fill becomes light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.
 *
 * When the handle provides vertical resizing, the `ns-resize` cursor is shown on hover. When the handle provides horizontal resizing, the `ew-resize` cursor is shown on hover.
 *
@@ -52,7 +52,7 @@
 *
 *
 * ### Multi-direction
-* When an object can be resized in both directions, or when it is rotatable, square sizing handles are provided. Multi-direction sizing handles have a gray `#333333` border and a white `#FFFFFF` fill.
+* When an object can be resized in both directions, or when it is rotatable, square sizing handles are provided. Multi-direction sizing handles have a gray <span class="no-wrap">`#333333` <span class="callout-swatch" style="background-color:#333333"></span></span> border and a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill.
 *
 * Vertical and horizontal multi-direction sizing handles have the same cursors as their single-direction counterparts. Diagonal sizing handles have the `nesw-resize` or `nwse-resize` cursor as appropriate.
 *
@@ -186,7 +186,7 @@
 
 /**
 * @styles 2-objects-rotation Rotation
-* Test takers can rotate an object by dragging its associated rotation handle. The handle is centered above the associated object and is connected to the object by a dashed line. The handle has a gray `#333333` border and a white `#FFFFFF` fill. A rotation cursor is shown on hover.
+* Test takers can rotate an object by dragging its associated rotation handle. The handle is centered above the associated object and is connected to the object by a dashed line. The handle has a gray <span class="no-wrap">`#333333` <span class="callout-swatch" style="background-color:#333333"></span></span> border and a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill. A rotation cursor is shown on hover.
 *
 * The following demo presents a rotatable object. 
 * @iframe ux/demos/transformable-objects/rotatable-objects.html 362

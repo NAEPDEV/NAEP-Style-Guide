@@ -8,9 +8,9 @@
 * @styles 0-nl-presentation Presentation
 * ### Number Line
 * The number line is composed of the following elements.
-* * A thick black (`#000000`) horizontal line with arrowheads
-* * Black (`#000000`) major tick marks, 1.833x the base font size tall
-* * Gray (`#4D4D4D`) minor tick marks, 1.25x the base font size tall (optional)
+* * A thick black (<span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>) horizontal line with arrowheads
+* * Black (<span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>) major tick marks, 1.833x the base font size tall
+* * Gray (<span class="no-wrap">`#4D4D4D` <span class="callout-swatch" style="background-color:#4D4D4D"></span></span>) minor tick marks, 1.25x the base font size tall (optional)
 * * Tick mark labels (provided for major ticks marks only)
 *
 * The following example presents a number line. 
@@ -22,8 +22,8 @@
 *
 * ### Points & Lines
 * Points, line segments, rays, and lines have the same behavior and styling as interactive points and lines elsewhere in system (see the [points-lines-polygons.css] page), with the following exceptions:
-* * Number Line objects are a lighter blue (`#0084FF`) to provide more differentiation from the number line, which is thicker than lines found in [coordinate-grids.css].
-* * When the cursor is over line segments, rays, and lines, a gray `#575757` border around the entire object is shown rather than focus rings around the attached points. This difference accommodates lines, which do not have points in the Number Line response type.
+* * Number Line objects are a lighter blue (<span class="no-wrap">`#0084FF` <span class="callout-swatch" style="background-color:#0084FF"></span></span>) to provide more differentiation from the number line, which is thicker than lines found in [coordinate-grids.css].
+* * When the cursor is over line segments, rays, and lines, a gray <span class="no-wrap">`#575757` <span class="callout-swatch" style="background-color:#575757"></span></span> border around the entire object is shown rather than focus rings around the attached points. This difference accommodates lines, which do not have points in the Number Line response type.
 **/
 
 /**
@@ -218,15 +218,15 @@ html.can-touch .nl-segment:active .nl-hover-box {
 * In the custom intervals variant, test takers may adjust the number of intervals provided on a number line and then place a point or line segment.
 *
 * ### Behavior
-* * If test takers are allowed to place segments, a black `#000000` pre-populated point is provided.
-*   * Hovering over the number line shows a translucent blue `#0084FF` point and a translucent line segment connecting it to the pre-populated point.
+* * If test takers are allowed to place segments, a black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> pre-populated point is provided.
+*   * Hovering over the number line shows a translucent blue <span class="no-wrap">`#0084FF` <span class="callout-swatch" style="background-color:#0084FF"></span></span> point and a translucent line segment connecting it to the pre-populated point.
 *   * Selecting a location on the number line causes the blue point and line segment to become fully opaque.
 * * If test takers are only allowed to place points, no pre-populated point is provided. The number line behaves identically to the points-only variant.
 *
 * ### Controls
 * * Controls for the number of intervals are centered above the number line. Depending on the measurement goals of an item, one of three variants may be provided:
-*   *  __Remove intervals__ and __Add intervals__ buttons are provided. Both are styled as small circular primary buttons (see the [buttons.css] page). The __Remove intervals__ button has the `minus-thin` icon, while the __Add intervals__ button has the `plus-thin` icon.
-*   * __Remove intervals__ and __Add intervals__ buttons are provided with a readout of the current number of intervals between them. The readout has a light gray `#E5E5E5` background.
+*   *  __Remove intervals__ and __Add intervals__ buttons are provided. Both are styled as small circular primary buttons (see the [buttons.css] page). The __Remove intervals__ button has the `minus-thin` <span class="icon-minus-thin"></span> icon, while the __Add intervals__ button has the `plus-thin` <span class="icon-plus-thin"></span> icon.
+*   * __Remove intervals__ and __Add intervals__ buttons are provided with a readout of the current number of intervals between them. The readout has a light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span> background.
 *   * __Remove intervals__ and __Add intervals__ buttons are provided with a text entry field between them. Test takers can enter the desired number of intervals in the field, which has the same states as [response-type-text-entry.css] responses.
 * * __Undo__ and __Reset__ buttons  are right-justified beneath the number line. Both buttons use the small secondary filled button style. (See the [buttons.css] page for more information.)
 *   * The __Undo__ button reverts the last change to the number line.
@@ -272,8 +272,8 @@ html.can-touch .nl-segment:active .nl-hover-box {
 * Zoomable sections begin 10% the width of an interval to the left of each tick mark and end 10% the width of an interval to the right of the subsequent tick mark. Zoomable sections have the following states.
 * * _Default_. Section is transparent.
 * * _Hover_. Visible when the cursor is over the section. Section background becomes a translucent blue `rgba(0,133,255,0.3)`. The `pointer` cursor is shown.
-* * _Selected_. A blue `#3366CC` border appears around the section. A wedge with a light gray `#E0E0E0` fill and gray `#757575` border connects the section to the zoomed-in view. The zoomed-in view has a light blue `#4496e0` border.
-* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unselected sections remain transparent. For selected sections, the section border becomes dark gray `#484848`, and the zoomed-in view border becomes gray `#949494.`
+* * _Selected_. A blue <span class="no-wrap">`#3366CC` <span class="callout-swatch" style="background-color:#3366CC"></span></span> border appears around the section. A wedge with a light gray <span class="no-wrap">`#E0E0E0` <span class="callout-swatch" style="background-color:#E0E0E0"></span></span> fill and gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> border connects the section to the zoomed-in view. The zoomed-in view has a light blue <span class="no-wrap">`#4496e0` <span class="callout-swatch" style="background-color:#4496e0"></span></span> border.
+* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unselected sections remain transparent. For selected sections, the section border becomes dark gray <span class="no-wrap">`#484848` <span class="callout-swatch" style="background-color:#484848"></span></span>, and the zoomed-in view border becomes gray `#949494.`
 *
 * Hovering or selecting a point in the zoomed-in view causes a smaller version of the point to appear in the same state in the corresponding zoomable section on the main number line.
 *

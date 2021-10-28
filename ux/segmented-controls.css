@@ -6,17 +6,17 @@ Segmented controls are used to switch between several mutually exclusive modes o
 
 /**
 * @styles 0-sc-presentation Presentation
-* A segmented control has a gray `#949494` border and rounded corners. The control is composed of at least three options to avoid state ambiguity.
+* A segmented control has a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> border and rounded corners. The control is composed of at least three options to avoid state ambiguity.
 *
 * Segmented control options always contain a text label and may contain an accompanying icon or image. All options in a control have the same width and height.
 *
 * Only one option can be selected at a time. The selected option cannot be deselected; instead, another option must be selected.
 *
 * Segmented control options have the following states, based on the secondary filled button style (see the [buttons.css] page for more information).
-* * _Default_. Option has a blue `#0855B2` label and gray `#949494` borders separating it from adjacent options.
-* * _Hover_. Visible when the cursor is over the option. Option background changes to a light blue `#d6ebff`. The `pointer` cursor is shown.
-* * _Selected_. Option background changes to blue `#0855B2`, and option label changes to white `#FFFFFF`. Borders with adjacent options also change to blue. If an icon is present, it receives a white `#FFFFFF` border to ensure visibility.
-* * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). Option background becomes light gray `#E5E5E5`, and option label becomes dark gray `#909090`. For the selected option, the shades of gray are reversed.
+* * _Default_. Option has a blue <span class="no-wrap">`#0855B2` <span class="callout-swatch" style="background-color:#0855B2"></span></span> label and gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> borders separating it from adjacent options.
+* * _Hover_. Visible when the cursor is over the option. Option background changes to a light blue <span class="no-wrap">`#d6ebff` <span class="callout-swatch" style="background-color:#d6ebff"></span></span>. The `pointer` cursor is shown.
+* * _Selected_. Option background changes to blue <span class="no-wrap">`#0855B2` <span class="callout-swatch" style="background-color:#0855B2"></span></span>, and option label changes to white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>. Borders with adjacent options also change to blue. If an icon is present, it receives a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> border to ensure visibility.
+* * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). Option background becomes light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>, and option label becomes dark gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span>. For the selected option, the shades of gray are reversed.
 **/
 
 /**

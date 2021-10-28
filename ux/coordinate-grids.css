@@ -8,13 +8,13 @@
 @styles 0-grids-elements Grid Elements
 * Coordinate grids are composed of the following elements.
 * * _Title (optional)_. Centered above grid. Bolded and in all caps.
-* * _Grid border_. Light gray `#CCCCCC` line that bounds the grid.
-* * _Grid lines_. Gray `#949494` lines that form the grid.
-* * _Axes_. Black `#000000` lines with arrowheads.
-* * _Axis labels_. An italicized _x_ or _y_ positioned at the upper bound of the associated axis. Each label has a white `#FFFFFF` halo around it to prevent collisions with the grid lines.
+* * _Grid border_. Light gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> line that bounds the grid.
+* * _Grid lines_. Gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> lines that form the grid.
+* * _Axes_. Black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> lines with arrowheads.
+* * _Axis labels_. An italicized _x_ or _y_ positioned at the upper bound of the associated axis. Each label has a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> halo around it to prevent collisions with the grid lines.
 * * _Axis names (optional)_. Centered next to the associated axis.
-* * _Axis ticks_. Short black `#000000` lines along each axis indicating the increments at which the grid lines appear.
-* * _Axis tick labels_. Appear immediately below (for the _x_-axis) or to the left (for the _y_-axis) of each axis tick. Each label has a white `#FFFFFF` halo around it to prevent collisions with the grid lines.
+* * _Axis ticks_. Short black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> lines along each axis indicating the increments at which the grid lines appear.
+* * _Axis tick labels_. Appear immediately below (for the _x_-axis) or to the left (for the _y_-axis) of each axis tick. Each label has a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> halo around it to prevent collisions with the grid lines.
 **/
 
 .cg-grid-wrapper {
@@ -42,7 +42,6 @@ TEXT
   stroke: #fff;
   stroke-width: 9px;
 }
-
 
 /*--------------------------------------
 LINES

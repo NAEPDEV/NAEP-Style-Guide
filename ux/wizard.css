@@ -12,7 +12,7 @@
 
 /**
 * @styles 0-wizard-presentation Presentation
-* A wizard appears over a white `#FFFFFF` backdrop that takes up the full height and width of the content area. The wizard itself is white `#FFFFFF` and has a drop shadow.
+* A wizard appears over a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> backdrop that takes up the full height and width of the content area. The wizard itself is white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> and has a drop shadow.
 *
 * The default width of a wizard is 75 characters, and the default height is 29x the base font size (see the [typography.css] page for more information). Wizard size can be increased dynamically when needed to accommodate larger content.
 *
@@ -113,9 +113,9 @@
 * @styles 2-wizard-Typography Typography
 * Typical text in wizards is ~92% eNAEP's default font size. (See the [typography.css] page for more information.)
 *
-* Each card has a key title or direction that is blue `#2A69A7` and 1.67x the base wizard font size to ensure it is high in the visual hierarchy.
+* Each card has a key title or direction that is blue <span class="no-wrap">`#2A69A7` <span class="callout-swatch" style="background-color:#2A69A7"></span></span> and 1.67x the base wizard font size to ensure it is high in the visual hierarchy.
 *
-* When a card has multiple sub-steps, each step is preceded with a blue `#2A69A7` number 1.5x the base wizard font size.
+* When a card has multiple sub-steps, each step is preceded with a blue <span class="no-wrap">`#2A69A7` <span class="callout-swatch" style="background-color:#2A69A7"></span></span> number 1.5x the base wizard font size.
 **/
 .wizard h3 {
   border: 0.083rem solid transparent;
@@ -217,13 +217,13 @@ WIZARD IMAGES
 * * If the transition is between two cards of different sizes, the current card fades out, the wizard resizes, and then the new card fades in.
 *
 * ### Navigation Buttons
-* The wizard __Next__ and __Back__ buttons appear, respectively, at the bottom right and bottom left corners of the wizard. The buttons are styled similarly to the [system-toolbar.css] navigational buttons, except that the wizard __Next__ button label is smaller and the button background is a more saturated blue `#0068D1`.
+* The wizard __Next__ and __Back__ buttons appear, respectively, at the bottom right and bottom left corners of the wizard. The buttons are styled similarly to the [system-toolbar.css] navigational buttons, except that the wizard __Next__ button label is smaller and the button background is a more saturated blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>.
 *
 * On the first card in the wizard, the __Back__ button is hidden. On the last card in the wizard, the __Next__ button’s label changes to indicate what will happen when the test taker closes the wizard (e.g., “Start the task”).
 *
 * ### Navigation Dots
 * The navigation dot array is horizontally centered at the bottom of the wizard. One navigation dot appears for each card in the wizard. Dots have the following states.
-* * _Default_. Dot is gray `#949494`.
+* * _Default_. Dot is gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 * * _Active_. Visible when the card associated with the dot is on screen. Dot darkens.
 **/
 .wizard-nav-wrapper {

@@ -14,13 +14,13 @@
 
 /**
 * @styles 0-dl-grid Grid
-* The primary interactions for System of Equations responses occur in a coordinate grid (see the [coordinate-grids.css] page). One to two linear functions appear on the grid as interactive points and lines (see the [points-lines-polygons.css] page), which test takers can manipulate. When there is one function it is the default blue for interactive points and lines. When there are two functions, the first is green `#00B006`, and the second is purple `#50008A` to maintain visibility for color-blind test takers (see the [colors.md] page). When disabled, the first function becomes drak gray `#484848`, and the second becomes light gray `#949494`.
+* The primary interactions for System of Equations responses occur in a coordinate grid (see the [coordinate-grids.css] page). One to two linear functions appear on the grid as interactive points and lines (see the [points-lines-polygons.css] page), which test takers can manipulate. When there is one function it is the default blue for interactive points and lines. When there are two functions, the first is green <span class="no-wrap">`#00B006` <span class="callout-swatch" style="background-color:#00B006"></span></span>, and the second is purple <span class="no-wrap">`#50008A` <span class="callout-swatch" style="background-color:#50008A"></span></span> to maintain visibility for color-blind test takers (see the [colors.md] page). When disabled, the first function becomes drak gray <span class="no-wrap">`#484848` <span class="callout-swatch" style="background-color:#484848"></span></span>, and the second becomes light gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 *
 * The grid sections between the functions are interactive so that test takers may select them as part of the reponse. Grid sections have the following states.
 * * _Default_. The section is transparent.
-* * _Hover_. Visible when the cursor is over the section. The section has a black `#000000` fill at 12% opacity. The `pointer` cursor is shown.
-* * _Selected_. The section has a blue `#0084FF` fill at 41% opacity.
-* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). When disabled, selected sections have a gray `#595959` fill at 41% opacity.
+* * _Hover_. Visible when the cursor is over the section. The section has a black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> fill at 12% opacity. The `pointer` cursor is shown.
+* * _Selected_. The section has a blue <span class="no-wrap">`#0084FF` <span class="callout-swatch" style="background-color:#0084FF"></span></span> fill at 41% opacity.
+* * _Disabled_. Visible when the section is inactive (e.g., when a modal system tool like Scratchwork is enabled). When disabled, selected sections have a gray <span class="no-wrap">`#595959` <span class="callout-swatch" style="background-color:#595959"></span></span> fill at 41% opacity.
 **/
 
 /**

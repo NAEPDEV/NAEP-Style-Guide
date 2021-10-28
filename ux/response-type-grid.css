@@ -13,7 +13,7 @@
 * * Option columns are all the same width. By default, they are 6.25x the base font size by default, but they may be set to 8.33x or 11.67x if needed to accommodate longer words.
 * * Option labels are left-justified. Category names are centered.
 *
-* Option rows are zebra striped. In odd rows, option label cells are light blue `#D6EBFF`, and option cells are a darker blue `#F5FAFF`. In even rows, both option label cells and option cells are white `#FFFFFF`.
+* Option rows are zebra striped. In odd rows, option label cells are light blue <span class="no-wrap">`#D6EBFF` <span class="callout-swatch" style="background-color:#D6EBFF"></span></span>, and option cells are a darker blue <span class="no-wrap">`#F5FAFF` <span class="callout-swatch" style="background-color:#F5FAFF"></span></span>. In even rows, both option label cells and option cells are white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.
 *
 * A __Clear Answer__ button is provided beneath the option table, and is aligned to the left side of the table. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).
 **/
@@ -21,9 +21,9 @@
 /**
 * @styles 0-grid-option-states Option States
 * Grid option cells have the following states. Colors match those of the [response-type-mc.css] response type.
-* * _Default_. Options are surrounded by a light gray `#CCCCCC` border.
-* * _Hover_. Visible when the cursor is over the option row. The border for the entire row becomes blue `#7FBFFF`. The `pointer` cursor is shown over the entirety of each option cell because test takers can click or tap anywhere in a cell to select its option.
-* * _Selected_. The border for the entire row becomes bright blue `#198CFF` to indicate that (at least) one selection per row is required, and the selection state of the radio button/checkbox is toggled.
+* * _Default_. Options are surrounded by a light gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border.
+* * _Hover_. Visible when the cursor is over the option row. The border for the entire row becomes blue <span class="no-wrap">`#7FBFFF` <span class="callout-swatch" style="background-color:#7FBFFF"></span></span>. The `pointer` cursor is shown over the entirety of each option cell because test takers can click or tap anywhere in a cell to select its option.
+* * _Selected_. The border for the entire row becomes bright blue <span class="no-wrap">`#198CFF` <span class="callout-swatch" style="background-color:#198CFF"></span></span> to indicate that (at least) one selection per row is required, and the selection state of the radio button/checkbox is toggled.
 * * _Disabled_. Visible when the option is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option cell background and selection indicator are dimmed.
 *
 * The following demos present a single-select grid item variant and a multiple-select grid item variant.

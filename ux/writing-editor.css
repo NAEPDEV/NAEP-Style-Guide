@@ -12,7 +12,7 @@
 
 /**
 * @styles 0-wri-panel-divider Panel Divider
-* The writing editor environment panels are separated by a gray `#EEEEEE` divider with a dark gray `#BBBBBB` border and a drop shadow.
+* The writing editor environment panels are separated by a gray <span class="no-wrap">`#EEEEEE` <span class="callout-swatch" style="background-color:#EEEEEE"></span></span> divider with a dark gray <span class="no-wrap">`#BBBBBB` <span class="callout-swatch" style="background-color:#BBBBBB"></span></span> border and a drop shadow.
 *
 * Two __Panel Size__ buttons are located at the top of the divider. They can be used to switch between three views:
 * * _Full-screen task_: The writing task takes up the full width of the screen, and the divider sits on the screen’s right edge. This is the initial view when the test taker enters a writing block.
@@ -20,8 +20,8 @@
 * * _Full-screen editor_: The writing editor takes up the full width of the screen, and the divider sits on the screen’s left edge.
 *
 * The __Panel Size__ buttons have the following states.
-* * _Enabled_. The default state. The button’s background is blue `#246BB2`, and its icon is white `#FFFFFF`. The left button has the `chevron-left` icon. The right has the `chevron-right` icon.
-* * _Hover_. Visible when the cursor is over the button. The background color is lightened to `#008EFA`. The `pointer` cursor is shown.
+* * _Enabled_. The default state. The button’s background is blue <span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span>, and its icon is white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>. The left button has the `chevron-left` <span class="icon-chevron-left"></span> icon. The right has the `chevron-right` <span class="icon-chevron-right"></span> icon.
+* * _Hover_. Visible when the cursor is over the button. The background color is lightened to <span class="no-wrap">`#008EFA` <span class="callout-swatch" style="background-color:#008EFA"></span></span>. The `pointer` cursor is shown.
 * * _Disabled_. Visible when the button is inactive. The button’s opacity is reduced to 30%.
 **/
 #buttonbox {
@@ -137,43 +137,43 @@ html.can-touch #toggleLeft:hover {
 * @styles 2-wri-editor-toolbar Editor Toolbar
 * The editor toolbar appears above the writing area. It provides access to all writing editor tools and dialogs.
 * ### Presentation
-* The editor toolbar has a background gradient (`#F9F9F9` to `#F5F5F5`) and a bottom gray `#D5D5D5` border. Like the writing area and dialogs, it is set in the Arial typeface. The toolbar is arranged into three groups, each including a set of related controls.
+* The editor toolbar has a background gradient (<span class="no-wrap">`#F9F9F9` <span class="callout-swatch" style="background-color:#F9F9F9"></span></span> to <span class="no-wrap">`#F5F5F5` <span class="callout-swatch" style="background-color:#F5F5F5"></span></span>) and a bottom gray <span class="no-wrap">`#D5D5D5` <span class="callout-swatch" style="background-color:#D5D5D5"></span></span> border. Like the writing area and dialogs, it is set in the Arial typeface. The toolbar is arranged into three groups, each including a set of related controls.
 *
 * * Edit
-*   * Cut (`cut` icon)
-*   * Copy (`copy` icon)
-*   * Paste (`paste` icon)
-*   * Select all (`select-all` icon)
-*   * Undo (`undo` icon)
-*   * Redo (`redo` icon)
+*   * Cut (`cut` <span class="icon-cut"></span> icon)
+*   * Copy (`copy` <span class="icon-copy"></span> icon)
+*   * Paste (`paste` <span class="icon-paste"></span> icon)
+*   * Select all (`select-all` <span class="icon-select-all"></span> icon)
+*   * Undo (`undo` <span class="icon-undo"></span> icon)
+*   * Redo (`redo` <span class="icon-redo"></span> icon)
 * * Format
-*   * Bold (`bold` icon)
-*   * Italic (`italic` icon)
-*   * Underline (`underline` icon)
-*   * Decrease indent (`decrease-indent` icon)
-*   * Increase indent (`increase-indent` icon)
-*   * Small font size (`font-size-small` icon)
-*   * Medium font size (`font-size-med` icon)
-*   * Large font size (`font-size-large` icon)
+*   * Bold (`bold` <span class="icon-bold"></span> icon)
+*   * Italic (`italic` <span class="icon-italic"></span> icon)
+*   * Underline (`underline` <span class="icon-underline"></span> icon)
+*   * Decrease indent (`decrease-indent` <span class="icon-decrease-indent"></span> icon)
+*   * Increase indent (`increase-indent` <span class="icon-increase-indent"></span> icon)
+*   * Small font size (`font-size-small` <span class="icon-font-size-small"></span> icon)
+*   * Medium font size (`font-size-med` <span class="icon-font-size-med"></span> icon)
+*   * Large font size (`font-size-large` <span class="icon-font-size-large"></span> icon)
 * * Tools
-*   * Spell check (`spell-check` icon)
-*   * Spell check options (`cog` icon)
-*   * Thesaurus (`thesaurus` icon)
+*   * Spell check (`spell-check` <span class="icon-spell-check"></span> icon)
+*   * Spell check options (`cog` <span class="icon-cog"></span> icon)
+*   * Thesaurus (`thesaurus` <span class="icon-thesaurus"></span> icon)
 *
-* Controls are presented both within dropdown menus and as buttons, except for the Spell Check Options dialog, which is only presented in the Tools menu. Dropdown menus and associated buttons are grouped together to convey that they provide redundant functionality. Control groups are separated by a vertical gray `#909090` divider.
+* Controls are presented both within dropdown menus and as buttons, except for the Spell Check Options dialog, which is only presented in the Tools menu. Dropdown menus and associated buttons are grouped together to convey that they provide redundant functionality. Control groups are separated by a vertical gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span> divider.
 * ### Dropdown Menus
 * Dropdown menus are composed of a menu label, which opens the menu when selected, and the menu body.
 *
 * Menu labels have the following states.
-* * _Enabled_. The default state. Menu label has a gray border and text (`#909090` and `#666666`, respectively), rounded corners, and a downward pointing caret on its right side.
-* * _Hover_. Visible when the cursor is over the menu label. The label’s background changes to a light blue `#CDE6F7`, its border and caret change to a dark blue `#2A8DD4`, and its text darkens to `#494949`. A subtle drop shadow appears, and the `pointer` cursor is shown.
-* * _Active_. Visible when the test taker presses down on the menu label. The background darkens to `#9DCEF1`, and the drop shadow is removed.
-* * _Toggled on_: Visible when the associated menu body is open. Background becomes white `#FFFFFF`, text becomes black `#000000`, and the caret points upward. The bottom border is removed so that the menu label appears connected to the menu body.
+* * _Enabled_. The default state. Menu label has a gray border and text (<span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span> and <span class="no-wrap">`#666666` <span class="callout-swatch" style="background-color:#666666"></span></span>, respectively), rounded corners, and a downward pointing caret on its right side.
+* * _Hover_. Visible when the cursor is over the menu label. The label’s background changes to a light blue <span class="no-wrap">`#CDE6F7` <span class="callout-swatch" style="background-color:#CDE6F7"></span></span>, its border and caret change to a dark blue <span class="no-wrap">`#2A8DD4` <span class="callout-swatch" style="background-color:#2A8DD4"></span></span>, and its text darkens to <span class="no-wrap">`#494949` <span class="callout-swatch" style="background-color:#494949"></span></span>. A subtle drop shadow appears, and the `pointer` cursor is shown.
+* * _Active_. Visible when the test taker presses down on the menu label. The background darkens to <span class="no-wrap">`#9DCEF1` <span class="callout-swatch" style="background-color:#9DCEF1"></span></span>, and the drop shadow is removed.
+* * _Toggled on_: Visible when the associated menu body is open. Background becomes white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, text becomes black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>, and the caret points upward. The bottom border is removed so that the menu label appears connected to the menu body.
 * * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Text, border, and caret lighten.
 *
-* Menu bodies have a white `#FFFFFF` background, a blue `#2A8DD4` border, rounded corners, and a drop shadow when visible. Each option in a menu body has the following states.
-* * _Enabled_. The default state. Option icon and label are left-justified, while the keyboard shortcut, if present, is right-justified. The label is black `#000000`, and the keyboard shortcut is dark gray `#777777`.
-* * _Hover_. Background changes to light blue `#CDE6F7`. The `pointer` cursor is shown.
+* Menu bodies have a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, a blue <span class="no-wrap">`#2A8DD4` <span class="callout-swatch" style="background-color:#2A8DD4"></span></span> border, rounded corners, and a drop shadow when visible. Each option in a menu body has the following states.
+* * _Enabled_. The default state. Option icon and label are left-justified, while the keyboard shortcut, if present, is right-justified. The label is black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>, and the keyboard shortcut is dark gray <span class="no-wrap">`#777777` <span class="callout-swatch" style="background-color:#777777"></span></span>.
+* * _Hover_. Background changes to light blue <span class="no-wrap">`#CDE6F7` <span class="callout-swatch" style="background-color:#CDE6F7"></span></span>. The `pointer` cursor is shown.
 * * _Disabled_. Icon, label, and keyboard shortcut lighten.
 *
 * Menu bodies typically hang right when open; however, if a menu body would extend past the right edge of the content area, the menu body hangs left. Only one dropdown menu may be open at a time. A dropdown menu and the context menu cannot be open at the same time.
@@ -220,7 +220,7 @@ WRITING PANE STYLES
 * @styles 6-wri-context-menu Context Menu
 * The context menu appears when test takers right-click the writing area. When any other area of the screen is clicked or right-clicked, the context menu closes. It also closes when the test taker presses Escape.
 *
-* The context menu has a white `#FFFFFF` background, a gray `#949494` border, and a drop shadow to differentiate it from the writing area.
+* The context menu has a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> border, and a drop shadow to differentiate it from the writing area.
 *
 * The context menu has the following options when a correctly spelled word is right-clicked:
 * * Cut
@@ -239,8 +239,8 @@ WRITING PANE STYLES
 * When an incorrectly spelled word is right-clicked, up to five spelling suggestions (depending on the available suggestions in the spell checker) are shown in the context menu, followed by an “Ignore all” option.
 *
 * Context menu options have the following states.
-* * _Enabled_. The default state. Option icon (if present) and label are left-justified. The label is black `#000000`.
-* * _Hover_. Background changes to light blue `#CDE6F7`. The `pointer` cursor is shown.
+* * _Enabled_. The default state. Option icon (if present) and label are left-justified. The label is black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>.
+* * _Hover_. Background changes to light blue <span class="no-wrap">`#CDE6F7` <span class="callout-swatch" style="background-color:#CDE6F7"></span></span>. The `pointer` cursor is shown.
 * * _Disabled_. Icon and label lighten.
 *
 * Both the context menu and its submenus will not overflow the content area. For example, if a test taker right-clicks the lower-right corner of the writing area, the context menu will appear above the cursor and far enough left such that it is entirely visible.
@@ -626,9 +626,9 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 
 /**
 * @styles 3-wri-area Writing Area
-* The writing area is where test takers compose their responses. It has a white `#FFFFFF` fill, a gray `#C9C9C9` border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5"x11" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.
+* The writing area is where test takers compose their responses. It has a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill, a gray <span class="no-wrap">`#C9C9C9` <span class="callout-swatch" style="background-color:#C9C9C9"></span></span> border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5"x11" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.
 *
-* The writing area is surrounded by a background with a gray gradient (`#E0E0E0` to `#CCCCCC`) to differentiate it from the editor toolbar.
+* The writing area is surrounded by a background with a gray gradient (<span class="no-wrap">`#E0E0E0` <span class="callout-swatch" style="background-color:#E0E0E0"></span></span> to <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span>) to differentiate it from the editor toolbar.
 *
 * As the test taker scrolls down in longer responses, a drop shadow fades in below the editor toolbar to better differentiate the white writing area from the light gray toolbar.
 *
@@ -707,13 +707,13 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 * ### Presentation
 * Writing editor dialogs are presented differently than system [dialogs.css] to convey their particular functionality and to better associate them with the rest of the writing editor user interface (UI).
 *
-* Writing editor dialogs have a light gray `#F9F9F9` background, a dark gray `#909090` border, rounded corners, and a drop shadow to differentiate them from surrounding content. Button and background text is dark gray `#555555` to better emphasize the dialog’s input fields, whose text is black `#000000`. Like the editor toolbar and the writing area, writing editor dialogs are set in the Arial typeface.
+* Writing editor dialogs have a light gray <span class="no-wrap">`#F9F9F9` <span class="callout-swatch" style="background-color:#F9F9F9"></span></span> background, a dark gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span> border, rounded corners, and a drop shadow to differentiate them from surrounding content. Button and background text is dark gray <span class="no-wrap">`#555555` <span class="callout-swatch" style="background-color:#555555"></span></span> to better emphasize the dialog’s input fields, whose text is black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>. Like the editor toolbar and the writing area, writing editor dialogs are set in the Arial typeface.
 *
-* All writing editor dialogs have a top blue `#246BB2` bar that contains the dialog’s title. A __Close__ button appears at the right side of the title bar. The __Close__ button has the following states.
-* * _Enabled_. The default state. The button’s background is light gray `#F9F9F9`, and its `cross` icon is dark gray `#909090`.
+* All writing editor dialogs have a top blue <span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span> bar that contains the dialog’s title. A __Close__ button appears at the right side of the title bar. The __Close__ button has the following states.
+* * _Enabled_. The default state. The button’s background is light gray <span class="no-wrap">`#F9F9F9` <span class="callout-swatch" style="background-color:#F9F9F9"></span></span>, and its `cross` <span class="icon-cross"></span> icon is dark gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span>.
 * * _Hover_. Visible when the cursor is over the button. The icon and border colors are darkened, and the `pointer` cursor is shown.
 *
-* Buttons in writing editor dialogs typically have dark gray borders and labels (`#909090` and `#666666`, respectively). However, the button that triggers the dialog’s primary action (__Change__ for spell check, __Replace__ for thesaurus) has a blue `#246BB2` background and white `#FFFFFF` label for emphasis.
+* Buttons in writing editor dialogs typically have dark gray borders and labels (<span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span> and <span class="no-wrap">`#666666` <span class="callout-swatch" style="background-color:#666666"></span></span>, respectively). However, the button that triggers the dialog’s primary action (__Change__ for spell check, __Replace__ for thesaurus) has a blue <span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span> background and white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> label for emphasis.
 *
 * ### Behavior
 *  Writing editor dialogs can be moved around the content area by dragging the title bar. The `move` cursor is shown when hovering over the title bar to help convey this functionality. Dialogs cannot be moved on top of the [system-toolbar.css]. When a writing editor dialog is first opened, it appears at the center of the content area. Once the test taker moves a dialog, its position is retained if it is closed and re-opened.

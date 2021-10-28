@@ -226,12 +226,12 @@ CHARACTER TEXT STYLES
 * When text-to-speech is enabled, voiceover playback is paused.
 * ### Voiceover buttons
 * When voiceover is provided for character dialogue, a __Voiceover__ button is presented either at the upper right of the speech bubble (in the distinct style) or at the upper right of the character portrait (in the intermediate and subtle styles).  __Voiceover__ buttons have the following states.
-* * _Paused_. Visible when the voiceover is paused. The button is gray `#767676` and displays the `volume-up` icon. (See the [icons.css] page.)
-* * _Playing_. Visible when the voiceover is playing. The button is blue `0068D1` and displays the `pause` icon.
+* * _Paused_. Visible when the voiceover is paused. The button is gray <span class="no-wrap">`#767676` <span class="callout-swatch" style="background-color:#767676"></span></span> and displays the `volume-up` <span class="icon-volume-up"></span> icon. (See the [icons.css] page.)
+* * _Playing_. Visible when the voiceover is playing. The button is blue `0068D1` and displays the `pause` <span class="icon-pause"></span> icon.
 * ### Interactive portraits
 * In the intermediate and subtle styles, the character’s portrait changes state along with its __Voiceover__ button.
-* * _Paused_. If the portrait has a border, it becomes gray `#949494`. If the portrait has a background, it becomes light gray `#E5E5E5`.
-* * _Playing_. If the portrait has a border, it becomes blue `#0068D1`. If the portrait has a background, it becomes light blue `#C6EAF7`.
+* * _Paused_. If the portrait has a border, it becomes gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>. If the portrait has a background, it becomes light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.
+* * _Playing_. If the portrait has a border, it becomes blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>. If the portrait has a background, it becomes light blue <span class="no-wrap">`#C6EAF7` <span class="callout-swatch" style="background-color:#C6EAF7"></span></span>.
 **/
 
 .char-wrapper .btn.btn-secondary {

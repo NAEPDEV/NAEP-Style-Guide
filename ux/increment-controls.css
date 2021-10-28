@@ -5,9 +5,9 @@
 *
 * The components of an increment control are presented in a row, with the decrement button on the left, a label in the middle, and the increment button on the right.
 *
-* The label has gray `#757575` top and bottom borders.
+* The label has gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> top and bottom borders.
 *
-* The buttons have the same presentation and states as primary filled buttons (see the [buttons.css] page for more information), except that only the outer corners are rounded. The decrement button typically has the `minus-thin` icon, and the increment button typicaly has the `plus-thin` icon (see the [icons.css] page for more information), though other icons may be used in special cases. When the test taker reaches the minimum or maximum value allowed for a given control, the appropriate button becomes disabled.
+* The buttons have the same presentation and states as primary filled buttons (see the [buttons.css] page for more information), except that only the outer corners are rounded. The decrement button typically has the `minus-thin` <span class="icon-minus-thin"></span> icon, and the increment button typicaly has the `plus-thin` <span class="icon-plus-thin"></span> icon (see the [icons.css] page for more information), though other icons may be used in special cases. When the test taker reaches the minimum or maximum value allowed for a given control, the appropriate button becomes disabled.
 *
 * The following demo presents the components for the decrement button, label, and increment button assembled in a row. 
 * @iframe ux/demos/increment-controls/increment-controls.html 100

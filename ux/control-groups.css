@@ -3,7 +3,7 @@
 * @parent ux.ui-elements
 * Control groups are used to visually group sets of related user interface elements.
 *
-* A control group is bounded by a gray `#CCCCCC` border with rounded corners. A label indicating the nature of the elements contained in the group appears centered immediately below the top border.
+* A control group is bounded by a gray <span class="no-wrap">`#CCCCCC` <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border with rounded corners. A label indicating the nature of the elements contained in the group appears centered immediately below the top border.
 *
 * The following demo presents four interactive examples of control groups. 
 * @iframe ux/demos/control-groups/control-groups.html 800

@@ -6,9 +6,9 @@
 * On the first screen in the sequence, the indicator shows the total number of steps in the process, but only the label of the current screen is displayed. As the test taker moves through the process, the labels of screens prior to the current one remain visible.
 *
 * Steps in the indicator have the following states.
-* * _Unvisited_. Shown for steps whose screens are after the current screen in the sequence. The bottom border is gray `#AAAAAA`, and the label does not appear.
-* * _Current_. Shown for the step of the current screen. The bottom border is blue `#2978C6`, and the label is black `#000000`.
-* * _Visited_. Shown for steps whose screens are before the current screen in the sequence. The bottom border is light blue `#8CB3DB`, and the label is gray `#909090`.
+* * _Unvisited_. Shown for steps whose screens are after the current screen in the sequence. The bottom border is gray <span class="no-wrap">`#AAAAAA` <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>, and the label does not appear.
+* * _Current_. Shown for the step of the current screen. The bottom border is blue <span class="no-wrap">`#2978C6` <span class="callout-swatch" style="background-color:#2978C6"></span></span>, and the label is black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>.
+* * _Visited_. Shown for steps whose screens are before the current screen in the sequence. The bottom border is light blue <span class="no-wrap">`#8CB3DB` <span class="callout-swatch" style="background-color:#8CB3DB"></span></span>, and the label is gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span>.
 *
 * When non-linear navigation (i.e., moving through steps in any order) is allowed, selecting a step will navigate the test taker to the associated screen. In this case, the steps receive the `pointer` cursor.
 *

@@ -7,7 +7,6 @@
 * @iframe ux/demos/response-type-figure-transform/response-type-figure-transform.html 940
 **/
 
-
 /**
 * @styles 0-ft-source-tray Source Tray
 * Test takers can add figures to the grid by dragging them from a source tray, which can be above or to the left of the grid, depending on space constraints. (A demo of the left-aligned variant is shown below.) The source tray has the same styling as those used for the [response-type-matching.css] response type.
@@ -25,18 +24,20 @@
 .response-area-ft .match-source-tray {
   align-items: center;
   display: flex;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+}
 .response-area-ft.horizontal .match-source-tray {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 0 1em 4em 0;
-  max-width: 14.6em; }
+  max-width: 14.6em;
+}
 
 /**
 * @styles 1-ft-figures Draggable Figures
 * Draggable figures have the following states.
 * * _Default_. Uses the same styling as draggable polygons (see the [points-lines-polygons.css] page), except that the borders are thinner.
-* * _Hover_. Visible when the cursor is over the figure. Both fill and border lighten to `#0084FF`. The `move` cursor is shown.
+* * _Hover_. Visible when the cursor is over the figure. Both fill and border lighten to <span class="no-wrap">`#0084FF` <span class="callout-swatch" style="background-color:#0084FF"></span></span>. The `move` cursor is shown.
 * * _Active_. Visible when the figure is being dragged. Border width increases.
 * * _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Uses the same styling as the disabled state for draggable polygons presented alongside pre-populated objects.
 **/
@@ -44,30 +45,38 @@
 .ft-source {
   cursor: move;
   margin: 0.25em;
-  outline: none; }
+  outline: none;
+}
 .ft-source[disabled] {
-  pointer-events: none; }
+  pointer-events: none;
+}
 
 .ft-source .polygon-actual {
-  fill: #0855B2;
-  stroke-width: 4px; }
+  fill: #0855b2;
+  stroke-width: 4px;
+}
 .ft-source:hover .polygon-actual,
 .ft-source.focus-tabbed:focus .polygon-actual {
   fill: #0084ff;
-  stroke: #0084ff; }
+  stroke: #0084ff;
+}
 .ft-source.focus-tabbed:focus .polygon-actual {
-  stroke-width: 6; }
+  stroke-width: 6;
+}
 html.can-touch .ft-source:hover .polygon-actual {
-  fill: #0855B2;
-  stroke: #0855B2; }
+  fill: #0855b2;
+  stroke: #0855b2;
+}
 .ft-source:active .polygon-actual,
 html.can-touch .ft-source:active .polygon-actual {
   fill: #0084ff;
   stroke: #0084ff;
-  stroke-width: 6; }
+  stroke-width: 6;
+}
 .ft-source[disabled] .polygon-actual {
   fill: #484848;
-  stroke: #484848; }
+  stroke: #484848;
+}
 
 .ft-source text,
 .ft-prepop text {

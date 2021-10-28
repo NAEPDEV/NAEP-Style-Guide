@@ -3,7 +3,7 @@
 * @parent ux.instruction
 * Information flags are used to cue test takers to functionality that may not be immediately obvious.
 *
-* Information flags have a white `#FFFFFF` background, a gray `#BBBBBB` border, rounded corners, and a drop shadow to differentiate them from surrounding content. Each flag has a tail connecting it to the UI element for which it provides a cue. The flag’s text is bold, gray `#727272`, and 83% the base font size (see the [typography.css] page for more information).
+* Information flags have a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, a gray <span class="no-wrap">`#BBBBBB` <span class="callout-swatch" style="background-color:#BBBBBB"></span></span> border, rounded corners, and a drop shadow to differentiate them from surrounding content. Each flag has a tail connecting it to the UI element for which it provides a cue. The flag’s text is bold, gray <span class="no-wrap">`#727272` <span class="callout-swatch" style="background-color:#727272"></span></span>, and 83% the base font size (see the [typography.css] page for more information).
 *
 * A flag can appear in eight positions relative to the element about which it provides information. The position is chosen based on the surrounding context (e.g., to avoid overlap with other elements, to avoid positioning the flag off-screen.)
 *

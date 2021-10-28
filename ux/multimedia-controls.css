@@ -11,12 +11,12 @@
 * Controls are presented in two rows.
 * * The scrub bar, which is used to scrub through the media clip, is provided on its own in the top row to maximize scrubbing precision.
 * * The bottom row contains the following controls from left to right:
-*   * Play/Pause (`play`/`pause` icon)
+*   * Play/Pause (`play`/`pause` <span class="icon-pause"></span> icon)
 *   * Time indicators (current / total)
-*   * Mute (`volume-down`/`volume-up`/`volume-mute` icon)
+*   * Mute (`volume-down`/`volume-up`/`volume-mute` <span class="icon-volume-mute"></span> icon)
 *   * Volume slider
-*   * Closed captions (video only) (`cc-on`/`cc-off` icon)
-*   * Full screen (video only) (`fullscreen`/`fullscreen-exit` icon)
+*   * Closed captions (video only) (`cc-on`/`cc-off` <span class="icon-cc-off"></span> icon)
+*   * Full screen (video only) (`fullscreen`/`fullscreen-exit` <span class="icon-fullscreen-exit"></span> icon)
 *
 * Play/Pause and the time indicators are left-justified. The remaining controls in the second row are right-justified.
 *
@@ -25,10 +25,10 @@
 
 /**
 * @styles 1-multimedia-Styling Styling
-* Multimedia controls are presented on a light gray `#EAEAEA` background to differentiate them from the surrounding content area.
+* Multimedia controls are presented on a light gray <span class="no-wrap">`#EAEAEA` <span class="callout-swatch" style="background-color:#EAEAEA"></span></span> background to differentiate them from the surrounding content area.
 * ### Hero Play button
 * The __Hero Play__ button has three states.
-* * _Default_. Displayed when video clip is paused. A white `#FFFFFF` `play-circle` icon is presented over a 65% opaque black `#000000` background.
+* * _Default_. Displayed when video clip is paused. A white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> `play-circle` <span class="icon-play-circle"></span> icon is presented over a 65% opaque black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> background.
 * * _Hover_. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The `pointer` cursor is shown over the entire video content area, indicating that the video will play/pause when selected.
 * * _Playing/Disabled_. The __Hero Play__ button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.
 * ### Scrub bar
@@ -36,17 +36,17 @@
 *
 *
 * * _Default_.
-*   * The unplayed section of the scrub track is medium gray `#858585`.
-*   * The played section of the scrub track is blue `#246BB2`.
+*   * The unplayed section of the scrub track is medium gray <span class="no-wrap">`#858585` <span class="callout-swatch" style="background-color:#858585"></span></span>.
+*   * The played section of the scrub track is blue <span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span>.
 *   * The thumb is the same blue as the played section of the scrub track.
 * * _Hover/active_. Displayed when the cursor is over the scrub bar or while the test taker is scrubbing through the media clip.
 *   * The `pointer` cursor is shown.
 *   * The track and thumb are scaled up 150%. (Scaling remains during scrubbing, even if the cursor isn’t directly over the scrub bar.)
-*   * A dark gray `#535353` bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.
+*   * A dark gray <span class="no-wrap">`#535353` <span class="callout-swatch" style="background-color:#535353"></span></span> bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.
 *   * A tooltip (see below) appears above the scrub bar showing the time in the media clip associated with the current cursor position during both hover and drag.
 * * _Disabled_. Displayed when the scrub bar is inactive (e.g., when a modal system tool like Scratchwork is enabled).
-*   * The unplayed section of the track changes to a light gray `#A6A6A6`.
-*   * The thumb and the played section of the track change to a medium gray `#AAAAAA`.
+*   * The unplayed section of the track changes to a light gray <span class="no-wrap">`#A6A6A6` <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.
+*   * The thumb and the played section of the track change to a medium gray <span class="no-wrap">`#AAAAAA` <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>.
 * ### Volume slider
 * The volume slider is styled similarly to the scrub bar with the following exceptions:
 * * Only the thumb, not the track, scales up in hover/active state.
@@ -54,15 +54,15 @@
 * * No dark gray bar appears to indicate the cursor position in hover state.
 * ### Other Buttons
 * Multimedia control buttons are 2x the base font size (see the [typography.css] page) to ensure easy selection via touch. They have three states.
-* * _Default_. A dark gray `#535353` icon with no background or border.
-* * _Hover_. Displayed when the cursor is over the button. Icon color darkens to `#1E1E1E`, and a tooltip appears above the button. The `pointer` cursor is shown.
-* * _Disabled_. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to `#A6A6A6`.
+* * _Default_. A dark gray <span class="no-wrap">`#535353` <span class="callout-swatch" style="background-color:#535353"></span></span> icon with no background or border.
+* * _Hover_. Displayed when the cursor is over the button. Icon color darkens to <span class="no-wrap">`#1E1E1E` <span class="callout-swatch" style="background-color:#1E1E1E"></span></span>, and a tooltip appears above the button. The `pointer` cursor is shown.
+* * _Disabled_. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to <span class="no-wrap">`#A6A6A6` <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.
 * ### Tooltips
-* Tooltips are displayed as white `#FFFFFF` text on an 85% opaque black `#000000` background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.
+* Tooltips are displayed as white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 85% opaque black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.
 *
 * The tooltip for the scrub bar has a bottom tail to better connect it to the cursor position.
 * ### Subtitles
-* Subtitles are displayed as white `#FFFFFF` text on an 80% opaque black `#000000` background with rounded corners.
+* Subtitles are displayed as white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 80% opaque black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners.
 **/
 
 /**
@@ -73,9 +73,9 @@
 * Clicking the scrub bar track or dragging the scrub bar thumb causes the video time to change to the position of the cursor. The scrub bar has an invisible touch target that is taller than the visible track (1.24x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].
 * ### Button behavior
 * Several buttons have toggle states.
-* * The __Play/Pause__ button changes to a `pause` icon, and its tooltip changes to “Pause” while the media clip is playing.
+* * The __Play/Pause__ button changes to a `pause` <span class="icon-pause"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.
 * * The __Mute__ button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)
-* * The __Closed caption__ button icon changes to the `cc-off` icon when closed captions are turned off.
+* * The __Closed caption__ button icon changes to the `cc-off` <span class="icon-cc-off"></span> icon when closed captions are turned off.
 * * The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit`, and its tooltip changes to “Exit full screen” when in full-screen mode.
 * ### Volume slider & Mute button interactions
 * As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].

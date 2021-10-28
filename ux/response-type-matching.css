@@ -8,9 +8,9 @@
 * @styles 0-matching-draggables Draggable Objects
 * Some draggable objects are contain text, while others contain images. The behavior of text and image objects is identical, and both are sized for easy use with touch.
 * ### Text
-* Text objects are blue `#246BB2` with bold white `#FFFFFF` text to distinguish them from non-interactive text elements. Text objects’ dimensions vary according to the size of their content, but they have a maximum width of approximately 45 characters to keep them from becoming unwieldy.
+* Text objects are blue <span class="no-wrap">`#246BB2` <span class="callout-swatch" style="background-color:#246BB2"></span></span> with bold white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text to distinguish them from non-interactive text elements. Text objects’ dimensions vary according to the size of their content, but they have a maximum width of approximately 45 characters to keep them from becoming unwieldy.
 * ### Images
-* Image object styling (e.g., inclusion of a label, use of borders) varies depending on the needs of the item. However, image objects are most frequently placed in tiles with a gray `#808080` border and rounded corners to help indicate that they are interactive.
+* Image object styling (e.g., inclusion of a label, use of borders) varies depending on the needs of the item. However, image objects are most frequently placed in tiles with a gray <span class="no-wrap">`#808080` <span class="callout-swatch" style="background-color:#808080"></span></span> border and rounded corners to help indicate that they are interactive.
 * <img src="demos/response-type-matching/source-tiles-1.png"/>
 * <img src="demos/response-type-matching/source-tiles-2.png"/>
 * ### States
@@ -115,7 +115,7 @@
 
 /**
 * @styles 1-matching-source-trays Source Trays
-* Draggable objects are initially placed in a source tray, which typically appears above or to the left of the drop targets. Source trays have rounded corners, a light gray `#ECECEC` background, and a darker gray `#BBBBBB` border to visually differentiate them from surrounding content.
+* Draggable objects are initially placed in a source tray, which typically appears above or to the left of the drop targets. Source trays have rounded corners, a light gray <span class="no-wrap">`#ECECEC` <span class="callout-swatch" style="background-color:#ECECEC"></span></span> background, and a darker gray <span class="no-wrap">`#BBBBBB` <span class="callout-swatch" style="background-color:#BBBBBB"></span></span> border to visually differentiate them from surrounding content.
 *
 * Objects are placed in rows. A new row begins when there is not enough room on the current row to contain the next object. Objects are vertically aligned to the top of their row. Source trays have padding—equivalent to 0.5x the default line height—between their edges and the edges of contained objects.
 * ### Source tray with text objects
@@ -164,7 +164,7 @@
 * ### States
 * Drop targets have the following states.
 * * _Drag_. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue `rgba(41, 107, 204, 0.2)` when the test taker begins to drag an object.
-* * _Hover_. To indicate that a draggable object will be placed successfully, a blue `#296BCC` border is added to an active drop target when an object is dragged over it.
+* * _Hover_. To indicate that a draggable object will be placed successfully, a blue <span class="no-wrap">`#296BCC` <span class="callout-swatch" style="background-color:#296BCC"></span></span> border is added to an active drop target when an object is dragged over it.
 *
 * The following demo presents the interactive states for draggable objects and their drop targets.
 * @iframe ux/demos/response-type-matching/matching-no-groups.html 475

@@ -19,7 +19,7 @@
 * Content-based intro and exit screens are used in SBTs that provide directions and other information to test takers directly, rather than via task characters. Content is presented in a container with the following characteristics:
 * * Horizontally and vertically centered
 * * Width between 40 and 65 characters to ensure easy readability
-* * White `#FFFFFF` (or other light color) fill
+* * White <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> (or other light color) fill
 * * Rounded corners
 * * Drop shadow
 *
