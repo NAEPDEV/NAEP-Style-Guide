@@ -96,8 +96,11 @@
 * * _Selected_. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue <span class="no-wrap">`#D6EBFF` <span class="callout-swatch" style="background-color:#D6EBFF"></span></span>.
 * * _Hover_. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and background changes to medium blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>. The `pointer` cursor is shown. Hover state overrides selected state.
 *
-* _Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the [tts.css] page for a description of TTS behavior._
+* The following demo presents an item featuring the in-line choice dropdown menus.
 * @iframe ux/demos/response-type-inline-choice/response-type-inline-choice.html 400
+*
+*
+* Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the [tts.css] page for a description of TTS behavior.
 **/
 
 .inline-choice ul {

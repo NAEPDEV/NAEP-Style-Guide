@@ -1,10 +1,13 @@
 /**
 * @stylesheet response-type-line-point-graph.css Line & Point Graph
 * @parent ux.response-types
-* The Line & Point Graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.
+* The line & point graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.
 *
-* _Demo only reflects states and theming. Other functionality not present._
+* The following demo presents the line & point graph response type. The demo has limited functionality for the purpose of showing its themes and styles.
 * @iframe ux/demos/response-type-line-point-graph/response-type-line-point-graph.html 700
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**

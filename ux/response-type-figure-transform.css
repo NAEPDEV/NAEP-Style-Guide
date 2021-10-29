@@ -3,16 +3,22 @@
 * @parent ux.response-types
 * The figure transformation response type allows students to respond to an item by dragging figures to a coordinate grid.
 *
-* _Demo only reflects states and theming. Other functionality not present._
+* The following demo presents the figure transformation response type. The demo has limited functionality for the purpose of showing its themes and styles.
 * @iframe ux/demos/response-type-figure-transform/response-type-figure-transform.html 940
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
 * @styles 0-ft-source-tray Source Tray
 * Test takers can add figures to the grid by dragging them from a source tray, which can be above or to the left of the grid, depending on space constraints. (A demo of the left-aligned variant is shown below.) The source tray has the same styling as those used for the [response-type-matching.css] response type.
 *
-* _Demo only reflects states and theming. Other functionality not present. Demo is is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-figure-transform/horizontal-full.html" target="_blank">here</a>._
+* The following demo presents the figure transformation response type with a left-aligned source tray. The demo has limited functionality for the purpose of showing its themes and styles.
 * @iframe ux/demos/response-type-figure-transform/horizontal.html 500
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-figure-transform/horizontal-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .response-area-ft.horizontal {

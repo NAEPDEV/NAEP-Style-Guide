@@ -13,8 +13,11 @@
 *
 * Use the dropdown menu in the demo below to see how review screen content changes based on the number of unanswered items.
 *
-* _Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/review-screen/review-screen-full.html" target="_blank">here</a>._
+* The following demo presents the review screen. 
 * @iframe ux/demos/review-screen/review-screen.html 500
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/review-screen/review-screen-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .review .alert {
