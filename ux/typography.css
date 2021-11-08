@@ -5,7 +5,7 @@
 
 /**
 * @styles 0-typefaces Typefaces
-* User interface text and item content is always rendered in a sans serif typeface. (As discussed in the media section, stimulus text may be in a serif typeface if needed to reproduce the look and feel of a source publication.) Most text in eNAEP is presented in Calibri.
+* User interface text and item content is always rendered in a sans serif typeface. (Stimulus text may be in a serif typeface if needed to reproduce the look and feel of a source publication.) Most text in eNAEP is presented in Calibri.
 *
 * ### SBT Typeface <img src="static/img/icon-asterisk.svg"/>
 * While Calibri is very readable at body sizes, it was not designed for titling sizes and offers only two weights: normal and bold. Because of these limitations, SBTs have shifted to using <a href="https://01.org/clear-SANS" target="_blank">Clear&#160;Sans</a>, which was designed for screen display, is suited for both body and titling sizes, and has a range of weights, allowing more options for establishing an informational hierarchy.

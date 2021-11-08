@@ -1,7 +1,7 @@
 @page version-scope.md Version Scope
 @parent ux.overview
 
-This table indicates the version of the UX section applicable to each product (i.e., each chunk of content rendered using a single code library). You can use the _Columns_ menu to change which columns are displayed.
+This table indicates the version of the style guide applicable to each product (i.e., each chunk of content rendered using a single code library). You can use the _Columns_ menu to change which columns are displayed.
 
 <div class="tablesorter-container">
 
@@ -34,7 +34,7 @@ This table indicates the version of the UX section applicable to each product (i
     </div>
   </div>
 
-  <button class="btn btn-secondary tablesorter-reset">Reset</button>
+<button class="btn btn-secondary tablesorter-reset">Reset</button>
 
   <div id="version-scope-table"></div>
 

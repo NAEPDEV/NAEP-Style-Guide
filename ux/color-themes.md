@@ -9,7 +9,7 @@ Test takers with atypical vision may prefer or need color schemes that would be 
 
 Changing themes is a universal design feature, so all test takers can change the theme as they wish.
 
-Use the <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" />**Change Theme** button at the top of the page to see how theming affects demo content throughout the UX section of the style guide.
+Use the <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" />**Change Theme** button at the top of the page to see how theming affects demo content throughout the style guide.
 
 ## Image Theming
 

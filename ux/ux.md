@@ -9,4 +9,4 @@
 @group ux.environments 7 Environments
 @group ux.sbts 8 SBT-specific
 
-The UX section of the style guide covers the visual styles and core behaviors of student-facing user interface (UI) elements in the eNAEP delivery platform. This section does not cover styles or conventions for item content, which are addressed in the item development and media sections.
+The style guide covers the visual styles and core behaviors of student-facing user interface (UI) elements in the eNAEP delivery platform. This style guide does not cover styles or conventions for item content.
