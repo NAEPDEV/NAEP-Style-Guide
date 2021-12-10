@@ -42,6 +42,11 @@
 *
 * Combinations of these background image types can be used to create various effects. For example, in the demo below, the sky is a tiled image, and the buildings are an isometrically scaled image. This approach prevents the buildings from becoming deformed in unusual browser window sizes. (Try opening the full-size demo and resizing the browser window to see how it works.)
 *
+* The following demo presents a background screen.
+@iframe ux/demos/intro-exit-screens/bg-screen.html 480
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 62.5% its actual size. To see a full-size demo, click <a href="demos/intro-exit-screens/bg-screen-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .splashscreen {
