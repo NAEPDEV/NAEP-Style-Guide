@@ -18,6 +18,8 @@
 *
 * ### Focus for Interactive Points & Sizing Handles
 * Because [points-lines-polygons.css], and single-direction sizing handles (see [transformable-objects.css]) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill. (This focus ring also serves as a hover state.)
+*
+* The following presents an interactive point and a single-direction sizing handle.
 * @iframe ux/demos/indicators/focus-indicator-iic.html 125
 *
 *
