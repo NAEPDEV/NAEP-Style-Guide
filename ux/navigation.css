@@ -65,6 +65,7 @@
   border-top: 0.05em solid transparent;
   color: #000;
   display: inline-flex;
+  /* display: inline-block; */
   font-family: Calibri, Arial, sans-serif;
   font-size: 24px;
   height: 2.29em;

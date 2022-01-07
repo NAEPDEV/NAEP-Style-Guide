@@ -138,11 +138,11 @@ function changeBtnState() {
     }
     if (tabListOffset >= leftBtnWidth - 1) {
       updateState("#btn-tab-mover-left", "disabled");
-      $("#btn-tab-mover-right").focus();
+      // $("#btn-tab-mover-right").focus();
     }
     if (limit <= rightBtnOffset + 1) {
       updateState("#btn-tab-mover-right", "disabled");
-      $("#btn-tab-mover-left").focus();
+      // $("#btn-tab-mover-left").focus();
     }
   }
 }
@@ -470,7 +470,7 @@ $(document).ready(function () {
       });
       //updateState('#btn-tab-mover-right', 'enabled');
       updateState("#btn-tab-mover-left", "disabled");
-      $("#btn-tab-mover-right").focus();
+      // $("#btn-tab-mover-right").focus();
     } else {
       $(".itemTab").css({
         "margin-left": currentMargin + tabTrayWidth - remainder,
@@ -508,7 +508,7 @@ $(document).ready(function () {
       });
       //updateState('#btn-tab-mover-left', 'enabled');
       updateState("#btn-tab-mover-right", "disabled");
-      $("#btn-tab-mover-left").focus();
+      // $("#btn-tab-mover-left").focus();
     } else {
       $(".itemTab").css({
         "margin-left": currentMargin - tabTrayWidth + remainder,
