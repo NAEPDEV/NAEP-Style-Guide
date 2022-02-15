@@ -1,20 +1,20 @@
-@import "reset.less";
-@import "variables.less";
-@import "base.less";
-@import "typography.less";
-@import "helper.less";
-@import "icons.less";
-@import "layout.less";
-@import "brand.less";
-@import "buttons.less";
-@import "code.less";
-@import "api.less";
-@import "sidebar.less";
-@import "swatches.less";
-@import "guides.less";
-@import "ie.less";
-@import "sortable-table.less";
-@import "toc.less";
+@import 'reset.less';
+@import 'variables.less';
+@import 'base.less';
+@import 'typography.less';
+@import 'helper.less';
+@import 'icons.less';
+@import 'layout.less';
+@import 'brand.less';
+@import 'buttons.less';
+@import 'code.less';
+@import 'api.less';
+@import 'sidebar.less';
+@import 'swatches.less';
+@import 'guides.less';
+@import 'ie.less';
+@import 'sortable-table.less';
+@import 'toc.less';
 .callout-swatch {
   background-color: black;
   width: 12px;
@@ -26,15 +26,15 @@
   white-space: nowrap;
 }
 @font-face {
-  font-family: "icons";
+  font-family: 'icons';
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/icomoon.woff?md92d0") format("woff");
+  src: url('../fonts/icomoon.woff?md92d0') format('woff');
 }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons" !important;
+  font-family: 'icons' !important;
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -47,365 +47,365 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .icon-radio-unselected:before {
-  content: "\e900";
+  content: '\e900';
 }
 .icon-radio-selected:before {
-  content: "\e901";
+  content: '\e901';
 }
 .icon-checkbox-unselected:before {
-  content: "\e902";
+  content: '\e902';
 }
 .icon-checkbox-selected:before {
-  content: "\e903";
+  content: '\e903';
 }
 .icon-cross:before {
-  content: "\e904";
+  content: '\e904';
 }
 .icon-plus-thin:before {
-  content: "\e905";
+  content: '\e905';
 }
 .icon-check-thin:before {
-  content: "\e906";
+  content: '\e906';
 }
 .icon-asterisk:before {
-  content: "\e907";
+  content: '\e907';
 }
 .icon-chevron-circle-down:before {
-  content: "\e908";
+  content: '\e908';
 }
 .icon-chevron-circle-up:before {
-  content: "\e909";
+  content: '\e909';
 }
 .icon-chevron-down:before {
-  content: "\e90a";
+  content: '\e90a';
 }
 .icon-chevron-up:before {
-  content: "\e90b";
+  content: '\e90b';
 }
 .icon-chevron-left:before {
-  content: "\e90c";
+  content: '\e90c';
 }
 .icon-chevron-right:before {
-  content: "\e90d";
+  content: '\e90d';
 }
 .icon-chevron-down-thin:before {
-  content: "\e90e";
+  content: '\e90e';
 }
 .icon-chevron-up-thin:before {
-  content: "\e90f";
+  content: '\e90f';
 }
 .icon-chevron-left-thin:before {
-  content: "\e910";
+  content: '\e910';
 }
 .icon-chevron-right-thin:before {
-  content: "\e911";
+  content: '\e911';
 }
 .icon-spinner:before {
-  content: "\e912";
+  content: '\e912';
 }
 .icon-raise-hand:before {
-  content: "\e946";
+  content: '\e946';
 }
 .icon-play:before {
-  content: "\e913";
+  content: '\e913';
 }
 .icon-pause:before {
-  content: "\e914";
+  content: '\e914';
 }
 .icon-play-circle:before {
-  content: "\e915";
+  content: '\e915';
 }
 .icon-volume-down:before {
-  content: "\e916";
+  content: '\e916';
 }
 .icon-volume-up:before {
-  content: "\e917";
+  content: '\e917';
 }
 .icon-volume-mute:before {
-  content: "\e918";
+  content: '\e918';
 }
 .icon-cc-on:before {
-  content: "\e919";
+  content: '\e919';
 }
 .icon-cc-off:before {
-  content: "\e91a";
+  content: '\e91a';
 }
 .icon-fullscreen:before {
-  content: "\e91b";
+  content: '\e91b';
 }
 .icon-fullscreen-exit:before {
-  content: "\e91c";
+  content: '\e91c';
 }
 .icon-eye:before {
-  content: "\e91d";
+  content: '\e91d';
 }
 .icon-eye-blocked:before {
-  content: "\e91e";
+  content: '\e91e';
 }
 .icon-cut .path1:before {
-  content: "\e94a";
+  content: '\e94a';
 }
 .icon-cut .path2:before {
-  content: "\e94b";
+  content: '\e94b';
   color: #4575a6;
 }
 .icon-copy .path1:before {
-  content: "\e94c";
+  content: '\e94c';
   color: #fff;
 }
 .icon-copy .path2:before {
-  content: "\e94d";
+  content: '\e94d';
 }
 .icon-copy .path3:before {
-  content: "\e94e";
+  content: '\e94e';
   color: #4575a6;
 }
 .icon-paste .path1:before {
-  content: "\e94f";
+  content: '\e94f';
   color: #edc87e;
 }
 .icon-paste .path2:before {
-  content: "\e950";
+  content: '\e950';
   color: #fff;
 }
 .icon-paste .path3:before {
-  content: "\e951";
+  content: '\e951';
 }
 .icon-select-all .path1:before {
-  content: "\e952";
+  content: '\e952';
   color: #fff;
 }
 .icon-select-all .path2:before {
-  content: "\e953";
+  content: '\e953';
 }
 .icon-undo:before {
-  content: "\e954";
+  content: '\e954';
 }
 .icon-redo:before {
-  content: "\e955";
+  content: '\e955';
 }
 .icon-bold:before {
-  content: "\e956";
+  content: '\e956';
 }
 .icon-italic:before {
-  content: "\e957";
+  content: '\e957';
 }
 .icon-underline:before {
-  content: "\e958";
+  content: '\e958';
 }
 .icon-decrease-indent .path1:before {
-  content: "\e959";
+  content: '\e959';
   color: #4575a6;
 }
 .icon-decrease-indent .path2:before {
-  content: "\e95a";
+  content: '\e95a';
 }
 .icon-increase-indent .path1:before {
-  content: "\e95b";
+  content: '\e95b';
   color: #4575a6;
 }
 .icon-increase-indent .path2:before {
-  content: "\e95c";
+  content: '\e95c';
 }
 .icon-font-size-small:before {
-  content: "\e95d";
+  content: '\e95d';
 }
 .icon-font-size-med:before {
-  content: "\e95e";
+  content: '\e95e';
 }
 .icon-font-size-large:before {
-  content: "\e95f";
+  content: '\e95f';
 }
 .icon-spell-check .path1:before {
-  content: "\e960";
+  content: '\e960';
 }
 .icon-spell-check .path2:before {
-  content: "\e961";
+  content: '\e961';
   color: #4575a6;
 }
 .icon-thesaurus .path1:before {
-  content: "\e962";
+  content: '\e962';
   color: #8959ab;
 }
 .icon-thesaurus .path2:before {
-  content: "\e963";
+  content: '\e963';
   color: #fff;
 }
 .icon-thesaurus .path3:before {
-  content: "\e964";
+  content: '\e964';
 }
 .icon-cog:before {
-  content: "\e965";
+  content: '\e965';
 }
 .icon-magnifying-glass:before {
-  content: "\e966";
+  content: '\e966';
 }
 .icon-sort-default:before {
-  content: "\e967";
+  content: '\e967';
 }
 .icon-sort-ascending:before {
-  content: "\e968";
+  content: '\e968';
 }
 .icon-sort-descending:before {
-  content: "\e969";
+  content: '\e969';
 }
 .icon-pencil .path1:before {
-  content: "\e91f";
+  content: '\e91f';
   color: #ead2a7;
 }
 .icon-pencil .path2:before {
-  content: "\e920";
+  content: '\e920';
 }
 .icon-highlighter .path1:before {
-  content: "\e921";
+  content: '\e921';
   color: #ffdf5a;
 }
 .icon-highlighter .path2:before {
-  content: "\e922";
+  content: '\e922';
   color: #ffed9f;
 }
 .icon-highlighter .path3:before {
-  content: "\e923";
+  content: '\e923';
 }
 .icon-eraser .path1:before {
-  content: "\e924";
+  content: '\e924';
   color: #eaa0b5;
 }
 .icon-eraser .path2:before {
-  content: "\e925";
+  content: '\e925';
 }
 .icon-clear-page:before {
-  content: "\e926";
+  content: '\e926';
 }
 .icon-move:before {
-  content: "\e927";
+  content: '\e927';
 }
 .icon-rotate-left:before {
-  content: "\e928";
+  content: '\e928';
 }
 .icon-rotate-right:before {
-  content: "\e929";
+  content: '\e929';
 }
 .icon-select-in-passage .path1:before {
-  content: "\e940";
+  content: '\e940';
   color: #148812;
 }
 .icon-select-in-passage .path2:before {
-  content: "\e941";
+  content: '\e941';
   color: #a7a9ac;
 }
 .icon-select-in-passage .path3:before {
-  content: "\e942";
+  content: '\e942';
   color: #fff;
 }
 .icon-select-in-passage .path4:before {
-  content: "\e943";
+  content: '\e943';
   color: #000;
 }
 .icon-select-in-passage .path5:before {
-  content: "\e944";
+  content: '\e944';
   color: #fff;
 }
 .icon-select-in-passage .path6:before {
-  content: "\e945";
+  content: '\e945';
   color: #000;
 }
 .icon-question-circle:before {
-  content: "\e92a";
+  content: '\e92a';
 }
 .icon-change-theme:before {
-  content: "\e92b";
+  content: '\e92b';
 }
 .icon-zoom-out:before {
-  content: "\e92c";
+  content: '\e92c';
 }
 .icon-zoom-in:before {
-  content: "\e92d";
+  content: '\e92d';
 }
 .icon-lang-esp .path1:before {
-  content: "\e92e";
+  content: '\e92e';
 }
 .icon-lang-esp .path2:before {
-  content: "\e92f";
+  content: '\e92f';
   color: #8b13b2;
 }
 .icon-lang-esp .path3:before {
-  content: "\e930";
+  content: '\e930';
 }
 .icon-lang-eng .path1:before {
-  content: "\e931";
+  content: '\e931';
 }
 .icon-lang-eng .path2:before {
-  content: "\e932";
+  content: '\e932';
   color: #8b13b2;
 }
 .icon-lang-eng .path3:before {
-  content: "\e933";
+  content: '\e933';
 }
 .icon-read-aloud .path1:before {
-  content: "\e934";
+  content: '\e934';
 }
 .icon-read-aloud .path2:before {
-  content: "\e935";
+  content: '\e935';
   color: #0076d2;
 }
 .icon-scratchwork .path1:before {
-  content: "\e936";
+  content: '\e936';
   color: #900;
 }
 .icon-scratchwork .path2:before {
-  content: "\e937";
+  content: '\e937';
 }
 .icon-equation-editor .path1:before {
-  content: "\e938";
+  content: '\e938';
 }
 .icon-equation-editor .path2:before {
-  content: "\e939";
+  content: '\e939';
   color: #008117;
 }
 .icon-calculator:before {
-  content: "\e93a";
+  content: '\e93a';
 }
 .icon-timer:before {
-  content: "\e93b";
+  content: '\e93b';
 }
 .icon-warning .path1:before {
-  content: "\e93c";
+  content: '\e93c';
   color: #edc87e;
 }
 .icon-warning .path2:before {
-  content: "\e93d";
+  content: '\e93d';
 }
 .icon-arrow-left:before {
-  content: "\e93e";
+  content: '\e93e';
 }
 .icon-arrow-right:before {
-  content: "\e93f";
+  content: '\e93f';
 }
 .icon-plus:before {
-  content: "\ea0a";
+  content: '\ea0a';
 }
 .icon-minus:before {
-  content: "\ea0b";
+  content: '\ea0b';
 }
 .icon-check:before {
-  content: "\ea0c";
+  content: '\ea0c';
 }
 .icon-lock:before {
-  content: "\e947";
+  content: '\e947';
 }
 .icon-cross-thin:before {
-  content: "\e948";
+  content: '\e948';
 }
 .icon-minus-thin:before {
-  content: "\e949";
+  content: '\e949';
 }
 .icon-prohibited:before {
-  content: "\e96a";
+  content: '\e96a';
 }
 .icon-info:before {
-  content: "\e96b";
+  content: '\e96b';
 }
 .icon-filter:before {
-  content: "\e96c";
+  content: '\e96c';
 }

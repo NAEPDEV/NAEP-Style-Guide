@@ -140,23 +140,23 @@ html.can-touch #toggleLeft:hover {
 * The editor toolbar has a background gradient (<span class="no-wrap">`#F9F9F9` <span class="callout-swatch" style="background-color:#F9F9F9"></span></span> to <span class="no-wrap">`#F5F5F5` <span class="callout-swatch" style="background-color:#F5F5F5"></span></span>) and a bottom gray <span class="no-wrap">`#D5D5D5` <span class="callout-swatch" style="background-color:#D5D5D5"></span></span> border. Like the writing area and dialogs, it is set in the Arial typeface. The toolbar is arranged into three groups, each including a set of related controls.
 *
 * * Edit
-*   * Cut (`cut` <span class="icon-cut"></span> icon)
-*   * Copy (`copy` <span class="icon-copy"></span> icon)
-*   * Paste (`paste` <span class="icon-paste"></span> icon)
-*   * Select all (`select-all` <span class="icon-select-all"></span> icon)
+*   * Cut (`cut` <span><img src="static/img/icon-cut.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
+*   * Copy (`copy` <span><img src="static/img/icon-copy.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
+*   * Paste (`paste` <span><img src="static/img/icon-paste.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
+*   * Select all (`select-all` <span><img src="static/img/icon-select-all.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
 *   * Undo (`undo` <span class="icon-undo"></span> icon)
 *   * Redo (`redo` <span class="icon-redo"></span> icon)
 * * Format
 *   * Bold (`bold` <span class="icon-bold"></span> icon)
 *   * Italic (`italic` <span class="icon-italic"></span> icon)
 *   * Underline (`underline` <span class="icon-underline"></span> icon)
-*   * Decrease indent (`decrease-indent` <span class="icon-decrease-indent"></span> icon)
-*   * Increase indent (`increase-indent` <span class="icon-increase-indent"></span> icon)
+*   * Decrease indent (`decrease-indent` <span><img src="static/img/icon-decrease-indent.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
+*   * Increase indent (`increase-indent` <span><img src="static/img/icon-increase-indent.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
 *   * Small font size (`font-size-small` <span class="icon-font-size-small"></span> icon)
 *   * Medium font size (`font-size-med` <span class="icon-font-size-med"></span> icon)
 *   * Large font size (`font-size-large` <span class="icon-font-size-large"></span> icon)
 * * Tools
-*   * Spell check (`spell-check` <span class="icon-spell-check"></span> icon)
+*   * Spell check (`spell-check` <span><img src="static/img/icon-spell-check.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
 *   * Spell check options (`cog` <span class="icon-cog"></span> icon)
 *   * Thesaurus (`thesaurus` <span class="icon-thesaurus"></span> icon)
 *
@@ -286,7 +286,7 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   border-color: #909090 transparent;
   border-style: solid;
   border-width: 0.35em 0.35em 0 0.35em;
-  content: "";
+  content: '';
   display: block;
   pointer-events: none;
 }
@@ -302,7 +302,7 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
 
 .wri-dropdown-wrapper > .wri-btn::before {
   background: transparent;
-  content: "";
+  content: '';
   height: 0.12em;
   left: 0;
   pointer-events: none;
@@ -407,7 +407,7 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
   border-bottom-right-radius: 0.12em;
 }
 
-.wri-menu [class^="icon-"] {
+.wri-menu [class^='icon-'] {
   color: #666;
   font-size: 1.41em;
   height: 1em;
@@ -424,7 +424,7 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn {
 
 .wri-context-sub-trigger::after {
   display: block;
-  content: "";
+  content: '';
   border: 0.35em solid;
   border-color: transparent transparent transparent #444;
   position: absolute;
@@ -823,7 +823,7 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   margin-right: 0.6em;
 }
 
-.wri-dialog input[type="text"] {
+.wri-dialog input[type='text'] {
   background: #fff;
   border: 0.06em solid #909090;
   box-shadow: none;
@@ -833,14 +833,14 @@ html.can-touch .wri-button-wrapper > button.active:hover {
   transition: background 0.2s, boder 0.2s, opacity 0.2s;
   width: 11.8em;
 }
-.wri-dialog input[type="text"]:hover,
-.wri-dialog input[type="text"]:focus {
+.wri-dialog input[type='text']:hover,
+.wri-dialog input[type='text']:focus {
   border-color: #606060;
 }
-#spell-check-dialog input[type="text"] {
+#spell-check-dialog input[type='text'] {
   width: 14.12em;
 }
-.wri-dialog input[type="text"][disabled] {
+.wri-dialog input[type='text'][disabled] {
   opacity: 0.5;
   pointer-events: none;
 }
@@ -874,11 +874,11 @@ html.can-touch .wri-button-wrapper > button.active:hover {
 #synonyms option:checked::before,
 #synonyms option:hover::before {
   color: #777;
-  content: "\e966";
+  content: '\e966';
   cursor: pointer;
   display: block;
   float: right;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 1.18em;
 }
 #synonyms option:checked::before {
@@ -918,7 +918,7 @@ COMBOBOX STYLES
   border-color: #909090 transparent;
   border-style: solid;
   border-width: 0.35em 0.35em 0 0.35em;
-  content: "";
+  content: '';
   pointer-events: none;
   position: absolute;
   right: 0.6em;
@@ -952,7 +952,7 @@ select::-ms-expand {
   width: 100%;
 }
 
-.wri-combobox input[type="text"] {
+.wri-combobox input[type='text'] {
   border: none;
   left: 0;
   line-height: 2.06em;

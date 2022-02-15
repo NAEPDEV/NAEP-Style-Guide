@@ -20,9 +20,9 @@
 *   * Zoom In (`zoom-in` <span class="icon-zoom-in"></span> icon)
 *   * Change Language (`lang-esp`/`lang-eng` <span class="icon-lang-eng"></span> icon)
 * * Additional tools
-*   * Read Aloud (`read-aloud` <span class="icon-read-aloud"></span> icon)
-*   * Scratchwork (`scratchwork` <span class="icon-scratchwork"></span> icon)
-*   * Equation Editor (`equation-editor` <span class="icon-equation-editor"></span> icon)
+*   * Read Aloud (`read-aloud` <span><img src="static/img/icon-tts.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
+*   * Scratchwork (`scratchwork` <span><img src="static/img/scratchwork.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
+*   * Equation Editor (`equation-editor` <span><img src="static/img/equation-editor.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
 *   * Calculator (`calculator` <span class="icon-calculator"></span> icon)
 * * Timer (`timer` <span class="icon-timer"></span> icon)
 * * Progress bar (only available for linearly navigated blocks [e.g., scenario-based tasks, SQ blocks])
@@ -53,7 +53,7 @@
 }
 
 #student-toolbar-spacer {
-  content: "";
+  content: '';
   flex: 0 0 auto;
   font-size: 20px;
   height: 3em;
@@ -80,8 +80,8 @@
 }
 
 .btn-group-flex::before {
-  content: "";
-  background: url("logo.png") center/auto 100% no-repeat;
+  content: '';
+  background: url('logo.png') center/auto 100% no-repeat;
   bottom: 0;
   display: block;
   left: 0;
@@ -316,29 +316,29 @@ html.can-touch #timer-btn.active:active {
 .system-btn:before,
 .system-btn span:before,
 #next-btn:before {
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 2.4em;
   line-height: 1;
 }
 
 .tray-btn:before,
 .tray-btn span:before {
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 1.6em;
   line-height: 1;
 }
 
 #help-btn:before {
-  content: "\e92a";
+  content: '\e92a';
 }
 #theme-btn:before {
-  content: "\e92b";
+  content: '\e92b';
 }
 #zoom-out-btn:before {
-  content: "\e92c";
+  content: '\e92c';
 }
 #zoom-in-btn:before {
-  content: "\e92d";
+  content: '\e92d';
 }
 
 #student-toolbar .path2,
@@ -351,88 +351,88 @@ html.can-touch #timer-btn.active:active {
 }
 
 #change-lang-btn .path1:before {
-  content: "\e92e";
+  content: '\e92e';
 }
 #change-lang-btn .path2:before {
-  content: "\e92f";
+  content: '\e92f';
   color: #8b13b2;
 }
 #change-lang-btn .path3:before {
-  content: "\e930";
+  content: '\e930';
 }
 
 #change-lang-btn2 .path1:before {
-  content: "\e931";
+  content: '\e931';
 }
 #change-lang-btn2 .path2:before {
-  content: "\e932";
+  content: '\e932';
   color: #8b13b2;
 }
 #change-lang-btn2 .path3:before {
-  content: "\e933";
+  content: '\e933';
 }
 
 #read-aloud-btn .path1:before {
-  content: "\e934";
+  content: '\e934';
 }
 #read-aloud-btn .path2:before {
-  content: "\e935";
+  content: '\e935';
   color: #0076d2;
 }
 
 #scratchwork-btn .path1:before {
-  content: "\e936";
+  content: '\e936';
   color: #900;
 }
 #scratchwork-btn .path2:before {
-  content: "\e937";
+  content: '\e937';
 }
 
 #pencil-btn .path1:before {
-  content: "\e91f";
+  content: '\e91f';
   color: #ead2a7;
 }
 #pencil-btn .path2:before {
-  content: "\e920";
+  content: '\e920';
 }
 
 #highlighter-btn .path1:before {
-  content: "\e921";
+  content: '\e921';
   color: #ffdf5a;
 }
 #highlighter-btn .path2:before {
-  content: "\e922";
+  content: '\e922';
   color: #ffed9f;
 }
 #highlighter-btn .path3:before {
-  content: "\e923";
+  content: '\e923';
 }
 
 #eraser-btn .path1:before {
-  content: "\e924";
+  content: '\e924';
   color: #eaa0b5;
 }
 #eraser-btn .path2:before {
-  content: "\e925";
+  content: '\e925';
 }
 
 #clearSW-btn:before {
-  content: "\e926";
+  content: '\e926';
 }
 
 #equation-btn .path1:before {
-  content: "\e938";
+  content: '\e938';
 }
 #equation-btn .path2:before {
-  content: "\e939";
+  content: '\e939';
   color: #008117;
 }
 
 #calc-btn:before {
-  content: "\e93a";
+  content: '\e93a';
 }
 #timer-btn:before {
-  content: "\e93b";
+  content: '\e93b';
 }
 
 .system-btn.hidden {
@@ -478,7 +478,7 @@ html.can-touch .btn-nav:hover {
 }
 
 .btn-nav::after {
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 1.6em;
 }
 .btn-nav[disabled]::after {
@@ -509,7 +509,7 @@ html.can-touch .btn-back:active {
 }
 
 .btn-back::after {
-  content: "\e93e";
+  content: '\e93e';
 }
 
 .btn-next {
@@ -531,7 +531,7 @@ html.can-touch .btn-next:active {
 }
 
 .btn-next::after {
-  content: "\e93f";
+  content: '\e93f';
   margin-left: 0.093em;
 }
 

@@ -163,7 +163,7 @@
 *
 * ### States
 * Drop targets have the following states.
-* * _Drag_. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue `rgba(41, 107, 204, 0.2)` when the test taker begins to drag an object.
+* * _Drag_. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue `rgba(41, 107, 204, 0.2)` <span class="callout-swatch" style="background-color:rgba(41, 107, 204, 0.2)"></span> when the test taker begins to drag an object.
 * * _Hover_. To indicate that a draggable object will be placed successfully, a blue <span class="no-wrap">`#296BCC` <span class="callout-swatch" style="background-color:#296BCC"></span></span> border is added to an active drop target when an object is dragged over it.
 *
 * The following demo presents the interactive states for draggable objects and their drop targets.
@@ -191,7 +191,7 @@
   background-color: rgba(41, 107, 204, 0.2);
 }
 
-.match-drop-target[data-max-selections="1"] {
+.match-drop-target[data-max-selections='1'] {
   align-items: center;
   justify-content: center;
 }

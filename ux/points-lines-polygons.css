@@ -150,7 +150,7 @@
 * * Hovering over a location where a point can be placed causes a focus ring (see [indicators.css] for more information) and a ghost point to appear. These indicators convey that a point will be placed when the test taker selects the location. The ghost point is 50% opaque and 133% the size of the default point.
 * * Selecting the location causes the point to be placed. Placed points have the same styling as the default state of draggable points (see above).
 * * Hovering over a point immediately after the point has been placed causes no change in state. To delete the point, the test taker must move the cursor off and then back on the point. This behavior is designed to prevent accidental deletion.
-* * If the cursor has been moved off a placed point, hovering over the point again causes a red <span class="no-wrap">`#d50000` <span class="callout-swatch" style="background-color:#d50000"></span></span> cross with a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> outline to appear over the point. This indicator conveys that the point will be deleted if the test taker selects it.
+* * If the cursor has been moved off a placed point, hovering over the point again causes a red <span class="no-wrap">`#d50000` <span class="callout-swatch" style="background-color:#d50000"></span></span> `cross` <span class="icon-cross"></span> icon with a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> outline to appear over the point. This indicator conveys that the point will be deleted if the test taker selects it.
 * * Selecting a placed point once it displays the deletion indicator causes the point to be deleted. The point reverts to the default hover state (50% opacity, 133% default size) to convey that selecting it again will cause it to be re-placed.
 *
 * The following demo presents the behavior of interactive points on a grid.
@@ -305,9 +305,9 @@ html.can-touch .delete-mode .btn-point-delete:active {
 
 .btn-point-delete::before {
   color: #757575;
-  content: "\e948";
+  content: '\e948';
   display: block;
-  font-family: "icons";
+  font-family: 'icons';
   line-height: 1;
   margin-right: 0.5em;
   text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, -1px 1px 0 #fff,

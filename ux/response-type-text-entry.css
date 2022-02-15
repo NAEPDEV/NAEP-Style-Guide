@@ -24,24 +24,24 @@
 * @styles 0-text-entry-states Field States
 * Text entry fields have the following states.
 * * _Default_. Text extry fields have a gray <span class="no-wrap">`#767676` <span class="callout-swatch" style="background-color:#767676"></span></span> border and an inset shadow to help the test taker identify them as active controls. No placeholder text (e.g., “Type your answer here.”) is provided.
-* * _Focus_. Since the dotted outline typically used to indicate focus (as described on the [indicators.css] page) can be difficult to discern next to the text field border, the border is changed to dark blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>, a light blue `rgba(0, 104, 209, .4)` glow is added, and the inset drop shadow is removed.
+* * _Focus_. Since the dotted outline typically used to indicate focus (as described on the [indicators.css] page) can be difficult to discern next to the text field border, the border is changed to dark blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span>, a light blue `rgba(0, 104, 209, .4)` <span class="callout-swatch" style="background-color:rgba(0, 104, 209, .4)"></span> glow is added, and the inset drop shadow is removed.
 * * _Disabled_. The drop shadow is removed, the border becomes dark gray <span class="no-wrap">`#D0D0D0` <span class="callout-swatch" style="background-color:#D0D0D0"></span></span>, and the background becomes light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.
 **/
 
-input[type="text"]:hover,
+input[type='text']:hover,
 textarea:hover {
   border-color: #383838;
 }
 
 textarea.extendedtext:focus,
-input[type="text"].fib:focus,
-input[type="text"].numeric-entry:focus {
+input[type='text'].fib:focus,
+input[type='text'].numeric-entry:focus {
   border-color: #0068d1;
   box-shadow: 0 0 0.02em 0.07em rgba(0, 104, 209, 0.4);
   outline: none;
 }
 
-table.grid input[type="text"] {
+table.grid input[type='text'] {
   margin-bottom: 0.35em;
 }
 

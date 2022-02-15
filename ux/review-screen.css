@@ -5,10 +5,10 @@
 * The review screen shows the number of unanswered items in the current block of discrete items and provides a way to navigate to the next block via the __Go on to the next section__ button. The screen is accessed via the last tab in the block.
 *
 * Review screen content changes based on the number of unanswered items in a block.
-* * When more than one item is unanswered, a `warning` <span class="icon-warning"></span> icon is displayed.
+* * When more than one item is unanswered, a `warning` <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon is displayed.
 * * When only one item is unanswered, the word “questions” in the second sentence becomes singular (i.e., “question”).
 * * When no items are unanswered,
-*   * The `warning` <span class="icon-warning"></span> icon changes to a `timer` <span class="icon-timer"></span> icon.
+*   * The `warning` <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon changes to a `timer` <span class="icon-timer"></span> icon.
 *   * The second sentence and the list of unanswered items are removed.
 *
 * Use the dropdown menu in the demo below to see how review screen content changes based on the number of unanswered items.

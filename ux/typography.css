@@ -24,6 +24,9 @@
 * ### SBT Sizing <img src="static/img/icon-asterisk.svg"/>
 * The base type size for content presented in Clear Sans is 22&#160;pixels. (The slight difference from the size for Calibri is due to the typefaces’ differing <a href="https://typedecon.com/blogs/type-glossary/x-height/" target="_blank">x-heights</a>.) The minimum type size for SBTs is 18&#160;pixels; a range of sizes and weights is used to establish the informational hierarchy.
 * @iframe ux/demos/typography/sbt-sizing.html 770
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 /**
@@ -52,6 +55,9 @@
 * @iframe ux/demos/typography/list.html 200
 *
 *
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+*
+*
 * ### Block Quotes
 * Block quotes have a left margin approximately 2x the font size. Block quotes in social studies have no font styling. Block quotes in other subjects are italicized.
 *
@@ -63,92 +69,95 @@
 *
 * The following demo shows a shared stimulus introduction, a non-social studies block quote, and an attribution.
 * @iframe ux/demos/typography/shared-stimulus.html 285
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 @font-face {
-  font-family: "Calibri";
-  src: local("Calibri Regular"),
-    url("fonts/calibri-regular.woff") format("woff");
+  font-family: 'Calibri';
+  src: local('Calibri Regular'),
+    url('fonts/calibri-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Calibri";
-  src: local("Calibri Italic"), url("fonts/calibri-italic.woff") format("woff");
+  font-family: 'Calibri';
+  src: local('Calibri Italic'), url('fonts/calibri-italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
-  font-family: "Calibri";
-  src: local("Calibri Bold"), url("fonts/calibri-bold.woff") format("woff");
+  font-family: 'Calibri';
+  src: local('Calibri Bold'), url('fonts/calibri-bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: "Calibri";
-  src: local("Calibri Bold Italic"),
-    url("fonts/calibri-bold-italic.woff") format("woff");
+  font-family: 'Calibri';
+  src: local('Calibri Bold Italic'),
+    url('fonts/calibri-bold-italic.woff') format('woff');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Thin.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Thin.woff') format('woff');
   font-weight: 200;
   font-style: normal;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Light.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Regular.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Italic.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Italic.woff') format('woff');
   font-weight: 400;
   font-style: italic;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Medium.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Medium.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-MediumItalic.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-MediumItalic.woff') format('woff');
   font-weight: 600;
   font-style: italic;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-Bold.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
-  font-family: "ClearSans";
-  src: url("fonts/ClearSans-BoldItalic.woff") format("woff");
+  font-family: 'ClearSans';
+  src: url('fonts/ClearSans-BoldItalic.woff') format('woff');
   font-weight: 700;
   font-style: italic;
 }
 
 html {
-  font-family: "Calibri", Arial, sans-serif;
+  font-family: 'Calibri', Arial, sans-serif;
   font-size: 24px;
   line-height: 1.11;
   transition: background 0.2s;
 }
 html.sbt {
-  font-family: "ClearSans", sans-serif;
+  font-family: 'ClearSans', sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;

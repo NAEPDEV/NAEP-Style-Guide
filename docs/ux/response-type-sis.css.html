@@ -1284,7 +1284,7 @@ In the single-select variant, if a test taker attempts to make a second selectio
 <p>Text selections in stimuli have the following states.</p>
 <ul>
 <li><em>Inactive</em>. Visible when the item to which the selection belongs is NOT on screen and/or when a modal system tool (e.g., Scratchwork) is enabled. The selection has the styling of the surrounding passage.</li>
-<li><em>Active</em>. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent <code>rgba(0,0,0,0.4)</code> border and a light green <span class="no-wrap"><code>#D1F7D3</code> <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.</li>
+<li><em>Active</em>. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent <code>rgba(0,0,0,0.4)</code> <span class="callout-swatch" style="background-color:rgba(0,0,0,0.4)"></span> border and a light green <span class="no-wrap"><code>#D1F7D3</code> <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.</li>
 <li><em>Hover</em>. Visible when the cursor is over the text selection. The selection has the same border and a darker green <span class="no-wrap"><code>#5ABF5D</code> <span class="callout-swatch" style="background-color:#5ABF5D"></span></span> background. The <code>pointer</code> cursor is shown.</li>
 <li><em>Selected</em>. The selection has no border, a dark green <span class="no-wrap"><code>#0E8812</code> <span class="callout-swatch" style="background-color:#0E8812"></span></span> background, and the text color is white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.</li>
 </ul>
@@ -1353,14 +1353,14 @@ In the single-select variant, if a test taker attempts to make a second selectio
 
 				
 				<section class="description">
-					<p>In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
+					<p>The Assessment Specialist has the ability to define a maximum selection limit for multiple-select variants of SIS items. When a test taker attempts to select more options than the maximum number specified in the item stem an alert will appear. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<p>The alert has a light yellow <span class="no-wrap"><code>#F8ECBD</code> <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap"><code>#E6CB90</code> <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A <code>warning</code> <span class="icon-warning"></span> icon appears at its left side.</p>
+						<p>The alert has a light yellow <span class="no-wrap"><code>#F8ECBD</code> <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap"><code>#E6CB90</code> <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A <code>warning</code> <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon appears at its left side.</p>
 <p>If the test taker does not dismiss the alert via the <strong>Close</strong> button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.</p>
 
 					</section>

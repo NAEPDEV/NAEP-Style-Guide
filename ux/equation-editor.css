@@ -45,17 +45,17 @@
 * * _Hover_. Button background darkens to <span class="no-wrap">`#183B5D` <span class="callout-swatch" style="background-color:#183B5D"></span></span>. The `pointer` cursor is shown.
 *
 * ### Symbol Button States
-* * _Default_. Button background is white at 90% opacity `rgba(255,255,255,0.9)`, and button label is gray <span class="no-wrap">`#444444` <span class="callout-swatch" style="background-color:#444444"></span></span>.
+* * _Default_. Button background is white at 90% opacity `rgba(255,255,255,0.9)` <span class="callout-swatch" style="background-color:rgba(255,255,255,0.9)"></span>, and button label is gray <span class="no-wrap">`#444444` <span class="callout-swatch" style="background-color:#444444"></span></span>.
 * * _Hover_. Button background opacity increases to 100%, and button label darkens to <span class="no-wrap">`#111111` <span class="callout-swatch" style="background-color:#111111"></span></span>. The `pointer` cursor is shown.
 * * _Disabled_. Button opacity reduces to 30%.
 *
-* Symbol buttons are organized into groups separated by 1-pixel vertical white borders with 50% opacity `rgba(255,255,255,0.5)`. There is no border between the last button group and the Backspace button.
+* Symbol buttons are organized into groups separated by 1-pixel vertical white borders with 50% opacity `rgba(255,255,255,0.5)` <span class="callout-swatch" style="background-color:rgba(255,255,255,0.5)"></span>. There is no border between the last button group and the Backspace button.
 **/
 
-input[type="text"].fib.ee-active,
-input[type="text"].fib.ee-active:focus,
-input[type="text"].numeric-entry.ee-active,
-input[type="text"].numeric-entry.ee-active:focus,
+input[type='text'].fib.ee-active,
+input[type='text'].fib.ee-active:focus,
+input[type='text'].numeric-entry.ee-active,
+input[type='text'].numeric-entry.ee-active:focus,
 textarea.extendedtext.ee-active,
 textarea.extendedtext.ee-active:focus {
   background: #ebfbe5;
@@ -177,7 +177,7 @@ html.can-touch #ee-btn-close:hover {
   border: 0.208em solid transparent;
   border-radius: 0.417em;
   color: #fff;
-  font-family: "icons";
+  font-family: 'icons';
   line-height: 1;
   min-width: 0;
   padding: 0.27em;
@@ -191,7 +191,7 @@ html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:hover {
   border-radius: 0.2em;
   color: #fff;
   display: flex;
-  font-family: "Calibri", sans-serif;
+  font-family: 'Calibri', sans-serif;
   line-height: 1.25;
   padding: 0.25em 1em 0.3em 1em;
 }
@@ -212,15 +212,15 @@ html.can-touch #ee-wrapper.ee-old-variant #ee-btn-close:active {
 }
 
 #ee-btn-close:before {
-  content: "\e948";
+  content: '\e948';
   display: block;
 }
 #ee-wrapper.ee-old-variant #ee-btn-close:before {
   background: #255571;
   border-radius: 50%;
-  content: "\ea29";
+  content: '\ea29';
   display: block;
-  font-family: "naep-ee";
+  font-family: 'naep-ee';
   font-size: 1.25em;
   line-height: 1;
   margin-right: 0.5em;
@@ -335,20 +335,20 @@ html.can-touch #ee-wrapper.ee-old-variant .ee-btn:hover {
   pointer-events: none;
 }
 
-[class^="icon-ee-"],
-[class*=" icon-ee-"],
-#ee-wrapper.ee-old-variant [class^="icon-ee-"],
-#ee-wrapper.ee-old-variant [class*=" icon-ee-"] {
+[class^='icon-ee-'],
+[class*=' icon-ee-'],
+#ee-wrapper.ee-old-variant [class^='icon-ee-'],
+#ee-wrapper.ee-old-variant [class*=' icon-ee-'] {
   letter-spacing: normal;
   padding: 0;
 }
 
-[class^="icon-ee-"]:before,
-[class*=" icon-ee-"]:before {
+[class^='icon-ee-']:before,
+[class*=' icon-ee-']:before {
   font-size: 2em;
 }
-#ee-wrapper.ee-old-variant [class^="icon-ee-"]:before,
-#ee-wrapper.ee-old-variant [class*=" icon-ee-"]:before {
+#ee-wrapper.ee-old-variant [class^='icon-ee-']:before,
+#ee-wrapper.ee-old-variant [class*=' icon-ee-']:before {
   font-size: 2.42em;
 }
 

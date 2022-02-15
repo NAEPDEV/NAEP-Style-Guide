@@ -33,7 +33,7 @@
 * @styles 0-ruler-styling Ruler Styling
 * The ruler has a gray <span class="no-wrap">`#D3D3D3` <span class="callout-swatch" style="background-color:#D3D3D3"></span></span> background and black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.
 *
-* The cursor is set to `move` when positioned over the ruler to indicate that it can be moved via dragging.
+* The cursor is set to `move` <span class="icon-move"></span> when positioned over the ruler to indicate that it can be moved via dragging.
 **/
 
 .ruler-img {
@@ -49,7 +49,7 @@
 }
 
 .ruler-draggable {
-  background: #d3d3d3 url("../stim-ruler/ruler.svg") no-repeat;
+  background: #d3d3d3 url('../stim-ruler/ruler.svg') no-repeat;
   cursor: move;
   height: 2.5em;
   left: calc(50% - 11.625em);
@@ -64,9 +64,9 @@
 * @styles 1-ruler-handles Ruler Handles
 * The ruler has a rotation handle on either end and a drag handle below its center. Handles are styled as primary circular filled buttons. (See the [buttons.css] page for more information.)
 *
-* The drag handle has the `move` <span class="icon-move"></span> icon (as specified on the [icons.css] page), and the cursor is set to `move`.
+* The drag handle has the `move` <span class="icon-move"></span> icon (as specified on the [icons.css] page), and the cursor is set to `move` <span class="icon-move"></span>.
 *
-* The rotation handles have the `rotate-left` and `rotate-right` <span class="icon-rotate-right"></span> icons, and the cursor is set to `ns-resize`.
+* The rotation handles have the `rotate-left` <span class="icon-rotate-left"></span> and `rotate-right` <span class="icon-rotate-right"></span> icons, and the cursor is set to `ns-resize`.
 **/
 
 .ruler-drag-handle,
@@ -100,11 +100,11 @@
 }
 
 .ruler-wrapper .ui-rotatable-handle-left::before {
-  content: "\e928";
+  content: '\e928';
 }
 
 .ruler-wrapper .ui-rotatable-handle-right::before {
-  content: "\e929";
+  content: '\e929';
 }
 
 .btn-reset {

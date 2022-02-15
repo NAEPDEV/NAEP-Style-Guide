@@ -23,6 +23,9 @@
 * @iframe ux/demos/indicators/focus-indicator-iic.html 125
 *
 *
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+*
+*
 * Additional examples of focus indicators can be viewed by selecting interactive elements in demos throughout the style guide.
 **/
 
@@ -37,7 +40,7 @@
 .inline-choice span:focus,
 .step-indicator input:focus + label,
 .control input:focus + span,
-.layer-switch input[type="checkbox"]:focus + .layer-switch-slider {
+.layer-switch input[type='checkbox']:focus + .layer-switch-slider {
   outline: 1px dotted;
 }
 
@@ -51,7 +54,7 @@
 }
 
 .ee-tabarea li:focus,
-input[type="button"]:focus,
+input[type='button']:focus,
 button:focus,
 .wri-btn:focus,
 .btn-see-more:focus,
@@ -99,9 +102,9 @@ th.header:focus {
 .mc-choice-control,
 .inline-choice span:focus,
 .sis-text-selection:focus,
-input[type="text"]:focus,
+input[type='text']:focus,
 .wri-dialog textarea:focus,
-.wri-dialog input[type="text"]:focus,
+.wri-dialog input[type='text']:focus,
 .wri-dialog select:focus,
 .control input:focus + span {
   outline-offset: 1px;
@@ -138,11 +141,11 @@ table.grid tr.tts-active .grid-content:focus,
   outline-offset: 0.12em;
 }
 
-.media-container input[type="range"].media-volume:focus {
+.media-container input[type='range'].media-volume:focus {
   outline-offset: 0.35em;
 }
 
-.media-container input[type="range"].focus-tabbed:focus {
+.media-container input[type='range'].focus-tabbed:focus {
   outline: 1px dotted;
   outline-color: #000;
   outline-offset: 1px;
@@ -161,7 +164,7 @@ table.grid tr.tts-active .grid-content:focus,
   padding: 0.417em;
 }
 
-.wri-combobox input[type="text"]:focus {
+.wri-combobox input[type='text']:focus {
   outline: none;
 }
 
@@ -182,7 +185,7 @@ table.grid tr.tts-active .grid-content:focus,
   border: 1px dashed;
   border-radius: 50%;
   bottom: 1px;
-  content: "";
+  content: '';
   display: block;
   left: 1px;
   position: absolute;
@@ -219,7 +222,7 @@ table.grid tr.tts-active .grid-content:focus,
   stroke: #949494;
   stroke-width: 2;
 }
-[class^="handle"] .iic-focus-ring {
+[class^='handle'] .iic-focus-ring {
   fill: #fff;
   fill-opacity: 0.5;
 }
@@ -292,16 +295,16 @@ html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
 .scroll-indicator.more::after,
 .scroll-indicator.top::before {
   display: block;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 1.4em;
 }
 
 .scroll-indicator.more::before {
-  content: "More";
+  content: 'More';
 }
 
 .scroll-indicator.more::after {
-  content: "\e90e";
+  content: '\e90e';
   line-height: 0.75;
 }
 
@@ -312,12 +315,12 @@ html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
 }
 
 .scroll-indicator.top::before {
-  content: "\e90f";
+  content: '\e90f';
   line-height: 0.5;
 }
 
 .scroll-indicator.top::after {
-  content: "Top";
+  content: 'Top';
 }
 
 .scroll-indicator span {
@@ -370,9 +373,9 @@ html.can-touch .ft-center-point:active ~ .point .iic-focus-ring {
 
 .loading-spinner-content:before {
   animation: spin 1s infinite linear;
-  content: "\e912";
+  content: '\e912';
   display: inline-block;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 0.67em;
   letter-spacing: normal;
   margin-right: 0.2em;

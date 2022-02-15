@@ -194,7 +194,7 @@ CHARACTER TEXT STYLES
   border-left: 0.05em solid transparent;
   border-top: 0.05em solid transparent;
   box-shadow: -0.05em -0.05em 0.05em 0 rgba(0, 0, 0, 0.15);
-  content: "";
+  content: '';
   display: block;
   height: 1em;
   left: -0.55em;
@@ -227,7 +227,7 @@ CHARACTER TEXT STYLES
 * ### Voiceover buttons
 * When voiceover is provided for character dialogue, a __Voiceover__ button is presented either at the upper right of the speech bubble (in the distinct style) or at the upper right of the character portrait (in the intermediate and subtle styles).  __Voiceover__ buttons have the following states.
 * * _Paused_. Visible when the voiceover is paused. The button is gray <span class="no-wrap">`#767676` <span class="callout-swatch" style="background-color:#767676"></span></span> and displays the `volume-up` <span class="icon-volume-up"></span> icon. (See the [icons.css] page.)
-* * _Playing_. Visible when the voiceover is playing. The button is blue `0068D1` and displays the `pause` <span class="icon-pause"></span> icon.
+* * _Playing_. Visible when the voiceover is playing. The button is blue `#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span> and displays the `pause` <span class="icon-pause"></span> icon.
 * ### Interactive portraits
 * In the intermediate and subtle styles, the character’s portrait changes state along with its __Voiceover__ button.
 * * _Paused_. If the portrait has a border, it becomes gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>. If the portrait has a background, it becomes light gray <span class="no-wrap">`#E5E5E5` <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.
@@ -277,12 +277,12 @@ html.can-touch .char-wrapper.char-vo-play .btn.btn-secondary.hover {
 }
 
 .char-wrapper .btn::before {
-  content: "\e917";
-  font-family: "icons" !important;
+  content: '\e917';
+  font-family: 'icons' !important;
   font-size: 1.5em;
 }
 .char-wrapper.char-vo-play .btn::before {
-  content: "\e914";
+  content: '\e914';
 }
 
 /* Positioning based on speech bubble parameter */

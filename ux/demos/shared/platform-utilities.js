@@ -1,23 +1,36 @@
 var baseZoom = parseFloat($('html').css('font-size')),
   state = {
-    'help': 'off',
-    'theme': 'default',
-    'zoom': 0,
-    'lang': 'eng',
-    'tts': 'off',
-    'sw': 'off',
+    help: 'off',
+    theme: 'default',
+    zoom: 0,
+    lang: 'eng',
+    tts: 'off',
+    sw: 'off',
     'sw-mode': 'pencil',
-    'ee': 'off',
-    'calc': 'off',
-    'nav': 'start',
+    ee: 'off',
+    calc: 'off',
+    nav: 'start',
     'ereader-panel': 'closed',
-    'dialog': 'closed',
-    'wizard': 'closed'
+    dialog: 'closed',
+    wizard: 'closed',
   };
 
-
 function updateState(k, v) {
-  var tools = ['help', 'theme', 'zoom', 'lang', 'tts', 'sw', 'sw-mode', 'ee', 'calc', 'nav', 'ereader-panel', 'dialog', 'wizard'];
+  var tools = [
+    'help',
+    'theme',
+    'zoom',
+    'lang',
+    'tts',
+    'sw',
+    'sw-mode',
+    'ee',
+    'calc',
+    'nav',
+    'ereader-panel',
+    'dialog',
+    'wizard',
+  ];
 
   // Check if parameters are asking to enable an ad hoc element.
   // If so, enable element and remove it from the hash.
@@ -32,10 +45,10 @@ function updateState(k, v) {
   //Timer (must be in this position)
   if (state['timer'] == 'on') {
     $('#timer-btn').addClass('active');
-    $("#timer-tray").removeClass("hidden");
+    $('#timer-tray').removeClass('hidden');
   } else if (state['timer'] == 'off') {
     $('#timer-btn').removeClass('active');
-    $("#timer-tray").addClass("hidden");
+    $('#timer-tray').addClass('hidden');
   }
 
   //Scratchwork mode
@@ -145,19 +158,24 @@ function updateState(k, v) {
 
   //Dialogs
   if (state['dialog'] == 'open') {
-    $('#help-btn, #scratchwork-btn, #equation-btn, #calc-btn, #next-btn, #back-btn').attr('disabled', true);
+    $(
+      '#help-btn, #scratchwork-btn, #equation-btn, #calc-btn, #next-btn, #back-btn'
+    ).attr('disabled', true);
     turnOffEE();
     state['ee'] = 'off';
     $('#contentarea').find(ttsFocusRings).attr('tabindex', -1);
     $('#contentarea').find(ttsBorders).removeClass('tts-active');
-    setTimeout(function() {
+    setTimeout(function () {
       $('.scroll-indicator').attr('tabindex', -1);
     }, 301);
   }
 
   //Wizards
   if (state['wizard'] == 'open') {
-    $('#scratchwork-btn, #equation-btn, #calc-btn, #next-btn, #back-btn').attr('disabled', true);
+    $('#scratchwork-btn, #equation-btn, #calc-btn, #next-btn, #back-btn').attr(
+      'disabled',
+      true
+    );
   }
 
   //Support for ad hoc disabling of UI elements
@@ -168,20 +186,19 @@ function updateState(k, v) {
   }
 }
 
-
 //Add unique IDs to passed elements
 function addUniqueID(target, prefix) {
   var counter = 1;
 
-  target.each(function() {
+  target.each(function () {
     $(this).attr('id', prefix + counter);
     counter++;
   });
-};
+}
 
 function pauseMedia() {
   $('.char-wrapper').removeClass('char-vo-play');
-  $('video, audio').each(function() {
+  $('video, audio').each(function () {
     $(this).get(0).pause();
   });
 }
@@ -204,15 +221,19 @@ function resetSISMaxSelect() {
 }
 
 function updatePageButtons(state) {
-  document.dispatchEvent(new CustomEvent('updatePageButtons', {
-    detail: {
-      state: state
-    }
-  }));
+  document.dispatchEvent(
+    new CustomEvent('updatePageButtons', {
+      detail: {
+        state: state,
+      },
+    })
+  );
 }
 
-var standardList = 'textarea, input[type=text], input[type=radio]:not(.step-indicator input), input[type=checkbox], input[type=range], select, .btn, .footnote-btn, .media-btn, .media-container, .btn-dialog-close, .mc, .mc-eliminate-choice, table.grid, .inline-choice, .match-option, .sis-media-selection, .sis-media-btn-primary, .btn-close, .response-area-selectable-table, .ruler-draggable, .layer-switch-wrapper, #QuestionsButton, #wri-editor-toolbar button, .wri-dialog button, .wri-combobox, .bg-bar, .obj-translatable, .obj-resizable, .obj-rotatable, .coord-grid text, .shape-prepop, .asymptote-handle, .shape-transformable, .sb-source .point, .sb-source .line, .ft-center-point, .char-portrait',
-  customList = 'a, .accordion span, .tablesorter th.header, .inline-choice > span, .sis-text-selection, .handle-size, .point:not(.sb-source .point, .ft-center-point), .line:not(.sb-source .line), .sb-source, .asymptote, .nl-point, .nl-segment, .bw-actual, .dl-section, .nl-zoom-span, .ft-source';
+var standardList =
+    'textarea, input[type=text], input[type=radio]:not(.step-indicator input), input[type=checkbox], input[type=range], select, .btn, .footnote-btn, .media-btn, .media-container, .btn-dialog-close, .mc, .mc-eliminate-choice, table.grid, .inline-choice, .match-option, .sis-media-selection, .sis-media-btn-primary, .btn-close, .response-area-selectable-table, .ruler-draggable, .layer-switch-wrapper, #QuestionsButton, #wri-editor-toolbar button, .wri-dialog button, .wri-combobox, .bg-bar, .obj-translatable, .obj-resizable, .obj-rotatable, .coord-grid text, .shape-prepop, .asymptote-handle, .shape-transformable, .sb-source .point, .sb-source .line, .ft-center-point, .char-portrait',
+  customList =
+    'a, .accordion span, .tablesorter th.header, .inline-choice > span, .sis-text-selection, .handle-size, .point:not(.sb-source .point, .ft-center-point), .line:not(.sb-source .line), .sb-source, .asymptote, .nl-point, .nl-segment, .bw-actual, .dl-section, .nl-zoom-span, .ft-source';
 
 function disableUI() {
   var standardEls = $(standardList),
@@ -227,7 +248,7 @@ function disableUI() {
   updatePageButtons('disable');
   $('.inline-choice').removeClass('active');
   if ($('.match-option').length) {
-    $(".match-option").draggable("disable");
+    $('.match-option').draggable('disable');
   }
 }
 
@@ -240,7 +261,7 @@ function enableUI() {
   updatePageButtons('enable');
   $('.cta-submit-wrapper .cta-message').attr('tabindex', -1);
   if ($('.match-option').length) {
-    $(".match-option").draggable("enable");
+    $('.match-option').draggable('enable');
   }
 }
 
@@ -280,9 +301,8 @@ function changeZoom(state) {
   if (typeof MoreBtnController == 'function') {
     MoreBtnController(100);
   } else {
-    console.warn('Missing scroll-indicator.js.');
+    // console.warn('Missing scroll-indicator.js.');
   }
-
 }
 
 function changeLanguage(lang) {
@@ -296,8 +316,8 @@ function changeLanguage(lang) {
 
   target.removeClass('hidden');
   target.siblings('.change-lang-class').addClass('hidden');
-  $("#change-lang-btn2-eng-box").toggleClass("slide-left");
-  $("#change-lang-btn-esp-box").toggleClass("slide-right");
+  $('#change-lang-btn2-eng-box').toggleClass('slide-left');
+  $('#change-lang-btn-esp-box').toggleClass('slide-right');
   $('.arrow').toggleClass('fade-in');
   target.siblings('.change-lang-class').focus();
 }
@@ -312,7 +332,7 @@ function bindEvent(element, eventName, eventHandler) {
 }
 
 // Send a message to the parent
-var sendMessage = function(msg) {
+var sendMessage = function (msg) {
   // Make sure you are sending a string, and to stringify JSON
   if (window.parent.length) {
     window.parent.postMessage(msg, '*');
@@ -320,7 +340,7 @@ var sendMessage = function(msg) {
 };
 
 // Listen to messages from parent window
-bindEvent(window, 'message', function(e) {
+bindEvent(window, 'message', function (e) {
   var arr = e.data.split(','),
     key = arr[0],
     value = arr[1];
@@ -328,9 +348,10 @@ bindEvent(window, 'message', function(e) {
   updateState(key, value);
 });
 
-
-var ttsBorders = '.stimulus-paragraph p, .stem-paragraph-inner, .stem-paragraph p, .standalone-image, .mc-option, table.grid tr, .match-option-text, .footnote-paragraph, .list-unordered li, .alert p, .cta-message, .char-portrait figcaption p, .char-text p, .char-text h3 span, .sis-selection-header p, .wizard h3, .wizard p, .response-area-iic, .stim-table tr, .match-background',
-  ttsFocusRings = '.stimulus-paragraph p, .stem-paragraph-inner, .stem-paragraph p, .standalone-image, .mc-content:not(.nl-control-wrapper .mc-content), .grid-content, .match-option-text, .footnote-paragraph, .list-unordered li, .alert p, .cta-message, .char-portrait figcaption p, .char-text p, .char-text h3 span, .sis-selection-header p, .wizard h3, .wizard p, .response-area-iic, .table-content, .match-background';
+var ttsBorders =
+    '.stimulus-paragraph p, .stem-paragraph-inner, .stem-paragraph p, .standalone-image, .mc-option, table.grid tr, .match-option-text, .footnote-paragraph, .list-unordered li, .alert p, .cta-message, .char-portrait figcaption p, .char-text p, .char-text h3 span, .sis-selection-header p, .wizard h3, .wizard p, .response-area-iic, .stim-table tr, .match-background',
+  ttsFocusRings =
+    '.stimulus-paragraph p, .stem-paragraph-inner, .stem-paragraph p, .standalone-image, .mc-content:not(.nl-control-wrapper .mc-content), .grid-content, .match-option-text, .footnote-paragraph, .list-unordered li, .alert p, .cta-message, .char-portrait figcaption p, .char-text p, .char-text h3 span, .sis-selection-header p, .wizard h3, .wizard p, .response-area-iic, .table-content, .match-background';
 
 function turnOnTTS() {
   var ttsBorderedUnits = $(ttsBorders),
@@ -353,19 +374,24 @@ function turnOffTTS() {
 }
 
 function turnOnSW(k) {
-  $('.system-btn:not(#scratchwork-btn):not(#timer-btn), .btn-nav').attr('disabled', true);
+  $('.system-btn:not(#scratchwork-btn):not(#timer-btn), .btn-nav').attr(
+    'disabled',
+    true
+  );
   $('.enaepTab li').attr('disabled', true);
   $('.btn-tab-mover').attr('disabled', true);
   $('.step-indicator input').attr('disabled', true);
   $('.footnote-content').removeClass('active');
-  $('.childItem.selected, #stimulus').find('.scratchwork-canvas').addClass('active');
+  $('.childItem.selected, #stimulus')
+    .find('.scratchwork-canvas')
+    .addClass('active');
   $('#scratchwork-btn').removeAttr('disabled').addClass('active');
-  $("#scratchwork-tray").removeClass("hidden");
-  if (k == "sw") {
+  $('#scratchwork-tray').removeClass('hidden');
+  if (k == 'sw') {
     $('.tray-btn').removeClass('active');
-    $("#pencil-btn").addClass("active");
+    $('#pencil-btn').addClass('active');
     $('.tray-btn').removeAttr('disabled');
-    $("#pencil-btn").attr('disabled', true);
+    $('#pencil-btn').attr('disabled', true);
     state['sw-mode'] = 'pencil';
   }
 }
@@ -375,7 +401,9 @@ function turnOffSW() {
   $('.enaepTab li').removeAttr('disabled');
   $('.btn-tab-mover').removeAttr('disabled');
   $('.step-indicator input').removeAttr('disabled');
-  $('.childItem.selected, #stimulus').find('.scratchwork-canvas').removeClass('active');
+  $('.childItem.selected, #stimulus')
+    .find('.scratchwork-canvas')
+    .removeClass('active');
   $('#scratchwork-btn').removeClass('active');
   $('#scratchwork-tray').addClass('hidden');
   $('.tray-btn').attr('disabled', true);
@@ -414,11 +442,15 @@ function turnOnEE(target) {
   sendMessage('tts,off');
   eeTabs.attr('tabindex', 0);
   eeCloseBtn.attr('tabindex', 0);
-  if (eeFocused.length) { //If a text field has focus
+  if (eeFocused.length) {
+    //If a text field has focus
     textboxPosition = eeFocused.position();
-    contentArea.animate({
-      scrollTop: textboxPosition.top
-    }, 300);
+    contentArea.animate(
+      {
+        scrollTop: textboxPosition.top,
+      },
+      300
+    );
 
     enableEquationEditor(eeFocused);
     eeFocused.focus();
@@ -426,7 +458,7 @@ function turnOnEE(target) {
   if (typeof MoreBtnController == 'function') {
     MoreBtnController(300);
   } else {
-    console.warn('Missing scroll-indicator.js.');
+    // console.warn('Missing scroll-indicator.js.');
   }
 }
 
@@ -446,7 +478,7 @@ function turnOffEE() {
   if (typeof MoreBtnController == 'function') {
     MoreBtnController(300);
   } else {
-    console.warn('Missing scroll-indicator.js.');
+    // console.warn('Missing scroll-indicator.js.');
   }
 }
 
@@ -501,64 +533,66 @@ function turnOffCalc() {
 //Open eReader panel
 function openEreaderPanel() {
   if ($('#QuestionsPanel').length) {
-    $("#QuestionsButton").addClass("panel-down");
-    $("#QuestionsPanel").removeClass("hidden");
-    $("#QuestionsButton-label").html("Hide<br>Questions");
-    $("#mask").removeClass("hidden");
+    $('#QuestionsButton').addClass('panel-down');
+    $('#QuestionsPanel').removeClass('hidden');
+    $('#QuestionsButton-label').html('Hide<br>Questions');
+    $('#mask').removeClass('hidden');
   }
 }
 
 //Close eReader panel
 function closeEreaderPanel() {
   if ($('#QuestionsPanel').length) {
-    $("#QuestionsButton").removeClass("panel-down");
-    $("#QuestionsPanel").addClass("hidden");
-    $("#QuestionsButton-label").html("Show<br>Questions");
-    $("#mask").addClass("hidden");
+    $('#QuestionsButton').removeClass('panel-down');
+    $('#QuestionsPanel').addClass('hidden');
+    $('#QuestionsButton-label').html('Show<br>Questions');
+    $('#mask').addClass('hidden');
     $('#back-btn, #next-btn').attr('disabled', true);
   }
 }
 
-
 // Sticky hover fix from http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
-(function() {
-  var isTouch = false //var to indicate current input type (is touch versus no touch)
-  var isTouchTimer
-  var curRootClass = '' //var indicating current document root class ("can-touch" or "")
+(function () {
+  var isTouch = false; //var to indicate current input type (is touch versus no touch)
+  var isTouchTimer;
+  var curRootClass = ''; //var indicating current document root class ("can-touch" or "")
 
   function addtouchclass(e) {
-    clearTimeout(isTouchTimer)
-    isTouch = true
-    if (curRootClass != 'can-touch') { //add "can-touch' class if it's not already present
-      curRootClass = 'can-touch'
-      document.documentElement.classList.add(curRootClass)
+    clearTimeout(isTouchTimer);
+    isTouch = true;
+    if (curRootClass != 'can-touch') {
+      //add "can-touch' class if it's not already present
+      curRootClass = 'can-touch';
+      document.documentElement.classList.add(curRootClass);
     }
-    isTouchTimer = setTimeout(function() {
-      isTouch = false
-    }, 500) //maintain "istouch" state for 500ms so removetouchclass doesn't get fired immediately following a touch event
+    isTouchTimer = setTimeout(function () {
+      isTouch = false;
+    }, 500); //maintain "istouch" state for 500ms so removetouchclass doesn't get fired immediately following a touch event
   }
 
   function removetouchclass(e) {
-    if (!isTouch && curRootClass == 'can-touch') { //remove 'can-touch' class if not triggered by a touch event and class is present
-      isTouch = false
-      curRootClass = ''
-      document.documentElement.classList.remove('can-touch')
+    if (!isTouch && curRootClass == 'can-touch') {
+      //remove 'can-touch' class if not triggered by a touch event and class is present
+      isTouch = false;
+      curRootClass = '';
+      document.documentElement.classList.remove('can-touch');
     }
   }
 
-  document.addEventListener('touchstart', addtouchclass, false) //this event only gets called when input type is touch
-  document.addEventListener('mouseover', removetouchclass, false) //this event gets called when input type is everything from touch to mouse/ trackpad
+  document.addEventListener('touchstart', addtouchclass, false); //this event only gets called when input type is touch
+  document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
 })();
 
 // Set focus ring to only trigger on tab, not click
-(function() {
-  var focusableEls = 'input[type=range], input[type=checkbox], .ui-slider-handle, .point, .line, .asymptote, .nl-point, .nl-segment, .handle-size, .bw-actual, .dl-section, .ft-source';
+(function () {
+  var focusableEls =
+    'input[type=range], input[type=checkbox], .ui-slider-handle, .point, .line, .asymptote, .nl-point, .nl-segment, .handle-size, .bw-actual, .dl-section, .ft-source';
 
-  $(document).on('keyup', focusableEls, function(e) {
+  $(document).on('keyup', focusableEls, function (e) {
     var target = $(this),
-      code = (e.keyCode ? e.keyCode : e.which);
+      code = e.keyCode ? e.keyCode : e.which;
 
-    if (target.is(":focus")) {
+    if (target.is(':focus')) {
       switch (code) {
         case 9: //tabcase
         case 37: //Left arrow
@@ -568,11 +602,10 @@ function closeEreaderPanel() {
           target.addClass('focus-tabbed');
           break;
       }
-
     }
   });
 
-  $(document).on('blur mousedown', focusableEls, function(e) {
+  $(document).on('blur mousedown', focusableEls, function (e) {
     $(this).removeClass('focus-tabbed');
   });
 })();

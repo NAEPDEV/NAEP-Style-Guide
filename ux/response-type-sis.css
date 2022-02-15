@@ -27,7 +27,7 @@
 *
 * Text selections in stimuli have the following states.
 * * _Inactive_. Visible when the item to which the selection belongs is NOT on screen and/or when a modal system tool (e.g., Scratchwork) is enabled. The selection has the styling of the surrounding passage.
-* * _Active_. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent `rgba(0,0,0,0.4)` border and a light green <span class="no-wrap">`#D1F7D3` <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.
+* * _Active_. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent `rgba(0,0,0,0.4)` <span class="callout-swatch" style="background-color:rgba(0,0,0,0.4)"></span> border and a light green <span class="no-wrap">`#D1F7D3` <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.
 * * _Hover_. Visible when the cursor is over the text selection. The selection has the same border and a darker green <span class="no-wrap">`#5ABF5D` <span class="callout-swatch" style="background-color:#5ABF5D"></span></span> background. The `pointer` cursor is shown.
 * * _Selected_. The selection has no border, a dark green <span class="no-wrap">`#0E8812` <span class="callout-swatch" style="background-color:#0E8812"></span></span> background, and the text color is white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.
 *
@@ -144,9 +144,9 @@ html.can-touch .sis-media-btn-primary:active {
   background: #00a873;
   border: 0.167em solid #fff;
   border-radius: 50%;
-  content: "\e906";
+  content: '\e906';
   display: flex;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 0.5em;
   height: 1.5em;
   justify-content: center;
@@ -217,15 +217,15 @@ html.can-touch .sis-media-btn-secondary:active {
 }
 
 .sis-media-btn-secondary::before {
-  font-family: "icons";
+  font-family: 'icons';
   transition: transform 0.2s;
 }
 .sis-media-btn-add::before {
-  content: "\e905";
+  content: '\e905';
   font-size: 1em;
 }
 .sis-media-btn-play::before {
-  content: "\e913";
+  content: '\e913';
   font-size: 1.25em;
   margin-left: 0.125em;
 }
@@ -233,7 +233,7 @@ html.can-touch .sis-media-btn-secondary:active {
   transform: rotate(45deg);
 }
 .sis-media-playing::before {
-  content: "\e914";
+  content: '\e914';
   margin: 0;
 }
 
@@ -251,16 +251,16 @@ html.can-touch .sis-media-btn-secondary:active {
 }
 
 .sis-media-btn-add span::before {
-  content: "Select";
+  content: 'Select';
 }
 .sis-media-btn-play span::before {
-  content: "Play\00A0 clip";
+  content: 'Play\00A0 clip';
 }
 .sis-media-selection.selected .sis-media-btn-add span::before {
-  content: "Remove";
+  content: 'Remove';
 }
 .sis-media-playing span::before {
-  content: "Pause";
+  content: 'Pause';
 }
 
 /**
@@ -461,7 +461,7 @@ html.can-touch .sis-media-btn-secondary:active {
   box-shadow: none;
   color: #949494;
   cursor: pointer;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 1rem;
   height: initial;
   line-height: 0;
@@ -489,7 +489,7 @@ html.can-touch .sis-media-btn-secondary:active {
 }
 
 .sis-selection-container .btn-close::before {
-  content: "\e948";
+  content: '\e948';
   font-size: 0.85em;
   line-height: 1;
 }
@@ -511,7 +511,7 @@ SELECTION CONTAINERS - TEXT
 .sis-selection-container.sis-text.sis-text-overflow > p:before {
   background: linear-gradient(transparent 60%, #0e8812 95%);
   bottom: 0;
-  content: "";
+  content: '';
   left: 0;
   position: absolute;
   right: 0;
@@ -541,10 +541,10 @@ SELECTION CONTAINERS - TEXT
 }
 
 .btn-see-more:before {
-  content: "See more";
+  content: 'See more';
 }
 .expanded .btn-see-more:before {
-  content: "See less";
+  content: 'See less';
 }
 
 .sis-selection-container.sis-text > p .btn-close {
@@ -569,7 +569,7 @@ SELECTION CONTAINERS - MEDIA
 }
 
 .sis-selection-container .video-hero-play::before {
-  content: "";
+  content: '';
   display: inline;
 }
 
@@ -612,9 +612,9 @@ SELECTION CONTAINERS - MEDIA
 
 /**
 * @styles 5-sis-max-select Max-selection Alert
-* In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.
+* The Assessment Specialist has the ability to define a maximum selection limit for multiple-select variants of SIS items. When a test taker attempts to select more options than the maximum number specified in the item stem an alert will appear. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.
 *
-* The alert has a light yellow <span class="no-wrap">`#F8ECBD` <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap">`#E6CB90` <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A `warning` <span class="icon-warning"></span> icon appears at its left side.
+* The alert has a light yellow <span class="no-wrap">`#F8ECBD` <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap">`#E6CB90` <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A `warning` <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon appears at its left side.
 *
 * If the test taker does not dismiss the alert via the __Close__ button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.
 **/
@@ -669,8 +669,8 @@ SELECTION CONTAINERS - MEDIA
 .sis-alert:before {
   align-self: center;
   color: #4d4d4d;
-  content: "\e93d";
-  font-family: "icons";
+  content: '\e93d';
+  font-family: 'icons';
   font-size: 2em;
   margin-right: 0.8rem;
 }
@@ -690,7 +690,7 @@ SELECTION CONTAINERS - MEDIA
   border-radius: 50%;
   cursor: pointer;
   flex: 0 0 auto;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: inherit;
   height: 1em;
   margin: 0 0 0 0.75em;
@@ -701,7 +701,7 @@ SELECTION CONTAINERS - MEDIA
 
 .sis-alert-close:before {
   color: #f8ecbd;
-  content: "\e904";
+  content: '\e904';
   display: block;
   font-size: 0.5em;
   margin-left: 0.04em;

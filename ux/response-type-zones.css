@@ -9,8 +9,8 @@
 * @styles 0-zones-presentation Presentation
 * Zones selection areas have the following states.
 * * _Default_. There is no visual indicator for selection areas by default.
-* * _Selected_. A dashed yellow <span class="no-wrap">`#FFFF00` <span class="callout-swatch" style="background-color:#FFFF00"></span></span> and blue <span class="no-wrap">`#1F8FFF` <span class="callout-swatch" style="background-color:#1F8FFF"></span></span> outline and a translucent blue `rgba(51, 153, 255, 0.2)` fill are applied.
-* * _Hover_. Visible when the cursor is over the selection area. A translucent blue `rgba(51, 153, 255, 0.2)` fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The `pointer` cursor is shown.
+* * _Selected_. A dashed yellow <span class="no-wrap">`#FFFF00` <span class="callout-swatch" style="background-color:#FFFF00"></span></span> and blue <span class="no-wrap">`#1F8FFF` <span class="callout-swatch" style="background-color:#1F8FFF"></span></span> outline and a translucent blue `rgba(51, 153, 255, 0.2)` <span class="callout-swatch" style="background-color:rgba(51, 153, 255, 0.2)"></span> fill are applied.
+* * _Hover_. Visible when the cursor is over the selection area. A translucent blue `rgba(51, 153, 255, 0.2)` <span class="callout-swatch" style="background-color:rgba(51, 153, 255, 0.2)"></span> fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The `pointer` cursor is shown.
 * * _Focus_. The simple dotted outline used to indicate focus elsewhere in the system (see the [indicators.css] page for more information) is not easily visible on all images, so a white <span class="no-wrap">`#FFFFFF` <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> and black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> dotted line is used.
 *
 * A __Clear Answer__ button is provided at the bottom left of the response area. The button is styled as a small secondary filled button (see the [buttons.css] page for more information).

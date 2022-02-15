@@ -14,11 +14,11 @@
 @styles 0-dialogs-modal Modal Dialogs
 * A modal dialog requires the test taker to interact with it before it can be dismissed; while the dialog is on screen, the test taker cannot return to the main content area. As such, modal dialogs are used to convey critical information or to solicit an action from the test taker.
 *
-* To increase initial salience, a modal dialog fades in and animates down to a centered position when it is invoked. In addition to the general dialog styling, modals are presented over a semi-transparent white `rgba(255,255,255,0.8)` backdrop to emphasize that the main content area is inaccessible. The backdrop covers the entire screen other than the [system-toolbar.css] so that test takers can use system tools while the dialog is open.
+* To increase initial salience, a modal dialog fades in and animates down to a centered position when it is invoked. In addition to the general dialog styling, modals are presented over a semi-transparent white `rgba(255,255,255,0.8)` <span class="callout-swatch" style="background-color:rgba(255,255,255,0.8)"></span> backdrop to emphasize that the main content area is inaccessible. The backdrop covers the entire screen other than the [system-toolbar.css] so that test takers can use system tools while the dialog is open.
 *
 * When a dialog contains information not intended for test takers (e.g., an item accession number is provided in the _Item Error_ dialog to support troubleshooting), the information is presented at a smaller font size in the lower left corner.
 *
-* When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` <span class="icon-warning"></span> icon is provided at the upper left corner of the dialog.
+* When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a `warning` <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon is provided at the upper left corner of the dialog.
 *
 * _Select the __View Dialog__ button below each description to launch the associated modal dialog. Modal dialogs do not have a __Close__ button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the __OK__ button) to dismiss it._
 *
@@ -220,7 +220,7 @@ html.sbt #modal-sbt-submit .dialog-content,
   border: none;
   color: #333;
   cursor: pointer;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: inherit;
   line-height: 1;
   padding: 0.5em;
@@ -236,5 +236,5 @@ html.sbt #modal-sbt-submit .dialog-content,
 }
 
 .btn-dialog-close:before {
-  content: "\e948";
+  content: '\e948';
 }

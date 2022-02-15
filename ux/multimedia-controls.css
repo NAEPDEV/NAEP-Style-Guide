@@ -11,12 +11,12 @@
 * Controls are presented in two rows.
 * * The scrub bar, which is used to scrub through the media clip, is provided on its own in the top row to maximize scrubbing precision.
 * * The bottom row contains the following controls from left to right:
-*   * Play/Pause (`play`/`pause` <span class="icon-pause"></span> icon)
+*   * Play/Pause (`play`  <span class="icon-play"></span>/`pause` <span class="icon-pause"></span> icon)
 *   * Time indicators (current / total)
-*   * Mute (`volume-down`/`volume-up`/`volume-mute` <span class="icon-volume-mute"></span> icon)
+*   * Mute (`volume-down` <span class="icon-volume-down"></span>/`volume-up` <span class="icon-volume-up"></span>/`volume-mute` <span class="icon-volume-mute"></span> icon)
 *   * Volume slider
-*   * Closed captions (video only) (`cc-on`/`cc-off` <span class="icon-cc-off"></span> icon)
-*   * Full screen (video only) (`fullscreen`/`fullscreen-exit` <span class="icon-fullscreen-exit"></span> icon)
+*   * Closed captions (video only) (`cc-on` <span class="icon-cc-on"></span>/`cc-off` <span class="icon-cc-off"></span> icon)
+*   * Full screen (video only) (`fullscreen` <span class="icon-fullscreen"></span>/`fullscreen-exit` <span class="icon-fullscreen-exit"></span> icon)
 *
 * Play/Pause and the time indicators are left-justified. The remaining controls in the second row are right-justified.
 *
@@ -76,14 +76,14 @@
 * * The __Play/Pause__ button changes to a `pause` <span class="icon-pause"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.
 * * The __Mute__ button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)
 * * The __Closed caption__ button icon changes to the `cc-off` <span class="icon-cc-off"></span> icon when closed captions are turned off.
-* * The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit`, and its tooltip changes to “Exit full screen” when in full-screen mode.
+* * The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit` <span class="icon-fullscreen-exit"></span>, and its tooltip changes to “Exit full screen” when in full-screen mode.
 * ### Volume slider & Mute button interactions
 * As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].
 *
 * The volume slider affects the __Mute__ button in the following ways:
-* * If the volume is set to >50%, the __Mute__ button is set to the full-volume state: the icon changes to `volume-up`, and the tooltip changes to “Unmute.”
-* * If the volume is set from 1% to 50%, the __Mute__ button is set to the half-volume state: the icon changes to `volume-down`, and the tooltip changes to “Unmute.”
-* * If the volume is set to 0%, the __Mute__ button is set to the muted state: the icon changes to `volume-mute`, and the tooltip changes to “Mute.”
+* * If the volume is set to >50%, the __Mute__ button is set to the full-volume state: the icon changes to `volume-up` <span class="icon-volume-up"></span>, and the tooltip changes to “Unmute.”
+* * If the volume is set from 1% to 50%, the __Mute__ button is set to the half-volume state: the icon changes to `volume-down` <span class="icon-volume-down"></span>, and the tooltip changes to “Unmute.”
+* * If the volume is set to 0%, the __Mute__ button is set to the muted state: the icon changes to `volume-mute` <span class="icon-volume-mute"></span>, and the tooltip changes to “Mute.”
 *
 * When the test taker mutes the audio via the __Mute__ button, it remembers the previous volume level and restores it when the test taker selects __Mute__ again.
 * * When restoring the previous volume level, the __Mute__ button state changes accordingly, as described above.
@@ -228,9 +228,9 @@ html.can-touch .video-hero-play:hover::before {
   border: none;
   border-radius: 50%;
   color: #fff;
-  content: "\e915";
+  content: '\e915';
   display: block;
-  font-family: "icons";
+  font-family: 'icons';
   font-size: 3em;
   height: 1em;
   line-height: 0.96;
@@ -347,7 +347,7 @@ PROGRESS ELEMENT STYLES
 RANGE INPUT STYLES
 ----------------------------------------------------------------------------*/
 /* Reset the default browser styles */
-.media-container input[type="range"] {
+.media-container input[type='range'] {
   -moz-appearance: none;
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
   background: transparent;
@@ -363,7 +363,7 @@ RANGE INPUT STYLES
   z-index: 1;
 }
 
-.media-container input[type="range"]::-ms-track {
+.media-container input[type='range']::-ms-track {
   border-color: transparent;
   color: transparent;
   cursor: pointer;
@@ -371,7 +371,7 @@ RANGE INPUT STYLES
 }
 
 /* Style the thumb for each browser */
-.media-container input[type="range"]::-webkit-slider-thumb {
+.media-container input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   background: #246bb2;
   border: none;
@@ -381,7 +381,7 @@ RANGE INPUT STYLES
   transition: background 0.2s ease-out, transform 0.2s ease-out;
   width: 0.708em;
 }
-.media-container input[type="range"]::-moz-range-thumb {
+.media-container input[type='range']::-moz-range-thumb {
   -moz-appearance: none;
   background: #246bb2;
   border: none;
@@ -390,7 +390,7 @@ RANGE INPUT STYLES
   transition: background 0.2s ease-out, transform 0.2s ease-out;
   width: 0.708em;
 }
-.media-container input[type="range"]::-ms-thumb {
+.media-container input[type='range']::-ms-thumb {
   background: #246bb2;
   border: none;
   border-radius: 50%;
@@ -399,120 +399,120 @@ RANGE INPUT STYLES
   width: 0.708em;
 }
 
-.media-container input[type="range"][disabled]::-webkit-slider-thumb {
+.media-container input[type='range'][disabled]::-webkit-slider-thumb {
   background: #aaa;
 }
-.media-container input[type="range"][disabled]::-moz-range-thumb {
+.media-container input[type='range'][disabled]::-moz-range-thumb {
   background: #aaa;
 }
-.media-container input[type="range"][disabled]::-ms-thumb {
+.media-container input[type='range'][disabled]::-ms-thumb {
   background: #aaa;
 }
 
 /* Style the track in each browser */
-.media-container input[type="range"]::-webkit-slider-runnable-track {
+.media-container input[type='range']::-webkit-slider-runnable-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
   width: 100%;
 }
-.media-container input[type="range"]::-moz-range-track {
+.media-container input[type='range']::-moz-range-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
   width: 100%;
 }
-.media-container input[type="range"]::-ms-track {
+.media-container input[type='range']::-ms-track {
   background: transparent;
   height: 0.708em;
   transition: transform 0.2s ease-out;
   width: 100%;
 }
 
-.media-container input[type="range"].hover::-webkit-slider-thumb,
-.media-container input[type="range"]:hover::-webkit-slider-thumb {
+.media-container input[type='range'].hover::-webkit-slider-thumb,
+.media-container input[type='range']:hover::-webkit-slider-thumb {
   transform: scale(1.4);
 }
-.media-container input[type="range"].hover::-moz-range-thumb,
-.media-container input[type="range"]:hover::-moz-range-thumb {
+.media-container input[type='range'].hover::-moz-range-thumb,
+.media-container input[type='range']:hover::-moz-range-thumb {
   transform: scale(1.4);
 }
-.media-container input[type="range"].hover::-ms-thumb,
-.media-container input[type="range"]:hover::-ms-thumb {
+.media-container input[type='range'].hover::-ms-thumb,
+.media-container input[type='range']:hover::-ms-thumb {
   transform: scale(1.4);
 }
-html.can-touch .media-container input[type="range"].hover::-webkit-slider-thumb,
+html.can-touch .media-container input[type='range'].hover::-webkit-slider-thumb,
 html.can-touch
   .media-container
-  input[type="range"]:hover::-webkit-slider-thumb {
+  input[type='range']:hover::-webkit-slider-thumb {
   transform: none;
 }
-html.can-touch .media-container input[type="range"].hover::-moz-range-thumb,
-html.can-touch .media-container input[type="range"]:hover::-moz-range-thumb {
+html.can-touch .media-container input[type='range'].hover::-moz-range-thumb,
+html.can-touch .media-container input[type='range']:hover::-moz-range-thumb {
   transform: none;
 }
-html.can-touch .media-container input[type="range"].hover::-ms-thumb,
-html.can-touch .media-container input[type="range"]:hover::-ms-thumb {
+html.can-touch .media-container input[type='range'].hover::-ms-thumb,
+html.can-touch .media-container input[type='range']:hover::-ms-thumb {
   transform: none;
 }
 
-.media-progress-container.hover input[type="range"]::-webkit-slider-thumb,
-.media-progress-container:hover input[type="range"]::-webkit-slider-thumb {
+.media-progress-container.hover input[type='range']::-webkit-slider-thumb,
+.media-progress-container:hover input[type='range']::-webkit-slider-thumb {
   transform: scaleX(1.4);
 }
-.media-progress-container.hover input[type="range"]::-moz-range-thumb,
-.media-progress-container:hover input[type="range"]::-moz-range-thumb {
+.media-progress-container.hover input[type='range']::-moz-range-thumb,
+.media-progress-container:hover input[type='range']::-moz-range-thumb {
   transform: scaleX(1.4);
 }
-.media-progress-container.hover input[type="range"]::-ms-thumb,
-.media-progress-container:hover input[type="range"]::-ms-thumb {
+.media-progress-container.hover input[type='range']::-ms-thumb,
+.media-progress-container:hover input[type='range']::-ms-thumb {
   transform: scaleX(1.4);
 }
 html.can-touch
   .media-progress-container.hover
-  input[type="range"]::-webkit-slider-thumb,
+  input[type='range']::-webkit-slider-thumb,
 html.can-touch
   .media-progress-container:hover
-  input[type="range"]::-webkit-slider-thumb {
+  input[type='range']::-webkit-slider-thumb {
   transform: none;
 }
 html.can-touch
   .media-progress-container.hover
-  input[type="range"]::-moz-range-thumb,
+  input[type='range']::-moz-range-thumb,
 html.can-touch
   .media-progress-container:hover
-  input[type="range"]::-moz-range-thumb {
+  input[type='range']::-moz-range-thumb {
   transform: none;
 }
-html.can-touch .media-progress-container.hover input[type="range"]::-ms-thumb,
-html.can-touch .media-progress-container:hover input[type="range"]::-ms-thumb {
+html.can-touch .media-progress-container.hover input[type='range']::-ms-thumb,
+html.can-touch .media-progress-container:hover input[type='range']::-ms-thumb {
   transform: none;
 }
 
 /* Styles specific to volume slider */
-.media-container input[type="range"].media-volume {
+.media-container input[type='range'].media-volume {
   height: 1.292em;
   top: -0.542em;
 }
 
 .media-container
-  input[type="range"].media-volume::-webkit-slider-runnable-track {
+  input[type='range'].media-volume::-webkit-slider-runnable-track {
   height: 1.333em;
 }
-.media-container input[type="range"].media-volume::-moz-range-track {
+.media-container input[type='range'].media-volume::-moz-range-track {
   height: 1.333em;
 }
-.media-container input[type="range"].media-volume::-ms-track {
+.media-container input[type='range'].media-volume::-ms-track {
   height: 1.333em;
 }
 
-.media-container input[type="range"].media-volume::-webkit-slider-thumb {
+.media-container input[type='range'].media-volume::-webkit-slider-thumb {
   margin-top: 0.292em;
 }
-.media-container input[type="range"].media-volume::-moz-range-thumb {
+.media-container input[type='range'].media-volume::-moz-range-thumb {
   margin-top: 0.292em;
 }
-.media-container input[type="range"].media-volume::-ms-thumb {
+.media-container input[type='range'].media-volume::-ms-thumb {
   margin-top: 0.292em;
 }
 
@@ -606,7 +606,7 @@ TOOLTIP STYLES
   border-right: 0.5em solid transparent;
   border-top: 0.5em solid #000;
   border-top: 0.5em solid rgba(0, 0, 0, 0.8);
-  content: "";
+  content: '';
   left: 50%;
   position: absolute;
   top: 100%;

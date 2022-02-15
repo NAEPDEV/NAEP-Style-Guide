@@ -1257,12 +1257,12 @@
 <li>The scrub bar, which is used to scrub through the media clip, is provided on its own in the top row to maximize scrubbing precision.</li>
 <li>The bottom row contains the following controls from left to right:
 <ul>
-<li>Play/Pause (<code>play</code>/<code>pause</code> <span class="icon-pause"></span> icon)</li>
+<li>Play/Pause (<code>play</code>  <span class="icon-play"></span>/<code>pause</code> <span class="icon-pause"></span> icon)</li>
 <li>Time indicators (current / total)</li>
-<li>Mute (<code>volume-down</code>/<code>volume-up</code>/<code>volume-mute</code> <span class="icon-volume-mute"></span> icon)</li>
+<li>Mute (<code>volume-down</code> <span class="icon-volume-down"></span>/<code>volume-up</code> <span class="icon-volume-up"></span>/<code>volume-mute</code> <span class="icon-volume-mute"></span> icon)</li>
 <li>Volume slider</li>
-<li>Closed captions (video only) (<code>cc-on</code>/<code>cc-off</code> <span class="icon-cc-off"></span> icon)</li>
-<li>Full screen (video only) (<code>fullscreen</code>/<code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span> icon)</li>
+<li>Closed captions (video only) (<code>cc-on</code> <span class="icon-cc-on"></span>/<code>cc-off</code> <span class="icon-cc-off"></span> icon)</li>
+<li>Full screen (video only) (<code>fullscreen</code> <span class="icon-fullscreen"></span>/<code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span> icon)</li>
 </ul></li>
 </ul>
 <p>Play/Pause and the time indicators are left-justified. The remaining controls in the second row are right-justified.</p>
@@ -1354,7 +1354,7 @@
 <li>The <strong>Play/Pause</strong> button changes to a <code>pause</code> <span class="icon-pause"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.</li>
 <li>The <strong>Mute</strong> button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)</li>
 <li>The <strong>Closed caption</strong> button icon changes to the <code>cc-off</code> <span class="icon-cc-off"></span> icon when closed captions are turned off.</li>
-<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
+<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
 </ul>
 <h3>Volume slider &amp; Mute button interactions</h3>
 <p>As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for <a href="touch-targets.md.html">Touch Targets</a>.</p>
@@ -1366,9 +1366,9 @@
 					<section class="comment">
 						<p>The volume slider affects the <strong>Mute</strong> button in the following ways:</p>
 <ul>
-<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code>, and the tooltip changes to “Mute.”</li>
+<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code> <span class="icon-volume-up"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code> <span class="icon-volume-down"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code> <span class="icon-volume-mute"></span>, and the tooltip changes to “Mute.”</li>
 </ul>
 <p>When the test taker mutes the audio via the <strong>Mute</strong> button, it remembers the previous volume level and restores it when the test taker selects <strong>Mute</strong> again.</p>
 <ul>

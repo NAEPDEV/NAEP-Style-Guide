@@ -27,6 +27,9 @@
 * @iframe ux/demos/buttons/filled-button-states.html 100
 *
 *
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+*
+*
 * ### Shapes
 * Filled buttons can be rectangular (when they contain text, or text and an icon) or circular (when they contain only an icon).
 *
@@ -36,11 +39,17 @@
 * @iframe ux/demos/buttons/filled-button-variants.html 200
 *
 *
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+*
+*
 * ### Hierarchy
 * Filled buttons vary in color depending on the type of action they trigger:
 * * A blue <span class="no-wrap">`#0068D1` <span class="callout-swatch" style="background-color:#0068D1"></span></span> background is used for buttons that trigger the primary action on the current screen (e.g., the __Go on to next section__ button).
 * * A ghost button with a gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> border and blue <span class="no-wrap">`#0855B2` <span class="callout-swatch" style="background-color:#0855B2"></span></span> text is used for secondary actions (e.g., __Clear Answer__ buttons in selected-response items).
 * @iframe ux/demos/buttons/button-colors.html 95
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .btn-wrapper {
@@ -138,6 +147,9 @@ html.sbt .btn {
 * * _Toggled_. Used when the tool a button controls has on and off states. Button background and border become blue.
 * * _Disabled_. Button content is dimmed to indicate inactivity.
 * @iframe ux/demos/buttons/bare-button-states.html 160
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .btn:hover {
