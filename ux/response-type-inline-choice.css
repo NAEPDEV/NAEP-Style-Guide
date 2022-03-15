@@ -61,7 +61,7 @@
   border-color: #595959 transparent;
   border-style: solid;
   border-width: 0.25em 0.25em 0 0.25em;
-  content: "";
+  content: '';
   height: 0;
   margin-top: -0.12em;
   position: absolute;
@@ -98,6 +98,9 @@
 *
 * The following demo presents an item featuring the in-line choice dropdown menus.
 * @iframe ux/demos/response-type-inline-choice/response-type-inline-choice.html 400
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 *
 *
 * Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the [tts.css] page for a description of TTS behavior.

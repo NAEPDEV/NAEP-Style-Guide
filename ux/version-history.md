@@ -8,6 +8,26 @@ The style guide is versioned and adheres to semantic versioning in the format _m
 - _Patch release:_ Includes bug fixes and/or minor specification clarifications.
   <section class="release-note">
     <div class="release-header">
+      <span>1.2.4</span>
+      <h3>Feb 28, 2022</h3>
+    </div>
+    <ul>
+      <li class="improved"><span>Added color-swatch samples next to color and hue codes as in this example for Equation Editor ([equation-editor.css]).</span></li>
+      <li class="improved"><span>Added Icon image samples next to icon descriptions as in this example for Multimedia controls ([multimedia-controls.css]).</span></li>
+      <li class="improved"><span>Added/Modified an introduction phrase at the top of demos as in this example for Intro & Exit Screen ([intro-exit-screens.css]).</span></li>
+      <li class="improved"><span>Moved the demo full-size phrase below the demos as in this examples for Matching ([response-type-matching.css]).</span></li>
+      <li class="improved"><span>Added a Change Theme and Read Aloud explanation under the demos as in this example Typography ([typography.css]).</span></li>
+      <li class="improved"><span>Added Hover over Messages on Change Theme/TTS icons at the top right corner of the page.</span></li>
+      <li class="fixed"><span>Aligned and centered left and right directional pad arrows. ([directional-pads.css]).</span></li>
+      <li class="improved"><span>Added an example for Content-based Screens. ([intro-exit-screens.css]).</span></li>
+      <li class="changed"><span>Dialog button title is changed from Launch to View Dialog at Dialogs ([dialogs.css]).</span></li>
+      <li class="improved"><span>Standardized the use of the asterisk throughout the guide.</span></li>
+      <li class="improved"><span>Standardized phrasing and provided clarity throughout the guide.</span></li>
+      <li class="fixed"><span>Missing Scroll up/down buttons were updated at the Scrollbar section at Navigation. ([navigation.css]).</span></li>
+    </ul>
+  </section>
+  <section class="release-note">
+    <div class="release-header">
       <span>1.2.3</span>
       <h3>July 9, 2021</h3>
     </div>

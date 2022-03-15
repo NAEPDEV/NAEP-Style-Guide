@@ -9,14 +9,16 @@
 /**
 * @styles 0-bg-graph Graph
 * Bar graphs and histograms are presented on the same graph, which includes the following elements.
-* * _Title (optional)_. Centered above graph. Bolded and in all caps.
+* * _Title (optional\*)_. Centered above graph. Bolded and in all caps.
 * * _Graph border_. Thick gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> line that bounds the graph.
 * * _Major grid lines_. Medium-weight gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the major intervals of the _y_-axis.
-* * _Minor grid lines (optional)_. Thin gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the minor intervals of the  _y_-axis.
+* * _Minor grid lines (optional\*)_. Thin gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the minor intervals of the  _y_-axis.
 * * _x-axis_. Thick black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span> line at the bottom of the graph.
-* * _Axis names (optional)_. Centered next to the associated axis.
+* * _Axis names (optional\*)_. Centered next to the associated axis.
 * * _Axis ticks_. Short lines along each axis indicating the increments at which the grid lines appear. _x_-axis ticks are black <span class="no-wrap">`#000000` <span class="callout-swatch" style="background-color:#000000"></span></span>, while _y_-axis ticks are gray <span class="no-wrap">`#757575` <span class="callout-swatch" style="background-color:#757575"></span></span>. For the _y_-axis, only major grid lines receive ticks.
 * * _Axis tick labels_. Appear immediately below (for the _x_-axis) or to the left (for the _y_-axis) of each axis tick.
+*
+* \* When an item in a pure mathematical context includes an xy-plane, a title and axis names are not provided.
 **/
 
 /**

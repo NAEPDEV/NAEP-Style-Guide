@@ -1,9 +1,9 @@
 {
   "versions": {
-    "1.2.3": "https://github.com/NAEPDEV/NAEP-Style-Guide"
+    "1.2.4": "https://github.com/NAEPDEV/NAEP-Style-Guide"
   },
   "versionDest": "<%= version %>/",
-  "version": "1.2.3",
-  "defaultVersion": "1.2.3",
+  "version": "1.2.4",
+  "defaultVersion": "1.2.4",
   "defaultDest": ""
 }
