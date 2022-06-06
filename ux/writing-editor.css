@@ -158,7 +158,7 @@ html.can-touch #toggleLeft:hover {
 * * Tools
 *   * Spell check (`spell-check` <span><img src="static/img/icon-spell-check.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
 *   * Spell check options (`cog` <span class="icon-cog"></span> icon)
-*   * Thesaurus (`thesaurus` <span class="icon-thesaurus"></span> icon)
+*   * Thesaurus (`thesaurus` <span><img src="static/img/icon-thesaurus.svg" style="max-height: 1em; max-width: 1em;" /></span> icon)
 *
 * Controls are presented both within dropdown menus and as buttons, except for the Spell Check Options dialog, which is only presented in the Tools menu. Dropdown menus and associated buttons are grouped together to convey that they provide redundant functionality. Control groups are separated by a vertical gray <span class="no-wrap">`#909090` <span class="callout-swatch" style="background-color:#909090"></span></span> divider.
 * ### Dropdown Menus

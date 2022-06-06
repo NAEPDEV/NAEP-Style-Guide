@@ -78,7 +78,7 @@
 * * _Pre-populated_. Visible when the bar’s height is pre-set and cannot be changed by the test taker. Styling is the same as the default state, and  no sizing handle is provided.
 * * _Disabled_. Visible when the bar’s sizing handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Bar fill becomes gray <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span>.
 *
-* _Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
+* Note: Demo only reflects states and theming. Other functionality not present. The second bar is in initial state, and the last bar is pre-populated._
 *
 * The following demo presents bar graph bars where the second bar is in the initial state, and the last bar is pre-populated. The demo has limited functionality for the purpose of showing its themes and styles. 
 * @iframe ux/demos/response-type-bar-graph/bar-graph.html 650

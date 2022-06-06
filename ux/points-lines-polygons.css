@@ -32,6 +32,8 @@
 /**
 * @styles 3-plp-prepopulated Pre-populated
 * Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <span class="no-wrap">`#767676` <span class="callout-swatch" style="background-color:#767676"></span></span>. Pre-populated polygons have a gray <span class="no-wrap">`#383838` <span class="callout-swatch" style="background-color:#383838"></span></span> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <span class="no-wrap">`#949494` <span class="callout-swatch" style="background-color:#949494"></span></span> to differentiate them from disabled interactive objects.
+*
+* The following demo is an example of Pre-Populated Line Segment and Polygon.
 * @iframe ux/demos/points-lines-polygons/prepopulated.html 260
 *
 *
@@ -227,11 +229,13 @@ html.can-touch .point-placed:hover .point-delete {
 *
 * When in Delete mode, the cursor becomes the same red cross as is shown in the __Object Delete__ button when it is hovered anywhere in the interaction’s response area.
 *
+* Note: The points in the demo below are not movable.
 * 
+* The following demo presents the behavior of Object delete.
 * @iframe ux/demos/points-lines-polygons/placeable-draggable.html 220
 *
 *
-* <span style="font-size:13px;display:block;margin-top:-30px">Note: The points in the demo above are not movable.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 .point-modal {

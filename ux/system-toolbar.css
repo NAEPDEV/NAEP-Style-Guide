@@ -18,7 +18,7 @@
 *   * Change Theme (`change-theme` <span class="icon-change-theme"></span> icon)
 *   * Zoom Out (`zoom-out` <span class="icon-zoom-out"></span> icon)
 *   * Zoom In (`zoom-in` <span class="icon-zoom-in"></span> icon)
-*   * Change Language (`lang-esp`/`lang-eng` <span class="icon-lang-eng"></span> icon)
+*   * Change Language (`lang-esp` <span><img src="static/img/icon-lang-esp.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> / `lang-eng` <span><img src="static/img/icon-lang-eng.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
 * * Additional tools
 *   * Read Aloud (`read-aloud` <span><img src="static/img/icon-tts.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
 *   * Scratchwork (`scratchwork` <span><img src="static/img/scratchwork.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)
@@ -34,8 +34,11 @@
 *
 * The item accession number and block title for the content currently on screen are shown in the center of the toolbar, superimposed on the NAEP logo. For scenario-based tasks, the scene ID displays next to the accession number, separated by a hyphen.
 *
-* _The system toolbar shown below is a visual representation presented at 67% its actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>._
+* The following Demo represents a visual presentation of  system toolbar.
 * @iframe ux/demos/system-toolbar/system-toolbar.html 47
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span>
 **/
 
 #student-toolbar {
@@ -101,9 +104,13 @@
 /**
 @styles 1-system-toolbar-trays Button Trays
 * The scratchwork tools (Pencil, Highlighter, Eraser, Clear Scratchwork) and the remaining block time are presented in collapsible trays. Test takers may expand or collapse these trays by pressing the associated buttons.
-* @iframe ux/demos/system-toolbar/scratchwork-tray.html 59
 *
+* The following Demos represent Button Trays
+* @iframe ux/demos/system-toolbar/scratchwork-tray.html 59
 * @iframe ux/demos/system-toolbar/timer-tray.html 59
+*
+*
+* <span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> button in the upper-right of the screen.</span>
 **/
 
 .btn-tray {

@@ -1,11 +1,14 @@
 /*------------------------------------------------------------------------------
 MOCKUP STYLES -- NOT FOR PRODUCTION
 ------------------------------------------------------------------------------*/
-.figure-bg { background: #e0e0c7; }
+.figure-bg {
+  background: #e0e0c7;
+}
 
 .system-btn.hover,
 .system-btn.mockup-active {
-  background: #f5f5dc; }
+  background: #f5f5dc;
+}
 
 .btn.disabled,
 .btn.hover[disabled],
@@ -15,7 +18,9 @@ MOCKUP STYLES -- NOT FOR PRODUCTION
   color: #8d8d7a;
 }
 
-.background > h3 { background-color: #f9f9e9; }
+.background > h3 {
+  background-color: #f9f9e9;
+}
 
 #col-left.lbb-demo {
   background: #fafadc;
@@ -24,8 +29,9 @@ MOCKUP STYLES -- NOT FOR PRODUCTION
 /*------------------------------------------------------------------------------
 BASE ELEMENTS
 ------------------------------------------------------------------------------*/
-html { background-color: #f9f9e9; }
-
+html {
+  background-color: #f9f9e9;
+}
 
 /*------------------------------------------------------------------------------
 SYSTEM TOOLBAR STYLES
@@ -40,7 +46,7 @@ SYSTEM TOOLBAR STYLES
 }
 
 .progress-indicator {
-  background: #EAEAD2;
+  background: #eaead2;
 }
 
 #scratchwork-tray {
@@ -52,60 +58,69 @@ SYSTEM TOOLBAR STYLES
 #timer-btn.active:active,
 .system-btn:hover,
 .system-btn:active {
-  background: #f5f5dc; }
+  background: #f5f5dc;
+}
 html.can-touch .system-btn:hover,
 html.can-touch #timer-btn.active {
-  background: none; }
+  background: none;
+}
 html.can-touch .system-btn:active,
 html.can-touch #timer-btn.active:active {
-  background: #f5f5dc; }
+  background: #f5f5dc;
+}
 html.can-touch .system-btn.active,
 html.can-touch #scratchwork-btn.active,
 html.can-touch .tray-btn:active,
 html.can-touch .tray-btn.active {
-  background: #C4E0F8; }
+  background: #c4e0f8;
+}
 html.can-touch .tray-btn:active {
-  border-color: #2a8dd4; }
+  border-color: #2a8dd4;
+}
 
 .btn-group-flex::before {
   -webkit-filter: sepia(100%);
   filter: sepia(100%);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .progress-indicator-bar {
-  border-color: #EAEAD2;
+  border-color: #eaead2;
 }
 
 .btn-back,
 #back-btn {
-	border-color: #CCCCB8;
-	background: #eeeedb; }
+  border-color: #ccccb8;
+  background: #eeeedb;
+}
 .btn-back:hover {
-	background: #f5f5dc; }
+  background: #f5f5dc;
+}
 html.can-touch .btn-back:hover,
 html.can-touch #back-btn:hover {
-  border-color: #CCCCB8;
-  background: #eeeedb; }
+  border-color: #ccccb8;
+  background: #eeeedb;
+}
 html.can-touch .btn-back:active,
 html.can-touch #back-btn:active {
-  border-color: #b2b2b2; }
+  border-color: #b2b2b2;
+}
 
 .btn-nav[disabled],
 #back-btn[disabled],
 #next-btn[disabled],
 html.can-touch #back-btn[disabled],
 html.can-touch #next-btn[disabled] {
-	background: #ccccb7;
-	border-color: #ccccb7; }
-
+  background: #ccccb7;
+  border-color: #ccccb7;
+}
 
 /*------------------------------------------------------------------------------
 eREADER STYLES
 ------------------------------------------------------------------------------*/
 #questionsbutton-wrapper {
-  background-color: #EDEDD5;
-  border-bottom-color: #89897B;
+  background-color: #ededd5;
+  border-bottom-color: #89897b;
 }
 
 #QuestionsPanel {
@@ -113,7 +128,7 @@ eREADER STYLES
 }
 
 #QuestionsPanel::after {
-  border-bottom-color: #EDEDD5;
+  border-bottom-color: #ededd5;
 }
 
 .btn-page-previous[disabled],
@@ -121,13 +136,15 @@ eREADER STYLES
 html.can-touch .btn-page-previous[disabled],
 html.can-touch .btn-page-next[disabled] {
   background: #dcdcc8;
-	color: #8d8d7a; }
+  color: #8d8d7a;
+}
 
 .btn-page-num:active {
-  background: #f0f0dc; }
+  background: #f0f0dc;
+}
 .btn-page-num[disabled] {
-  color: #c6c6b4; }
-
+  color: #c6c6b4;
+}
 
 /*------------------------------------------------------------------------------
 WRITING EDITOR STYLES
@@ -159,10 +176,12 @@ html.can-touch .wri-dropdown-wrapper.active > .wri-btn,
 .wri-button-wrapper > button:hover,
 .wri-button-wrapper > button:active,
 html.can-touch .wri-button-wrapper > button:active {
-  background: #f5f5dc; }
+  background: #f5f5dc;
+}
 .wri-button-wrapper > button.active:active,
 .wri-button-wrapper > button.ql-active:active {
-  background: #C4E0F8; }
+  background: #c4e0f8;
+}
 
 #wri-editor-contents-wrapper {
   background-image: -webkit-linear-gradient(top, #d4d4bc, #bcbc9a);
@@ -177,24 +196,24 @@ html.can-touch .wri-button-wrapper > button:active {
   background: #e0e0c9;
 }
 
-
 /*------------------------------------------------------------------------------
 BUTTON STYLES
 ------------------------------------------------------------------------------*/
 .btn.btn-secondary,
 .btn.btn-secondary:hover,
 html.can-touch .btn.btn-secondary:hover {
-	background: #f9f9e9; }
+  background: #f9f9e9;
+}
 .btn.btn-secondary:active,
 html.can-touch .btn.btn-secondary:active {
-	background: #f0f0dc; }
-
-.btn[disabled] {
-	background: #dcdcc8;
-	border-color: transparent;
-	color: #8d8d7a;
+  background: #f0f0dc;
 }
 
+.btn[disabled] {
+  background: #dcdcc8;
+  border-color: transparent;
+  color: #8d8d7a;
+}
 
 /*------------------------------------------------------------------------------
 TEXT AREA STYLES
@@ -203,36 +222,43 @@ textarea {
   background-color: #f9f9e9;
 }
 
-
 /*------------------------------------------------------------------------------
 MULTIPLE CHOICE STYLES
 ------------------------------------------------------------------------------*/
 .mc-option,
 html.can-touch .mc-option:hover {
-  border-color: #abab9e; }
-.mc-option:hover  {
-  border-color: #838377; }
+  border-color: #abab9e;
+}
+.mc-option:hover {
+  border-color: #838377;
+}
 .mc-option.tts-active:hover {
-  border-color: #abab9e; }
+  border-color: #abab9e;
+}
 .mc-option.mc-selected,
 html.can-touch .mc-option.mc-selected,
 .mc-option.mc-selected.tts-active:hover {
-  border-color: #000; }
+  border-color: #000;
+}
 .mc-option.mc-eliminated:hover {
-  border-color: #abab9e; }
+  border-color: #abab9e;
+}
 
 .mc-control-wrapper {
-  background: #c7c7a9; }
+  background: #c7c7a9;
+}
 .mc[disabled] .mc-control-wrapper,
 .mc-option.mc-eliminated .mc-control-wrapper {
-  background-color: #ECEBD3; }
+  background-color: #ecebd3;
+}
 
 .mc-eliminate-choice {
-  background: #f9f9e9; }
+  background: #f9f9e9;
+}
 .mc-eliminate-choice[disabled] {
-  border-color: #DEDDCC;
-  color: #D5D3C2; }
-
+  border-color: #deddcc;
+  color: #d5d3c2;
+}
 
 /*------------------------------------------------------------------------------
 GRID STYLES
@@ -242,11 +268,14 @@ table.grid tbody tr:nth-child(odd) {
 }
 
 table.grid td {
-  background-color: #f9f9e9; }
+  background-color: #f9f9e9;
+}
 table.grid tbody tr:nth-child(odd) td {
-  background-color: #c7c7a9; }
+  background-color: #c7c7a9;
+}
 table.grid[disabled] tbody tr:nth-child(odd) td {
-  background-color: #e6e5cd; }
+  background-color: #e6e5cd;
+}
 
 table.grid th,
 table.grid td,
@@ -254,11 +283,13 @@ html.can-touch table.grid tbody tr:hover th,
 html.can-touch table.grid tbody tr:hover td,
 table.grid tbody tr.tts-active:hover th,
 table.grid tbody tr.tts-active:hover td {
-  border-color: #abab9e; }
+  border-color: #abab9e;
+}
 table.grid tbody tr:hover th,
 table.grid tbody tr:hover td {
   outline-color: #838377;
-  border-color: #838377; }
+  border-color: #838377;
+}
 table.grid tbody tr.grid-row-selected th,
 table.grid tbody tr.grid-row-selected td,
 html.can-touch table.grid tbody tr.grid-row-selected th,
@@ -266,8 +297,8 @@ html.can-touch table.grid tbody tr.grid-row-selected td,
 table.grid tbody tr.tts-active.grid-row-selected th,
 table.grid tbody tr.tts-active.grid-row-selected td {
   outline-color: #000;
-  border-color: #000; }
-
+  border-color: #000;
+}
 
 /*------------------------------------------------------------------------------
 TEXT ENTRY STYLES
@@ -275,10 +306,9 @@ TEXT ENTRY STYLES
 .extendedtext,
 .fib,
 .numeric-entry,
-.wri-dialog input[type=text] {
+.wri-dialog input[type='text'] {
   background: #f9f9e9;
 }
-
 
 /*------------------------------------------------------------------------------
 SELECT-IN-STIMULUS STYLES
@@ -303,7 +333,6 @@ html.can-touch .sis-media-btn-secondary:active {
   background: #f0f0dc;
 }
 
-
 /*------------------------------------------------------------------------------
 INLINE CHOICE STYLES
 ------------------------------------------------------------------------------*/
@@ -311,7 +340,6 @@ INLINE CHOICE STYLES
 .inline-choice ul {
   background-color: #f9f9e9;
 }
-
 
 /*------------------------------------------------------------------------------
 MATCHING STYLES
@@ -325,26 +353,29 @@ MATCHING STYLES
   border-color: #eee #bbb #bbb #eee;
 }
 
-
 /*------------------------------------------------------------------------------
 ITEM TAB STYLES
 ------------------------------------------------------------------------------*/
 .enaepTabStrip {
-  background: #c9c9b3; }
+  background: #c9c9b3;
+}
 .enaepTabStrip.non-paginated,
 .enaepTabStrip.non-paginated.stimTabStrip {
-  background: #ededd5; }
+  background: #ededd5;
+}
 
 .btn-tab-mover-wrapper {
   background: #e0e0c7;
 }
 
 html.can-touch .btn-tab-mover:hover {
-  background: none; }
+  background: none;
+}
 .btn-tab-mover:hover,
 .btn-tab-mover:active,
 html.can-touch .btn-tab-mover:active {
-  background: #f5f5dc; }
+  background: #f5f5dc;
+}
 
 .enaepTab {
   color: #000;
@@ -353,19 +384,19 @@ html.can-touch .btn-tab-mover:active {
 
 .enaepTab li {
   background: #dcdcc8;
-  border-color:#89897b;
+  border-color: #89897b;
 }
 
 .enaepTab li:hover {
-  background:#e3e3cc;
+  background: #e3e3cc;
 }
 
 .enaepTab li.answered {
-  background:#b0b094
+  background: #b0b094;
 }
 
 .enaepTab li.answered:hover {
-  background:#c4c4a6
+  background: #c4c4a6;
 }
 
 .enaepTab li.selected {
@@ -373,32 +404,30 @@ html.can-touch .btn-tab-mover:active {
   border-bottom-color: #f9f9e9;
 }
 
-
 /*------------------------------------------------------------------------------
 DIALOG STYLES
 ------------------------------------------------------------------------------*/
 .dialog {
-  background: rgba(249,249,233,0.7);
+  background: rgba(249, 249, 233, 0.7);
 }
 
 .dialog-content {
   background: #f9f9e9;
 }
 
-
 /*------------------------------------------------------------------------------
 REVIEW TAB STYLES
 ------------------------------------------------------------------------------*/
 div.response-area.review {
-    border-color: #afafa0;
-    background-color: #dcdcc8;
+  border-color: #afafa0;
+  background-color: #dcdcc8;
 }
-
 
 /*------------------------------------------------------------------------------
 FOOTNOTE STYLES
 ------------------------------------------------------------------------------*/
-.footnote-content, .footnote-content::before {
+.footnote-content,
+.footnote-content::before {
   background: #f9f9e9;
 }
 
@@ -406,12 +435,14 @@ FOOTNOTE STYLES
 STEP INDICATOR STYLES
 ------------------------------------------------------------------------------*/
 .step-indicator label::before {
-  background: #F5F5DC; }
+  background: #f5f5dc;
+}
 .step-indicator input:checked + label::before {
-  background: #2978c6; }
+  background: #2978c6;
+}
 .step-indicator input.step-indicator-complete + label::before {
-  background: #8cb3db; }
-
+  background: #8cb3db;
+}
 
 /*------------------------------------------------------------------------------
 ACCORDION MENU STYLES
@@ -425,13 +456,12 @@ ACCORDION MENU STYLES
   background: #f9f9e9;
 }
 
-
 /*------------------------------------------------------------------------------
 INTRO & EXIT STYLES
 ------------------------------------------------------------------------------*/
 .splashscreen-card {
-  background-color: #f9f9e9; }
-
+  background-color: #f9f9e9;
+}
 
 /*------------------------------------------------------------------------------
 CHARACTERS & DIALOGUE STYLES
@@ -439,30 +469,36 @@ CHARACTERS & DIALOGUE STYLES
 .char-wrapper.char-text-bubble .char-portrait figcaption,
 .char-wrapper.char-text-bubble .char-text,
 .char-wrapper.char-text-bubble .char-text::before {
-  background: #f9f9e9; }
+  background: #f9f9e9;
+}
 
 .char-wrapper .btn.btn-secondary.active {
-  background: #f0f0dc; }
+  background: #f0f0dc;
+}
 .char-wrapper .btn.btn-secondary[disabled] {
-  color: #8d8d7a; }
-
+  color: #8d8d7a;
+}
 
 /*------------------------------------------------------------------------------
 CALLS-TO-ACTION STYLES
 ------------------------------------------------------------------------------*/
 .cta-wrapper-bg .cta-message {
-  background-color: rgba(249, 249, 233, 0.9); }
-
+  background-color: rgba(249, 249, 233, 0.9);
+}
 
 /*------------------------------------------------------------------------------
 STIMULUS TABLE STYLES
 ------------------------------------------------------------------------------*/
 .stim-table tbody tr:nth-of-type(even),
-html.can-touch .response-area-selectable-table tbody tr:nth-of-type(even):hover {
-  background: #e8e8c9; }
+html.can-touch
+  .response-area-selectable-table
+  tbody
+  tr:nth-of-type(even):hover {
+  background: #e8e8c9;
+}
 .stim-table tbody tr.tts-active:nth-of-type(even):hover {
-  background: #e8e8c9; }
-
+  background: #e8e8c9;
+}
 
 /*------------------------------------------------------------------------------
 INFORMATION FLAG STYLES
@@ -471,7 +507,6 @@ INFORMATION FLAG STYLES
 .info-flag::before {
   background: #f9f9e9;
 }
-
 
 /*------------------------------------------------------------------------------
 WIZARD STYLES
@@ -484,7 +519,6 @@ WIZARD STYLES
   background: #f9f9e9;
 }
 
-
 /*------------------------------------------------------------------------------
 CONTROL GROUP STYLES
 ------------------------------------------------------------------------------*/
@@ -492,42 +526,57 @@ CONTROL GROUP STYLES
 .dpad-left[disabled]::before,
 .dpad-right[disabled]::before,
 .dpad-down[disabled]::before {
-  border-top-color: #8d8d7a; }
+  border-top-color: #8d8d7a;
+}
 
 /*------------------------------------------------------------------------------
 SEGMENTED CONTROL STYLES
 ------------------------------------------------------------------------------*/
-.segmented-control input[type="radio"][disabled] + label {
+.segmented-control input[type='radio'][disabled] + label {
   background: #dcdcc8;
-  color: #8d8d7a; }
-.segmented-control input[type="radio"]:checked[disabled] + label {
+  color: #8d8d7a;
+}
+.segmented-control input[type='radio']:checked[disabled] + label {
   background: #8d8d7a;
   border-left-color: #8d8d7a;
   border-right-color: #8d8d7a;
-  color: #dcdcc8; }
-.segmented-control input[type="radio"]:checked[disabled] + label + input + label {
-  border-top-color: #8d8d7a; }
-.segmented-control input[type="radio"]:first-of-type:checked[disabled] + label {
-  border-top-color: #8d8d7a; }
-.segmented-control input[type="radio"]:last-of-type:checked[disabled] + label {
-  border-bottom-color: #8d8d7a; }
+  color: #dcdcc8;
+}
+.segmented-control
+  input[type='radio']:checked[disabled]
+  + label
+  + input
+  + label {
+  border-top-color: #8d8d7a;
+}
+.segmented-control input[type='radio']:first-of-type:checked[disabled] + label {
+  border-top-color: #8d8d7a;
+}
+.segmented-control input[type='radio']:last-of-type:checked[disabled] + label {
+  border-bottom-color: #8d8d7a;
+}
 
-.segmented-control input[type="radio"]:checked:not(:last-of-type)[disabled] + label::after {
+.segmented-control
+  input[type='radio']:checked:not(:last-of-type)[disabled]
+  + label::after {
   background: #8d8d7a;
-  border-color: transparent; }
+  border-color: transparent;
+}
 
-.sc-horizontal input[type="radio"]:checked[disabled] + label + input + label {
-  border-top-color: transparent; }
+.sc-horizontal input[type='radio']:checked[disabled] + label + input + label {
+  border-top-color: transparent;
+}
 
-.segmented-control input[type="radio"][disabled] + label .sc-icon-stroke {
-  fill: #dcdcc8; }
-
+.segmented-control input[type='radio'][disabled] + label .sc-icon-stroke {
+  fill: #dcdcc8;
+}
 
 /*------------------------------------------------------------------------------
 GENERAL IIC STYLES
 ------------------------------------------------------------------------------*/
-[class^="handle"] .iic-focus-ring {
-  fill: #f9f9e9; }
+[class^='handle'] .iic-focus-ring {
+  fill: #f9f9e9;
+}
 
 .ruler-wrapper,
 .slider-wrapper,
@@ -538,7 +587,6 @@ GENERAL IIC STYLES
 .cg-text-shadow {
   stroke: #f9f9e9;
 }
-
 
 /*------------------------------------------------------------------------------
 TRANSFORMABLE OBJECT STYLES
@@ -555,21 +603,20 @@ TRANSFORMABLE OBJECT STYLES
   border-color: #8d8d7a;
 }
 
-
-
 /*------------------------------------------------------------------------------
 POINT & LINE STYLES
 ------------------------------------------------------------------------------*/
 .delete-mode .btn-point-delete,
 html.can-touch .delete-mode .btn-point-delete:hover {
-  background: #0855b2; }
+  background: #0855b2;
+}
 .delete-mode .btn-point-delete:hover {
-  background: #0075e3; }
+  background: #0075e3;
+}
 
 .btn-point-delete[disabled]::before {
   color: #8d8d7a;
 }
-
 
 /*------------------------------------------------------------------------------
 NUMBER LINE STYLES
@@ -577,7 +624,6 @@ NUMBER LINE STYLES
 .nl-zoom-connector {
   fill: #dedec9;
 }
-
 
 /*------------------------------------------------------------------------------
 BAR GRAPH STYLES
@@ -593,15 +639,16 @@ FRACTION MODEL STYLES
 .fm-circle label,
 .fm-circle .fm-wedge-3::before,
 html.can-touch .fm-model label:hover {
-	background: #f9f9e9;
+  background: #f9f9e9;
 }
-
 
 /*------------------------------------------------------------------------------
 SCROLLBAR STYLES
 ------------------------------------------------------------------------------*/
 ::-webkit-scrollbar {
   background-color: #c7c7a9; /* need this here to ensure styles take effect. */
+  height: 20px;
+  width: 20px;
 }
 
 ::-webkit-scrollbar-track {
@@ -610,13 +657,21 @@ SCROLLBAR STYLES
 
 ::-webkit-scrollbar-thumb {
   background-color: #86867a;
-  border-color: #585850;
+  border: 1px solid #585850;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment {
   background-color: #86867a;
-  border-color: #585850;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75% 75%;
+  border: 1px solid #585850;
+  border-radius: 2px;
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
 ::-webkit-scrollbar-button:start:decrement:disabled,
@@ -626,33 +681,33 @@ SCROLLBAR STYLES
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" points="14,11 8,5 2,11 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:start:decrement:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#848477" stroke-width="2" stroke-miterlimit="10" points="14,11 8,5 2,11 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1ef" d="M21.5 17.5l-9.5-9.5-9.5 9.5-2.5-2.5 12-12 12 12-2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" points="2,5 8,11 14,5 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:vertical:end:increment:disabled {
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#848477" stroke-width="2" stroke-miterlimit="10" points="2,5 8,11 14,5 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1ef" d="M21.5 6.5l-9.5 9.5-9.5-9.5-2.5 2.5 12 12 12-12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement {
-  background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" points="11,2 5,8 11,14 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:start:decrement:disabled {
-  background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#848477" stroke-width="2" stroke-miterlimit="10" points="11,2 5,8 11,14 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1e1" d="M17.5 2.5l-9.5 9.5 9.5 9.5-2.5 2.5-12-12 12-12 2.5 2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment {
-  background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" points="5,14 11,8 5,2 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23fff" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
 }
 
 ::-webkit-scrollbar-button:horizontal:end:increment:disabled {
-  background-image: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"><polyline fill="none" stroke="#848477" stroke-width="2" stroke-miterlimit="10" points="5,14 11,8 5,2 "/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24"><path fill="%23e1e1e1" d="M6.5 21.5l9.5-9.5-9.5-9.5 2.5-2.5 12 12-12 12-2.5-2.5z"></path></svg>');
 }

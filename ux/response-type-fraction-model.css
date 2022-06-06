@@ -3,7 +3,7 @@
 * @parent ux.response-types
 *The fraction model response type allows students to respond to an item by identifying the number of selected and unselected parts needed to represent a fraction.
 *
-* The following demo presents the fraction model response type as a rectangular set of wedges. The __Undo__ button does not function as it will during an assessment.
+* Note: The following demo presents the fraction model response type as a rectangular set of wedges. The __Undo__ button does not function as it will during an assessment.
 * @iframe ux/demos/response-type-fraction-model/fm-grid.html 640
 *
 *
@@ -16,7 +16,7 @@
 *
 * Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray <span class="no-wrap">`#1A1A1A` <span class="callout-swatch" style="background-color:#1A1A1A"></span></span>. The circular variant is shown below.
 *
-* The following demo presents the fraction model response type as a circular set of wedges. The __Undo__ button does not function as it will during an assessment.
+* Note: The following demo presents the fraction model response type as a circular set of wedges. The __Undo__ button does not function as it will during an assessment.
 * @iframe ux/demos/response-type-fraction-model/fm-circular.html 580
 *
 *
@@ -56,7 +56,7 @@
 .fm-grid::after {
   border: 0.083em solid #1a1a1a;
   bottom: -0.042em;
-  content: "";
+  content: '';
   display: block;
   left: -0.042em;
   pointer-events: none;
@@ -129,7 +129,7 @@
 
 .fm-circle .fm-wedge-3::before {
   background: #fff;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   position: absolute;
