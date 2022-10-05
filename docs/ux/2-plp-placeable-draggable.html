@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Draggable &amp; Placeable </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1238,15 +1244,17 @@
 			<p>This difference in behavior from placeable-only points is needed to support movement of points. To delete placeable-and-movable points, the test taker must select an <strong>Object Delete</strong> button provided in the surrounding interaction.</p>
 <h3>Delete Mode</h3>
 <p>For draggable-placeable points, the test taker can use the <strong>Object Delete</strong> button to enter or exit delete mode. (The test taker can also hit the Escape key to exit Delete mode.)</p>
-<p>The <strong>Object Delete</strong> button has a red <code>#D50000</code> <code>cross-thin</code> icon followed by a “Delete” label. The button uses the small secondary button style (see the <a href="buttons.css.html">Buttons</a> page), with an additional set of states shown when in Delete mode:</p>
+<p>The <strong>Object Delete</strong> button has a red <span class="no-wrap"><code>#D50000</code> <span class="callout-swatch" style="background-color:#D50000"></span></span> <code>cross-thin</code> <span class="icon-cross-thin"></span> icon followed by a “Delete” label. The button uses the small secondary button style (see the <a href="buttons.css.html">Buttons</a> page), with an additional set of states shown when in Delete mode:</p>
 <ul>
-<li><em>Delete mode default</em>. Button background becomes blue <code>#0855B2</code>, and label becomes white <code>#FFFFFF</code>. Icon receives a white border.</li>
-<li><em>Delete mode hover</em>. Visible when the cursor is over the button. Button background lightens to <code>#0075E3</code>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Delete mode active</em>. Visible when the test taker presses down on the button. Button background darkens to <code>#0060AC</code>.</li>
+<li><em>Delete mode default</em>. Button background becomes blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span>, and label becomes white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>. Icon receives a white border.</li>
+<li><em>Delete mode hover</em>. Visible when the cursor is over the button. Button background lightens to <span class="no-wrap"><code>#0075E3</code> <span class="callout-swatch" style="background-color:#0075E3"></span></span>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Delete mode active</em>. Visible when the test taker presses down on the button. Button background darkens to <span class="no-wrap"><code>#0060AC</code> <span class="callout-swatch" style="background-color:#0060AC"></span></span>.</li>
 </ul>
 <p>When in Delete mode, the cursor becomes the same red cross as is shown in the <strong>Object Delete</strong> button when it is hovered anywhere in the interaction’s response area.</p>
-<p><em>Note: The points in the demo below are not movable.</em></p>
+<p>Note: The points in the demo below are not movable.</p>
+<p>The following demo presents the behavior of Object delete.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/placeable-draggable.html' data-iframe-height='220'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1279,7 +1287,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\points-lines-polygons.css","line":171,"codeLine":193,"type":"styles","description":"In some response types (e.g., [response-type-line-point-graph.css]), interactive points can be placed _and_ moved. In such cases, points behave as described for placeable-only points, with the following exceptions.\n* Hovering over a placed point causes a focus ring to appear, and the `move` cursor is displayed.\n* Selecting a placed point causes it to scale up to 133% default size. The point can be moved by dragging it.","name":"2-plp-placeable-draggable","title":"Draggable & Placeable","parent":"points-lines-polygons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\points-lines-polygons.css","line":213,"codeLine":240,"type":"styles","description":"In some response types (e.g., [response-type-line-point-graph.css]), interactive points can be placed _and_ moved. In such cases, points behave as described for placeable-only points, with the following exceptions.\n* Hovering over a placed point causes a focus ring to appear, and the `move` cursor is displayed.\n* Selecting a placed point causes it to scale up to 133% default size. The point can be moved by dragging it.","name":"2-plp-placeable-draggable","title":"Draggable & Placeable","parent":"points-lines-polygons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

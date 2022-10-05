@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Box-and-whisker </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1231,8 +1237,9 @@
 
 		
 		<section class="comment">
-			<p><em>Demo only reflects states and theming. Other functionality not present.</em></p>
+			<p>The following demo presents the box-and-whisker response type. The demo has limited functionality for the purpose of showing its themes and styles.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-box-whisker/response-type-box-whisker.html' data-iframe-height='820'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1266,14 +1273,14 @@
 				<section class="description">
 					<p>Box-and-whisker graphs include the following elements.</p>
 <ul>
-<li><em>Title (optional)</em>. Centered above graph. Bolded and in all caps.</li>
-<li><em>Graph border</em>. Thick gray <code>#CCCCCC</code> line that bounds the graph.</li>
-<li><em>Major vertical grid lines</em>. Thick gray <code>#757575</code> lines that establish the major intervals of the <em>x</em>-axis.</li>
-<li><em>Minor vertical grid lines (optional)</em>. Thin light gray <code>#949494</code> lines that establish the minor intervals of the <em>x</em>-axis.</li>
-<li><em>Horizontal grid lines</em>. Thin, dashed light gray <code>#949494</code> lines that establish where box plots can be placed.</li>
-<li><em>x-axis</em>. Thick black <code>#000000</code> line at the bottom of the graph.</li>
-<li><em>Axis name (optional)</em>. Centered beneath the <em>x</em>-axis.</li>
-<li><em>Axis ticks</em>. Short gray <code>#757575</code> lines along the <em>x</em>-axis indicating the increments at which the major vertical grid lines appear.</li>
+<li><em>Title (optional*)</em>. Centered above graph. Bolded and in all caps.</li>
+<li><em>Graph border</em>. Thick gray <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> line that bounds the graph.</li>
+<li><em>Major vertical grid lines</em>. Thick gray <span class="no-wrap"><code>#757575</code> <span class="callout-swatch" style="background-color:#757575"></span></span> lines that establish the major intervals of the <em>x</em>-axis.</li>
+<li><em>Minor vertical grid lines (optional*)</em>. Thin light gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> lines that establish the minor intervals of the <em>x</em>-axis.</li>
+<li><em>Horizontal grid lines</em>. Thin, dashed light gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> lines that establish where box plots can be placed.</li>
+<li><em>x-axis</em>. Thick black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> line at the bottom of the graph.</li>
+<li><em>Axis name (optional*)</em>. Centered beneath the <em>x</em>-axis.</li>
+<li><em>Axis ticks</em>. Short gray <span class="no-wrap"><code>#757575</code> <span class="callout-swatch" style="background-color:#757575"></span></span> lines along the <em>x</em>-axis indicating the increments at which the major vertical grid lines appear.</li>
 <li><em>Axis tick labels</em>. Appear immediately below each axis tick.</li>
 </ul>
 
@@ -1282,7 +1289,8 @@
 
 				
 					<section class="comment">
-						
+						<p>* When an item in a pure mathematical context includes an xy-plane, a title and axis names are not provided.</p>
+
 					</section>
 					
 				
@@ -1295,10 +1303,10 @@
 				<section class="description">
 					<p>Box plots have the following states.</p>
 <ul>
-<li><em>Default</em>. Box has a light blue <code>#B8E2FF</code> fill and dark gray <code>#333333</code> borders. Whiskers are the same shade of gray.</li>
-<li><em>Hover</em>. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <code>#72C1F7</code>, and borders and whiskers become black <code>#000000</code>. The <code>move</code> cursor is shown.</li>
+<li><em>Default</em>. Box has a light blue <span class="no-wrap"><code>#B8E2FF</code> <span class="callout-swatch" style="background-color:#B8E2FF"></span></span> fill and dark gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> borders. Whiskers are the same shade of gray.</li>
+<li><em>Hover</em>. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <span class="no-wrap"><code>#72C1F7</code> <span class="callout-swatch" style="background-color:#72C1F7"></span></span>, and borders and whiskers become black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span>. The <code>move</code> cursor is shown.</li>
 <li><em>Active</em>. Visible while the box plot is being dragged. Borders and whiskers thicken.</li>
-<li><em>Disabled</em>. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <code>#949494</code>, and borders and whiskers become dark gray <code>#484848</code>.</li>
+<li><em>Disabled</em>. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>, and borders and whiskers become dark gray <span class="no-wrap"><code>#484848</code> <span class="callout-swatch" style="background-color:#484848"></span></span>.</li>
 </ul>
 
 				</section>
@@ -1368,7 +1376,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The box-and-whisker response type allows test takers to respond to an item by placing and manipulating interactive box plots. Placement may be omitted based on the measurement goals of a given item.","name":"response-type-box-whisker.css","title":"Box-and-whisker","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-box-whisker.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The box-and-whisker response type allows test takers to respond to an item by placing and manipulating interactive box plots. Placement may be omitted based on the measurement goals of a given item.","name":"response-type-box-whisker.css","title":"Box-and-whisker","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-box-whisker.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

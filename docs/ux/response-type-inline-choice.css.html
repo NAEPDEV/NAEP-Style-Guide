@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Inline-choice </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1252,9 +1258,9 @@
 				<section class="description">
 					<p>Inline-choice dropdown menu buttons have the following states.</p>
 <ul>
-<li><em>Default</em>. Button has a thin gray <code>#595959</code> border, rounded corners, and a gray <code>#595959</code> caret at its right side. The button contains no text.</li>
+<li><em>Default</em>. Button has a thin gray <span class="no-wrap"><code>#595959</code> <span class="callout-swatch" style="background-color:#595959"></span></span> border, rounded corners, and a gray <span class="no-wrap"><code>#595959</code> <span class="callout-swatch" style="background-color:#595959"></span></span> caret at its right side. The button contains no text.</li>
 <li><em>Selected</em>. Visible when an option has been selected from the dropdown menu. The button is populated with the content of the selected option.</li>
-<li><em>Hover</em>. Visible when the cursor is over the button. Border color and caret color are darkened, and a drop shadow is added. The <code>pointer</code> icon is shown.</li>
+<li><em>Hover</em>. Visible when the cursor is over the button. Border color and caret color are darkened, and a drop shadow is added. The <code>pointer</code> <span class="icon-pointer"></span> icon is shown.</li>
 <li><em>Disabled</em>. Border color and caret are dimmed to indicate that the dropdown is inactive, but selected content, if present, remains at default color.</li>
 </ul>
 
@@ -1298,8 +1304,8 @@
 					<p>Inline-choice dropdown options have the following states.</p>
 <ul>
 <li><em>Unselected</em>. This is the default state.</li>
-<li><em>Selected</em>. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue <code>#D6EBFF</code>.</li>
-<li><em>Hover</em>. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white <code>#FFFFFF</code>, and background changes to medium blue <code>#0068D1</code>. The <code>pointer</code> cursor is shown. Hover state overrides selected state.</li>
+<li><em>Selected</em>. Visible when the test taker has previously selected an option and re-opens the dropdown menu. Background color changes to a light blue <span class="no-wrap"><code>#D6EBFF</code> <span class="callout-swatch" style="background-color:#D6EBFF"></span></span>.</li>
+<li><em>Hover</em>. Visible when the cursor is over the option or when the option has focus. Text color (if option content is text) changes to white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and background changes to medium blue <span class="no-wrap"><code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span></span>. The <code>pointer</code> cursor is shown. Hover state overrides selected state.</li>
 </ul>
 
 				</section>
@@ -1307,8 +1313,10 @@
 
 				
 					<section class="comment">
-						<p><em>Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the <a href="tts.css.html">Text-to-speech</a> page for a description of TTS behavior.</em></p>
+						<p>Note: The following demo presents an item featuring the in-line choice dropdown menus.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-inline-choice/response-type-inline-choice.html' data-iframe-height='400'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
+<p>Note: Demo does not include TTS behavior for inline-choice dropdown menus. See the <a href="tts.css.html">Text-to-speech</a> page for a description of TTS behavior.</p>
 
 					</section>
 					
@@ -1341,7 +1349,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The inline-choice response type allows test takers to respond to an item by selecting options from a dropdown list. Menu options can include images, MathML, or styled (italic, bold, underlined) text.","name":"response-type-inline-choice.css","title":"Inline-choice","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-inline-choice.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The inline-choice response type allows test takers to respond to an item by selecting options from a dropdown list. Menu options can include images, MathML, or styled (italic, bold, underlined) text.","name":"response-type-inline-choice.css","title":"Inline-choice","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-inline-choice.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

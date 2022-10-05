@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Indicators </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1243,11 +1249,15 @@
 				
 					<section class="comment">
 						<p>The indicator is rendered as a hairline dotted outline for most student-facing UI elements. To ensure visibility, the indicator’s color typically matches that of the element’s content (e.g., a button with white text will also have a white focus indicator).</p>
+<p>The following example presents the inset and outset focus indicators for two respective buttons.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/indicators/focus-indicator.html' data-iframe-height='125'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <h3>Focus for Interactive Points &amp; Sizing Handles</h3>
-<p>Because <a href="points-lines-polygons.css.html">Points, Lines, Polygons</a>, and single-direction sizing handles (see <a href="transformable-objects.css.html">Transformable Objects</a>) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray <code>#949494</code> circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white <code>#FFFFFF</code> fill. (This focus ring also serves as a hover state.)</p>
+<p>Because <a href="points-lines-polygons.css.html">Points, Lines, Polygons</a>, and single-direction sizing handles (see <a href="transformable-objects.css.html">Transformable Objects</a>) typically appear in denser contexts, they receive a more assertive focus indicator, which consists of a gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> circular border. Focus indicators for single-direction sizing handles also have a 50% opaque white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill. (This focus ring also serves as a hover state.)</p>
+<p>The following presents an interactive point and a single-direction sizing handle.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/indicators/focus-indicator-iic.html' data-iframe-height='125'></div>
-<p>Additional examples of focus indicators can be viewed by selecting interactive elements in demos throughout the UX section of the guide.</p>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
+<p>Additional examples of focus indicators can be viewed by selecting interactive elements in demos throughout the style guide.</p>
 
 					</section>
 					
@@ -1259,16 +1269,18 @@
 
 				
 				<section class="description">
-					<p>The scroll indicator appears at the lower right of the screen, adjacent to the scrollbar, when assessment content other than reading stimulus passages requires vertical scrolling. The indicator receives the <code>pointer</code> icon in all states.</p>
+					<p>The scroll indicator appears at the lower right of the screen, adjacent to the scrollbar, when assessment content other than reading stimulus passages requires vertical scrolling. The indicator receives the <code>pointer</code> <span class="icon-pointer"></span> icon in all states.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<p>The scroll indicator initially appears in the <em>More</em> state, which includes a <code>chevron-down-thin</code> icon at the bottom. When pressed, the scroll indicator takes the test taker to the bottom of the content area and then changes to the <em>Top</em> state, which includes a <code>chevron-up-thin</code> icon at the top. The state change will also occur if the test taker scrolls to the bottom of the content area manually.</p>
+						<p>The scroll indicator initially appears in the <em>More</em> state, which includes a <code>chevron-down-thin</code> <span class="icon-chevron-down-thin"></span> icon at the bottom. When pressed, the scroll indicator takes the test taker to the bottom of the content area and then changes to the <em>Top</em> state, which includes a <code>chevron-up-thin</code> <span class="icon-chevron-up-thin"></span> icon at the top. The state change will also occur if the test taker scrolls to the bottom of the content area manually.</p>
 <p>Pressing the scroll indicator in the <em>Top</em> state returns the test taker to the top of the content area, and the indicator then disappears. The state change will also occur if the test taker scrolls to the top of the content area manually. Once it has disappeared from a screen, the scroll indicator will not return on that screen during the current session.</p>
+<p>The following demo presents an interactive scroll indicator on the right-hand side of the container.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/indicators/scroll-indicator.html' data-iframe-height='200'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1280,14 +1292,16 @@
 
 				
 				<section class="description">
-					<p>When the system is processing data or loading content and so cannot be interacted with, the loading indicator displays in the center of the screen on top of a semi-transparent gray background. The indicator is green <code>#1B891B</code> with rounded corners, and a rotating <code>spinner</code> icon appears at its left side.</p>
+					<p>When the system is processing data or loading content and so cannot be interacted with, the loading indicator displays in the center of the screen on top of a semi-transparent gray background. The indicator is green <span class="no-wrap"><code>#1B891B</code> <span class="callout-swatch" style="background-color:#1B891B"></span></span> with rounded corners, and a rotating <code>spinner</code> <span class="icon-spinner"></span> icon appears at its left side.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/indicators/loading-indicator.html' data-iframe-height='125'></div>
+						<p>The following demo presents the behavior of the loading indicator.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/indicators/loading-indicator.html' data-iframe-height='125'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1320,7 +1334,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"","name":"indicators.css","title":"Indicators","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\indicators.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"","name":"indicators.css","title":"Indicators","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\indicators.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

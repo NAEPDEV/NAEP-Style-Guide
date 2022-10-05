@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Colors </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1215,6 +1221,11 @@
 		
 
 		
+		<section class="description">
+			<h2>Palette</h2>
+
+		</section>
+		
 
 		
 			
@@ -1225,8 +1236,7 @@
 
 		
 		<section class="comment">
-			<h2>Palette</h2>
-<p>The eNAEP user interface (UI) predominantly uses shades of gray to establish a visual hierarchy. Interactivity is most commonly indicated by shades of eNAEP blue <code>hue: 210°</code>, though other colors are also used.</p>
+			<p>The eNAEP user interface (UI) predominantly uses shades of gray to establish a visual hierarchy. Interactivity is most commonly indicated by shades of eNAEP blue <code>hue: 210°</code> <span class="callout-swatch" style="background-color:#2478cc"></span>, though other colors are also used.</p>
 <p>Text and other visual indications (e.g., icons) should accompany the use of color so that its meaning is clear both to typically sighted test takers and to test takers who cannot perceive color differences.</p>
 <h3>SBT Considerations <img src="static/img/icon-asterisk.svg"/></h3>
 <p>SBTs often have custom color palettes to establish a look and feel appropriate to the context of the task. When departing from NAEP’s typical colors, SBT designers must be mindful of the connotations that American users commonly associate with various colors (e.g., red is often used to connote danger) and must ensure that all visual elements are contrast compliant (see below).</p>
@@ -1271,7 +1281,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"colors.md","src":"ux\\colors.md","description":"","title":"Colors","parent":"ux.basics","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"colors.md","src":"ux\\colors.md","description":"## Palette","title":"Colors","parent":"ux.basics","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Transformable Objects </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1252,7 +1258,9 @@
 
 				
 					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/translatable-objects.html' data-iframe-height='290'></div>
+						<p>The following demo presents a translatable object that can be dragged throughout its container.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/translatable-objects.html' data-iframe-height='290'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1275,17 +1283,21 @@
 					<section class="comment">
 						<p>Single-direction sizing handles have the following states.</p>
 <ul>
-<li><em>Default</em>. Handle has a blue <code>#004696</code> border and a white <code>#FFFFFF</code> fill.</li>
+<li><em>Default</em>. Handle has a blue <span class="no-wrap"><code>#004696</code> <span class="callout-swatch" style="background-color:#004696"></span></span> border and a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill.</li>
 <li><em>Hover</em>. Visible when the cursor is over the handle. A focus ring appears around the handle. (See the <a href="indicators.css.html">Indicators</a> page for more information about focus rings.)</li>
 <li><em>Active</em>. Visible when the test taker is dragging the handle. Handle scales up 133%.</li>
-<li><em>Disabled</em>. Visible when the handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Border becomes dark gray <code>#AAAAAA</code>, and fill becomes light gray <code>#E5E5E5</code>.</li>
+<li><em>Disabled</em>. Visible when the handle is inactive (e.g., when a modal system tool like Scratchwork is enabled). Border becomes dark gray <span class="no-wrap"><code>#AAAAAA</code> <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>, and fill becomes light gray <span class="no-wrap"><code>#E5E5E5</code> <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.</li>
 </ul>
 <p>When the handle provides vertical resizing, the <code>ns-resize</code> cursor is shown on hover. When the handle provides horizontal resizing, the <code>ew-resize</code> cursor is shown on hover.</p>
+<p>The following demo presents an object that can only be resized in a single direction.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/resizable-objects-single.html' data-iframe-height='280'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <h3>Multi-direction</h3>
-<p>When an object can be resized in both directions, or when it is rotatable, square sizing handles are provided. Multi-direction sizing handles have a gray <code>#333333</code> border and a white <code>#FFFFFF</code> fill.</p>
+<p>When an object can be resized in both directions, or when it is rotatable, square sizing handles are provided. Multi-direction sizing handles have a gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> border and a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill.</p>
 <p>Vertical and horizontal multi-direction sizing handles have the same cursors as their single-direction counterparts. Diagonal sizing handles have the <code>nesw-resize</code> or <code>nwse-resize</code> cursor as appropriate.</p>
+<p>The following demo presents an object that can be resized in multiple directions.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/resizable-objects-multi.html' data-iframe-height='362'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1297,14 +1309,16 @@
 
 				
 				<section class="description">
-					<p>Test takers can rotate an object by dragging its associated rotation handle. The handle is centered above the associated object and is connected to the object by a dashed line. The handle has a gray <code>#333333</code> border and a white <code>#FFFFFF</code> fill. A rotation cursor is shown on hover.</p>
+					<p>Test takers can rotate an object by dragging its associated rotation handle. The handle is centered above the associated object and is connected to the object by a dashed line. The handle has a gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> border and a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill. A rotation cursor is shown on hover.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/rotatable-objects.html' data-iframe-height='362'></div>
+						<p>The following demo presents a rotatable object.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/transformable-objects/rotatable-objects.html' data-iframe-height='362'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1337,7 +1351,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Transformable objects can be resized, rotated, and/or translated by test takers. The transformations available vary depending on the measurement goals of a given item.","name":"transformable-objects.css","title":"Transformable Objects","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\transformable-objects.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Transformable objects can be resized, rotated, and/or translated by test takers. The transformations available vary depending on the measurement goals of a given item.","name":"transformable-objects.css","title":"Transformable Objects","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\transformable-objects.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

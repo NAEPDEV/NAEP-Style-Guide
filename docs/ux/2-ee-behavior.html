@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Default Behavior </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1235,7 +1241,7 @@
 			<p>When the Equation Editor is toggled on or off, it animates up or down (respectively) to help the test taker notice the change in state.</p>
 <p>The Equation Editor never overlays content. Rather, it reduces the available height for the content area when it is on screen.</p>
 <h3>Interaction with Text Entry Fields</h3>
-<p>The Equation Editor’s symbol buttons are disabled by default. They become enabled when the test taker clicks a text entry field or presses a key while the text entry field has focus. To indicate to keyboard users which text entry field will be populated by symbols selected in the Equation Editor, a light green <code>#EBFBE5</code> background and dark green <code>#008117</code> dashed border is applied to the currently active field. The field remains active, and the equation editor buttons remain enabled until the test taker clicks elsewhere on the screen or selects another user interface element via the keyboard. (Selecting any part of the equation editor does not deactivate the field or disable the buttons.)</p>
+<p>The Equation Editor’s symbol buttons are disabled by default. They become enabled when the test taker clicks a text entry field or presses a key while the text entry field has focus. To indicate to keyboard users which text entry field will be populated by symbols selected in the Equation Editor, a light green <span class="no-wrap"><code>#EBFBE5</code> <span class="callout-swatch" style="background-color:#EBFBE5"></span></span> background and dark green <span class="no-wrap"><code>#008117</code> <span class="callout-swatch" style="background-color:#008117"></span></span> dashed border is applied to the currently active field. The field remains active, and the equation editor buttons remain enabled until the test taker clicks elsewhere on the screen or selects another user interface element via the keyboard. (Selecting any part of the equation editor does not deactivate the field or disable the buttons.)</p>
 <p>If a text entry field has focus when the Equation Editor is opened, the field retains focus and becomes active for equation editor entry, and the content area automatically scrolls to ensure that the text entry field remains visible.</p>
 
 		</section>
@@ -1269,7 +1275,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"### Opening and Closing\nThe Equation Editor can be opened and closed by selecting the Equation Editor button in the [system-toolbar.css]. It can also be closed by selecting the __Close__ button at its upper right.","name":"2-ee-behavior","title":"Default Behavior","type":"styles","parent":"equation-editor.css","hideInParentMenu":true,"src":"ux\\equation-editor.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"### Opening and Closing\nThe Equation Editor can be opened and closed by selecting the Equation Editor button in the [system-toolbar.css]. It can also be closed by selecting the __Close__ button at its upper right.","name":"2-ee-behavior","title":"Default Behavior","type":"styles","parent":"equation-editor.css","hideInParentMenu":true,"src":"ux\\equation-editor.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

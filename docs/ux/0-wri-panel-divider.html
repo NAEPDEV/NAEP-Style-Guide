@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Panel Divider </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>The writing editor environment panels are separated by a gray <code>#EEEEEE</code> divider with a dark gray <code>#BBBBBB</code> border and a drop shadow.</p>
+			<p>The writing editor environment panels are separated by a gray <span class="no-wrap"><code>#EEEEEE</code> <span class="callout-swatch" style="background-color:#EEEEEE"></span></span> divider with a dark gray <span class="no-wrap"><code>#BBBBBB</code> <span class="callout-swatch" style="background-color:#BBBBBB"></span></span> border and a drop shadow.</p>
 
 		</section>
 		
@@ -1239,8 +1245,8 @@
 </ul>
 <p>The <strong>Panel Size</strong> buttons have the following states.</p>
 <ul>
-<li><em>Enabled</em>. The default state. The button’s background is blue <code>#246BB2</code>, and its icon is white <code>#FFFFFF</code>. The left button has the <code>chevron-left</code> icon. The right has the <code>chevron-right</code> icon.</li>
-<li><em>Hover</em>. Visible when the cursor is over the button. The background color is lightened to <code>#008EFA</code>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Enabled</em>. The default state. The button’s background is blue <span class="no-wrap"><code>#246BB2</code> <span class="callout-swatch" style="background-color:#246BB2"></span></span>, and its icon is white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>. The left button has the <code>chevron-left</code> <span class="icon-chevron-left"></span> icon. The right has the <code>chevron-right</code> <span class="icon-chevron-right"></span> icon.</li>
+<li><em>Hover</em>. Visible when the cursor is over the button. The background color is lightened to <span class="no-wrap"><code>#008EFA</code> <span class="callout-swatch" style="background-color:#008EFA"></span></span>. The <code>pointer</code> cursor is shown.</li>
 <li><em>Disabled</em>. Visible when the button is inactive. The button’s opacity is reduced to 30%.</li>
 </ul>
 
@@ -1275,7 +1281,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\writing-editor.css","line":9,"codeLine":23,"type":"styles","description":"The writing editor environment panels are separated by a gray `#EEEEEE` divider with a dark gray `#BBBBBB` border and a drop shadow.","name":"0-wri-panel-divider","title":"Panel Divider","parent":"writing-editor.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\writing-editor.css","line":12,"codeLine":26,"type":"styles","description":"The writing editor environment panels are separated by a gray <span class=\"no-wrap\">`#EEEEEE` <span class=\"callout-swatch\" style=\"background-color:#EEEEEE\"></span></span> divider with a dark gray <span class=\"no-wrap\">`#BBBBBB` <span class=\"callout-swatch\" style=\"background-color:#BBBBBB\"></span></span> border and a drop shadow.","name":"0-wri-panel-divider","title":"Panel Divider","parent":"writing-editor.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

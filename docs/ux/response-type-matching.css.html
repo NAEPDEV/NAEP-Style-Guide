@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Matching </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1244,11 +1250,19 @@
 
 				
 				<section class="description">
-					<p>Some draggable objects are contain text, while others contain images. The behavior of text and image objects is identical, and both are sized for easy use with touch.</p>
+					<p>Some draggable objects contain text, while others contain images. The behavior of text and image objects is identical, and both are sized for easy use with touch.</p>
 <h3>Text</h3>
-<p>Text objects are blue <code>#246BB2</code> with bold white <code>#FFFFFF</code> text to distinguish them from non-interactive text elements. Text objects’ dimensions vary according to the size of their content, but they have a maximum width of approximately 45 characters to keep them from becoming unwieldy.</p>
+<p>Text objects are blue <span class="no-wrap"><code>#246BB2</code> <span class="callout-swatch" style="background-color:#246BB2"></span></span> with bold white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text to distinguish them from non-interactive text elements. Text objects’ dimensions vary according to the size of their content, but they have a maximum width of approximately 45 characters to keep them from becoming unwieldy.</p>
+
+				</section>
+				
+
+				
+					<section class="comment">
+						<p>The following demo presents the interactive states for draggable text objects.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-matching/matching-text-objects.html' data-iframe-height='260'></div>
 <h3>Images</h3>
-<p>Image object styling (e.g., inclusion of a label, use of borders) varies depending on the needs of the item. However, image objects are most frequently placed in tiles with a gray <code>#808080</code> border and rounded corners to help indicate that they are interactive.
+<p>Image object styling (e.g., inclusion of a label, use of borders) varies depending on the needs of the item. However, image objects are most frequently placed in tiles with a gray <span class="no-wrap"><code>#808080</code> <span class="callout-swatch" style="background-color:#808080"></span></span> border and rounded corners to help indicate that they are interactive.
 <img src="demos/response-type-matching/source-tiles-1.png"/>
 <img src="demos/response-type-matching/source-tiles-2.png"/></p>
 <h3>States</h3>
@@ -1264,12 +1278,6 @@
 <h3>Object reuse</h3>
 <p>Item authors specify whether draggable objects can be used once, a specified number of times, or as many times as the test taker wishes. When an object is dragged, a copy is left in the source tray until the specified number of uses is reached.</p>
 
-				</section>
-				
-
-				
-					<section class="comment">
-						
 					</section>
 					
 				
@@ -1280,7 +1288,7 @@
 
 				
 				<section class="description">
-					<p>Draggable objects are initially placed in a source tray, which typically appears above or to the left of the drop targets. Source trays have rounded corners, a light gray <code>#ECECEC</code> background, and a darker gray <code>#BBBBBB</code> border to visually differentiate them from surrounding content.</p>
+					<p>Draggable objects are initially placed in a source tray, which typically appears above or to the left of the drop targets. Source trays have rounded corners, a light gray <span class="no-wrap"><code>#ECECEC</code> <span class="callout-swatch" style="background-color:#ECECEC"></span></span> background, and a darker gray <span class="no-wrap"><code>#BBBBBB</code> <span class="callout-swatch" style="background-color:#BBBBBB"></span></span> border to visually differentiate them from surrounding content.</p>
 
 				</section>
 				
@@ -1288,6 +1296,7 @@
 				
 					<section class="comment">
 						<p>Objects are placed in rows. A new row begins when there is not enough room on the current row to contain the next object. Objects are vertically aligned to the top of their row. Source trays have padding—equivalent to 0.5x the default line height—between their edges and the edges of contained objects.</p>
+<p>The following demos present the a reflow-able source tray with draggable objects.</p>
 <h3>Source tray with text objects</h3>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-matching/matching-text-objects.html' data-iframe-height='260'></div>
 <h3>Source tray with image objects</h3>
@@ -1328,10 +1337,11 @@
 <p>Drop targets have the following states.</p>
 <ul>
 <li><em>Drag</em>. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue <code>rgba(41, 107, 204, 0.2)</code> when the test taker begins to drag an object.</li>
-<li><em>Hover</em>. To indicate that a draggable object will be placed successfully, a blue <code>#296BCC</code> border is added to an active drop target when an object is dragged over it.</li>
+<li><em>Hover</em>. To indicate that a draggable object will be placed successfully, a blue <span class="no-wrap"><code>#296BCC</code> <span class="callout-swatch" style="background-color:#296BCC"></span></span> border is added to an active drop target when an object is dragged over it.</li>
 </ul>
-<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>.</em></p>
+<p>The following demo presents the interactive states for draggable objects and their drop targets.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-matching/matching-no-groups.html' data-iframe-height='475'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1355,8 +1365,9 @@
 
 				
 					<section class="comment">
-						<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-groups-full.html" target="_blank">here</a>.</em></p>
+						<p>The following demo presents draggable objects and drop targets assigned to two groups.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-matching/matching-groups.html' data-iframe-height='570'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-groups-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1389,7 +1400,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The matching response type allows test takers to categorize, sequence, or otherwise sort options by dragging them to drop targets.","name":"response-type-matching.css","title":"Matching","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-matching.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The matching response type allows test takers to categorize, sequence, or otherwise sort options by dragging them to drop targets.","name":"response-type-matching.css","title":"Matching","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-matching.css","static":"C:\\Users\\sshenoy\\OneDrive - Educational Testing Service\\Documents\\NAEP\\styleguide\\naep-style-guide\\styleguide-theme\\static","templates":"C:\\Users\\sshenoy\\OneDrive - Educational Testing Service\\Documents\\NAEP\\styleguide\\naep-style-guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\sshenoy\\OneDrive - Educational Testing Service\\Documents\\NAEP\\styleguide\\naep-style-guide"},"dest":"C:\\Users\\sshenoy\\OneDrive - Educational Testing Service\\Documents\\NAEP\\styleguide\\naep-style-guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

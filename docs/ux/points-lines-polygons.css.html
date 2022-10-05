@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Points, Lines, Polygons </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1253,20 +1259,22 @@
 					<section class="comment">
 						<p>Draggable points have the following states.</p>
 <ul>
-<li><em>Default</em>. The default color for points is blue <code>#0855B2</code>, though other colors may be used to differentiate multiple sets of points (e.g., in <a href="response-type-line-point-graph.css.html">Line & Point Graph</a>).</li>
+<li><em>Default</em>. The default color for points is blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span>, though other colors may be used to differentiate multiple sets of points (e.g., in <a href="response-type-line-point-graph.css.html">Line & Point Graph</a>).</li>
 <li><em>Hover</em>. Visible when the cursor is over the point. A focus ring appears (see <a href="indicators.css.html">Indicators</a> for more information), and the <code>move</code> cursor is shown.</li>
 <li><em>Active</em>. Visible when the point is being dragged. The point scales up to 133% the default size.</li>
-<li><em>Disabled</em>. Visible when the point is inactive (e.g., when a modal system tool like Scratchwork is enabled). Blue points become gray <code>#949494</code>. Points of other colors become different shades of gray to maintain the relative luminance of the original colors.</li>
+<li><em>Disabled</em>. Visible when the point is inactive (e.g., when a modal system tool like Scratchwork is enabled). Blue points become gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>. Points of other colors become different shades of gray to maintain the relative luminance of the original colors.</li>
 </ul>
 <p>Draggable lines and polygons have the following states.</p>
 <ul>
-<li><em>Default</em>. The default color is blue <code>#0855B2</code>, though other colors may be used to differentiate multiple sets of objects. Polygons have a light blue <code>#0084FF</code> fill at 25% opacity.</li>
+<li><em>Default</em>. The default color is blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span>, though other colors may be used to differentiate multiple sets of objects. Polygons have a light blue <span class="no-wrap"><code>#0084FF</code> <span class="callout-swatch" style="background-color:#0084FF"></span></span> fill at 25% opacity.</li>
 <li><em>Hover</em>. Visible when the cursor is over the object. All points attached to the object receive a focus ring, and the <code>move</code> cursor is shown.</li>
 <li><em>Active</em>. Visible when the object is being dragged. All lines and points that compose the object scale up to 133% their default size.</li>
-<li><em>Disabled</em>. Visible when the object is inactive. If the object is blue, all points, lines, and fills that compose the object become gray <code>#949494</code>. Objects of other colors become different shades of gray to maintain the relative luminance of the original colors.</li>
+<li><em>Disabled</em>. Visible when the object is inactive. If the object is blue, all points, lines, and fills that compose the object become gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>. Objects of other colors become different shades of gray to maintain the relative luminance of the original colors.</li>
 </ul>
-<p>Note: If a draggable object is presented in an interaction that can contain pre-populated objects (see below), its disabled gray is darker (<code>#484848</code>) to ensure that the two kinds of objects are differentiable.</p>
+<p>Note: If a draggable object is presented in an interaction that can contain pre-populated objects (see below), its disabled gray is darker (<span class="no-wrap"><code>#484848</code> <span class="callout-swatch" style="background-color:#484848"></span></span>) to ensure that the two kinds of objects are differentiable.</p>
+<p>The following demo presents the focus state behavior for provided points, lines, and polygons.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/draggable.html' data-iframe-height='260'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1283,7 +1291,7 @@
 <li>Hovering over a location where a point can be placed causes a focus ring (see <a href="indicators.css.html">Indicators</a> for more information) and a ghost point to appear. These indicators convey that a point will be placed when the test taker selects the location. The ghost point is 50% opaque and 133% the size of the default point.</li>
 <li>Selecting the location causes the point to be placed. Placed points have the same styling as the default state of draggable points (see above).</li>
 <li>Hovering over a point immediately after the point has been placed causes no change in state. To delete the point, the test taker must move the cursor off and then back on the point. This behavior is designed to prevent accidental deletion.</li>
-<li>If the cursor has been moved off a placed point, hovering over the point again causes a red <code>#d50000</code> cross with a white <code>#FFFFFF</code> outline to appear over the point. This indicator conveys that the point will be deleted if the test taker selects it.</li>
+<li>If the cursor has been moved off a placed point, hovering over the point again causes a red <span class="no-wrap"><code>#d50000</code> <span class="callout-swatch" style="background-color:#d50000"></span></span> <code>cross</code> <span class="icon-cross"></span> icon with a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> outline to appear over the point. This indicator conveys that the point will be deleted if the test taker selects it.</li>
 <li>Selecting a placed point once it displays the deletion indicator causes the point to be deleted. The point reverts to the default hover state (50% opacity, 133% default size) to convey that selecting it again will cause it to be re-placed.</li>
 </ul>
 
@@ -1292,7 +1300,9 @@
 
 				
 					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/placeable.html' data-iframe-height='220'></div>
+						<p>The following demo presents the behavior of interactive points on a grid.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/placeable.html' data-iframe-height='220'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1318,15 +1328,17 @@
 						<p>This difference in behavior from placeable-only points is needed to support movement of points. To delete placeable-and-movable points, the test taker must select an <strong>Object Delete</strong> button provided in the surrounding interaction.</p>
 <h3>Delete Mode</h3>
 <p>For draggable-placeable points, the test taker can use the <strong>Object Delete</strong> button to enter or exit delete mode. (The test taker can also hit the Escape key to exit Delete mode.)</p>
-<p>The <strong>Object Delete</strong> button has a red <code>#D50000</code> <code>cross-thin</code> icon followed by a “Delete” label. The button uses the small secondary button style (see the <a href="buttons.css.html">Buttons</a> page), with an additional set of states shown when in Delete mode:</p>
+<p>The <strong>Object Delete</strong> button has a red <span class="no-wrap"><code>#D50000</code> <span class="callout-swatch" style="background-color:#D50000"></span></span> <code>cross-thin</code> <span class="icon-cross-thin"></span> icon followed by a “Delete” label. The button uses the small secondary button style (see the <a href="buttons.css.html">Buttons</a> page), with an additional set of states shown when in Delete mode:</p>
 <ul>
-<li><em>Delete mode default</em>. Button background becomes blue <code>#0855B2</code>, and label becomes white <code>#FFFFFF</code>. Icon receives a white border.</li>
-<li><em>Delete mode hover</em>. Visible when the cursor is over the button. Button background lightens to <code>#0075E3</code>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Delete mode active</em>. Visible when the test taker presses down on the button. Button background darkens to <code>#0060AC</code>.</li>
+<li><em>Delete mode default</em>. Button background becomes blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span>, and label becomes white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>. Icon receives a white border.</li>
+<li><em>Delete mode hover</em>. Visible when the cursor is over the button. Button background lightens to <span class="no-wrap"><code>#0075E3</code> <span class="callout-swatch" style="background-color:#0075E3"></span></span>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Delete mode active</em>. Visible when the test taker presses down on the button. Button background darkens to <span class="no-wrap"><code>#0060AC</code> <span class="callout-swatch" style="background-color:#0060AC"></span></span>.</li>
 </ul>
 <p>When in Delete mode, the cursor becomes the same red cross as is shown in the <strong>Object Delete</strong> button when it is hovered anywhere in the interaction’s response area.</p>
-<p><em>Note: The points in the demo below are not movable.</em></p>
+<p>Note: The points in the demo below are not movable.</p>
+<p>The following demo presents the behavior of Object delete.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/placeable-draggable.html' data-iframe-height='220'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1338,14 +1350,16 @@
 
 				
 				<section class="description">
-					<p>Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <code>#767676</code>. Pre-populated polygons have a gray <code>#383838</code> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <code>#949494</code> to differentiate them from disabled interactive objects.</p>
+					<p>Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <span class="no-wrap"><code>#767676</code> <span class="callout-swatch" style="background-color:#767676"></span></span>. Pre-populated polygons have a gray <span class="no-wrap"><code>#383838</code> <span class="callout-swatch" style="background-color:#383838"></span></span> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> to differentiate them from disabled interactive objects.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/prepopulated.html' data-iframe-height='260'></div>
+						<p>The following demo is an example of Pre-Populated Line Segment and Polygon.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/prepopulated.html' data-iframe-height='260'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1378,7 +1392,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Interactive points, lines, and polygons can be moved and/or placed on [coordinate-grids.css] or a [response-type-number-line.css] in various response types (e.g., [response-type-line-point-graph.css], [response-type-polygon-graph.css]).","name":"points-lines-polygons.css","title":"Points, Lines, Polygons","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\points-lines-polygons.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Interactive points, lines, and polygons can be moved and/or placed on [coordinate-grids.css] or a [response-type-number-line.css] in various response types (e.g., [response-type-line-point-graph.css], [response-type-polygon-graph.css]).","name":"points-lines-polygons.css","title":"Points, Lines, Polygons","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\points-lines-polygons.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

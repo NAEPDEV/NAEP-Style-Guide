@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Model </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1231,16 +1237,17 @@
 
 		
 		<section class="comment">
-			<p>Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray <code>#1A1A1A</code>. The circular variant is shown below.</p>
-<p><em>Undo functionality is not present in the demo.</em></p>
+			<p>Fraction models can be presented as either a rectangular grid or a circular set of wedges. The outer border of the model is dark gray <span class="no-wrap"><code>#1A1A1A</code> <span class="callout-swatch" style="background-color:#1A1A1A"></span></span>. The circular variant is shown below.</p>
+<p>Note: The following demo presents the fraction model response type as a circular set of wedges. The <strong>Undo</strong> button does not function as it will during an assessment.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-fraction-model/fm-circular.html' data-iframe-height='580'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <p>Each unit in the model has the following states.</p>
 <ul>
-<li><em>Default</em>. The unit has a gray <code>#757575</code> border.</li>
-<li><em>Hover</em>. Visible when the cursor is over the unit in the default state. Unit background becomes light blue <code>#C4DCF2</code>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. Unit background becomes blue <code>#0A97FF</code>, and unit border becomes dark blue <code>#002040</code>. Selected unit border color overrides default border color.</li>
-<li><em>Hover selected</em>. Visible when the cursor is over a selected unit. Unit background becomes light blue <code>#A4C9EB</code>, and border color becomes medium blue <code>#596C80</code>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Disabled</em>. Visible when the unit is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unit border becomes dark gray <code>#484848</code>. If unit is selected, background becomes medium gray <code>#949494</code>.</li>
+<li><em>Default</em>. The unit has a gray <span class="no-wrap"><code>#757575</code> <span class="callout-swatch" style="background-color:#757575"></span></span> border.</li>
+<li><em>Hover</em>. Visible when the cursor is over the unit in the default state. Unit background becomes light blue <span class="no-wrap"><code>#C4DCF2</code> <span class="callout-swatch" style="background-color:#C4DCF2"></span></span>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Selected</em>. Unit background becomes blue <span class="no-wrap"><code>#0A97FF</code> <span class="callout-swatch" style="background-color:#0A97FF"></span></span>, and unit border becomes dark blue <span class="no-wrap"><code>#002040</code> <span class="callout-swatch" style="background-color:#002040"></span></span>. Selected unit border color overrides default border color.</li>
+<li><em>Hover selected</em>. Visible when the cursor is over a selected unit. Unit background becomes light blue <span class="no-wrap"><code>#A4C9EB</code> <span class="callout-swatch" style="background-color:#A4C9EB"></span></span>, and border color becomes medium blue <span class="no-wrap"><code>#596C80</code> <span class="callout-swatch" style="background-color:#596C80"></span></span>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Disabled</em>. Visible when the unit is inactive (e.g., when a modal system tool like Scratchwork is enabled). Unit border becomes dark gray <span class="no-wrap"><code>#484848</code> <span class="callout-swatch" style="background-color:#484848"></span></span>. If unit is selected, background becomes medium gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>.</li>
 </ul>
 <p>Note: To avoid state confusion, unit hover states do not appear immediately after a test taker has selected or deselected a unit. The test taker must move the cursor off of the unit and then back on for the hover state to appear.</p>
 
@@ -1275,7 +1282,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-fraction-model.css","line":9,"codeLine":29,"type":"styles","description":"A title may appear centered above the fraction model. If present, the title is bolded and in all caps.","name":"0-fm-model","title":"Model","parent":"response-type-fraction-model.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-fraction-model.css","line":12,"codeLine":35,"type":"styles","description":"A title may appear centered above the fraction model. If present, the title is bolded and in all caps.","name":"0-fm-model","title":"Model","parent":"response-type-fraction-model.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

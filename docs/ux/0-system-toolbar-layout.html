@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Layout </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1226,35 +1232,36 @@
 
 		
 		<section class="comment">
-			<p>The toolbar is divided into the following groups, which are separated by gray <code>#BFBFBF</code> vertical dividers.</p>
+			<p>The toolbar is divided into the following groups, which are separated by gray <span class="no-wrap"><code>#BFBFBF</code> <span class="callout-swatch" style="background-color:#BFBFBF"></span></span> vertical dividers.</p>
 <ul>
-<li>Help (<code>question-circle</code> icon)</li>
+<li>Help (<code>question-circle</code> <span class="icon-question-circle"></span> icon)</li>
 <li>Visual presentation features
 <ul>
-<li>Change Theme (<code>change-theme</code> icon)</li>
-<li>Zoom Out (<code>zoom-out</code> icon)</li>
-<li>Zoom In (<code>zoom-in</code> icon)</li>
-<li>Change Language (<code>lang-esp</code>/<code>lang-eng</code> icon)</li>
+<li>Change Theme (<code>change-theme</code> <span class="icon-change-theme"></span> icon)</li>
+<li>Zoom Out (<code>zoom-out</code> <span class="icon-zoom-out"></span> icon)</li>
+<li>Zoom In (<code>zoom-in</code> <span class="icon-zoom-in"></span> icon)</li>
+<li>Change Language (<code>lang-esp</code> <span><img src="static/img/icon-lang-esp.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> / <code>lang-eng</code> <span><img src="static/img/icon-lang-eng.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)</li>
 </ul></li>
 <li>Additional tools
 <ul>
-<li>Read Aloud (<code>read-aloud</code> icon)</li>
-<li>Scratchwork (<code>scratchwork</code> icon)</li>
-<li>Equation Editor (<code>equation-editor</code> icon)</li>
-<li>Calculator (<code>calculator</code> icon)</li>
+<li>Read Aloud (<code>read-aloud</code> <span><img src="static/img/icon-tts.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)</li>
+<li>Scratchwork (<code>scratchwork</code> <span><img src="static/img/scratchwork.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)</li>
+<li>Equation Editor (<code>equation-editor</code> <span><img src="static/img/equation-editor.svg" style="max-height: 1.05em; max-width: 1.05em;" /></span> icon)</li>
+<li>Calculator (<code>calculator</code> <span class="icon-calculator"></span> icon)</li>
 </ul></li>
-<li>Timer (<code>timer</code> icon)</li>
+<li>Timer (<code>timer</code> <span class="icon-timer"></span> icon)</li>
 <li>Progress bar (only available for linearly navigated blocks [e.g., scenario-based tasks, SQ blocks])</li>
 <li>Navigation
 <ul>
-<li>Back (<code>arrow-left</code> icon)</li>
-<li>Next (“Next” label and <code>arrow-right</code> icon)</li>
+<li>Back (<code>arrow-left</code> <span class="icon-arrow-left"></span> icon)</li>
+<li>Next (“Next” label and <code>arrow-right</code> <span class="icon-arrow-right"></span> icon)</li>
 </ul></li>
 </ul>
-<p>The progress bar has an off-white <code>#FCFCFC</code> background and a gray <code>#AAAAAA</code> border. The progress indicator is green <code>#0BA951</code>.</p>
+<p>The progress bar has an off-white <span class="no-wrap"><code>#FCFCFC</code> <span class="callout-swatch" style="background-color:#FCFCFC"></span></span> background and a gray <span class="no-wrap"><code>#AAAAAA</code> <span class="callout-swatch" style="background-color:#AAAAAA"></span></span> border. The progress indicator is green <span class="no-wrap"><code>#0BA951</code> <span class="callout-swatch" style="background-color:#0BA951"></span></span>.</p>
 <p>The item accession number and block title for the content currently on screen are shown in the center of the toolbar, superimposed on the NAEP logo. For scenario-based tasks, the scene ID displays next to the accession number, separated by a hyphen.</p>
-<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>.</em></p>
+<p>The following Demo represents a visual presentation of  system toolbar.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/system-toolbar/system-toolbar.html' data-iframe-height='47'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/system-toolbar/system-toolbar-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1287,7 +1294,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\system-toolbar.css","line":10,"codeLine":40,"type":"styles","description":"","name":"0-system-toolbar-layout","title":"Layout","parent":"system-toolbar.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\system-toolbar.css","line":10,"codeLine":43,"type":"styles","description":"","name":"0-system-toolbar-layout","title":"Layout","parent":"system-toolbar.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

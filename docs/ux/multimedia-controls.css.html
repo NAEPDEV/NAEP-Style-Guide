@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Multimedia Controls </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1251,12 +1257,12 @@
 <li>The scrub bar, which is used to scrub through the media clip, is provided on its own in the top row to maximize scrubbing precision.</li>
 <li>The bottom row contains the following controls from left to right:
 <ul>
-<li>Play/Pause (<code>play</code>/<code>pause</code> icon)</li>
+<li>Play/Pause (<code>play</code>  <span class="icon-play"></span>/<code>pause</code> <span class="icon-pause"></span> icon)</li>
 <li>Time indicators (current / total)</li>
-<li>Mute (<code>volume-down</code>/<code>volume-up</code>/<code>volume-mute</code> icon)</li>
+<li>Mute (<code>volume-down</code> <span class="icon-volume-down"></span>/<code>volume-up</code> <span class="icon-volume-up"></span>/<code>volume-mute</code> <span class="icon-volume-mute"></span> icon)</li>
 <li>Volume slider</li>
-<li>Closed captions (video only) (<code>cc-on</code>/<code>cc-off</code> icon)</li>
-<li>Full screen (video only) (<code>fullscreen</code>/<code>fullscreen-exit</code> icon)</li>
+<li>Closed captions (video only) (<code>cc-on</code> <span class="icon-cc-on"></span>/<code>cc-off</code> <span class="icon-cc-off"></span> icon)</li>
+<li>Full screen (video only) (<code>fullscreen</code> <span class="icon-fullscreen"></span>/<code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span> icon)</li>
 </ul></li>
 </ul>
 <p>Play/Pause and the time indicators are left-justified. The remaining controls in the second row are right-justified.</p>
@@ -1272,11 +1278,11 @@
 
 				
 				<section class="description">
-					<p>Multimedia controls are presented on a light gray <code>#EAEAEA</code> background to differentiate them from the surrounding content area.</p>
+					<p>Multimedia controls are presented on a light gray <span class="no-wrap"><code>#EAEAEA</code> <span class="callout-swatch" style="background-color:#EAEAEA"></span></span> background to differentiate them from the surrounding content area.</p>
 <h3>Hero Play button</h3>
 <p>The <strong>Hero Play</strong> button has three states.</p>
 <ul>
-<li><em>Default</em>. Displayed when video clip is paused. A white <code>#FFFFFF</code> <code>play-circle</code> icon is presented over a 65% opaque black <code>#000000</code> background.</li>
+<li><em>Default</em>. Displayed when video clip is paused. A white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> <code>play-circle</code> <span class="icon-play-circle"></span> icon is presented over a 65% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background.</li>
 <li><em>Hover</em>. Displayed when the cursor is over the video. The button scales up by 120%, and the background increases to 85% opacity. The <code>pointer</code> cursor is shown over the entire video content area, indicating that the video will play/pause when selected.</li>
 <li><em>Playing/Disabled</em>. The <strong>Hero Play</strong> button disappears when the video clip is playing, or when a modal system tool (e.g., scratchwork) is active.</li>
 </ul>
@@ -1291,21 +1297,21 @@
 						<ul>
 <li><em>Default</em>.
 <ul>
-<li>The unplayed section of the scrub track is medium gray <code>#858585</code>.</li>
-<li>The played section of the scrub track is blue <code>#246BB2</code>.</li>
+<li>The unplayed section of the scrub track is medium gray <span class="no-wrap"><code>#858585</code> <span class="callout-swatch" style="background-color:#858585"></span></span>.</li>
+<li>The played section of the scrub track is blue <span class="no-wrap"><code>#246BB2</code> <span class="callout-swatch" style="background-color:#246BB2"></span></span>.</li>
 <li>The thumb is the same blue as the played section of the scrub track.</li>
 </ul></li>
 <li><em>Hover/active</em>. Displayed when the cursor is over the scrub bar or while the test taker is scrubbing through the media clip.
 <ul>
 <li>The <code>pointer</code> cursor is shown.</li>
 <li>The track and thumb are scaled up 150%. (Scaling remains during scrubbing, even if the cursor isn’t directly over the scrub bar.)</li>
-<li>A dark gray <code>#535353</code> bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.</li>
+<li>A dark gray <span class="no-wrap"><code>#535353</code> <span class="callout-swatch" style="background-color:#535353"></span></span> bar extends from the right edge of the unplayed section of the track to the cursor position to help the test taker locate the cursor.</li>
 <li>A tooltip (see below) appears above the scrub bar showing the time in the media clip associated with the current cursor position during both hover and drag.</li>
 </ul></li>
 <li><em>Disabled</em>. Displayed when the scrub bar is inactive (e.g., when a modal system tool like Scratchwork is enabled).
 <ul>
-<li>The unplayed section of the track changes to a light gray <code>#A6A6A6</code>.</li>
-<li>The thumb and the played section of the track change to a medium gray <code>#AAAAAA</code>.</li>
+<li>The unplayed section of the track changes to a light gray <span class="no-wrap"><code>#A6A6A6</code> <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.</li>
+<li>The thumb and the played section of the track change to a medium gray <span class="no-wrap"><code>#AAAAAA</code> <span class="callout-swatch" style="background-color:#AAAAAA"></span></span>.</li>
 </ul></li>
 </ul>
 <h3>Volume slider</h3>
@@ -1318,15 +1324,15 @@
 <h3>Other Buttons</h3>
 <p>Multimedia control buttons are 2x the base font size (see the <a href="typography.css.html">Typography</a> page) to ensure easy selection via touch. They have three states.</p>
 <ul>
-<li><em>Default</em>. A dark gray <code>#535353</code> icon with no background or border.</li>
-<li><em>Hover</em>. Displayed when the cursor is over the button. Icon color darkens to <code>#1E1E1E</code>, and a tooltip appears above the button. The <code>pointer</code> cursor is shown.</li>
-<li><em>Disabled</em>. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to <code>#A6A6A6</code>.</li>
+<li><em>Default</em>. A dark gray <span class="no-wrap"><code>#535353</code> <span class="callout-swatch" style="background-color:#535353"></span></span> icon with no background or border.</li>
+<li><em>Hover</em>. Displayed when the cursor is over the button. Icon color darkens to <span class="no-wrap"><code>#1E1E1E</code> <span class="callout-swatch" style="background-color:#1E1E1E"></span></span>, and a tooltip appears above the button. The <code>pointer</code> cursor is shown.</li>
+<li><em>Disabled</em>. Displayed when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon color lightens to <span class="no-wrap"><code>#A6A6A6</code> <span class="callout-swatch" style="background-color:#A6A6A6"></span></span>.</li>
 </ul>
 <h3>Tooltips</h3>
-<p>Tooltips are displayed as white <code>#FFFFFF</code> text on an 85% opaque black <code>#000000</code> background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.</p>
+<p>Tooltips are displayed as white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 85% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners. This approach ensures that tooltips are visible on all video content. Tooltips are centered above their associated controls, except in cases where centering would cause the tooltip to extend past the edge of the multimedia control area (e.g., Play/Pause, Full screen). In such cases, the tooltip is aligned to the nearest edge of the control area with a bit of padding.</p>
 <p>The tooltip for the scrub bar has a bottom tail to better connect it to the cursor position.</p>
 <h3>Subtitles</h3>
-<p>Subtitles are displayed as white <code>#FFFFFF</code> text on an 80% opaque black <code>#000000</code> background with rounded corners.</p>
+<p>Subtitles are displayed as white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on an 80% opaque black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> background with rounded corners.</p>
 
 					</section>
 					
@@ -1345,10 +1351,10 @@
 <h3>Button behavior</h3>
 <p>Several buttons have toggle states.</p>
 <ul>
-<li>The <strong>Play/Pause</strong> button changes to a <code>pause</code> icon, and its tooltip changes to “Pause” while the media clip is playing.</li>
+<li>The <strong>Play/Pause</strong> button changes to a <code>pause</code> <span class="icon-pause"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.</li>
 <li>The <strong>Mute</strong> button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)</li>
-<li>The <strong>Closed caption</strong> button icon changes to the <code>cc-off</code> icon when closed captions are turned off.</li>
-<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
+<li>The <strong>Closed caption</strong> button icon changes to the <code>cc-off</code> <span class="icon-cc-off"></span> icon when closed captions are turned off.</li>
+<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
 </ul>
 <h3>Volume slider &amp; Mute button interactions</h3>
 <p>As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for <a href="touch-targets.md.html">Touch Targets</a>.</p>
@@ -1360,9 +1366,9 @@
 					<section class="comment">
 						<p>The volume slider affects the <strong>Mute</strong> button in the following ways:</p>
 <ul>
-<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code>, and the tooltip changes to “Mute.”</li>
+<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code> <span class="icon-volume-up"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code> <span class="icon-volume-down"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code> <span class="icon-volume-mute"></span>, and the tooltip changes to “Mute.”</li>
 </ul>
 <p>When the test taker mutes the audio via the <strong>Mute</strong> button, it remembers the previous volume level and restores it when the test taker selects <strong>Mute</strong> again.</p>
 <ul>
@@ -1382,6 +1388,7 @@
 <li>Multimedia clips must be viewed/listened to in their entirety before the test taker is allowed to progress to the next screen.</li>
 <li>Test takers are allowed to use the scrub bar, but only through the section of the clip that has already been viewed/heard.</li>
 </ul>
+<p>The following demos present the style and functional behavior of the multi-media controls for the video variant, audio variant, and select-in-stimulus variant.</p>
 
 					</section>
 					
@@ -1396,6 +1403,7 @@
 				
 					<section class="comment">
 						<div class='iframe_wrapper' data-iframe-src='ux/demos/multimedia-controls/video.html' data-iframe-height='600'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1410,6 +1418,7 @@
 				
 					<section class="comment">
 						<div class='iframe_wrapper' data-iframe-src='ux/demos/multimedia-controls/audio.html' data-iframe-height='200'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1429,6 +1438,7 @@
 				
 					<section class="comment">
 						<div class='iframe_wrapper' data-iframe-src='ux/demos/multimedia-controls/sis.html' data-iframe-height='605'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1461,7 +1471,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Multimedia controls allow test takers to play back audio and video clips.","name":"multimedia-controls.css","title":"Multimedia Controls","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Multimedia controls allow test takers to play back audio and video clips.","name":"multimedia-controls.css","title":"Multimedia Controls","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

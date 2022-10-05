@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Dialogs </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1254,11 +1260,13 @@
 
 				
 					<section class="comment">
-						<p>To increase initial salience, a modal dialog fades in and animates down to a centered position when it is invoked. In addition to the general dialog styling, modals are presented over a semi-transparent white <code>rgba(255,255,255,0.8)</code> backdrop to emphasize that the main content area is inaccessible. The backdrop covers the entire screen other than the <a href="system-toolbar.css.html">System Toolbar</a> so that test takers can use system tools while the dialog is open.</p>
+						<p>To increase initial salience, a modal dialog fades in and animates down to a centered position when it is invoked. In addition to the general dialog styling, modals are presented over a semi-transparent white <code>rgba(255,255,255,0.8)</code> <span class="callout-swatch" style="background-color:rgba(255,255,255,0.8)"></span> backdrop to emphasize that the main content area is inaccessible. The backdrop covers the entire screen other than the <a href="system-toolbar.css.html">System Toolbar</a> so that test takers can use system tools while the dialog is open.</p>
 <p>When a dialog contains information not intended for test takers (e.g., an item accession number is provided in the <em>Item Error</em> dialog to support troubleshooting), the information is presented at a smaller font size in the lower left corner.</p>
-<p>When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a <code>warning</code> icon is provided at the upper left corner of the dialog.</p>
-<p>Modal dialogs do not have a <strong>Close</strong> button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the <strong>OK</strong> button) to dismiss it.</p>
+<p>When a dialog solicits an action that cannot be undone (e.g., the End of Section dialog, the SBT Submit Confirmation dialog), a <code>warning</code> <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon is provided at the upper left corner of the dialog.</p>
+<p><em>Select the <strong>View Dialog</strong> button below each description to launch the associated modal dialog. Modal dialogs do not have a <strong>Close</strong> button and cannot be dismissed by hitting Escape on the keyboard. Rather, test takers must complete the dialog’s primary action (e.g., selecting the <strong>OK</strong> button) to dismiss it.</em></p>
+<p>The following demo presents dialogs that can each be viewed by selecting the &quot;View Dialog&quot; button.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/dialogs/modals.html' data-iframe-height='780'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1285,8 +1293,8 @@
 </ul>
 <p>Non-modal dialogs have a <strong>Close</strong> button at their upper-right corner. They can also be closed by hitting Escape on the keyboard or by selecting the button that invoked them. <strong>Close</strong> buttons have the following states.</p>
 <ul>
-<li><em>Default</em>. Button consists of a dark gray <code>#333333</code> <code>cross-thin</code> icon.</li>
-<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to <code>#909090</code>.</li>
+<li><em>Default</em>. Button consists of a dark gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> <code>cross-thin</code> <span class="icon-cross-thin"></span> icon.</li>
+<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to <span class="no-wrap"><code>#909090</code> <span class="callout-swatch" style="background-color:#909090"></span></span>.</li>
 </ul>
 <p>Test takers can reposition non-modal dialogs by dragging any spot on the dialog other than the <strong>Close</strong> button.</p>
 <p>When a test taker navigates to the first screen on which a non-modal dialog is offered,</p>
@@ -1294,7 +1302,9 @@
 <li>The dialog automatically opens, and the test taker is given the opportunity to close it.</li>
 <li>The initial position of the dialog should avoid overlap with essential information in the main content area.</li>
 </ul>
+<p>The following demo presents a non-modal dialog that can be dragged throughout its container.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/dialogs/non-modals.html' data-iframe-height='450'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1327,7 +1337,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Dialogs are used to convey information to test takers or solicit an action. Depending on the purpose of a  given dialog, it may be modal or non-modal.","name":"dialogs.css","title":"Dialogs","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\dialogs.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Dialogs are used to convey information to test takers or solicit an action. Depending on the purpose of a  given dialog, it may be modal or non-modal.","name":"dialogs.css","title":"Dialogs","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\dialogs.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

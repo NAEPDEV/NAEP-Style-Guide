@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Slider Thumb </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1219,10 +1225,10 @@
 		<section class="description">
 			<p>The slider thumb has the following states.</p>
 <ul>
-<li><em>Enabled</em>. The default state. The thumb is a blue <code>#0084FF</code> circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.</li>
-<li><em>Hover</em>. Visible when the cursor is over the thumb. A gray <code>#575757</code> outline with 70% opacity appears around the thumb. The <code>ew-resize</code> cursor is displayed.</li>
+<li><em>Enabled</em>. The default state. The thumb is a blue <span class="no-wrap"><code>#0084FF</code> <span class="callout-swatch" style="background-color:#0084FF"></span></span> circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.</li>
+<li><em>Hover</em>. Visible when the cursor is over the thumb. A gray <span class="no-wrap"><code>#575757</code> <span class="callout-swatch" style="background-color:#575757"></span></span> outline with 70% opacity appears around the thumb. The <code>ew-resize</code> cursor is displayed.</li>
 <li><em>Active</em>. Visible when the test taker presses down on the thumb. The thumb scales to 120% its default size.</li>
-<li><em>Disabled</em>. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray <code>#949494</code>.</li>
+<li><em>Disabled</em>. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>.</li>
 </ul>
 
 		</section>
@@ -1270,7 +1276,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"name":"1-slider-thumb","type":"styles","parent":"stim-slider.css","src":"ux\\stim-slider.css","line":75,"codeLine":86,"description":"The slider thumb has the following states.\n* _Enabled_. The default state. The thumb is a blue `#0084FF` circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.\n* _Hover_. Visible when the cursor is over the thumb. A gray `#575757` outline with 70% opacity appears around the thumb. The `ew-resize` cursor is displayed.\n* _Active_. Visible when the test taker presses down on the thumb. The thumb scales to 120% its default size.\n* _Disabled_. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray `#949494`.","title":"Slider Thumb","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"name":"1-slider-thumb","type":"styles","parent":"stim-slider.css","src":"ux\\stim-slider.css","line":86,"codeLine":97,"description":"The slider thumb has the following states.\n* _Enabled_. The default state. The thumb is a blue <span class=\"no-wrap\">`#0084FF` <span class=\"callout-swatch\" style=\"background-color:#0084FF\"></span></span> circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.\n* _Hover_. Visible when the cursor is over the thumb. A gray <span class=\"no-wrap\">`#575757` <span class=\"callout-swatch\" style=\"background-color:#575757\"></span></span> outline with 70% opacity appears around the thumb. The `ew-resize` cursor is displayed.\n* _Active_. Visible when the test taker presses down on the thumb. The thumb scales to 120% its default size.\n* _Disabled_. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray <span class=\"no-wrap\">`#949494` <span class=\"callout-swatch\" style=\"background-color:#949494\"></span></span>.","title":"Slider Thumb","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

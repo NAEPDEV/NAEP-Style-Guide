@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Selectable Table </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1237,8 +1243,8 @@
 <p>Selectable rows have the following states.</p>
 <ul>
 <li><em>Enabled</em>. This is the default state.</li>
-<li><em>Hover</em>. Visible when the cursor is over the row. The row background changes to light blue <code>#CDDDF3</code>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. The row background changes to a medium blue <code>#9BBCE7</code>, and the checkbox becomes checked.</li>
+<li><em>Hover</em>. Visible when the cursor is over the row. The row background changes to light blue <span class="no-wrap"><code>#CDDDF3</code> <span class="callout-swatch" style="background-color:#CDDDF3"></span></span>. The <code>pointer</code> cursor is shown.</li>
+<li><em>Selected</em>. The row background changes to a medium blue <span class="no-wrap"><code>#9BBCE7</code> <span class="callout-swatch" style="background-color:#9BBCE7"></span></span>, and the checkbox becomes checked.</li>
 <li><em>Disabled</em>. Visible when the row is inactive (e.g., when a modal system tool like Scratchwork is enabled). The checkbox becomes disabled.</li>
 </ul>
 <p>A <strong>Clear Answer</strong> button is provided beneath the table, aligned to its left edge. The button is styled as a small secondary filled button (see the <a href="buttons.css.html">Buttons</a> page for more information).</p>
@@ -1276,7 +1282,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-selectable-table.css","line":0,"codeLine":20,"type":"stylesheet","description":"The selectable table response type allows test takers to select sets of related data presented in a stimulus table (as opposed to the [response-type-grid.css] response type, which allows test takers to choose among options presented in a table).","name":"response-type-selectable-table.css","title":"Selectable Table","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"-hidden","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-selectable-table.css","line":0,"codeLine":20,"type":"stylesheet","description":"The selectable table response type allows test takers to select sets of related data presented in a stimulus table (as opposed to the [response-type-grid.css] response type, which allows test takers to choose among options presented in a table).","name":"response-type-selectable-table.css","title":"Selectable Table","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"-hidden","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

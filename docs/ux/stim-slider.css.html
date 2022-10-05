@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Slider </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1231,7 +1237,9 @@
 
 		
 		<section class="comment">
-			<div class='iframe_wrapper' data-iframe-src='ux/demos/stim-slider/stim-slider.html' data-iframe-height='630'></div>
+			<p>The following demo presents a slider that displays three distinct images as the user moves the thumb to different tick marks.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/stim-slider/stim-slider.html' data-iframe-height='630'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1245,7 +1253,7 @@
 
 				
 				<section class="description">
-					<p>The slider track is light gray <code>#F2F2F2</code> with a dark gray <code>#BFBFBF</code> border and rounded ends.</p>
+					<p>The slider track is light gray <span class="no-wrap"><code>#F2F2F2</code> <span class="callout-swatch" style="background-color:#F2F2F2"></span></span> with a dark gray <span class="no-wrap"><code>#BFBFBF</code> <span class="callout-swatch" style="background-color:#BFBFBF"></span></span> border and rounded ends.</p>
 
 				</section>
 				
@@ -1266,10 +1274,10 @@
 				<section class="description">
 					<p>The slider thumb has the following states.</p>
 <ul>
-<li><em>Enabled</em>. The default state. The thumb is a blue <code>#0084FF</code> circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.</li>
-<li><em>Hover</em>. Visible when the cursor is over the thumb. A gray <code>#575757</code> outline with 70% opacity appears around the thumb. The <code>ew-resize</code> cursor is displayed.</li>
+<li><em>Enabled</em>. The default state. The thumb is a blue <span class="no-wrap"><code>#0084FF</code> <span class="callout-swatch" style="background-color:#0084FF"></span></span> circle with a diameter 1x the base font size. To meet the minimum touch target size, the thumb’s touch target diameter is 2x the base font size.</li>
+<li><em>Hover</em>. Visible when the cursor is over the thumb. A gray <span class="no-wrap"><code>#575757</code> <span class="callout-swatch" style="background-color:#575757"></span></span> outline with 70% opacity appears around the thumb. The <code>ew-resize</code> cursor is displayed.</li>
 <li><em>Active</em>. Visible when the test taker presses down on the thumb. The thumb scales to 120% its default size.</li>
-<li><em>Disabled</em>. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray <code>#949494</code>.</li>
+<li><em>Disabled</em>. Visible when the thumb is inactive (e.g., when a modal system tool like Scratchwork is enabled). The thumb becomes gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>.</li>
 </ul>
 
 				</section>
@@ -1297,14 +1305,14 @@
 
 				
 					<section class="comment">
-						<p>Static tick marks are gray <code>#BFBFBF</code>, are 2px wide, and extend below the bottom of the slider track.</p>
+						<p>Static tick marks are gray <span class="no-wrap"><code>#BFBFBF</code> <span class="callout-swatch" style="background-color:#BFBFBF"></span></span>, are 2px wide, and extend below the bottom of the slider track.</p>
 <h3>Snappable Tick Marks</h3>
 <p>Snappable tick marks cause the slider image to change when the thumb snaps to or passes over them. In addition to a line extending below the slider track, snappable tick marks have a dot inside the slider track.</p>
 <p>Snappable tick marks have the following states.</p>
 <ul>
-<li><em>Default</em>. The dot and line are both gray (<code>#949494</code> and <code>#BFBFBF</code>, respectively).</li>
+<li><em>Default</em>. The dot and line are both gray (<span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> and <span class="no-wrap"><code>#BFBFBF</code> <span class="callout-swatch" style="background-color:#BFBFBF"></span></span>, respectively).</li>
 <li><em>Active</em>. Visible when the slider thumb is being dragged. The dot darkens.</li>
-<li><em>Selected</em>. Visible when the slider thumb would snap to the tick mark if released. The dot enlarges and becomes blue <code>#0084FF</code>, and the line darkens.</li>
+<li><em>Selected</em>. Visible when the slider thumb would snap to the tick mark if released. The dot enlarges and becomes blue <span class="no-wrap"><code>#0084FF</code> <span class="callout-swatch" style="background-color:#0084FF"></span></span>, and the line darkens.</li>
 <li><em>Disabled</em>. Visible when the tick mark is inactive (e.g., when a modal system tool like Scratchwork is enabled). The dot disappears, but the line remains visible.</li>
 </ul>
 
@@ -1358,7 +1366,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\stim-slider.css","line":0,"codeLine":7,"type":"stylesheet","description":"The slider stimulus allows test takers to view a series of related images (e.g., an interactive timeline map) by using a slider to switch between images.","name":"stim-slider.css","title":"Slider","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\stim-slider.css","line":0,"codeLine":12,"type":"stylesheet","description":"The slider stimulus allows test takers to view a series of related images (e.g., an interactive timeline map) by using a slider to switch between images.","name":"stim-slider.css","title":"Slider","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

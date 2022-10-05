@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Ruler </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1231,8 +1237,10 @@
 
 		
 		<section class="comment">
-			<div class='iframe_wrapper' data-iframe-src='ux/demos/stim-ruler/stim-ruler.html' data-iframe-height='480'></div>
-<p>A gray <code>#949494</code> border indicates the area in which the ruler can be dragged.</p>
+			<p>The following demo presents the on screen ruler with its associated rotate-left, move, and rotate-right icons.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/stim-ruler/stim-ruler.html' data-iframe-height='480'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
+<p>A gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> border indicates the area in which the ruler can be dragged.</p>
 <p>A <strong>Reset</strong> button, styled as a small secondary filled button (see the <a href="buttons.css.html">Buttons</a> page for more information), is provided at the upper-right corner of the draggable area. Selecting the button restores the ruler to its initial position and orientation.</p>
 
 		</section>
@@ -1247,14 +1255,14 @@
 
 				
 				<section class="description">
-					<p>The ruler has a gray <code>#D3D3D3</code> background and black <code>#000000</code> tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.</p>
+					<p>The ruler has a gray <span class="no-wrap"><code>#D3D3D3</code> <span class="callout-swatch" style="background-color:#D3D3D3"></span></span> background and black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> tick marks and tick labels. Major tick marks are 2px wide; minor tick marks are 1px wide.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<p>The cursor is set to <code>move</code> when positioned over the ruler to indicate that it can be moved via dragging.</p>
+						<p>The cursor is set to <code>move</code> <span class="icon-move"></span> when positioned over the ruler to indicate that it can be moved via dragging.</p>
 
 					</section>
 					
@@ -1273,8 +1281,8 @@
 
 				
 					<section class="comment">
-						<p>The drag handle has the <code>move</code> icon (as specified on the <a href="icons.css.html">Icons</a> page), and the cursor is set to <code>move</code>.</p>
-<p>The rotation handles have the <code>rotate-left</code> and <code>rotate-right</code> icons, and the cursor is set to <code>ns-resize</code>.</p>
+						<p>The drag handle has the <code>move</code> <span class="icon-move"></span> icon (as specified on the <a href="icons.css.html">Icons</a> page), and the cursor is set to <code>move</code> <span class="icon-move"></span>.</p>
+<p>The rotation handles have the <code>rotate-left</code> <span class="icon-rotate-left"></span> and <code>rotate-right</code> <span class="icon-rotate-right"></span> icons, and the cursor is set to <code>ns-resize</code>.</p>
 
 					</section>
 					
@@ -1307,7 +1315,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\stim-ruler.css","line":0,"codeLine":13,"type":"stylesheet","description":"The ruler stimulus allows test takers to move and rotate an on-screen ruler to measure a virtual object.","name":"stim-ruler.css","title":"Ruler","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\stim-ruler.css","line":0,"codeLine":17,"type":"stylesheet","description":"The ruler stimulus allows test takers to move and rotate an on-screen ruler to measure a virtual object.","name":"stim-ruler.css","title":"Ruler","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

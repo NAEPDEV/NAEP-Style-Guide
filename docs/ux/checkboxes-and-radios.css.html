@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Checkboxes &amp; Radios </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1231,7 +1237,9 @@
 
 		
 		<section class="comment">
-			<div class='iframe_wrapper' data-iframe-src='ux/demos/checkboxes-and-radios/checkboxes-and-radios.html' data-iframe-height='430'></div>
+			<p>The following demo presents interactive examples of a checkbox group and a radio group.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/checkboxes-and-radios/checkboxes-and-radios.html' data-iframe-height='430'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1245,7 +1253,7 @@
 
 				
 				<section class="description">
-					<p>Both checkboxes and radios are typically black <code>#000000</code> and receive the <code>pointer</code> cursor in the default state and the <code>default</code> cursor in the disabled state.</p>
+					<p>Both checkboxes and radios are typically black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> and receive the <code>pointer</code> cursor in the default state and the <code>default</code> cursor in the disabled state.</p>
 
 				</section>
 				
@@ -1265,8 +1273,8 @@
 				<section class="description">
 					<p>Checkboxes allow test takers to toggle individual options on and off; multiple checkboxes in a set can be checked at the same time. Checkboxes have the following states.</p>
 <ul>
-<li><em>Unchecked</em>. Checkbox displays as the <code>checkbox-unselected</code> icon.</li>
-<li><em>Checked</em>. Checkbox displays as the <code>checkbox-selected</code> icon. Check is white <code>#FFFFFF</code>.</li>
+<li><em>Unchecked</em>. Checkbox displays as the <code>checkbox-unselected</code> <span class="icon-checkbox-unselected"></span> icon.</li>
+<li><em>Checked</em>. Checkbox displays as the <code>checkbox-selected</code> <span class="icon-checkbox-selected"></span> icon. Check is white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.</li>
 <li><em>Disabled</em>. Checkbox becomes 30% opaque.</li>
 </ul>
 
@@ -1288,8 +1296,8 @@
 				<section class="description">
 					<p>Radios allow test takers to select one option from a set; only one radio in a set can be checked at a time. Radios have the following states.</p>
 <ul>
-<li><em>Unchecked</em>. Radio displays as the <code>radio-unselected</code> icon.</li>
-<li><em>Checked</em>. Radio displays as the <code>radio-selected</code> icon.</li>
+<li><em>Unchecked</em>. Radio displays as the <code>radio-unselected</code> <span class="icon-radio-unselected"></span> icon.</li>
+<li><em>Checked</em>. Radio displays as the <code>radio-selected</code> <span class="icon-radio-selected"></span> icon.</li>
 <li><em>Disabled</em>. Radio becomes 30% opaque.</li>
 </ul>
 
@@ -1330,7 +1338,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Checkboxes and radios are used to indicate selections (e.g., in the [response-type-mc.css] response type).","name":"checkboxes-and-radios.css","title":"Checkboxes & Radios","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\checkboxes-and-radios.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Checkboxes and radios are used to indicate selections (e.g., in the [response-type-mc.css] response type).","name":"checkboxes-and-radios.css","title":"Checkboxes & Radios","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.ui-elements","src":"ux\\checkboxes-and-radios.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

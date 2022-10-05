@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Non-modal Dialogs </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1239,8 +1245,8 @@
 </ul>
 <p>Non-modal dialogs have a <strong>Close</strong> button at their upper-right corner. They can also be closed by hitting Escape on the keyboard or by selecting the button that invoked them. <strong>Close</strong> buttons have the following states.</p>
 <ul>
-<li><em>Default</em>. Button consists of a dark gray <code>#333333</code> <code>cross-thin</code> icon.</li>
-<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to <code>#909090</code>.</li>
+<li><em>Default</em>. Button consists of a dark gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> <code>cross-thin</code> <span class="icon-cross-thin"></span> icon.</li>
+<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Icon lightens to <span class="no-wrap"><code>#909090</code> <span class="callout-swatch" style="background-color:#909090"></span></span>.</li>
 </ul>
 <p>Test takers can reposition non-modal dialogs by dragging any spot on the dialog other than the <strong>Close</strong> button.</p>
 <p>When a test taker navigates to the first screen on which a non-modal dialog is offered,</p>
@@ -1248,7 +1254,9 @@
 <li>The dialog automatically opens, and the test taker is given the opportunity to close it.</li>
 <li>The initial position of the dialog should avoid overlap with essential information in the main content area.</li>
 </ul>
+<p>The following demo presents a non-modal dialog that can be dragged throughout its container.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/dialogs/non-modals.html' data-iframe-height='450'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1281,7 +1289,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\dialogs.css","line":140,"codeLine":161,"type":"styles","description":"Non-modal dialogs allow test takers to interact with the main content area and the dialog simultaneously. This makes them useful for providing information that must be referenced across multiple screens, especially when it must be compared to information in the main content area. Currently, only SBTs use non-modal dialogs.","name":"1-dialogs-nonmodal","title":"Non-modal Dialogs","parent":"dialogs.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\dialogs.css","line":159,"codeLine":185,"type":"styles","description":"Non-modal dialogs allow test takers to interact with the main content area and the dialog simultaneously. This makes them useful for providing information that must be referenced across multiple screens, especially when it must be compared to information in the main content area. Currently, only SBTs use non-modal dialogs.","name":"1-dialogs-nonmodal","title":"Non-modal Dialogs","parent":"dialogs.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

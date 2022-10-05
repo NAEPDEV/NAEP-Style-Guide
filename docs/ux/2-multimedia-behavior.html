@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Behavior </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1224,10 +1230,10 @@
 <h3>Button behavior</h3>
 <p>Several buttons have toggle states.</p>
 <ul>
-<li>The <strong>Play/Pause</strong> button changes to a <code>pause</code> icon, and its tooltip changes to “Pause” while the media clip is playing.</li>
+<li>The <strong>Play/Pause</strong> button changes to a <code>pause</code> <span class="icon-pause"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.</li>
 <li>The <strong>Mute</strong> button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)</li>
-<li>The <strong>Closed caption</strong> button icon changes to the <code>cc-off</code> icon when closed captions are turned off.</li>
-<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
+<li>The <strong>Closed caption</strong> button icon changes to the <code>cc-off</code> <span class="icon-cc-off"></span> icon when closed captions are turned off.</li>
+<li>The <strong>Full screen</strong> button icon toggles between on and off states. Its icon changes to <code>fullscreen-exit</code> <span class="icon-fullscreen-exit"></span>, and its tooltip changes to “Exit full screen” when in full-screen mode.</li>
 </ul>
 <h3>Volume slider &amp; Mute button interactions</h3>
 <p>As with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for <a href="touch-targets.md.html">Touch Targets</a>.</p>
@@ -1246,9 +1252,9 @@
 		<section class="comment">
 			<p>The volume slider affects the <strong>Mute</strong> button in the following ways:</p>
 <ul>
-<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code>, and the tooltip changes to “Unmute.”</li>
-<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code>, and the tooltip changes to “Mute.”</li>
+<li>If the volume is set to &gt;50%, the <strong>Mute</strong> button is set to the full-volume state: the icon changes to <code>volume-up</code> <span class="icon-volume-up"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set from 1% to 50%, the <strong>Mute</strong> button is set to the half-volume state: the icon changes to <code>volume-down</code> <span class="icon-volume-down"></span>, and the tooltip changes to “Unmute.”</li>
+<li>If the volume is set to 0%, the <strong>Mute</strong> button is set to the muted state: the icon changes to <code>volume-mute</code> <span class="icon-volume-mute"></span>, and the tooltip changes to “Mute.”</li>
 </ul>
 <p>When the test taker mutes the audio via the <strong>Mute</strong> button, it remembers the previous volume level and restores it when the test taker selects <strong>Mute</strong> again.</p>
 <ul>
@@ -1268,6 +1274,7 @@
 <li>Multimedia clips must be viewed/listened to in their entirety before the test taker is allowed to progress to the next screen.</li>
 <li>Test takers are allowed to use the scrub bar, but only through the section of the clip that has already been viewed/heard.</li>
 </ul>
+<p>The following demos present the style and functional behavior of the multi-media controls for the video variant, audio variant, and select-in-stimulus variant.</p>
 
 		</section>
 		
@@ -1300,7 +1307,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"### Playback\nWhen the video reaches the end of its run time, it automatically pauses and resets to 0 seconds.\n### Scrub bar behavior\nClicking the scrub bar track or dragging the scrub bar thumb causes the video time to change to the position of the cursor. The scrub bar has an invisible touch target that is taller than the visible track (1.24x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].\n### Button behavior\nSeveral buttons have toggle states.\n* The __Play/Pause__ button changes to a `pause` icon, and its tooltip changes to “Pause” while the media clip is playing.\n* The __Mute__ button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)\n* The __Closed caption__ button icon changes to the `cc-off` icon when closed captions are turned off.\n* The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit`, and its tooltip changes to “Exit full screen” when in full-screen mode.\n### Volume slider & Mute button interactions\nAs with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].","name":"2-multimedia-behavior","title":"Behavior","type":"styles","parent":"multimedia-controls.css","hideInParentMenu":true,"src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"### Playback\nWhen the video reaches the end of its run time, it automatically pauses and resets to 0 seconds.\n### Scrub bar behavior\nClicking the scrub bar track or dragging the scrub bar thumb causes the video time to change to the position of the cursor. The scrub bar has an invisible touch target that is taller than the visible track (1.24x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].\n### Button behavior\nSeveral buttons have toggle states.\n* The __Play/Pause__ button changes to a `pause` <span class=\"icon-pause\"></span> icon, and its tooltip changes to “Pause” while the media clip is playing.\n* The __Mute__ button icon has three states: full-volume, half-volume, and muted. (Interaction with the volume slider is described below.)\n* The __Closed caption__ button icon changes to the `cc-off` <span class=\"icon-cc-off\"></span> icon when closed captions are turned off.\n* The __Full screen__ button icon toggles between on and off states. Its icon changes to `fullscreen-exit` <span class=\"icon-fullscreen-exit\"></span>, and its tooltip changes to “Exit full screen” when in full-screen mode.\n### Volume slider & Mute button interactions\nAs with the scrub bar, clicking the volume slider track or dragging the volume slider thumb causes the volume to change to the level associated with the position of the cursor. The volume slider has an invisible touch target that is taller than the visible track (1.325x the base font size) to ensure that it meets minimum size requirements for [touch-targets.md].","name":"2-multimedia-behavior","title":"Behavior","type":"styles","parent":"multimedia-controls.css","hideInParentMenu":true,"src":"ux\\multimedia-controls.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

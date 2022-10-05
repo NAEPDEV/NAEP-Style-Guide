@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Change Themes </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1236,7 +1242,7 @@
 <li><strong>Dark</strong>. Inverts the colors of the default theme to reduce brightness while retaining high contrast. UI components are darkened/lightened to align with the theme.</li>
 </ul>
 <p>Changing themes is a universal design feature, so all test takers can change the theme as they wish.</p>
-<p>Use the <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /><strong>Change Theme</strong> button at the top of the page to see how theming affects demo content throughout the UX section of the style guide.</p>
+<p>Use the <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /><strong>Change Theme</strong> button at the top of the page to see how theming affects demo content throughout the style guide.</p>
 <h2>Image Theming</h2>
 <p>Images are authored to be compliant with the <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast" target="_blank">WCAG 2.1 non-text contrast criterion</a> whenever content requirements allow, so theming images is not required to achieve an accessible contrast ratio. However, it is still desirable to theme images when possible so that they have a brightness similar to the rest of the screen.</p>
 <ul>
@@ -1250,17 +1256,18 @@
 </ul>
 <h2>Theming Tags</h2>
 <p>By default, eNAEP themes images based on file type. Images with the <code>.PNG</code> extension theme, while images with the <code>.JPG</code> extension do not. The characteristics of the two file types are beyond the scope of this guide, but the most salient difference is that <code>.PNG</code> files can have transparent backgrounds, while <code>.JPG</code> files cannot. This means that images without backgrounds theme by default in eNAEP.</p>
-<p>The demo below shows eNAEP’s default image theming behavior.</p>
-<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-default.html' data-iframe-height='230'></div>
-Note that, because it has a transparent background, the image of the otter themes even though theming causes a loss of visual information.
+<p>The following demo presents eNAEP's image theming behavior.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-default.html' data-iframe-height='230'></div><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span><br>
+<p>Note that, because it has a transparent background, the image of the otter themes even though theming causes a loss of visual information.</p>
 <p>To avoid such situations, images can be tagged with <code>theme</code> and <code>no-theme</code> to override the default theming behavior. The demos below show what the five images would look like with each tag. (Note that these demos show what theming behavior is <em>possible</em>, not necessarily what is <em>desirable</em>.)</p>
 <p>Tagged with <code>theme</code>:</p>
-<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-theme.html' data-iframe-height='230'></div>
-Tagged with `no-theme`:
-<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-no-theme.html' data-iframe-height='230'></div>
-Finally, the following demo shows the desired theming behavior for all images: the line art bicycle and the pie chart theme, while the photographs do not.
+<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-theme.html' data-iframe-height='230'></div><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span><br>
+<p>Tagged with <code>no-theme</code>:</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-no-theme.html' data-iframe-height='230'></div><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span><br>
+<p>Finally, the following demo shows the desired theming behavior for all images: the line art bicycle and the pie chart theme, while the photographs do not.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/color-themes/color-themes-desired.html' data-iframe-height='230'></div>
-## Exceptions
+<span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span><br>
+<h2>Exceptions</h2>
 <p>The following elements do not theme.</p>
 <ul>
 <li>Video content</li>
@@ -1301,7 +1308,7 @@ Finally, the following demo shows the desired theming behavior for all images: t
 	
 
 	<script type="text/javascript">
-		var docObject = {"type":"page","name":"color-themes.md","src":"ux\\color-themes.md","description":"Test takers with atypical vision may prefer or need color schemes that would be less than ideal for typically sighted people. To support such test takers and to adhere to the <a href=\"https://www.w3.org/TR/WCAG21/#contrast-minimum\" target=\"_blank\">WCAG 2.1 minimum contrast criterion</a>, eNAEP can present content in three color themes.","title":"Change Themes","parent":"ux.features","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"type":"page","name":"color-themes.md","src":"ux\\color-themes.md","description":"Test takers with atypical vision may prefer or need color schemes that would be less than ideal for typically sighted people. To support such test takers and to adhere to the <a href=\"https://www.w3.org/TR/WCAG21/#contrast-minimum\" target=\"_blank\">WCAG 2.1 minimum contrast criterion</a>, eNAEP can present content in three color themes.","title":"Change Themes","parent":"ux.features","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

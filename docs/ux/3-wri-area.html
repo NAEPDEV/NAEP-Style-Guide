@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Writing Area </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>The writing area is where test takers compose their responses. It has a white <code>#FFFFFF</code> fill, a gray <code>#C9C9C9</code> border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5&quot;x11&quot; page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.</p>
+			<p>The writing area is where test takers compose their responses. It has a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> fill, a gray <span class="no-wrap"><code>#C9C9C9</code> <span class="callout-swatch" style="background-color:#C9C9C9"></span></span> border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5&quot;x11&quot; page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.</p>
 
 		</section>
 		
@@ -1231,7 +1237,7 @@
 
 		
 		<section class="comment">
-			<p>The writing area is surrounded by a background with a gray gradient (<code>#E0E0E0</code> to <code>#CCCCCC</code>) to differentiate it from the editor toolbar.</p>
+			<p>The writing area is surrounded by a background with a gray gradient (<span class="no-wrap"><code>#E0E0E0</code> <span class="callout-swatch" style="background-color:#E0E0E0"></span></span> to <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span>) to differentiate it from the editor toolbar.</p>
 <p>As the test taker scrolls down in longer responses, a drop shadow fades in below the editor toolbar to better differentiate the white writing area from the light gray toolbar.</p>
 <p>At higher zoom levels, the writing area’s size increases, causing scrollbars to appear around it, as specified on the <a href="navigation.css.html">Navigation</a> page. (The scroll indicator does not appear since the writing area contains the test taker’s response.)</p>
 
@@ -1266,7 +1272,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\writing-editor.css","line":572,"codeLine":582,"type":"styles","description":"The writing area is where test takers compose their responses. It has a white `#FFFFFF` fill, a gray `#C9C9C9` border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5\"x11\" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.","name":"3-wri-area","title":"Writing Area","parent":"writing-editor.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\writing-editor.css","line":626,"codeLine":636,"type":"styles","description":"The writing area is where test takers compose their responses. It has a white <span class=\"no-wrap\">`#FFFFFF` <span class=\"callout-swatch\" style=\"background-color:#FFFFFF\"></span></span> fill, a gray <span class=\"no-wrap\">`#C9C9C9` <span class=\"callout-swatch\" style=\"background-color:#C9C9C9\"></span></span> border, and a subtle drop shadow. Like the editor toolbar and the dialogs, it is set in the Arial typeface. Both its margins and its initial height and width are set such that a test taker can type the approximate amount of text that would fit on an 8.5\"x11\" page set in 12pt Arial. If the test taker types more than will fit in that space, the writing area grows vertically to accommodate the additional text.","name":"3-wri-area","title":"Writing Area","parent":"writing-editor.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

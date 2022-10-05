@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Option States </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1219,9 +1225,9 @@
 		<section class="description">
 			<p>Multiple-choice options have the following states. Colors match those of the <a href="response-type-grid.css.html">Grid</a> response type.</p>
 <ul>
-<li><em>Default</em>. Options are surrounded by a light gray <code>#CCCCCC</code> border. The option label (if present) and selection indicator are on a light blue <code>#D6EBFF</code> background.</li>
-<li><em>Hover</em>. Visible when the cursor is over the option in its default state. Border becomes blue <code>#7FBFFF</code>, and the <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. The border color changes to a bright blue <code>#198CFF</code>, and the selection state of the radio button/checkbox is toggled.</li>
+<li><em>Default</em>. Options are surrounded by a light gray <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border. The option label (if present) and selection indicator are on a light blue <span class="no-wrap"><code>#D6EBFF</code> <span class="callout-swatch" style="background-color:#D6EBFF"></span></span> background.</li>
+<li><em>Hover</em>. Visible when the cursor is over the option in its default state. Border becomes blue <span class="no-wrap"><code>#7FBFFF</code> <span class="callout-swatch" style="background-color:#7FBFFF"></span></span>, and the <code>pointer</code> cursor is shown.</li>
+<li><em>Selected</em>. The border color changes to a bright blue <span class="no-wrap"><code>#198CFF</code> <span class="callout-swatch" style="background-color:#198CFF"></span></span>, and the selection state of the radio button/checkbox is toggled.</li>
 <li><em>Eliminated</em>. Invoked by the <strong>Eliminate Choice</strong> button. The option label (if present), selection indicator, and content are dimmed to reduce their salience.</li>
 <li><em>Disabled</em>.  Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option label (if present), selection indicator, and <strong>Eliminate Choice</strong> button are dimmed to indicate that they are inactive.</li>
 </ul>
@@ -1270,7 +1276,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Multiple-choice options have the following states. Colors match those of the [response-type-grid.css] response type.\n* _Default_. Options are surrounded by a light gray `#CCCCCC` border. The option label (if present) and selection indicator are on a light blue `#D6EBFF` background.\n* _Hover_. Visible when the cursor is over the option in its default state. Border becomes blue `#7FBFFF`, and the `pointer` cursor is shown.\n* _Selected_. The border color changes to a bright blue `#198CFF`, and the selection state of the radio button/checkbox is toggled.\n* _Eliminated_. Invoked by the __Eliminate Choice__ button. The option label (if present), selection indicator, and content are dimmed to reduce their salience.\n* _Disabled_.  Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option label (if present), selection indicator, and __Eliminate Choice__ button are dimmed to indicate that they are inactive.","name":"1-mc-option-states","title":"Option States","type":"styles","parent":"response-type-mc.css","hideInParentMenu":true,"src":"ux\\response-type-mc.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Multiple-choice options have the following states. Colors match those of the [response-type-grid.css] response type.\n* _Default_. Options are surrounded by a light gray <span class=\"no-wrap\">`#CCCCCC` <span class=\"callout-swatch\" style=\"background-color:#CCCCCC\"></span></span> border. The option label (if present) and selection indicator are on a light blue <span class=\"no-wrap\">`#D6EBFF` <span class=\"callout-swatch\" style=\"background-color:#D6EBFF\"></span></span> background.\n* _Hover_. Visible when the cursor is over the option in its default state. Border becomes blue <span class=\"no-wrap\">`#7FBFFF` <span class=\"callout-swatch\" style=\"background-color:#7FBFFF\"></span></span>, and the `pointer` cursor is shown.\n* _Selected_. The border color changes to a bright blue <span class=\"no-wrap\">`#198CFF` <span class=\"callout-swatch\" style=\"background-color:#198CFF\"></span></span>, and the selection state of the radio button/checkbox is toggled.\n* _Eliminated_. Invoked by the __Eliminate Choice__ button. The option label (if present), selection indicator, and content are dimmed to reduce their salience.\n* _Disabled_.  Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). The option label (if present), selection indicator, and __Eliminate Choice__ button are dimmed to indicate that they are inactive.","name":"1-mc-option-states","title":"Option States","type":"styles","parent":"response-type-mc.css","hideInParentMenu":true,"src":"ux\\response-type-mc.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Box Plots </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1219,10 +1225,10 @@
 		<section class="description">
 			<p>Box plots have the following states.</p>
 <ul>
-<li><em>Default</em>. Box has a light blue <code>#B8E2FF</code> fill and dark gray <code>#333333</code> borders. Whiskers are the same shade of gray.</li>
-<li><em>Hover</em>. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <code>#72C1F7</code>, and borders and whiskers become black <code>#000000</code>. The <code>move</code> cursor is shown.</li>
+<li><em>Default</em>. Box has a light blue <span class="no-wrap"><code>#B8E2FF</code> <span class="callout-swatch" style="background-color:#B8E2FF"></span></span> fill and dark gray <span class="no-wrap"><code>#333333</code> <span class="callout-swatch" style="background-color:#333333"></span></span> borders. Whiskers are the same shade of gray.</li>
+<li><em>Hover</em>. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <span class="no-wrap"><code>#72C1F7</code> <span class="callout-swatch" style="background-color:#72C1F7"></span></span>, and borders and whiskers become black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span>. The <code>move</code> cursor is shown.</li>
 <li><em>Active</em>. Visible while the box plot is being dragged. Borders and whiskers thicken.</li>
-<li><em>Disabled</em>. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <code>#949494</code>, and borders and whiskers become dark gray <code>#484848</code>.</li>
+<li><em>Disabled</em>. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>, and borders and whiskers become dark gray <span class="no-wrap"><code>#484848</code> <span class="callout-swatch" style="background-color:#484848"></span></span>.</li>
 </ul>
 
 		</section>
@@ -1269,7 +1275,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-box-whisker.css","line":76,"codeLine":85,"type":"styles","description":"Box plots have the following states.\n* _Default_. Box has a light blue `#B8E2FF` fill and dark gray `#333333` borders. Whiskers are the same shade of gray.\n* _Hover_. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to `#72C1F7`, and borders and whiskers become black `#000000`. The `move` cursor is shown.\n* _Active_. Visible while the box plot is being dragged. Borders and whiskers thicken.\n* _Disabled_. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray `#949494`, and borders and whiskers become dark gray `#484848`.","name":"2-bw-box-plots","title":"Box Plots","parent":"response-type-box-whisker.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-box-whisker.css","line":81,"codeLine":90,"type":"styles","description":"Box plots have the following states.\n* _Default_. Box has a light blue <span class=\"no-wrap\">`#B8E2FF` <span class=\"callout-swatch\" style=\"background-color:#B8E2FF\"></span></span> fill and dark gray <span class=\"no-wrap\">`#333333` <span class=\"callout-swatch\" style=\"background-color:#333333\"></span></span> borders. Whiskers are the same shade of gray.\n* _Hover_. Visible when the cursor is over the box plot (but not the sizing handles). Box fill darkens to <span class=\"no-wrap\">`#72C1F7` <span class=\"callout-swatch\" style=\"background-color:#72C1F7\"></span></span>, and borders and whiskers become black <span class=\"no-wrap\">`#000000` <span class=\"callout-swatch\" style=\"background-color:#000000\"></span></span>. The `move` cursor is shown.\n* _Active_. Visible while the box plot is being dragged. Borders and whiskers thicken.\n* _Disabled_. Visible when the box plot is inactive (e.g., when a modal system tool like Scratchwork is enabled). Box fill becomes light gray <span class=\"no-wrap\">`#949494` <span class=\"callout-swatch\" style=\"background-color:#949494\"></span></span>, and borders and whiskers become dark gray <span class=\"no-wrap\">`#484848` <span class=\"callout-swatch\" style=\"background-color:#484848\"></span></span>.","name":"2-bw-box-plots","title":"Box Plots","parent":"response-type-box-whisker.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

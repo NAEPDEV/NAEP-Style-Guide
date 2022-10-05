@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Response Area </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>The response area appears below the directions box. The response area has rounded corners, a light gray <code>#F6F6F6</code> background, and a dark gray <code>#CCCCCC</code> border.</p>
+			<p>The response area appears below the directions box. The response area has rounded corners, a light gray <span class="no-wrap"><code>#F6F6F6</code> <span class="callout-swatch" style="background-color:#F6F6F6"></span></span> background, and a dark gray <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border.</p>
 
 		</section>
 		
@@ -1233,12 +1239,12 @@
 		<section class="comment">
 			<p>As the test taker makes selections, they appear in the response area, each in its own selection container. When no selections have been made, the response area contains the text, “Your choice[s] will appear here.”</p>
 <h3>Selection Containers</h3>
-<p>Each selection container has rounded corners, a gray <code>#6C6C6C</code> border, and a drop shadow.</p>
+<p>Each selection container has rounded corners, a gray <span class="no-wrap"><code>#6C6C6C</code> <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border, and a drop shadow.</p>
 <p>A <strong>Close</strong> button is provided at the upper right that allows the test taker to remove the selection. (Test takers can also remove a selection by tapping it again in the stimulus.) Selection containers always have the same width but can have varying heights based on the size of the content they contain.</p>
 <h3>Response Area Columns</h3>
 <p>Selection containers can be presented in the response area in one or two columns. Items with only text selections are typically presented in one column, while items with media selections or a mix of selections are typically presented in two columns. (In scenario-based tasks, consistency of presentation across the task is prioritized, so if one SIS item must be presented in two columns, all other SIS items are as well.)</p>
 <h3>Selection Placeholders</h3>
-<p>A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white <code>#FFFFFF</code> background, and a dashed gray <code>#6C6C6C</code> border. Placeholders disappear as selections are made and reappear as selections are removed.</p>
+<p>A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, and a dashed gray <span class="no-wrap"><code>#6C6C6C</code> <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border. Placeholders disappear as selections are made and reappear as selections are removed.</p>
 <p>The presence of placeholders affects the order in which selections appear:</p>
 <ul>
 <li>When placeholders are present, new selections populate after existing selections.</li>
@@ -1276,7 +1282,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-sis.css","line":302,"codeLine":323,"type":"styles","description":"The response area appears below the directions box. The response area has rounded corners, a light gray `#F6F6F6` background, and a dark gray `#CCCCCC` border.","name":"4-sis-response-area","title":"Response Area","parent":"response-type-sis.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-sis.css","line":305,"codeLine":326,"type":"styles","description":"The response area appears below the directions box. The response area has rounded corners, a light gray <span class=\"no-wrap\">`#F6F6F6` <span class=\"callout-swatch\" style=\"background-color:#F6F6F6\"></span></span> background, and a dark gray <span class=\"no-wrap\">`#CCCCCC` <span class=\"callout-swatch\" style=\"background-color:#CCCCCC\"></span></span> border.","name":"4-sis-response-area","title":"Response Area","parent":"response-type-sis.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

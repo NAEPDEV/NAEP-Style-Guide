@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Pre-populated </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <code>#767676</code>. Pre-populated polygons have a gray <code>#383838</code> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <code>#949494</code> to differentiate them from disabled interactive objects.</p>
+			<p>Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <span class="no-wrap"><code>#767676</code> <span class="callout-swatch" style="background-color:#767676"></span></span>. Pre-populated polygons have a gray <span class="no-wrap"><code>#383838</code> <span class="callout-swatch" style="background-color:#383838"></span></span> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> to differentiate them from disabled interactive objects.</p>
 
 		</section>
 		
@@ -1231,7 +1237,9 @@
 
 		
 		<section class="comment">
-			<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/prepopulated.html' data-iframe-height='260'></div>
+			<p>The following demo is an example of Pre-Populated Line Segment and Polygon.</p>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/points-lines-polygons/prepopulated.html' data-iframe-height='260'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1264,7 +1272,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\points-lines-polygons.css","line":26,"codeLine":32,"type":"styles","description":"Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray `#767676`. Pre-populated polygons have a gray `#383838` fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to `#949494` to differentiate them from disabled interactive objects.","name":"3-plp-prepopulated","title":"Pre-populated","parent":"points-lines-polygons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\points-lines-polygons.css","line":31,"codeLine":42,"type":"styles","description":"Depending on the measurement goals of a given item, a pre-populated object may be provided. Test takers cannot move, drag, or otherwise manipulate a pre-populated object. Pre-populated points and lines are gray <span class=\"no-wrap\">`#767676` <span class=\"callout-swatch\" style=\"background-color:#767676\"></span></span>. Pre-populated polygons have a gray <span class=\"no-wrap\">`#383838` <span class=\"callout-swatch\" style=\"background-color:#383838\"></span></span> fill at 20% opacity. When a modal system tool (e.g., Scratchwork) is active, pre-populated objects lighten to <span class=\"no-wrap\">`#949494` <span class=\"callout-swatch\" style=\"background-color:#949494\"></span></span> to differentiate them from disabled interactive objects.","name":"3-plp-prepopulated","title":"Pre-populated","parent":"points-lines-polygons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

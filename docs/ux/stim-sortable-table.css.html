@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Sortable Table </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1216,7 +1222,7 @@
 
 		
 		<section class="description">
-			<p>A sortable table stimulus allows test takers to sort data presented in a stimulus table. (See the Stimulus Tables page in the <a href="../media/index.html">Media</a> section for more information.)</p>
+			<p>A sortable table stimulus allows test takers to sort data presented in a stimulus table.</p>
 
 		</section>
 		
@@ -1231,13 +1237,15 @@
 		
 		<section class="comment">
 			<p>Sortable tables are currently used only in SBTs.</p>
+<p>The following demo presents a sortable table that can be sorted by ascending and descending order via pressing the column headers.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/stim-sortable-table/stim-sortable-table.html' data-iframe-height='370'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <p>When selected, each column header will reorder the table’s rows based on the data in the column, starting with ascending order. With successive selections, the table sort order will toggle between descending and ascending order.</p>
 <p>Sortable tables have the same styling as static stimulus tables, except for the column header cells, which have the following states.</p>
 <ul>
-<li><em>Default</em>. Visible when the header cell isn’t controlling the table’s sort order. The <code>sort-default</code> icon is displayed at the header cell’s right side.</li>
-<li><em>Sort Ascending</em>. Displayed when the table is sorted such that the values in the associated column are in ascending order. The <code>sort-ascending</code> icon is displayed.</li>
-<li><em>Sort Descending</em>. Displayed when the table is sorted such that the values in the associated column are in descending order. The <code>sort-descending</code> icon is displayed.</li>
+<li><em>Default</em>. Visible when the header cell isn’t controlling the table’s sort order. The <code>sort-default</code> <span class="icon-sort-default"></span> icon is displayed at the header cell’s right side.</li>
+<li><em>Sort Ascending</em>. Displayed when the table is sorted such that the values in the associated column are in ascending order. The <code>sort-ascending</code> <span class="icon-sort-ascending"></span> icon is displayed.</li>
+<li><em>Sort Descending</em>. Displayed when the table is sorted such that the values in the associated column are in descending order. The <code>sort-descending</code> <span class="icon-sort-descending"></span> icon is displayed.</li>
 <li><em>Hover</em>. Visible when the cursor is over the header cell. The cell background darkens, and the <code>pointer</code> cursor is shown.</li>
 <li><em>Disabled</em>. Visible when the header cell is inactive (e.g., when a modal system tool like Scratchwork is enabled). The icon opacity reduces to 30%.</li>
 </ul>
@@ -1275,7 +1283,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\stim-sortable-table.css","line":0,"codeLine":19,"type":"stylesheet","description":"A sortable table stimulus allows test takers to sort data presented in a stimulus table. (See the Stimulus Tables page in the [Media](../media/index.html) section for more information.)","name":"stim-sortable-table.css","title":"Sortable Table","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\stim-sortable-table.css","line":0,"codeLine":23,"type":"stylesheet","description":"A sortable table stimulus allows test takers to sort data presented in a stimulus table.","name":"stim-sortable-table.css","title":"Sortable Table","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.stimuli","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

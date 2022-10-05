@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Navigation </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1243,12 +1249,12 @@
 <li>If the transition is between two cards of different sizes, the current card fades out, the wizard resizes, and then the new card fades in.</li>
 </ul>
 <h3>Navigation Buttons</h3>
-<p>The wizard <strong>Next</strong> and <strong>Back</strong> buttons appear, respectively, at the bottom right and bottom left corners of the wizard. The buttons are styled similarly to the <a href="system-toolbar.css.html">System Toolbar</a> navigational buttons, except that the wizard <strong>Next</strong> button label is smaller and the button background is a more saturated blue <code>#0068D1</code>.</p>
+<p>The wizard <strong>Next</strong> and <strong>Back</strong> buttons appear, respectively, at the bottom right and bottom left corners of the wizard. The buttons are styled similarly to the <a href="system-toolbar.css.html">System Toolbar</a> navigational buttons, except that the wizard <strong>Next</strong> button label is smaller and the button background is a more saturated blue <span class="no-wrap"><code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span></span>.</p>
 <p>On the first card in the wizard, the <strong>Back</strong> button is hidden. On the last card in the wizard, the <strong>Next</strong> button’s label changes to indicate what will happen when the test taker closes the wizard (e.g., “Start the task”).</p>
 <h3>Navigation Dots</h3>
 <p>The navigation dot array is horizontally centered at the bottom of the wizard. One navigation dot appears for each card in the wizard. Dots have the following states.</p>
 <ul>
-<li><em>Default</em>. Dot is gray <code>#949494</code>.</li>
+<li><em>Default</em>. Dot is gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>.</li>
 <li><em>Active</em>. Visible when the card associated with the dot is on screen. Dot darkens.</li>
 </ul>
 
@@ -1283,7 +1289,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\wizard.css","line":183,"codeLine":205,"type":"styles","description":"Wizards have their own navigational system composed of:\n* A series of screens, or _cards_\n* Navigation buttons (__Back__ and __Next__)\n* A series of dots indicating the test taker’s current position in the wizard","name":"1-wizard-nav","title":"Navigation","parent":"wizards.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\wizard.css","line":206,"codeLine":228,"type":"styles","description":"Wizards have their own navigational system composed of:\n* A series of screens, or _cards_\n* Navigation buttons (__Back__ and __Next__)\n* A series of dots indicating the test taker’s current position in the wizard","name":"1-wizard-nav","title":"Navigation","parent":"wizards.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

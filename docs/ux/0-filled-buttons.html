@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Filled Buttons </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1223,7 +1229,7 @@
 <li><em>Default</em>. The default state.</li>
 <li><em>Hover</em>. Visible when the cursor is over the button. Button color is lightened, and a drop shadow is added.</li>
 <li><em>Active</em>. Visible when the test taker presses down on the button. Button color is darkened and the drop shadow is removed.</li>
-<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray <code>#E5E5E5</code>, button text becomes dark gray <code>#909090</code>, and the drop shadow is removed.</li>
+<li><em>Disabled</em>. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray <span class="no-wrap"><code>#E5E5E5</code> <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>, button text becomes dark gray <span class="no-wrap"><code>#909090</code> <span class="callout-swatch" style="background-color:#909090"></span></span>, and the drop shadow is removed.</li>
 </ul>
 
 		</section>
@@ -1239,18 +1245,21 @@
 		
 		<section class="comment">
 			<div class='iframe_wrapper' data-iframe-src='ux/demos/buttons/filled-button-states.html' data-iframe-height='100'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <h3>Shapes</h3>
 <p>Filled buttons can be rectangular (when they contain text, or text and an icon) or circular (when they contain only an icon).</p>
 <h3>Sizes</h3>
 <p>Both rectangular and circular buttons come in default and small sizes. The small size is used to support the hierarchy or when space constraints prevent the default size.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/buttons/filled-button-variants.html' data-iframe-height='200'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <h3>Hierarchy</h3>
 <p>Filled buttons vary in color depending on the type of action they trigger:</p>
 <ul>
-<li>A blue <code>#0068D1</code> background is used for buttons that trigger the primary action on the current screen (e.g., the <strong>Go on to next section</strong> button).</li>
-<li>A ghost button with a gray <code>#949494</code> border and blue <code>#0855B2</code> text is used for secondary actions (e.g., <strong>Clear Answer</strong> buttons in selected-response items).</li>
+<li>A blue <span class="no-wrap"><code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span></span> background is used for buttons that trigger the primary action on the current screen (e.g., the <strong>Go on to next section</strong> button).</li>
+<li>A ghost button with a gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span> border and blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span> text is used for secondary actions (e.g., <strong>Clear Answer</strong> buttons in selected-response items).</li>
 </ul>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/buttons/button-colors.html' data-iframe-height='95'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1283,7 +1292,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\buttons.css","line":13,"codeLine":40,"type":"styles","description":"### States\nFilled buttons have the following states.\n* _Default_. The default state.\n* _Hover_. Visible when the cursor is over the button. Button color is lightened, and a drop shadow is added.\n* _Active_. Visible when the test taker presses down on the button. Button color is darkened and the drop shadow is removed.\n* _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray `#E5E5E5`, button text becomes dark gray `#909090`, and the drop shadow is removed.","name":"0-filled-buttons","title":"Filled Buttons","parent":"buttons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\buttons.css","line":18,"codeLine":54,"type":"styles","description":"### States\nFilled buttons have the following states.\n* _Default_. The default state.\n* _Hover_. Visible when the cursor is over the button. Button color is lightened, and a drop shadow is added.\n* _Active_. Visible when the test taker presses down on the button. Button color is darkened and the drop shadow is removed.\n* _Disabled_. Visible when the button is inactive (e.g., when a modal system tool like Scratchwork is enabled). Button color changes to light gray <span class=\"no-wrap\">`#E5E5E5` <span class=\"callout-swatch\" style=\"background-color:#E5E5E5\"></span></span>, button text becomes dark gray <span class=\"no-wrap\">`#909090` <span class=\"callout-swatch\" style=\"background-color:#909090\"></span></span>, and the drop shadow is removed.","name":"0-filled-buttons","title":"Filled Buttons","parent":"buttons.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

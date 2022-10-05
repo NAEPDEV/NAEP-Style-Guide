@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Select-in-stimulus </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1265,7 +1271,7 @@ In the single-select variant, if a test taker attempts to make a second selectio
 
 				
 				<section class="description">
-					<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-text-ms-full.html" target="_blank">here</a>.</em></p>
+					<p>The following demo presents a select-in-stimulus response type.</p>
 
 				</section>
 				
@@ -1273,17 +1279,18 @@ In the single-select variant, if a test taker attempts to make a second selectio
 				
 					<section class="comment">
 						<div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-sis/response-type-sis-text-ms.html' data-iframe-height='700'></div>
-Text selections are indicated in a stimulus by a background of varying shades of green, depending on the selection’s state. When selections are adjacent (i.e., when selections are words, phrases, or sentences), there must be one space character between the selections to visually differentiate them. A hairline margin should also appear between lines of selected text (achievable by adjusting the line height).
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-text-ms-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
+<p>Text selections are indicated in a stimulus by a background of varying shades of green, depending on the selection’s state. When selections are adjacent (i.e., when selections are words, phrases, or sentences), there must be one space character between the selections to visually differentiate them. A hairline margin should also appear between lines of selected text (achievable by adjusting the line height).</p>
 <p>Text selections in stimuli have the following states.</p>
 <ul>
 <li><em>Inactive</em>. Visible when the item to which the selection belongs is NOT on screen and/or when a modal system tool (e.g., Scratchwork) is enabled. The selection has the styling of the surrounding passage.</li>
-<li><em>Active</em>. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent <code>rgba(0,0,0,0.4)</code> border and a light green <code>#D1F7D3</code> background.</li>
-<li><em>Hover</em>. Visible when the cursor is over the text selection. The selection has the same border and a darker green <code>#5ABF5D</code> background. The <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. The selection has no border, a dark green <code>#0E8812</code> background, and the text color is white <code>#FFFFFF</code>.</li>
+<li><em>Active</em>. Visible when the item to which the selection belongs is on screen. The selection has a dashed, semi-transparent <code>rgba(0,0,0,0.4)</code> <span class="callout-swatch" style="background-color:rgba(0,0,0,0.4)"></span> border and a light green <span class="no-wrap"><code>#D1F7D3</code> <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background.</li>
+<li><em>Hover</em>. Visible when the cursor is over the text selection. The selection has the same border and a darker green <span class="no-wrap"><code>#5ABF5D</code> <span class="callout-swatch" style="background-color:#5ABF5D"></span></span> background. The <code>pointer</code> cursor is shown.</li>
+<li><em>Selected</em>. The selection has no border, a dark green <span class="no-wrap"><code>#0E8812</code> <span class="callout-swatch" style="background-color:#0E8812"></span></span> background, and the text color is white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>.</li>
 </ul>
 <h3>In the response area</h3>
-<p>Once a text selection has been chosen, it appears in the response area (see below). Text selections in the response area have the same green <code>#0E8812</code> background and white <code>#FFFFFF</code> text as in the stimulus to ensure visual continuity. To avoid mixing multiple typographical styles, all text selections in the response area are displayed at a standardized size in the Calibri typeface.</p>
-<p>When presented in a two-column response area, long text selections are truncated to avoid obscuring selection containers that appear below. A gradient helps convey the truncation, and a dark green <code>#0A3C0D</code> <strong>See more</strong> button is provided at the lower left of the selection container. Pressing the <strong>See more</strong> button allows the test taker to see the full selection, and changes the button label to “See less.” Pressing the button again returns the selection container to its default truncated state.</p>
+<p>Once a text selection has been chosen, it appears in the response area (see below). Text selections in the response area have the same green <span class="no-wrap"><code>#0E8812</code> <span class="callout-swatch" style="background-color:#0E8812"></span></span> background and white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text as in the stimulus to ensure visual continuity. To avoid mixing multiple typographical styles, all text selections in the response area are displayed at a standardized size in the Calibri typeface.</p>
+<p>When presented in a two-column response area, long text selections are truncated to avoid obscuring selection containers that appear below. A gradient helps convey the truncation, and a dark green <span class="no-wrap"><code>#0A3C0D</code> <span class="callout-swatch" style="background-color:#0A3C0D"></span></span> <strong>See more</strong> button is provided at the lower left of the selection container. Pressing the <strong>See more</strong> button allows the test taker to see the full selection, and changes the button label to “See less.” Pressing the button again returns the selection container to its default truncated state.</p>
 
 					</section>
 					
@@ -1295,7 +1302,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 
 				
 				<section class="description">
-					<p>Because the select-in-stimulus interaction is likely to be novel to many test takers, directions are provided directly in the item. The directions box has rounded corners, a light green <code>#D1F7D3</code> background, and an icon representing the expected test taker action on the left side.</p>
+					<p>Because the select-in-stimulus interaction is likely to be novel to many test takers, directions are provided directly in the item. The directions box has rounded corners, a light green <span class="no-wrap"><code>#D1F7D3</code> <span class="callout-swatch" style="background-color:#D1F7D3"></span></span> background, and an icon representing the expected test taker action on the left side.</p>
 
 				</section>
 				
@@ -1315,7 +1322,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 
 				
 				<section class="description">
-					<p>The response area appears below the directions box. The response area has rounded corners, a light gray <code>#F6F6F6</code> background, and a dark gray <code>#CCCCCC</code> border.</p>
+					<p>The response area appears below the directions box. The response area has rounded corners, a light gray <span class="no-wrap"><code>#F6F6F6</code> <span class="callout-swatch" style="background-color:#F6F6F6"></span></span> background, and a dark gray <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span> border.</p>
 
 				</section>
 				
@@ -1324,12 +1331,12 @@ Text selections are indicated in a stimulus by a background of varying shades of
 					<section class="comment">
 						<p>As the test taker makes selections, they appear in the response area, each in its own selection container. When no selections have been made, the response area contains the text, “Your choice[s] will appear here.”</p>
 <h3>Selection Containers</h3>
-<p>Each selection container has rounded corners, a gray <code>#6C6C6C</code> border, and a drop shadow.</p>
+<p>Each selection container has rounded corners, a gray <span class="no-wrap"><code>#6C6C6C</code> <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border, and a drop shadow.</p>
 <p>A <strong>Close</strong> button is provided at the upper right that allows the test taker to remove the selection. (Test takers can also remove a selection by tapping it again in the stimulus.) Selection containers always have the same width but can have varying heights based on the size of the content they contain.</p>
 <h3>Response Area Columns</h3>
 <p>Selection containers can be presented in the response area in one or two columns. Items with only text selections are typically presented in one column, while items with media selections or a mix of selections are typically presented in two columns. (In scenario-based tasks, consistency of presentation across the task is prioritized, so if one SIS item must be presented in two columns, all other SIS items are as well.)</p>
 <h3>Selection Placeholders</h3>
-<p>A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white <code>#FFFFFF</code> background, and a dashed gray <code>#6C6C6C</code> border. Placeholders disappear as selections are made and reappear as selections are removed.</p>
+<p>A test developer can elect to display placeholders based on the number of selections specified in the item stem. Placholders have rounded corners, a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> background, and a dashed gray <span class="no-wrap"><code>#6C6C6C</code> <span class="callout-swatch" style="background-color:#6C6C6C"></span></span> border. Placeholders disappear as selections are made and reappear as selections are removed.</p>
 <p>The presence of placeholders affects the order in which selections appear:</p>
 <ul>
 <li>When placeholders are present, new selections populate after existing selections.</li>
@@ -1346,14 +1353,14 @@ Text selections are indicated in a stimulus by a background of varying shades of
 
 				
 				<section class="description">
-					<p>In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
+					<p>The Assessment Specialist has the ability to define a maximum selection limit for multiple-select variants of SIS items. When a test taker attempts to select more options than the maximum number specified in the item stem an alert will appear. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
 
 				</section>
 				
 
 				
 					<section class="comment">
-						<p>The alert has a light yellow <code>#F8ECBD</code> background and a dark yellow <code>#E6CB90</code> border. A <code>warning</code> icon appears at its left side.</p>
+						<p>The alert has a light yellow <span class="no-wrap"><code>#F8ECBD</code> <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap"><code>#E6CB90</code> <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A <code>warning</code> <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon appears at its left side.</p>
 <p>If the test taker does not dismiss the alert via the <strong>Close</strong> button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.</p>
 
 					</section>
@@ -1366,7 +1373,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 
 				
 				<section class="description">
-					<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-multi-source-full.html" target="_blank">here</a>.</em></p>
+					<p>The following demo presents a select-in-stimulus response type with multiple sources.</p>
 
 				</section>
 				
@@ -1374,6 +1381,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 				
 					<section class="comment">
 						<div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-sis/response-type-sis-multi-source.html' data-iframe-height='630'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-sis/response-type-sis-multi-source-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <p>In SIS items that contain mutliple stimuli, stimuli are presented in a tabbed interface (see the <a href="navigation.css.html">Navigation</a>) page) on the left side of the screen.</p>
 <p>A source label is provided at the top of all selection containers to help test takers recall which stimulus each selection came from.</p>
 
@@ -1408,7 +1416,7 @@ Text selections are indicated in a stimulus by a background of varying shades of
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The select-in-stimulus (SIS) response type allows test takers to respond to an item by selecting sections of a video, audio clip, or text directly within a stimulus.","name":"response-type-sis.css","title":"Select-in-stimulus","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-sis.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The select-in-stimulus (SIS) response type allows test takers to respond to an item by selecting sections of a video, audio clip, or text directly within a stimulus.","name":"response-type-sis.css","title":"Select-in-stimulus","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-sis.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

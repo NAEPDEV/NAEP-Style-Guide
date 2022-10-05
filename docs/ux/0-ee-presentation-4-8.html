@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Presentation (Grades 4 &amp; 8) </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>The tab area has a thin top border (<code>#B6BDC3</code>) and a light blue gradient background. The button area has a dark gray <code>#373737</code> background.</p>
+			<p>The tab area has a thin top border (<span class="no-wrap"><code>#B6BDC3</code> <span class="callout-swatch" style="background-color:#B6BDC3"></span></span>) and a light blue gradient background. The button area has a dark gray <span class="no-wrap"><code>#373737</code> <span class="callout-swatch" style="background-color:#373737"></span></span> background.</p>
 
 		</section>
 		
@@ -1233,19 +1239,19 @@
 		<section class="comment">
 			<h3>Tab States</h3>
 <ul>
-<li><em>Default</em>. Tab has an off-white <code>#F2F2F2</code> background and a thin gray <code>#7C7C7C</code> border. Tab labels are dark gray <code>#373737</code>.</li>
+<li><em>Default</em>. Tab has an off-white <span class="no-wrap"><code>#F2F2F2</code> <span class="callout-swatch" style="background-color:#F2F2F2"></span></span> background and a thin gray <span class="no-wrap"><code>#7C7C7C</code> <span class="callout-swatch" style="background-color:#7C7C7C"></span></span> border. Tab labels are dark gray <span class="no-wrap"><code>#373737</code> <span class="callout-swatch" style="background-color:#373737"></span></span>.</li>
 <li><em>Hover</em>. The <code>pointer</code> cursor is shown.</li>
-<li><em>Selected</em>. Visible when the associated button area is on screen. Tab text changes to white <code>#FFFFFF</code>, and tab background changes to the same gray <code>#373737</code> as the button area. The <code>default</code> cursor is shown.</li>
-<li><em>Disabled</em>. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, and the label becomes gray <code>#CCCCCC</code>.</li>
+<li><em>Selected</em>. Visible when the associated button area is on screen. Tab text changes to white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and tab background changes to the same gray <span class="no-wrap"><code>#373737</code> <span class="callout-swatch" style="background-color:#373737"></span></span> as the button area. The <code>default</code> cursor is shown.</li>
+<li><em>Disabled</em>. Visible when all the symbol buttons for a given tab are disabled because the Equation Editor has been opened on a Numeric Entry item. Tab opacity is reduced to 50%, and the label becomes gray <span class="no-wrap"><code>#CCCCCC</code> <span class="callout-swatch" style="background-color:#CCCCCC"></span></span>.</li>
 </ul>
 <h3>Close Button States</h3>
 <ul>
-<li><em>Default</em>. Button has a blue gradient background, a white label, and a white <code>#FFFFFF</code> <code>down-arrow</code> icon surrounded by a dark blue <code>#255571</code> circle.</li>
+<li><em>Default</em>. Button has a blue gradient background, a white label, and a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> <code>down-arrow</code> <span class="icon-down-arrow"></span> icon surrounded by a dark blue <span class="no-wrap"><code>#255571</code> <span class="callout-swatch" style="background-color:#255571"></span></span> circle.</li>
 <li><em>Hover</em>. Button background darkens. The <code>pointer</code> cursor is shown.</li>
 </ul>
 <h3>Symbol Button States</h3>
 <ul>
-<li><em>Default</em>. Button background is white <code>#FFFFFF</code>, and button label is gray <code>#555555</code>.</li>
+<li><em>Default</em>. Button background is white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, and button label is gray <span class="no-wrap"><code>#555555</code> <span class="callout-swatch" style="background-color:#555555"></span></span>.</li>
 <li><em>Hover</em>. The <code>pointer</code> cursor is shown.</li>
 <li><em>Disabled</em>. Button opacity reduces to 30%.</li>
 </ul>
@@ -1282,7 +1288,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The tab area has a thin top border (`#B6BDC3`) and a light blue gradient background. The button area has a dark gray `#373737` background.","name":"0-ee-presentation-4-8","title":"Presentation (Grades 4 & 8)","type":"styles","parent":"equation-editor.css","hideInParentMenu":true,"src":"ux\\equation-editor.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The tab area has a thin top border (<span class=\"no-wrap\">`#B6BDC3` <span class=\"callout-swatch\" style=\"background-color:#B6BDC3\"></span></span>) and a light blue gradient background. The button area has a dark gray <span class=\"no-wrap\">`#373737` <span class=\"callout-swatch\" style=\"background-color:#373737\"></span></span> background.","name":"0-ee-presentation-4-8","title":"Presentation (Grades 4 & 8)","type":"styles","parent":"equation-editor.css","hideInParentMenu":true,"src":"ux\\equation-editor.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

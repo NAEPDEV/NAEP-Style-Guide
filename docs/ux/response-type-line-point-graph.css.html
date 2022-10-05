@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Line &amp; Point Graph </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>The Line &amp; Point Graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.</p>
+			<p>The line &amp; point graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.</p>
 
 		</section>
 		
@@ -1231,8 +1237,9 @@
 
 		
 		<section class="comment">
-			<p><em>Demo only reflects states and theming. Other functionality not present.</em></p>
+			<p>The following demo presents the line &amp; point graph response type. The demo has limited functionality for the purpose of showing its themes and styles.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-line-point-graph/response-type-line-point-graph.html' data-iframe-height='700'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1248,10 +1255,10 @@
 				<section class="description">
 					<p>The primary interactions for Line &amp; Point Graph responses occur in a coordinate grid (see the <a href="coordinate-grids.css.html">Coordinate Grids</a> page). Test takers may add various kinds of objects—points, lines, or line segments—depending on the measurement goals of the item. All objects have the same states and behaviors as interactive points and lines (see the <a href="points-lines-polygons.css.html">Points, Lines, Polygons</a> page), though they have different colors and point shapes to maximize visibility for color-blind test takers:</p>
 <ul>
-<li>The first object type is green <code>#008A05</code> and has triangular points.</li>
-<li>The second object type (if present) is blue <code>#0855B2</code> and has circular points.</li>
-<li>The third object type (if present) is purple <code>#50008A</code> and has diamond points.</li>
-<li>The fourth object type (if present) is orange <code>#C35500</code> and has square points.</li>
+<li>The first object type is green <span class="no-wrap"><code>#008A05</code> <span class="callout-swatch" style="background-color:#008A05"></span></span> and has triangular points.</li>
+<li>The second object type (if present) is blue <span class="no-wrap"><code>#0855B2</code> <span class="callout-swatch" style="background-color:#0855B2"></span></span> and has circular points.</li>
+<li>The third object type (if present) is purple <span class="no-wrap"><code>#50008A</code> <span class="callout-swatch" style="background-color:#50008A"></span></span> and has diamond points.</li>
+<li>The fourth object type (if present) is orange <span class="no-wrap"><code>#C35500</code> <span class="callout-swatch" style="background-color:#C35500"></span></span> and has square points.</li>
 </ul>
 
 				</section>
@@ -1259,8 +1266,8 @@
 
 				
 					<section class="comment">
-						<p>A label for each object type is also provided on the grid to further differentiate types. Label colors match those of their associated objects. Labels have a white <code>#FFFFFF</code> halo to ensure legibility.</p>
-<p>When there is more than one object type, the default disabled state is modified to maximize the differentiation between types: the first one to two types are a lighter gray <code>#949494</code>, while the last one to two types are a darker gray <code>#484848</code>.</p>
+						<p>A label for each object type is also provided on the grid to further differentiate types. Label colors match those of their associated objects. Labels have a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> halo to ensure legibility.</p>
+<p>When there is more than one object type, the default disabled state is modified to maximize the differentiation between types: the first one to two types are a lighter gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>, while the last one to two types are a darker gray <span class="no-wrap"><code>#484848</code> <span class="callout-swatch" style="background-color:#484848"></span></span>.</p>
 
 					</section>
 					
@@ -1314,7 +1321,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The Line & Point Graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.","name":"response-type-line-point-graph.css","title":"Line & Point Graph","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-line-point-graph.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The line & point graph response type allows test takers to respond to an item by adding objects of various types (points, lines, line segments) to a coordinate grid.","name":"response-type-line-point-graph.css","title":"Line & Point Graph","type":"stylesheet","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.response-types","src":"ux\\response-type-line-point-graph.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

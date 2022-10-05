@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Tabs </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1235,14 +1241,16 @@
 <h3>Tab States</h3>
 <p>Tabs have the following states by default.</p>
 <ul>
-<li><em>Unanswered</em>. The default state. Tab has a gray <code>#F5F5F5</code> background.</li>
+<li><em>Unanswered</em>. The default state. Tab has a gray <span class="no-wrap"><code>#F5F5F5</code> <span class="callout-swatch" style="background-color:#F5F5F5"></span></span> background.</li>
 <li><em>Answered</em>. Visible when the associated item has been answered. Tab background is darkened.</li>
-<li><em>Selected</em>. Visible when the associated item is on-screen. Tab background changes to white <code>#FFFFFF</code>, tab height increases, and the bottom border is removed to connect the tab to the content area.</li>
+<li><em>Selected</em>. Visible when the associated item is on-screen. Tab background changes to white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span>, tab height increases, and the bottom border is removed to connect the tab to the content area.</li>
 <li><em>Hover</em>. Visible when the cursor is over the tab. Tab background is lightened.</li>
 <li><em>Disabled</em>. Visible when the tab is inactive (e.g., when a modal system tool like Scratchwork is enabled). Tab label color is dimmed to indicate that the tab is inactive.</li>
 </ul>
 <p>Tabs receive the <code>default</code> cursor in the selected and disabled states, and the <code>pointer</code> cursor in all other states.</p>
+<p>The following demo presents the default tab state.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/navigation/tab-states.html' data-iframe-height='135'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 <h3>Tab Pagination</h3>
 <p>If there are more tabs than will fit on screen, tab pagination buttons appear that allow the test taker to page through the tabs as needed. Tab pagination buttons use the bare button style. (See the <a href="buttons.css.html">Buttons</a> page for details.) In addition, a drop shadow is added so that the buttons appear to be above the tab tray on the z-axis.</p>
 <p>Behavioral details:</p>
@@ -1251,9 +1259,11 @@
 <li>If there aren’t sufficient tabs off-screen to fill a screen width, the tab tray shifts so that the last off-screen tab is adjacent to the selected tab pagination button.</li>
 <li>If the test taker navigates to an off-screen tab (e.g., by pressing the <strong>Back</strong> or <strong>Next</strong> button), the tab tray shifts so that the selected tab is on-screen.</li>
 </ul>
+<p>The following demo presents tabs with the tab pagination buttons.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/navigation/tab-pagination.html' data-iframe-height='135'></div>
-<h3>Tabs in SBTs <img src="static/img/icon-asterisk.svg"/></h3>
-<p>The styling of tabs in scenario-based tasks (SBTs) may depart from the defaults described above if needed to match the look and feel of the rest of the task.</p>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> button in the upper-right of the screen.</span></p>
+<h3>Tabs and Navigation in SBTs <img src="static/img/icon-asterisk.svg"/></h3>
+<p>The styling of tabs in scenario-based tasks (SBTs) may depart from the defaults described above if needed to match the look and feel of the rest of the task. Navigation within SBTs should generally be performed using Next or Back buttons. Tabs are intended to provide user access to information that is split across multiple display panels. In general, NAEP SBTs are linear - the student can only move forward or back in a pre-determined, step-by-step sequence. This is the default navigational functionality.</p>
 
 		</section>
 		
@@ -1286,7 +1296,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\navigation.css","line":5,"codeLine":36,"type":"styles","description":"Tabs allow test takers to navigate non-linearly through chunks of related content. (For example, items in a block are presented in a tabbed interface.)","name":"0-tabs","title":"Tabs","parent":"navigation.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\navigation.css","line":5,"codeLine":46,"type":"styles","description":"Tabs allow test takers to navigate non-linearly through chunks of related content. (For example, items in a block are presented in a tabbed interface.)","name":"0-tabs","title":"Tabs","parent":"navigation.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

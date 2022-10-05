@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Drop Targets </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1245,11 +1251,12 @@
 <h3>States</h3>
 <p>Drop targets have the following states.</p>
 <ul>
-<li><em>Drag</em>. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue <code>rgba(41, 107, 204, 0.2)</code> when the test taker begins to drag an object.</li>
-<li><em>Hover</em>. To indicate that a draggable object will be placed successfully, a blue <code>#296BCC</code> border is added to an active drop target when an object is dragged over it.</li>
+<li><em>Drag</em>. To indicate which drop targets are currently available, the backgrounds of active drop targets change to a transulucent blue <code>rgba(41, 107, 204, 0.2)</code> <span class="callout-swatch" style="background-color:rgba(41, 107, 204, 0.2)"></span> when the test taker begins to drag an object.</li>
+<li><em>Hover</em>. To indicate that a draggable object will be placed successfully, a blue <span class="no-wrap"><code>#296BCC</code> <span class="callout-swatch" style="background-color:#296BCC"></span></span> border is added to an active drop target when an object is dragged over it.</li>
 </ul>
-<p><em>Demo is shown at 67% actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>.</em></p>
+<p>The following demo presents the interactive states for draggable objects and their drop targets.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/response-type-matching/matching-no-groups.html' data-iframe-height='475'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">The demo is 67% its actual size. To see a full-size demo, click <a href="demos/response-type-matching/matching-no-groups-full.html" target="_blank">here</a>.<br/>To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 		</section>
 		
@@ -1282,7 +1289,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-matching.css","line":132,"codeLine":158,"type":"styles","description":"Drop targets are areas where draggable objects may be placed. A visual indicator of some kind (e.g., a box, a table cell) is provided to indicate the locations of drop targets. The nature of the indicator will depend on the context of the item.","name":"2-matching-drop-targets","title":"Drop Targets","parent":"response-type-matching.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-matching.css","line":146,"codeLine":175,"type":"styles","description":"Drop targets are areas where draggable objects may be placed. A visual indicator of some kind (e.g., a box, a table cell) is provided to indicate the locations of drop targets. The nature of the indicator will depend on the context of the item.","name":"2-matching-drop-targets","title":"Drop Targets","parent":"response-type-matching.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

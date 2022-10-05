@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Characters &amp; Dialogue </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1259,7 +1265,9 @@
 <li>The speech bubble must have a tail that connects it to the speaking character.</li>
 <li>The task character’s name should appear bolded and with a bottom border at the top of the speech bubble unless the character announces herself (e.g., “Hi, I’m Diana&#8230;”)</li>
 </ul>
+<p>The following demo presents a full-body character.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/characters-dialogue/full-body.html' data-iframe-height='600'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1284,7 +1292,9 @@
 <li><em>Intermediate</em>. Typically used when a task contains simple or solid fill backgrounds. Dialogue and name tags are bare. The character portrait is surrounded by a border whose color changes to match the states of the <strong>Voiceover</strong> button (see below).</li>
 <li><em>Subtle</em>. Only used on white backgrounds. Dialogue and name tags are bare. The character portrait has no border, but its background changes color to match the states of the <strong>Voiceover</strong> button (see below).</li>
 </ul>
+<p>The following demo presents two character portraits each in their distinct style, intermediate style, and subtle style.</p>
 <div class='iframe_wrapper' data-iframe-src='ux/demos/characters-dialogue/portrait.html' data-iframe-height='1570'></div>
+<p><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span></p>
 
 					</section>
 					
@@ -1314,14 +1324,14 @@
 <h3>Voiceover buttons</h3>
 <p>When voiceover is provided for character dialogue, a <strong>Voiceover</strong> button is presented either at the upper right of the speech bubble (in the distinct style) or at the upper right of the character portrait (in the intermediate and subtle styles).  <strong>Voiceover</strong> buttons have the following states.</p>
 <ul>
-<li><em>Paused</em>. Visible when the voiceover is paused. The button is gray <code>#767676</code> and displays the <code>volume-up</code> icon. (See the <a href="icons.css.html">Icons</a> page.)</li>
-<li><em>Playing</em>. Visible when the voiceover is playing. The button is blue <code>0068D1</code> and displays the <code>pause</code> icon.</li>
+<li><em>Paused</em>. Visible when the voiceover is paused. The button is gray <span class="no-wrap"><code>#767676</code> <span class="callout-swatch" style="background-color:#767676"></span></span> and displays the <code>volume-up</code> <span class="icon-volume-up"></span> icon. (See the <a href="icons.css.html">Icons</a> page.)</li>
+<li><em>Playing</em>. Visible when the voiceover is playing. The button is blue <code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span> and displays the <code>pause</code> <span class="icon-pause"></span> icon.</li>
 </ul>
 <h3>Interactive portraits</h3>
 <p>In the intermediate and subtle styles, the character’s portrait changes state along with its <strong>Voiceover</strong> button.</p>
 <ul>
-<li><em>Paused</em>. If the portrait has a border, it becomes gray <code>#949494</code>. If the portrait has a background, it becomes light gray <code>#E5E5E5</code>.</li>
-<li><em>Playing</em>. If the portrait has a border, it becomes blue <code>#0068D1</code>. If the portrait has a background, it becomes light blue <code>#C6EAF7</code>.</li>
+<li><em>Paused</em>. If the portrait has a border, it becomes gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>. If the portrait has a background, it becomes light gray <span class="no-wrap"><code>#E5E5E5</code> <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.</li>
+<li><em>Playing</em>. If the portrait has a border, it becomes blue <span class="no-wrap"><code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span></span>. If the portrait has a background, it becomes light blue <span class="no-wrap"><code>#C6EAF7</code> <span class="callout-swatch" style="background-color:#C6EAF7"></span></span>.</li>
 </ul>
 
 					</section>
@@ -1355,7 +1365,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\characters-dialogue.css","line":0,"codeLine":10,"type":"stylesheet","description":"Many SBTs convey information to test takers via in-task character dialogue.","name":"characters-dialogue.css","title":"Characters & Dialogue","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.sbts","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\characters-dialogue.css","line":0,"codeLine":10,"type":"stylesheet","description":"Many SBTs convey information to test takers via in-task character dialogue.","name":"characters-dialogue.css","title":"Characters & Dialogue","showChildrenInPage":true,"hideChildrenInMenu":true,"parent":"ux.sbts","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

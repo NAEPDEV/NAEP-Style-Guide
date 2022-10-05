@@ -8,45 +8,51 @@ function PanelController() {
   }
 }
 
-$("#QuestionsButton").click(function(e) {
+$('#QuestionsButton').click(function (e) {
   PanelController();
 });
 
-$("#mask").click(function(e) {
+$('#mask').click(function (e) {
   PanelController();
 });
 
 //Item tab Controller
-(function() {
-  var ItemTabController, ItemTabGen, StimTabController, StimTabGen
-  bind = function(fn, me) {
-      return function() {
-        return fn.apply(me, arguments);
-      };
-    },
-    indexOf = [].indexOf || function(item) {
-      for (var i = 0, l = this.length; i < l; i++) {
-        if (i in this && this[i] === item) return i;
-      }
-      return -1;
+(function () {
+  var ItemTabController, ItemTabGen, StimTabController, StimTabGen;
+  (bind = function (fn, me) {
+    return function () {
+      return fn.apply(me, arguments);
     };
+  }),
+    (indexOf =
+      [].indexOf ||
+      function (item) {
+        for (var i = 0, l = this.length; i < l; i++) {
+          if (i in this && this[i] === item) return i;
+        }
+        return -1;
+      });
 
-  ItemTabController = (function() {
+  ItemTabController = (function () {
     function ItemTabController(arg) {
       var ref;
-      ref = arg != null ? arg : {}, this.element = ref.element, this.title = ref.title, this.listitem = ref.listitem, this.others = ref.others;
+      (ref = arg != null ? arg : {}),
+        (this.element = ref.element),
+        (this.title = ref.title),
+        (this.listitem = ref.listitem),
+        (this.others = ref.others);
       this.setInactive = bind(this.setInactive, this);
       this.setActive = bind(this.setActive, this);
-      this.tab = $("<li class='item'>" + this.title + "</li>");
+      this.tab = $("<li class='item'>" + this.title + '</li>');
       this.tab.click(this.setActive);
       $('ul.itemTab').append(this.tab);
 
       //Creates a list item on the review tab for each item
-      this.listitem = $("<li>Question " + this.title + "</li>");
+      this.listitem = $('<li>Question ' + this.title + '</li>');
       $('#list-review').append(this.listitem);
     }
 
-    ItemTabController.prototype.setActive = function() {
+    ItemTabController.prototype.setActive = function () {
       var c, j, len, ref;
       ref = this.others;
 
@@ -59,7 +65,7 @@ $("#mask").click(function(e) {
         c.setInactive();
       }
 
-      $("#enaepEreaderContainer").scrollTop(0);
+      $('#enaepEreaderContainer').scrollTop(0);
       if (this.element.hasClass('large')) {
         $('#QuestionsPanel').removeClass('medium');
         $('#QuestionsPanel').addClass('large');
@@ -79,11 +85,11 @@ $("#mask").click(function(e) {
       if (typeof MoreBtnController == 'function') {
         MoreBtnController(300);
       } else {
-        console.warn('Missing scroll-indicator.js.');
+        // console.warn('Missing scroll-indicator.js.');
       }
     };
 
-    ItemTabController.prototype.setInactive = function() {
+    ItemTabController.prototype.setInactive = function () {
       this.element.hide();
       this.element.removeClass('selected');
       return this.tab.removeClass('selected');
@@ -92,7 +98,7 @@ $("#mask").click(function(e) {
     return ItemTabController;
   })();
 
-  ItemTabGen = (function() {
+  ItemTabGen = (function () {
     function ItemTabGen() {
       var item, idx, j, len, ref, title;
       this.items = [];
@@ -101,11 +107,13 @@ $("#mask").click(function(e) {
         item = ref[idx];
         item = $(item);
         title = idx + 1;
-        this.items.push(new ItemTabController({
-          element: item,
-          title: title,
-          others: this.items
-        }));
+        this.items.push(
+          new ItemTabController({
+            element: item,
+            title: title,
+            others: this.items,
+          })
+        );
       }
       $('ul.itemTab li').eq(0).addClass('selected');
       $('ul.itemTab li:last-child').html('Review');
@@ -126,18 +134,22 @@ $("#mask").click(function(e) {
     return ItemTabGen;
   })();
 
-  StimTabController = (function() {
+  StimTabController = (function () {
     function StimTabController(arg) {
       var ref;
-      ref = arg != null ? arg : {}, this.element = ref.element, this.title = ref.title, this.listitem = ref.listitem, this.others = ref.others;
+      (ref = arg != null ? arg : {}),
+        (this.element = ref.element),
+        (this.title = ref.title),
+        (this.listitem = ref.listitem),
+        (this.others = ref.others);
       this.setInactive = bind(this.setInactive, this);
       this.setActive = bind(this.setActive, this);
-      this.tab = $("<li class='stim'>" + this.title + "</li>");
+      this.tab = $("<li class='stim'>" + this.title + '</li>');
       this.tab.click(this.setActive);
       $('ul.stimTab').append(this.tab);
     }
 
-    StimTabController.prototype.setActive = function() {
+    StimTabController.prototype.setActive = function () {
       var c, j, len, ref;
       ref = this.others;
 
@@ -158,7 +170,7 @@ $("#mask").click(function(e) {
       this.element.addClass('selected');
     };
 
-    StimTabController.prototype.setInactive = function() {
+    StimTabController.prototype.setInactive = function () {
       this.element.hide();
       this.element.removeClass('selected');
       return this.tab.removeClass('selected');
@@ -167,7 +179,7 @@ $("#mask").click(function(e) {
     return StimTabController;
   })();
 
-  StimTabGen = (function() {
+  StimTabGen = (function () {
     function StimTabGen() {
       var item, idx, j, len, ref, title;
       this.items = [];
@@ -176,11 +188,13 @@ $("#mask").click(function(e) {
         item = ref[idx];
         item = $(item);
         title = $(item).data('title');
-        this.items.push(new StimTabController({
-          element: item,
-          title: title,
-          others: this.items
-        }));
+        this.items.push(
+          new StimTabController({
+            element: item,
+            title: title,
+            others: this.items,
+          })
+        );
       }
       $('ul.stimTab li:first-child').addClass('selected');
       $('.childStim').hide();
@@ -191,9 +205,8 @@ $("#mask").click(function(e) {
     return StimTabGen;
   })();
 
-  $(function() {
+  $(function () {
     window.ItemTabGen = new ItemTabGen();
-    return window.StimTabGen = new StimTabGen();
+    return (window.StimTabGen = new StimTabGen());
   });
-
-}).call(this);
+}.call(this));

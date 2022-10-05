@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Presentation </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1220,9 +1226,9 @@
 			<p>Zones selection areas have the following states.</p>
 <ul>
 <li><em>Default</em>. There is no visual indicator for selection areas by default.</li>
-<li><em>Selected</em>. A dashed yellow <code>#FFFF00</code> and blue <code>#1F8FFF</code> outline and a translucent blue <code>rgba(51, 153, 255, 0.2)</code> fill are applied.</li>
-<li><em>Hover</em>. Visible when the cursor is over the selection area. A translucent blue <code>rgba(51, 153, 255, 0.2)</code> fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The <code>pointer</code> cursor is shown.</li>
-<li><em>Focus</em>. The simple dotted outline used to indicate focus elsewhere in the system (see the <a href="indicators.css.html">Indicators</a> page for more information) is not easily visible on all images, so a white <code>#FFFFFF</code> and black <code>#000000</code> dotted line is used.</li>
+<li><em>Selected</em>. A dashed yellow <span class="no-wrap"><code>#FFFF00</code> <span class="callout-swatch" style="background-color:#FFFF00"></span></span> and blue <span class="no-wrap"><code>#1F8FFF</code> <span class="callout-swatch" style="background-color:#1F8FFF"></span></span> outline and a translucent blue <code>rgba(51, 153, 255, 0.2)</code> <span class="callout-swatch" style="background-color:rgba(51, 153, 255, 0.2)"></span> fill are applied.</li>
+<li><em>Hover</em>. Visible when the cursor is over the selection area. A translucent blue <code>rgba(51, 153, 255, 0.2)</code> <span class="callout-swatch" style="background-color:rgba(51, 153, 255, 0.2)"></span> fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The <code>pointer</code> cursor is shown.</li>
+<li><em>Focus</em>. The simple dotted outline used to indicate focus elsewhere in the system (see the <a href="indicators.css.html">Indicators</a> page for more information) is not easily visible on all images, so a white <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> and black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> dotted line is used.</li>
 </ul>
 
 		</section>
@@ -1270,7 +1276,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"Zones selection areas have the following states.\n* _Default_. There is no visual indicator for selection areas by default.\n* _Selected_. A dashed yellow `#FFFF00` and blue `#1F8FFF` outline and a translucent blue `rgba(51, 153, 255, 0.2)` fill are applied.\n* _Hover_. Visible when the cursor is over the selection area. A translucent blue `rgba(51, 153, 255, 0.2)` fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The `pointer` cursor is shown.\n* _Focus_. The simple dotted outline used to indicate focus elsewhere in the system (see the [indicators.css] page for more information) is not easily visible on all images, so a white `#FFFFFF` and black `#000000` dotted line is used.","name":"0-zones-presentation","title":"Presentation","type":"styles","parent":"response-type-zones.css","hideInParentMenu":true,"src":"ux\\response-type-zones.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"Zones selection areas have the following states.\n* _Default_. There is no visual indicator for selection areas by default.\n* _Selected_. A dashed yellow <span class=\"no-wrap\">`#FFFF00` <span class=\"callout-swatch\" style=\"background-color:#FFFF00\"></span></span> and blue <span class=\"no-wrap\">`#1F8FFF` <span class=\"callout-swatch\" style=\"background-color:#1F8FFF\"></span></span> outline and a translucent blue `rgba(51, 153, 255, 0.2)` <span class=\"callout-swatch\" style=\"background-color:rgba(51, 153, 255, 0.2)\"></span> fill are applied.\n* _Hover_. Visible when the cursor is over the selection area. A translucent blue `rgba(51, 153, 255, 0.2)` <span class=\"callout-swatch\" style=\"background-color:rgba(51, 153, 255, 0.2)\"></span> fill is applied to unselected areas, or its opacity is increased to 40% for selected areas. The `pointer` cursor is shown.\n* _Focus_. The simple dotted outline used to indicate focus elsewhere in the system (see the [indicators.css] page for more information) is not easily visible on all images, so a white <span class=\"no-wrap\">`#FFFFFF` <span class=\"callout-swatch\" style=\"background-color:#FFFFFF\"></span></span> and black <span class=\"no-wrap\">`#000000` <span class=\"callout-swatch\" style=\"background-color:#000000\"></span></span> dotted line is used.","name":"0-zones-presentation","title":"Presentation","type":"styles","parent":"response-type-zones.css","hideInParentMenu":true,"src":"ux\\response-type-zones.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

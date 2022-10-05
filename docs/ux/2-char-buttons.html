@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Voiceover Playback </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1242,14 +1248,14 @@
 <h3>Voiceover buttons</h3>
 <p>When voiceover is provided for character dialogue, a <strong>Voiceover</strong> button is presented either at the upper right of the speech bubble (in the distinct style) or at the upper right of the character portrait (in the intermediate and subtle styles).  <strong>Voiceover</strong> buttons have the following states.</p>
 <ul>
-<li><em>Paused</em>. Visible when the voiceover is paused. The button is gray <code>#767676</code> and displays the <code>volume-up</code> icon. (See the <a href="icons.css.html">Icons</a> page.)</li>
-<li><em>Playing</em>. Visible when the voiceover is playing. The button is blue <code>0068D1</code> and displays the <code>pause</code> icon.</li>
+<li><em>Paused</em>. Visible when the voiceover is paused. The button is gray <span class="no-wrap"><code>#767676</code> <span class="callout-swatch" style="background-color:#767676"></span></span> and displays the <code>volume-up</code> <span class="icon-volume-up"></span> icon. (See the <a href="icons.css.html">Icons</a> page.)</li>
+<li><em>Playing</em>. Visible when the voiceover is playing. The button is blue <code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span> and displays the <code>pause</code> <span class="icon-pause"></span> icon.</li>
 </ul>
 <h3>Interactive portraits</h3>
 <p>In the intermediate and subtle styles, the character’s portrait changes state along with its <strong>Voiceover</strong> button.</p>
 <ul>
-<li><em>Paused</em>. If the portrait has a border, it becomes gray <code>#949494</code>. If the portrait has a background, it becomes light gray <code>#E5E5E5</code>.</li>
-<li><em>Playing</em>. If the portrait has a border, it becomes blue <code>#0068D1</code>. If the portrait has a background, it becomes light blue <code>#C6EAF7</code>.</li>
+<li><em>Paused</em>. If the portrait has a border, it becomes gray <span class="no-wrap"><code>#949494</code> <span class="callout-swatch" style="background-color:#949494"></span></span>. If the portrait has a background, it becomes light gray <span class="no-wrap"><code>#E5E5E5</code> <span class="callout-swatch" style="background-color:#E5E5E5"></span></span>.</li>
+<li><em>Playing</em>. If the portrait has a border, it becomes blue <span class="no-wrap"><code>#0068D1</code> <span class="callout-swatch" style="background-color:#0068D1"></span></span>. If the portrait has a background, it becomes light blue <span class="no-wrap"><code>#C6EAF7</code> <span class="callout-swatch" style="background-color:#C6EAF7"></span></span>.</li>
 </ul>
 
 		</section>
@@ -1283,7 +1289,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\characters-dialogue.css","line":179,"codeLine":199,"type":"styles","description":"Voiceover for character dialogue is provided unless there is a compelling reason not to (e.g., a science SBT that asks test takers to evaluate sounds with different pitches could be more difficult were voiceover present).\n### Playback behavior\nWhen test takers navigate to a scene with voiceover for the first time, the voiceover plays automatically. Details:\n* Once playback has finished, pressing the __Voiceover__ button will replay the voiceover from the beginning.\n* Test takers are allowed to move on to the next screen even if voiceover playback hasn’t finished.\n* If a test taker returns to a previously visited screen, voiceover does not automatically play again. Rather, the test taker must press the __Voiceover__ button, which replays the voiceover from the beginning.","name":"2-char-buttons","title":"Voiceover Playback","parent":"characters-dialogue.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\characters-dialogue.css","line":216,"codeLine":236,"type":"styles","description":"Voiceover for character dialogue is provided unless there is a compelling reason not to (e.g., a science SBT that asks test takers to evaluate sounds with different pitches could be more difficult were voiceover present).\n### Playback behavior\nWhen test takers navigate to a scene with voiceover for the first time, the voiceover plays automatically. Details:\n* Once playback has finished, pressing the __Voiceover__ button will replay the voiceover from the beginning.\n* Test takers are allowed to move on to the next screen even if voiceover playback hasn’t finished.\n* If a test taker returns to a previously visited screen, voiceover does not automatically play again. Rather, the test taker must press the __Voiceover__ button, which replays the voiceover from the beginning.","name":"2-char-buttons","title":"Voiceover Playback","parent":"characters-dialogue.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

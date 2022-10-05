@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Max-selection Alert </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1217,7 +1223,7 @@
 
 		
 		<section class="description">
-			<p>In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
+			<p>The Assessment Specialist has the ability to define a maximum selection limit for multiple-select variants of SIS items. When a test taker attempts to select more options than the maximum number specified in the item stem an alert will appear. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.</p>
 
 		</section>
 		
@@ -1231,7 +1237,7 @@
 
 		
 		<section class="comment">
-			<p>The alert has a light yellow <code>#F8ECBD</code> background and a dark yellow <code>#E6CB90</code> border. A <code>warning</code> icon appears at its left side.</p>
+			<p>The alert has a light yellow <span class="no-wrap"><code>#F8ECBD</code> <span class="callout-swatch" style="background-color:#F8ECBD"></span></span> background and a dark yellow <span class="no-wrap"><code>#E6CB90</code> <span class="callout-swatch" style="background-color:#E6CB90"></span></span> border. A <code>warning</code> <span><img src="static/img/icon-warning.svg" width="12px" height="12px"></span> icon appears at its left side.</p>
 <p>If the test taker does not dismiss the alert via the <strong>Close</strong> button at its upper-right, the alert will automatically disappear after 6 seconds. If the test taker keeps trying to make additional selections while the alert is on-screen, the alert will pulse.</p>
 
 		</section>
@@ -1265,7 +1271,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"src":"ux\\response-type-sis.css","line":609,"codeLine":618,"type":"styles","description":"In the multiple-select variant of SIS items, an alert appears when a test taker attempts to select more options than the maximum number specified in the item stem. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.","name":"5-sis-max-select","title":"Max-selection Alert","parent":"response-type-sis.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"src":"ux\\response-type-sis.css","line":612,"codeLine":621,"type":"styles","description":"The Assessment Specialist has the ability to define a maximum selection limit for multiple-select variants of SIS items. When a test taker attempts to select more options than the maximum number specified in the item stem an alert will appear. The alert states the maximum number of selections and indicates that the test taker must deselect one option before selecting another.","name":"5-sis-max-select","title":"Max-selection Alert","parent":"response-type-sis.css","hideInParentMenu":true,"static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	

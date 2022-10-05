@@ -29,7 +29,7 @@
   <title>NAEP Style Guide - Style &amp; Layout </title>
 	<meta name="description" content="">
     <meta name="author" content="">
-    <meta name="version" content="1.2.3">
+    <meta name="version" content="1.2.4">
 
 	
 	<link rel="stylesheet" type="text/css" href="./static/bundles/static.css">
@@ -62,19 +62,25 @@
 					<button aria-label="Navigation menu button" class="button-custom-control" id="btn-menu-toggle">
 						<img alt="" class="system-btn-icon" src="static/img/icon-hamburger.svg" />
 					</button>
-					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.3</span></a>
+					<a class="guide-title" a href="../index.html">Style Guide<span class="version">v1.2.4</span></a>
 				</li>
 				
 				
 			</ul>
 
 			<div class="pull-right">
-				<button aria-label="Change theme button" class="button-custom-control" id="btn-theme">
-					<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
-				</button>
-				<button aria-label="Read aloud button" class="button-custom-control" id ="btn-tts">
-					<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
-				</button>
+				<div class="tooltip">
+					<button aria-label="Change theme button" class="button-custom-control button-a" id="btn-theme">
+						<img alt="" class="system-btn-icon" src="static/img/icon-theme.svg" />
+					</button>
+					<span class="tooltiptext-a">Toggles through the available color themes across the demos and examples within the style guide.</span>
+				</div>
+				<div class="tooltip">
+					<button aria-label="Read aloud button" class="button-custom-control button-t" id ="btn-tts">
+						<img alt="" class="system-btn-icon" src="static/img/icon-tts.svg" />
+					</button>
+					<span class="tooltiptext-t">Activates the read aloud styles across the demos and examples within the style guide.</span>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -1239,11 +1245,11 @@
 <p>Calls to action are the same font size as item text, but are at a lower font weight to maintain the importance of item text in the visual hierarchy.</p>
 <p>When placed on a solid fill, calls to action have no background. When placed on an image, calls to action may have one of two styling options applied to ensure readability:</p>
 <ul>
-<li><em>Default</em>. Black <code>#000000</code> text on a 90% opaque white&#160;<code>rgba(255,255,255,0.9)</code> background.</li>
-<li><em>Inverted</em>. White <code>#FFFFFF</code> text on a 65% opaque black&#160;<code>rgba(0,0,0,0.65)</code> background.</li>
+<li><em>Default</em>. Black <span class="no-wrap"><code>#000000</code> <span class="callout-swatch" style="background-color:#000000"></span></span> text on a 90% opaque white&#160;<code>rgba(255,255,255,0.9)</code> <span class="callout-swatch" style="background-color:rgba(255,255,255,0.9)"></span> background.</li>
+<li><em>Inverted</em>. White <span class="no-wrap"><code>#FFFFFF</code> <span class="callout-swatch" style="background-color:#FFFFFF"></span></span> text on a 65% opaque black&#160;<code>rgba(0,0,0,0.65)</code> <span class="callout-swatch" style="background-color:rgba(0,0,0,0.65)"></span> background.</li>
 </ul>
 <p>The example below shows an inverted call to action. Additional examples can be seen on the <a href="intro-exit-screens.css.html">Intro & Exit Screens</a> page.</p>
-<div class='iframe_wrapper' data-iframe-src='ux/demos/calls-to-action/image-background.html' data-iframe-height='437'></div>
+<div class='iframe_wrapper' data-iframe-src='ux/demos/calls-to-action/image-background.html' data-iframe-height='437'></div><span style="font-size:13px;display:block;margin-top:-30px">To view alternative presentations and styling, use the Change Theme <img src="static/img/icon-theme.svg" style="max-height: 1.75em; max-width: 1.75em;" /> and Read Aloud <img src="static/img/icon-tts.svg" style="max-height: 1.75em; max-width: 1.75em;" /> buttons in the upper-right of the screen.</span><br>
 
 		</section>
 		
@@ -1276,7 +1282,7 @@
 	
 
 	<script type="text/javascript">
-		var docObject = {"description":"The message for __Next__ buttons appears in one of two locations, depending on the screen’s content.\n* If there is at least one response component on screen, the message is positioned below the last component, or proximally if there isn’t sufficient space below. Ideally, there is a margin 2x the base font size between the response component and the call to action. (Shown in the demo below.) However, a smaller margin may be used if necessitated by layout constraints.\n* If there is _no_ response component on screen, the message  appears at the lower-right corner of the content pane in which it resides. (The [intro-exit-screens.css] demo shows an example.)","name":"1-cta-style","title":"Style & Layout","type":"styles","parent":"calls-to-action.css","hideInParentMenu":true,"src":"ux\\calls-to-action.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.3","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
+		var docObject = {"description":"The message for __Next__ buttons appears in one of two locations, depending on the screen’s content.\n* If there is at least one response component on screen, the message is positioned below the last component, or proximally if there isn’t sufficient space below. Ideally, there is a margin 2x the base font size between the response component and the call to action. (Shown in the demo below.) However, a smaller margin may be used if necessitated by layout constraints.\n* If there is _no_ response component on screen, the message  appears at the lower-right corner of the content pane in which it resides. (The [intro-exit-screens.css] demo shows an example.)","name":"1-cta-style","title":"Style & Layout","type":"styles","parent":"calls-to-action.css","hideInParentMenu":true,"src":"ux\\calls-to-action.css","static":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\static","templates":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\styleguide-theme\\templates","version":"1.2.4","glob":{"pattern":"ux/**/*.{css,less,scss,md}","ignore":"{node_modules,bower_components}/**/*","cwd":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide"},"dest":"C:\\Users\\jliu002\\Documents\\projects\\NAEP\\NAEP-Style-Guide\\docs\\ux","generators":["html"],"docConfigDest":"../../documentjs.json","project":{}};
 	</script>
 
 	
