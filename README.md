@@ -1,3 +1,5 @@
+# This repository has been archived and is no longer maintained. The code is provided for historical reference and may contain unpatched or unknown vulnerabilities.  It should not be used in production systems.
+
 # Style Guide for NAEP Assessments
 The NAEP Style Guide is an online document that provides guidance
 for a wide range of styles for NAEP's assessments,
